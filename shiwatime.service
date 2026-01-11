@@ -1,0 +1,17 @@
+[Unit]
+Description=Shiwa Time - PTP / NTP clock synchronisation system
+Documentation=https://shiwanetwork.tech/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Environment="BEAT_LOG_OPTS=-e"
+Environment="BEAT_CONFIG_OPTS=-c /etc/shiwatime/shiwatime.yml"
+Environment="BEAT_PATH_OPTS=--path.home /usr/share/shiwatime --path.config /etc/shiwatime --path.data /var/lib/shiwatime --path.logs /var/log/shiwatime"
+ExecStart=/usr/share/shiwatime/bin/shiwatime --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,17 @@
+[Unit]
+Description=Configure Ublox Time Pulse to 5ms
+After=shiwatime.service
+Requires=shiwatime.service
+
+[Service]
+Type=oneshot
+# Задержка 2 секунды после запуска shiwatime для завершения инициализации
+ExecStartPre=/bin/sleep 2
+ExecStart=/usr/bin/python3 /usr/local/bin/configure_ublox_timepulse.py /dev/ttyS0 9600 --pulse-width-ms 5 --quiet
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+

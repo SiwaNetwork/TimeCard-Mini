@@ -1,0 +1,18 @@
+[Unit]
+Description=Configure Ublox Time Pulse to 5ms (Before shiwatime)
+Before=shiwatime.service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+# Задержка 1 секунда после доступности сети для стабилизации
+ExecStartPre=/bin/sleep 1
+ExecStart=/usr/bin/python3 /usr/local/bin/configure_ublox_timepulse.py /dev/ttyS0 9600 --pulse-width-ms 5 --quiet
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
