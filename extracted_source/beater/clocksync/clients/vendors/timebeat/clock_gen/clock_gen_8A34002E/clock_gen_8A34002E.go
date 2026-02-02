@@ -880,8 +880,21 @@ func ResetDPLLFreq() {
 	// TODO: реконструировать
 }
 
+// SetDpllFodFreq записывает 6 байт (high: 4 байта, low: 2 байта) в PhaseReg+0x1c для DPLL idx.
+func (c *ClockGen8A34012) SetDpllFodFreq(idx int, high uint64, low uint16) error {
+	d := c.GetDPLL(idx)
+	if d == nil {
+		return fmt.Errorf("dpll idx %d out of range", idx)
+	}
+	data := make([]byte, 6)
+	binary.BigEndian.PutUint32(data[0:4], uint32(high))
+	data[4] = byte(low >> 8)
+	data[5] = byte(low)
+	return d.writeDPLLRegisterBytes(d.PhaseReg+0x1c, data)
+}
+
 func SetDpllFodFreq() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
 }
 
 func SetHoldover() {
@@ -904,12 +917,28 @@ func SetMode() {
 	// TODO: реконструировать
 }
 
+// SetOutputDiv записывает 2 байта value в регистр 0xCF80+idx*2.
+func (c *ClockGen8A34012) SetOutputDiv(idx int, value uint64) error {
+	if idx < 0 {
+		return fmt.Errorf("output div idx %d out of range", idx)
+	}
+	return c.writeClockGenRegisterU16(clockGenRegOutputDivBase+uint16(idx*2), uint16(value&0xffff))
+}
+
 func SetOutputDiv() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
+}
+
+// SetOutputDutyCycleHigh записывает 2 байта value в регистр 0xCF88+idx*2.
+func (c *ClockGen8A34012) SetOutputDutyCycleHigh(idx int, value uint64) error {
+	if idx < 0 {
+		return fmt.Errorf("duty cycle idx %d out of range", idx)
+	}
+	return c.writeClockGenRegisterU16(clockGenRegDutyCycleBase+uint16(idx*2), uint16(value&0xffff))
 }
 
 func SetOutputDutyCycleHigh() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
 }
 
 func SetPageAddress1ByteMode() {
