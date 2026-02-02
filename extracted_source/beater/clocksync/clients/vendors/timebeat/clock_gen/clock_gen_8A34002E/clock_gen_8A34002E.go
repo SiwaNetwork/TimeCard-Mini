@@ -55,40 +55,15 @@ func GetDPLL() {
 	// TODO: реконструировать
 }
 
-// getI2C возвращает I2C для ClockGen (для чтения регистров уровня чипа, не DPLL).
-func (c *ClockGen8A34012) getI2C() generic_serial_device.I2CDeviceForRegister {
-	if c == nil || c.I2C == nil {
-		return nil
-	}
-	i2c, _ := c.I2C.(generic_serial_device.I2CDeviceForRegister)
-	return i2c
-}
-
-// writeDPLLRegisterBytes записывает data в регистр DPLL.
-func (d *DPLL) writeDPLLRegisterBytes(reg uint16, data []byte) error {
-	i2c := d.getI2CForRegister()
-	if i2c == nil {
-		return nil
-	}
-	req := generic_serial_device.NewRegisterRequest(i2c)
-	if req == nil {
-		return nil
-	}
-	req.BigEndian = true
-	req.AddUint16(reg)
-	req.AddBytes(data)
-	return req.Execute()
-}
-
-// readDPLLRegisterByte читает 1 байт из регистра DPLL (по дампу — RefModeReg и др.).
+// readDPLLRegisterByte по дампу GetMode/GetDPLLState: RegisterRequest reg, ReadLen=1, Execute; возврат Result[0].
 func (d *DPLL) readDPLLRegisterByte(reg uint16) (byte, error) {
 	i2c := d.getI2CForRegister()
 	if i2c == nil {
-		return 0, nil
+		return 0, fmt.Errorf("DPLL I2C nil")
 	}
 	req := generic_serial_device.NewRegisterRequest(i2c)
 	if req == nil {
-		return 0, nil
+		return 0, fmt.Errorf("NewRegisterRequest failed")
 	}
 	req.BigEndian = true
 	req.AddUint16(reg)
@@ -98,46 +73,38 @@ func (d *DPLL) readDPLLRegisterByte(reg uint16) (byte, error) {
 	}
 	r := req.GetResult()
 	if len(r) < 1 {
-		return 0, nil
+		return 0, fmt.Errorf("short read")
 	}
 	return r[0], nil
 }
 
-// readClockGenRegisterByte читает 1 байт из регистра ClockGen (база 0xCF50 и др.).
-func (c *ClockGen8A34012) readClockGenRegisterByte(reg uint16) (byte, error) {
-	i2c := c.getI2C()
-	if i2c == nil {
-		return 0, nil
+// GetDPLLRefState по дампу (0x4b93dc0): чтение 1 байта из RefModeReg DPLL.
+func (c *ClockGen8A34012) GetDPLLRefState(idx int) (byte, error) {
+	d := c.GetDPLL(idx)
+	if d == nil {
+		return 0, fmt.Errorf("dpll idx %d out of range", idx)
 	}
-	req := generic_serial_device.NewRegisterRequest(i2c)
-	if req == nil {
-		return 0, nil
-	}
-	req.BigEndian = true
-	req.AddUint16(reg)
-	req.SetReadLen(1)
-	if err := req.Execute(); err != nil {
-		return 0, err
-	}
-	r := req.GetResult()
-	if len(r) < 1 {
-		return 0, nil
-	}
-	return r[0], nil
+	return d.readDPLLRegisterByte(d.RefModeReg)
 }
 
-// readClockGenRegisterBytes читает n байт из регистра ClockGen.
-func (c *ClockGen8A34012) readClockGenRegisterBytes(reg uint16, n int) ([]byte, error) {
-	if n <= 0 {
-		return nil, nil
+// GetDPLLState по дампу (0x4b93500): чтение 1 байта из RefModeReg+0x37.
+func (c *ClockGen8A34012) GetDPLLState(idx int) (byte, error) {
+	d := c.GetDPLL(idx)
+	if d == nil {
+		return 0, fmt.Errorf("dpll idx %d out of range", idx)
 	}
-	i2c := c.getI2C()
+	return d.readDPLLRegisterByte(d.RefModeReg + 0x37)
+}
+
+// readDPLLRegisterBytes читает n байт из регистра DPLL.
+func (d *DPLL) readDPLLRegisterBytes(reg uint16, n int) ([]byte, error) {
+	i2c := d.getI2CForRegister()
 	if i2c == nil {
-		return nil, nil
+		return nil, fmt.Errorf("DPLL I2C nil")
 	}
 	req := generic_serial_device.NewRegisterRequest(i2c)
 	if req == nil {
-		return nil, nil
+		return nil, fmt.Errorf("NewRegisterRequest failed")
 	}
 	req.BigEndian = true
 	req.AddUint16(reg)
@@ -148,149 +115,147 @@ func (c *ClockGen8A34012) readClockGenRegisterBytes(reg uint16, n int) ([]byte, 
 	return req.GetResult(), nil
 }
 
-// writeClockGenRegisterBytes записывает data в регистр reg (2 байта адреса + data).
-func (c *ClockGen8A34012) writeClockGenRegisterBytes(reg uint16, data []byte) error {
-	i2c := c.getI2C()
-	if i2c == nil {
-		return nil
+// GetDpllFinePhaseAdvCfg по дампу (0x4b92400): reg=PhaseReg+0x1a, ReadLen=2; return (result[0]&0x1f)|(result[1]&0x1f)<<8.
+func (d *DPLL) GetDpllFinePhaseAdvCfg() (uint16, error) {
+	b, err := d.readDPLLRegisterBytes(d.PhaseReg+0x1a, 2)
+	if err != nil || len(b) < 2 {
+		return 0, err
 	}
-	req := generic_serial_device.NewRegisterRequest(i2c)
-	if req == nil {
-		return nil
+	return uint16(b[0]&0x1f) | uint16(b[1]&0x1f)<<8, nil
+}
+
+// GetDpllFodFreq по дампу (0x4b92200): reg=PhaseReg+0x1c, ReadLen=8; возврат первых 6 байт как uint64 (48-bit BE).
+func (d *DPLL) GetDpllFodFreq() (uint64, error) {
+	b, err := d.readDPLLRegisterBytes(d.PhaseReg+0x1c, 8)
+	if err != nil {
+		return 0, err
 	}
-	req.BigEndian = true
-	req.AddUint16(reg)
-	req.AddBytes(data)
-	if err := req.Execute(); err != nil {
-		return err
+	if len(b) < 6 {
+		return 0, fmt.Errorf("short read for FOD freq")
 	}
-	return nil
+	return (uint64(b[0])<<40 | uint64(b[1])<<32 | uint64(b[2])<<24 | uint64(b[3])<<16 | uint64(b[4])<<8 | uint64(b[5])), nil
 }
 
-// writeClockGenRegisterU16 записывает uint16 в регистр (big-endian).
-func (c *ClockGen8A34012) writeClockGenRegisterU16(reg uint16, v uint16) error {
-	i2c := c.getI2C()
-	if i2c == nil {
-		return nil
-	}
-	req := generic_serial_device.NewRegisterRequest(i2c)
-	if req == nil {
-		return nil
-	}
-	req.BigEndian = true
-	req.AddUint16(reg)
-	req.AddUint16(v)
-	return req.Execute()
+// GetEEPROMConfigStatus по дампу (0x4b956a0): регистр 0xCF56.
+func (c *ClockGen8A34012) GetEEPROMConfigStatus() (byte, error) {
+	return c.readClockGenRegisterByte(0xCF56)
 }
 
-// GetDPLLRefState по вызовам ShowDpllStatus: читает 1 байт из RefModeReg.
-func (c *ClockGen8A34012) GetDPLLRefState(idx int) (byte, error) {
-	d := c.GetDPLL(idx)
-	if d == nil {
-		return 0, fmt.Errorf("dpll idx %d out of range", idx)
-	}
-	return d.readDPLLRegisterByte(d.RefModeReg)
-}
-
-// GetDPLLState по вызовам ShowDpllStatus: читает 1 байт из RefModeReg+0x37.
-func (c *ClockGen8A34012) GetDPLLState(idx int) (byte, error) {
-	d := c.GetDPLL(idx)
-	if d == nil {
-		return 0, fmt.Errorf("dpll idx %d out of range", idx)
-	}
-	return d.readDPLLRegisterByte(d.RefModeReg + 0x37)
-}
-
-func GetDpllFinePhaseAdvCfg() {
-	// TODO: реконструировать
-}
-
-func GetDpllFodFreq() {
-	// TODO: реконструировать
-}
-
-func GetEEPROMConfigStatus() {
-	// TODO: реконструировать
-}
-
-func GetEEPROMStatus() {
-	// TODO: реконструировать
-}
-
-func GetHotfixRelease() {
-	// TODO: реконструировать
+// GetEEPROMStatus по дампу (0x4b954a0): регистр 0xCF54.
+func (c *ClockGen8A34012) GetEEPROMStatus() (byte, error) {
+	return c.readClockGenRegisterByte(0xCF54)
 }
 
 func GetInputMonFreqStatus() {
 	// TODO: реконструировать
 }
 
-// Регистры версии и input monitor по дампу 8A34012 (0xCF50, 0xCF60+idx).
-const (
-	clockGenRegMajorRelease = 0xCF50
-	clockGenRegMinorRelease = 0xCF51
-	clockGenRegHotfixRelease = 0xCF52
-	clockGenRegEEPROMStatus  = 0xCF54
-	clockGenRegEEPROMConfig  = 0xCF56
-	clockGenRegInputMonBase  = 0xCF60
-	clockGenRegOutputDivBase = 0xCF80
-	clockGenRegDutyCycleBase = 0xCF88
-)
+// readClockGenRegisterByte — чтение 1 байта по регистру через I2C.
+func (c *ClockGen8A34012) readClockGenRegisterByte(reg uint16) (byte, error) {
+	if c == nil || c.I2C == nil {
+		return 0, fmt.Errorf("clockgen or I2C nil")
+	}
+	i2c, ok := c.I2C.(generic_serial_device.I2CDeviceForRegister)
+	if !ok {
+		return 0, fmt.Errorf("I2C does not support RegisterRequest")
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return 0, fmt.Errorf("NewRegisterRequest failed")
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.SetReadLen(1)
+	if err := req.Execute(); err != nil {
+		return 0, err
+	}
+	r := req.GetResult()
+	if len(r) < 1 {
+		return 0, fmt.Errorf("short read")
+	}
+	return r[0], nil
+}
 
-// GetInputMonStatus возвращает байт статуса input monitor для idx (регистр 0xCF60+idx).
+// GetInputMonStatus по дампу (0x4b958a0): регистр 0xCF60+idx.
 func (c *ClockGen8A34012) GetInputMonStatus(idx int) (byte, error) {
-	if idx < 0 {
+	if idx < 0 || idx > 3 {
 		return 0, fmt.Errorf("input mon idx %d out of range", idx)
 	}
-	return c.readClockGenRegisterByte(clockGenRegInputMonBase + uint16(idx))
+	return c.readClockGenRegisterByte(uint16(0xCF60 + idx))
 }
 
-func GetInputMonStatus() {
-	// TODO: реконструировать (использовать метод на экземпляре)
+// readVersionRegister по дампу GetTimebeatClockgenConfigVersion: reg, ReadLen=n, Execute; GetResult().
+func (c *ClockGen8A34012) readVersionRegister(reg uint16, readLen int) ([]byte, error) {
+	if c == nil || c.I2C == nil {
+		return nil, fmt.Errorf("clockgen or I2C nil")
+	}
+	i2c, ok := c.I2C.(generic_serial_device.I2CDeviceForRegister)
+	if !ok {
+		return nil, fmt.Errorf("I2C does not support RegisterRequest")
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return nil, fmt.Errorf("NewRegisterRequest failed")
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.SetReadLen(uint16(readLen))
+	if err := req.Execute(); err != nil {
+		return nil, err
+	}
+	return req.GetResult(), nil
 }
 
-// GetMajorRelease читает 1 байт из 0xCF50.
+// GetMajorRelease по дампу: регистр 0xCF50, 1 байт.
 func (c *ClockGen8A34012) GetMajorRelease() (byte, error) {
-	return c.readClockGenRegisterByte(clockGenRegMajorRelease)
+	b, err := c.readVersionRegister(0xCF50, 1)
+	if err != nil {
+		return 0, err
+	}
+	if len(b) < 1 {
+		return 0, fmt.Errorf("short read for major release")
+	}
+	return b[0], nil
 }
 
-func GetMajorRelease() {
-	// TODO: реконструировать (использовать метод на экземпляре)
-}
-
-// GetMinorRelease читает 1 байт из 0xCF51.
+// GetMinorRelease по дампу: регистр 0xCF51.
 func (c *ClockGen8A34012) GetMinorRelease() (byte, error) {
-	return c.readClockGenRegisterByte(clockGenRegMinorRelease)
+	b, err := c.readVersionRegister(0xCF51, 1)
+	if err != nil {
+		return 0, err
+	}
+	if len(b) < 1 {
+		return 0, fmt.Errorf("short read for minor release")
+	}
+	return b[0], nil
 }
 
-func GetMinorRelease() {
-	// TODO: реконструировать (использовать метод на экземпляре)
-}
-
-// GetHotfixRelease читает 1 байт из 0xCF52.
+// GetHotfixRelease по дампу: регистр 0xCF52.
 func (c *ClockGen8A34012) GetHotfixRelease() (byte, error) {
-	return c.readClockGenRegisterByte(clockGenRegHotfixRelease)
-}
-
-func GetHotfixRelease() {
-	// TODO: реконструировать (использовать метод на экземпляре)
+	b, err := c.readVersionRegister(0xCF52, 1)
+	if err != nil {
+		return 0, err
+	}
+	if len(b) < 1 {
+		return 0, fmt.Errorf("short read for hotfix release")
+	}
+	return b[0], nil
 }
 
 func GetMode() {
 	// TODO: реконструировать
 }
 
-// GetTimebeatClockgenConfigVersion читает 2 байта из 0xCF50, формат "major.minor".
+// GetTimebeatClockgenConfigVersion по дампу (0x4b97aa0): reg 0xCF50, ReadLen=2; fmt.Sprintf("%d.%d", b[0], b[1]).
 func (c *ClockGen8A34012) GetTimebeatClockgenConfigVersion() (string, error) {
-	b, err := c.readClockGenRegisterBytes(clockGenRegMajorRelease, 2)
-	if err != nil || len(b) < 2 {
+	b, err := c.readVersionRegister(0xCF50, 2)
+	if err != nil {
 		return "", err
 	}
+	if len(b) < 2 {
+		return "", fmt.Errorf("short read for config version")
+	}
 	return fmt.Sprintf("%d.%d", b[0], b[1]), nil
-}
-
-func GetTimebeatClockgenConfigVersion() {
-	// TODO: реконструировать (использовать метод на экземпляре)
 }
 
 // monStatusLookup — по дампу InputMonStatusToString (7983870): таблица строк для битового статуса input monitor.
@@ -880,21 +845,38 @@ func ResetDPLLFreq() {
 	// TODO: реконструировать
 }
 
-// SetDpllFodFreq записывает 6 байт (high: 4 байта, low: 2 байта) в PhaseReg+0x1c для DPLL idx.
+// writeDPLLRegisterBytes записывает данные в регистр DPLL.
+func (d *DPLL) writeDPLLRegisterBytes(reg uint16, data []byte) error {
+	i2c := d.getI2CForRegister()
+	if i2c == nil {
+		return fmt.Errorf("DPLL I2C nil")
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return fmt.Errorf("NewRegisterRequest failed")
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.AddBytes(data)
+	return req.Execute()
+}
+
+// SetDpllFodFreq по дампу (0x4b92000): GetDPLL(idx), запись 4 байт high + 2 байт low в PhaseReg+0x1c.
 func (c *ClockGen8A34012) SetDpllFodFreq(idx int, high uint64, low uint16) error {
 	d := c.GetDPLL(idx)
 	if d == nil {
 		return fmt.Errorf("dpll idx %d out of range", idx)
 	}
+	reg := d.PhaseReg + 0x1c
+	hi := uint32(high)
 	data := make([]byte, 6)
-	binary.BigEndian.PutUint32(data[0:4], uint32(high))
+	data[0] = byte(hi >> 24)
+	data[1] = byte(hi >> 16)
+	data[2] = byte(hi >> 8)
+	data[3] = byte(hi)
 	data[4] = byte(low >> 8)
 	data[5] = byte(low)
-	return d.writeDPLLRegisterBytes(d.PhaseReg+0x1c, data)
-}
-
-func SetDpllFodFreq() {
-	// TODO: реконструировать (использовать метод на экземпляре)
+	return d.writeDPLLRegisterBytes(reg, data)
 }
 
 func SetHoldover() {
@@ -905,8 +887,19 @@ func SetHoldoverFm() {
 	// TODO: реконструировать
 }
 
-func SetLoopBandwidth() {
-	// TODO: реконструировать
+// SetLoopBandwidth по дампу (0x4b92900): GetDPLL(3).setLoopBandwidth(bw).
+func (c *ClockGen8A34012) SetLoopBandwidth(bw string) error {
+	d := c.GetDPLL(3)
+	if d == nil {
+		return fmt.Errorf("no DPLL 3 for loop bandwidth")
+	}
+	d.setLoopBandwidth(bw)
+	return nil
+}
+
+// setLoopBandwidth по дампу (0x4b92960): заглушка.
+func (d *DPLL) setLoopBandwidth(bw string) {
+	_ = bw
 }
 
 func SetManualReference() {
@@ -917,28 +910,39 @@ func SetMode() {
 	// TODO: реконструировать
 }
 
-// SetOutputDiv записывает 2 байта value в регистр 0xCF80+idx*2.
+// writeClockGenRegisterU16 записывает 2 байта (big-endian) в регистр.
+func (c *ClockGen8A34012) writeClockGenRegisterU16(reg uint16, v uint16) error {
+	if c == nil || c.I2C == nil {
+		return fmt.Errorf("clockgen or I2C nil")
+	}
+	i2c, ok := c.I2C.(generic_serial_device.I2CDeviceForRegister)
+	if !ok {
+		return fmt.Errorf("I2C does not support RegisterRequest")
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return fmt.Errorf("NewRegisterRequest failed")
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.AddUint16(v)
+	return req.Execute()
+}
+
+// SetOutputDiv по дампу (0x4b92560): регистр 0xCF80+idx*2.
 func (c *ClockGen8A34012) SetOutputDiv(idx int, value uint64) error {
-	if idx < 0 {
+	if idx < 0 || idx > 3 {
 		return fmt.Errorf("output div idx %d out of range", idx)
 	}
-	return c.writeClockGenRegisterU16(clockGenRegOutputDivBase+uint16(idx*2), uint16(value&0xffff))
+	return c.writeClockGenRegisterU16(uint16(0xCF80+idx*2), uint16(value&0xffff))
 }
 
-func SetOutputDiv() {
-	// TODO: реконструировать (использовать метод на экземпляре)
-}
-
-// SetOutputDutyCycleHigh записывает 2 байта value в регистр 0xCF88+idx*2.
+// SetOutputDutyCycleHigh по дампу (0x4b92700): регистр 0xCF88+idx*2.
 func (c *ClockGen8A34012) SetOutputDutyCycleHigh(idx int, value uint64) error {
-	if idx < 0 {
+	if idx < 0 || idx > 3 {
 		return fmt.Errorf("duty cycle idx %d out of range", idx)
 	}
-	return c.writeClockGenRegisterU16(clockGenRegDutyCycleBase+uint16(idx*2), uint16(value&0xffff))
-}
-
-func SetOutputDutyCycleHigh() {
-	// TODO: реконструировать (использовать метод на экземпляре)
+	return c.writeClockGenRegisterU16(uint16(0xCF88+idx*2), uint16(value&0xffff))
 }
 
 func SetPageAddress1ByteMode() {

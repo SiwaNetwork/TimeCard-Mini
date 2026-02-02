@@ -206,6 +206,130 @@ func (c *Client) ShowDpllStatus(phaseStr string) string {
 	return statusStr + fmt.Sprintf(" %s", refStr)
 }
 
+// ShowClockgenVersion по дампу: clockgen.GetMajorRelease, GetMinorRelease, GetHotfixRelease; "major.minor.hotfix".
+func (c *Client) ShowClockgenVersion() string {
+	if c == nil || c.clockgen == nil {
+		return "0.0.0"
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return "0.0.0"
+	}
+	major, err := cg.GetMajorRelease()
+	if err != nil {
+		return "0.0.0"
+	}
+	minor, err := cg.GetMinorRelease()
+	if err != nil {
+		return "0.0.0"
+	}
+	hotfix, err := cg.GetHotfixRelease()
+	if err != nil {
+		return "0.0.0"
+	}
+	return fmt.Sprintf("%d.%d.%d", major, minor, hotfix)
+}
+
+// ShowClockgenConfigStatus по дампу: clockgen.GetTimebeatClockgenConfigVersion().
+func (c *Client) ShowClockgenConfigStatus() string {
+	if c == nil || c.clockgen == nil {
+		return "unknown"
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return "unknown"
+	}
+	s, err := cg.GetTimebeatClockgenConfigVersion()
+	if err != nil {
+		return "unknown"
+	}
+	return s
+}
+
+// ShowInputStatus по дампу: strconv.Atoi(inputStr) → idx; GetInputMonStatus(cg, idx); InputMonStatusToString.
+func (c *Client) ShowInputStatus(inputStr string) string {
+	if c == nil || c.clockgen == nil {
+		return ""
+	}
+	idx, err := strconv.Atoi(inputStr)
+	if err != nil {
+		return inputStr + " invalid"
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return ""
+	}
+	status, err := cg.GetInputMonStatus(idx)
+	if err != nil {
+		return err.Error()
+	}
+	return clock_gen_8A34002E.InputMonStatusToString(status)
+}
+
+// SetDpllFodFreq по дампу: Atoi(idxStr), ParseUint base 10 (val64Str), ParseUint base 16 (val16Str); clockgen.SetDpllFodFreq(idx, high, low).
+func (c *Client) SetDpllFodFreq(idxStr, val64Str, val16Str string) error {
+	if c == nil || c.clockgen == nil {
+		return fmt.Errorf("no clockgen")
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return fmt.Errorf("clockgen not ClockGen8A34012")
+	}
+	idx, err := strconv.Atoi(idxStr)
+	if err != nil {
+		return err
+	}
+	high, err := strconv.ParseUint(val64Str, 10, 64)
+	if err != nil {
+		return err
+	}
+	low, err := strconv.ParseUint(val16Str, 16, 16)
+	if err != nil {
+		return err
+	}
+	return cg.SetDpllFodFreq(idx, high, uint16(low))
+}
+
+// SetOutputDiv по дампу: Atoi(idxStr), ParseUint base 10 (valStr); clockgen.SetOutputDiv(idx, value).
+func (c *Client) SetOutputDiv(idxStr, valStr string) error {
+	if c == nil || c.clockgen == nil {
+		return fmt.Errorf("no clockgen")
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return fmt.Errorf("clockgen not ClockGen8A34012")
+	}
+	idx, err := strconv.Atoi(idxStr)
+	if err != nil {
+		return err
+	}
+	value, err := strconv.ParseUint(valStr, 10, 64)
+	if err != nil {
+		return err
+	}
+	return cg.SetOutputDiv(idx, value)
+}
+
+// SetOutputDutyCycleHigh по дампу: Atoi(idxStr), ParseUint base 10; clockgen.SetOutputDutyCycleHigh(idx, value).
+func (c *Client) SetOutputDutyCycleHigh(idxStr, valStr string) error {
+	if c == nil || c.clockgen == nil {
+		return fmt.Errorf("no clockgen")
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return fmt.Errorf("clockgen not ClockGen8A34012")
+	}
+	idx, err := strconv.Atoi(idxStr)
+	if err != nil {
+		return err
+	}
+	value, err := strconv.ParseUint(valStr, 10, 64)
+	if err != nil {
+		return err
+	}
+	return cg.SetOutputDutyCycleHigh(idx, value)
+}
+
 // runGNSSRunloop по дампу (0x4ba3d20): select ChGSV/ChObs/ChTAI; decorateObservation + RegisterObservation; NotifyTAIOffset.
 func (c *Client) runGNSSRunloop() {
 	chGSV, chObs, chTAI := c.ChGSV, c.ChObs, c.ChTAI

@@ -96,6 +96,33 @@ func ShowDpllStatus(phaseStr string) string {
 	return cl.ShowDpllStatus(phaseStr)
 }
 
+// ShowClockgenVersion по дампу: GetClientInstance(); client.ShowClockgenVersion().
+func ShowClockgenVersion() string {
+	cl := GetClientInstance()
+	if cl == nil {
+		return "no open_timecard_v1 client"
+	}
+	return cl.ShowClockgenVersion()
+}
+
+// ShowClockgenConfigStatus по дампу: GetClientInstance(); client.ShowClockgenConfigStatus().
+func ShowClockgenConfigStatus() string {
+	cl := GetClientInstance()
+	if cl == nil {
+		return "unknown"
+	}
+	return cl.ShowClockgenConfigStatus()
+}
+
+// ShowInputStatus по дампу: GetClientInstance(); client.ShowInputStatus(inputStr).
+func ShowInputStatus(inputStr string) string {
+	cl := GetClientInstance()
+	if cl == nil {
+		return "no open_timecard_v1 client"
+	}
+	return cl.ShowInputStatus(inputStr)
+}
+
 func ConfigureTimeSource() {}
 
 func ConfigureTimeSourceFm() {}

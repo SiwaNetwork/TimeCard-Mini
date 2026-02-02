@@ -1,6 +1,7 @@
 package api
 
 import (
+	"github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/clients/vendors/timebeat/open_timecard_v1"
 	"github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/hostclocks"
 	"github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/sources"
 	"github.com/shiwa/timecard-mini/extracted-source/beater/logging"
@@ -227,20 +228,24 @@ func ShowOcpTapTimecards() {
 	// TODO: реконструировать
 }
 
-func ShowOpentimecardSbcClockgenConfigStatus() {
-	// TODO: реконструировать
+// ShowOpentimecardSbcClockgenConfigStatus по дампу: open_timecard_v1.ShowClockgenConfigStatus().
+func ShowOpentimecardSbcClockgenConfigStatus() string {
+	return open_timecard_v1.ShowClockgenConfigStatus()
 }
 
-func ShowOpentimecardSbcClockgenDpllStatus() {
-	// TODO: реконструировать
+// ShowOpentimecardSbcClockgenDpllStatus по дампу: open_timecard_v1.ShowDpllStatus(phaseStr). phaseStr — индекс DPLL, напр. "3".
+func ShowOpentimecardSbcClockgenDpllStatus(phaseStr string) string {
+	return open_timecard_v1.ShowDpllStatus(phaseStr)
 }
 
-func ShowOpentimecardSbcClockgenInputStatus() {
-	// TODO: реконструировать
+// ShowOpentimecardSbcClockgenInputStatus по дампу: open_timecard_v1.ShowInputStatus(inputStr).
+func ShowOpentimecardSbcClockgenInputStatus(inputStr string) string {
+	return open_timecard_v1.ShowInputStatus(inputStr)
 }
 
-func ShowOpentimecardSbcClockgenVersion() {
-	// TODO: реконструировать
+// ShowOpentimecardSbcClockgenVersion по дампу (0x4bedcd2): open_timecard_v1.ShowClockgenVersion().
+func ShowOpentimecardSbcClockgenVersion() string {
+	return open_timecard_v1.ShowClockgenVersion()
 }
 
 func ShowOpentimecardSbcEthVlanDefaultTag() {
