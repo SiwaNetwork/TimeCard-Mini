@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Script to run Timebeat in foreground with the same path settings that
+# the init script / systemd unit file would do.
+umask 0027
+exec /usr/share/timebeat/bin/timebeat \
+  --path.home /usr/share/timebeat \
+  --path.config /etc/timebeat \
+  --path.data /var/lib/timebeat \
+  --path.logs /var/log/timebeat \
+  "$@"

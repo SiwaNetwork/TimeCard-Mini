@@ -17,12 +17,26 @@ import (
 
 // Автоматически извлечено из timebeat-2.2.20
 
-func DPLLRefStatusToString() {
-	// TODO: реконструировать
+// dpllRefStatusLookup — по дампу DPLLRefStatusToString: таблица строк для ref status (байт).
+var dpllRefStatusLookup []string
+
+// dpllStatusLookup — по дампу DPLLStatusToString: таблица строк для DPLL status (байт).
+var dpllStatusLookup []string
+
+// DPLLRefStatusToString по дампу (0x4b93f80): lookup по refStatus в dpllRefStatusLookup; возврат строки.
+func DPLLRefStatusToString(refStatus byte) string {
+	if int(refStatus) >= len(dpllRefStatusLookup) {
+		return fmt.Sprintf("ref_%d", refStatus)
+	}
+	return dpllRefStatusLookup[refStatus]
 }
 
-func DPLLStatusToString() {
-	// TODO: реконструировать
+// DPLLStatusToString по дампу (0x4b936c0): lookup по status в dpllStatusLookup; возврат строки.
+func DPLLStatusToString(status byte) string {
+	if int(status) >= len(dpllStatusLookup) {
+		return fmt.Sprintf("status_%d", status)
+	}
+	return dpllStatusLookup[status]
 }
 
 func DebugBytesWritten() {
@@ -41,12 +55,134 @@ func GetDPLL() {
 	// TODO: реконструировать
 }
 
-func GetDPLLRefState() {
-	// TODO: реконструировать
+// getI2C возвращает I2C для ClockGen (для чтения регистров уровня чипа, не DPLL).
+func (c *ClockGen8A34012) getI2C() generic_serial_device.I2CDeviceForRegister {
+	if c == nil || c.I2C == nil {
+		return nil
+	}
+	i2c, _ := c.I2C.(generic_serial_device.I2CDeviceForRegister)
+	return i2c
 }
 
-func GetDPLLState() {
-	// TODO: реконструировать
+// readDPLLRegisterByte читает 1 байт из регистра DPLL (по дампу — RefModeReg и др.).
+func (d *DPLL) readDPLLRegisterByte(reg uint16) (byte, error) {
+	i2c := d.getI2CForRegister()
+	if i2c == nil {
+		return 0, nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return 0, nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.SetReadLen(1)
+	if err := req.Execute(); err != nil {
+		return 0, err
+	}
+	r := req.GetResult()
+	if len(r) < 1 {
+		return 0, nil
+	}
+	return r[0], nil
+}
+
+// readClockGenRegisterByte читает 1 байт из регистра ClockGen (база 0xCF50 и др.).
+func (c *ClockGen8A34012) readClockGenRegisterByte(reg uint16) (byte, error) {
+	i2c := c.getI2C()
+	if i2c == nil {
+		return 0, nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return 0, nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.SetReadLen(1)
+	if err := req.Execute(); err != nil {
+		return 0, err
+	}
+	r := req.GetResult()
+	if len(r) < 1 {
+		return 0, nil
+	}
+	return r[0], nil
+}
+
+// readClockGenRegisterBytes читает n байт из регистра ClockGen.
+func (c *ClockGen8A34012) readClockGenRegisterBytes(reg uint16, n int) ([]byte, error) {
+	if n <= 0 {
+		return nil, nil
+	}
+	i2c := c.getI2C()
+	if i2c == nil {
+		return nil, nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return nil, nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.SetReadLen(uint16(n))
+	if err := req.Execute(); err != nil {
+		return nil, err
+	}
+	return req.GetResult(), nil
+}
+
+// writeClockGenRegisterBytes записывает data в регистр reg (2 байта адреса + data).
+func (c *ClockGen8A34012) writeClockGenRegisterBytes(reg uint16, data []byte) error {
+	i2c := c.getI2C()
+	if i2c == nil {
+		return nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.AddBytes(data)
+	if err := req.Execute(); err != nil {
+		return err
+	}
+	return nil
+}
+
+// writeClockGenRegisterU16 записывает uint16 в регистр (big-endian).
+func (c *ClockGen8A34012) writeClockGenRegisterU16(reg uint16, v uint16) error {
+	i2c := c.getI2C()
+	if i2c == nil {
+		return nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.AddUint16(v)
+	return req.Execute()
+}
+
+// GetDPLLRefState по вызовам ShowDpllStatus: читает 1 байт из RefModeReg.
+func (c *ClockGen8A34012) GetDPLLRefState(idx int) (byte, error) {
+	d := c.GetDPLL(idx)
+	if d == nil {
+		return 0, fmt.Errorf("dpll idx %d out of range", idx)
+	}
+	return d.readDPLLRegisterByte(d.RefModeReg)
+}
+
+// GetDPLLState по вызовам ShowDpllStatus: читает 1 байт из RefModeReg+0x37.
+func (c *ClockGen8A34012) GetDPLLState(idx int) (byte, error) {
+	d := c.GetDPLL(idx)
+	if d == nil {
+		return 0, fmt.Errorf("dpll idx %d out of range", idx)
+	}
+	return d.readDPLLRegisterByte(d.RefModeReg + 0x37)
 }
 
 func GetDpllFinePhaseAdvCfg() {
@@ -93,8 +229,29 @@ func GetTimebeatClockgenConfigVersion() {
 	// TODO: реконструировать
 }
 
-func InputMonStatusToString() {
-	// TODO: реконструировать
+// monStatusLookup — по дампу InputMonStatusToString (7983870): таблица строк для битового статуса input monitor.
+var monStatusLookup []string
+
+// InputMonStatusToString по дампу (0x4b95a80): status — байт битовых флагов; для каждого установленного бита i < len(monStatusLookup) и i < 32 добавляется monStatusLookup[i]; строки склеиваются.
+func InputMonStatusToString(status byte) string {
+	if len(monStatusLookup) == 0 {
+		return fmt.Sprintf("0x%02x", status)
+	}
+	var b strings.Builder
+	for i := 0; i < len(monStatusLookup) && i < 32; i++ {
+		if (status & (1 << i)) == 0 {
+			continue
+		}
+		s := monStatusLookup[i]
+		if b.Len() > 0 {
+			b.WriteString(", ")
+		}
+		b.WriteString(fmt.Sprintf("%s", s))
+	}
+	if b.Len() == 0 {
+		return fmt.Sprintf("0x%02x", status)
+	}
+	return b.String()
 }
 
 func MonitorDPLLAdjustments() {
@@ -735,12 +892,12 @@ func dpllRefModeLookup() {
 	// TODO: реконструировать
 }
 
-func dpllRefStatusLookup() {
-	// TODO: реконструировать
+func dpllRefStatusLookupFunc() {
+	// заглушка; таблица — dpllRefStatusLookup
 }
 
-func dpllStatusLookup() {
-	// TODO: реконструировать
+func dpllStatusLookupFunc() {
+	// заглушка; таблица — dpllStatusLookup
 }
 
 func executePhasePullIn() {
@@ -764,7 +921,25 @@ func getRemoteGroupOffset() {
 }
 
 func init() {
-	// TODO: реконструировать
+	// Заполнение lookup-таблиц (реальные строки из бинарника при необходимости подставить).
+	if len(dpllStatusLookup) == 0 {
+		dpllStatusLookup = make([]string, 32)
+		for i := range dpllStatusLookup {
+			dpllStatusLookup[i] = fmt.Sprintf("dpll_status_%d", i)
+		}
+	}
+	if len(dpllRefStatusLookup) == 0 {
+		dpllRefStatusLookup = make([]string, 32)
+		for i := range dpllRefStatusLookup {
+			dpllRefStatusLookup[i] = fmt.Sprintf("ref_%d", i)
+		}
+	}
+	if len(monStatusLookup) == 0 {
+		monStatusLookup = make([]string, 32)
+		for i := range monStatusLookup {
+			monStatusLookup[i] = fmt.Sprintf("in_mon_%d", i)
+		}
+	}
 }
 
 func inittask() {
@@ -784,8 +959,8 @@ func logInputMonFreq() {
 }
 
 
-func monStatusLookup() {
-	// TODO: реконструировать
+func monStatusLookupFunc() {
+	// заглушка; таблица — monStatusLookup
 }
 
 func monitorFFO() {

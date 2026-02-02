@@ -1,0 +1,18 @@
+[Unit]
+Description=PTP / NTP clock synchronisation system
+Documentation=https://support.timebeat.app/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+
+UMask=0027
+Environment="GODEBUG='madvdontneed=1'"
+Environment="BEAT_LOG_OPTS="
+Environment="BEAT_CONFIG_OPTS=-c /etc/timebeat/timebeat.yml"
+Environment="BEAT_PATH_OPTS=--path.home /usr/share/timebeat --path.config /etc/timebeat --path.data /var/lib/timebeat --path.logs /var/log/timebeat"
+ExecStart=/usr/share/timebeat/bin/timebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

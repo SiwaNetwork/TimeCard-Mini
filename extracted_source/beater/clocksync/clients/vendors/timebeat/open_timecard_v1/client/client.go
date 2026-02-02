@@ -1,6 +1,9 @@
 package client
 
 import (
+	"fmt"
+	"strconv"
+
 	"github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/clients/vendors/generic_gnss_device"
 	clock_gen_8A34002E "github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E"
 	"github.com/shiwa/timecard-mini/extracted-source/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S"
@@ -175,6 +178,32 @@ func (c *Client) Reset() error {
 		return cg.Reset()
 	}
 	return nil
+}
+
+// ShowDpllStatus по дампу (0x4ba1680): strconv.Atoi(phaseStr) → idx; GetDPLLState(cg, idx); DPLLStatusToString; GetDPLLRefState(cg, idx); DPLLRefStatusToString; конкатенация строк.
+func (c *Client) ShowDpllStatus(phaseStr string) string {
+	if c == nil || c.clockgen == nil {
+		return ""
+	}
+	phase, err := strconv.Atoi(phaseStr)
+	if err != nil {
+		return phaseStr + " invalid"
+	}
+	cg, ok := c.clockgen.(*clock_gen_8A34002E.ClockGen8A34012)
+	if !ok {
+		return ""
+	}
+	state, err := cg.GetDPLLState(phase)
+	if err != nil {
+		return err.Error()
+	}
+	statusStr := clock_gen_8A34002E.DPLLStatusToString(state)
+	refState, err := cg.GetDPLLRefState(phase)
+	if err != nil {
+		return err.Error()
+	}
+	refStr := clock_gen_8A34002E.DPLLRefStatusToString(refState)
+	return statusStr + fmt.Sprintf(" %s", refStr)
 }
 
 // runGNSSRunloop по дампу (0x4ba3d20): select ChGSV/ChObs/ChTAI; decorateObservation + RegisterObservation; NotifyTAIOffset.

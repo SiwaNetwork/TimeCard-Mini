@@ -71,6 +71,31 @@ func LoadConfig() {
 	}
 }
 
+// GetClientInstance по дампу (0x4ba45c0): возвращает первый клиент из контроллера (для ShowDpllStatus и др.).
+func GetClientInstance() *client.Client {
+	if ocv1Controller == nil || ocv1Controller.clients == nil {
+		return nil
+	}
+	var first *client.Client
+	ocv1Controller.clients.Range(func(_, value interface{}) bool {
+		if cl, ok := value.(*client.Client); ok {
+			first = cl
+			return false
+		}
+		return true
+	})
+	return first
+}
+
+// ShowDpllStatus по дампу (0x4ba49a0): GetClientInstance(); при nil — возврат строки «no client»; иначе client.ShowDpllStatus(phaseStr).
+func ShowDpllStatus(phaseStr string) string {
+	cl := GetClientInstance()
+	if cl == nil {
+		return "no open_timecard_v1 client"
+	}
+	return cl.ShowDpllStatus(phaseStr)
+}
+
 func ConfigureTimeSource() {}
 
 func ConfigureTimeSourceFm() {}
