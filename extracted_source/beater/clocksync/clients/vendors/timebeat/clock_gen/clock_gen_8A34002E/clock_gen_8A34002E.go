@@ -64,6 +64,22 @@ func (c *ClockGen8A34012) getI2C() generic_serial_device.I2CDeviceForRegister {
 	return i2c
 }
 
+// writeDPLLRegisterBytes записывает data в регистр DPLL.
+func (d *DPLL) writeDPLLRegisterBytes(reg uint16, data []byte) error {
+	i2c := d.getI2CForRegister()
+	if i2c == nil {
+		return nil
+	}
+	req := generic_serial_device.NewRegisterRequest(i2c)
+	if req == nil {
+		return nil
+	}
+	req.BigEndian = true
+	req.AddUint16(reg)
+	req.AddBytes(data)
+	return req.Execute()
+}
+
 // readDPLLRegisterByte читает 1 байт из регистра DPLL (по дампу — RefModeReg и др.).
 func (d *DPLL) readDPLLRegisterByte(reg uint16) (byte, error) {
 	i2c := d.getI2CForRegister()
@@ -209,24 +225,72 @@ func GetInputMonFreqStatus() {
 	// TODO: реконструировать
 }
 
+// Регистры версии и input monitor по дампу 8A34012 (0xCF50, 0xCF60+idx).
+const (
+	clockGenRegMajorRelease = 0xCF50
+	clockGenRegMinorRelease = 0xCF51
+	clockGenRegHotfixRelease = 0xCF52
+	clockGenRegEEPROMStatus  = 0xCF54
+	clockGenRegEEPROMConfig  = 0xCF56
+	clockGenRegInputMonBase  = 0xCF60
+	clockGenRegOutputDivBase = 0xCF80
+	clockGenRegDutyCycleBase = 0xCF88
+)
+
+// GetInputMonStatus возвращает байт статуса input monitor для idx (регистр 0xCF60+idx).
+func (c *ClockGen8A34012) GetInputMonStatus(idx int) (byte, error) {
+	if idx < 0 {
+		return 0, fmt.Errorf("input mon idx %d out of range", idx)
+	}
+	return c.readClockGenRegisterByte(clockGenRegInputMonBase + uint16(idx))
+}
+
 func GetInputMonStatus() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
+}
+
+// GetMajorRelease читает 1 байт из 0xCF50.
+func (c *ClockGen8A34012) GetMajorRelease() (byte, error) {
+	return c.readClockGenRegisterByte(clockGenRegMajorRelease)
 }
 
 func GetMajorRelease() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
+}
+
+// GetMinorRelease читает 1 байт из 0xCF51.
+func (c *ClockGen8A34012) GetMinorRelease() (byte, error) {
+	return c.readClockGenRegisterByte(clockGenRegMinorRelease)
 }
 
 func GetMinorRelease() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
+}
+
+// GetHotfixRelease читает 1 байт из 0xCF52.
+func (c *ClockGen8A34012) GetHotfixRelease() (byte, error) {
+	return c.readClockGenRegisterByte(clockGenRegHotfixRelease)
+}
+
+func GetHotfixRelease() {
+	// TODO: реконструировать (использовать метод на экземпляре)
 }
 
 func GetMode() {
 	// TODO: реконструировать
 }
 
+// GetTimebeatClockgenConfigVersion читает 2 байта из 0xCF50, формат "major.minor".
+func (c *ClockGen8A34012) GetTimebeatClockgenConfigVersion() (string, error) {
+	b, err := c.readClockGenRegisterBytes(clockGenRegMajorRelease, 2)
+	if err != nil || len(b) < 2 {
+		return "", err
+	}
+	return fmt.Sprintf("%d.%d", b[0], b[1]), nil
+}
+
 func GetTimebeatClockgenConfigVersion() {
-	// TODO: реконструировать
+	// TODO: реконструировать (использовать метод на экземпляре)
 }
 
 // monStatusLookup — по дампу InputMonStatusToString (7983870): таблица строк для битового статуса input monitor.
