@@ -1,0 +1,271 @@
+# github.com/lasselj/timebeat/config.LoadIdentity
+# addr 0x4403ca0 size 1120 (0x460)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004403ca0 <github.com/lasselj/timebeat/config.LoadIdentity@@Base>:
+ 4403ca0:	4c 8d a4 24 20 ff ff 	lea    -0xe0(%rsp),%r12
+ 4403ca7:	ff 
+ 4403ca8:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4403cac:	0f 86 2c 04 00 00    	jbe    44040de <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x43e>
+ 4403cb2:	48 81 ec 60 01 00 00 	sub    $0x160,%rsp
+ 4403cb9:	48 89 ac 24 58 01 00 	mov    %rbp,0x158(%rsp)
+ 4403cc0:	00 
+ 4403cc1:	48 8d ac 24 58 01 00 	lea    0x158(%rsp),%rbp
+ 4403cc8:	00 
+ 4403cc9:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4403cd0:	4c 89 ac 24 50 01 00 	mov    %r13,0x150(%rsp)
+ 4403cd7:	00 
+ 4403cd8:	48 89 9c 24 70 01 00 	mov    %rbx,0x170(%rsp)
+ 4403cdf:	00 
+ 4403ce0:	48 89 84 24 68 01 00 	mov    %rax,0x168(%rsp)
+ 4403ce7:	00 
+ 4403ce8:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 4403ced:	48 c7 44 24 40 00 00 	movq   $0x0,0x40(%rsp)
+ 4403cf4:	00 00 
+ 4403cf6:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4403cfc:	90                   	nop
+ 4403cfd:	31 c0                	xor    %eax,%eax
+ 4403cff:	48 8d 15 82 6f a7 03 	lea    0x3a76f82(%rip),%rdx        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403d06:	be 01 00 00 00       	mov    $0x1,%esi
+ 4403d0b:	f0 0f b1 32          	lock cmpxchg %esi,(%rdx)
+ 4403d0f:	0f 94 c2             	sete   %dl
+ 4403d12:	84 d2                	test   %dl,%dl
+ 4403d14:	75 0f                	jne    4403d25 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x85>
+ 4403d16:	48 8d 05 6b 6f a7 03 	lea    0x3a76f6b(%rip),%rax        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403d1d:	0f 1f 00             	nopl   (%rax)
+ 4403d20:	e8 1b 48 b7 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4403d25:	44 0f 11 bc 24 80 00 	movups %xmm15,0x80(%rsp)
+ 4403d2c:	00 00 
+ 4403d2e:	48 8d 05 cb 03 00 00 	lea    0x3cb(%rip),%rax        # 4404100 <github.com/lasselj/timebeat/config.LoadIdentity.func1@@Base>
+ 4403d35:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4403d3c:	00 
+ 4403d3d:	48 8d 05 44 6f a7 03 	lea    0x3a76f44(%rip),%rax        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403d44:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4403d4b:	00 
+ 4403d4c:	48 8d 84 24 80 00 00 	lea    0x80(%rsp),%rax
+ 4403d53:	00 
+ 4403d54:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4403d5b:	00 
+ 4403d5c:	c6 44 24 2f 01       	movb   $0x1,0x2f(%rsp)
+ 4403d61:	e8 1a fa ff ff       	call   4403780 <github.com/lasselj/timebeat/config.GetPeerIdentities@@Base>
+ 4403d66:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+ 4403d6d:	00 
+ 4403d6e:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 4403d72:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4403d79:	00 00 
+ 4403d7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4403d80:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4403d85:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4403d8a:	e8 3c 30 b5 fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 4403d8f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4403d93:	48 8b 18             	mov    (%rax),%rbx
+ 4403d96:	48 8d 05 03 9a 54 01 	lea    0x1549a03(%rip),%rax        # 594d7a0 <type:7G1EDQaC@@Base>
+ 4403d9d:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 4403da4:	00 
+ 4403da5:	48 8b bc 24 70 01 00 	mov    0x170(%rsp),%rdi
+ 4403dac:	00 
+ 4403dad:	e8 0e 20 af fd       	call   1ef5dc0 <runtime.mapaccess2_faststr@@Base>
+ 4403db2:	48 8d bc 24 f0 00 00 	lea    0xf0(%rsp),%rdi
+ 4403db9:	00 
+ 4403dba:	48 89 c6             	mov    %rax,%rsi
+ 4403dbd:	0f 1f 00             	nopl   (%rax)
+ 4403dc0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4403dc5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4403dca:	e8 5d 33 b5 fd       	call   1f5712c <runtime.duffcopy@@Base+0x32c>
+ 4403dcf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4403dd3:	48 8d bc 24 90 00 00 	lea    0x90(%rsp),%rdi
+ 4403dda:	00 
+ 4403ddb:	48 8d b4 24 f0 00 00 	lea    0xf0(%rsp),%rsi
+ 4403de2:	00 
+ 4403de3:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4403de8:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4403ded:	e8 3a 33 b5 fd       	call   1f5712c <runtime.duffcopy@@Base+0x32c>
+ 4403df2:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4403df6:	84 db                	test   %bl,%bl
+ 4403df8:	0f 84 ca 01 00 00    	je     4403fc8 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x328>
+ 4403dfe:	90                   	nop
+ 4403dff:	48 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%rcx
+ 4403e06:	00 
+ 4403e07:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4403e0c:	48 8d 05 8d a8 3a 01 	lea    0x13aa88d(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4403e13:	48 89 cb             	mov    %rcx,%rbx
+ 4403e16:	e8 c5 25 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4403e1b:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4403e20:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4403e27:	00 
+ 4403e28:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4403e2d:	48 89 cb             	mov    %rcx,%rbx
+ 4403e30:	48 8d 05 09 05 4b 01 	lea    0x14b0509(%rip),%rax        # 58b4340 <type:tpDRQG8O@@Base>
+ 4403e37:	e8 a4 25 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4403e3c:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4403e41:	48 8d 05 58 84 8a 01 	lea    0x18a8458(%rip),%rax        # 5cac2a0 <type:zFbdAtxm@@Base>
+ 4403e48:	e8 93 c6 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4403e4d:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 4403e54:	00 
+ 4403e55:	48 8b b4 24 98 00 00 	mov    0x98(%rsp),%rsi
+ 4403e5c:	00 
+ 4403e5d:	48 89 70 08          	mov    %rsi,0x8(%rax)
+ 4403e61:	83 3d f8 7a a7 03 00 	cmpl   $0x0,0x3a77af8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403e68:	75 05                	jne    4403e6f <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x1cf>
+ 4403e6a:	48 89 10             	mov    %rdx,(%rax)
+ 4403e6d:	eb 08                	jmp    4403e77 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x1d7>
+ 4403e6f:	48 89 c7             	mov    %rax,%rdi
+ 4403e72:	e8 a9 28 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4403e77:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4403e7e:	00 
+ 4403e7f:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 4403e86:	00 
+ 4403e87:	4c 89 40 18          	mov    %r8,0x18(%rax)
+ 4403e8b:	83 3d ce 7a a7 03 00 	cmpl   $0x0,0x3a77ace(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403e92:	75 06                	jne    4403e9a <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x1fa>
+ 4403e94:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4403e98:	eb 0b                	jmp    4403ea5 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x205>
+ 4403e9a:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4403e9e:	66 90                	xchg   %ax,%ax
+ 4403ea0:	e8 7b 28 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4403ea5:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4403eac:	00 
+ 4403ead:	4c 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%r8
+ 4403eb4:	00 
+ 4403eb5:	4c 89 40 38          	mov    %r8,0x38(%rax)
+ 4403eb9:	83 3d a0 7a a7 03 00 	cmpl   $0x0,0x3a77aa0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403ec0:	75 06                	jne    4403ec8 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x228>
+ 4403ec2:	48 89 50 40          	mov    %rdx,0x40(%rax)
+ 4403ec6:	eb 09                	jmp    4403ed1 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x231>
+ 4403ec8:	48 8d 78 40          	lea    0x40(%rax),%rdi
+ 4403ecc:	e8 4f 28 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4403ed1:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4403ed6:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 4403eda:	48 89 50 30          	mov    %rdx,0x30(%rax)
+ 4403ede:	83 3d 7b 7a a7 03 00 	cmpl   $0x0,0x3a77a7b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403ee5:	75 0b                	jne    4403ef2 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x252>
+ 4403ee7:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4403eec:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 4403ef0:	eb 13                	jmp    4403f05 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x265>
+ 4403ef2:	48 8d 78 20          	lea    0x20(%rax),%rdi
+ 4403ef6:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4403efb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4403f00:	e8 1b 28 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4403f05:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4403f0a:	48 89 50 50          	mov    %rdx,0x50(%rax)
+ 4403f0e:	48 89 50 58          	mov    %rdx,0x58(%rax)
+ 4403f12:	83 3d 47 7a a7 03 00 	cmpl   $0x0,0x3a77a47(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403f19:	75 0b                	jne    4403f26 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x286>
+ 4403f1b:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4403f20:	48 89 50 48          	mov    %rdx,0x48(%rax)
+ 4403f24:	eb 0e                	jmp    4403f34 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x294>
+ 4403f26:	48 8d 78 48          	lea    0x48(%rax),%rdi
+ 4403f2a:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4403f2f:	e8 ec 27 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4403f34:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4403f39:	48 8b 58 20          	mov    0x20(%rax),%rbx
+ 4403f3d:	48 8b 48 28          	mov    0x28(%rax),%rcx
+ 4403f41:	48 8b bc 24 b0 00 00 	mov    0xb0(%rsp),%rdi
+ 4403f48:	00 
+ 4403f49:	48 8b b4 24 b8 00 00 	mov    0xb8(%rsp),%rsi
+ 4403f50:	00 
+ 4403f51:	48 8d 05 48 a7 3a 01 	lea    0x13aa748(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4403f58:	e8 a3 30 af fd       	call   1ef7000 <runtime.typedslicecopy@@Base>
+ 4403f5d:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4403f62:	48 8b 5a 48          	mov    0x48(%rdx),%rbx
+ 4403f66:	48 8b 4a 50          	mov    0x50(%rdx),%rcx
+ 4403f6a:	48 8b bc 24 d8 00 00 	mov    0xd8(%rsp),%rdi
+ 4403f71:	00 
+ 4403f72:	48 8b b4 24 e0 00 00 	mov    0xe0(%rsp),%rsi
+ 4403f79:	00 
+ 4403f7a:	48 8d 05 bf 03 4b 01 	lea    0x14b03bf(%rip),%rax        # 58b4340 <type:tpDRQG8O@@Base>
+ 4403f81:	e8 7a 30 af fd       	call   1ef7000 <runtime.typedslicecopy@@Base>
+ 4403f86:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4403f8b:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 4403f90:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4403f96:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 4403f9b:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 4403fa2:	00 
+ 4403fa3:	4c 8b 02             	mov    (%rdx),%r8
+ 4403fa6:	41 ff d0             	call   *%r8
+ 4403fa9:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4403fae:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4403fb3:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 4403fb8:	48 8b ac 24 58 01 00 	mov    0x158(%rsp),%rbp
+ 4403fbf:	00 
+ 4403fc0:	48 81 c4 60 01 00 00 	add    $0x160,%rsp
+ 4403fc7:	c3                   	ret
+ 4403fc8:	48 8d 05 d1 a6 3a 01 	lea    0x13aa6d1(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4403fcf:	31 db                	xor    %ebx,%ebx
+ 4403fd1:	48 89 d9             	mov    %rbx,%rcx
+ 4403fd4:	e8 07 24 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4403fd9:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4403fde:	31 db                	xor    %ebx,%ebx
+ 4403fe0:	48 89 d9             	mov    %rbx,%rcx
+ 4403fe3:	48 8d 05 56 03 4b 01 	lea    0x14b0356(%rip),%rax        # 58b4340 <type:tpDRQG8O@@Base>
+ 4403fea:	e8 f1 23 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4403fef:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4403ff4:	bb 17 00 00 00       	mov    $0x17,%ebx
+ 4403ff9:	31 c9                	xor    %ecx,%ecx
+ 4403ffb:	31 ff                	xor    %edi,%edi
+ 4403ffd:	48 89 fe             	mov    %rdi,%rsi
+ 4404000:	48 8d 05 56 23 9d 00 	lea    0x9d2356(%rip),%rax        # 4dd635d <_IO_stdin_used@@Base+0x1a335d>
+ 4404007:	e8 54 d2 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 440400c:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4404011:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4404016:	48 8d 05 83 82 8a 01 	lea    0x18a8283(%rip),%rax        # 5cac2a0 <type:zFbdAtxm@@Base>
+ 440401d:	0f 1f 00             	nopl   (%rax)
+ 4404020:	e8 bb c4 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4404025:	83 3d 34 79 a7 03 00 	cmpl   $0x0,0x3a77934(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440402c:	75 0b                	jne    4404039 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x399>
+ 440402e:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4404033:	48 89 48 20          	mov    %rcx,0x20(%rax)
+ 4404037:	eb 0e                	jmp    4404047 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x3a7>
+ 4404039:	48 8d 78 20          	lea    0x20(%rax),%rdi
+ 440403d:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4404042:	e8 b9 26 b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4404047:	44 0f 11 78 50       	movups %xmm15,0x50(%rax)
+ 440404c:	83 3d 0d 79 a7 03 00 	cmpl   $0x0,0x3a7790d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4404053:	75 0d                	jne    4404062 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x3c2>
+ 4404055:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 440405a:	48 89 48 48          	mov    %rcx,0x48(%rax)
+ 440405e:	66 90                	xchg   %ax,%ax
+ 4404060:	eb 0e                	jmp    4404070 <github.com/lasselj/timebeat/config.LoadIdentity@@Base+0x3d0>
+ 4404062:	48 8d 78 48          	lea    0x48(%rax),%rdi
+ 4404066:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 440406b:	e8 90 26 b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4404070:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4404075:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 440407a:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 440407f:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4404084:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4404089:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 440408e:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 4404095:	00 
+ 4404096:	48 8b 02             	mov    (%rdx),%rax
+ 4404099:	ff d0                	call   *%rax
+ 440409b:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 44040a0:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44040a5:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 44040aa:	48 8b ac 24 58 01 00 	mov    0x158(%rsp),%rbp
+ 44040b1:	00 
+ 44040b2:	48 81 c4 60 01 00 00 	add    $0x160,%rsp
+ 44040b9:	c3                   	ret
+ 44040ba:	e8 a1 7e b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 44040bf:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44040c4:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 44040c9:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 44040ce:	48 8b ac 24 58 01 00 	mov    0x158(%rsp),%rbp
+ 44040d5:	00 
+ 44040d6:	48 81 c4 60 01 00 00 	add    $0x160,%rsp
+ 44040dd:	c3                   	ret
+ 44040de:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 44040e3:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 44040e8:	e8 73 03 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 44040ed:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 44040f2:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 44040f7:	e9 a4 fb ff ff       	jmp    4403ca0 <github.com/lasselj/timebeat/config.LoadIdentity@@Base>
+ 44040fc:	cc                   	int3
+ 44040fd:	cc                   	int3
+ 44040fe:	cc                   	int3
+ 44040ff:	cc                   	int3

@@ -1,0 +1,41 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*RMS).Get
+# addr 0x45803e0 size 64 (0x40)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045803e0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*RMS).Get@@Base>:
+ 45803e0:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45803e4:	48 85 c9             	test   %rcx,%rcx
+ 45803e7:	75 03                	jne    45803ec <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*RMS).Get@@Base+0xc>
+ 45803e9:	31 c0                	xor    %eax,%eax
+ 45803eb:	c3                   	ret
+ 45803ec:	48 8b 00             	mov    (%rax),%rax
+ 45803ef:	48 83 f9 ff          	cmp    $0xffffffffffffffff,%rcx
+ 45803f3:	74 07                	je     45803fc <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*RMS).Get@@Base+0x1c>
+ 45803f5:	48 99                	cqto
+ 45803f7:	48 f7 f9             	idiv   %rcx
+ 45803fa:	eb 05                	jmp    4580401 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*RMS).Get@@Base+0x21>
+ 45803fc:	48 f7 d8             	neg    %rax
+ 45803ff:	31 d2                	xor    %edx,%edx
+ 4580401:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4580404:	f2 48 0f 2a c0       	cvtsi2sd %rax,%xmm0
+ 4580409:	f2 0f 51 c0          	sqrtsd %xmm0,%xmm0
+ 458040d:	f2 48 0f 2c c0       	cvttsd2si %xmm0,%rax
+ 4580412:	c3                   	ret
+ 4580413:	cc                   	int3
+ 4580414:	cc                   	int3
+ 4580415:	cc                   	int3
+ 4580416:	cc                   	int3
+ 4580417:	cc                   	int3
+ 4580418:	cc                   	int3
+ 4580419:	cc                   	int3
+ 458041a:	cc                   	int3
+ 458041b:	cc                   	int3
+ 458041c:	cc                   	int3
+ 458041d:	cc                   	int3
+ 458041e:	cc                   	int3
+ 458041f:	cc                   	int3

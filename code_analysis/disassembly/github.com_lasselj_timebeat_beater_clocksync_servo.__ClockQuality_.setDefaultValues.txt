@@ -1,0 +1,79 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues
+# addr 0x459fc00 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459fc00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues@@Base>:
+ 459fc00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459fc04:	0f 86 d3 00 00 00    	jbe    459fcdd <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues@@Base+0xdd>
+ 459fc0a:	48 83 ec 40          	sub    $0x40,%rsp
+ 459fc0e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 459fc13:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 459fc18:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459fc1f:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 459fc24:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 459fc29:	48 89 c1             	mov    %rax,%rcx
+ 459fc2c:	31 c0                	xor    %eax,%eax
+ 459fc2e:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 459fc33:	f0 0f b1 59 10       	lock cmpxchg %ebx,0x10(%rcx)
+ 459fc38:	0f 94 c3             	sete   %bl
+ 459fc3b:	48 8d 41 10          	lea    0x10(%rcx),%rax
+ 459fc3f:	90                   	nop
+ 459fc40:	84 db                	test   %bl,%bl
+ 459fc42:	75 19                	jne    459fc5d <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues@@Base+0x5d>
+ 459fc44:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459fc49:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 459fc4e:	e8 ed 88 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 459fc53:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 459fc58:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459fc5d:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 459fc63:	48 8d 1d 96 00 00 00 	lea    0x96(%rip),%rbx        # 459fd00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues.func1@@Base>
+ 459fc6a:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 459fc6f:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 459fc74:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 459fc79:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459fc7e:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 459fc83:	48 8b 05 1e 52 8a 03 	mov    0x38a521e(%rip),%rax        # 7e44ea8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2c8>
+ 459fc8a:	88 01                	mov    %al,(%rcx)
+ 459fc8c:	48 8b 05 1d 52 8a 03 	mov    0x38a521d(%rip),%rax        # 7e44eb0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2d0>
+ 459fc93:	88 41 01             	mov    %al,0x1(%rcx)
+ 459fc96:	48 8b 05 1b 52 8a 03 	mov    0x38a521b(%rip),%rax        # 7e44eb8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2d8>
+ 459fc9d:	66 89 41 02          	mov    %ax,0x2(%rcx)
+ 459fca1:	48 8b 05 18 52 8a 03 	mov    0x38a5218(%rip),%rax        # 7e44ec0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2e0>
+ 459fca8:	88 41 04             	mov    %al,0x4(%rcx)
+ 459fcab:	0f b6 05 16 52 8a 03 	movzbl 0x38a5216(%rip),%eax        # 7e44ec8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2e8>
+ 459fcb2:	88 41 05             	mov    %al,0x5(%rcx)
+ 459fcb5:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 459fcba:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459fcbf:	48 8b 02             	mov    (%rdx),%rax
+ 459fcc2:	ff d0                	call   *%rax
+ 459fcc4:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459fcc9:	48 83 c4 40          	add    $0x40,%rsp
+ 459fccd:	c3                   	ret
+ 459fcce:	e8 8d c2 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 459fcd3:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459fcd8:	48 83 c4 40          	add    $0x40,%rsp
+ 459fcdc:	c3                   	ret
+ 459fcdd:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459fce2:	e8 79 47 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459fce7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459fcec:	e9 0f ff ff ff       	jmp    459fc00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues@@Base>
+ 459fcf1:	cc                   	int3
+ 459fcf2:	cc                   	int3
+ 459fcf3:	cc                   	int3
+ 459fcf4:	cc                   	int3
+ 459fcf5:	cc                   	int3
+ 459fcf6:	cc                   	int3
+ 459fcf7:	cc                   	int3
+ 459fcf8:	cc                   	int3
+ 459fcf9:	cc                   	int3
+ 459fcfa:	cc                   	int3
+ 459fcfb:	cc                   	int3
+ 459fcfc:	cc                   	int3
+ 459fcfd:	cc                   	int3
+ 459fcfe:	cc                   	int3
+ 459fcff:	cc                   	int3

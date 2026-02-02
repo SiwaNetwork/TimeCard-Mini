@@ -1,0 +1,65 @@
+# github.com/lasselj/timebeat/beater/logging.GetHTTPUMT
+# addr 0x440a280 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000440a280 <github.com/lasselj/timebeat/beater/logging.GetHTTPUMT@@Base>:
+ 440a280:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 440a284:	0f 86 eb 00 00 00    	jbe    440a375 <github.com/lasselj/timebeat/beater/logging.GetHTTPUMT@@Base+0xf5>
+ 440a28a:	48 83 ec 48          	sub    $0x48,%rsp
+ 440a28e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 440a293:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 440a298:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 440a29f:	4c 89 6c 24 38       	mov    %r13,0x38(%rsp)
+ 440a2a4:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a2a9:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 440a2b0:	00 00 
+ 440a2b2:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 440a2b8:	90                   	nop
+ 440a2b9:	31 c0                	xor    %eax,%eax
+ 440a2bb:	48 8d 0d be 09 a7 03 	lea    0x3a709be(%rip),%rcx        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a2c2:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 440a2c7:	f0 0f b1 19          	lock cmpxchg %ebx,(%rcx)
+ 440a2cb:	0f 94 c1             	sete   %cl
+ 440a2ce:	84 c9                	test   %cl,%cl
+ 440a2d0:	75 0c                	jne    440a2de <github.com/lasselj/timebeat/beater/logging.GetHTTPUMT@@Base+0x5e>
+ 440a2d2:	48 8d 05 a7 09 a7 03 	lea    0x3a709a7(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a2d9:	e8 62 e2 b6 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 440a2de:	44 0f 11 7c 24 10    	movups %xmm15,0x10(%rsp)
+ 440a2e4:	48 8d 05 95 00 00 00 	lea    0x95(%rip),%rax        # 440a380 <github.com/lasselj/timebeat/beater/logging.GetHTTPUMT.func1@@Base>
+ 440a2eb:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 440a2f0:	48 8d 05 89 09 a7 03 	lea    0x3a70989(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a2f7:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 440a2fc:	48 8d 44 24 10       	lea    0x10(%rsp),%rax
+ 440a301:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 440a306:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 440a30b:	48 8b 05 0e c2 a2 03 	mov    0x3a2c20e(%rip),%rax        # 7e36520 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base>
+ 440a312:	48 8b 0d 0f c2 a2 03 	mov    0x3a2c20f(%rip),%rcx        # 7e36528 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base+0x8>
+ 440a319:	48 8b 1d 10 c2 a2 03 	mov    0x3a2c210(%rip),%rbx        # 7e36530 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base+0x10>
+ 440a320:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 440a325:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 440a32a:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 440a32f:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a334:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 440a339:	48 8b 02             	mov    (%rdx),%rax
+ 440a33c:	ff d0                	call   *%rax
+ 440a33e:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 440a343:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 440a348:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 440a34d:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a352:	48 83 c4 48          	add    $0x48,%rsp
+ 440a356:	c3                   	ret
+ 440a357:	e8 04 1c b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 440a35c:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 440a361:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 440a366:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 440a36b:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a370:	48 83 c4 48          	add    $0x48,%rsp
+ 440a374:	c3                   	ret
+ 440a375:	e8 e6 a0 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440a37a:	e9 01 ff ff ff       	jmp    440a280 <github.com/lasselj/timebeat/beater/logging.GetHTTPUMT@@Base>
+ 440a37f:	cc                   	int3

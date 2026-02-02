@@ -1,0 +1,89 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation
+# addr 0x4b9a3e0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b9a3e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base>:
+ 4b9a3e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b9a3e4:	0f 86 ee 00 00 00    	jbe    4b9a4d8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base+0xf8>
+ 4b9a3ea:	48 83 ec 48          	sub    $0x48,%rsp
+ 4b9a3ee:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4b9a3f3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4b9a3f8:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b9a3fd:	66 c7 44 24 2e 00 00 	movw   $0x0,0x2e(%rsp)
+ 4b9a404:	66 c7 44 24 2e 13 40 	movw   $0x4013,0x2e(%rsp)
+ 4b9a40b:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b9a410:	eb 0e                	jmp    4b9a420 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base+0x40>
+ 4b9a412:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4b9a417:	48 ff c1             	inc    %rcx
+ 4b9a41a:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4b9a41f:	90                   	nop
+ 4b9a420:	48 83 f9 05          	cmp    $0x5,%rcx
+ 4b9a424:	0f 8f a0 00 00 00    	jg     4b9a4ca <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base+0xea>
+ 4b9a42a:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4b9a42f:	90                   	nop
+ 4b9a430:	48 8b 10             	mov    (%rax),%rdx
+ 4b9a433:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 4b9a438:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4b9a43d:	48 89 d9             	mov    %rbx,%rcx
+ 4b9a440:	48 8d 05 19 45 c1 00 	lea    0xc14519(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4b9a447:	e8 94 bf 39 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b9a44c:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4b9a451:	48 c1 e2 0c          	shl    $0xc,%rdx
+ 4b9a455:	48 0f ba ea 08       	bts    $0x8,%rdx
+ 4b9a45a:	90                   	nop
+ 4b9a45b:	66 c1 c2 08          	rol    $0x8,%dx
+ 4b9a45f:	66 89 10             	mov    %dx,(%rax)
+ 4b9a462:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4b9a467:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 4b9a46c:	48 89 cf             	mov    %rcx,%rdi
+ 4b9a46f:	48 8d 35 ea 44 c1 00 	lea    0xc144ea(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b9a476:	e8 45 c0 39 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b9a47b:	0f b7 54 24 2e       	movzwl 0x2e(%rsp),%edx
+ 4b9a480:	66 89 50 02          	mov    %dx,0x2(%rax)
+ 4b9a484:	48 89 c3             	mov    %rax,%rbx
+ 4b9a487:	48 89 cf             	mov    %rcx,%rdi
+ 4b9a48a:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b9a48f:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 4b9a494:	e8 e7 32 ff ff       	call   4b8d780 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Write@@Base>
+ 4b9a499:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4b9a4a0:	48 85 c0             	test   %rax,%rax
+ 4b9a4a3:	0f 84 69 ff ff ff    	je     4b9a412 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base+0x32>
+ 4b9a4a9:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4b9a4ae:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 4b9a4b2:	48 8d 1d 4b 34 2c 00 	lea    0x2c344b(%rip),%rbx        # 4e5d904 <_IO_stdin_used@@Base+0x22a904>
+ 4b9a4b9:	b9 3b 00 00 00       	mov    $0x3b,%ecx
+ 4b9a4be:	66 90                	xchg   %ax,%ax
+ 4b9a4c0:	e8 9b cb 86 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4b9a4c5:	e9 48 ff ff ff       	jmp    4b9a412 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base+0x32>
+ 4b9a4ca:	31 c0                	xor    %eax,%eax
+ 4b9a4cc:	31 db                	xor    %ebx,%ebx
+ 4b9a4ce:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b9a4d3:	48 83 c4 48          	add    $0x48,%rsp
+ 4b9a4d7:	c3                   	ret
+ 4b9a4d8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b9a4dd:	0f 1f 00             	nopl   (%rax)
+ 4b9a4e0:	e8 7b 9f 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b9a4e5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b9a4ea:	e9 f1 fe ff ff       	jmp    4b9a3e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Set1000MbpsAutoNegotiation@@Base>
+ 4b9a4ef:	cc                   	int3
+ 4b9a4f0:	cc                   	int3
+ 4b9a4f1:	cc                   	int3
+ 4b9a4f2:	cc                   	int3
+ 4b9a4f3:	cc                   	int3
+ 4b9a4f4:	cc                   	int3
+ 4b9a4f5:	cc                   	int3
+ 4b9a4f6:	cc                   	int3
+ 4b9a4f7:	cc                   	int3
+ 4b9a4f8:	cc                   	int3
+ 4b9a4f9:	cc                   	int3
+ 4b9a4fa:	cc                   	int3
+ 4b9a4fb:	cc                   	int3
+ 4b9a4fc:	cc                   	int3
+ 4b9a4fd:	cc                   	int3
+ 4b9a4fe:	cc                   	int3
+ 4b9a4ff:	cc                   	int3

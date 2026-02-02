@@ -1,0 +1,264 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start
+# addr 0x4b68b80 size 1056 (0x420)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b68b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base>:
+ 4b68b80:	4c 8d 64 24 88       	lea    -0x78(%rsp),%r12
+ 4b68b85:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b68b89:	0f 86 e6 03 00 00    	jbe    4b68f75 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3f5>
+ 4b68b8f:	48 81 ec f8 00 00 00 	sub    $0xf8,%rsp
+ 4b68b96:	48 89 ac 24 f0 00 00 	mov    %rbp,0xf0(%rsp)
+ 4b68b9d:	00 
+ 4b68b9e:	48 8d ac 24 f0 00 00 	lea    0xf0(%rsp),%rbp
+ 4b68ba5:	00 
+ 4b68ba6:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4b68bad:	00 
+ 4b68bae:	48 8b 88 68 01 00 00 	mov    0x168(%rax),%rcx
+ 4b68bb5:	31 db                	xor    %ebx,%ebx
+ 4b68bb7:	48 89 c8             	mov    %rcx,%rax
+ 4b68bba:	e8 c1 fc ff ff       	call   4b68880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base>
+ 4b68bbf:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4b68bc4:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4b68bc9:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+ 4b68bd0:	00 
+ 4b68bd1:	e8 ca 06 00 00       	call   4b692a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).configureMACModule@@Base>
+ 4b68bd6:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4b68bdc:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 4b68be2:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 4b68be9:	00 00 
+ 4b68beb:	48 8b 8c 24 00 01 00 	mov    0x100(%rsp),%rcx
+ 4b68bf2:	00 
+ 4b68bf3:	48 8b 91 90 02 00 00 	mov    0x290(%rcx),%rdx
+ 4b68bfa:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+ 4b68bff:	48 c7 44 24 78 08 00 	movq   $0x8,0x78(%rsp)
+ 4b68c06:	00 00 
+ 4b68c08:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b68c0d:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b68c12:	48 8d 4c 24 70       	lea    0x70(%rsp),%rcx
+ 4b68c17:	e8 c4 89 8a ff       	call   44115e0 <go.bug.st/serial.nativeOpen@@Base>
+ 4b68c1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b68c20:	48 85 db             	test   %rbx,%rbx
+ 4b68c23:	74 0c                	je     4b68c31 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0xb1>
+ 4b68c25:	b8 00 00 00 00       	mov    $0x0,%eax
+ 4b68c2a:	b9 00 00 00 00       	mov    $0x0,%ecx
+ 4b68c2f:	eb 07                	jmp    4b68c38 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0xb8>
+ 4b68c31:	48 8d 0d 98 51 3e 01 	lea    0x13e5198(%rip),%rcx        # 5f4ddd0 <go:itab.*go.bug.st/serial.unixPort,go.bug.st/serial.Port@@Base>
+ 4b68c38:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4b68c3d:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 4b68c42:	74 6e                	je     4b68cb2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x132>
+ 4b68c44:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 4b68c4a:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b68c4f:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b68c54:	e8 07 51 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b68c59:	48 8d 0d 40 5a c4 00 	lea    0xc45a40(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b68c60:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4b68c65:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4b68c6a:	48 8d 05 83 34 28 00 	lea    0x283483(%rip),%rax        # 4dec0f4 <_IO_stdin_used@@Base+0x1b90f4>
+ 4b68c71:	bb 1d 00 00 00       	mov    $0x1d,%ebx
+ 4b68c76:	48 8d 4c 24 60       	lea    0x60(%rsp),%rcx
+ 4b68c7b:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b68c80:	48 89 fe             	mov    %rdi,%rsi
+ 4b68c83:	e8 78 bc 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b68c88:	48 8b 8c 24 00 01 00 	mov    0x100(%rsp),%rcx
+ 4b68c8f:	00 
+ 4b68c90:	48 8b 51 28          	mov    0x28(%rcx),%rdx
+ 4b68c94:	48 89 c6             	mov    %rax,%rsi
+ 4b68c97:	48 89 d0             	mov    %rdx,%rax
+ 4b68c9a:	48 89 df             	mov    %rbx,%rdi
+ 4b68c9d:	48 89 f3             	mov    %rsi,%rbx
+ 4b68ca0:	48 89 f9             	mov    %rdi,%rcx
+ 4b68ca3:	e8 b8 e3 89 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4b68ca8:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b68cad:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b68cb2:	48 8b bc 24 00 01 00 	mov    0x100(%rsp),%rdi
+ 4b68cb9:	00 
+ 4b68cba:	48 89 4f 10          	mov    %rcx,0x10(%rdi)
+ 4b68cbe:	83 3d 9b 2c 31 03 00 	cmpl   $0x0,0x3312c9b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68cc5:	75 06                	jne    4b68ccd <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x14d>
+ 4b68cc7:	48 89 47 18          	mov    %rax,0x18(%rdi)
+ 4b68ccb:	eb 0c                	jmp    4b68cd9 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x159>
+ 4b68ccd:	48 8d 57 18          	lea    0x18(%rdi),%rdx
+ 4b68cd1:	48 89 d7             	mov    %rdx,%rdi
+ 4b68cd4:	e8 27 d9 3e fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b68cd9:	48 8d 05 80 23 ec 00 	lea    0xec2380(%rip),%rax        # 5a2b060 <type:io.Reader@@Base>
+ 4b68ce0:	48 89 cb             	mov    %rcx,%rbx
+ 4b68ce3:	e8 d8 51 38 fd       	call   1eedec0 <runtime.convI2I@@Base>
+ 4b68ce8:	48 8d 0d 51 4c 39 01 	lea    0x1394c51(%rip),%rcx        # 5efd940 <go:itab.*bufio.Reader,io.Reader@@Base>
+ 4b68cef:	48 39 c8             	cmp    %rcx,%rax
+ 4b68cf2:	75 07                	jne    4b68cfb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x17b>
+ 4b68cf4:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68cf9:	eb 05                	jmp    4b68d00 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x180>
+ 4b68cfb:	b9 00 00 00 00       	mov    $0x0,%ecx
+ 4b68d00:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b68d05:	75 17                	jne    4b68d1e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x19e>
+ 4b68d07:	48 81 79 08 00 10 00 	cmpq   $0x1000,0x8(%rcx)
+ 4b68d0e:	00 
+ 4b68d0f:	7c 0d                	jl     4b68d1e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x19e>
+ 4b68d11:	48 89 c8             	mov    %rcx,%rax
+ 4b68d14:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68d19:	e9 1a 01 00 00       	jmp    4b68e38 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x2b8>
+ 4b68d1e:	48 8d 05 1b ea 1a 01 	lea    0x11aea1b(%rip),%rax        # 5d17740 <type:x5XH/8Ze@@Base>
+ 4b68d25:	e8 b6 77 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b68d2a:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4b68d2f:	bb 00 10 00 00       	mov    $0x1000,%ebx
+ 4b68d34:	48 89 d9             	mov    %rbx,%rcx
+ 4b68d37:	48 8d 05 22 5c c4 00 	lea    0xc45c22(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4b68d3e:	66 90                	xchg   %ax,%ax
+ 4b68d40:	e8 9b d6 3c fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b68d45:	44 0f 11 bc 24 98 00 	movups %xmm15,0x98(%rsp)
+ 4b68d4c:	00 00 
+ 4b68d4e:	48 8d bc 24 a0 00 00 	lea    0xa0(%rsp),%rdi
+ 4b68d55:	00 
+ 4b68d56:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 4b68d5a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 4b68d60:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b68d65:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b68d6a:	e8 61 e0 3e fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 4b68d6f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b68d73:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4b68d7a:	00 
+ 4b68d7b:	48 c7 84 24 a0 00 00 	movq   $0x1000,0xa0(%rsp)
+ 4b68d82:	00 00 10 00 00 
+ 4b68d87:	48 c7 84 24 a8 00 00 	movq   $0x1000,0xa8(%rsp)
+ 4b68d8e:	00 00 10 00 00 
+ 4b68d93:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4b68d98:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4b68d9f:	00 
+ 4b68da0:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68da5:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 4b68dac:	00 
+ 4b68dad:	48 c7 84 24 e0 00 00 	movq   $0xffffffffffffffff,0xe0(%rsp)
+ 4b68db4:	00 ff ff ff ff 
+ 4b68db9:	48 c7 84 24 e8 00 00 	movq   $0xffffffffffffffff,0xe8(%rsp)
+ 4b68dc0:	00 ff ff ff ff 
+ 4b68dc5:	83 3d 94 2b 31 03 00 	cmpl   $0x0,0x3312b94(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68dcc:	75 47                	jne    4b68e15 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x295>
+ 4b68dce:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b68dd5:	00 
+ 4b68dd6:	48 8b 7c 24 40       	mov    0x40(%rsp),%rdi
+ 4b68ddb:	48 89 17             	mov    %rdx,(%rdi)
+ 4b68dde:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+ 4b68de2:	48 8d b4 24 a0 00 00 	lea    0xa0(%rsp),%rsi
+ 4b68de9:	00 
+ 4b68dea:	48 89 f8             	mov    %rdi,%rax
+ 4b68ded:	48 89 d7             	mov    %rdx,%rdi
+ 4b68df0:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4b68df7:	00 00 
+ 4b68df9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4b68e00:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b68e05:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b68e0a:	e8 2b e3 3e fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 4b68e0f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b68e13:	eb 23                	jmp    4b68e38 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x2b8>
+ 4b68e15:	48 8d 05 24 e9 1a 01 	lea    0x11ae924(%rip),%rax        # 5d17740 <type:x5XH/8Ze@@Base>
+ 4b68e1c:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4b68e21:	48 8d 8c 24 98 00 00 	lea    0x98(%rsp),%rcx
+ 4b68e28:	00 
+ 4b68e29:	e8 12 e0 38 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b68e2e:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4b68e33:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68e38:	83 3d 21 2b 31 03 00 	cmpl   $0x0,0x3312b21(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68e3f:	90                   	nop
+ 4b68e40:	75 11                	jne    4b68e53 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x2d3>
+ 4b68e42:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 4b68e49:	00 
+ 4b68e4a:	48 89 82 80 02 00 00 	mov    %rax,0x280(%rdx)
+ 4b68e51:	eb 17                	jmp    4b68e6a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x2ea>
+ 4b68e53:	48 8b bc 24 00 01 00 	mov    0x100(%rsp),%rdi
+ 4b68e5a:	00 
+ 4b68e5b:	48 8d 97 80 02 00 00 	lea    0x280(%rdi),%rdx
+ 4b68e62:	48 89 d7             	mov    %rdx,%rdi
+ 4b68e65:	e8 96 d7 3e fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b68e6a:	48 8d 05 ef 24 ec 00 	lea    0xec24ef(%rip),%rax        # 5a2b360 <type:io.Writer@@Base>
+ 4b68e71:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b68e76:	e8 45 50 38 fd       	call   1eedec0 <runtime.convI2I@@Base>
+ 4b68e7b:	48 8d 0d de 4a 39 01 	lea    0x1394ade(%rip),%rcx        # 5efd960 <go:itab.*bufio.Writer,io.Writer@@Base>
+ 4b68e82:	48 39 c8             	cmp    %rcx,%rax
+ 4b68e85:	75 07                	jne    4b68e8e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x30e>
+ 4b68e87:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68e8c:	eb 05                	jmp    4b68e93 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x313>
+ 4b68e8e:	b9 00 00 00 00       	mov    $0x0,%ecx
+ 4b68e93:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b68e98:	75 12                	jne    4b68eac <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x32c>
+ 4b68e9a:	48 81 79 18 00 10 00 	cmpq   $0x1000,0x18(%rcx)
+ 4b68ea1:	00 
+ 4b68ea2:	7c 08                	jl     4b68eac <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x32c>
+ 4b68ea4:	48 89 c8             	mov    %rcx,%rax
+ 4b68ea7:	e9 87 00 00 00       	jmp    4b68f33 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3b3>
+ 4b68eac:	48 8d 05 ad 5a c4 00 	lea    0xc45aad(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4b68eb3:	bb 00 10 00 00       	mov    $0x1000,%ebx
+ 4b68eb8:	48 89 d9             	mov    %rbx,%rcx
+ 4b68ebb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b68ec0:	e8 1b d5 3c fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b68ec5:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b68eca:	48 8d 05 cf d1 0c 01 	lea    0x10cd1cf(%rip),%rax        # 5c360a0 <type:KUDejvYa@@Base>
+ 4b68ed1:	e8 0a 76 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b68ed6:	48 c7 40 18 00 10 00 	movq   $0x1000,0x18(%rax)
+ 4b68edd:	00 
+ 4b68ede:	48 c7 40 20 00 10 00 	movq   $0x1000,0x20(%rax)
+ 4b68ee5:	00 
+ 4b68ee6:	83 3d 73 2a 31 03 00 	cmpl   $0x0,0x3312a73(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68eed:	75 0b                	jne    4b68efa <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x37a>
+ 4b68eef:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b68ef4:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4b68ef8:	eb 0e                	jmp    4b68f08 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x388>
+ 4b68efa:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b68efe:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b68f03:	e8 f8 d7 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b68f08:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4b68f0d:	48 89 48 30          	mov    %rcx,0x30(%rax)
+ 4b68f11:	83 3d 48 2a 31 03 00 	cmpl   $0x0,0x3312a48(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68f18:	75 0b                	jne    4b68f25 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3a5>
+ 4b68f1a:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68f1f:	48 89 48 38          	mov    %rcx,0x38(%rax)
+ 4b68f23:	eb 0e                	jmp    4b68f33 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3b3>
+ 4b68f25:	48 8d 78 38          	lea    0x38(%rax),%rdi
+ 4b68f29:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b68f2e:	e8 cd d7 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b68f33:	83 3d 26 2a 31 03 00 	cmpl   $0x0,0x3312a26(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b68f3a:	75 11                	jne    4b68f4d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3cd>
+ 4b68f3c:	48 8b 8c 24 00 01 00 	mov    0x100(%rsp),%rcx
+ 4b68f43:	00 
+ 4b68f44:	48 89 81 88 02 00 00 	mov    %rax,0x288(%rcx)
+ 4b68f4b:	eb 18                	jmp    4b68f65 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base+0x3e5>
+ 4b68f4d:	48 8b bc 24 00 01 00 	mov    0x100(%rsp),%rdi
+ 4b68f54:	00 
+ 4b68f55:	48 81 c7 88 02 00 00 	add    $0x288,%rdi
+ 4b68f5c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b68f60:	e8 9b d6 3e fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b68f65:	48 8b ac 24 f0 00 00 	mov    0xf0(%rsp),%rbp
+ 4b68f6c:	00 
+ 4b68f6d:	48 81 c4 f8 00 00 00 	add    $0xf8,%rsp
+ 4b68f74:	c3                   	ret
+ 4b68f75:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b68f7a:	e8 e1 b4 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b68f7f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b68f84:	e9 f7 fb ff ff       	jmp    4b68b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base>
+ 4b68f89:	cc                   	int3
+ 4b68f8a:	cc                   	int3
+ 4b68f8b:	cc                   	int3
+ 4b68f8c:	cc                   	int3
+ 4b68f8d:	cc                   	int3
+ 4b68f8e:	cc                   	int3
+ 4b68f8f:	cc                   	int3
+ 4b68f90:	cc                   	int3
+ 4b68f91:	cc                   	int3
+ 4b68f92:	cc                   	int3
+ 4b68f93:	cc                   	int3
+ 4b68f94:	cc                   	int3
+ 4b68f95:	cc                   	int3
+ 4b68f96:	cc                   	int3
+ 4b68f97:	cc                   	int3
+ 4b68f98:	cc                   	int3
+ 4b68f99:	cc                   	int3
+ 4b68f9a:	cc                   	int3
+ 4b68f9b:	cc                   	int3
+ 4b68f9c:	cc                   	int3
+ 4b68f9d:	cc                   	int3
+ 4b68f9e:	cc                   	int3
+ 4b68f9f:	cc                   	int3

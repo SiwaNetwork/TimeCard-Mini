@@ -1,0 +1,573 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig
+# addr 0x4c293c0 size 2144 (0x860)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c293c0 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base>:
+ 4c293c0:	4c 8d a4 24 80 fe ff 	lea    -0x180(%rsp),%r12
+ 4c293c7:	ff 
+ 4c293c8:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4c293cc:	0f 86 1e 08 00 00    	jbe    4c29bf0 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x830>
+ 4c293d2:	48 81 ec 00 02 00 00 	sub    $0x200,%rsp
+ 4c293d9:	48 89 ac 24 f8 01 00 	mov    %rbp,0x1f8(%rsp)
+ 4c293e0:	00 
+ 4c293e1:	48 8d ac 24 f8 01 00 	lea    0x1f8(%rsp),%rbp
+ 4c293e8:	00 
+ 4c293e9:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+ 4c293f0:	00 
+ 4c293f1:	48 8d 1d 08 bd 21 03 	lea    0x321bd08(%rip),%rbx        # 7e45100 <github.com/lasselj/timebeat/config.startupConfig@@Base>
+ 4c293f8:	48 8d 05 21 72 2a 01 	lea    0x12a7221(%rip),%rax        # 5ed0620 <type:ugenevto@@Base>
+ 4c293ff:	90                   	nop
+ 4c29400:	e8 db 46 2c fd       	call   1eedae0 <runtime.convT@@Base>
+ 4c29405:	90                   	nop
+ 4c29406:	80 3d 33 ef 20 03 00 	cmpb   $0x0,0x320ef33(%rip)        # 7e38340 <reflect.dummy@@Base>
+ 4c2940d:	74 2e                	je     4c2943d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x7d>
+ 4c2940f:	48 8d 15 0a 72 2a 01 	lea    0x12a720a(%rip),%rdx        # 5ed0620 <type:ugenevto@@Base>
+ 4c29416:	48 89 15 2b ef 20 03 	mov    %rdx,0x320ef2b(%rip)        # 7e38348 <reflect.dummy@@Base+0x8>
+ 4c2941d:	83 3d 3c 25 25 03 00 	cmpl   $0x0,0x325253c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4c29424:	75 09                	jne    4c2942f <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x6f>
+ 4c29426:	48 89 05 23 ef 20 03 	mov    %rax,0x320ef23(%rip)        # 7e38350 <reflect.dummy@@Base+0x10>
+ 4c2942d:	eb 15                	jmp    4c29444 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x84>
+ 4c2942f:	48 8d 3d 1a ef 20 03 	lea    0x320ef1a(%rip),%rdi        # 7e38350 <reflect.dummy@@Base+0x10>
+ 4c29436:	e8 c5 d1 32 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4c2943b:	eb 07                	jmp    4c29444 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x84>
+ 4c2943d:	48 8d 15 dc 71 2a 01 	lea    0x12a71dc(%rip),%rdx        # 5ed0620 <type:ugenevto@@Base>
+ 4c29444:	48 89 94 24 20 01 00 	mov    %rdx,0x120(%rsp)
+ 4c2944b:	00 
+ 4c2944c:	48 89 84 24 28 01 00 	mov    %rax,0x128(%rsp)
+ 4c29453:	00 
+ 4c29454:	48 8b 94 24 20 01 00 	mov    0x120(%rsp),%rdx
+ 4c2945b:	00 
+ 4c2945c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4c29460:	48 85 d2             	test   %rdx,%rdx
+ 4c29463:	74 1d                	je     4c29482 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0xc2>
+ 4c29465:	0f b6 72 17          	movzbl 0x17(%rdx),%esi
+ 4c29469:	89 f7                	mov    %esi,%edi
+ 4c2946b:	83 e6 1f             	and    $0x1f,%esi
+ 4c2946e:	49 89 f0             	mov    %rsi,%r8
+ 4c29471:	48 0f ba ee 07       	bts    $0x7,%rsi
+ 4c29476:	40 f6 c7 20          	test   $0x20,%dil
+ 4c2947a:	4c 0f 44 c6          	cmove  %rsi,%r8
+ 4c2947e:	90                   	nop
+ 4c2947f:	90                   	nop
+ 4c29480:	eb 07                	jmp    4c29489 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0xc9>
+ 4c29482:	45 31 c0             	xor    %r8d,%r8d
+ 4c29485:	31 d2                	xor    %edx,%edx
+ 4c29487:	31 c0                	xor    %eax,%eax
+ 4c29489:	4c 89 84 24 80 00 00 	mov    %r8,0x80(%rsp)
+ 4c29490:	00 
+ 4c29491:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 4c29498:	00 
+ 4c29499:	48 89 94 24 c0 00 00 	mov    %rdx,0xc0(%rsp)
+ 4c294a0:	00 
+ 4c294a1:	44 0f 11 bc 24 30 01 	movups %xmm15,0x130(%rsp)
+ 4c294a8:	00 00 
+ 4c294aa:	48 8d 35 ef 51 b8 00 	lea    0xb851ef(%rip),%rsi        # 57ae6a0 <type:string@@Base>
+ 4c294b1:	48 89 b4 24 30 01 00 	mov    %rsi,0x130(%rsp)
+ 4c294b8:	00 
+ 4c294b9:	48 8d 3d b8 9d 2c 01 	lea    0x12c9db8(%rip),%rdi        # 5ef3278 <time..dict.leadingInt[string]@@Base+0x2fe8>
+ 4c294c0:	48 89 bc 24 38 01 00 	mov    %rdi,0x138(%rsp)
+ 4c294c7:	00 
+ 4c294c8:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4c294cd:	48 89 d9             	mov    %rbx,%rcx
+ 4c294d0:	48 8d 84 24 30 01 00 	lea    0x130(%rsp),%rax
+ 4c294d7:	00 
+ 4c294d8:	e8 43 b9 3c fd       	call   1ff4e20 <fmt.Sprintln@@Base>
+ 4c294dd:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4c294e4:	00 
+ 4c294e5:	48 89 9c 24 08 01 00 	mov    %rbx,0x108(%rsp)
+ 4c294ec:	00 
+ 4c294ed:	31 c0                	xor    %eax,%eax
+ 4c294ef:	31 c9                	xor    %ecx,%ecx
+ 4c294f1:	31 d2                	xor    %edx,%edx
+ 4c294f3:	eb 19                	jmp    4c2950e <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x14e>
+ 4c294f5:	48 8b b4 24 a8 00 00 	mov    0xa8(%rsp),%rsi
+ 4c294fc:	00 
+ 4c294fd:	48 ff c6             	inc    %rsi
+ 4c29500:	48 89 f0             	mov    %rsi,%rax
+ 4c29503:	48 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%rcx
+ 4c2950a:	00 
+ 4c2950b:	48 89 da             	mov    %rbx,%rdx
+ 4c2950e:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4c29515:	00 
+ 4c29516:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+ 4c2951d:	00 
+ 4c2951e:	48 89 8c 24 d8 00 00 	mov    %rcx,0xd8(%rsp)
+ 4c29525:	00 
+ 4c29526:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c2952d:	00 
+ 4c2952e:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c29535:	00 
+ 4c29536:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c2953d:	00 
+ 4c2953e:	66 90                	xchg   %ax,%ax
+ 4c29540:	e8 9b 01 37 fd       	call   1f996e0 <reflect.Value.NumField@@Base>
+ 4c29545:	48 8b 9c 24 a8 00 00 	mov    0xa8(%rsp),%rbx
+ 4c2954c:	00 
+ 4c2954d:	48 39 d8             	cmp    %rbx,%rax
+ 4c29550:	0f 8e 80 01 00 00    	jle    4c296d6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x316>
+ 4c29556:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c2955d:	00 
+ 4c2955e:	66 90                	xchg   %ax,%ax
+ 4c29560:	48 85 c9             	test   %rcx,%rcx
+ 4c29563:	74 17                	je     4c2957c <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x1bc>
+ 4c29565:	0f ba e1 09          	bt     $0x9,%ecx
+ 4c29569:	72 11                	jb     4c2957c <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x1bc>
+ 4c2956b:	48 8d 05 7e ce 33 01 	lea    0x133ce7e(%rip),%rax        # 5f663f0 <go:itab.*reflect.rtype,reflect.Type@@Base>
+ 4c29572:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 4c29579:	00 
+ 4c2957a:	eb 20                	jmp    4c2959c <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x1dc>
+ 4c2957c:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c29583:	00 
+ 4c29584:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c2958b:	00 
+ 4c2958c:	e8 2f 2b 37 fd       	call   1f9c0c0 <reflect.Value.typeSlow@@Base>
+ 4c29591:	48 89 da             	mov    %rbx,%rdx
+ 4c29594:	48 8b 9c 24 a8 00 00 	mov    0xa8(%rsp),%rbx
+ 4c2959b:	00 
+ 4c2959c:	48 8b 48 50          	mov    0x50(%rax),%rcx
+ 4c295a0:	48 89 d0             	mov    %rdx,%rax
+ 4c295a3:	ff d1                	call   *%rcx
+ 4c295a5:	48 8b 0c 24          	mov    (%rsp),%rcx
+ 4c295a9:	48 89 8c 24 90 01 00 	mov    %rcx,0x190(%rsp)
+ 4c295b0:	00 
+ 4c295b1:	48 8d bc 24 98 01 00 	lea    0x198(%rsp),%rdi
+ 4c295b8:	00 
+ 4c295b9:	48 8d 74 24 08       	lea    0x8(%rsp),%rsi
+ 4c295be:	66 90                	xchg   %ax,%ax
+ 4c295c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4c295c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4c295ca:	e8 5d db 32 fd       	call   1f5712c <runtime.duffcopy@@Base+0x32c>
+ 4c295cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4c295d3:	48 8b 8c 24 c8 01 00 	mov    0x1c8(%rsp),%rcx
+ 4c295da:	00 
+ 4c295db:	48 8b 94 24 c0 01 00 	mov    0x1c0(%rsp),%rdx
+ 4c295e2:	00 
+ 4c295e3:	48 83 f9 08          	cmp    $0x8,%rcx
+ 4c295e7:	7c 13                	jl     4c295fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x23c>
+ 4c295e9:	49 b9 63 6f 6e 66 69 	movabs $0x223a6769666e6f63,%r9
+ 4c295f0:	67 3a 22 
+ 4c295f3:	4c 39 0a             	cmp    %r9,(%rdx)
+ 4c295f6:	41 0f 94 c2          	sete   %r10b
+ 4c295fa:	eb 0d                	jmp    4c29609 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x249>
+ 4c295fc:	49 b9 63 6f 6e 66 69 	movabs $0x223a6769666e6f63,%r9
+ 4c29603:	67 3a 22 
+ 4c29606:	45 31 d2             	xor    %r10d,%r10d
+ 4c29609:	45 84 d2             	test   %r10b,%r10b
+ 4c2960c:	74 20                	je     4c2962e <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x26e>
+ 4c2960e:	48 83 f9 08          	cmp    $0x8,%rcx
+ 4c29612:	0f 82 cd 05 00 00    	jb     4c29be5 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x825>
+ 4c29618:	48 83 c1 f8          	add    $0xfffffffffffffff8,%rcx
+ 4c2961c:	49 89 ca             	mov    %rcx,%r10
+ 4c2961f:	48 f7 d9             	neg    %rcx
+ 4c29622:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 4c29626:	83 e1 08             	and    $0x8,%ecx
+ 4c29629:	48 01 ca             	add    %rcx,%rdx
+ 4c2962c:	eb 03                	jmp    4c29631 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x271>
+ 4c2962e:	49 89 ca             	mov    %rcx,%r10
+ 4c29631:	49 83 fa 01          	cmp    $0x1,%r10
+ 4c29635:	7d 04                	jge    4c2963b <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x27b>
+ 4c29637:	31 c0                	xor    %eax,%eax
+ 4c29639:	eb 45                	jmp    4c29680 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x2c0>
+ 4c2963b:	4c 89 54 24 78       	mov    %r10,0x78(%rsp)
+ 4c29640:	48 89 94 24 b8 00 00 	mov    %rdx,0xb8(%rsp)
+ 4c29647:	00 
+ 4c29648:	49 8d 04 12          	lea    (%r10,%rdx,1),%rax
+ 4c2964c:	48 8d 40 ff          	lea    -0x1(%rax),%rax
+ 4c29650:	48 8d 1d 29 d4 8a 00 	lea    0x8ad429(%rip),%rbx        # 54d6a80 <_IO_stdin_used@@Base+0x8a3a80>
+ 4c29657:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4c2965c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4c29660:	e8 bb a4 2b fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4c29665:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 4c2966c:	00 
+ 4c2966d:	49 b9 63 6f 6e 66 69 	movabs $0x223a6769666e6f63,%r9
+ 4c29674:	67 3a 22 
+ 4c29677:	4c 8b 54 24 78       	mov    0x78(%rsp),%r10
+ 4c2967c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4c29680:	84 c0                	test   %al,%al
+ 4c29682:	74 0e                	je     4c29692 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x2d2>
+ 4c29684:	49 8d 4a ff          	lea    -0x1(%r10),%rcx
+ 4c29688:	49 39 ca             	cmp    %rcx,%r10
+ 4c2968b:	73 08                	jae    4c29695 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x2d5>
+ 4c2968d:	e9 48 05 00 00       	jmp    4c29bda <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x81a>
+ 4c29692:	4c 89 d1             	mov    %r10,%rcx
+ 4c29695:	90                   	nop
+ 4c29696:	48 89 d0             	mov    %rdx,%rax
+ 4c29699:	48 89 cb             	mov    %rcx,%rbx
+ 4c2969c:	48 8d 0d 75 d8 8a 00 	lea    0x8ad875(%rip),%rcx        # 54d6f18 <_IO_stdin_used@@Base+0x8a3f18>
+ 4c296a3:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c296a8:	31 f6                	xor    %esi,%esi
+ 4c296aa:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 4c296b1:	e8 ca d7 3d fd       	call   2006e80 <strings.genSplit@@Base>
+ 4c296b6:	48 89 84 24 f0 00 00 	mov    %rax,0xf0(%rsp)
+ 4c296bd:	00 
+ 4c296be:	48 89 9c 24 b0 00 00 	mov    %rbx,0xb0(%rsp)
+ 4c296c5:	00 
+ 4c296c6:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 4c296cd:	00 
+ 4c296ce:	31 d2                	xor    %edx,%edx
+ 4c296d0:	31 f6                	xor    %esi,%esi
+ 4c296d2:	31 ff                	xor    %edi,%edi
+ 4c296d4:	eb 53                	jmp    4c29729 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x369>
+ 4c296d6:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+ 4c296dd:	00 
+ 4c296de:	48 8b 9c 24 08 01 00 	mov    0x108(%rsp),%rbx
+ 4c296e5:	00 
+ 4c296e6:	48 8b ac 24 f8 01 00 	mov    0x1f8(%rsp),%rbp
+ 4c296ed:	00 
+ 4c296ee:	48 81 c4 00 02 00 00 	add    $0x200,%rsp
+ 4c296f5:	c3                   	ret
+ 4c296f6:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4c296fd:	00 
+ 4c296fe:	48 ff c2             	inc    %rdx
+ 4c29701:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+ 4c29708:	00 
+ 4c29709:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 4c29710:	00 
+ 4c29711:	48 8b 9c 24 b0 00 00 	mov    0xb0(%rsp),%rbx
+ 4c29718:	00 
+ 4c29719:	48 8b b4 24 88 00 00 	mov    0x88(%rsp),%rsi
+ 4c29720:	00 
+ 4c29721:	48 8b bc 24 d0 00 00 	mov    0xd0(%rsp),%rdi
+ 4c29728:	00 
+ 4c29729:	48 39 d3             	cmp    %rdx,%rbx
+ 4c2972c:	0f 8e c3 fd ff ff    	jle    4c294f5 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x135>
+ 4c29732:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4c29739:	00 
+ 4c2973a:	31 c0                	xor    %eax,%eax
+ 4c2973c:	48 89 fb             	mov    %rdi,%rbx
+ 4c2973f:	48 89 f1             	mov    %rsi,%rcx
+ 4c29742:	48 8d 3d db 98 00 00 	lea    0x98db(%rip),%rdi        # 4c33024 <_IO_stdin_used@@Base+0x24>
+ 4c29749:	be 02 00 00 00       	mov    $0x2,%esi
+ 4c2974e:	e8 cd 0b 31 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4c29753:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+ 4c2975a:	00 
+ 4c2975b:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4c29762:	00 
+ 4c29763:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 4c2976a:	00 
+ 4c2976b:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4c29772:	00 
+ 4c29773:	4c 39 c2             	cmp    %r8,%rdx
+ 4c29776:	7e 73                	jle    4c297eb <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x42b>
+ 4c29778:	4c 89 c6             	mov    %r8,%rsi
+ 4c2977b:	49 c1 e0 04          	shl    $0x4,%r8
+ 4c2977f:	4c 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%r9
+ 4c29786:	00 
+ 4c29787:	4b 8b 4c 01 08       	mov    0x8(%r9,%r8,1),%rcx
+ 4c2978c:	4f 8b 14 01          	mov    (%r9,%r8,1),%r10
+ 4c29790:	4c 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%r11
+ 4c29797:	00 
+ 4c29798:	4f 8b 24 03          	mov    (%r11,%r8,1),%r12
+ 4c2979c:	4f 8b 44 03 08       	mov    0x8(%r11,%r8,1),%r8
+ 4c297a1:	49 39 c8             	cmp    %rcx,%r8
+ 4c297a4:	75 58                	jne    4c297fe <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x43e>
+ 4c297a6:	4c 89 d0             	mov    %r10,%rax
+ 4c297a9:	4c 89 e3             	mov    %r12,%rbx
+ 4c297ac:	e8 6f a3 2b fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4c297b1:	84 c0                	test   %al,%al
+ 4c297b3:	0f 85 3d ff ff ff    	jne    4c296f6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x336>
+ 4c297b9:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4c297c0:	00 
+ 4c297c1:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 4c297c8:	00 
+ 4c297c9:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4c297d0:	00 
+ 4c297d1:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 4c297d8:	00 
+ 4c297d9:	4c 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%r9
+ 4c297e0:	00 
+ 4c297e1:	4c 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%r11
+ 4c297e8:	00 
+ 4c297e9:	eb 13                	jmp    4c297fe <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x43e>
+ 4c297eb:	4c 89 c6             	mov    %r8,%rsi
+ 4c297ee:	4c 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%r9
+ 4c297f5:	00 
+ 4c297f6:	4c 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%r11
+ 4c297fd:	00 
+ 4c297fe:	4c 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%r8
+ 4c29805:	00 
+ 4c29806:	4d 8d 50 ff          	lea    -0x1(%r8),%r10
+ 4c2980a:	4c 39 d6             	cmp    %r10,%rsi
+ 4c2980d:	0f 85 ff 02 00 00    	jne    4c29b12 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x752>
+ 4c29813:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c2981a:	00 
+ 4c2981b:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c29822:	00 
+ 4c29823:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c2982a:	00 
+ 4c2982b:	48 8b bc 24 a8 00 00 	mov    0xa8(%rsp),%rdi
+ 4c29832:	00 
+ 4c29833:	e8 28 ce 36 fd       	call   1f96660 <reflect.Value.Field@@Base>
+ 4c29838:	90                   	nop
+ 4c29839:	83 e1 1f             	and    $0x1f,%ecx
+ 4c2983c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4c29840:	48 83 f9 17          	cmp    $0x17,%rcx
+ 4c29844:	75 78                	jne    4c298be <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x4fe>
+ 4c29846:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 4c2984d:	00 
+ 4c2984e:	48 89 14 24          	mov    %rdx,(%rsp)
+ 4c29852:	4c 8b a4 24 b0 00 00 	mov    0xb0(%rsp),%r12
+ 4c29859:	00 
+ 4c2985a:	4c 89 64 24 08       	mov    %r12,0x8(%rsp)
+ 4c2985f:	4c 8b ac 24 98 00 00 	mov    0x98(%rsp),%r13
+ 4c29866:	00 
+ 4c29867:	4c 89 6c 24 10       	mov    %r13,0x10(%rsp)
+ 4c2986c:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 4c29873:	00 
+ 4c29874:	48 8b 9c 24 c0 00 00 	mov    0xc0(%rsp),%rbx
+ 4c2987b:	00 
+ 4c2987c:	48 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%rcx
+ 4c29883:	00 
+ 4c29884:	48 8b bc 24 80 00 00 	mov    0x80(%rsp),%rdi
+ 4c2988b:	00 
+ 4c2988c:	48 8b b4 24 a8 00 00 	mov    0xa8(%rsp),%rsi
+ 4c29893:	00 
+ 4c29894:	4c 8d 84 24 00 01 00 	lea    0x100(%rsp),%r8
+ 4c2989b:	00 
+ 4c2989c:	4c 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%r9
+ 4c298a3:	00 
+ 4c298a4:	4c 8b 94 24 88 00 00 	mov    0x88(%rsp),%r10
+ 4c298ab:	00 
+ 4c298ac:	4c 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%r11
+ 4c298b3:	00 
+ 4c298b4:	e8 67 03 00 00       	call   4c29c20 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).parseSlice@@Base>
+ 4c298b9:	e9 38 fe ff ff       	jmp    4c296f6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x336>
+ 4c298be:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c298c5:	00 
+ 4c298c6:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c298cd:	00 
+ 4c298ce:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c298d5:	00 
+ 4c298d6:	48 8b bc 24 a8 00 00 	mov    0xa8(%rsp),%rdi
+ 4c298dd:	00 
+ 4c298de:	66 90                	xchg   %ax,%ax
+ 4c298e0:	e8 7b cd 36 fd       	call   1f96660 <reflect.Value.Field@@Base>
+ 4c298e5:	90                   	nop
+ 4c298e6:	83 e1 1f             	and    $0x1f,%ecx
+ 4c298e9:	48 83 f9 19          	cmp    $0x19,%rcx
+ 4c298ed:	0f 85 e5 00 00 00    	jne    4c299d8 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x618>
+ 4c298f3:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c298fa:	00 
+ 4c298fb:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c29902:	00 
+ 4c29903:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c2990a:	00 
+ 4c2990b:	48 8b bc 24 a8 00 00 	mov    0xa8(%rsp),%rdi
+ 4c29912:	00 
+ 4c29913:	e8 48 cd 36 fd       	call   1f96660 <reflect.Value.Field@@Base>
+ 4c29918:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c2991d:	0f 1f 00             	nopl   (%rax)
+ 4c29920:	e8 7b dd 36 fd       	call   1f976a0 <reflect.valueInterface@@Base>
+ 4c29925:	48 85 c0             	test   %rax,%rax
+ 4c29928:	74 74                	je     4c2999e <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x5de>
+ 4c2992a:	90                   	nop
+ 4c2992b:	80 3d 0e ea 20 03 00 	cmpb   $0x0,0x320ea0e(%rip)        # 7e38340 <reflect.dummy@@Base>
+ 4c29932:	74 25                	je     4c29959 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x599>
+ 4c29934:	48 89 05 0d ea 20 03 	mov    %rax,0x320ea0d(%rip)        # 7e38348 <reflect.dummy@@Base+0x8>
+ 4c2993b:	83 3d 1e 20 25 03 00 	cmpl   $0x0,0x325201e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4c29942:	75 09                	jne    4c2994d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x58d>
+ 4c29944:	48 89 1d 05 ea 20 03 	mov    %rbx,0x320ea05(%rip)        # 7e38350 <reflect.dummy@@Base+0x10>
+ 4c2994b:	eb 0c                	jmp    4c29959 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x599>
+ 4c2994d:	48 8d 3d fc e9 20 03 	lea    0x320e9fc(%rip),%rdi        # 7e38350 <reflect.dummy@@Base+0x10>
+ 4c29954:	e8 e7 cd 32 fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 4c29959:	48 89 84 24 10 01 00 	mov    %rax,0x110(%rsp)
+ 4c29960:	00 
+ 4c29961:	48 89 9c 24 18 01 00 	mov    %rbx,0x118(%rsp)
+ 4c29968:	00 
+ 4c29969:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4c29970:	00 
+ 4c29971:	48 85 d2             	test   %rdx,%rdx
+ 4c29974:	74 1f                	je     4c29995 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x5d5>
+ 4c29976:	44 0f b6 52 17       	movzbl 0x17(%rdx),%r10d
+ 4c2997b:	45 89 d3             	mov    %r10d,%r11d
+ 4c2997e:	41 83 e2 1f          	and    $0x1f,%r10d
+ 4c29982:	4d 89 d4             	mov    %r10,%r12
+ 4c29985:	49 0f ba ea 07       	bts    $0x7,%r10
+ 4c2998a:	41 f6 c3 20          	test   $0x20,%r11b
+ 4c2998e:	4d 0f 44 e2          	cmove  %r10,%r12
+ 4c29992:	90                   	nop
+ 4c29993:	eb 10                	jmp    4c299a5 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x5e5>
+ 4c29995:	45 31 e4             	xor    %r12d,%r12d
+ 4c29998:	31 d2                	xor    %edx,%edx
+ 4c2999a:	31 db                	xor    %ebx,%ebx
+ 4c2999c:	eb 07                	jmp    4c299a5 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x5e5>
+ 4c2999e:	45 31 e4             	xor    %r12d,%r12d
+ 4c299a1:	31 d2                	xor    %edx,%edx
+ 4c299a3:	31 db                	xor    %ebx,%ebx
+ 4c299a5:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 4c299ac:	00 
+ 4c299ad:	48 89 d9             	mov    %rbx,%rcx
+ 4c299b0:	4c 89 e7             	mov    %r12,%rdi
+ 4c299b3:	48 8b b4 24 d0 00 00 	mov    0xd0(%rsp),%rsi
+ 4c299ba:	00 
+ 4c299bb:	4c 8b 84 24 88 00 00 	mov    0x88(%rsp),%r8
+ 4c299c2:	00 
+ 4c299c3:	4c 8d 8c 24 00 01 00 	lea    0x100(%rsp),%r9
+ 4c299ca:	00 
+ 4c299cb:	48 89 d3             	mov    %rdx,%rbx
+ 4c299ce:	e8 ad 07 00 00       	call   4c2a180 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).parseFlatStructure@@Base>
+ 4c299d3:	e9 1e fd ff ff       	jmp    4c296f6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x336>
+ 4c299d8:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4c299df:	00 
+ 4c299e0:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 4c299e7:	00 
+ 4c299e8:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4c299ef:	00 
+ 4c299f0:	48 8b bc 24 a8 00 00 	mov    0xa8(%rsp),%rdi
+ 4c299f7:	00 
+ 4c299f8:	e8 63 cc 36 fd       	call   1f96660 <reflect.Value.Field@@Base>
+ 4c299fd:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c29a02:	e8 99 dc 36 fd       	call   1f976a0 <reflect.valueInterface@@Base>
+ 4c29a07:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 4c29a0e:	00 
+ 4c29a0f:	48 89 9c 24 e0 00 00 	mov    %rbx,0xe0(%rsp)
+ 4c29a16:	00 
+ 4c29a17:	44 0f 11 bc 24 60 01 	movups %xmm15,0x160(%rsp)
+ 4c29a1e:	00 00 
+ 4c29a20:	44 0f 11 bc 24 70 01 	movups %xmm15,0x170(%rsp)
+ 4c29a27:	00 00 
+ 4c29a29:	44 0f 11 bc 24 80 01 	movups %xmm15,0x180(%rsp)
+ 4c29a30:	00 00 
+ 4c29a32:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4c29a39:	00 
+ 4c29a3a:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4c29a41:	00 
+ 4c29a42:	e8 19 43 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c29a47:	48 8d 15 52 4c b8 00 	lea    0xb84c52(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4c29a4e:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4c29a55:	00 
+ 4c29a56:	48 89 84 24 68 01 00 	mov    %rax,0x168(%rsp)
+ 4c29a5d:	00 
+ 4c29a5e:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 4c29a65:	00 
+ 4c29a66:	48 c1 e6 04          	shl    $0x4,%rsi
+ 4c29a6a:	4c 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%r9
+ 4c29a71:	00 
+ 4c29a72:	49 8b 04 31          	mov    (%r9,%rsi,1),%rax
+ 4c29a76:	49 8b 5c 31 08       	mov    0x8(%r9,%rsi,1),%rbx
+ 4c29a7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4c29a80:	e8 db 42 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c29a85:	48 8d 15 14 4c b8 00 	lea    0xb84c14(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4c29a8c:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4c29a93:	00 
+ 4c29a94:	48 89 84 24 78 01 00 	mov    %rax,0x178(%rsp)
+ 4c29a9b:	00 
+ 4c29a9c:	48 8b b4 24 e8 00 00 	mov    0xe8(%rsp),%rsi
+ 4c29aa3:	00 
+ 4c29aa4:	48 89 b4 24 80 01 00 	mov    %rsi,0x180(%rsp)
+ 4c29aab:	00 
+ 4c29aac:	48 8b b4 24 e0 00 00 	mov    0xe0(%rsp),%rsi
+ 4c29ab3:	00 
+ 4c29ab4:	48 89 b4 24 88 01 00 	mov    %rsi,0x188(%rsp)
+ 4c29abb:	00 
+ 4c29abc:	48 8d 05 85 aa 03 00 	lea    0x3aa85(%rip),%rax        # 4c64548 <_IO_stdin_used@@Base+0x31548>
+ 4c29ac3:	bb 09 00 00 00       	mov    $0x9,%ebx
+ 4c29ac8:	48 8d 8c 24 60 01 00 	lea    0x160(%rsp),%rcx
+ 4c29acf:	00 
+ 4c29ad0:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4c29ad5:	48 89 fe             	mov    %rdi,%rsi
+ 4c29ad8:	e8 23 ae 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c29add:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 4c29ae4:	00 
+ 4c29ae5:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 4c29aec:	00 
+ 4c29aed:	48 89 c7             	mov    %rax,%rdi
+ 4c29af0:	48 89 de             	mov    %rbx,%rsi
+ 4c29af3:	31 c0                	xor    %eax,%eax
+ 4c29af5:	48 89 d3             	mov    %rdx,%rbx
+ 4c29af8:	e8 23 08 31 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4c29afd:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4c29b04:	00 
+ 4c29b05:	48 89 9c 24 08 01 00 	mov    %rbx,0x108(%rsp)
+ 4c29b0c:	00 
+ 4c29b0d:	e9 e4 fb ff ff       	jmp    4c296f6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x336>
+ 4c29b12:	44 0f 11 bc 24 40 01 	movups %xmm15,0x140(%rsp)
+ 4c29b19:	00 00 
+ 4c29b1b:	44 0f 11 bc 24 50 01 	movups %xmm15,0x150(%rsp)
+ 4c29b22:	00 00 
+ 4c29b24:	e8 37 42 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c29b29:	48 8d 0d 70 4b b8 00 	lea    0xb84b70(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c29b30:	48 89 8c 24 40 01 00 	mov    %rcx,0x140(%rsp)
+ 4c29b37:	00 
+ 4c29b38:	48 89 84 24 48 01 00 	mov    %rax,0x148(%rsp)
+ 4c29b3f:	00 
+ 4c29b40:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4c29b47:	00 
+ 4c29b48:	48 c1 e2 04          	shl    $0x4,%rdx
+ 4c29b4c:	48 8b bc 24 f0 00 00 	mov    0xf0(%rsp),%rdi
+ 4c29b53:	00 
+ 4c29b54:	48 8b 04 17          	mov    (%rdi,%rdx,1),%rax
+ 4c29b58:	48 8b 5c 17 08       	mov    0x8(%rdi,%rdx,1),%rbx
+ 4c29b5d:	0f 1f 00             	nopl   (%rax)
+ 4c29b60:	e8 fb 41 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c29b65:	48 8d 0d 34 4b b8 00 	lea    0xb84b34(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c29b6c:	48 89 8c 24 50 01 00 	mov    %rcx,0x150(%rsp)
+ 4c29b73:	00 
+ 4c29b74:	48 89 84 24 58 01 00 	mov    %rax,0x158(%rsp)
+ 4c29b7b:	00 
+ 4c29b7c:	48 8d 05 12 ce 00 00 	lea    0xce12(%rip),%rax        # 4c36995 <_IO_stdin_used@@Base+0x3995>
+ 4c29b83:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 4c29b88:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4c29b8d:	48 89 fe             	mov    %rdi,%rsi
+ 4c29b90:	48 8d 8c 24 40 01 00 	lea    0x140(%rsp),%rcx
+ 4c29b97:	00 
+ 4c29b98:	e8 63 ad 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c29b9d:	48 8b 8c 24 00 01 00 	mov    0x100(%rsp),%rcx
+ 4c29ba4:	00 
+ 4c29ba5:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+ 4c29bac:	00 
+ 4c29bad:	48 89 c7             	mov    %rax,%rdi
+ 4c29bb0:	48 89 de             	mov    %rbx,%rsi
+ 4c29bb3:	31 c0                	xor    %eax,%eax
+ 4c29bb5:	48 89 cb             	mov    %rcx,%rbx
+ 4c29bb8:	48 89 d1             	mov    %rdx,%rcx
+ 4c29bbb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4c29bc0:	e8 5b 07 31 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4c29bc5:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4c29bcc:	00 
+ 4c29bcd:	48 89 9c 24 08 01 00 	mov    %rbx,0x108(%rsp)
+ 4c29bd4:	00 
+ 4c29bd5:	e9 1c fb ff ff       	jmp    4c296f6 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base+0x336>
+ 4c29bda:	4c 89 d2             	mov    %r10,%rdx
+ 4c29bdd:	0f 1f 00             	nopl   (%rax)
+ 4c29be0:	e8 fb ce 32 fd       	call   1f56ae0 <runtime.panicSliceAlen@@Base>
+ 4c29be5:	b8 08 00 00 00       	mov    $0x8,%eax
+ 4c29bea:	e8 71 cf 32 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 4c29bef:	90                   	nop
+ 4c29bf0:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4c29bf5:	e8 66 a8 32 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4c29bfa:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4c29bff:	90                   	nop
+ 4c29c00:	e9 bb f7 ff ff       	jmp    4c293c0 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base>
+ 4c29c05:	cc                   	int3
+ 4c29c06:	cc                   	int3
+ 4c29c07:	cc                   	int3
+ 4c29c08:	cc                   	int3
+ 4c29c09:	cc                   	int3
+ 4c29c0a:	cc                   	int3
+ 4c29c0b:	cc                   	int3
+ 4c29c0c:	cc                   	int3
+ 4c29c0d:	cc                   	int3
+ 4c29c0e:	cc                   	int3
+ 4c29c0f:	cc                   	int3
+ 4c29c10:	cc                   	int3
+ 4c29c11:	cc                   	int3
+ 4c29c12:	cc                   	int3
+ 4c29c13:	cc                   	int3
+ 4c29c14:	cc                   	int3
+ 4c29c15:	cc                   	int3
+ 4c29c16:	cc                   	int3
+ 4c29c17:	cc                   	int3
+ 4c29c18:	cc                   	int3
+ 4c29c19:	cc                   	int3
+ 4c29c1a:	cc                   	int3
+ 4c29c1b:	cc                   	int3
+ 4c29c1c:	cc                   	int3
+ 4c29c1d:	cc                   	int3
+ 4c29c1e:	cc                   	int3
+ 4c29c1f:	cc                   	int3

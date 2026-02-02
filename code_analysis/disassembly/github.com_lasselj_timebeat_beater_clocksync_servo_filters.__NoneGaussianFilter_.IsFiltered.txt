@@ -1,0 +1,376 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered
+# addr 0x457a260 size 1440 (0x5a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457a260 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base>:
+ 457a260:	4c 8d 64 24 f0       	lea    -0x10(%rsp),%r12
+ 457a265:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 457a269:	0f 86 6b 05 00 00    	jbe    457a7da <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x57a>
+ 457a26f:	48 81 ec 90 00 00 00 	sub    $0x90,%rsp
+ 457a276:	48 89 ac 24 88 00 00 	mov    %rbp,0x88(%rsp)
+ 457a27d:	00 
+ 457a27e:	48 8d ac 24 88 00 00 	lea    0x88(%rsp),%rbp
+ 457a285:	00 
+ 457a286:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 457a28d:	4c 89 ac 24 80 00 00 	mov    %r13,0x80(%rsp)
+ 457a294:	00 
+ 457a295:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 457a29a:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 457a29f:	48 8b 70 40          	mov    0x40(%rax),%rsi
+ 457a2a3:	80 7e 28 00          	cmpb   $0x0,0x28(%rsi)
+ 457a2a7:	0f 84 94 04 00 00    	je     457a741 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x4e1>
+ 457a2ad:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 457a2b4:	00 
+ 457a2b5:	48 89 9c 24 a0 00 00 	mov    %rbx,0xa0(%rsp)
+ 457a2bc:	00 
+ 457a2bd:	48 89 c1             	mov    %rax,%rcx
+ 457a2c0:	31 c0                	xor    %eax,%eax
+ 457a2c2:	be 01 00 00 00       	mov    $0x1,%esi
+ 457a2c7:	f0 0f b1 71 60       	lock cmpxchg %esi,0x60(%rcx)
+ 457a2cc:	40 0f 94 c6          	sete   %sil
+ 457a2d0:	48 8d 41 60          	lea    0x60(%rcx),%rax
+ 457a2d4:	40 84 f6             	test   %sil,%sil
+ 457a2d7:	75 21                	jne    457a2fa <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x9a>
+ 457a2d9:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 457a2de:	66 90                	xchg   %ax,%ax
+ 457a2e0:	e8 5b e2 9f fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 457a2e5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 457a2ea:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a2f1:	00 
+ 457a2f2:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 457a2f9:	00 
+ 457a2fa:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 457a300:	48 8d 35 d9 05 00 00 	lea    0x5d9(%rip),%rsi        # 457a8e0 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered.func4@@Base>
+ 457a307:	48 89 74 24 30       	mov    %rsi,0x30(%rsp)
+ 457a30c:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 457a311:	48 8d 74 24 30       	lea    0x30(%rsp),%rsi
+ 457a316:	48 89 b4 24 80 00 00 	mov    %rsi,0x80(%rsp)
+ 457a31d:	00 
+ 457a31e:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 457a323:	48 8b 71 40          	mov    0x40(%rcx),%rsi
+ 457a327:	48 8b 01             	mov    (%rcx),%rax
+ 457a32a:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 457a32e:	48 85 f6             	test   %rsi,%rsi
+ 457a331:	0f 84 81 04 00 00    	je     457a7b8 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x558>
+ 457a337:	48 83 fe ff          	cmp    $0xffffffffffffffff,%rsi
+ 457a33b:	74 07                	je     457a344 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0xe4>
+ 457a33d:	48 99                	cqto
+ 457a33f:	48 f7 fe             	idiv   %rsi
+ 457a342:	eb 05                	jmp    457a349 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0xe9>
+ 457a344:	48 f7 d8             	neg    %rax
+ 457a347:	31 d2                	xor    %edx,%edx
+ 457a349:	48 8b 71 08          	mov    0x8(%rcx),%rsi
+ 457a34d:	48 8b 79 10          	mov    0x10(%rcx),%rdi
+ 457a351:	48 39 fa             	cmp    %rdi,%rdx
+ 457a354:	0f 83 53 04 00 00    	jae    457a7ad <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x54d>
+ 457a35a:	48 8b 3c d6          	mov    (%rsi,%rdx,8),%rdi
+ 457a35e:	48 89 1c d6          	mov    %rbx,(%rsi,%rdx,8)
+ 457a362:	48 8b 71 40          	mov    0x40(%rcx),%rsi
+ 457a366:	4c 8b 01             	mov    (%rcx),%r8
+ 457a369:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 457a36d:	4c 39 c6             	cmp    %r8,%rsi
+ 457a370:	0f 8f 97 03 00 00    	jg     457a70d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x4ad>
+ 457a376:	0f 85 aa 00 00 00    	jne    457a426 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x1c6>
+ 457a37c:	49 8d 50 01          	lea    0x1(%r8),%rdx
+ 457a380:	48 89 11             	mov    %rdx,(%rcx)
+ 457a383:	48 8b 51 28          	mov    0x28(%rcx),%rdx
+ 457a387:	48 8b 71 10          	mov    0x10(%rcx),%rsi
+ 457a38b:	48 39 d6             	cmp    %rdx,%rsi
+ 457a38e:	48 0f 4c d6          	cmovl  %rsi,%rdx
+ 457a392:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 457a396:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 457a39a:	48 39 c3             	cmp    %rax,%rbx
+ 457a39d:	74 14                	je     457a3b3 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x153>
+ 457a39f:	48 c1 e2 03          	shl    $0x3,%rdx
+ 457a3a3:	48 89 d1             	mov    %rdx,%rcx
+ 457a3a6:	e8 f5 d0 9d fd       	call   1f574a0 <runtime.memmove@@Base>
+ 457a3ab:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a3b2:	00 
+ 457a3b3:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 457a3b7:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 457a3bb:	48 8b 51 30          	mov    0x30(%rcx),%rdx
+ 457a3bf:	48 89 d1             	mov    %rdx,%rcx
+ 457a3c2:	e8 39 3a 97 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 457a3c7:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 457a3cd:	48 8d 15 ac 04 00 00 	lea    0x4ac(%rip),%rdx        # 457a880 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered.func1@@Base>
+ 457a3d4:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 457a3d9:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 457a3e0:	00 
+ 457a3e1:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 457a3e6:	48 89 c3             	mov    %rax,%rbx
+ 457a3e9:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 457a3ee:	48 8d 05 2b 9d 1b 01 	lea    0x11b9d2b(%rip),%rax        # 5734120 <type:[]int64@@Base>
+ 457a3f5:	e8 c6 8c 9e fd       	call   1f630c0 <sort.SliceStable@@Base>
+ 457a3fa:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 457a3ff:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 457a404:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 457a40b:	00 
+ 457a40c:	48 8b 32             	mov    (%rdx),%rsi
+ 457a40f:	ff d6                	call   *%rsi
+ 457a411:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 457a416:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a41d:	00 
+ 457a41e:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a425:	c3                   	ret
+ 457a426:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 457a42c:	48 c7 44 24 78 00 00 	movq   $0x0,0x78(%rsp)
+ 457a433:	00 00 
+ 457a435:	48 8d 15 04 04 00 00 	lea    0x404(%rip),%rdx        # 457a840 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered.func2@@Base>
+ 457a43c:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 457a441:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 457a446:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+ 457a44b:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 457a44f:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 457a453:	48 8d 5c 24 68       	lea    0x68(%rsp),%rbx
+ 457a458:	e8 23 86 9e fd       	call   1f62a80 <sort.Search@@Base>
+ 457a45d:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a464:	00 
+ 457a465:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 457a469:	48 39 42 08          	cmp    %rax,0x8(%rdx)
+ 457a46d:	0f 8e 7e 00 00 00    	jle    457a4f1 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x291>
+ 457a473:	48 8b 51 28          	mov    0x28(%rcx),%rdx
+ 457a477:	48 8b 71 20          	mov    0x20(%rcx),%rsi
+ 457a47b:	48 8b 79 30          	mov    0x30(%rcx),%rdi
+ 457a47f:	90                   	nop
+ 457a480:	48 39 d0             	cmp    %rdx,%rax
+ 457a483:	0f 87 1c 03 00 00    	ja     457a7a5 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x545>
+ 457a489:	49 89 d0             	mov    %rdx,%r8
+ 457a48c:	48 29 c2             	sub    %rax,%rdx
+ 457a48f:	48 29 c7             	sub    %rax,%rdi
+ 457a492:	49 89 f9             	mov    %rdi,%r9
+ 457a495:	48 f7 df             	neg    %rdi
+ 457a498:	49 89 c2             	mov    %rax,%r10
+ 457a49b:	48 c1 e0 03          	shl    $0x3,%rax
+ 457a49f:	48 c1 ff 3f          	sar    $0x3f,%rdi
+ 457a4a3:	48 21 c7             	and    %rax,%rdi
+ 457a4a6:	48 8d 04 3e          	lea    (%rsi,%rdi,1),%rax
+ 457a4aa:	49 8d 7a 01          	lea    0x1(%r10),%rdi
+ 457a4ae:	49 39 f8             	cmp    %rdi,%r8
+ 457a4b1:	0f 82 e1 02 00 00    	jb     457a798 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x538>
+ 457a4b7:	4c 8d 42 ff          	lea    -0x1(%rdx),%r8
+ 457a4bb:	4c 39 c2             	cmp    %r8,%rdx
+ 457a4be:	49 0f 4f d0          	cmovg  %r8,%rdx
+ 457a4c2:	4d 8d 41 ff          	lea    -0x1(%r9),%r8
+ 457a4c6:	49 f7 d8             	neg    %r8
+ 457a4c9:	48 c1 e7 03          	shl    $0x3,%rdi
+ 457a4cd:	49 c1 f8 3f          	sar    $0x3f,%r8
+ 457a4d1:	4c 21 c7             	and    %r8,%rdi
+ 457a4d4:	48 8d 1c 3e          	lea    (%rsi,%rdi,1),%rbx
+ 457a4d8:	48 39 c3             	cmp    %rax,%rbx
+ 457a4db:	74 14                	je     457a4f1 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x291>
+ 457a4dd:	48 c1 e2 03          	shl    $0x3,%rdx
+ 457a4e1:	48 89 d1             	mov    %rdx,%rcx
+ 457a4e4:	e8 b7 cf 9d fd       	call   1f574a0 <runtime.memmove@@Base>
+ 457a4e9:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a4f0:	00 
+ 457a4f1:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 457a4f7:	48 c7 44 24 60 00 00 	movq   $0x0,0x60(%rsp)
+ 457a4fe:	00 00 
+ 457a500:	48 8d 15 f9 02 00 00 	lea    0x2f9(%rip),%rdx        # 457a800 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered.func3@@Base>
+ 457a507:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 457a50c:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 457a511:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 457a518:	00 
+ 457a519:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 457a51e:	48 8b 71 40          	mov    0x40(%rcx),%rsi
+ 457a522:	48 8b 46 08          	mov    0x8(%rsi),%rax
+ 457a526:	48 8d 5c 24 50       	lea    0x50(%rsp),%rbx
+ 457a52b:	e8 50 85 9e fd       	call   1f62a80 <sort.Search@@Base>
+ 457a530:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a537:	00 
+ 457a538:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 457a53c:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 457a540:	48 39 d0             	cmp    %rdx,%rax
+ 457a543:	0f 8d ae 00 00 00    	jge    457a5f7 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x397>
+ 457a549:	48 8b 71 28          	mov    0x28(%rcx),%rsi
+ 457a54d:	48 8b 79 20          	mov    0x20(%rcx),%rdi
+ 457a551:	4c 8b 41 30          	mov    0x30(%rcx),%r8
+ 457a555:	4c 8d 48 01          	lea    0x1(%rax),%r9
+ 457a559:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 457a560:	4c 39 ce             	cmp    %r9,%rsi
+ 457a563:	0f 82 24 02 00 00    	jb     457a78d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x52d>
+ 457a569:	49 89 f2             	mov    %rsi,%r10
+ 457a56c:	48 29 c6             	sub    %rax,%rsi
+ 457a56f:	49 29 c0             	sub    %rax,%r8
+ 457a572:	4d 8d 58 ff          	lea    -0x1(%r8),%r11
+ 457a576:	49 f7 db             	neg    %r11
+ 457a579:	49 c1 e1 03          	shl    $0x3,%r9
+ 457a57d:	49 c1 fb 3f          	sar    $0x3f,%r11
+ 457a581:	4d 21 d9             	and    %r11,%r9
+ 457a584:	49 01 f9             	add    %rdi,%r9
+ 457a587:	4c 39 d0             	cmp    %r10,%rax
+ 457a58a:	0f 87 f5 01 00 00    	ja     457a785 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x525>
+ 457a590:	4c 8d 56 ff          	lea    -0x1(%rsi),%r10
+ 457a594:	4c 39 d6             	cmp    %r10,%rsi
+ 457a597:	4c 0f 4c d6          	cmovl  %rsi,%r10
+ 457a59b:	49 f7 d8             	neg    %r8
+ 457a59e:	48 89 c6             	mov    %rax,%rsi
+ 457a5a1:	48 c1 e0 03          	shl    $0x3,%rax
+ 457a5a5:	49 c1 f8 3f          	sar    $0x3f,%r8
+ 457a5a9:	49 21 c0             	and    %rax,%r8
+ 457a5ac:	49 8d 1c 38          	lea    (%r8,%rdi,1),%rbx
+ 457a5b0:	4c 39 cb             	cmp    %r9,%rbx
+ 457a5b3:	74 21                	je     457a5d6 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x376>
+ 457a5b5:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 457a5ba:	49 c1 e2 03          	shl    $0x3,%r10
+ 457a5be:	4c 89 c8             	mov    %r9,%rax
+ 457a5c1:	4c 89 d1             	mov    %r10,%rcx
+ 457a5c4:	e8 d7 ce 9d fd       	call   1f574a0 <runtime.memmove@@Base>
+ 457a5c9:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 457a5d0:	00 
+ 457a5d1:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 457a5d6:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 457a5da:	48 8b 79 20          	mov    0x20(%rcx),%rdi
+ 457a5de:	66 90                	xchg   %ax,%ax
+ 457a5e0:	48 39 de             	cmp    %rbx,%rsi
+ 457a5e3:	0f 83 8c 01 00 00    	jae    457a775 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x515>
+ 457a5e9:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 457a5f0:	00 
+ 457a5f1:	48 89 1c f7          	mov    %rbx,(%rdi,%rsi,8)
+ 457a5f5:	eb 22                	jmp    457a619 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x3b9>
+ 457a5f7:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 457a5fb:	48 8b 71 20          	mov    0x20(%rcx),%rsi
+ 457a5ff:	48 8d 42 ff          	lea    -0x1(%rdx),%rax
+ 457a603:	48 39 c3             	cmp    %rax,%rbx
+ 457a606:	0f 86 61 01 00 00    	jbe    457a76d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x50d>
+ 457a60c:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 457a613:	00 
+ 457a614:	48 89 5c d6 f8       	mov    %rbx,-0x8(%rsi,%rdx,8)
+ 457a619:	48 8b 71 40          	mov    0x40(%rcx),%rsi
+ 457a61d:	48 8b 79 28          	mov    0x28(%rcx),%rdi
+ 457a621:	4c 8b 41 20          	mov    0x20(%rcx),%r8
+ 457a625:	48 8b 46 18          	mov    0x18(%rsi),%rax
+ 457a629:	48 39 c7             	cmp    %rax,%rdi
+ 457a62c:	0f 86 33 01 00 00    	jbe    457a765 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x505>
+ 457a632:	49 8b 34 c0          	mov    (%r8,%rax,8),%rsi
+ 457a636:	48 89 71 48          	mov    %rsi,0x48(%rcx)
+ 457a63a:	48 8b 79 40          	mov    0x40(%rcx),%rdi
+ 457a63e:	4c 8b 41 28          	mov    0x28(%rcx),%r8
+ 457a642:	4c 8b 49 20          	mov    0x20(%rcx),%r9
+ 457a646:	48 8b 47 20          	mov    0x20(%rdi),%rax
+ 457a64a:	4c 39 c0             	cmp    %r8,%rax
+ 457a64d:	0f 83 05 01 00 00    	jae    457a758 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x4f8>
+ 457a653:	49 8b 04 c1          	mov    (%r9,%rax,8),%rax
+ 457a657:	48 89 41 50          	mov    %rax,0x50(%rcx)
+ 457a65b:	48 ff 01             	incq   (%rcx)
+ 457a65e:	48 8b 79 40          	mov    0x40(%rcx),%rdi
+ 457a662:	90                   	nop
+ 457a663:	49 89 f0             	mov    %rsi,%r8
+ 457a666:	48 29 c6             	sub    %rax,%rsi
+ 457a669:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457a66c:	f2 48 0f 2a c6       	cvtsi2sd %rsi,%xmm0
+ 457a671:	f2 0f 59 47 10       	mulsd  0x10(%rdi),%xmm0
+ 457a676:	f2 48 0f 2c f0       	cvttsd2si %xmm0,%rsi
+ 457a67b:	49 8d 3c 30          	lea    (%r8,%rsi,1),%rdi
+ 457a67f:	90                   	nop
+ 457a680:	48 39 fb             	cmp    %rdi,%rbx
+ 457a683:	7f 08                	jg     457a68d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x42d>
+ 457a685:	48 29 f0             	sub    %rsi,%rax
+ 457a688:	48 39 c3             	cmp    %rax,%rbx
+ 457a68b:	7d 4c                	jge    457a6d9 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x479>
+ 457a68d:	48 8d 43 0a          	lea    0xa(%rbx),%rax
+ 457a691:	48 83 f8 14          	cmp    $0x14,%rax
+ 457a695:	76 42                	jbe    457a6d9 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x479>
+ 457a697:	48 8b 41 58          	mov    0x58(%rcx),%rax
+ 457a69b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457a6a0:	48 83 f8 05          	cmp    $0x5,%rax
+ 457a6a4:	7d 33                	jge    457a6d9 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base+0x479>
+ 457a6a6:	48 ff c0             	inc    %rax
+ 457a6a9:	48 89 41 58          	mov    %rax,0x58(%rcx)
+ 457a6ad:	c6 44 24 1e 01       	movb   $0x1,0x1e(%rsp)
+ 457a6b2:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 457a6b7:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 457a6be:	00 
+ 457a6bf:	48 8b 02             	mov    (%rdx),%rax
+ 457a6c2:	ff d0                	call   *%rax
+ 457a6c4:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 457a6c9:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a6d0:	00 
+ 457a6d1:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a6d8:	c3                   	ret
+ 457a6d9:	48 c7 41 58 00 00 00 	movq   $0x0,0x58(%rcx)
+ 457a6e0:	00 
+ 457a6e1:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 457a6e6:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 457a6eb:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 457a6f2:	00 
+ 457a6f3:	48 8b 02             	mov    (%rdx),%rax
+ 457a6f6:	ff d0                	call   *%rax
+ 457a6f8:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 457a6fd:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a704:	00 
+ 457a705:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a70c:	c3                   	ret
+ 457a70d:	49 8d 40 01          	lea    0x1(%r8),%rax
+ 457a711:	48 89 01             	mov    %rax,(%rcx)
+ 457a714:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 457a719:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 457a71e:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 457a725:	00 
+ 457a726:	48 8b 02             	mov    (%rdx),%rax
+ 457a729:	ff d0                	call   *%rax
+ 457a72b:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 457a730:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a737:	00 
+ 457a738:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a73f:	90                   	nop
+ 457a740:	c3                   	ret
+ 457a741:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 457a746:	31 c0                	xor    %eax,%eax
+ 457a748:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a74f:	00 
+ 457a750:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a757:	c3                   	ret
+ 457a758:	4c 89 c1             	mov    %r8,%rcx
+ 457a75b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457a760:	e8 3b c3 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457a765:	48 89 f9             	mov    %rdi,%rcx
+ 457a768:	e8 33 c3 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457a76d:	48 89 d9             	mov    %rbx,%rcx
+ 457a770:	e8 2b c3 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457a775:	48 89 f0             	mov    %rsi,%rax
+ 457a778:	48 89 d9             	mov    %rbx,%rcx
+ 457a77b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457a780:	e8 1b c3 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457a785:	4c 89 d1             	mov    %r10,%rcx
+ 457a788:	e8 d3 c3 9d fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 457a78d:	4c 89 c8             	mov    %r9,%rax
+ 457a790:	48 89 f1             	mov    %rsi,%rcx
+ 457a793:	e8 c8 c3 9d fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 457a798:	48 89 f8             	mov    %rdi,%rax
+ 457a79b:	4c 89 c1             	mov    %r8,%rcx
+ 457a79e:	66 90                	xchg   %ax,%ax
+ 457a7a0:	e8 bb c3 9d fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 457a7a5:	48 89 d1             	mov    %rdx,%rcx
+ 457a7a8:	e8 b3 c3 9d fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 457a7ad:	48 89 d0             	mov    %rdx,%rax
+ 457a7b0:	48 89 f9             	mov    %rdi,%rcx
+ 457a7b3:	e8 e8 c2 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457a7b8:	e8 c3 0f 9a fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457a7bd:	90                   	nop
+ 457a7be:	66 90                	xchg   %ax,%ax
+ 457a7c0:	e8 9b 17 9a fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 457a7c5:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 457a7ca:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 457a7d1:	00 
+ 457a7d2:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 457a7d9:	c3                   	ret
+ 457a7da:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457a7df:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457a7e4:	e8 77 9c 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457a7e9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457a7ee:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457a7f3:	e9 68 fa ff ff       	jmp    457a260 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*NoneGaussianFilter).IsFiltered@@Base>
+ 457a7f8:	cc                   	int3
+ 457a7f9:	cc                   	int3
+ 457a7fa:	cc                   	int3
+ 457a7fb:	cc                   	int3
+ 457a7fc:	cc                   	int3
+ 457a7fd:	cc                   	int3
+ 457a7fe:	cc                   	int3
+ 457a7ff:	cc                   	int3

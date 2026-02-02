@@ -1,0 +1,81 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP
+# addr 0x459e460 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459e460 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base>:
+ 459e460:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459e464:	0f 86 da 00 00 00    	jbe    459e544 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0xe4>
+ 459e46a:	48 83 ec 50          	sub    $0x50,%rsp
+ 459e46e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 459e473:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 459e478:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459e47d:	48 8b 10             	mov    (%rax),%rdx
+ 459e480:	48 8b 52 40          	mov    0x40(%rdx),%rdx
+ 459e484:	48 85 d2             	test   %rdx,%rdx
+ 459e487:	74 0d                	je     459e496 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0x36>
+ 459e489:	4c 8b 0a             	mov    (%rdx),%r9
+ 459e48c:	4c 8b 52 08          	mov    0x8(%rdx),%r10
+ 459e490:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 459e494:	eb 0c                	jmp    459e4a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0x42>
+ 459e496:	45 31 d2             	xor    %r10d,%r10d
+ 459e499:	31 d2                	xor    %edx,%edx
+ 459e49b:	4c 8d 0d ce cb 8d 03 	lea    0x38dcbce(%rip),%r9        # 7e7b070 <runtime.zerobase@@Base>
+ 459e4a2:	4c 89 54 24 30       	mov    %r10,0x30(%rsp)
+ 459e4a7:	4c 89 4c 24 40       	mov    %r9,0x40(%rsp)
+ 459e4ac:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 459e4b1:	4c 8b 1d a0 03 3e 03 	mov    0x33e03a0(%rip),%r11        # 797e858 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.LocalSourceAddr@@Base>
+ 459e4b8:	49 8b 3b             	mov    (%r11),%rdi
+ 459e4bb:	49 8b 73 08          	mov    0x8(%r11),%rsi
+ 459e4bf:	4d 8b 43 10          	mov    0x10(%r11),%r8
+ 459e4c3:	4c 89 c8             	mov    %r9,%rax
+ 459e4c6:	4c 89 d3             	mov    %r10,%rbx
+ 459e4c9:	48 89 d1             	mov    %rdx,%rcx
+ 459e4cc:	e8 cf 60 aa fd       	call   20445a0 <net.IP.Equal@@Base>
+ 459e4d1:	84 c0                	test   %al,%al
+ 459e4d3:	74 4d                	je     459e522 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0xc2>
+ 459e4d5:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 459e4da:	48 8b 12             	mov    (%rdx),%rdx
+ 459e4dd:	48 8b b2 c8 00 00 00 	mov    0xc8(%rdx),%rsi
+ 459e4e4:	48 85 f6             	test   %rsi,%rsi
+ 459e4e7:	74 0e                	je     459e4f7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0x97>
+ 459e4e9:	4c 8b 4e 68          	mov    0x68(%rsi),%r9
+ 459e4ed:	4c 8b 56 70          	mov    0x70(%rsi),%r10
+ 459e4f1:	48 8b 76 78          	mov    0x78(%rsi),%rsi
+ 459e4f5:	eb 0f                	jmp    459e506 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0xa6>
+ 459e4f7:	4c 8b 54 24 30       	mov    0x30(%rsp),%r10
+ 459e4fc:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 459e501:	4c 8b 4c 24 40       	mov    0x40(%rsp),%r9
+ 459e506:	48 8b 92 d0 00 00 00 	mov    0xd0(%rdx),%rdx
+ 459e50d:	48 85 d2             	test   %rdx,%rdx
+ 459e510:	74 1f                	je     459e531 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0xd1>
+ 459e512:	4c 8b 4a 48          	mov    0x48(%rdx),%r9
+ 459e516:	4c 8b 52 50          	mov    0x50(%rdx),%r10
+ 459e51a:	48 8b 72 58          	mov    0x58(%rdx),%rsi
+ 459e51e:	66 90                	xchg   %ax,%ax
+ 459e520:	eb 0f                	jmp    459e531 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base+0xd1>
+ 459e522:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 459e527:	4c 8b 54 24 30       	mov    0x30(%rsp),%r10
+ 459e52c:	4c 8b 4c 24 40       	mov    0x40(%rsp),%r9
+ 459e531:	4c 89 c8             	mov    %r9,%rax
+ 459e534:	4c 89 d3             	mov    %r10,%rbx
+ 459e537:	48 89 f1             	mov    %rsi,%rcx
+ 459e53a:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459e53f:	48 83 c4 50          	add    $0x50,%rsp
+ 459e543:	c3                   	ret
+ 459e544:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459e549:	e8 12 5f 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459e54e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459e553:	e9 08 ff ff ff       	jmp    459e460 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*Message).GetSrcNetIP@@Base>
+ 459e558:	cc                   	int3
+ 459e559:	cc                   	int3
+ 459e55a:	cc                   	int3
+ 459e55b:	cc                   	int3
+ 459e55c:	cc                   	int3
+ 459e55d:	cc                   	int3
+ 459e55e:	cc                   	int3
+ 459e55f:	cc                   	int3

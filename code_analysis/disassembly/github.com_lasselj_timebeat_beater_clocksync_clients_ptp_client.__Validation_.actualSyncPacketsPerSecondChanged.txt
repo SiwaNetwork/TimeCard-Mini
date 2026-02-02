@@ -1,0 +1,1154 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged
+# addr 0x45e2860 size 4064 (0xfe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e2860 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base>:
+ 45e2860:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2864:	0f 86 da 00 00 00    	jbe    45e2944 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base+0xe4>
+ 45e286a:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e286e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e2873:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e2878:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e287d:	0f 1f 00             	nopl   (%rax)
+ 45e2880:	38 58 28             	cmp    %bl,0x28(%rax)
+ 45e2883:	7f 0a                	jg     45e288f <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base+0x2f>
+ 45e2885:	48 c7 40 30 01 00 00 	movq   $0x1,0x30(%rax)
+ 45e288c:	00 
+ 45e288d:	eb 78                	jmp    45e2907 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base+0xa7>
+ 45e288f:	88 5c 24 30          	mov    %bl,0x30(%rsp)
+ 45e2893:	48 0f be c3          	movsbq %bl,%rax
+ 45e2897:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 45e289a:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+ 45e289e:	f2 0f 10 05 9a bc ef 	movsd  0xefbc9a(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 45e28a5:	00 
+ 45e28a6:	e8 75 6f 98 fd       	call   1f69820 <math.pow@@Base>
+ 45e28ab:	f2 0f 11 44 24 10    	movsd  %xmm0,0x10(%rsp)
+ 45e28b1:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e28b6:	48 0f be 48 28       	movsbq 0x28(%rax),%rcx
+ 45e28bb:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 45e28be:	f2 0f 2a c9          	cvtsi2sd %ecx,%xmm1
+ 45e28c2:	f2 0f 10 05 76 bc ef 	movsd  0xefbc76(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 45e28c9:	00 
+ 45e28ca:	e8 51 6f 98 fd       	call   1f69820 <math.pow@@Base>
+ 45e28cf:	f2 0f 10 15 c1 bb ef 	movsd  0xefbbc1(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 45e28d6:	00 
+ 45e28d7:	f2 0f 10 5c 24 10    	movsd  0x10(%rsp),%xmm3
+ 45e28dd:	f2 0f 5e d3          	divsd  %xmm3,%xmm2
+ 45e28e1:	f2 0f 10 1d af bb ef 	movsd  0xefbbaf(%rip),%xmm3        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 45e28e8:	00 
+ 45e28e9:	f2 0f 5e d8          	divsd  %xmm0,%xmm3
+ 45e28ed:	f2 0f 5e d3          	divsd  %xmm3,%xmm2
+ 45e28f1:	f2 48 0f 2c c2       	cvttsd2si %xmm2,%rax
+ 45e28f6:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45e28fb:	48 89 41 30          	mov    %rax,0x30(%rcx)
+ 45e28ff:	48 89 c8             	mov    %rcx,%rax
+ 45e2902:	0f b6 5c 24 30       	movzbl 0x30(%rsp),%ebx
+ 45e2907:	88 58 29             	mov    %bl,0x29(%rax)
+ 45e290a:	0f b6 48 28          	movzbl 0x28(%rax),%ecx
+ 45e290e:	38 cb                	cmp    %cl,%bl
+ 45e2910:	7e 10                	jle    45e2922 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base+0xc2>
+ 45e2912:	48 8b 48 50          	mov    0x50(%rax),%rcx
+ 45e2916:	48 89 c8             	mov    %rcx,%rax
+ 45e2919:	e8 02 4c ff ff       	call   45d7520 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).updatePacketsPerSecond@@Base>
+ 45e291e:	66 90                	xchg   %ax,%ax
+ 45e2920:	eb 0e                	jmp    45e2930 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base+0xd0>
+ 45e2922:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 45e2926:	89 cb                	mov    %ecx,%ebx
+ 45e2928:	48 89 d0             	mov    %rdx,%rax
+ 45e292b:	e8 f0 4b ff ff       	call   45d7520 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).updatePacketsPerSecond@@Base>
+ 45e2930:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e2935:	e8 46 f8 ff ff       	call   45e2180 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).CalculateSendDelayReqEveryNSyncPacketValue@@Base>
+ 45e293a:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e293f:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2943:	c3                   	ret
+ 45e2944:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e2949:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 45e294d:	e8 0e 1b 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e2952:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e2957:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 45e295c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e2960:	e9 fb fe ff ff       	jmp    45e2860 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base>
+ 45e2965:	cc                   	int3
+ 45e2966:	cc                   	int3
+ 45e2967:	cc                   	int3
+ 45e2968:	cc                   	int3
+ 45e2969:	cc                   	int3
+ 45e296a:	cc                   	int3
+ 45e296b:	cc                   	int3
+ 45e296c:	cc                   	int3
+ 45e296d:	cc                   	int3
+ 45e296e:	cc                   	int3
+ 45e296f:	cc                   	int3
+ 45e2970:	cc                   	int3
+ 45e2971:	cc                   	int3
+ 45e2972:	cc                   	int3
+ 45e2973:	cc                   	int3
+ 45e2974:	cc                   	int3
+ 45e2975:	cc                   	int3
+ 45e2976:	cc                   	int3
+ 45e2977:	cc                   	int3
+ 45e2978:	cc                   	int3
+ 45e2979:	cc                   	int3
+ 45e297a:	cc                   	int3
+ 45e297b:	cc                   	int3
+ 45e297c:	cc                   	int3
+ 45e297d:	cc                   	int3
+ 45e297e:	cc                   	int3
+ 45e297f:	cc                   	int3
+
+00000000045e2980 <sync/atomic.(*Pointer[go.shape.struct { ID string "json:\"id\""; Data string "json:\"data\""; Associations []string "json:\"associations\""; DataJSON interface {} "json:\"json_data\""; AssociationsJSON []interface {} "json:\"json_associations\"" }]).Load@@Base>:
+ 45e2980:	48 8b 00             	mov    (%rax),%rax
+ 45e2983:	c3                   	ret
+ 45e2984:	cc                   	int3
+ 45e2985:	cc                   	int3
+ 45e2986:	cc                   	int3
+ 45e2987:	cc                   	int3
+ 45e2988:	cc                   	int3
+ 45e2989:	cc                   	int3
+ 45e298a:	cc                   	int3
+ 45e298b:	cc                   	int3
+ 45e298c:	cc                   	int3
+ 45e298d:	cc                   	int3
+ 45e298e:	cc                   	int3
+ 45e298f:	cc                   	int3
+ 45e2990:	cc                   	int3
+ 45e2991:	cc                   	int3
+ 45e2992:	cc                   	int3
+ 45e2993:	cc                   	int3
+ 45e2994:	cc                   	int3
+ 45e2995:	cc                   	int3
+ 45e2996:	cc                   	int3
+ 45e2997:	cc                   	int3
+ 45e2998:	cc                   	int3
+ 45e2999:	cc                   	int3
+ 45e299a:	cc                   	int3
+ 45e299b:	cc                   	int3
+ 45e299c:	cc                   	int3
+ 45e299d:	cc                   	int3
+ 45e299e:	cc                   	int3
+ 45e299f:	cc                   	int3
+
+00000000045e29a0 <type:.rAvPpdhk@@Base>:
+ 45e29a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e29a4:	0f 86 14 01 00 00    	jbe    45e2abe <type:.rAvPpdhk@@Base+0x11e>
+ 45e29aa:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e29ae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e29b3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e29b8:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45e29bc:	48 8b 13             	mov    (%rbx),%rdx
+ 45e29bf:	48 8b 30             	mov    (%rax),%rsi
+ 45e29c2:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 45e29c6:	0f 85 e6 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e29cc:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 45e29d0:	48 39 7b 10          	cmp    %rdi,0x10(%rbx)
+ 45e29d4:	0f 85 d8 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e29da:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 45e29de:	66 90                	xchg   %ax,%ax
+ 45e29e0:	48 39 7b 18          	cmp    %rdi,0x18(%rbx)
+ 45e29e4:	0f 85 c8 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e29ea:	0f b6 78 20          	movzbl 0x20(%rax),%edi
+ 45e29ee:	40 38 7b 20          	cmp    %dil,0x20(%rbx)
+ 45e29f2:	0f 85 ba 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e29f8:	0f b6 78 21          	movzbl 0x21(%rax),%edi
+ 45e29fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e2a00:	40 38 7b 21          	cmp    %dil,0x21(%rbx)
+ 45e2a04:	0f 85 a8 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a0a:	48 8b 7b 30          	mov    0x30(%rbx),%rdi
+ 45e2a0e:	48 39 78 30          	cmp    %rdi,0x30(%rax)
+ 45e2a12:	0f 85 9a 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a18:	0f b6 78 38          	movzbl 0x38(%rax),%edi
+ 45e2a1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e2a20:	40 38 7b 38          	cmp    %dil,0x38(%rbx)
+ 45e2a24:	0f 85 88 00 00 00    	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a2a:	48 8b 7b 48          	mov    0x48(%rbx),%rdi
+ 45e2a2e:	48 39 78 48          	cmp    %rdi,0x48(%rax)
+ 45e2a32:	75 7e                	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a34:	48 8b 7b 58          	mov    0x58(%rbx),%rdi
+ 45e2a38:	48 39 78 58          	cmp    %rdi,0x58(%rax)
+ 45e2a3c:	75 74                	jne    45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a3e:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e2a43:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e2a48:	48 89 f0             	mov    %rsi,%rax
+ 45e2a4b:	48 89 d3             	mov    %rdx,%rbx
+ 45e2a4e:	e8 cd 10 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2a53:	84 c0                	test   %al,%al
+ 45e2a55:	74 5b                	je     45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a57:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2a5c:	48 8b 5a 28          	mov    0x28(%rdx),%rbx
+ 45e2a60:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e2a65:	48 8b 46 28          	mov    0x28(%rsi),%rax
+ 45e2a69:	48 8b 4e 30          	mov    0x30(%rsi),%rcx
+ 45e2a6d:	e8 ae 10 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2a72:	84 c0                	test   %al,%al
+ 45e2a74:	74 3c                	je     45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a76:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2a7b:	48 8b 5a 40          	mov    0x40(%rdx),%rbx
+ 45e2a7f:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e2a84:	48 8b 46 40          	mov    0x40(%rsi),%rax
+ 45e2a88:	48 8b 4e 48          	mov    0x48(%rsi),%rcx
+ 45e2a8c:	e8 8f 10 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2a91:	84 c0                	test   %al,%al
+ 45e2a93:	74 1d                	je     45e2ab2 <type:.rAvPpdhk@@Base+0x112>
+ 45e2a95:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2a9a:	48 8b 5a 50          	mov    0x50(%rdx),%rbx
+ 45e2a9e:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e2aa3:	48 8b 42 50          	mov    0x50(%rdx),%rax
+ 45e2aa7:	48 8b 4a 58          	mov    0x58(%rdx),%rcx
+ 45e2aab:	e8 70 10 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2ab0:	eb 02                	jmp    45e2ab4 <type:.rAvPpdhk@@Base+0x114>
+ 45e2ab2:	31 c0                	xor    %eax,%eax
+ 45e2ab4:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e2ab9:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2abd:	c3                   	ret
+ 45e2abe:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e2ac3:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e2ac8:	e8 93 19 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e2acd:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e2ad2:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e2ad7:	e9 c4 fe ff ff       	jmp    45e29a0 <type:.rAvPpdhk@@Base>
+ 45e2adc:	cc                   	int3
+ 45e2add:	cc                   	int3
+ 45e2ade:	cc                   	int3
+ 45e2adf:	cc                   	int3
+
+00000000045e2ae0 <type:.TXX9b4Se@@Base>:
+ 45e2ae0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2ae4:	0f 86 f1 01 00 00    	jbe    45e2cdb <type:.TXX9b4Se@@Base+0x1fb>
+ 45e2aea:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e2aee:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e2af3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e2af8:	0f b7 10             	movzwl (%rax),%edx
+ 45e2afb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2b00:	66 39 13             	cmp    %dx,(%rbx)
+ 45e2b03:	0f 85 c6 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b09:	48 8b 90 a0 00 00 00 	mov    0xa0(%rax),%rdx
+ 45e2b10:	48 39 93 a0 00 00 00 	cmp    %rdx,0xa0(%rbx)
+ 45e2b17:	0f 85 b2 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b1d:	48 8b 93 b0 00 00 00 	mov    0xb0(%rbx),%rdx
+ 45e2b24:	48 39 90 b0 00 00 00 	cmp    %rdx,0xb0(%rax)
+ 45e2b2b:	0f 85 9e 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b31:	48 8b 90 b8 00 00 00 	mov    0xb8(%rax),%rdx
+ 45e2b38:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45e2b3f:	00 
+ 45e2b40:	48 39 93 b8 00 00 00 	cmp    %rdx,0xb8(%rbx)
+ 45e2b47:	0f 85 82 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b4d:	48 8b 93 c8 00 00 00 	mov    0xc8(%rbx),%rdx
+ 45e2b54:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e2b5b:	00 00 
+ 45e2b5d:	0f 1f 00             	nopl   (%rax)
+ 45e2b60:	48 39 90 c8 00 00 00 	cmp    %rdx,0xc8(%rax)
+ 45e2b67:	0f 85 62 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b6d:	48 8b 90 d8 00 00 00 	mov    0xd8(%rax),%rdx
+ 45e2b74:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e2b7b:	00 00 
+ 45e2b7d:	0f 1f 00             	nopl   (%rax)
+ 45e2b80:	48 39 93 d8 00 00 00 	cmp    %rdx,0xd8(%rbx)
+ 45e2b87:	0f 85 42 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2b8d:	0f b6 90 e0 00 00 00 	movzbl 0xe0(%rax),%edx
+ 45e2b94:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e2b9b:	00 00 
+ 45e2b9d:	0f 1f 00             	nopl   (%rax)
+ 45e2ba0:	38 93 e0 00 00 00    	cmp    %dl,0xe0(%rbx)
+ 45e2ba6:	0f 85 23 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2bac:	48 8b 93 18 01 00 00 	mov    0x118(%rbx),%rdx
+ 45e2bb3:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e2bba:	00 00 
+ 45e2bbc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e2bc0:	48 39 90 18 01 00 00 	cmp    %rdx,0x118(%rax)
+ 45e2bc7:	0f 85 02 01 00 00    	jne    45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2bcd:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e2bd2:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e2bd7:	48 8d 50 08          	lea    0x8(%rax),%rdx
+ 45e2bdb:	48 8d 73 08          	lea    0x8(%rbx),%rsi
+ 45e2bdf:	b9 92 00 00 00       	mov    $0x92,%ecx
+ 45e2be4:	48 89 d0             	mov    %rdx,%rax
+ 45e2be7:	48 89 f3             	mov    %rsi,%rbx
+ 45e2bea:	e8 31 0f 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2bef:	84 c0                	test   %al,%al
+ 45e2bf1:	0f 84 d8 00 00 00    	je     45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2bf7:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2bfc:	48 8b 9a a8 00 00 00 	mov    0xa8(%rdx),%rbx
+ 45e2c03:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e2c08:	48 8b 86 a8 00 00 00 	mov    0xa8(%rsi),%rax
+ 45e2c0f:	48 8b 8e b0 00 00 00 	mov    0xb0(%rsi),%rcx
+ 45e2c16:	e8 05 0f 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2c1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2c20:	84 c0                	test   %al,%al
+ 45e2c22:	0f 84 a7 00 00 00    	je     45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2c28:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2c2d:	48 8b 9a c0 00 00 00 	mov    0xc0(%rdx),%rbx
+ 45e2c34:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e2c39:	48 8b 86 c0 00 00 00 	mov    0xc0(%rsi),%rax
+ 45e2c40:	48 8b 8e c8 00 00 00 	mov    0xc8(%rsi),%rcx
+ 45e2c47:	e8 d4 0e 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2c4c:	84 c0                	test   %al,%al
+ 45e2c4e:	74 7f                	je     45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2c50:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2c55:	48 8b 9a d0 00 00 00 	mov    0xd0(%rdx),%rbx
+ 45e2c5c:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e2c61:	48 8b 86 d0 00 00 00 	mov    0xd0(%rsi),%rax
+ 45e2c68:	48 8b 8e d8 00 00 00 	mov    0xd8(%rsi),%rcx
+ 45e2c6f:	e8 ac 0e 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2c74:	84 c0                	test   %al,%al
+ 45e2c76:	74 57                	je     45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2c78:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e2c7d:	48 8d 90 e8 00 00 00 	lea    0xe8(%rax),%rdx
+ 45e2c84:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e2c89:	48 8d b3 e8 00 00 00 	lea    0xe8(%rbx),%rsi
+ 45e2c90:	b9 28 00 00 00       	mov    $0x28,%ecx
+ 45e2c95:	48 89 d0             	mov    %rdx,%rax
+ 45e2c98:	48 89 f3             	mov    %rsi,%rbx
+ 45e2c9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2ca0:	e8 7b 0e 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2ca5:	84 c0                	test   %al,%al
+ 45e2ca7:	74 26                	je     45e2ccf <type:.TXX9b4Se@@Base+0x1ef>
+ 45e2ca9:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e2cae:	48 8b 9a 10 01 00 00 	mov    0x110(%rdx),%rbx
+ 45e2cb5:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e2cba:	48 8b 82 10 01 00 00 	mov    0x110(%rdx),%rax
+ 45e2cc1:	48 8b 8a 18 01 00 00 	mov    0x118(%rdx),%rcx
+ 45e2cc8:	e8 53 0e 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2ccd:	eb 02                	jmp    45e2cd1 <type:.TXX9b4Se@@Base+0x1f1>
+ 45e2ccf:	31 c0                	xor    %eax,%eax
+ 45e2cd1:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e2cd6:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2cda:	c3                   	ret
+ 45e2cdb:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e2ce0:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e2ce5:	e8 76 17 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e2cea:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e2cef:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e2cf4:	e9 e7 fd ff ff       	jmp    45e2ae0 <type:.TXX9b4Se@@Base>
+ 45e2cf9:	cc                   	int3
+ 45e2cfa:	cc                   	int3
+ 45e2cfb:	cc                   	int3
+ 45e2cfc:	cc                   	int3
+ 45e2cfd:	cc                   	int3
+ 45e2cfe:	cc                   	int3
+ 45e2cff:	cc                   	int3
+
+00000000045e2d00 <type:.dx+QKGtd@@Base>:
+ 45e2d00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2d04:	76 79                	jbe    45e2d7f <type:.dx+QKGtd@@Base+0x7f>
+ 45e2d06:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e2d0a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e2d0f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e2d14:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e2d19:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e2d1e:	31 c9                	xor    %ecx,%ecx
+ 45e2d20:	eb 12                	jmp    45e2d34 <type:.dx+QKGtd@@Base+0x34>
+ 45e2d22:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 45e2d27:	48 ff c1             	inc    %rcx
+ 45e2d2a:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e2d2f:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e2d34:	48 81 f9 00 01 00 00 	cmp    $0x100,%rcx
+ 45e2d3b:	7d 33                	jge    45e2d70 <type:.dx+QKGtd@@Base+0x70>
+ 45e2d3d:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 45e2d42:	48 8d 14 c9          	lea    (%rcx,%rcx,8),%rdx
+ 45e2d46:	48 c1 e2 05          	shl    $0x5,%rdx
+ 45e2d4a:	48 8d 34 02          	lea    (%rdx,%rax,1),%rsi
+ 45e2d4e:	48 01 da             	add    %rbx,%rdx
+ 45e2d51:	48 89 f0             	mov    %rsi,%rax
+ 45e2d54:	48 89 d3             	mov    %rdx,%rbx
+ 45e2d57:	e8 84 fd ff ff       	call   45e2ae0 <type:.TXX9b4Se@@Base>
+ 45e2d5c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e2d60:	84 c0                	test   %al,%al
+ 45e2d62:	75 be                	jne    45e2d22 <type:.dx+QKGtd@@Base+0x22>
+ 45e2d64:	31 c0                	xor    %eax,%eax
+ 45e2d66:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e2d6b:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2d6f:	c3                   	ret
+ 45e2d70:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e2d75:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e2d7a:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2d7e:	c3                   	ret
+ 45e2d7f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e2d84:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e2d89:	e8 d2 16 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e2d8e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e2d93:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e2d98:	e9 63 ff ff ff       	jmp    45e2d00 <type:.dx+QKGtd@@Base>
+ 45e2d9d:	cc                   	int3
+ 45e2d9e:	cc                   	int3
+ 45e2d9f:	cc                   	int3
+
+00000000045e2da0 <type:.oC/BCRdl@@Base>:
+ 45e2da0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2da4:	0f 86 c0 01 00 00    	jbe    45e2f6a <type:.oC/BCRdl@@Base+0x1ca>
+ 45e2daa:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e2dae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e2db3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e2db8:	48 8b 08             	mov    (%rax),%rcx
+ 45e2dbb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2dc0:	48 39 0b             	cmp    %rcx,(%rbx)
+ 45e2dc3:	0f 85 93 01 00 00    	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2dc9:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e2dce:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e2dd3:	48 8d 48 08          	lea    0x8(%rax),%rcx
+ 45e2dd7:	48 8d 53 08          	lea    0x8(%rbx),%rdx
+ 45e2ddb:	48 89 c8             	mov    %rcx,%rax
+ 45e2dde:	48 89 d3             	mov    %rdx,%rbx
+ 45e2de1:	e8 ba fb ff ff       	call   45e29a0 <type:.rAvPpdhk@@Base>
+ 45e2de6:	84 c0                	test   %al,%al
+ 45e2de8:	0f 84 6e 01 00 00    	je     45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2dee:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e2df3:	8b 48 68             	mov    0x68(%rax),%ecx
+ 45e2df6:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e2dfb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2e00:	39 4b 68             	cmp    %ecx,0x68(%rbx)
+ 45e2e03:	0f 85 53 01 00 00    	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2e09:	8b 48 6c             	mov    0x6c(%rax),%ecx
+ 45e2e0c:	39 4b 6c             	cmp    %ecx,0x6c(%rbx)
+ 45e2e0f:	0f 85 47 01 00 00    	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2e15:	48 8d 48 70          	lea    0x70(%rax),%rcx
+ 45e2e19:	48 8d 53 70          	lea    0x70(%rbx),%rdx
+ 45e2e1d:	48 89 c8             	mov    %rcx,%rax
+ 45e2e20:	48 89 d3             	mov    %rdx,%rbx
+ 45e2e23:	e8 d8 fe ff ff       	call   45e2d00 <type:.dx+QKGtd@@Base>
+ 45e2e28:	84 c0                	test   %al,%al
+ 45e2e2a:	0f 84 2c 01 00 00    	je     45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2e30:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e2e35:	48 8d 90 70 20 01 00 	lea    0x12070(%rax),%rdx
+ 45e2e3c:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e2e41:	48 8d b3 70 20 01 00 	lea    0x12070(%rbx),%rsi
+ 45e2e48:	b9 11 02 00 00       	mov    $0x211,%ecx
+ 45e2e4d:	48 89 d0             	mov    %rdx,%rax
+ 45e2e50:	48 89 f3             	mov    %rsi,%rbx
+ 45e2e53:	e8 c8 0c 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e2e58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45e2e5f:	00 
+ 45e2e60:	84 c0                	test   %al,%al
+ 45e2e62:	0f 84 f4 00 00 00    	je     45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2e68:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e2e6d:	48 8b 82 88 22 01 00 	mov    0x12288(%rdx),%rax
+ 45e2e74:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 45e2e79:	48 8b 8e 90 22 01 00 	mov    0x12290(%rsi),%rcx
+ 45e2e80:	48 8b 9a 90 22 01 00 	mov    0x12290(%rdx),%rbx
+ 45e2e87:	48 39 86 88 22 01 00 	cmp    %rax,0x12288(%rsi)
+ 45e2e8e:	0f 85 c8 00 00 00    	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2e94:	e8 47 20 90 fd       	call   1ee4ee0 <runtime.ifaceeq@@Base>
+ 45e2e99:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 45e2ea0:	84 c0                	test   %al,%al
+ 45e2ea2:	0f 84 b4 00 00 00    	je     45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2ea8:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45e2ead:	48 8b 91 98 22 01 00 	mov    0x12298(%rcx),%rdx
+ 45e2eb4:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e2eb9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 45e2ec0:	48 39 93 98 22 01 00 	cmp    %rdx,0x12298(%rbx)
+ 45e2ec7:	0f 85 8f 00 00 00    	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2ecd:	48 8b 91 a0 22 01 00 	mov    0x122a0(%rcx),%rdx
+ 45e2ed4:	48 39 93 a0 22 01 00 	cmp    %rdx,0x122a0(%rbx)
+ 45e2edb:	75 7f                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2edd:	48 8b 91 a8 22 01 00 	mov    0x122a8(%rcx),%rdx
+ 45e2ee4:	48 39 93 a8 22 01 00 	cmp    %rdx,0x122a8(%rbx)
+ 45e2eeb:	75 6f                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2eed:	0f b6 91 b0 22 01 00 	movzbl 0x122b0(%rcx),%edx
+ 45e2ef4:	38 93 b0 22 01 00    	cmp    %dl,0x122b0(%rbx)
+ 45e2efa:	75 60                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2efc:	0f b6 91 b1 22 01 00 	movzbl 0x122b1(%rcx),%edx
+ 45e2f03:	38 93 b1 22 01 00    	cmp    %dl,0x122b1(%rbx)
+ 45e2f09:	75 51                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2f0b:	f2 0f 10 81 b8 22 01 	movsd  0x122b8(%rcx),%xmm0
+ 45e2f12:	00 
+ 45e2f13:	f2 0f 10 8b b8 22 01 	movsd  0x122b8(%rbx),%xmm1
+ 45e2f1a:	00 
+ 45e2f1b:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 45e2f1f:	90                   	nop
+ 45e2f20:	75 3a                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2f22:	7a 38                	jp     45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2f24:	0f b7 91 c0 22 01 00 	movzwl 0x122c0(%rcx),%edx
+ 45e2f2b:	66 39 93 c0 22 01 00 	cmp    %dx,0x122c0(%rbx)
+ 45e2f32:	75 28                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2f34:	48 8b 91 c8 22 01 00 	mov    0x122c8(%rcx),%rdx
+ 45e2f3b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2f40:	48 39 93 c8 22 01 00 	cmp    %rdx,0x122c8(%rbx)
+ 45e2f47:	75 13                	jne    45e2f5c <type:.oC/BCRdl@@Base+0x1bc>
+ 45e2f49:	48 8b 89 d0 22 01 00 	mov    0x122d0(%rcx),%rcx
+ 45e2f50:	48 39 8b d0 22 01 00 	cmp    %rcx,0x122d0(%rbx)
+ 45e2f57:	0f 94 c1             	sete   %cl
+ 45e2f5a:	eb 02                	jmp    45e2f5e <type:.oC/BCRdl@@Base+0x1be>
+ 45e2f5c:	31 c9                	xor    %ecx,%ecx
+ 45e2f5e:	89 c8                	mov    %ecx,%eax
+ 45e2f60:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e2f65:	48 83 c4 20          	add    $0x20,%rsp
+ 45e2f69:	c3                   	ret
+ 45e2f6a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e2f6f:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e2f74:	e8 e7 14 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e2f79:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e2f7e:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e2f83:	e9 18 fe ff ff       	jmp    45e2da0 <type:.oC/BCRdl@@Base>
+ 45e2f88:	cc                   	int3
+ 45e2f89:	cc                   	int3
+ 45e2f8a:	cc                   	int3
+ 45e2f8b:	cc                   	int3
+ 45e2f8c:	cc                   	int3
+ 45e2f8d:	cc                   	int3
+ 45e2f8e:	cc                   	int3
+ 45e2f8f:	cc                   	int3
+ 45e2f90:	cc                   	int3
+ 45e2f91:	cc                   	int3
+ 45e2f92:	cc                   	int3
+ 45e2f93:	cc                   	int3
+ 45e2f94:	cc                   	int3
+ 45e2f95:	cc                   	int3
+ 45e2f96:	cc                   	int3
+ 45e2f97:	cc                   	int3
+ 45e2f98:	cc                   	int3
+ 45e2f99:	cc                   	int3
+ 45e2f9a:	cc                   	int3
+ 45e2f9b:	cc                   	int3
+ 45e2f9c:	cc                   	int3
+ 45e2f9d:	cc                   	int3
+ 45e2f9e:	cc                   	int3
+ 45e2f9f:	cc                   	int3
+
+00000000045e2fa0 <type:.ExbSv7Dj@@Base>:
+ 45e2fa0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2fa4:	0f 86 2a 01 00 00    	jbe    45e30d4 <type:.ExbSv7Dj@@Base+0x134>
+ 45e2faa:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e2fae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e2fb3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e2fb8:	0f b7 10             	movzwl (%rax),%edx
+ 45e2fbb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e2fc0:	66 39 13             	cmp    %dx,(%rbx)
+ 45e2fc3:	0f 85 ff 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e2fc9:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 45e2fcd:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 45e2fd1:	0f 85 f1 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e2fd7:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45e2fdb:	48 8b 53 10          	mov    0x10(%rbx),%rdx
+ 45e2fdf:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 45e2fe3:	48 39 4b 18          	cmp    %rcx,0x18(%rbx)
+ 45e2fe7:	0f 85 db 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e2fed:	48 8b 78 20          	mov    0x20(%rax),%rdi
+ 45e2ff1:	48 39 7b 20          	cmp    %rdi,0x20(%rbx)
+ 45e2ff5:	0f 85 cd 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e2ffb:	48 8b 7b 30          	mov    0x30(%rbx),%rdi
+ 45e2fff:	90                   	nop
+ 45e3000:	48 39 78 30          	cmp    %rdi,0x30(%rax)
+ 45e3004:	0f 85 be 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e300a:	48 8b 7b 40          	mov    0x40(%rbx),%rdi
+ 45e300e:	48 39 78 40          	cmp    %rdi,0x40(%rax)
+ 45e3012:	0f 85 b0 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e3018:	0f b6 78 48          	movzbl 0x48(%rax),%edi
+ 45e301c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3020:	40 38 7b 48          	cmp    %dil,0x48(%rbx)
+ 45e3024:	0f 85 9e 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e302a:	48 8b 78 50          	mov    0x50(%rax),%rdi
+ 45e302e:	48 39 7b 50          	cmp    %rdi,0x50(%rbx)
+ 45e3032:	0f 85 90 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e3038:	48 8b 78 58          	mov    0x58(%rax),%rdi
+ 45e303c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3040:	48 39 7b 58          	cmp    %rdi,0x58(%rbx)
+ 45e3044:	0f 85 7e 00 00 00    	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e304a:	48 8b 7b 68          	mov    0x68(%rbx),%rdi
+ 45e304e:	48 39 78 68          	cmp    %rdi,0x68(%rax)
+ 45e3052:	75 74                	jne    45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e3054:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e3059:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e305e:	48 89 f0             	mov    %rsi,%rax
+ 45e3061:	48 89 d3             	mov    %rdx,%rbx
+ 45e3064:	e8 b7 0a 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3069:	84 c0                	test   %al,%al
+ 45e306b:	74 5b                	je     45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e306d:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e3072:	48 8b 5a 28          	mov    0x28(%rdx),%rbx
+ 45e3076:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e307b:	48 8b 46 28          	mov    0x28(%rsi),%rax
+ 45e307f:	48 8b 4e 30          	mov    0x30(%rsi),%rcx
+ 45e3083:	e8 98 0a 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3088:	84 c0                	test   %al,%al
+ 45e308a:	74 3c                	je     45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e308c:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e3091:	48 8b 5a 38          	mov    0x38(%rdx),%rbx
+ 45e3095:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e309a:	48 8b 46 38          	mov    0x38(%rsi),%rax
+ 45e309e:	48 8b 4e 40          	mov    0x40(%rsi),%rcx
+ 45e30a2:	e8 79 0a 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e30a7:	84 c0                	test   %al,%al
+ 45e30a9:	74 1d                	je     45e30c8 <type:.ExbSv7Dj@@Base+0x128>
+ 45e30ab:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e30b0:	48 8b 5a 60          	mov    0x60(%rdx),%rbx
+ 45e30b4:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e30b9:	48 8b 42 60          	mov    0x60(%rdx),%rax
+ 45e30bd:	48 8b 4a 68          	mov    0x68(%rdx),%rcx
+ 45e30c1:	e8 5a 0a 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e30c6:	eb 02                	jmp    45e30ca <type:.ExbSv7Dj@@Base+0x12a>
+ 45e30c8:	31 c0                	xor    %eax,%eax
+ 45e30ca:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e30cf:	48 83 c4 20          	add    $0x20,%rsp
+ 45e30d3:	c3                   	ret
+ 45e30d4:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e30d9:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e30de:	66 90                	xchg   %ax,%ax
+ 45e30e0:	e8 7b 13 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e30e5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e30ea:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e30ef:	e9 ac fe ff ff       	jmp    45e2fa0 <type:.ExbSv7Dj@@Base>
+ 45e30f4:	cc                   	int3
+ 45e30f5:	cc                   	int3
+ 45e30f6:	cc                   	int3
+ 45e30f7:	cc                   	int3
+ 45e30f8:	cc                   	int3
+ 45e30f9:	cc                   	int3
+ 45e30fa:	cc                   	int3
+ 45e30fb:	cc                   	int3
+ 45e30fc:	cc                   	int3
+ 45e30fd:	cc                   	int3
+ 45e30fe:	cc                   	int3
+ 45e30ff:	cc                   	int3
+
+00000000045e3100 <type:.hTORYgnk@@Base>:
+ 45e3100:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e3104:	76 69                	jbe    45e316f <type:.hTORYgnk@@Base+0x6f>
+ 45e3106:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e310a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e310f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e3114:	0f b7 10             	movzwl (%rax),%edx
+ 45e3117:	66 39 13             	cmp    %dx,(%rbx)
+ 45e311a:	75 28                	jne    45e3144 <type:.hTORYgnk@@Base+0x44>
+ 45e311c:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e3121:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e3126:	48 8d 50 08          	lea    0x8(%rax),%rdx
+ 45e312a:	48 8d 73 08          	lea    0x8(%rbx),%rsi
+ 45e312e:	b9 24 00 00 00       	mov    $0x24,%ecx
+ 45e3133:	48 89 d0             	mov    %rdx,%rax
+ 45e3136:	48 89 f3             	mov    %rsi,%rbx
+ 45e3139:	e8 e2 09 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e313e:	66 90                	xchg   %ax,%ax
+ 45e3140:	84 c0                	test   %al,%al
+ 45e3142:	75 04                	jne    45e3148 <type:.hTORYgnk@@Base+0x48>
+ 45e3144:	31 c0                	xor    %eax,%eax
+ 45e3146:	eb 1d                	jmp    45e3165 <type:.hTORYgnk@@Base+0x65>
+ 45e3148:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e314d:	48 83 c0 30          	add    $0x30,%rax
+ 45e3151:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e3156:	48 83 c3 30          	add    $0x30,%rbx
+ 45e315a:	b9 2a 00 00 00       	mov    $0x2a,%ecx
+ 45e315f:	90                   	nop
+ 45e3160:	e8 bb 09 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3165:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e316a:	48 83 c4 20          	add    $0x20,%rsp
+ 45e316e:	c3                   	ret
+ 45e316f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e3174:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e3179:	e8 e2 12 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e317e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e3183:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e3188:	e9 73 ff ff ff       	jmp    45e3100 <type:.hTORYgnk@@Base>
+ 45e318d:	cc                   	int3
+ 45e318e:	cc                   	int3
+ 45e318f:	cc                   	int3
+ 45e3190:	cc                   	int3
+ 45e3191:	cc                   	int3
+ 45e3192:	cc                   	int3
+ 45e3193:	cc                   	int3
+ 45e3194:	cc                   	int3
+ 45e3195:	cc                   	int3
+ 45e3196:	cc                   	int3
+ 45e3197:	cc                   	int3
+ 45e3198:	cc                   	int3
+ 45e3199:	cc                   	int3
+ 45e319a:	cc                   	int3
+ 45e319b:	cc                   	int3
+ 45e319c:	cc                   	int3
+ 45e319d:	cc                   	int3
+ 45e319e:	cc                   	int3
+ 45e319f:	cc                   	int3
+
+00000000045e31a0 <type:.ALFFVLjF@@Base>:
+ 45e31a0:	48 8b 08             	mov    (%rax),%rcx
+ 45e31a3:	48 39 0b             	cmp    %rcx,(%rbx)
+ 45e31a6:	0f 94 c0             	sete   %al
+ 45e31a9:	c3                   	ret
+ 45e31aa:	cc                   	int3
+ 45e31ab:	cc                   	int3
+ 45e31ac:	cc                   	int3
+ 45e31ad:	cc                   	int3
+ 45e31ae:	cc                   	int3
+ 45e31af:	cc                   	int3
+ 45e31b0:	cc                   	int3
+ 45e31b1:	cc                   	int3
+ 45e31b2:	cc                   	int3
+ 45e31b3:	cc                   	int3
+ 45e31b4:	cc                   	int3
+ 45e31b5:	cc                   	int3
+ 45e31b6:	cc                   	int3
+ 45e31b7:	cc                   	int3
+ 45e31b8:	cc                   	int3
+ 45e31b9:	cc                   	int3
+ 45e31ba:	cc                   	int3
+ 45e31bb:	cc                   	int3
+ 45e31bc:	cc                   	int3
+ 45e31bd:	cc                   	int3
+ 45e31be:	cc                   	int3
+ 45e31bf:	cc                   	int3
+
+00000000045e31c0 <type:./ygo1ui/@@Base>:
+ 45e31c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e31c4:	0f 86 c1 03 00 00    	jbe    45e358b <type:./ygo1ui/@@Base+0x3cb>
+ 45e31ca:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e31ce:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e31d3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e31d8:	48 8b 48 34          	mov    0x34(%rax),%rcx
+ 45e31dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e31e0:	48 39 4b 34          	cmp    %rcx,0x34(%rbx)
+ 45e31e4:	0f 85 95 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e31ea:	0f b7 48 3c          	movzwl 0x3c(%rax),%ecx
+ 45e31ee:	66 39 4b 3c          	cmp    %cx,0x3c(%rbx)
+ 45e31f2:	0f 85 87 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e31f8:	48 8b 48 3e          	mov    0x3e(%rax),%rcx
+ 45e31fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3200:	48 39 4b 3e          	cmp    %rcx,0x3e(%rbx)
+ 45e3204:	0f 85 75 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e320a:	0f b7 48 46          	movzwl 0x46(%rax),%ecx
+ 45e320e:	66 39 4b 46          	cmp    %cx,0x46(%rbx)
+ 45e3212:	0f 85 67 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3218:	48 8b 48 48          	mov    0x48(%rax),%rcx
+ 45e321c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3220:	48 39 4b 48          	cmp    %rcx,0x48(%rbx)
+ 45e3224:	0f 85 55 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e322a:	0f b7 48 50          	movzwl 0x50(%rax),%ecx
+ 45e322e:	66 39 4b 50          	cmp    %cx,0x50(%rbx)
+ 45e3232:	0f 85 47 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3238:	0f b7 48 52          	movzwl 0x52(%rax),%ecx
+ 45e323c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3240:	66 39 4b 52          	cmp    %cx,0x52(%rbx)
+ 45e3244:	0f 85 35 03 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e324a:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e324f:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45e3254:	48 8d 88 90 00 00 00 	lea    0x90(%rax),%rcx
+ 45e325b:	48 8d 93 90 00 00 00 	lea    0x90(%rbx),%rdx
+ 45e3262:	48 89 c8             	mov    %rcx,%rax
+ 45e3265:	48 89 d3             	mov    %rdx,%rbx
+ 45e3268:	e8 d3 b9 fb ff       	call   459ec40 <type:.JpNKZXRt@@Base>
+ 45e326d:	84 c0                	test   %al,%al
+ 45e326f:	0f 84 0a 03 00 00    	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3275:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e327a:	48 8b 88 c8 00 00 00 	mov    0xc8(%rax),%rcx
+ 45e3281:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e3286:	48 39 8b c8 00 00 00 	cmp    %rcx,0xc8(%rbx)
+ 45e328d:	0f 85 ec 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3293:	48 8d 88 d0 00 00 00 	lea    0xd0(%rax),%rcx
+ 45e329a:	48 8d 93 d0 00 00 00 	lea    0xd0(%rbx),%rdx
+ 45e32a1:	48 89 c8             	mov    %rcx,%rax
+ 45e32a4:	48 89 d3             	mov    %rdx,%rbx
+ 45e32a7:	e8 74 ba fb ff       	call   459ed20 <type:.AkTBVShs@@Base>
+ 45e32ac:	84 c0                	test   %al,%al
+ 45e32ae:	0f 84 cb 02 00 00    	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e32b4:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e32b9:	48 8b 90 10 01 00 00 	mov    0x110(%rax),%rdx
+ 45e32c0:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e32c5:	48 39 93 10 01 00 00 	cmp    %rdx,0x110(%rbx)
+ 45e32cc:	0f 85 ad 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e32d2:	0f b6 90 18 01 00 00 	movzbl 0x118(%rax),%edx
+ 45e32d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 45e32e0:	38 93 18 01 00 00    	cmp    %dl,0x118(%rbx)
+ 45e32e6:	0f 85 93 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e32ec:	0f b6 90 19 01 00 00 	movzbl 0x119(%rax),%edx
+ 45e32f3:	38 93 19 01 00 00    	cmp    %dl,0x119(%rbx)
+ 45e32f9:	0f 85 80 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e32ff:	0f b6 90 1a 01 00 00 	movzbl 0x11a(%rax),%edx
+ 45e3306:	38 93 1a 01 00 00    	cmp    %dl,0x11a(%rbx)
+ 45e330c:	0f 85 6d 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3312:	0f b6 90 1b 01 00 00 	movzbl 0x11b(%rax),%edx
+ 45e3319:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 45e3320:	38 93 1b 01 00 00    	cmp    %dl,0x11b(%rbx)
+ 45e3326:	0f 85 53 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e332c:	0f b6 90 1c 01 00 00 	movzbl 0x11c(%rax),%edx
+ 45e3333:	38 93 1c 01 00 00    	cmp    %dl,0x11c(%rbx)
+ 45e3339:	0f 85 40 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e333f:	48 8b 90 20 01 00 00 	mov    0x120(%rax),%rdx
+ 45e3346:	48 39 93 20 01 00 00 	cmp    %rdx,0x120(%rbx)
+ 45e334d:	0f 85 2c 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3353:	48 8b 90 28 01 00 00 	mov    0x128(%rax),%rdx
+ 45e335a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 45e3360:	48 39 93 28 01 00 00 	cmp    %rdx,0x128(%rbx)
+ 45e3367:	0f 85 12 02 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e336d:	48 8b 93 38 01 00 00 	mov    0x138(%rbx),%rdx
+ 45e3374:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e337b:	00 00 
+ 45e337d:	0f 1f 00             	nopl   (%rax)
+ 45e3380:	48 39 90 38 01 00 00 	cmp    %rdx,0x138(%rax)
+ 45e3387:	0f 85 f2 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e338d:	48 8b 90 40 01 00 00 	mov    0x140(%rax),%rdx
+ 45e3394:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e339b:	00 00 
+ 45e339d:	0f 1f 00             	nopl   (%rax)
+ 45e33a0:	48 39 93 40 01 00 00 	cmp    %rdx,0x140(%rbx)
+ 45e33a7:	0f 85 d2 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e33ad:	0f b6 90 48 01 00 00 	movzbl 0x148(%rax),%edx
+ 45e33b4:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e33bb:	00 00 
+ 45e33bd:	0f 1f 00             	nopl   (%rax)
+ 45e33c0:	38 93 48 01 00 00    	cmp    %dl,0x148(%rbx)
+ 45e33c6:	0f 85 b3 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e33cc:	48 8b 90 50 01 00 00 	mov    0x150(%rax),%rdx
+ 45e33d3:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e33da:	00 00 
+ 45e33dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e33e0:	48 39 93 50 01 00 00 	cmp    %rdx,0x150(%rbx)
+ 45e33e7:	0f 85 92 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e33ed:	48 8b 90 58 01 00 00 	mov    0x158(%rax),%rdx
+ 45e33f4:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e33fb:	00 00 
+ 45e33fd:	0f 1f 00             	nopl   (%rax)
+ 45e3400:	48 39 93 58 01 00 00 	cmp    %rdx,0x158(%rbx)
+ 45e3407:	0f 85 72 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e340d:	48 8b 93 68 01 00 00 	mov    0x168(%rbx),%rdx
+ 45e3414:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e341b:	00 00 
+ 45e341d:	0f 1f 00             	nopl   (%rax)
+ 45e3420:	48 39 90 68 01 00 00 	cmp    %rdx,0x168(%rax)
+ 45e3427:	0f 85 52 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e342d:	48 8b 90 70 01 00 00 	mov    0x170(%rax),%rdx
+ 45e3434:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e343b:	00 00 
+ 45e343d:	0f 1f 00             	nopl   (%rax)
+ 45e3440:	48 39 93 70 01 00 00 	cmp    %rdx,0x170(%rbx)
+ 45e3447:	0f 85 32 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e344d:	48 8b 90 78 01 00 00 	mov    0x178(%rax),%rdx
+ 45e3454:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e345b:	00 00 
+ 45e345d:	0f 1f 00             	nopl   (%rax)
+ 45e3460:	48 39 93 78 01 00 00 	cmp    %rdx,0x178(%rbx)
+ 45e3467:	0f 85 12 01 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e346d:	48 8b 90 80 01 00 00 	mov    0x180(%rax),%rdx
+ 45e3474:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e347b:	00 00 
+ 45e347d:	0f 1f 00             	nopl   (%rax)
+ 45e3480:	48 39 93 80 01 00 00 	cmp    %rdx,0x180(%rbx)
+ 45e3487:	0f 85 f2 00 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e348d:	48 8b 90 90 01 00 00 	mov    0x190(%rax),%rdx
+ 45e3494:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e349b:	00 00 
+ 45e349d:	0f 1f 00             	nopl   (%rax)
+ 45e34a0:	48 39 93 90 01 00 00 	cmp    %rdx,0x190(%rbx)
+ 45e34a7:	0f 85 d2 00 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e34ad:	48 8b 90 98 01 00 00 	mov    0x198(%rax),%rdx
+ 45e34b4:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e34bb:	00 00 
+ 45e34bd:	0f 1f 00             	nopl   (%rax)
+ 45e34c0:	48 39 93 98 01 00 00 	cmp    %rdx,0x198(%rbx)
+ 45e34c7:	0f 85 b2 00 00 00    	jne    45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e34cd:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 45e34d2:	e8 49 06 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e34d7:	84 c0                	test   %al,%al
+ 45e34d9:	0f 84 a0 00 00 00    	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e34df:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e34e4:	48 8d 50 58          	lea    0x58(%rax),%rdx
+ 45e34e8:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45e34ed:	48 8d 73 58          	lea    0x58(%rbx),%rsi
+ 45e34f1:	b9 34 00 00 00       	mov    $0x34,%ecx
+ 45e34f6:	48 89 d0             	mov    %rdx,%rax
+ 45e34f9:	48 89 f3             	mov    %rsi,%rbx
+ 45e34fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e3500:	e8 1b 06 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3505:	84 c0                	test   %al,%al
+ 45e3507:	74 76                	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3509:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e350e:	48 8b 9a 30 01 00 00 	mov    0x130(%rdx),%rbx
+ 45e3515:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45e351a:	48 8b 86 30 01 00 00 	mov    0x130(%rsi),%rax
+ 45e3521:	48 8b 8e 38 01 00 00 	mov    0x138(%rsi),%rcx
+ 45e3528:	e8 f3 05 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e352d:	84 c0                	test   %al,%al
+ 45e352f:	74 4e                	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3531:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e3536:	48 8b 82 60 01 00 00 	mov    0x160(%rdx),%rax
+ 45e353d:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 45e3542:	48 8b 9e 60 01 00 00 	mov    0x160(%rsi),%rbx
+ 45e3549:	48 8b 8a 68 01 00 00 	mov    0x168(%rdx),%rcx
+ 45e3550:	e8 cb 05 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3555:	84 c0                	test   %al,%al
+ 45e3557:	74 26                	je     45e357f <type:./ygo1ui/@@Base+0x3bf>
+ 45e3559:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e355e:	48 8b 82 88 01 00 00 	mov    0x188(%rdx),%rax
+ 45e3565:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 45e356a:	48 8b 9e 88 01 00 00 	mov    0x188(%rsi),%rbx
+ 45e3571:	48 8b 8a 90 01 00 00 	mov    0x190(%rdx),%rcx
+ 45e3578:	e8 a3 05 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e357d:	eb 02                	jmp    45e3581 <type:./ygo1ui/@@Base+0x3c1>
+ 45e357f:	31 c0                	xor    %eax,%eax
+ 45e3581:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e3586:	48 83 c4 20          	add    $0x20,%rsp
+ 45e358a:	c3                   	ret
+ 45e358b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e3590:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e3595:	e8 c6 0e 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e359a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e359f:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e35a4:	e9 17 fc ff ff       	jmp    45e31c0 <type:./ygo1ui/@@Base>
+ 45e35a9:	cc                   	int3
+ 45e35aa:	cc                   	int3
+ 45e35ab:	cc                   	int3
+ 45e35ac:	cc                   	int3
+ 45e35ad:	cc                   	int3
+ 45e35ae:	cc                   	int3
+ 45e35af:	cc                   	int3
+ 45e35b0:	cc                   	int3
+ 45e35b1:	cc                   	int3
+ 45e35b2:	cc                   	int3
+ 45e35b3:	cc                   	int3
+ 45e35b4:	cc                   	int3
+ 45e35b5:	cc                   	int3
+ 45e35b6:	cc                   	int3
+ 45e35b7:	cc                   	int3
+ 45e35b8:	cc                   	int3
+ 45e35b9:	cc                   	int3
+ 45e35ba:	cc                   	int3
+ 45e35bb:	cc                   	int3
+ 45e35bc:	cc                   	int3
+ 45e35bd:	cc                   	int3
+ 45e35be:	cc                   	int3
+ 45e35bf:	cc                   	int3
+
+00000000045e35c0 <type:.kBRTnUvi@@Base>:
+ 45e35c0:	48 8b 08             	mov    (%rax),%rcx
+ 45e35c3:	48 39 0b             	cmp    %rcx,(%rbx)
+ 45e35c6:	75 21                	jne    45e35e9 <type:.kBRTnUvi@@Base+0x29>
+ 45e35c8:	0f b6 48 08          	movzbl 0x8(%rax),%ecx
+ 45e35cc:	38 4b 08             	cmp    %cl,0x8(%rbx)
+ 45e35cf:	75 18                	jne    45e35e9 <type:.kBRTnUvi@@Base+0x29>
+ 45e35d1:	8b 48 0c             	mov    0xc(%rax),%ecx
+ 45e35d4:	39 4b 0c             	cmp    %ecx,0xc(%rbx)
+ 45e35d7:	75 0b                	jne    45e35e4 <type:.kBRTnUvi@@Base+0x24>
+ 45e35d9:	8b 48 10             	mov    0x10(%rax),%ecx
+ 45e35dc:	39 4b 10             	cmp    %ecx,0x10(%rbx)
+ 45e35df:	0f 94 c1             	sete   %cl
+ 45e35e2:	eb 02                	jmp    45e35e6 <type:.kBRTnUvi@@Base+0x26>
+ 45e35e4:	31 c9                	xor    %ecx,%ecx
+ 45e35e6:	89 c8                	mov    %ecx,%eax
+ 45e35e8:	c3                   	ret
+ 45e35e9:	31 c0                	xor    %eax,%eax
+ 45e35eb:	c3                   	ret
+ 45e35ec:	cc                   	int3
+ 45e35ed:	cc                   	int3
+ 45e35ee:	cc                   	int3
+ 45e35ef:	cc                   	int3
+ 45e35f0:	cc                   	int3
+ 45e35f1:	cc                   	int3
+ 45e35f2:	cc                   	int3
+ 45e35f3:	cc                   	int3
+ 45e35f4:	cc                   	int3
+ 45e35f5:	cc                   	int3
+ 45e35f6:	cc                   	int3
+ 45e35f7:	cc                   	int3
+ 45e35f8:	cc                   	int3
+ 45e35f9:	cc                   	int3
+ 45e35fa:	cc                   	int3
+ 45e35fb:	cc                   	int3
+ 45e35fc:	cc                   	int3
+ 45e35fd:	cc                   	int3
+ 45e35fe:	cc                   	int3
+ 45e35ff:	cc                   	int3
+
+00000000045e3600 <type:.IZBapZ6S@@Base>:
+ 45e3600:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e3604:	76 6d                	jbe    45e3673 <type:.IZBapZ6S@@Base+0x73>
+ 45e3606:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e360a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e360f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e3614:	0f b6 10             	movzbl (%rax),%edx
+ 45e3617:	38 13                	cmp    %dl,(%rbx)
+ 45e3619:	75 4c                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e361b:	48 8b 50 38          	mov    0x38(%rax),%rdx
+ 45e361f:	90                   	nop
+ 45e3620:	48 39 53 38          	cmp    %rdx,0x38(%rbx)
+ 45e3624:	75 41                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e3626:	48 8b 50 40          	mov    0x40(%rax),%rdx
+ 45e362a:	48 39 53 40          	cmp    %rdx,0x40(%rbx)
+ 45e362e:	75 37                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e3630:	0f b7 50 48          	movzwl 0x48(%rax),%edx
+ 45e3634:	66 39 53 48          	cmp    %dx,0x48(%rbx)
+ 45e3638:	75 2d                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e363a:	48 8b 50 4a          	mov    0x4a(%rax),%rdx
+ 45e363e:	66 90                	xchg   %ax,%ax
+ 45e3640:	48 39 53 4a          	cmp    %rdx,0x4a(%rbx)
+ 45e3644:	75 21                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e3646:	0f b7 50 52          	movzwl 0x52(%rax),%edx
+ 45e364a:	66 39 53 52          	cmp    %dx,0x52(%rbx)
+ 45e364e:	75 17                	jne    45e3667 <type:.IZBapZ6S@@Base+0x67>
+ 45e3650:	48 83 c0 08          	add    $0x8,%rax
+ 45e3654:	48 83 c3 08          	add    $0x8,%rbx
+ 45e3658:	b9 2a 00 00 00       	mov    $0x2a,%ecx
+ 45e365d:	0f 1f 00             	nopl   (%rax)
+ 45e3660:	e8 bb 04 90 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e3665:	eb 02                	jmp    45e3669 <type:.IZBapZ6S@@Base+0x69>
+ 45e3667:	31 c0                	xor    %eax,%eax
+ 45e3669:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e366e:	48 83 c4 20          	add    $0x20,%rsp
+ 45e3672:	c3                   	ret
+ 45e3673:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e3678:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e367d:	0f 1f 00             	nopl   (%rax)
+ 45e3680:	e8 db 0d 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e3685:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e368a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e368f:	e9 6c ff ff ff       	jmp    45e3600 <type:.IZBapZ6S@@Base>
+ 45e3694:	cc                   	int3
+ 45e3695:	cc                   	int3
+ 45e3696:	cc                   	int3
+ 45e3697:	cc                   	int3
+ 45e3698:	cc                   	int3
+ 45e3699:	cc                   	int3
+ 45e369a:	cc                   	int3
+ 45e369b:	cc                   	int3
+ 45e369c:	cc                   	int3
+ 45e369d:	cc                   	int3
+ 45e369e:	cc                   	int3
+ 45e369f:	cc                   	int3
+
+00000000045e36a0 <type:.WxllU+IR@@Base>:
+ 45e36a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e36a4:	76 1d                	jbe    45e36c3 <type:.WxllU+IR@@Base+0x23>
+ 45e36a6:	48 83 ec 18          	sub    $0x18,%rsp
+ 45e36aa:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45e36af:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45e36b4:	e8 47 b4 fb ff       	call   459eb00 <type:.0zKNdyRw@@Base>
+ 45e36b9:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e36be:	48 83 c4 18          	add    $0x18,%rsp
+ 45e36c2:	c3                   	ret
+ 45e36c3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e36c8:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e36cd:	e8 8e 0d 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e36d2:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e36d7:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e36dc:	eb c2                	jmp    45e36a0 <type:.WxllU+IR@@Base>
+ 45e36de:	cc                   	int3
+ 45e36df:	cc                   	int3
+
+00000000045e36e0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base>:
+ 45e36e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e36e4:	76 29                	jbe    45e370f <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base+0x2f>
+ 45e36e6:	48 83 ec 20          	sub    $0x20,%rsp
+ 45e36ea:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45e36ef:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45e36f4:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 45e36f8:	4d 85 e4             	test   %r12,%r12
+ 45e36fb:	75 39                	jne    45e3736 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base+0x56>
+ 45e36fd:	84 00                	test   %al,(%rax)
+ 45e36ff:	90                   	nop
+ 45e3700:	e8 5b ab 96 fd       	call   1f4e260 <sync/atomic.CompareAndSwapPointer@@Base>
+ 45e3705:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45e370a:	48 83 c4 20          	add    $0x20,%rsp
+ 45e370e:	c3                   	ret
+ 45e370f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e3714:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e3719:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e371e:	66 90                	xchg   %ax,%ax
+ 45e3720:	e8 3b 0d 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e3725:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e372a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e372f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e3734:	eb aa                	jmp    45e36e0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base>
+ 45e3736:	4c 8d 6c 24 28       	lea    0x28(%rsp),%r13
+ 45e373b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e3740:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 45e3744:	75 b7                	jne    45e36fd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base+0x1d>
+ 45e3746:	49 89 24 24          	mov    %rsp,(%r12)
+ 45e374a:	eb b1                	jmp    45e36fd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).CompareAndSwap@@Base+0x1d>
+ 45e374c:	cc                   	int3
+ 45e374d:	cc                   	int3
+ 45e374e:	cc                   	int3
+ 45e374f:	cc                   	int3
+ 45e3750:	cc                   	int3
+ 45e3751:	cc                   	int3
+ 45e3752:	cc                   	int3
+ 45e3753:	cc                   	int3
+ 45e3754:	cc                   	int3
+ 45e3755:	cc                   	int3
+ 45e3756:	cc                   	int3
+ 45e3757:	cc                   	int3
+ 45e3758:	cc                   	int3
+ 45e3759:	cc                   	int3
+ 45e375a:	cc                   	int3
+ 45e375b:	cc                   	int3
+ 45e375c:	cc                   	int3
+ 45e375d:	cc                   	int3
+ 45e375e:	cc                   	int3
+ 45e375f:	cc                   	int3
+
+00000000045e3760 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base>:
+ 45e3760:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e3764:	76 29                	jbe    45e378f <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base+0x2f>
+ 45e3766:	48 83 ec 18          	sub    $0x18,%rsp
+ 45e376a:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45e376f:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45e3774:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 45e3778:	4d 85 e4             	test   %r12,%r12
+ 45e377b:	75 2d                	jne    45e37aa <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base+0x4a>
+ 45e377d:	84 00                	test   %al,(%rax)
+ 45e377f:	90                   	nop
+ 45e3780:	e8 7b aa 96 fd       	call   1f4e200 <sync/atomic.SwapPointer@@Base>
+ 45e3785:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e378a:	48 83 c4 18          	add    $0x18,%rsp
+ 45e378e:	c3                   	ret
+ 45e378f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e3794:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e3799:	e8 c2 0c 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e379e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e37a3:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e37a8:	eb b6                	jmp    45e3760 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base>
+ 45e37aa:	4c 8d 6c 24 20       	lea    0x20(%rsp),%r13
+ 45e37af:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 45e37b3:	75 c8                	jne    45e377d <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base+0x1d>
+ 45e37b5:	49 89 24 24          	mov    %rsp,(%r12)
+ 45e37b9:	eb c2                	jmp    45e377d <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Swap@@Base+0x1d>
+ 45e37bb:	cc                   	int3
+ 45e37bc:	cc                   	int3
+ 45e37bd:	cc                   	int3
+ 45e37be:	cc                   	int3
+ 45e37bf:	cc                   	int3
+
+00000000045e37c0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base>:
+ 45e37c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e37c4:	76 29                	jbe    45e37ef <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x2f>
+ 45e37c6:	48 83 ec 18          	sub    $0x18,%rsp
+ 45e37ca:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45e37cf:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45e37d4:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 45e37d8:	4d 85 e4             	test   %r12,%r12
+ 45e37db:	75 2d                	jne    45e380a <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x4a>
+ 45e37dd:	84 00                	test   %al,(%rax)
+ 45e37df:	90                   	nop
+ 45e37e0:	e8 bb a9 96 fd       	call   1f4e1a0 <sync/atomic.StorePointer@@Base>
+ 45e37e5:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e37ea:	48 83 c4 18          	add    $0x18,%rsp
+ 45e37ee:	c3                   	ret
+ 45e37ef:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e37f4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e37f9:	e8 62 0c 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e37fe:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e3803:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e3808:	eb b6                	jmp    45e37c0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base>
+ 45e380a:	4c 8d 6c 24 20       	lea    0x20(%rsp),%r13
+ 45e380f:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 45e3813:	75 c8                	jne    45e37dd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x1d>
+ 45e3815:	49 89 24 24          	mov    %rsp,(%r12)
+ 45e3819:	eb c2                	jmp    45e37dd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x1d>
+ 45e381b:	cc                   	int3
+ 45e381c:	cc                   	int3
+ 45e381d:	cc                   	int3
+ 45e381e:	cc                   	int3
+ 45e381f:	cc                   	int3
+
+00000000045e3820 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Load@@Base>:
+ 45e3820:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 45e3824:	4d 85 e4             	test   %r12,%r12
+ 45e3827:	75 04                	jne    45e382d <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Load@@Base+0xd>
+ 45e3829:	48 8b 00             	mov    (%rax),%rax
+ 45e382c:	c3                   	ret
+ 45e382d:	4c 8d 6c 24 08       	lea    0x8(%rsp),%r13
+ 45e3832:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 45e3836:	75 f1                	jne    45e3829 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Load@@Base+0x9>
+ 45e3838:	49 89 24 24          	mov    %rsp,(%r12)
+ 45e383c:	eb eb                	jmp    45e3829 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Load@@Base+0x9>
+ 45e383e:	cc                   	int3
+ 45e383f:	cc                   	int3

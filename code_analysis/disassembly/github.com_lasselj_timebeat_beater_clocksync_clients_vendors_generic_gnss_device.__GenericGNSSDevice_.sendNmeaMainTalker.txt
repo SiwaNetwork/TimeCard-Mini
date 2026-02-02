@@ -1,0 +1,206 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage
+# addr 0x45b1c60 size 800 (0x320)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045b1c60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base>:
+ 45b1c60:	4c 8d 64 24 e8       	lea    -0x18(%rsp),%r12
+ 45b1c65:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45b1c69:	0f 86 f6 02 00 00    	jbe    45b1f65 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x305>
+ 45b1c6f:	48 81 ec 98 00 00 00 	sub    $0x98,%rsp
+ 45b1c76:	48 89 ac 24 90 00 00 	mov    %rbp,0x90(%rsp)
+ 45b1c7d:	00 
+ 45b1c7e:	48 8d ac 24 90 00 00 	lea    0x90(%rsp),%rbp
+ 45b1c85:	00 
+ 45b1c86:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+ 45b1c8d:	00 
+ 45b1c8e:	90                   	nop
+ 45b1c8f:	31 db                	xor    %ebx,%ebx
+ 45b1c91:	48 89 d9             	mov    %rbx,%rcx
+ 45b1c94:	48 8d 05 c5 cc 1f 01 	lea    0x11fccc5(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 45b1c9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45b1ca0:	e8 3b 47 98 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45b1ca5:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 45b1caa:	48 8d 05 af 0d 56 01 	lea    0x1560daf(%rip),%rax        # 5b12a60 <type:4arSz+aB@@Base>
+ 45b1cb1:	e8 2a e8 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45b1cb6:	0f b7 15 8d 54 66 03 	movzwl 0x366548d(%rip),%edx        # 7c1714a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UBX_HEADER@@Base>
+ 45b1cbd:	66 89 10             	mov    %dx,(%rax)
+ 45b1cc0:	66 c7 40 02 06 8a    	movw   $0x8a06,0x2(%rax)
+ 45b1cc6:	c6 40 08 00          	movb   $0x0,0x8(%rax)
+ 45b1cca:	44 0f 11 78 18       	movups %xmm15,0x18(%rax)
+ 45b1ccf:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 45b1cd3:	83 3d 86 9c 8c 03 00 	cmpl   $0x0,0x38c9c86(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b1cda:	75 0b                	jne    45b1ce7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x87>
+ 45b1cdc:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45b1ce1:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 45b1ce5:	eb 0a                	jmp    45b1cf1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x91>
+ 45b1ce7:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45b1cec:	e8 2f 4a 9a fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45b1cf1:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45b1cf6:	48 89 7c 24 70       	mov    %rdi,0x70(%rsp)
+ 45b1cfb:	c6 40 09 07          	movb   $0x7,0x9(%rax)
+ 45b1cff:	48 8b 58 18          	mov    0x18(%rax),%rbx
+ 45b1d03:	48 8d 53 04          	lea    0x4(%rbx),%rdx
+ 45b1d07:	48 8b 48 20          	mov    0x20(%rax),%rcx
+ 45b1d0b:	4c 8b 40 10          	mov    0x10(%rax),%r8
+ 45b1d0f:	48 39 d1             	cmp    %rdx,%rcx
+ 45b1d12:	73 31                	jae    45b1d45 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0xe5>
+ 45b1d14:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 45b1d19:	4c 89 c0             	mov    %r8,%rax
+ 45b1d1c:	48 89 d3             	mov    %rdx,%rbx
+ 45b1d1f:	bf 04 00 00 00       	mov    $0x4,%edi
+ 45b1d24:	48 8d 35 35 cc 1f 01 	lea    0x11fcc35(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 45b1d2b:	e8 90 47 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45b1d30:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45b1d35:	49 89 c0             	mov    %rax,%r8
+ 45b1d38:	48 89 da             	mov    %rbx,%rdx
+ 45b1d3b:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 45b1d40:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 45b1d45:	44 8b 0d 00 55 66 03 	mov    0x3665500(%rip),%r9d        # 7c1724c <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.CFG_NMEA_MAINTALKERID@@Base>
+ 45b1d4c:	45 89 0c 18          	mov    %r9d,(%r8,%rbx,1)
+ 45b1d50:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 45b1d54:	48 89 48 20          	mov    %rcx,0x20(%rax)
+ 45b1d58:	83 3d 01 9c 8c 03 00 	cmpl   $0x0,0x38c9c01(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b1d5f:	90                   	nop
+ 45b1d60:	75 06                	jne    45b1d68 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x108>
+ 45b1d62:	4c 89 40 10          	mov    %r8,0x10(%rax)
+ 45b1d66:	eb 05                	jmp    45b1d6d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x10d>
+ 45b1d68:	e8 13 4a 9a fd       	call   1f56780 <runtime.gcWriteBarrierR8@@Base>
+ 45b1d6d:	48 8d 5a 01          	lea    0x1(%rdx),%rbx
+ 45b1d71:	48 39 d9             	cmp    %rbx,%rcx
+ 45b1d74:	73 3c                	jae    45b1db2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x152>
+ 45b1d76:	4c 89 c0             	mov    %r8,%rax
+ 45b1d79:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45b1d7e:	48 8d 35 db cb 1f 01 	lea    0x11fcbdb(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 45b1d85:	e8 36 47 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45b1d8a:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 45b1d8f:	48 89 4a 20          	mov    %rcx,0x20(%rdx)
+ 45b1d93:	83 3d c6 9b 8c 03 00 	cmpl   $0x0,0x38c9bc6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b1d9a:	75 06                	jne    45b1da2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x142>
+ 45b1d9c:	48 89 42 10          	mov    %rax,0x10(%rdx)
+ 45b1da0:	eb 0a                	jmp    45b1dac <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x14c>
+ 45b1da2:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45b1da7:	e8 54 48 9a fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45b1dac:	49 89 c0             	mov    %rax,%r8
+ 45b1daf:	48 89 d0             	mov    %rdx,%rax
+ 45b1db2:	48 89 58 18          	mov    %rbx,0x18(%rax)
+ 45b1db6:	42 c6 44 03 ff 01    	movb   $0x1,-0x1(%rbx,%r8,1)
+ 45b1dbc:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 45b1dc3:	00 
+ 45b1dc4:	48 83 b9 b8 00 00 00 	cmpq   $0x5,0xb8(%rcx)
+ 45b1dcb:	05 
+ 45b1dcc:	75 07                	jne    45b1dd5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x175>
+ 45b1dce:	ba 01 00 00 00       	mov    $0x1,%edx
+ 45b1dd3:	eb 05                	jmp    45b1dda <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x17a>
+ 45b1dd5:	ba 07 00 00 00       	mov    $0x7,%edx
+ 45b1dda:	88 50 09             	mov    %dl,0x9(%rax)
+ 45b1ddd:	0f 1f 00             	nopl   (%rax)
+ 45b1de0:	e8 1b ff e4 ff       	call   4401d00 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base>
+ 45b1de5:	48 85 ff             	test   %rdi,%rdi
+ 45b1de8:	0f 85 f5 00 00 00    	jne    45b1ee3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x283>
+ 45b1dee:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 45b1df3:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45b1df8:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45b1dfd:	48 89 c2             	mov    %rax,%rdx
+ 45b1e00:	31 c0                	xor    %eax,%eax
+ 45b1e02:	48 8b bc 24 a0 00 00 	mov    0xa0(%rsp),%rdi
+ 45b1e09:	00 
+ 45b1e0a:	be 01 00 00 00       	mov    $0x1,%esi
+ 45b1e0f:	f0 0f b1 b7 e8 00 00 	lock cmpxchg %esi,0xe8(%rdi)
+ 45b1e16:	00 
+ 45b1e17:	40 0f 94 c6          	sete   %sil
+ 45b1e1b:	48 8d 87 e8 00 00 00 	lea    0xe8(%rdi),%rax
+ 45b1e22:	40 84 f6             	test   %sil,%sil
+ 45b1e25:	75 26                	jne    45b1e4d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x1ed>
+ 45b1e27:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45b1e2c:	e8 0f 67 9c fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45b1e31:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 45b1e36:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45b1e3b:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45b1e40:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45b1e45:	48 8b bc 24 a0 00 00 	mov    0xa0(%rsp),%rdi
+ 45b1e4c:	00 
+ 45b1e4d:	48 c7 87 e0 00 00 00 	movq   $0x11,0xe0(%rdi)
+ 45b1e54:	11 00 00 00 
+ 45b1e58:	83 3d 01 9b 8c 03 00 	cmpl   $0x0,0x38c9b01(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b1e5f:	90                   	nop
+ 45b1e60:	75 10                	jne    45b1e72 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x212>
+ 45b1e62:	48 8d 35 03 c5 75 00 	lea    0x75c503(%rip),%rsi        # 4d0e36c <_IO_stdin_used@@Base+0xdb36c>
+ 45b1e69:	48 89 b7 d8 00 00 00 	mov    %rsi,0xd8(%rdi)
+ 45b1e70:	eb 1c                	jmp    45b1e8e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x22e>
+ 45b1e72:	48 8d b7 d8 00 00 00 	lea    0xd8(%rdi),%rsi
+ 45b1e79:	49 89 f8             	mov    %rdi,%r8
+ 45b1e7c:	48 89 f7             	mov    %rsi,%rdi
+ 45b1e7f:	4c 8d 0d e6 c4 75 00 	lea    0x75c4e6(%rip),%r9        # 4d0e36c <_IO_stdin_used@@Base+0xdb36c>
+ 45b1e86:	e8 15 49 9a fd       	call   1f567a0 <runtime.gcWriteBarrierR9@@Base>
+ 45b1e8b:	4c 89 c7             	mov    %r8,%rdi
+ 45b1e8e:	90                   	nop
+ 45b1e8f:	be ff ff ff ff       	mov    $0xffffffff,%esi
+ 45b1e94:	f0 0f c1 b7 e8 00 00 	lock xadd %esi,0xe8(%rdi)
+ 45b1e9b:	00 
+ 45b1e9c:	ff ce                	dec    %esi
+ 45b1e9e:	66 90                	xchg   %ax,%ax
+ 45b1ea0:	85 f6                	test   %esi,%esi
+ 45b1ea2:	74 1e                	je     45b1ec2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base+0x262>
+ 45b1ea4:	89 f3                	mov    %esi,%ebx
+ 45b1ea6:	e8 95 69 9c fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 45b1eab:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45b1eb0:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45b1eb5:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45b1eba:	48 8b bc 24 a0 00 00 	mov    0xa0(%rsp),%rdi
+ 45b1ec1:	00 
+ 45b1ec2:	48 89 f8             	mov    %rdi,%rax
+ 45b1ec5:	48 89 cf             	mov    %rcx,%rdi
+ 45b1ec8:	48 89 d9             	mov    %rbx,%rcx
+ 45b1ecb:	48 89 d3             	mov    %rdx,%rbx
+ 45b1ece:	e8 ed 01 00 00       	call   45b20c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).writeBytesToSerialPort@@Base>
+ 45b1ed3:	48 8b ac 24 90 00 00 	mov    0x90(%rsp),%rbp
+ 45b1eda:	00 
+ 45b1edb:	48 81 c4 98 00 00 00 	add    $0x98,%rsp
+ 45b1ee2:	c3                   	ret
+ 45b1ee3:	48 8b 4f 18          	mov    0x18(%rdi),%rcx
+ 45b1ee7:	48 89 f0             	mov    %rsi,%rax
+ 45b1eea:	ff d1                	call   *%rcx
+ 45b1eec:	44 0f 11 bc 24 80 00 	movups %xmm15,0x80(%rsp)
+ 45b1ef3:	00 00 
+ 45b1ef5:	e8 66 be 93 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45b1efa:	48 8d 0d 9f c7 1f 01 	lea    0x11fc79f(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45b1f01:	48 89 8c 24 80 00 00 	mov    %rcx,0x80(%rsp)
+ 45b1f08:	00 
+ 45b1f09:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 45b1f10:	00 
+ 45b1f11:	48 8d 05 7b d6 84 00 	lea    0x84d67b(%rip),%rax        # 4dff593 <_IO_stdin_used@@Base+0x1cc593>
+ 45b1f18:	bb 21 00 00 00       	mov    $0x21,%ebx
+ 45b1f1d:	48 8d 8c 24 80 00 00 	lea    0x80(%rsp),%rcx
+ 45b1f24:	00 
+ 45b1f25:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45b1f2a:	48 89 fe             	mov    %rdi,%rsi
+ 45b1f2d:	e8 ce 29 a4 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45b1f32:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 45b1f39:	00 
+ 45b1f3a:	48 8b 89 00 01 00 00 	mov    0x100(%rcx),%rcx
+ 45b1f41:	48 89 c2             	mov    %rax,%rdx
+ 45b1f44:	48 89 c8             	mov    %rcx,%rax
+ 45b1f47:	48 89 de             	mov    %rbx,%rsi
+ 45b1f4a:	48 89 d3             	mov    %rdx,%rbx
+ 45b1f4d:	48 89 f1             	mov    %rsi,%rcx
+ 45b1f50:	e8 0b 51 e5 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45b1f55:	48 8b ac 24 90 00 00 	mov    0x90(%rsp),%rbp
+ 45b1f5c:	00 
+ 45b1f5d:	48 81 c4 98 00 00 00 	add    $0x98,%rsp
+ 45b1f64:	c3                   	ret
+ 45b1f65:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45b1f6a:	e8 f1 24 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45b1f6f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45b1f74:	e9 e7 fc ff ff       	jmp    45b1c60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendNmeaMainTalkerMessage@@Base>
+ 45b1f79:	cc                   	int3
+ 45b1f7a:	cc                   	int3
+ 45b1f7b:	cc                   	int3
+ 45b1f7c:	cc                   	int3
+ 45b1f7d:	cc                   	int3
+ 45b1f7e:	cc                   	int3
+ 45b1f7f:	cc                   	int3

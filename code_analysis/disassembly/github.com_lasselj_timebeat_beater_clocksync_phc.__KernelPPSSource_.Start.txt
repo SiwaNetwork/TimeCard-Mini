@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start
+# addr 0x45892c0 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045892c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start@@Base>:
+ 45892c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45892c4:	0f 86 05 01 00 00    	jbe    45893cf <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start@@Base+0x10f>
+ 45892ca:	48 83 ec 70          	sub    $0x70,%rsp
+ 45892ce:	48 89 6c 24 68       	mov    %rbp,0x68(%rsp)
+ 45892d3:	48 8d 6c 24 68       	lea    0x68(%rsp),%rbp
+ 45892d8:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 45892dd:	0f 1f 00             	nopl   (%rax)
+ 45892e0:	e8 1b 01 00 00       	call   4589400 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).OpenPPSSource@@Base>
+ 45892e5:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 45892ea:	e8 31 02 00 00       	call   4589520 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSCreate@@Base>
+ 45892ef:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 45892f4:	e8 07 03 00 00       	call   4589600 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetCaps@@Base>
+ 45892f9:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 45892fe:	48 8b 48 28          	mov    0x28(%rax),%rcx
+ 4589302:	0f ba e1 00          	bt     $0x0,%ecx
+ 4589306:	0f 83 86 00 00 00    	jae    4589392 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start@@Base+0xd2>
+ 458930c:	e8 af 03 00 00       	call   45896c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams@@Base>
+ 4589311:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 4589315:	48 89 ca             	mov    %rcx,%rdx
+ 4589318:	48 83 c9 01          	or     $0x1,%rcx
+ 458931c:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4589320:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 4589325:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 4589329:	0f ba e3 04          	bt     $0x4,%ebx
+ 458932d:	73 0d                	jae    458933c <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start@@Base+0x7c>
+ 458932f:	48 83 ca 11          	or     $0x11,%rdx
+ 4589333:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4589337:	44 0f 11 78 10       	movups %xmm15,0x10(%rax)
+ 458933c:	0f 10 00             	movups (%rax),%xmm0
+ 458933f:	0f 11 44 24 38       	movups %xmm0,0x38(%rsp)
+ 4589344:	0f 10 40 10          	movups 0x10(%rax),%xmm0
+ 4589348:	0f 11 44 24 48       	movups %xmm0,0x48(%rsp)
+ 458934d:	0f 10 40 20          	movups 0x20(%rax),%xmm0
+ 4589351:	0f 11 44 24 58       	movups %xmm0,0x58(%rsp)
+ 4589356:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 458935b:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4589360:	48 8b 7c 24 48       	mov    0x48(%rsp),%rdi
+ 4589365:	8b 74 24 50          	mov    0x50(%rsp),%esi
+ 4589369:	44 8b 44 24 54       	mov    0x54(%rsp),%r8d
+ 458936e:	4c 8b 4c 24 58       	mov    0x58(%rsp),%r9
+ 4589373:	44 8b 54 24 60       	mov    0x60(%rsp),%r10d
+ 4589378:	44 8b 5c 24 64       	mov    0x64(%rsp),%r11d
+ 458937d:	48 89 c8             	mov    %rcx,%rax
+ 4589380:	48 89 d1             	mov    %rdx,%rcx
+ 4589383:	e8 18 04 00 00       	call   45897a0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSSetParams@@Base>
+ 4589388:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 458938d:	48 83 c4 70          	add    $0x70,%rsp
+ 4589391:	c3                   	ret
+ 4589392:	48 8d 05 88 fb 83 00 	lea    0x83fb88(%rip),%rax        # 4dc8f21 <_IO_stdin_used@@Base+0x195f21>
+ 4589399:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 458939e:	31 c9                	xor    %ecx,%ecx
+ 45893a0:	31 ff                	xor    %edi,%edi
+ 45893a2:	48 89 fe             	mov    %rdi,%rsi
+ 45893a5:	e8 56 b5 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45893aa:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45893af:	48 8b 12             	mov    (%rdx),%rdx
+ 45893b2:	48 89 d9             	mov    %rbx,%rcx
+ 45893b5:	48 89 c3             	mov    %rax,%rbx
+ 45893b8:	48 89 d0             	mov    %rdx,%rax
+ 45893bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45893c0:	e8 9b dc e7 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45893c5:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 45893ca:	48 83 c4 70          	add    $0x70,%rsp
+ 45893ce:	c3                   	ret
+ 45893cf:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45893d4:	e8 87 b0 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45893d9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45893de:	66 90                	xchg   %ax,%ax
+ 45893e0:	e9 db fe ff ff       	jmp    45892c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).Start@@Base>
+ 45893e5:	cc                   	int3
+ 45893e6:	cc                   	int3
+ 45893e7:	cc                   	int3
+ 45893e8:	cc                   	int3
+ 45893e9:	cc                   	int3
+ 45893ea:	cc                   	int3
+ 45893eb:	cc                   	int3
+ 45893ec:	cc                   	int3
+ 45893ed:	cc                   	int3
+ 45893ee:	cc                   	int3
+ 45893ef:	cc                   	int3
+ 45893f0:	cc                   	int3
+ 45893f1:	cc                   	int3
+ 45893f2:	cc                   	int3
+ 45893f3:	cc                   	int3
+ 45893f4:	cc                   	int3
+ 45893f5:	cc                   	int3
+ 45893f6:	cc                   	int3
+ 45893f7:	cc                   	int3
+ 45893f8:	cc                   	int3
+ 45893f9:	cc                   	int3
+ 45893fa:	cc                   	int3
+ 45893fb:	cc                   	int3
+ 45893fc:	cc                   	int3
+ 45893fd:	cc                   	int3
+ 45893fe:	cc                   	int3
+ 45893ff:	cc                   	int3

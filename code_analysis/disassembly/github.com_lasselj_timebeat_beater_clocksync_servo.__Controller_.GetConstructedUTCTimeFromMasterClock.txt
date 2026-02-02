@@ -1,0 +1,64 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock
+# addr 0x45a1a00 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a1a00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base>:
+ 45a1a00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a1a04:	0f 86 99 00 00 00    	jbe    45a1aa3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0xa3>
+ 45a1a0a:	48 83 ec 30          	sub    $0x30,%rsp
+ 45a1a0e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 45a1a13:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 45a1a18:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a1a1d:	48 8b 48 30          	mov    0x30(%rax),%rcx
+ 45a1a21:	48 89 c8             	mov    %rcx,%rax
+ 45a1a24:	e8 f7 2e ff ff       	call   4594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>
+ 45a1a29:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45a1a2d:	48 85 c0             	test   %rax,%rax
+ 45a1a30:	75 06                	jne    45a1a38 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0x38>
+ 45a1a32:	31 c0                	xor    %eax,%eax
+ 45a1a34:	31 db                	xor    %ebx,%ebx
+ 45a1a36:	eb 08                	jmp    45a1a40 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0x40>
+ 45a1a38:	e8 03 5c fe ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 45a1a3d:	0f 1f 00             	nopl   (%rax)
+ 45a1a40:	48 83 fb 06          	cmp    $0x6,%rbx
+ 45a1a44:	75 1f                	jne    45a1a65 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0x65>
+ 45a1a46:	81 38 73 79 73 74    	cmpl   $0x74737973,(%rax)
+ 45a1a4c:	75 17                	jne    45a1a65 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0x65>
+ 45a1a4e:	66 81 78 04 65 6d    	cmpw   $0x6d65,0x4(%rax)
+ 45a1a54:	75 0f                	jne    45a1a65 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base+0x65>
+ 45a1a56:	e8 c5 a2 a2 fd       	call   1fcbd20 <time.Now@@Base>
+ 45a1a5b:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 45a1a60:	48 83 c4 30          	add    $0x30,%rsp
+ 45a1a64:	c3                   	ret
+ 45a1a65:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45a1a6a:	48 8b 42 30          	mov    0x30(%rdx),%rax
+ 45a1a6e:	48 8d 1d 68 d4 6b 00 	lea    0x6bd468(%rip),%rbx        # 4c5eedd <_IO_stdin_used@@Base+0x2bedd>
+ 45a1a75:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 45a1a7a:	e8 41 49 ff ff       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45a1a7f:	48 8b 10             	mov    (%rax),%rdx
+ 45a1a82:	48 8b 12             	mov    (%rdx),%rdx
+ 45a1a85:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45a1a8a:	e8 91 a2 a2 fd       	call   1fcbd20 <time.Now@@Base>
+ 45a1a8f:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45a1a94:	e8 c7 99 a2 fd       	call   1fcb460 <time.Time.Add@@Base>
+ 45a1a99:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 45a1a9e:	48 83 c4 30          	add    $0x30,%rsp
+ 45a1aa2:	c3                   	ret
+ 45a1aa3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a1aa8:	e8 b3 29 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a1aad:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a1ab2:	e9 49 ff ff ff       	jmp    45a1a00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetConstructedUTCTimeFromMasterClock@@Base>
+ 45a1ab7:	cc                   	int3
+ 45a1ab8:	cc                   	int3
+ 45a1ab9:	cc                   	int3
+ 45a1aba:	cc                   	int3
+ 45a1abb:	cc                   	int3
+ 45a1abc:	cc                   	int3
+ 45a1abd:	cc                   	int3
+ 45a1abe:	cc                   	int3
+ 45a1abf:	cc                   	int3

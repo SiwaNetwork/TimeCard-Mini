@@ -1,0 +1,114 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI
+# addr 0x45e49a0 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e49a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base>:
+ 45e49a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e49a4:	0f 86 66 01 00 00    	jbe    45e4b10 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x170>
+ 45e49aa:	48 83 ec 60          	sub    $0x60,%rsp
+ 45e49ae:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 45e49b3:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 45e49b8:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45e49bd:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+ 45e49c4:	00 00 
+ 45e49c6:	48 85 db             	test   %rbx,%rbx
+ 45e49c9:	0f 86 36 01 00 00    	jbe    45e4b05 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x165>
+ 45e49cf:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 45e49d4:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45e49d9:	48 8b 10             	mov    (%rax),%rdx
+ 45e49dc:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 45e49e0:	48 83 fe 03          	cmp    $0x3,%rsi
+ 45e49e4:	75 0d                	jne    45e49f3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x53>
+ 45e49e6:	66 81 3a 61 6c       	cmpw   $0x6c61,(%rdx)
+ 45e49eb:	75 06                	jne    45e49f3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x53>
+ 45e49ed:	80 7a 02 6c          	cmpb   $0x6c,0x2(%rdx)
+ 45e49f1:	74 37                	je     45e4a2a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x8a>
+ 45e49f3:	48 89 d0             	mov    %rdx,%rax
+ 45e49f6:	48 89 f3             	mov    %rsi,%rbx
+ 45e49f9:	e8 02 a7 98 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 45e49fe:	66 90                	xchg   %ax,%ax
+ 45e4a00:	48 85 db             	test   %rbx,%rbx
+ 45e4a03:	75 0f                	jne    45e4a14 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x74>
+ 45e4a05:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 45e4a0a:	48 89 c1             	mov    %rax,%rcx
+ 45e4a0d:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 45e4a12:	eb 18                	jmp    45e4a2c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x8c>
+ 45e4a14:	48 8d 05 b9 6f 7f 00 	lea    0x7f6fb9(%rip),%rax        # 4ddb9d4 <_IO_stdin_used@@Base+0x1a89d4>
+ 45e4a1b:	bb 19 00 00 00       	mov    $0x19,%ebx
+ 45e4a20:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45e4a25:	48 83 c4 60          	add    $0x60,%rsp
+ 45e4a29:	c3                   	ret
+ 45e4a2a:	31 c9                	xor    %ecx,%ecx
+ 45e4a2c:	48 83 fb 01          	cmp    $0x1,%rbx
+ 45e4a30:	0f 86 c2 00 00 00    	jbe    45e4af8 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0x158>
+ 45e4a36:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 45e4a3a:	48 83 78 18 06       	cmpq   $0x6,0x18(%rax)
+ 45e4a3f:	90                   	nop
+ 45e4a40:	75 10                	jne    45e4a52 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0xb2>
+ 45e4a42:	81 3a 65 6e 61 62    	cmpl   $0x62616e65,(%rdx)
+ 45e4a48:	75 08                	jne    45e4a52 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0xb2>
+ 45e4a4a:	66 81 7a 04 6c 65    	cmpw   $0x656c,0x4(%rdx)
+ 45e4a50:	74 07                	je     45e4a59 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0xb9>
+ 45e4a52:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e4a57:	eb 02                	jmp    45e4a5b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base+0xbb>
+ 45e4a59:	31 c0                	xor    %eax,%eax
+ 45e4a5b:	48 c7 44 24 40 00 00 	movq   $0x0,0x40(%rsp)
+ 45e4a62:	00 00 
+ 45e4a64:	66 c7 44 24 48 00 00 	movw   $0x0,0x48(%rsp)
+ 45e4a6b:	c6 44 24 4a 00       	movb   $0x0,0x4a(%rsp)
+ 45e4a70:	48 c7 44 24 50 00 00 	movq   $0x0,0x50(%rsp)
+ 45e4a77:	00 00 
+ 45e4a79:	48 8d 15 c0 00 00 00 	lea    0xc0(%rip),%rdx        # 45e4b40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI.func1@@Base>
+ 45e4a80:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45e4a85:	66 89 4c 24 48       	mov    %cx,0x48(%rsp)
+ 45e4a8a:	88 44 24 4a          	mov    %al,0x4a(%rsp)
+ 45e4a8e:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 45e4a93:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45e4a98:	48 8b 05 a1 76 84 03 	mov    0x38476a1(%rip),%rax        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 45e4a9f:	84 00                	test   %al,(%rax)
+ 45e4aa1:	48 83 c0 38          	add    $0x38,%rax
+ 45e4aa5:	48 8d 5c 24 40       	lea    0x40(%rsp),%rbx
+ 45e4aaa:	e8 b1 34 99 fd       	call   1f77f60 <sync.(*Map).Range@@Base>
+ 45e4aaf:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 45e4ab5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e4aba:	e8 21 92 90 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45e4abf:	48 8d 0d 9a 5b 1c 01 	lea    0x11c5b9a(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 45e4ac6:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 45e4acb:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45e4ad0:	48 8d 05 ba 76 7e 00 	lea    0x7e76ba(%rip),%rax        # 4dcc191 <_IO_stdin_used@@Base+0x199191>
+ 45e4ad7:	bb 15 00 00 00       	mov    $0x15,%ebx
+ 45e4adc:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 45e4ae1:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45e4ae6:	48 89 fe             	mov    %rdi,%rsi
+ 45e4ae9:	e8 12 fe a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45e4aee:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45e4af3:	48 83 c4 60          	add    $0x60,%rsp
+ 45e4af7:	c3                   	ret
+ 45e4af8:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e4afd:	48 89 c1             	mov    %rax,%rcx
+ 45e4b00:	e8 9b 1f 97 fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45e4b05:	31 c0                	xor    %eax,%eax
+ 45e4b07:	48 89 c1             	mov    %rax,%rcx
+ 45e4b0a:	e8 91 1f 97 fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45e4b0f:	90                   	nop
+ 45e4b10:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e4b15:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e4b1a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e4b1f:	90                   	nop
+ 45e4b20:	e8 3b f9 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e4b25:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e4b2a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e4b2f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e4b34:	e9 67 fe ff ff       	jmp    45e49a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyFromCLI@@Base>
+ 45e4b39:	cc                   	int3
+ 45e4b3a:	cc                   	int3
+ 45e4b3b:	cc                   	int3
+ 45e4b3c:	cc                   	int3
+ 45e4b3d:	cc                   	int3
+ 45e4b3e:	cc                   	int3
+ 45e4b3f:	cc                   	int3

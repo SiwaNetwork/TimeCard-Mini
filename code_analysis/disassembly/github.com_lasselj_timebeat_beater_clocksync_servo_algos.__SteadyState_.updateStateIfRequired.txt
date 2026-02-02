@@ -1,0 +1,159 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired
+# addr 0x4580d40 size 576 (0x240)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004580d40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base>:
+ 4580d40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4580d44:	0f 86 0f 02 00 00    	jbe    4580f59 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x219>
+ 4580d4a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4580d4e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4580d53:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4580d58:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4580d5d:	80 78 10 00          	cmpb   $0x0,0x10(%rax)
+ 4580d61:	0f 84 ac 00 00 00    	je     4580e13 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0xd3>
+ 4580d67:	48 8b 10             	mov    (%rax),%rdx
+ 4580d6a:	48 83 7a 08 00       	cmpq   $0x0,0x8(%rdx)
+ 4580d6f:	0f 84 d0 01 00 00    	je     4580f45 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x205>
+ 4580d75:	48 8b 4a 20          	mov    0x20(%rdx),%rcx
+ 4580d79:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4580d7d:	48 8b 7a 48          	mov    0x48(%rdx),%rdi
+ 4580d81:	48 83 7a 50 00       	cmpq   $0x0,0x50(%rdx)
+ 4580d86:	0f 86 ab 01 00 00    	jbe    4580f37 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1f7>
+ 4580d8c:	48 8b 17             	mov    (%rdi),%rdx
+ 4580d8f:	48 39 d1             	cmp    %rdx,%rcx
+ 4580d92:	0f 86 97 01 00 00    	jbe    4580f2f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1ef>
+ 4580d98:	48 8b 14 d6          	mov    (%rsi,%rdx,8),%rdx
+ 4580d9c:	48 8b 70 20          	mov    0x20(%rax),%rsi
+ 4580da0:	48 39 f2             	cmp    %rsi,%rdx
+ 4580da3:	7f 44                	jg     4580de9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0xa9>
+ 4580da5:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4580da9:	48 83 7a 08 00       	cmpq   $0x0,0x8(%rdx)
+ 4580dae:	0f 84 68 01 00 00    	je     4580f1c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1dc>
+ 4580db4:	48 8b 4a 20          	mov    0x20(%rdx),%rcx
+ 4580db8:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4580dbc:	48 8b 7a 48          	mov    0x48(%rdx),%rdi
+ 4580dc0:	48 83 7a 50 00       	cmpq   $0x0,0x50(%rdx)
+ 4580dc5:	0f 86 47 01 00 00    	jbe    4580f12 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1d2>
+ 4580dcb:	48 8b 17             	mov    (%rdi),%rdx
+ 4580dce:	48 39 d1             	cmp    %rdx,%rcx
+ 4580dd1:	0f 86 33 01 00 00    	jbe    4580f0a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1ca>
+ 4580dd7:	48 8b 14 d6          	mov    (%rsi,%rdx,8),%rdx
+ 4580ddb:	48 8b 70 30          	mov    0x30(%rax),%rsi
+ 4580ddf:	90                   	nop
+ 4580de0:	48 39 f2             	cmp    %rsi,%rdx
+ 4580de3:	0f 8e c7 00 00 00    	jle    4580eb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x170>
+ 4580de9:	48 8b 50 58          	mov    0x58(%rax),%rdx
+ 4580ded:	48 8d 1d 14 e4 78 00 	lea    0x78e414(%rip),%rbx        # 4d0f208 <_IO_stdin_used@@Base+0xdc208>
+ 4580df4:	b9 11 00 00 00       	mov    $0x11,%ecx
+ 4580df9:	48 89 d0             	mov    %rdx,%rax
+ 4580dfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4580e00:	e8 9b 63 e8 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 4580e05:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4580e0a:	c6 42 10 00          	movb   $0x0,0x10(%rdx)
+ 4580e0e:	e9 9d 00 00 00       	jmp    4580eb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x170>
+ 4580e13:	48 8b 10             	mov    (%rax),%rdx
+ 4580e16:	48 83 7a 08 00       	cmpq   $0x0,0x8(%rdx)
+ 4580e1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4580e20:	0f 84 d1 00 00 00    	je     4580ef7 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1b7>
+ 4580e26:	48 8b 4a 20          	mov    0x20(%rdx),%rcx
+ 4580e2a:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4580e2e:	48 8b 7a 48          	mov    0x48(%rdx),%rdi
+ 4580e32:	48 83 7a 50 00       	cmpq   $0x0,0x50(%rdx)
+ 4580e37:	0f 86 b0 00 00 00    	jbe    4580eed <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1ad>
+ 4580e3d:	48 8b 17             	mov    (%rdi),%rdx
+ 4580e40:	48 39 ca             	cmp    %rcx,%rdx
+ 4580e43:	0f 83 9c 00 00 00    	jae    4580ee5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x1a5>
+ 4580e49:	48 8b 14 d6          	mov    (%rsi,%rdx,8),%rdx
+ 4580e4d:	48 8b 70 28          	mov    0x28(%rax),%rsi
+ 4580e51:	48 39 f2             	cmp    %rsi,%rdx
+ 4580e54:	7d 5a                	jge    4580eb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x170>
+ 4580e56:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4580e5a:	48 83 7a 08 00       	cmpq   $0x0,0x8(%rdx)
+ 4580e5f:	90                   	nop
+ 4580e60:	74 6d                	je     4580ecf <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x18f>
+ 4580e62:	48 8b 4a 20          	mov    0x20(%rdx),%rcx
+ 4580e66:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4580e6a:	48 8b 7a 48          	mov    0x48(%rdx),%rdi
+ 4580e6e:	48 83 7a 50 00       	cmpq   $0x0,0x50(%rdx)
+ 4580e73:	76 50                	jbe    4580ec5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x185>
+ 4580e75:	48 8b 17             	mov    (%rdi),%rdx
+ 4580e78:	48 39 ca             	cmp    %rcx,%rdx
+ 4580e7b:	73 3d                	jae    4580eba <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x17a>
+ 4580e7d:	48 8b 14 d6          	mov    (%rsi,%rdx,8),%rdx
+ 4580e81:	48 8b 70 38          	mov    0x38(%rax),%rsi
+ 4580e85:	48 39 f2             	cmp    %rsi,%rdx
+ 4580e88:	7d 26                	jge    4580eb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base+0x170>
+ 4580e8a:	48 8b 50 58          	mov    0x58(%rax),%rdx
+ 4580e8e:	48 8d 1d cc 77 84 00 	lea    0x8477cc(%rip),%rbx        # 4dc8661 <_IO_stdin_used@@Base+0x195661>
+ 4580e95:	b9 14 00 00 00       	mov    $0x14,%ecx
+ 4580e9a:	48 89 d0             	mov    %rdx,%rax
+ 4580e9d:	0f 1f 00             	nopl   (%rax)
+ 4580ea0:	e8 3b 64 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 4580ea5:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4580eaa:	66 c7 42 10 01 01    	movw   $0x101,0x10(%rdx)
+ 4580eb0:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4580eb5:	48 83 c4 20          	add    $0x20,%rsp
+ 4580eb9:	c3                   	ret
+ 4580eba:	48 89 d0             	mov    %rdx,%rax
+ 4580ebd:	0f 1f 00             	nopl   (%rax)
+ 4580ec0:	e8 db 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580ec5:	31 c0                	xor    %eax,%eax
+ 4580ec7:	48 89 c1             	mov    %rax,%rcx
+ 4580eca:	e8 d1 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580ecf:	48 8d 05 ca d7 22 01 	lea    0x122d7ca(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580ed6:	48 8d 1d 3b 23 97 01 	lea    0x197233b(%rip),%rbx        # 5ef3218 <time..dict.leadingInt[string]@@Base+0x2f88>
+ 4580edd:	0f 1f 00             	nopl   (%rax)
+ 4580ee0:	e8 5b be 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580ee5:	48 89 d0             	mov    %rdx,%rax
+ 4580ee8:	e8 b3 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580eed:	31 c0                	xor    %eax,%eax
+ 4580eef:	48 89 c1             	mov    %rax,%rcx
+ 4580ef2:	e8 a9 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580ef7:	48 8d 05 a2 d7 22 01 	lea    0x122d7a2(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580efe:	48 8d 1d 13 23 97 01 	lea    0x1972313(%rip),%rbx        # 5ef3218 <time..dict.leadingInt[string]@@Base+0x2f88>
+ 4580f05:	e8 36 be 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580f0a:	48 89 d0             	mov    %rdx,%rax
+ 4580f0d:	e8 8e 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580f12:	31 c0                	xor    %eax,%eax
+ 4580f14:	48 89 c1             	mov    %rax,%rcx
+ 4580f17:	e8 84 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580f1c:	48 8d 05 7d d7 22 01 	lea    0x122d77d(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580f23:	48 8d 1d ee 22 97 01 	lea    0x19722ee(%rip),%rbx        # 5ef3218 <time..dict.leadingInt[string]@@Base+0x2f88>
+ 4580f2a:	e8 11 be 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580f2f:	48 89 d0             	mov    %rdx,%rax
+ 4580f32:	e8 69 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580f37:	31 c0                	xor    %eax,%eax
+ 4580f39:	48 89 c1             	mov    %rax,%rcx
+ 4580f3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4580f40:	e8 5b 5b 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4580f45:	48 8d 05 54 d7 22 01 	lea    0x122d754(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580f4c:	48 8d 1d c5 22 97 01 	lea    0x19722c5(%rip),%rbx        # 5ef3218 <time..dict.leadingInt[string]@@Base+0x2f88>
+ 4580f53:	e8 e8 bd 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580f58:	90                   	nop
+ 4580f59:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4580f5e:	66 90                	xchg   %ax,%ax
+ 4580f60:	e8 fb 34 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4580f65:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4580f6a:	e9 d1 fd ff ff       	jmp    4580d40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base>
+ 4580f6f:	cc                   	int3
+ 4580f70:	cc                   	int3
+ 4580f71:	cc                   	int3
+ 4580f72:	cc                   	int3
+ 4580f73:	cc                   	int3
+ 4580f74:	cc                   	int3
+ 4580f75:	cc                   	int3
+ 4580f76:	cc                   	int3
+ 4580f77:	cc                   	int3
+ 4580f78:	cc                   	int3
+ 4580f79:	cc                   	int3
+ 4580f7a:	cc                   	int3
+ 4580f7b:	cc                   	int3
+ 4580f7c:	cc                   	int3
+ 4580f7d:	cc                   	int3
+ 4580f7e:	cc                   	int3
+ 4580f7f:	cc                   	int3

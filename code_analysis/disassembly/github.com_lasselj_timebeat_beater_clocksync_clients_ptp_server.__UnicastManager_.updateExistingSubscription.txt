@@ -1,0 +1,133 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription
+# addr 0x45cda60 size 448 (0x1c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045cda60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base>:
+ 45cda60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45cda64:	0f 86 85 01 00 00    	jbe    45cdbef <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x18f>
+ 45cda6a:	48 83 ec 18          	sub    $0x18,%rsp
+ 45cda6e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45cda73:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45cda78:	48 8b 53 58          	mov    0x58(%rbx),%rdx
+ 45cda7c:	48 8b 73 48          	mov    0x48(%rbx),%rsi
+ 45cda80:	4c 8b 43 50          	mov    0x50(%rbx),%r8
+ 45cda84:	48 89 71 48          	mov    %rsi,0x48(%rcx)
+ 45cda88:	4c 89 41 50          	mov    %r8,0x50(%rcx)
+ 45cda8c:	83 3d cd de 8a 03 00 	cmpl   $0x0,0x38adecd(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cda93:	75 06                	jne    45cda9b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x3b>
+ 45cda95:	48 89 51 58          	mov    %rdx,0x58(%rcx)
+ 45cda99:	eb 0a                	jmp    45cdaa5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x45>
+ 45cda9b:	48 8d 79 58          	lea    0x58(%rcx),%rdi
+ 45cda9f:	90                   	nop
+ 45cdaa0:	e8 7b 8c 98 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45cdaa5:	48 8b 53 60          	mov    0x60(%rbx),%rdx
+ 45cdaa9:	48 89 51 60          	mov    %rdx,0x60(%rcx)
+ 45cdaad:	48 8b 53 78          	mov    0x78(%rbx),%rdx
+ 45cdab1:	48 8b 73 70          	mov    0x70(%rbx),%rsi
+ 45cdab5:	4c 8b 43 68          	mov    0x68(%rbx),%r8
+ 45cdab9:	4c 89 41 68          	mov    %r8,0x68(%rcx)
+ 45cdabd:	48 89 71 70          	mov    %rsi,0x70(%rcx)
+ 45cdac1:	83 3d 98 de 8a 03 00 	cmpl   $0x0,0x38ade98(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cdac8:	75 06                	jne    45cdad0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x70>
+ 45cdaca:	48 89 51 78          	mov    %rdx,0x78(%rcx)
+ 45cdace:	eb 09                	jmp    45cdad9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x79>
+ 45cdad0:	48 8d 79 78          	lea    0x78(%rcx),%rdi
+ 45cdad4:	e8 47 8c 98 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45cdad9:	0f b6 53 40          	movzbl 0x40(%rbx),%edx
+ 45cdadd:	0f 1f 00             	nopl   (%rax)
+ 45cdae0:	38 51 40             	cmp    %dl,0x40(%rcx)
+ 45cdae3:	74 2c                	je     45cdb11 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0xb1>
+ 45cdae5:	88 51 40             	mov    %dl,0x40(%rcx)
+ 45cdae8:	0f b6 51 41          	movzbl 0x41(%rcx),%edx
+ 45cdaec:	84 d2                	test   %dl,%dl
+ 45cdaee:	74 05                	je     45cdaf5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x95>
+ 45cdaf0:	80 fa 0b             	cmp    $0xb,%dl
+ 45cdaf3:	75 1c                	jne    45cdb11 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0xb1>
+ 45cdaf5:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45cdafa:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 45cdaff:	48 89 cb             	mov    %rcx,%rbx
+ 45cdb02:	e8 d9 01 00 00       	call   45cdce0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateTimeslots@@Base>
+ 45cdb07:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45cdb0c:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45cdb11:	48 8b b9 c0 00 00 00 	mov    0xc0(%rcx),%rdi
+ 45cdb18:	48 8b 40 18          	mov    0x18(%rax),%rax
+ 45cdb1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45cdb20:	48 39 47 10          	cmp    %rax,0x10(%rdi)
+ 45cdb24:	0f 85 bb 00 00 00    	jne    45cdbe5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x185>
+ 45cdb2a:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 45cdb2e:	48 39 f8             	cmp    %rdi,%rax
+ 45cdb31:	0f 84 ae 00 00 00    	je     45cdbe5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x185>
+ 45cdb37:	48 8b 4f 08          	mov    0x8(%rdi),%rcx
+ 45cdb3b:	84 01                	test   %al,(%rcx)
+ 45cdb3d:	90                   	nop
+ 45cdb3e:	48 8b 17             	mov    (%rdi),%rdx
+ 45cdb41:	83 3d 18 de 8a 03 00 	cmpl   $0x0,0x38ade18(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cdb48:	75 05                	jne    45cdb4f <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0xef>
+ 45cdb4a:	48 89 11             	mov    %rdx,(%rcx)
+ 45cdb4d:	eb 0e                	jmp    45cdb5d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0xfd>
+ 45cdb4f:	48 89 fb             	mov    %rdi,%rbx
+ 45cdb52:	48 89 cf             	mov    %rcx,%rdi
+ 45cdb55:	e8 c6 8b 98 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45cdb5a:	48 89 df             	mov    %rbx,%rdi
+ 45cdb5d:	48 8b 0f             	mov    (%rdi),%rcx
+ 45cdb60:	84 01                	test   %al,(%rcx)
+ 45cdb62:	48 8b 57 08          	mov    0x8(%rdi),%rdx
+ 45cdb66:	83 3d f3 dd 8a 03 00 	cmpl   $0x0,0x38addf3(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cdb6d:	75 0a                	jne    45cdb79 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x119>
+ 45cdb6f:	48 89 51 08          	mov    %rdx,0x8(%rcx)
+ 45cdb73:	48 89 47 08          	mov    %rax,0x8(%rdi)
+ 45cdb77:	eb 1b                	jmp    45cdb94 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x134>
+ 45cdb79:	48 83 c1 08          	add    $0x8,%rcx
+ 45cdb7d:	48 89 fb             	mov    %rdi,%rbx
+ 45cdb80:	48 89 cf             	mov    %rcx,%rdi
+ 45cdb83:	e8 98 8b 98 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45cdb88:	48 8d 7b 08          	lea    0x8(%rbx),%rdi
+ 45cdb8c:	e8 6f 8a 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cdb91:	48 89 df             	mov    %rbx,%rdi
+ 45cdb94:	48 8b 08             	mov    (%rax),%rcx
+ 45cdb97:	83 3d c2 dd 8a 03 00 	cmpl   $0x0,0x38addc2(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cdb9e:	66 90                	xchg   %ax,%ax
+ 45cdba0:	75 08                	jne    45cdbaa <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x14a>
+ 45cdba2:	48 89 0f             	mov    %rcx,(%rdi)
+ 45cdba5:	48 89 38             	mov    %rdi,(%rax)
+ 45cdba8:	eb 13                	jmp    45cdbbd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x15d>
+ 45cdbaa:	e8 51 8b 98 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45cdbaf:	48 89 f9             	mov    %rdi,%rcx
+ 45cdbb2:	48 89 c7             	mov    %rax,%rdi
+ 45cdbb5:	e8 46 8b 98 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45cdbba:	48 89 cf             	mov    %rcx,%rdi
+ 45cdbbd:	48 8b 07             	mov    (%rdi),%rax
+ 45cdbc0:	84 00                	test   %al,(%rax)
+ 45cdbc2:	83 3d 97 dd 8a 03 00 	cmpl   $0x0,0x38add97(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cdbc9:	75 06                	jne    45cdbd1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x171>
+ 45cdbcb:	48 89 78 08          	mov    %rdi,0x8(%rax)
+ 45cdbcf:	eb 14                	jmp    45cdbe5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base+0x185>
+ 45cdbd1:	48 83 c0 08          	add    $0x8,%rax
+ 45cdbd5:	48 89 f9             	mov    %rdi,%rcx
+ 45cdbd8:	48 89 c7             	mov    %rax,%rdi
+ 45cdbdb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45cdbe0:	e8 1b 8b 98 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45cdbe5:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45cdbea:	48 83 c4 18          	add    $0x18,%rsp
+ 45cdbee:	c3                   	ret
+ 45cdbef:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45cdbf4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45cdbf9:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45cdbfe:	66 90                	xchg   %ax,%ax
+ 45cdc00:	e8 5b 68 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45cdc05:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45cdc0a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45cdc0f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45cdc14:	e9 47 fe ff ff       	jmp    45cda60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).updateExistingSubscription@@Base>
+ 45cdc19:	cc                   	int3
+ 45cdc1a:	cc                   	int3
+ 45cdc1b:	cc                   	int3
+ 45cdc1c:	cc                   	int3
+ 45cdc1d:	cc                   	int3
+ 45cdc1e:	cc                   	int3
+ 45cdc1f:	cc                   	int3

@@ -1,0 +1,2308 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm
+# addr 0x4598f00 size 7936 (0x1f00)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004598f00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base>:
+ 4598f00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4598f04:	76 2a                	jbe    4598f30 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base+0x30>
+ 4598f06:	48 83 ec 10          	sub    $0x10,%rsp
+ 4598f0a:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 4598f0f:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 4598f14:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 4598f18:	4d 85 e4             	test   %r12,%r12
+ 4598f1b:	75 1a                	jne    4598f37 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base+0x37>
+ 4598f1d:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 4598f21:	e8 7a a3 ff ff       	call   45932a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base>
+ 4598f26:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4598f2b:	48 83 c4 10          	add    $0x10,%rsp
+ 4598f2f:	c3                   	ret
+ 4598f30:	e8 8b b4 9b fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 4598f35:	eb c9                	jmp    4598f00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base>
+ 4598f37:	4c 8d 6c 24 18       	lea    0x18(%rsp),%r13
+ 4598f3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4598f40:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 4598f44:	75 d7                	jne    4598f1d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base+0x1d>
+ 4598f46:	49 89 24 24          	mov    %rsp,(%r12)
+ 4598f4a:	eb d1                	jmp    4598f1d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync-fm@@Base+0x1d>
+ 4598f4c:	cc                   	int3
+ 4598f4d:	cc                   	int3
+ 4598f4e:	cc                   	int3
+ 4598f4f:	cc                   	int3
+ 4598f50:	cc                   	int3
+ 4598f51:	cc                   	int3
+ 4598f52:	cc                   	int3
+ 4598f53:	cc                   	int3
+ 4598f54:	cc                   	int3
+ 4598f55:	cc                   	int3
+ 4598f56:	cc                   	int3
+ 4598f57:	cc                   	int3
+ 4598f58:	cc                   	int3
+ 4598f59:	cc                   	int3
+ 4598f5a:	cc                   	int3
+ 4598f5b:	cc                   	int3
+ 4598f5c:	cc                   	int3
+ 4598f5d:	cc                   	int3
+ 4598f5e:	cc                   	int3
+ 4598f5f:	cc                   	int3
+
+0000000004598f60 <type:.dZvM6Ncp@@Base>:
+ 4598f60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4598f64:	76 68                	jbe    4598fce <type:.dZvM6Ncp@@Base+0x6e>
+ 4598f66:	48 83 ec 20          	sub    $0x20,%rsp
+ 4598f6a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4598f6f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4598f74:	48 8b 10             	mov    (%rax),%rdx
+ 4598f77:	48 39 13             	cmp    %rdx,(%rbx)
+ 4598f7a:	75 46                	jne    4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598f7c:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4598f80:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 4598f84:	75 3c                	jne    4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598f86:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 4598f8a:	48 39 53 10          	cmp    %rdx,0x10(%rbx)
+ 4598f8e:	75 32                	jne    4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598f90:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 4598f94:	48 39 53 18          	cmp    %rdx,0x18(%rbx)
+ 4598f98:	75 28                	jne    4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598f9a:	f2 0f 10 40 20       	movsd  0x20(%rax),%xmm0
+ 4598f9f:	f2 0f 10 4b 20       	movsd  0x20(%rbx),%xmm1
+ 4598fa4:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4598fa8:	75 18                	jne    4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598faa:	7a 16                	jp     4598fc2 <type:.dZvM6Ncp@@Base+0x62>
+ 4598fac:	48 83 c0 28          	add    $0x28,%rax
+ 4598fb0:	48 83 c3 28          	add    $0x28,%rbx
+ 4598fb4:	b9 30 00 00 00       	mov    $0x30,%ecx
+ 4598fb9:	e8 62 ab 94 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4598fbe:	66 90                	xchg   %ax,%ax
+ 4598fc0:	eb 02                	jmp    4598fc4 <type:.dZvM6Ncp@@Base+0x64>
+ 4598fc2:	31 c0                	xor    %eax,%eax
+ 4598fc4:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4598fc9:	48 83 c4 20          	add    $0x20,%rsp
+ 4598fcd:	c3                   	ret
+ 4598fce:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4598fd3:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4598fd8:	e8 83 b4 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4598fdd:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4598fe2:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4598fe7:	e9 74 ff ff ff       	jmp    4598f60 <type:.dZvM6Ncp@@Base>
+ 4598fec:	cc                   	int3
+ 4598fed:	cc                   	int3
+ 4598fee:	cc                   	int3
+ 4598fef:	cc                   	int3
+ 4598ff0:	cc                   	int3
+ 4598ff1:	cc                   	int3
+ 4598ff2:	cc                   	int3
+ 4598ff3:	cc                   	int3
+ 4598ff4:	cc                   	int3
+ 4598ff5:	cc                   	int3
+ 4598ff6:	cc                   	int3
+ 4598ff7:	cc                   	int3
+ 4598ff8:	cc                   	int3
+ 4598ff9:	cc                   	int3
+ 4598ffa:	cc                   	int3
+ 4598ffb:	cc                   	int3
+ 4598ffc:	cc                   	int3
+ 4598ffd:	cc                   	int3
+ 4598ffe:	cc                   	int3
+ 4598fff:	cc                   	int3
+
+0000000004599000 <type:.0vFXP4FI@@Base>:
+ 4599000:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599004:	0f 86 95 00 00 00    	jbe    459909f <type:.0vFXP4FI@@Base+0x9f>
+ 459900a:	48 83 ec 20          	sub    $0x20,%rsp
+ 459900e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4599013:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4599018:	0f b6 10             	movzbl (%rax),%edx
+ 459901b:	38 13                	cmp    %dl,(%rbx)
+ 459901d:	75 74                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 459901f:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4599023:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 4599027:	75 6a                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599029:	0f b6 50 10          	movzbl 0x10(%rax),%edx
+ 459902d:	38 53 10             	cmp    %dl,0x10(%rbx)
+ 4599030:	75 61                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599032:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 4599036:	48 39 53 18          	cmp    %rdx,0x18(%rbx)
+ 459903a:	75 57                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 459903c:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 4599040:	48 39 53 20          	cmp    %rdx,0x20(%rbx)
+ 4599044:	75 4d                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599046:	8b 50 28             	mov    0x28(%rax),%edx
+ 4599049:	39 53 28             	cmp    %edx,0x28(%rbx)
+ 459904c:	75 45                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 459904e:	8b 50 2c             	mov    0x2c(%rax),%edx
+ 4599051:	39 53 2c             	cmp    %edx,0x2c(%rbx)
+ 4599054:	75 3d                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599056:	48 8b 50 30          	mov    0x30(%rax),%rdx
+ 459905a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 4599060:	48 39 53 30          	cmp    %rdx,0x30(%rbx)
+ 4599064:	75 2d                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599066:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 459906a:	48 8b 53 38          	mov    0x38(%rbx),%rdx
+ 459906e:	48 8b 70 38          	mov    0x38(%rax),%rsi
+ 4599072:	48 39 4b 40          	cmp    %rcx,0x40(%rbx)
+ 4599076:	75 1b                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599078:	0f b6 78 48          	movzbl 0x48(%rax),%edi
+ 459907c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4599080:	40 38 7b 48          	cmp    %dil,0x48(%rbx)
+ 4599084:	75 0d                	jne    4599093 <type:.0vFXP4FI@@Base+0x93>
+ 4599086:	48 89 f0             	mov    %rsi,%rax
+ 4599089:	48 89 d3             	mov    %rdx,%rbx
+ 459908c:	e8 8f aa 94 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4599091:	eb 02                	jmp    4599095 <type:.0vFXP4FI@@Base+0x95>
+ 4599093:	31 c0                	xor    %eax,%eax
+ 4599095:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 459909a:	48 83 c4 20          	add    $0x20,%rsp
+ 459909e:	c3                   	ret
+ 459909f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45990a4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45990a9:	e8 b2 b3 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45990ae:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45990b3:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45990b8:	e9 43 ff ff ff       	jmp    4599000 <type:.0vFXP4FI@@Base>
+ 45990bd:	cc                   	int3
+ 45990be:	cc                   	int3
+ 45990bf:	cc                   	int3
+
+00000000045990c0 <type:.0YvVn/pT@@Base>:
+ 45990c0:	0f b6 08             	movzbl (%rax),%ecx
+ 45990c3:	38 0b                	cmp    %cl,(%rbx)
+ 45990c5:	75 2a                	jne    45990f1 <type:.0YvVn/pT@@Base+0x31>
+ 45990c7:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45990cb:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 45990cf:	75 20                	jne    45990f1 <type:.0YvVn/pT@@Base+0x31>
+ 45990d1:	48 8b 48 10          	mov    0x10(%rax),%rcx
+ 45990d5:	48 39 4b 10          	cmp    %rcx,0x10(%rbx)
+ 45990d9:	75 16                	jne    45990f1 <type:.0YvVn/pT@@Base+0x31>
+ 45990db:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45990df:	90                   	nop
+ 45990e0:	48 39 4b 18          	cmp    %rcx,0x18(%rbx)
+ 45990e4:	75 0b                	jne    45990f1 <type:.0YvVn/pT@@Base+0x31>
+ 45990e6:	0f b6 48 20          	movzbl 0x20(%rax),%ecx
+ 45990ea:	38 4b 20             	cmp    %cl,0x20(%rbx)
+ 45990ed:	0f 94 c0             	sete   %al
+ 45990f0:	c3                   	ret
+ 45990f1:	31 c0                	xor    %eax,%eax
+ 45990f3:	c3                   	ret
+ 45990f4:	cc                   	int3
+ 45990f5:	cc                   	int3
+ 45990f6:	cc                   	int3
+ 45990f7:	cc                   	int3
+ 45990f8:	cc                   	int3
+ 45990f9:	cc                   	int3
+ 45990fa:	cc                   	int3
+ 45990fb:	cc                   	int3
+ 45990fc:	cc                   	int3
+ 45990fd:	cc                   	int3
+ 45990fe:	cc                   	int3
+ 45990ff:	cc                   	int3
+
+0000000004599100 <type:.wiOuacsB@@Base>:
+ 4599100:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599104:	0f 86 06 01 00 00    	jbe    4599210 <type:.wiOuacsB@@Base+0x110>
+ 459910a:	48 83 ec 18          	sub    $0x18,%rsp
+ 459910e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4599113:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4599118:	0f b6 08             	movzbl (%rax),%ecx
+ 459911b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4599120:	38 0b                	cmp    %cl,(%rbx)
+ 4599122:	0f 85 dc 00 00 00    	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 4599128:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 459912c:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 4599130:	0f 85 ce 00 00 00    	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 4599136:	0f b6 48 10          	movzbl 0x10(%rax),%ecx
+ 459913a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 4599140:	38 4b 10             	cmp    %cl,0x10(%rbx)
+ 4599143:	0f 85 bb 00 00 00    	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 4599149:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 459914d:	48 39 4b 18          	cmp    %rcx,0x18(%rbx)
+ 4599151:	0f 85 ad 00 00 00    	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 4599157:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 459915c:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4599161:	48 8d 48 20          	lea    0x20(%rax),%rcx
+ 4599165:	48 8d 53 20          	lea    0x20(%rbx),%rdx
+ 4599169:	48 89 c8             	mov    %rcx,%rax
+ 459916c:	48 89 d3             	mov    %rdx,%rbx
+ 459916f:	e8 4c ff ff ff       	call   45990c0 <type:.0YvVn/pT@@Base>
+ 4599174:	84 c0                	test   %al,%al
+ 4599176:	0f 84 88 00 00 00    	je     4599204 <type:.wiOuacsB@@Base+0x104>
+ 459917c:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4599181:	0f b6 48 48          	movzbl 0x48(%rax),%ecx
+ 4599185:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 459918a:	38 4b 48             	cmp    %cl,0x48(%rbx)
+ 459918d:	75 75                	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 459918f:	0f b6 48 49          	movzbl 0x49(%rax),%ecx
+ 4599193:	38 4b 49             	cmp    %cl,0x49(%rbx)
+ 4599196:	75 6c                	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 4599198:	48 8d 48 50          	lea    0x50(%rax),%rcx
+ 459919c:	48 8d 53 50          	lea    0x50(%rbx),%rdx
+ 45991a0:	48 89 c8             	mov    %rcx,%rax
+ 45991a3:	48 89 d3             	mov    %rdx,%rbx
+ 45991a6:	e8 b5 5a e7 ff       	call   440ec60 <type:.Mihz41kl@@Base>
+ 45991ab:	84 c0                	test   %al,%al
+ 45991ad:	74 55                	je     4599204 <type:.wiOuacsB@@Base+0x104>
+ 45991af:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 45991b4:	0f b6 91 a8 00 00 00 	movzbl 0xa8(%rcx),%edx
+ 45991bb:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45991c0:	38 93 a8 00 00 00    	cmp    %dl,0xa8(%rbx)
+ 45991c6:	75 3c                	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 45991c8:	0f b6 91 a9 00 00 00 	movzbl 0xa9(%rcx),%edx
+ 45991cf:	38 93 a9 00 00 00    	cmp    %dl,0xa9(%rbx)
+ 45991d5:	75 2d                	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 45991d7:	48 8b 91 b0 00 00 00 	mov    0xb0(%rcx),%rdx
+ 45991de:	66 90                	xchg   %ax,%ax
+ 45991e0:	48 39 93 b0 00 00 00 	cmp    %rdx,0xb0(%rbx)
+ 45991e7:	75 1b                	jne    4599204 <type:.wiOuacsB@@Base+0x104>
+ 45991e9:	48 8b 89 b8 00 00 00 	mov    0xb8(%rcx),%rcx
+ 45991f0:	48 39 8b b8 00 00 00 	cmp    %rcx,0xb8(%rbx)
+ 45991f7:	0f 94 c0             	sete   %al
+ 45991fa:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45991ff:	48 83 c4 18          	add    $0x18,%rsp
+ 4599203:	c3                   	ret
+ 4599204:	31 c0                	xor    %eax,%eax
+ 4599206:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459920b:	48 83 c4 18          	add    $0x18,%rsp
+ 459920f:	c3                   	ret
+ 4599210:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599215:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459921a:	e8 41 b2 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459921f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599224:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599229:	e9 d2 fe ff ff       	jmp    4599100 <type:.wiOuacsB@@Base>
+ 459922e:	cc                   	int3
+ 459922f:	cc                   	int3
+ 4599230:	cc                   	int3
+ 4599231:	cc                   	int3
+ 4599232:	cc                   	int3
+ 4599233:	cc                   	int3
+ 4599234:	cc                   	int3
+ 4599235:	cc                   	int3
+ 4599236:	cc                   	int3
+ 4599237:	cc                   	int3
+ 4599238:	cc                   	int3
+ 4599239:	cc                   	int3
+ 459923a:	cc                   	int3
+ 459923b:	cc                   	int3
+ 459923c:	cc                   	int3
+ 459923d:	cc                   	int3
+ 459923e:	cc                   	int3
+ 459923f:	cc                   	int3
+
+0000000004599240 <type:.SVhPiceZ@@Base>:
+ 4599240:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599244:	0f 86 12 01 00 00    	jbe    459935c <type:.SVhPiceZ@@Base+0x11c>
+ 459924a:	48 83 ec 20          	sub    $0x20,%rsp
+ 459924e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4599253:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4599258:	48 8b 10             	mov    (%rax),%rdx
+ 459925b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4599260:	48 39 13             	cmp    %rdx,(%rbx)
+ 4599263:	0f 85 e5 00 00 00    	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 4599269:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 459926d:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 4599271:	0f 85 d7 00 00 00    	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 4599277:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 459927b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4599280:	48 39 53 10          	cmp    %rdx,0x10(%rbx)
+ 4599284:	0f 85 c4 00 00 00    	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 459928a:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 459928e:	48 39 53 18          	cmp    %rdx,0x18(%rbx)
+ 4599292:	0f 85 b6 00 00 00    	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 4599298:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 459929c:	48 8b 4b 28          	mov    0x28(%rbx),%rcx
+ 45992a0:	48 8b 70 28          	mov    0x28(%rax),%rsi
+ 45992a4:	48 39 53 20          	cmp    %rdx,0x20(%rbx)
+ 45992a8:	0f 85 a0 00 00 00    	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 45992ae:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45992b3:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45992b8:	48 89 d0             	mov    %rdx,%rax
+ 45992bb:	48 89 f3             	mov    %rsi,%rbx
+ 45992be:	66 90                	xchg   %ax,%ax
+ 45992c0:	e8 1b bc 94 fd       	call   1ee4ee0 <runtime.ifaceeq@@Base>
+ 45992c5:	84 c0                	test   %al,%al
+ 45992c7:	0f 84 81 00 00 00    	je     459934e <type:.SVhPiceZ@@Base+0x10e>
+ 45992cd:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45992d2:	48 8b 48 30          	mov    0x30(%rax),%rcx
+ 45992d6:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45992db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45992e0:	48 39 4b 30          	cmp    %rcx,0x30(%rbx)
+ 45992e4:	75 68                	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 45992e6:	48 8b 48 38          	mov    0x38(%rax),%rcx
+ 45992ea:	48 39 4b 38          	cmp    %rcx,0x38(%rbx)
+ 45992ee:	75 5e                	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 45992f0:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 45992f4:	48 39 4b 40          	cmp    %rcx,0x40(%rbx)
+ 45992f8:	75 54                	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 45992fa:	48 8d 48 48          	lea    0x48(%rax),%rcx
+ 45992fe:	48 8d 53 48          	lea    0x48(%rbx),%rdx
+ 4599302:	48 89 c8             	mov    %rcx,%rax
+ 4599305:	48 89 d3             	mov    %rdx,%rbx
+ 4599308:	e8 f3 fd ff ff       	call   4599100 <type:.wiOuacsB@@Base>
+ 459930d:	84 c0                	test   %al,%al
+ 459930f:	74 3d                	je     459934e <type:.SVhPiceZ@@Base+0x10e>
+ 4599311:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4599316:	48 8b 91 08 01 00 00 	mov    0x108(%rcx),%rdx
+ 459931d:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4599322:	48 39 93 08 01 00 00 	cmp    %rdx,0x108(%rbx)
+ 4599329:	75 23                	jne    459934e <type:.SVhPiceZ@@Base+0x10e>
+ 459932b:	8b 91 10 01 00 00    	mov    0x110(%rcx),%edx
+ 4599331:	39 93 10 01 00 00    	cmp    %edx,0x110(%rbx)
+ 4599337:	75 11                	jne    459934a <type:.SVhPiceZ@@Base+0x10a>
+ 4599339:	8b 89 14 01 00 00    	mov    0x114(%rcx),%ecx
+ 459933f:	39 8b 14 01 00 00    	cmp    %ecx,0x114(%rbx)
+ 4599345:	0f 94 c1             	sete   %cl
+ 4599348:	eb 06                	jmp    4599350 <type:.SVhPiceZ@@Base+0x110>
+ 459934a:	31 c9                	xor    %ecx,%ecx
+ 459934c:	eb 02                	jmp    4599350 <type:.SVhPiceZ@@Base+0x110>
+ 459934e:	31 c9                	xor    %ecx,%ecx
+ 4599350:	89 c8                	mov    %ecx,%eax
+ 4599352:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4599357:	48 83 c4 20          	add    $0x20,%rsp
+ 459935b:	c3                   	ret
+ 459935c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599361:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599366:	e8 f5 b0 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459936b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599370:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599375:	e9 c6 fe ff ff       	jmp    4599240 <type:.SVhPiceZ@@Base>
+ 459937a:	cc                   	int3
+ 459937b:	cc                   	int3
+ 459937c:	cc                   	int3
+ 459937d:	cc                   	int3
+ 459937e:	cc                   	int3
+ 459937f:	cc                   	int3
+
+0000000004599380 <type:.8PX72BCH@@Base>:
+ 4599380:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599384:	0f 86 b2 00 00 00    	jbe    459943c <type:.8PX72BCH@@Base+0xbc>
+ 459938a:	48 83 ec 18          	sub    $0x18,%rsp
+ 459938e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4599393:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4599398:	48 8b 08             	mov    (%rax),%rcx
+ 459939b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45993a0:	48 39 0b             	cmp    %rcx,(%rbx)
+ 45993a3:	0f 85 87 00 00 00    	jne    4599430 <type:.8PX72BCH@@Base+0xb0>
+ 45993a9:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45993ad:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 45993b1:	75 7d                	jne    4599430 <type:.8PX72BCH@@Base+0xb0>
+ 45993b3:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45993b8:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45993bd:	48 8d 48 10          	lea    0x10(%rax),%rcx
+ 45993c1:	48 8d 53 10          	lea    0x10(%rbx),%rdx
+ 45993c5:	48 89 c8             	mov    %rcx,%rax
+ 45993c8:	48 89 d3             	mov    %rdx,%rbx
+ 45993cb:	e8 d0 7f ff ff       	call   45913a0 <type:.e53sbQ8q@@Base>
+ 45993d0:	84 c0                	test   %al,%al
+ 45993d2:	74 5c                	je     4599430 <type:.8PX72BCH@@Base+0xb0>
+ 45993d4:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45993d9:	48 8d 88 d0 00 00 00 	lea    0xd0(%rax),%rcx
+ 45993e0:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45993e5:	48 8d 93 d0 00 00 00 	lea    0xd0(%rbx),%rdx
+ 45993ec:	48 89 c8             	mov    %rcx,%rax
+ 45993ef:	48 89 d3             	mov    %rdx,%rbx
+ 45993f2:	e8 a9 7f ff ff       	call   45913a0 <type:.e53sbQ8q@@Base>
+ 45993f7:	84 c0                	test   %al,%al
+ 45993f9:	74 35                	je     4599430 <type:.8PX72BCH@@Base+0xb0>
+ 45993fb:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4599400:	48 8b 91 90 01 00 00 	mov    0x190(%rcx),%rdx
+ 4599407:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 459940c:	48 39 93 90 01 00 00 	cmp    %rdx,0x190(%rbx)
+ 4599413:	75 1b                	jne    4599430 <type:.8PX72BCH@@Base+0xb0>
+ 4599415:	48 8b 89 98 01 00 00 	mov    0x198(%rcx),%rcx
+ 459941c:	48 39 8b 98 01 00 00 	cmp    %rcx,0x198(%rbx)
+ 4599423:	0f 94 c0             	sete   %al
+ 4599426:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459942b:	48 83 c4 18          	add    $0x18,%rsp
+ 459942f:	c3                   	ret
+ 4599430:	31 c0                	xor    %eax,%eax
+ 4599432:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4599437:	48 83 c4 18          	add    $0x18,%rsp
+ 459943b:	c3                   	ret
+ 459943c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599441:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599446:	e8 15 b0 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459944b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599450:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599455:	e9 26 ff ff ff       	jmp    4599380 <type:.8PX72BCH@@Base>
+ 459945a:	cc                   	int3
+ 459945b:	cc                   	int3
+ 459945c:	cc                   	int3
+ 459945d:	cc                   	int3
+ 459945e:	cc                   	int3
+ 459945f:	cc                   	int3
+
+0000000004599460 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base>:
+ 4599460:	4c 8d 64 24 c0       	lea    -0x40(%rsp),%r12
+ 4599465:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4599469:	0f 86 c7 04 00 00    	jbe    4599936 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x4d6>
+ 459946f:	48 81 ec c0 00 00 00 	sub    $0xc0,%rsp
+ 4599476:	48 89 ac 24 b8 00 00 	mov    %rbp,0xb8(%rsp)
+ 459947d:	00 
+ 459947e:	48 8d ac 24 b8 00 00 	lea    0xb8(%rsp),%rbp
+ 4599485:	00 
+ 4599486:	48 89 8c 24 d8 00 00 	mov    %rcx,0xd8(%rsp)
+ 459948d:	00 
+ 459948e:	48 89 9c 24 d0 00 00 	mov    %rbx,0xd0(%rsp)
+ 4599495:	00 
+ 4599496:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 459949d:	00 
+ 459949e:	48 89 bc 24 e0 00 00 	mov    %rdi,0xe0(%rsp)
+ 45994a5:	00 
+ 45994a6:	48 89 c2             	mov    %rax,%rdx
+ 45994a9:	31 c0                	xor    %eax,%eax
+ 45994ab:	be 01 00 00 00       	mov    $0x1,%esi
+ 45994b0:	f0 0f b1 72 10       	lock cmpxchg %esi,0x10(%rdx)
+ 45994b5:	41 0f 94 c0          	sete   %r8b
+ 45994b9:	48 8d 42 10          	lea    0x10(%rdx),%rax
+ 45994bd:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45994c2:	45 84 c0             	test   %r8b,%r8b
+ 45994c5:	75 2f                	jne    45994f6 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x96>
+ 45994c7:	e8 74 f0 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45994cc:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45994d1:	48 8b 8c 24 d8 00 00 	mov    0xd8(%rsp),%rcx
+ 45994d8:	00 
+ 45994d9:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 45994e0:	00 
+ 45994e1:	48 8b 9c 24 d0 00 00 	mov    0xd0(%rsp),%rbx
+ 45994e8:	00 
+ 45994e9:	be 01 00 00 00       	mov    $0x1,%esi
+ 45994ee:	48 8b bc 24 e0 00 00 	mov    0xe0(%rsp),%rdi
+ 45994f5:	00 
+ 45994f6:	4c 8b 02             	mov    (%rdx),%r8
+ 45994f9:	4c 8b 4a 08          	mov    0x8(%rdx),%r9
+ 45994fd:	4d 89 c2             	mov    %r8,%r10
+ 4599500:	4d 29 c8             	sub    %r9,%r8
+ 4599503:	4c 39 c7             	cmp    %r8,%rdi
+ 4599506:	7f 39                	jg     4599541 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0xe1>
+ 4599508:	48 83 7a 40 00       	cmpq   $0x0,0x40(%rdx)
+ 459950d:	75 32                	jne    4599541 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0xe1>
+ 459950f:	49 8d 0c 39          	lea    (%r9,%rdi,1),%rcx
+ 4599513:	48 89 4a 08          	mov    %rcx,0x8(%rdx)
+ 4599517:	90                   	nop
+ 4599518:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 459951d:	f0 0f c1 5a 10       	lock xadd %ebx,0x10(%rdx)
+ 4599522:	ff cb                	dec    %ebx
+ 4599524:	85 db                	test   %ebx,%ebx
+ 4599526:	74 05                	je     459952d <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0xcd>
+ 4599528:	e8 13 f3 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 459952d:	31 c0                	xor    %eax,%eax
+ 459952f:	31 db                	xor    %ebx,%ebx
+ 4599531:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 4599538:	00 
+ 4599539:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 4599540:	c3                   	ret
+ 4599541:	4c 39 d7             	cmp    %r10,%rdi
+ 4599544:	7e 5f                	jle    45995a5 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x145>
+ 4599546:	90                   	nop
+ 4599547:	be ff ff ff ff       	mov    $0xffffffff,%esi
+ 459954c:	f0 0f c1 72 10       	lock xadd %esi,0x10(%rdx)
+ 4599551:	8d 56 ff             	lea    -0x1(%rsi),%edx
+ 4599554:	85 d2                	test   %edx,%edx
+ 4599556:	74 17                	je     459956f <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x10f>
+ 4599558:	89 d3                	mov    %edx,%ebx
+ 459955a:	e8 e1 f2 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 459955f:	48 8b 8c 24 d8 00 00 	mov    0xd8(%rsp),%rcx
+ 4599566:	00 
+ 4599567:	48 8b 9c 24 d0 00 00 	mov    0xd0(%rsp),%rbx
+ 459956e:	00 
+ 459956f:	48 8b 53 20          	mov    0x20(%rbx),%rdx
+ 4599573:	48 89 c8             	mov    %rcx,%rax
+ 4599576:	ff d2                	call   *%rdx
+ 4599578:	31 db                	xor    %ebx,%ebx
+ 459957a:	e8 a1 f2 94 fd       	call   1ee8820 <runtime.chanrecv1@@Base>
+ 459957f:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 4599586:	00 
+ 4599587:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 459958b:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 4599592:	00 
+ 4599593:	ff d1                	call   *%rcx
+ 4599595:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 459959c:	00 
+ 459959d:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 45995a4:	c3                   	ret
+ 45995a5:	48 8d 05 34 81 1c 01 	lea    0x11c8134(%rip),%rax        # 57616e0 <type:cts+1nkb@@Base>
+ 45995ac:	31 db                	xor    %ebx,%ebx
+ 45995ae:	e8 2d e3 94 fd       	call   1ee78e0 <runtime.makechan@@Base>
+ 45995b3:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45995b8:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 45995bf:	00 00 
+ 45995c1:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 45995c8:	00 
+ 45995c9:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 45995d0:	00 
+ 45995d1:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 45995d8:	00 
+ 45995d9:	48 8d 9c 24 88 00 00 	lea    0x88(%rsp),%rbx
+ 45995e0:	00 
+ 45995e1:	48 8d 05 d8 9c 58 01 	lea    0x1589cd8(%rip),%rax        # 5b232c0 <type:uxV8qmKe@@Base>
+ 45995e8:	e8 f3 44 95 fd       	call   1eedae0 <runtime.convT@@Base>
+ 45995ed:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45995f4:	00 
+ 45995f5:	90                   	nop
+ 45995f6:	48 8b bc 24 c8 00 00 	mov    0xc8(%rsp),%rdi
+ 45995fd:	00 
+ 45995fe:	48 83 7f 18 00       	cmpq   $0x0,0x18(%rdi)
+ 4599603:	75 3b                	jne    4599640 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x1e0>
+ 4599605:	90                   	nop
+ 4599606:	48 8d 4f 18          	lea    0x18(%rdi),%rcx
+ 459960a:	83 3d 4f 23 8e 03 00 	cmpl   $0x0,0x38e234f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599611:	75 0a                	jne    459961d <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x1bd>
+ 4599613:	48 89 4f 18          	mov    %rcx,0x18(%rdi)
+ 4599617:	48 89 4f 20          	mov    %rcx,0x20(%rdi)
+ 459961b:	eb 1b                	jmp    4599638 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x1d8>
+ 459961d:	48 8d 57 18          	lea    0x18(%rdi),%rdx
+ 4599621:	48 89 fb             	mov    %rdi,%rbx
+ 4599624:	48 89 d7             	mov    %rdx,%rdi
+ 4599627:	e8 d4 d0 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459962c:	48 8d 7b 20          	lea    0x20(%rbx),%rdi
+ 4599630:	e8 cb d0 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599635:	48 89 df             	mov    %rbx,%rdi
+ 4599638:	48 c7 47 40 00 00 00 	movq   $0x0,0x40(%rdi)
+ 459963f:	00 
+ 4599640:	48 8b 4f 20          	mov    0x20(%rdi),%rcx
+ 4599644:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4599649:	48 8d 05 90 cc 69 01 	lea    0x169cc90(%rip),%rax        # 5c362e0 <type:Uhqc0Mrc@@Base>
+ 4599650:	e8 8b 6e 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4599655:	48 8d 0d 64 9c 58 01 	lea    0x1589c64(%rip),%rcx        # 5b232c0 <type:uxV8qmKe@@Base>
+ 459965c:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 4599660:	83 3d f9 22 8e 03 00 	cmpl   $0x0,0x38e22f9(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599667:	75 0e                	jne    4599677 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x217>
+ 4599669:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4599670:	00 
+ 4599671:	48 89 48 20          	mov    %rcx,0x20(%rax)
+ 4599675:	eb 11                	jmp    4599688 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x228>
+ 4599677:	48 8d 78 20          	lea    0x20(%rax),%rdi
+ 459967b:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4599682:	00 
+ 4599683:	e8 78 d0 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599688:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 459968c:	83 3d cd 22 8e 03 00 	cmpl   $0x0,0x38e22cd(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599693:	75 0d                	jne    45996a2 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x242>
+ 4599695:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 459969a:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 459969e:	66 90                	xchg   %ax,%ax
+ 45996a0:	eb 0a                	jmp    45996ac <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x24c>
+ 45996a2:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 45996a7:	e8 54 d0 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45996ac:	48 8b 11             	mov    (%rcx),%rdx
+ 45996af:	83 3d aa 22 8e 03 00 	cmpl   $0x0,0x38e22aa(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45996b6:	75 0a                	jne    45996c2 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x262>
+ 45996b8:	48 89 10             	mov    %rdx,(%rax)
+ 45996bb:	48 89 01             	mov    %rax,(%rcx)
+ 45996be:	66 90                	xchg   %ax,%ax
+ 45996c0:	eb 16                	jmp    45996d8 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x278>
+ 45996c2:	48 89 fb             	mov    %rdi,%rbx
+ 45996c5:	48 89 c7             	mov    %rax,%rdi
+ 45996c8:	e8 53 d0 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45996cd:	48 89 cf             	mov    %rcx,%rdi
+ 45996d0:	e8 2b cf 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45996d5:	48 89 df             	mov    %rbx,%rdi
+ 45996d8:	48 8b 08             	mov    (%rax),%rcx
+ 45996db:	84 01                	test   %al,(%rcx)
+ 45996dd:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 45996e4:	00 
+ 45996e5:	48 8d 72 18          	lea    0x18(%rdx),%rsi
+ 45996e9:	4c 8d 40 10          	lea    0x10(%rax),%r8
+ 45996ed:	83 3d 6c 22 8e 03 00 	cmpl   $0x0,0x38e226c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45996f4:	75 0c                	jne    4599702 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x2a2>
+ 45996f6:	48 89 41 08          	mov    %rax,0x8(%rcx)
+ 45996fa:	48 89 70 10          	mov    %rsi,0x10(%rax)
+ 45996fe:	66 90                	xchg   %ax,%ax
+ 4599700:	eb 1a                	jmp    459971c <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x2bc>
+ 4599702:	48 83 c1 08          	add    $0x8,%rcx
+ 4599706:	48 89 fb             	mov    %rdi,%rbx
+ 4599709:	48 89 cf             	mov    %rcx,%rdi
+ 459970c:	e8 ef ce 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4599711:	4c 89 c7             	mov    %r8,%rdi
+ 4599714:	e8 47 d0 9b fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 4599719:	48 89 df             	mov    %rbx,%rdi
+ 459971c:	48 89 74 24 50       	mov    %rsi,0x50(%rsp)
+ 4599721:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4599726:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+ 459972b:	4c 89 44 24 70       	mov    %r8,0x70(%rsp)
+ 4599730:	48 ff 42 40          	incq   0x40(%rdx)
+ 4599734:	90                   	nop
+ 4599735:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 459973a:	f0 0f c1 5a 10       	lock xadd %ebx,0x10(%rdx)
+ 459973f:	ff cb                	dec    %ebx
+ 4599741:	85 db                	test   %ebx,%ebx
+ 4599743:	74 0a                	je     459974f <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x2ef>
+ 4599745:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 459974a:	e8 f1 f0 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 459974f:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 4599756:	00 
+ 4599757:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 459975b:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 4599762:	00 
+ 4599763:	ff d2                	call   *%rdx
+ 4599765:	44 0f 11 bc 24 98 00 	movups %xmm15,0x98(%rsp)
+ 459976c:	00 00 
+ 459976e:	44 0f 11 bc 24 a8 00 	movups %xmm15,0xa8(%rsp)
+ 4599775:	00 00 
+ 4599777:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 459977e:	00 
+ 459977f:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4599784:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 459978b:	00 
+ 459978c:	48 8d 84 24 98 00 00 	lea    0x98(%rsp),%rax
+ 4599793:	00 
+ 4599794:	48 8d 5c 24 38       	lea    0x38(%rsp),%rbx
+ 4599799:	31 ff                	xor    %edi,%edi
+ 459979b:	be 02 00 00 00       	mov    $0x2,%esi
+ 45997a0:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45997a6:	31 c9                	xor    %ecx,%ecx
+ 45997a8:	e8 13 74 99 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45997ad:	48 85 c0             	test   %rax,%rax
+ 45997b0:	0f 84 6c 01 00 00    	je     4599922 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x4c2>
+ 45997b6:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 45997bd:	00 
+ 45997be:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 45997c2:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 45997c9:	00 
+ 45997ca:	ff d1                	call   *%rcx
+ 45997cc:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45997d1:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 45997d6:	90                   	nop
+ 45997d7:	31 c0                	xor    %eax,%eax
+ 45997d9:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 45997e0:	00 
+ 45997e1:	be 01 00 00 00       	mov    $0x1,%esi
+ 45997e6:	f0 0f b1 72 10       	lock cmpxchg %esi,0x10(%rdx)
+ 45997eb:	40 0f 94 c6          	sete   %sil
+ 45997ef:	40 84 f6             	test   %sil,%sil
+ 45997f2:	75 0a                	jne    45997fe <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x39e>
+ 45997f4:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45997f9:	e8 42 ed 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45997fe:	31 c0                	xor    %eax,%eax
+ 4599800:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4599805:	e8 56 fa 94 fd       	call   1ee9260 <runtime.selectnbrecv@@Base>
+ 459980a:	84 c0                	test   %al,%al
+ 459980c:	74 09                	je     4599817 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x3b7>
+ 459980e:	31 c0                	xor    %eax,%eax
+ 4599810:	31 c9                	xor    %ecx,%ecx
+ 4599812:	e9 c0 00 00 00       	jmp    45998d7 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x477>
+ 4599817:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 459981e:	00 
+ 459981f:	48 83 78 40 00       	cmpq   $0x0,0x40(%rax)
+ 4599824:	75 04                	jne    459982a <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x3ca>
+ 4599826:	31 c9                	xor    %ecx,%ecx
+ 4599828:	eb 04                	jmp    459982e <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x3ce>
+ 459982a:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 459982e:	90                   	nop
+ 459982f:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4599834:	48 8b 74 24 60       	mov    0x60(%rsp),%rsi
+ 4599839:	48 39 56 10          	cmp    %rdx,0x10(%rsi)
+ 459983d:	75 70                	jne    45998af <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x44f>
+ 459983f:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+ 4599843:	84 07                	test   %al,(%rdi)
+ 4599845:	90                   	nop
+ 4599846:	48 8b 16             	mov    (%rsi),%rdx
+ 4599849:	83 3d 10 21 8e 03 00 	cmpl   $0x0,0x38e2110(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599850:	75 05                	jne    4599857 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x3f7>
+ 4599852:	48 89 17             	mov    %rdx,(%rdi)
+ 4599855:	eb 05                	jmp    459985c <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x3fc>
+ 4599857:	e8 c4 ce 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 459985c:	48 8b 3e             	mov    (%rsi),%rdi
+ 459985f:	84 07                	test   %al,(%rdi)
+ 4599861:	48 8b 56 08          	mov    0x8(%rsi),%rdx
+ 4599865:	83 3d f4 20 8e 03 00 	cmpl   $0x0,0x38e20f4(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459986c:	75 14                	jne    4599882 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x422>
+ 459986e:	48 89 57 08          	mov    %rdx,0x8(%rdi)
+ 4599872:	44 0f 11 3e          	movups %xmm15,(%rsi)
+ 4599876:	48 c7 46 10 00 00 00 	movq   $0x0,0x10(%rsi)
+ 459987d:	00 
+ 459987e:	66 90                	xchg   %ax,%ax
+ 4599880:	eb 29                	jmp    45998ab <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x44b>
+ 4599882:	48 83 c7 08          	add    $0x8,%rdi
+ 4599886:	e8 95 ce 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 459988b:	48 89 f7             	mov    %rsi,%rdi
+ 459988e:	31 d2                	xor    %edx,%edx
+ 4599890:	e8 8b ce 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4599895:	48 8b 7c 24 78       	mov    0x78(%rsp),%rdi
+ 459989a:	e8 81 ce 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 459989f:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45998a4:	31 d2                	xor    %edx,%edx
+ 45998a6:	e8 75 ce 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45998ab:	48 ff 48 40          	decq   0x40(%rax)
+ 45998af:	48 39 ce             	cmp    %rcx,%rsi
+ 45998b2:	75 19                	jne    45998cd <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x46d>
+ 45998b4:	48 8b 08             	mov    (%rax),%rcx
+ 45998b7:	48 39 48 08          	cmp    %rcx,0x8(%rax)
+ 45998bb:	7d 10                	jge    45998cd <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x46d>
+ 45998bd:	0f 1f 00             	nopl   (%rax)
+ 45998c0:	e8 9b 02 00 00       	call   4599b60 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base>
+ 45998c5:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 45998cc:	00 
+ 45998cd:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45998d2:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 45998d7:	90                   	nop
+ 45998d8:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 45998dd:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 45998e4:	00 
+ 45998e5:	f0 0f c1 5a 10       	lock xadd %ebx,0x10(%rdx)
+ 45998ea:	ff cb                	dec    %ebx
+ 45998ec:	85 db                	test   %ebx,%ebx
+ 45998ee:	74 1f                	je     459990f <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base+0x4af>
+ 45998f0:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45998f5:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45998fa:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45998ff:	90                   	nop
+ 4599900:	e8 3b ef 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4599905:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 459990a:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459990f:	48 89 cb             	mov    %rcx,%rbx
+ 4599912:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 4599919:	00 
+ 459991a:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 4599921:	c3                   	ret
+ 4599922:	31 c0                	xor    %eax,%eax
+ 4599924:	31 db                	xor    %ebx,%ebx
+ 4599926:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 459992d:	00 
+ 459992e:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 4599935:	c3                   	ret
+ 4599936:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459993b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599940:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4599945:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459994a:	e8 11 ab 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459994f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599954:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599959:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459995e:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4599963:	e9 f8 fa ff ff       	jmp    4599460 <golang.org/x/sync/semaphore.(*Weighted).Acquire@@Base>
+ 4599968:	cc                   	int3
+ 4599969:	cc                   	int3
+ 459996a:	cc                   	int3
+ 459996b:	cc                   	int3
+ 459996c:	cc                   	int3
+ 459996d:	cc                   	int3
+ 459996e:	cc                   	int3
+ 459996f:	cc                   	int3
+ 4599970:	cc                   	int3
+ 4599971:	cc                   	int3
+ 4599972:	cc                   	int3
+ 4599973:	cc                   	int3
+ 4599974:	cc                   	int3
+ 4599975:	cc                   	int3
+ 4599976:	cc                   	int3
+ 4599977:	cc                   	int3
+ 4599978:	cc                   	int3
+ 4599979:	cc                   	int3
+ 459997a:	cc                   	int3
+ 459997b:	cc                   	int3
+ 459997c:	cc                   	int3
+ 459997d:	cc                   	int3
+ 459997e:	cc                   	int3
+ 459997f:	cc                   	int3
+
+0000000004599980 <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base>:
+ 4599980:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599984:	0f 86 9d 00 00 00    	jbe    4599a27 <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0xa7>
+ 459998a:	48 83 ec 30          	sub    $0x30,%rsp
+ 459998e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4599993:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4599998:	48 89 c1             	mov    %rax,%rcx
+ 459999b:	31 c0                	xor    %eax,%eax
+ 459999d:	ba 01 00 00 00       	mov    $0x1,%edx
+ 45999a2:	f0 0f b1 51 10       	lock cmpxchg %edx,0x10(%rcx)
+ 45999a7:	0f 94 c2             	sete   %dl
+ 45999aa:	48 8d 41 10          	lea    0x10(%rcx),%rax
+ 45999ae:	84 d2                	test   %dl,%dl
+ 45999b0:	75 23                	jne    45999d5 <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0x55>
+ 45999b2:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 45999b7:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 45999bc:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45999c1:	e8 7a eb 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45999c6:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 45999cb:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 45999d0:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45999d5:	48 8b 11             	mov    (%rcx),%rdx
+ 45999d8:	48 8b 71 08          	mov    0x8(%rcx),%rsi
+ 45999dc:	48 29 f2             	sub    %rsi,%rdx
+ 45999df:	90                   	nop
+ 45999e0:	48 39 d3             	cmp    %rdx,%rbx
+ 45999e3:	7f 0a                	jg     45999ef <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0x6f>
+ 45999e5:	48 83 79 40 00       	cmpq   $0x0,0x40(%rcx)
+ 45999ea:	0f 94 c2             	sete   %dl
+ 45999ed:	eb 02                	jmp    45999f1 <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0x71>
+ 45999ef:	31 d2                	xor    %edx,%edx
+ 45999f1:	84 d2                	test   %dl,%dl
+ 45999f3:	74 07                	je     45999fc <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0x7c>
+ 45999f5:	48 01 de             	add    %rbx,%rsi
+ 45999f8:	48 89 71 08          	mov    %rsi,0x8(%rcx)
+ 45999fc:	90                   	nop
+ 45999fd:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4599a02:	f0 0f c1 59 10       	lock xadd %ebx,0x10(%rcx)
+ 4599a07:	ff cb                	dec    %ebx
+ 4599a09:	85 db                	test   %ebx,%ebx
+ 4599a0b:	74 0e                	je     4599a1b <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base+0x9b>
+ 4599a0d:	88 54 24 17          	mov    %dl,0x17(%rsp)
+ 4599a11:	e8 2a ee 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4599a16:	0f b6 54 24 17       	movzbl 0x17(%rsp),%edx
+ 4599a1b:	89 d0                	mov    %edx,%eax
+ 4599a1d:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 4599a22:	48 83 c4 30          	add    $0x30,%rsp
+ 4599a26:	c3                   	ret
+ 4599a27:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599a2c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599a31:	e8 2a aa 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599a36:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599a3b:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599a40:	e9 3b ff ff ff       	jmp    4599980 <golang.org/x/sync/semaphore.(*Weighted).TryAcquire@@Base>
+ 4599a45:	cc                   	int3
+ 4599a46:	cc                   	int3
+ 4599a47:	cc                   	int3
+ 4599a48:	cc                   	int3
+ 4599a49:	cc                   	int3
+ 4599a4a:	cc                   	int3
+ 4599a4b:	cc                   	int3
+ 4599a4c:	cc                   	int3
+ 4599a4d:	cc                   	int3
+ 4599a4e:	cc                   	int3
+ 4599a4f:	cc                   	int3
+ 4599a50:	cc                   	int3
+ 4599a51:	cc                   	int3
+ 4599a52:	cc                   	int3
+ 4599a53:	cc                   	int3
+ 4599a54:	cc                   	int3
+ 4599a55:	cc                   	int3
+ 4599a56:	cc                   	int3
+ 4599a57:	cc                   	int3
+ 4599a58:	cc                   	int3
+ 4599a59:	cc                   	int3
+ 4599a5a:	cc                   	int3
+ 4599a5b:	cc                   	int3
+ 4599a5c:	cc                   	int3
+ 4599a5d:	cc                   	int3
+ 4599a5e:	cc                   	int3
+ 4599a5f:	cc                   	int3
+
+0000000004599a60 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base>:
+ 4599a60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599a64:	0f 86 bd 00 00 00    	jbe    4599b27 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0xc7>
+ 4599a6a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4599a6e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4599a73:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4599a78:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4599a7d:	48 89 c1             	mov    %rax,%rcx
+ 4599a80:	31 c0                	xor    %eax,%eax
+ 4599a82:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4599a87:	f0 0f b1 51 10       	lock cmpxchg %edx,0x10(%rcx)
+ 4599a8c:	0f 94 c2             	sete   %dl
+ 4599a8f:	48 8d 41 10          	lea    0x10(%rcx),%rax
+ 4599a93:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 4599a98:	84 d2                	test   %dl,%dl
+ 4599a9a:	75 19                	jne    4599ab5 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0x55>
+ 4599a9c:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4599aa1:	e8 9a ea 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4599aa6:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4599aab:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4599ab0:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4599ab5:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4599ab9:	48 29 da             	sub    %rbx,%rdx
+ 4599abc:	48 89 51 08          	mov    %rdx,0x8(%rcx)
+ 4599ac0:	48 85 d2             	test   %rdx,%rdx
+ 4599ac3:	7c 33                	jl     4599af8 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0x98>
+ 4599ac5:	48 89 c8             	mov    %rcx,%rax
+ 4599ac8:	e8 93 00 00 00       	call   4599b60 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base>
+ 4599acd:	90                   	nop
+ 4599ace:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4599ad3:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4599ad8:	f0 0f c1 59 10       	lock xadd %ebx,0x10(%rcx)
+ 4599add:	ff cb                	dec    %ebx
+ 4599adf:	90                   	nop
+ 4599ae0:	85 db                	test   %ebx,%ebx
+ 4599ae2:	74 0a                	je     4599aee <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0x8e>
+ 4599ae4:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4599ae9:	e8 52 ed 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4599aee:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4599af3:	48 83 c4 20          	add    $0x20,%rsp
+ 4599af7:	c3                   	ret
+ 4599af8:	90                   	nop
+ 4599af9:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4599afe:	f0 0f c1 59 10       	lock xadd %ebx,0x10(%rcx)
+ 4599b03:	ff cb                	dec    %ebx
+ 4599b05:	85 db                	test   %ebx,%ebx
+ 4599b07:	75 17                	jne    4599b20 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0xc0>
+ 4599b09:	48 8d 05 90 4b 21 01 	lea    0x1214b90(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4599b10:	48 8d 1d 59 0b 96 01 	lea    0x1960b59(%rip),%rbx        # 5efa670 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x60>
+ 4599b17:	e8 24 32 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4599b1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4599b20:	e8 1b ed 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4599b25:	eb e2                	jmp    4599b09 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base+0xa9>
+ 4599b27:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599b2c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599b31:	e8 2a a9 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599b36:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599b3b:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599b40:	e9 1b ff ff ff       	jmp    4599a60 <golang.org/x/sync/semaphore.(*Weighted).Release@@Base>
+ 4599b45:	cc                   	int3
+ 4599b46:	cc                   	int3
+ 4599b47:	cc                   	int3
+ 4599b48:	cc                   	int3
+ 4599b49:	cc                   	int3
+ 4599b4a:	cc                   	int3
+ 4599b4b:	cc                   	int3
+ 4599b4c:	cc                   	int3
+ 4599b4d:	cc                   	int3
+ 4599b4e:	cc                   	int3
+ 4599b4f:	cc                   	int3
+ 4599b50:	cc                   	int3
+ 4599b51:	cc                   	int3
+ 4599b52:	cc                   	int3
+ 4599b53:	cc                   	int3
+ 4599b54:	cc                   	int3
+ 4599b55:	cc                   	int3
+ 4599b56:	cc                   	int3
+ 4599b57:	cc                   	int3
+ 4599b58:	cc                   	int3
+ 4599b59:	cc                   	int3
+ 4599b5a:	cc                   	int3
+ 4599b5b:	cc                   	int3
+ 4599b5c:	cc                   	int3
+ 4599b5d:	cc                   	int3
+ 4599b5e:	cc                   	int3
+ 4599b5f:	cc                   	int3
+
+0000000004599b60 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base>:
+ 4599b60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599b64:	0f 86 1f 01 00 00    	jbe    4599c89 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x129>
+ 4599b6a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4599b6e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4599b73:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4599b78:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4599b7d:	eb 10                	jmp    4599b8f <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x2f>
+ 4599b7f:	48 89 f0             	mov    %rsi,%rax
+ 4599b82:	e8 59 e8 94 fd       	call   1ee83e0 <runtime.closechan@@Base>
+ 4599b87:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4599b8c:	48 89 c8             	mov    %rcx,%rax
+ 4599b8f:	48 83 78 40 00       	cmpq   $0x0,0x40(%rax)
+ 4599b94:	75 04                	jne    4599b9a <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x3a>
+ 4599b96:	31 d2                	xor    %edx,%edx
+ 4599b98:	eb 06                	jmp    4599ba0 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x40>
+ 4599b9a:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 4599b9e:	66 90                	xchg   %ax,%ax
+ 4599ba0:	48 85 d2             	test   %rdx,%rdx
+ 4599ba3:	0f 84 c6 00 00 00    	je     4599c6f <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x10f>
+ 4599ba9:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4599bad:	4c 8b 42 20          	mov    0x20(%rdx),%r8
+ 4599bb1:	48 8d 1d 08 97 58 01 	lea    0x1589708(%rip),%rbx        # 5b232c0 <type:uxV8qmKe@@Base>
+ 4599bb8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 4599bbf:	00 
+ 4599bc0:	48 39 de             	cmp    %rbx,%rsi
+ 4599bc3:	0f 85 b0 00 00 00    	jne    4599c79 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x119>
+ 4599bc9:	49 8b 08             	mov    (%r8),%rcx
+ 4599bcc:	49 8b 70 08          	mov    0x8(%r8),%rsi
+ 4599bd0:	4c 8b 00             	mov    (%rax),%r8
+ 4599bd3:	4c 8b 48 08          	mov    0x8(%rax),%r9
+ 4599bd7:	4d 29 c8             	sub    %r9,%r8
+ 4599bda:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 4599be0:	4c 39 c1             	cmp    %r8,%rcx
+ 4599be3:	0f 8f 86 00 00 00    	jg     4599c6f <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x10f>
+ 4599be9:	4c 01 c9             	add    %r9,%rcx
+ 4599bec:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4599bf0:	48 8d 48 18          	lea    0x18(%rax),%rcx
+ 4599bf4:	90                   	nop
+ 4599bf5:	48 39 4a 10          	cmp    %rcx,0x10(%rdx)
+ 4599bf9:	75 84                	jne    4599b7f <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x1f>
+ 4599bfb:	48 8b 7a 08          	mov    0x8(%rdx),%rdi
+ 4599bff:	84 07                	test   %al,(%rdi)
+ 4599c01:	48 8b 0a             	mov    (%rdx),%rcx
+ 4599c04:	83 3d 55 1d 8e 03 00 	cmpl   $0x0,0x38e1d55(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599c0b:	75 05                	jne    4599c12 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0xb2>
+ 4599c0d:	48 89 0f             	mov    %rcx,(%rdi)
+ 4599c10:	eb 05                	jmp    4599c17 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0xb7>
+ 4599c12:	e8 e9 ca 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599c17:	48 8b 3a             	mov    (%rdx),%rdi
+ 4599c1a:	84 07                	test   %al,(%rdi)
+ 4599c1c:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4599c20:	83 3d 39 1d 8e 03 00 	cmpl   $0x0,0x38e1d39(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4599c27:	75 12                	jne    4599c3b <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0xdb>
+ 4599c29:	48 89 4f 08          	mov    %rcx,0x8(%rdi)
+ 4599c2d:	44 0f 11 3a          	movups %xmm15,(%rdx)
+ 4599c31:	48 c7 42 10 00 00 00 	movq   $0x0,0x10(%rdx)
+ 4599c38:	00 
+ 4599c39:	eb 2b                	jmp    4599c66 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x106>
+ 4599c3b:	48 83 c7 08          	add    $0x8,%rdi
+ 4599c3f:	90                   	nop
+ 4599c40:	e8 bb ca 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599c45:	48 89 d7             	mov    %rdx,%rdi
+ 4599c48:	31 c9                	xor    %ecx,%ecx
+ 4599c4a:	e8 b1 ca 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599c4f:	4c 8d 42 08          	lea    0x8(%rdx),%r8
+ 4599c53:	4c 89 c7             	mov    %r8,%rdi
+ 4599c56:	e8 a5 ca 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4599c5b:	48 8d 7a 10          	lea    0x10(%rdx),%rdi
+ 4599c5f:	31 d2                	xor    %edx,%edx
+ 4599c61:	e8 ba ca 9b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4599c66:	48 ff 48 40          	decq   0x40(%rax)
+ 4599c6a:	e9 10 ff ff ff       	jmp    4599b7f <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base+0x1f>
+ 4599c6f:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4599c74:	48 83 c4 20          	add    $0x20,%rsp
+ 4599c78:	c3                   	ret
+ 4599c79:	48 89 f0             	mov    %rsi,%rax
+ 4599c7c:	48 8d 0d bd a6 31 01 	lea    0x131a6bd(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 4599c83:	e8 18 3c 95 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 4599c88:	90                   	nop
+ 4599c89:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599c8e:	e8 cd a7 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599c93:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599c98:	e9 c3 fe ff ff       	jmp    4599b60 <golang.org/x/sync/semaphore.(*Weighted).notifyWaiters@@Base>
+ 4599c9d:	cc                   	int3
+ 4599c9e:	cc                   	int3
+ 4599c9f:	cc                   	int3
+
+0000000004599ca0 <type:.dx+NqhM1@@Base>:
+ 4599ca0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599ca4:	76 4d                	jbe    4599cf3 <type:.dx+NqhM1@@Base+0x53>
+ 4599ca6:	48 83 ec 18          	sub    $0x18,%rsp
+ 4599caa:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4599caf:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4599cb4:	48 8b 08             	mov    (%rax),%rcx
+ 4599cb7:	48 39 0b             	cmp    %rcx,(%rbx)
+ 4599cba:	75 2b                	jne    4599ce7 <type:.dx+NqhM1@@Base+0x47>
+ 4599cbc:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 4599cc0:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 4599cc4:	75 21                	jne    4599ce7 <type:.dx+NqhM1@@Base+0x47>
+ 4599cc6:	8b 48 10             	mov    0x10(%rax),%ecx
+ 4599cc9:	39 4b 10             	cmp    %ecx,0x10(%rbx)
+ 4599ccc:	75 19                	jne    4599ce7 <type:.dx+NqhM1@@Base+0x47>
+ 4599cce:	8b 48 14             	mov    0x14(%rax),%ecx
+ 4599cd1:	39 4b 14             	cmp    %ecx,0x14(%rbx)
+ 4599cd4:	75 11                	jne    4599ce7 <type:.dx+NqhM1@@Base+0x47>
+ 4599cd6:	48 83 c0 18          	add    $0x18,%rax
+ 4599cda:	48 83 c3 18          	add    $0x18,%rbx
+ 4599cde:	66 90                	xchg   %ax,%ax
+ 4599ce0:	e8 db 4f bc fd       	call   215ecc0 <type:.waOrUzZz@@Base>
+ 4599ce5:	eb 02                	jmp    4599ce9 <type:.dx+NqhM1@@Base+0x49>
+ 4599ce7:	31 c0                	xor    %eax,%eax
+ 4599ce9:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4599cee:	48 83 c4 18          	add    $0x18,%rsp
+ 4599cf2:	c3                   	ret
+ 4599cf3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599cf8:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4599cfd:	0f 1f 00             	nopl   (%rax)
+ 4599d00:	e8 5b a7 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599d05:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599d0a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4599d0f:	eb 8f                	jmp    4599ca0 <type:.dx+NqhM1@@Base>
+ 4599d11:	cc                   	int3
+ 4599d12:	cc                   	int3
+ 4599d13:	cc                   	int3
+ 4599d14:	cc                   	int3
+ 4599d15:	cc                   	int3
+ 4599d16:	cc                   	int3
+ 4599d17:	cc                   	int3
+ 4599d18:	cc                   	int3
+ 4599d19:	cc                   	int3
+ 4599d1a:	cc                   	int3
+ 4599d1b:	cc                   	int3
+ 4599d1c:	cc                   	int3
+ 4599d1d:	cc                   	int3
+ 4599d1e:	cc                   	int3
+ 4599d1f:	cc                   	int3
+
+0000000004599d20 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base>:
+ 4599d20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599d24:	0f 86 9c 00 00 00    	jbe    4599dc6 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0xa6>
+ 4599d2a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4599d2e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4599d33:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4599d38:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4599d3d:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 4599d41:	48 83 fa 2e          	cmp    $0x2e,%rdx
+ 4599d45:	be 2e 00 00 00       	mov    $0x2e,%esi
+ 4599d4a:	48 0f 4c d6          	cmovl  %rsi,%rdx
+ 4599d4e:	48 83 78 30 00       	cmpq   $0x0,0x30(%rax)
+ 4599d53:	74 0e                	je     4599d63 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0x43>
+ 4599d55:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 4599d5a:	74 07                	je     4599d63 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0x43>
+ 4599d5c:	b9 08 00 00 00       	mov    $0x8,%ecx
+ 4599d61:	eb 10                	jmp    4599d73 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0x53>
+ 4599d63:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 4599d68:	74 07                	je     4599d71 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0x51>
+ 4599d6a:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 4599d6f:	eb 02                	jmp    4599d73 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base+0x53>
+ 4599d71:	31 c9                	xor    %ecx,%ecx
+ 4599d73:	48 8d 0c 0a          	lea    (%rdx,%rcx,1),%rcx
+ 4599d77:	48 8d 49 0e          	lea    0xe(%rcx),%rcx
+ 4599d7b:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 4599d80:	48 8d 05 d9 4b 21 01 	lea    0x1214bd9(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4599d87:	48 89 cb             	mov    %rcx,%rbx
+ 4599d8a:	e8 51 c6 99 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4599d8f:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4599d94:	48 89 c3             	mov    %rax,%rbx
+ 4599d97:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4599d9c:	48 89 cf             	mov    %rcx,%rdi
+ 4599d9f:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4599da4:	e8 77 01 00 00       	call   4599f20 <github.com/mdlayher/ethernet.(*Frame).read@@Base>
+ 4599da9:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4599dae:	48 89 df             	mov    %rbx,%rdi
+ 4599db1:	48 89 ce             	mov    %rcx,%rsi
+ 4599db4:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 4599db9:	48 89 d9             	mov    %rbx,%rcx
+ 4599dbc:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4599dc1:	48 83 c4 38          	add    $0x38,%rsp
+ 4599dc5:	c3                   	ret
+ 4599dc6:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599dcb:	e8 90 a6 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599dd0:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599dd5:	e9 46 ff ff ff       	jmp    4599d20 <github.com/mdlayher/ethernet.(*Frame).MarshalBinary@@Base>
+ 4599dda:	cc                   	int3
+ 4599ddb:	cc                   	int3
+ 4599ddc:	cc                   	int3
+ 4599ddd:	cc                   	int3
+ 4599dde:	cc                   	int3
+ 4599ddf:	cc                   	int3
+
+0000000004599de0 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base>:
+ 4599de0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599de4:	0f 86 06 01 00 00    	jbe    4599ef0 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x110>
+ 4599dea:	48 83 ec 50          	sub    $0x50,%rsp
+ 4599dee:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4599df3:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4599df8:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4599dfd:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 4599e01:	48 83 fa 2e          	cmp    $0x2e,%rdx
+ 4599e05:	be 2e 00 00 00       	mov    $0x2e,%esi
+ 4599e0a:	48 0f 4c d6          	cmovl  %rsi,%rdx
+ 4599e0e:	48 83 78 30 00       	cmpq   $0x0,0x30(%rax)
+ 4599e13:	74 0e                	je     4599e23 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x43>
+ 4599e15:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 4599e1a:	74 07                	je     4599e23 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x43>
+ 4599e1c:	b9 08 00 00 00       	mov    $0x8,%ecx
+ 4599e21:	eb 10                	jmp    4599e33 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x53>
+ 4599e23:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 4599e28:	74 07                	je     4599e31 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x51>
+ 4599e2a:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 4599e2f:	eb 02                	jmp    4599e33 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x53>
+ 4599e31:	31 c9                	xor    %ecx,%ecx
+ 4599e33:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 4599e38:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 4599e3d:	48 8d 1c 0a          	lea    (%rdx,%rcx,1),%rbx
+ 4599e41:	48 8d 5b 12          	lea    0x12(%rbx),%rbx
+ 4599e45:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4599e4a:	48 8d 05 0f 4b 21 01 	lea    0x1214b0f(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4599e51:	48 89 d9             	mov    %rbx,%rcx
+ 4599e54:	e8 87 c5 99 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4599e59:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4599e5e:	48 89 c3             	mov    %rax,%rbx
+ 4599e61:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4599e66:	48 89 cf             	mov    %rcx,%rdi
+ 4599e69:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4599e6e:	e8 ad 00 00 00       	call   4599f20 <github.com/mdlayher/ethernet.(*Frame).read@@Base>
+ 4599e73:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 4599e78:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4599e7d:	48 8d 3c 16          	lea    (%rsi,%rdx,1),%rdi
+ 4599e81:	48 85 db             	test   %rbx,%rbx
+ 4599e84:	75 4d                	jne    4599ed3 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0xf3>
+ 4599e86:	48 8d 04 16          	lea    (%rsi,%rdx,1),%rax
+ 4599e8a:	48 8d 40 0e          	lea    0xe(%rax),%rax
+ 4599e8e:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4599e93:	48 39 c8             	cmp    %rcx,%rax
+ 4599e96:	77 52                	ja     4599eea <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base+0x10a>
+ 4599e98:	48 89 7c 24 38       	mov    %rdi,0x38(%rsp)
+ 4599e9d:	48 89 c3             	mov    %rax,%rbx
+ 4599ea0:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4599ea5:	e8 d6 c4 c2 fd       	call   21c6380 <hash/crc32.ChecksumIEEE@@Base>
+ 4599eaa:	0f c8                	bswap  %eax
+ 4599eac:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4599eb1:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 4599eb6:	89 44 16 0e          	mov    %eax,0xe(%rsi,%rdx,1)
+ 4599eba:	48 89 d0             	mov    %rdx,%rax
+ 4599ebd:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4599ec2:	48 89 d9             	mov    %rbx,%rcx
+ 4599ec5:	31 ff                	xor    %edi,%edi
+ 4599ec7:	31 f6                	xor    %esi,%esi
+ 4599ec9:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4599ece:	48 83 c4 50          	add    $0x50,%rsp
+ 4599ed2:	c3                   	ret
+ 4599ed3:	31 c0                	xor    %eax,%eax
+ 4599ed5:	48 89 df             	mov    %rbx,%rdi
+ 4599ed8:	48 89 ce             	mov    %rcx,%rsi
+ 4599edb:	31 db                	xor    %ebx,%ebx
+ 4599edd:	48 89 d9             	mov    %rbx,%rcx
+ 4599ee0:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4599ee5:	48 83 c4 50          	add    $0x50,%rsp
+ 4599ee9:	c3                   	ret
+ 4599eea:	e8 71 cc 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 4599eef:	90                   	nop
+ 4599ef0:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4599ef5:	e8 66 a5 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4599efa:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4599eff:	90                   	nop
+ 4599f00:	e9 db fe ff ff       	jmp    4599de0 <github.com/mdlayher/ethernet.(*Frame).MarshalFCS@@Base>
+ 4599f05:	cc                   	int3
+ 4599f06:	cc                   	int3
+ 4599f07:	cc                   	int3
+ 4599f08:	cc                   	int3
+ 4599f09:	cc                   	int3
+ 4599f0a:	cc                   	int3
+ 4599f0b:	cc                   	int3
+ 4599f0c:	cc                   	int3
+ 4599f0d:	cc                   	int3
+ 4599f0e:	cc                   	int3
+ 4599f0f:	cc                   	int3
+ 4599f10:	cc                   	int3
+ 4599f11:	cc                   	int3
+ 4599f12:	cc                   	int3
+ 4599f13:	cc                   	int3
+ 4599f14:	cc                   	int3
+ 4599f15:	cc                   	int3
+ 4599f16:	cc                   	int3
+ 4599f17:	cc                   	int3
+ 4599f18:	cc                   	int3
+ 4599f19:	cc                   	int3
+ 4599f1a:	cc                   	int3
+ 4599f1b:	cc                   	int3
+ 4599f1c:	cc                   	int3
+ 4599f1d:	cc                   	int3
+ 4599f1e:	cc                   	int3
+ 4599f1f:	cc                   	int3
+
+0000000004599f20 <github.com/mdlayher/ethernet.(*Frame).read@@Base>:
+ 4599f20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4599f24:	0f 86 1c 03 00 00    	jbe    459a246 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x326>
+ 4599f2a:	48 83 ec 40          	sub    $0x40,%rsp
+ 4599f2e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4599f33:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4599f38:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4599f3d:	48 83 78 30 00       	cmpq   $0x0,0x30(%rax)
+ 4599f42:	74 21                	je     4599f65 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x45>
+ 4599f44:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 4599f49:	75 1a                	jne    4599f65 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x45>
+ 4599f4b:	48 8b 1d 1e 89 89 03 	mov    0x389891e(%rip),%rbx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 4599f52:	48 8b 0d 1f 89 89 03 	mov    0x389891f(%rip),%rcx        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 4599f59:	31 c0                	xor    %eax,%eax
+ 4599f5b:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4599f60:	48 83 c4 40          	add    $0x40,%rsp
+ 4599f64:	c3                   	ret
+ 4599f65:	48 83 ff 06          	cmp    $0x6,%rdi
+ 4599f69:	0f 82 c5 02 00 00    	jb     459a234 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x314>
+ 4599f6f:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4599f74:	48 89 7c 24 60       	mov    %rdi,0x60(%rsp)
+ 4599f79:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4599f7e:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4599f83:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4599f87:	48 83 fe 06          	cmp    $0x6,%rsi
+ 4599f8b:	41 b8 06 00 00 00    	mov    $0x6,%r8d
+ 4599f91:	4c 0f 4c c6          	cmovl  %rsi,%r8
+ 4599f95:	48 8b 30             	mov    (%rax),%rsi
+ 4599f98:	48 39 f3             	cmp    %rsi,%rbx
+ 4599f9b:	74 23                	je     4599fc0 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0xa0>
+ 4599f9d:	48 89 d8             	mov    %rbx,%rax
+ 4599fa0:	48 89 f3             	mov    %rsi,%rbx
+ 4599fa3:	4c 89 c1             	mov    %r8,%rcx
+ 4599fa6:	e8 f5 d4 9b fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4599fab:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4599fb0:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4599fb5:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4599fba:	48 8b 7c 24 60       	mov    0x60(%rsp),%rdi
+ 4599fbf:	90                   	nop
+ 4599fc0:	48 83 ff 0c          	cmp    $0xc,%rdi
+ 4599fc4:	0f 82 5d 02 00 00    	jb     459a227 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x307>
+ 4599fca:	48 8b 70 20          	mov    0x20(%rax),%rsi
+ 4599fce:	48 83 fe 06          	cmp    $0x6,%rsi
+ 4599fd2:	41 b8 06 00 00 00    	mov    $0x6,%r8d
+ 4599fd8:	4c 0f 4c c6          	cmovl  %rsi,%r8
+ 4599fdc:	48 8d 73 06          	lea    0x6(%rbx),%rsi
+ 4599fe0:	4c 8b 48 18          	mov    0x18(%rax),%r9
+ 4599fe4:	49 39 f1             	cmp    %rsi,%r9
+ 4599fe7:	74 22                	je     459a00b <github.com/mdlayher/ethernet.(*Frame).read@@Base+0xeb>
+ 4599fe9:	48 89 f0             	mov    %rsi,%rax
+ 4599fec:	4c 89 cb             	mov    %r9,%rbx
+ 4599fef:	4c 89 c1             	mov    %r8,%rcx
+ 4599ff2:	e8 a9 d4 9b fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4599ff7:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4599ffc:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459a001:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 459a006:	48 8b 7c 24 60       	mov    0x60(%rsp),%rdi
+ 459a00b:	44 0f 11 7c 24 18    	movups %xmm15,0x18(%rsp)
+ 459a011:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 459a017:	48 8b 70 30          	mov    0x30(%rax),%rsi
+ 459a01b:	48 89 74 24 18       	mov    %rsi,0x18(%rsp)
+ 459a020:	66 c7 44 24 20 a8 88 	movw   $0x88a8,0x20(%rsp)
+ 459a027:	48 8b 70 38          	mov    0x38(%rax),%rsi
+ 459a02b:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 459a030:	66 c7 44 24 30 00 81 	movw   $0x8100,0x30(%rsp)
+ 459a037:	48 8d 74 24 18       	lea    0x18(%rsp),%rsi
+ 459a03c:	31 d2                	xor    %edx,%edx
+ 459a03e:	41 b8 0c 00 00 00    	mov    $0xc,%r8d
+ 459a044:	eb 0d                	jmp    459a053 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x133>
+ 459a046:	48 83 c6 10          	add    $0x10,%rsi
+ 459a04a:	48 ff c2             	inc    %rdx
+ 459a04d:	49 89 f8             	mov    %rdi,%r8
+ 459a050:	4c 89 e7             	mov    %r12,%rdi
+ 459a053:	48 83 fa 02          	cmp    $0x2,%rdx
+ 459a057:	0f 8d f1 00 00 00    	jge    459a14e <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x22e>
+ 459a05d:	4c 8b 0e             	mov    (%rsi),%r9
+ 459a060:	44 0f b7 56 08       	movzwl 0x8(%rsi),%r10d
+ 459a065:	4d 85 c9             	test   %r9,%r9
+ 459a068:	0f 84 c3 00 00 00    	je     459a131 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x211>
+ 459a06e:	4d 8d 58 02          	lea    0x2(%r8),%r11
+ 459a072:	4c 39 df             	cmp    %r11,%rdi
+ 459a075:	0f 82 a1 01 00 00    	jb     459a21c <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2fc>
+ 459a07b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 459a080:	4d 39 d8             	cmp    %r11,%r8
+ 459a083:	0f 87 88 01 00 00    	ja     459a211 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2f1>
+ 459a089:	49 89 fc             	mov    %rdi,%r12
+ 459a08c:	4c 29 c7             	sub    %r8,%rdi
+ 459a08f:	49 89 fd             	mov    %rdi,%r13
+ 459a092:	48 f7 df             	neg    %rdi
+ 459a095:	48 c1 ff 3f          	sar    $0x3f,%rdi
+ 459a099:	4c 21 c7             	and    %r8,%rdi
+ 459a09c:	66 41 c1 c2 08       	rol    $0x8,%r10w
+ 459a0a1:	66 44 89 14 3b       	mov    %r10w,(%rbx,%rdi,1)
+ 459a0a6:	49 8d 78 04          	lea    0x4(%r8),%rdi
+ 459a0aa:	49 39 fc             	cmp    %rdi,%r12
+ 459a0ad:	0f 82 53 01 00 00    	jb     459a206 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2e6>
+ 459a0b3:	4c 39 df             	cmp    %r11,%rdi
+ 459a0b6:	0f 82 3f 01 00 00    	jb     459a1fb <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2db>
+ 459a0bc:	4d 8d 45 fe          	lea    -0x2(%r13),%r8
+ 459a0c0:	49 f7 d8             	neg    %r8
+ 459a0c3:	49 c1 f8 3f          	sar    $0x3f,%r8
+ 459a0c7:	4d 21 c3             	and    %r8,%r11
+ 459a0ca:	45 0f b6 01          	movzbl (%r9),%r8d
+ 459a0ce:	41 80 f8 07          	cmp    $0x7,%r8b
+ 459a0d2:	76 10                	jbe    459a0e4 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x1c4>
+ 459a0d4:	4c 8b 05 95 87 89 03 	mov    0x3898795(%rip),%r8        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459a0db:	4c 8b 0d 96 87 89 03 	mov    0x3898796(%rip),%r9        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459a0e2:	eb 42                	jmp    459a126 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x206>
+ 459a0e4:	45 0f b7 51 02       	movzwl 0x2(%r9),%r10d
+ 459a0e9:	66 41 81 fa ff 0f    	cmp    $0xfff,%r10w
+ 459a0ef:	72 11                	jb     459a102 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x1e2>
+ 459a0f1:	4c 8b 05 78 87 89 03 	mov    0x3898778(%rip),%r8        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459a0f8:	4c 8b 0d 79 87 89 03 	mov    0x3898779(%rip),%r9        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459a0ff:	90                   	nop
+ 459a100:	eb 24                	jmp    459a126 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x206>
+ 459a102:	41 c1 e0 0d          	shl    $0xd,%r8d
+ 459a106:	45 0f b6 69 01       	movzbl 0x1(%r9),%r13d
+ 459a10b:	41 c1 e5 0c          	shl    $0xc,%r13d
+ 459a10f:	45 09 e8             	or     %r13d,%r8d
+ 459a112:	45 09 c2             	or     %r8d,%r10d
+ 459a115:	90                   	nop
+ 459a116:	66 41 c1 c2 08       	rol    $0x8,%r10w
+ 459a11b:	66 46 89 14 1b       	mov    %r10w,(%rbx,%r11,1)
+ 459a120:	45 31 c0             	xor    %r8d,%r8d
+ 459a123:	45 31 c9             	xor    %r9d,%r9d
+ 459a126:	4d 85 c0             	test   %r8,%r8
+ 459a129:	0f 84 17 ff ff ff    	je     459a046 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x126>
+ 459a12f:	eb 0b                	jmp    459a13c <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x21c>
+ 459a131:	49 89 fc             	mov    %rdi,%r12
+ 459a134:	4c 89 c7             	mov    %r8,%rdi
+ 459a137:	e9 0a ff ff ff       	jmp    459a046 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x126>
+ 459a13c:	31 c0                	xor    %eax,%eax
+ 459a13e:	4c 89 c3             	mov    %r8,%rbx
+ 459a141:	4c 89 c9             	mov    %r9,%rcx
+ 459a144:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459a149:	48 83 c4 40          	add    $0x40,%rsp
+ 459a14d:	c3                   	ret
+ 459a14e:	49 8d 70 02          	lea    0x2(%r8),%rsi
+ 459a152:	48 39 f7             	cmp    %rsi,%rdi
+ 459a155:	0f 82 95 00 00 00    	jb     459a1f0 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2d0>
+ 459a15b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 459a160:	49 39 f0             	cmp    %rsi,%r8
+ 459a163:	0f 87 7c 00 00 00    	ja     459a1e5 <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2c5>
+ 459a169:	4c 29 c7             	sub    %r8,%rdi
+ 459a16c:	48 89 fa             	mov    %rdi,%rdx
+ 459a16f:	48 f7 df             	neg    %rdi
+ 459a172:	48 c1 ff 3f          	sar    $0x3f,%rdi
+ 459a176:	4c 21 c7             	and    %r8,%rdi
+ 459a179:	44 0f b7 48 40       	movzwl 0x40(%rax),%r9d
+ 459a17e:	66 41 c1 c1 08       	rol    $0x8,%r9w
+ 459a183:	66 44 89 0c 3b       	mov    %r9w,(%rbx,%rdi,1)
+ 459a188:	48 39 f1             	cmp    %rsi,%rcx
+ 459a18b:	72 4e                	jb     459a1db <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2bb>
+ 459a18d:	48 89 cf             	mov    %rcx,%rdi
+ 459a190:	4c 29 c1             	sub    %r8,%rcx
+ 459a193:	48 83 c1 fe          	add    $0xfffffffffffffffe,%rcx
+ 459a197:	4c 8b 40 50          	mov    0x50(%rax),%r8
+ 459a19b:	49 39 c8             	cmp    %rcx,%r8
+ 459a19e:	49 0f 4c c8          	cmovl  %r8,%rcx
+ 459a1a2:	48 83 c2 fe          	add    $0xfffffffffffffffe,%rdx
+ 459a1a6:	48 f7 da             	neg    %rdx
+ 459a1a9:	48 c1 fa 3f          	sar    $0x3f,%rdx
+ 459a1ad:	48 21 d6             	and    %rdx,%rsi
+ 459a1b0:	48 8d 14 33          	lea    (%rbx,%rsi,1),%rdx
+ 459a1b4:	48 8b 58 48          	mov    0x48(%rax),%rbx
+ 459a1b8:	48 39 d3             	cmp    %rdx,%rbx
+ 459a1bb:	74 0d                	je     459a1ca <github.com/mdlayher/ethernet.(*Frame).read@@Base+0x2aa>
+ 459a1bd:	48 89 d0             	mov    %rdx,%rax
+ 459a1c0:	e8 db d2 9b fd       	call   1f574a0 <runtime.memmove@@Base>
+ 459a1c5:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+ 459a1ca:	48 89 f8             	mov    %rdi,%rax
+ 459a1cd:	31 db                	xor    %ebx,%ebx
+ 459a1cf:	31 c9                	xor    %ecx,%ecx
+ 459a1d1:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459a1d6:	48 83 c4 40          	add    $0x40,%rsp
+ 459a1da:	c3                   	ret
+ 459a1db:	48 89 f0             	mov    %rsi,%rax
+ 459a1de:	66 90                	xchg   %ax,%ax
+ 459a1e0:	e8 7b c9 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a1e5:	4c 89 c0             	mov    %r8,%rax
+ 459a1e8:	48 89 f1             	mov    %rsi,%rcx
+ 459a1eb:	e8 70 c9 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a1f0:	48 89 f1             	mov    %rsi,%rcx
+ 459a1f3:	48 89 fa             	mov    %rdi,%rdx
+ 459a1f6:	e8 25 c9 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a1fb:	4c 89 d8             	mov    %r11,%rax
+ 459a1fe:	48 89 f9             	mov    %rdi,%rcx
+ 459a201:	e8 5a c9 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a206:	48 89 f9             	mov    %rdi,%rcx
+ 459a209:	4c 89 e2             	mov    %r12,%rdx
+ 459a20c:	e8 0f c9 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a211:	4c 89 c0             	mov    %r8,%rax
+ 459a214:	4c 89 d9             	mov    %r11,%rcx
+ 459a217:	e8 44 c9 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a21c:	4c 89 d9             	mov    %r11,%rcx
+ 459a21f:	48 89 fa             	mov    %rdi,%rdx
+ 459a222:	e8 f9 c8 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a227:	b9 0c 00 00 00       	mov    $0xc,%ecx
+ 459a22c:	48 89 fa             	mov    %rdi,%rdx
+ 459a22f:	e8 ec c8 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a234:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 459a239:	48 89 fa             	mov    %rdi,%rdx
+ 459a23c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459a240:	e8 db c8 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a245:	90                   	nop
+ 459a246:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459a24b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459a250:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459a255:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459a25a:	e8 01 a2 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459a25f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459a264:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459a269:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459a26e:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 459a273:	e9 a8 fc ff ff       	jmp    4599f20 <github.com/mdlayher/ethernet.(*Frame).read@@Base>
+ 459a278:	cc                   	int3
+ 459a279:	cc                   	int3
+ 459a27a:	cc                   	int3
+ 459a27b:	cc                   	int3
+ 459a27c:	cc                   	int3
+ 459a27d:	cc                   	int3
+ 459a27e:	cc                   	int3
+ 459a27f:	cc                   	int3
+
+000000000459a280 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base>:
+ 459a280:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459a284:	0f 86 51 02 00 00    	jbe    459a4db <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x25b>
+ 459a28a:	48 83 ec 50          	sub    $0x50,%rsp
+ 459a28e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 459a293:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 459a298:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 459a29d:	0f 1f 00             	nopl   (%rax)
+ 459a2a0:	48 83 f9 0e          	cmp    $0xe,%rcx
+ 459a2a4:	0f 8c f2 01 00 00    	jl     459a49c <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x21c>
+ 459a2aa:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459a2af:	48 89 7c 24 70       	mov    %rdi,0x70(%rsp)
+ 459a2b4:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 459a2b9:	90                   	nop
+ 459a2ba:	0f b7 53 0c          	movzwl 0xc(%rbx),%edx
+ 459a2be:	66 c1 c2 08          	rol    $0x8,%dx
+ 459a2c2:	66 81 fa 00 81       	cmp    $0x8100,%dx
+ 459a2c7:	74 07                	je     459a2d0 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x50>
+ 459a2c9:	66 81 fa a8 88       	cmp    $0x88a8,%dx
+ 459a2ce:	75 5f                	jne    459a32f <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0xaf>
+ 459a2d0:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 459a2d5:	48 8d 77 f2          	lea    -0xe(%rdi),%rsi
+ 459a2d9:	49 89 f0             	mov    %rsi,%r8
+ 459a2dc:	48 f7 de             	neg    %rsi
+ 459a2df:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 459a2e3:	83 e6 0e             	and    $0xe,%esi
+ 459a2e6:	4c 8d 0c 33          	lea    (%rbx,%rsi,1),%r9
+ 459a2ea:	4c 8d 51 f2          	lea    -0xe(%rcx),%r10
+ 459a2ee:	4c 89 c6             	mov    %r8,%rsi
+ 459a2f1:	89 d3                	mov    %edx,%ebx
+ 459a2f3:	4c 89 c9             	mov    %r9,%rcx
+ 459a2f6:	4c 89 d7             	mov    %r10,%rdi
+ 459a2f9:	e8 62 03 00 00       	call   459a660 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base>
+ 459a2fe:	66 90                	xchg   %ax,%ax
+ 459a300:	48 85 db             	test   %rbx,%rbx
+ 459a303:	75 1a                	jne    459a31f <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x9f>
+ 459a305:	48 8d 50 0e          	lea    0xe(%rax),%rdx
+ 459a309:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 459a30e:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 459a313:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 459a318:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 459a31d:	eb 21                	jmp    459a340 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0xc0>
+ 459a31f:	48 89 d8             	mov    %rbx,%rax
+ 459a322:	48 89 cb             	mov    %rcx,%rbx
+ 459a325:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459a32a:	48 83 c4 50          	add    $0x50,%rsp
+ 459a32e:	c3                   	ret
+ 459a32f:	66 89 50 40          	mov    %dx,0x40(%rax)
+ 459a333:	ba 0e 00 00 00       	mov    $0xe,%edx
+ 459a338:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 459a33f:	00 
+ 459a340:	48 39 d1             	cmp    %rdx,%rcx
+ 459a343:	0f 82 89 01 00 00    	jb     459a4d2 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x252>
+ 459a349:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 459a34e:	48 29 d1             	sub    %rdx,%rcx
+ 459a351:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 459a356:	48 8d 59 0c          	lea    0xc(%rcx),%rbx
+ 459a35a:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 459a35f:	48 8d 05 fa 45 21 01 	lea    0x12145fa(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 459a366:	48 89 d9             	mov    %rbx,%rcx
+ 459a369:	e8 72 c0 99 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 459a36e:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 459a373:	48 8b 74 24 70       	mov    0x70(%rsp),%rsi
+ 459a378:	48 89 d7             	mov    %rdx,%rdi
+ 459a37b:	48 29 f2             	sub    %rsi,%rdx
+ 459a37e:	48 c1 fa 3f          	sar    $0x3f,%rdx
+ 459a382:	48 21 d7             	and    %rdx,%rdi
+ 459a385:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 459a38a:	48 8d 1c 3a          	lea    (%rdx,%rdi,1),%rbx
+ 459a38e:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 459a393:	48 83 fe 06          	cmp    $0x6,%rsi
+ 459a397:	0f 82 28 01 00 00    	jb     459a4c5 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x245>
+ 459a39d:	0f 1f 00             	nopl   (%rax)
+ 459a3a0:	48 39 d0             	cmp    %rdx,%rax
+ 459a3a3:	74 10                	je     459a3b5 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x135>
+ 459a3a5:	44 8b 02             	mov    (%rdx),%r8d
+ 459a3a8:	44 0f b7 4a 04       	movzwl 0x4(%rdx),%r9d
+ 459a3ad:	44 89 00             	mov    %r8d,(%rax)
+ 459a3b0:	66 44 89 48 04       	mov    %r9w,0x4(%rax)
+ 459a3b5:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+ 459a3ba:	48 c7 47 08 06 00 00 	movq   $0x6,0x8(%rdi)
+ 459a3c1:	00 
+ 459a3c2:	48 89 77 10          	mov    %rsi,0x10(%rdi)
+ 459a3c6:	83 3d 93 15 8e 03 00 	cmpl   $0x0,0x38e1593(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459a3cd:	75 05                	jne    459a3d4 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x154>
+ 459a3cf:	48 89 07             	mov    %rax,(%rdi)
+ 459a3d2:	eb 05                	jmp    459a3d9 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x159>
+ 459a3d4:	e8 27 c2 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459a3d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 459a3e0:	48 83 fe 0c          	cmp    $0xc,%rsi
+ 459a3e4:	0f 82 ca 00 00 00    	jb     459a4b4 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x234>
+ 459a3ea:	48 8d 70 06          	lea    0x6(%rax),%rsi
+ 459a3ee:	4c 8d 42 06          	lea    0x6(%rdx),%r8
+ 459a3f2:	49 39 f0             	cmp    %rsi,%r8
+ 459a3f5:	74 10                	je     459a407 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x187>
+ 459a3f7:	44 8b 42 06          	mov    0x6(%rdx),%r8d
+ 459a3fb:	0f b7 52 0a          	movzwl 0xa(%rdx),%edx
+ 459a3ff:	44 89 40 06          	mov    %r8d,0x6(%rax)
+ 459a403:	66 89 50 0a          	mov    %dx,0xa(%rax)
+ 459a407:	48 c7 47 20 06 00 00 	movq   $0x6,0x20(%rdi)
+ 459a40e:	00 
+ 459a40f:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 459a414:	48 8d 51 06          	lea    0x6(%rcx),%rdx
+ 459a418:	48 89 57 28          	mov    %rdx,0x28(%rdi)
+ 459a41c:	48 89 ca             	mov    %rcx,%rdx
+ 459a41f:	48 f7 d9             	neg    %rcx
+ 459a422:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 459a426:	83 e1 0c             	and    $0xc,%ecx
+ 459a429:	48 01 c8             	add    %rcx,%rax
+ 459a42c:	83 3d 2d 15 8e 03 00 	cmpl   $0x0,0x38e152d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459a433:	75 06                	jne    459a43b <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x1bb>
+ 459a435:	48 89 77 18          	mov    %rsi,0x18(%rdi)
+ 459a439:	eb 12                	jmp    459a44d <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x1cd>
+ 459a43b:	4c 8d 47 18          	lea    0x18(%rdi),%r8
+ 459a43f:	48 89 f9             	mov    %rdi,%rcx
+ 459a442:	4c 89 c7             	mov    %r8,%rdi
+ 459a445:	e8 16 c3 9b fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 459a44a:	48 89 cf             	mov    %rcx,%rdi
+ 459a44d:	48 39 d8             	cmp    %rbx,%rax
+ 459a450:	74 1c                	je     459a46e <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x1ee>
+ 459a452:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 459a457:	48 89 d1             	mov    %rdx,%rcx
+ 459a45a:	e8 41 d0 9b fd       	call   1f574a0 <runtime.memmove@@Base>
+ 459a45f:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 459a464:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 459a469:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+ 459a46e:	48 89 57 50          	mov    %rdx,0x50(%rdi)
+ 459a472:	48 89 57 58          	mov    %rdx,0x58(%rdi)
+ 459a476:	83 3d e3 14 8e 03 00 	cmpl   $0x0,0x38e14e3(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459a47d:	75 06                	jne    459a485 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x205>
+ 459a47f:	48 89 47 48          	mov    %rax,0x48(%rdi)
+ 459a483:	eb 09                	jmp    459a48e <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base+0x20e>
+ 459a485:	48 83 c7 48          	add    $0x48,%rdi
+ 459a489:	e8 72 c1 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459a48e:	31 c0                	xor    %eax,%eax
+ 459a490:	31 db                	xor    %ebx,%ebx
+ 459a492:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459a497:	48 83 c4 50          	add    $0x50,%rsp
+ 459a49b:	c3                   	ret
+ 459a49c:	48 8b 05 ed 9f 89 03 	mov    0x3899fed(%rip),%rax        # 7e34490 <io.ErrUnexpectedEOF@@Base>
+ 459a4a3:	48 8b 1d ee 9f 89 03 	mov    0x3899fee(%rip),%rbx        # 7e34498 <io.ErrUnexpectedEOF@@Base+0x8>
+ 459a4aa:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459a4af:	48 83 c4 50          	add    $0x50,%rsp
+ 459a4b3:	c3                   	ret
+ 459a4b4:	b9 0c 00 00 00       	mov    $0xc,%ecx
+ 459a4b9:	48 89 f2             	mov    %rsi,%rdx
+ 459a4bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459a4c0:	e8 5b c6 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a4c5:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 459a4ca:	48 89 f2             	mov    %rsi,%rdx
+ 459a4cd:	e8 4e c6 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a4d2:	48 89 d0             	mov    %rdx,%rax
+ 459a4d5:	e8 86 c6 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a4da:	90                   	nop
+ 459a4db:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459a4e0:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459a4e5:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459a4ea:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459a4ef:	e8 6c 9f 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459a4f4:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459a4f9:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459a4fe:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459a503:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 459a508:	e9 73 fd ff ff       	jmp    459a280 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base>
+ 459a50d:	cc                   	int3
+ 459a50e:	cc                   	int3
+ 459a50f:	cc                   	int3
+ 459a510:	cc                   	int3
+ 459a511:	cc                   	int3
+ 459a512:	cc                   	int3
+ 459a513:	cc                   	int3
+ 459a514:	cc                   	int3
+ 459a515:	cc                   	int3
+ 459a516:	cc                   	int3
+ 459a517:	cc                   	int3
+ 459a518:	cc                   	int3
+ 459a519:	cc                   	int3
+ 459a51a:	cc                   	int3
+ 459a51b:	cc                   	int3
+ 459a51c:	cc                   	int3
+ 459a51d:	cc                   	int3
+ 459a51e:	cc                   	int3
+ 459a51f:	cc                   	int3
+
+000000000459a520 <github.com/mdlayher/ethernet.(*Frame).UnmarshalFCS@@Base>:
+ 459a520:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459a524:	0f 86 be 00 00 00    	jbe    459a5e8 <github.com/mdlayher/ethernet.(*Frame).UnmarshalFCS@@Base+0xc8>
+ 459a52a:	48 83 ec 40          	sub    $0x40,%rsp
+ 459a52e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 459a533:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 459a538:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 459a53d:	0f 1f 00             	nopl   (%rax)
+ 459a540:	48 83 f9 04          	cmp    $0x4,%rcx
+ 459a544:	0f 8c 86 00 00 00    	jl     459a5d0 <github.com/mdlayher/ethernet.(*Frame).UnmarshalFCS@@Base+0xb0>
+ 459a54a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459a54f:	48 89 7c 24 60       	mov    %rdi,0x60(%rsp)
+ 459a554:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 459a559:	48 89 fa             	mov    %rdi,%rdx
+ 459a55c:	48 29 cf             	sub    %rcx,%rdi
+ 459a55f:	48 8d 77 04          	lea    0x4(%rdi),%rsi
+ 459a563:	48 f7 de             	neg    %rsi
+ 459a566:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 459a56a:	48 8d 79 fc          	lea    -0x4(%rcx),%rdi
+ 459a56e:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+ 459a573:	48 21 fe             	and    %rdi,%rsi
+ 459a576:	8b 34 33             	mov    (%rbx,%rsi,1),%esi
+ 459a579:	89 74 24 24          	mov    %esi,0x24(%rsp)
+ 459a57d:	48 89 d8             	mov    %rbx,%rax
+ 459a580:	48 89 fb             	mov    %rdi,%rbx
+ 459a583:	48 89 d1             	mov    %rdx,%rcx
+ 459a586:	e8 f5 bd c2 fd       	call   21c6380 <hash/crc32.ChecksumIEEE@@Base>
+ 459a58b:	8b 54 24 24          	mov    0x24(%rsp),%edx
+ 459a58f:	0f ca                	bswap  %edx
+ 459a591:	39 d0                	cmp    %edx,%eax
+ 459a593:	74 18                	je     459a5ad <github.com/mdlayher/ethernet.(*Frame).UnmarshalFCS@@Base+0x8d>
+ 459a595:	48 8b 05 c4 82 89 03 	mov    0x38982c4(%rip),%rax        # 7e32860 <github.com/mdlayher/ethernet.ErrInvalidFCS@@Base>
+ 459a59c:	48 8b 1d c5 82 89 03 	mov    0x38982c5(%rip),%rbx        # 7e32868 <github.com/mdlayher/ethernet.ErrInvalidFCS@@Base+0x8>
+ 459a5a3:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459a5a8:	48 83 c4 40          	add    $0x40,%rsp
+ 459a5ac:	c3                   	ret
+ 459a5ad:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 459a5b2:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 459a5b7:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 459a5bc:	48 8b 7c 24 60       	mov    0x60(%rsp),%rdi
+ 459a5c1:	e8 ba fc ff ff       	call   459a280 <github.com/mdlayher/ethernet.(*Frame).UnmarshalBinary@@Base>
+ 459a5c6:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459a5cb:	48 83 c4 40          	add    $0x40,%rsp
+ 459a5cf:	c3                   	ret
+ 459a5d0:	48 8b 05 b9 9e 89 03 	mov    0x3899eb9(%rip),%rax        # 7e34490 <io.ErrUnexpectedEOF@@Base>
+ 459a5d7:	48 8b 1d ba 9e 89 03 	mov    0x3899eba(%rip),%rbx        # 7e34498 <io.ErrUnexpectedEOF@@Base+0x8>
+ 459a5de:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459a5e3:	48 83 c4 40          	add    $0x40,%rsp
+ 459a5e7:	c3                   	ret
+ 459a5e8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459a5ed:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459a5f2:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459a5f7:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459a5fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459a600:	e8 5b 9e 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459a605:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459a60a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459a60f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459a614:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 459a619:	e9 02 ff ff ff       	jmp    459a520 <github.com/mdlayher/ethernet.(*Frame).UnmarshalFCS@@Base>
+ 459a61e:	cc                   	int3
+ 459a61f:	cc                   	int3
+
+000000000459a620 <github.com/mdlayher/ethernet.(*Frame).length@@Base>:
+ 459a620:	48 8b 48 50          	mov    0x50(%rax),%rcx
+ 459a624:	48 83 f9 2e          	cmp    $0x2e,%rcx
+ 459a628:	ba 2e 00 00 00       	mov    $0x2e,%edx
+ 459a62d:	48 0f 4c ca          	cmovl  %rdx,%rcx
+ 459a631:	48 83 78 30 00       	cmpq   $0x0,0x30(%rax)
+ 459a636:	74 0e                	je     459a646 <github.com/mdlayher/ethernet.(*Frame).length@@Base+0x26>
+ 459a638:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 459a63d:	74 07                	je     459a646 <github.com/mdlayher/ethernet.(*Frame).length@@Base+0x26>
+ 459a63f:	b8 08 00 00 00       	mov    $0x8,%eax
+ 459a644:	eb 10                	jmp    459a656 <github.com/mdlayher/ethernet.(*Frame).length@@Base+0x36>
+ 459a646:	48 83 78 38 00       	cmpq   $0x0,0x38(%rax)
+ 459a64b:	74 07                	je     459a654 <github.com/mdlayher/ethernet.(*Frame).length@@Base+0x34>
+ 459a64d:	b8 04 00 00 00       	mov    $0x4,%eax
+ 459a652:	eb 02                	jmp    459a656 <github.com/mdlayher/ethernet.(*Frame).length@@Base+0x36>
+ 459a654:	31 c0                	xor    %eax,%eax
+ 459a656:	48 8d 04 01          	lea    (%rcx,%rax,1),%rax
+ 459a65a:	48 8d 40 0e          	lea    0xe(%rax),%rax
+ 459a65e:	c3                   	ret
+ 459a65f:	cc                   	int3
+
+000000000459a660 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base>:
+ 459a660:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459a664:	0f 86 22 03 00 00    	jbe    459a98c <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x32c>
+ 459a66a:	48 83 ec 48          	sub    $0x48,%rsp
+ 459a66e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 459a673:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 459a678:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 459a67d:	0f 1f 00             	nopl   (%rax)
+ 459a680:	48 83 ff 04          	cmp    $0x4,%rdi
+ 459a684:	0f 8c 63 02 00 00    	jl     459a8ed <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x28d>
+ 459a68a:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 459a68f:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 459a694:	48 89 74 24 70       	mov    %rsi,0x70(%rsp)
+ 459a699:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 459a6a0:	66 81 fb 00 81       	cmp    $0x8100,%bx
+ 459a6a5:	75 07                	jne    459a6ae <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x4e>
+ 459a6a7:	31 d2                	xor    %edx,%edx
+ 459a6a9:	e9 c5 00 00 00       	jmp    459a773 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x113>
+ 459a6ae:	66 81 fb a8 88       	cmp    $0x88a8,%bx
+ 459a6b3:	0f 85 82 02 00 00    	jne    459a93b <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2db>
+ 459a6b9:	48 89 7c 24 68       	mov    %rdi,0x68(%rsp)
+ 459a6be:	48 8d 05 1b d2 60 01 	lea    0x160d21b(%rip),%rax        # 5ba78e0 <type:WNona++f@@Base>
+ 459a6c5:	e8 16 5e 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459a6ca:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 459a6cf:	0f b7 11             	movzwl (%rcx),%edx
+ 459a6d2:	66 c1 c2 08          	rol    $0x8,%dx
+ 459a6d6:	66 f7 c2 00 10       	test   $0x1000,%dx
+ 459a6db:	90                   	nop
+ 459a6dc:	89 d3                	mov    %edx,%ebx
+ 459a6de:	66 c1 ea 0d          	shr    $0xd,%dx
+ 459a6e2:	88 10                	mov    %dl,(%rax)
+ 459a6e4:	66 f7 c3 00 10       	test   $0x1000,%bx
+ 459a6e9:	0f 95 40 01          	setne  0x1(%rax)
+ 459a6ed:	81 e3 ff 0f 00 00    	and    $0xfff,%ebx
+ 459a6f3:	66 89 58 02          	mov    %bx,0x2(%rax)
+ 459a6f7:	66 81 fb ff 0f       	cmp    $0xfff,%bx
+ 459a6fc:	72 10                	jb     459a70e <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0xae>
+ 459a6fe:	48 8b 15 6b 81 89 03 	mov    0x389816b(%rip),%rdx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459a705:	48 8b 35 6c 81 89 03 	mov    0x389816c(%rip),%rsi        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459a70c:	eb 04                	jmp    459a712 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0xb2>
+ 459a70e:	31 d2                	xor    %edx,%edx
+ 459a710:	31 f6                	xor    %esi,%esi
+ 459a712:	48 85 d2             	test   %rdx,%rdx
+ 459a715:	0f 85 c0 01 00 00    	jne    459a8db <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x27b>
+ 459a71b:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 459a720:	84 07                	test   %al,(%rdi)
+ 459a722:	83 3d 37 12 8e 03 00 	cmpl   $0x0,0x38e1237(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459a729:	75 06                	jne    459a731 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0xd1>
+ 459a72b:	48 89 47 30          	mov    %rax,0x30(%rdi)
+ 459a72f:	eb 17                	jmp    459a748 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0xe8>
+ 459a731:	48 8d 57 30          	lea    0x30(%rdi),%rdx
+ 459a735:	48 89 fb             	mov    %rdi,%rbx
+ 459a738:	48 89 d7             	mov    %rdx,%rdi
+ 459a73b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 459a740:	e8 bb be 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459a745:	48 89 df             	mov    %rbx,%rdi
+ 459a748:	0f b7 51 02          	movzwl 0x2(%rcx),%edx
+ 459a74c:	66 c1 c2 08          	rol    $0x8,%dx
+ 459a750:	66 81 fa 00 81       	cmp    $0x8100,%dx
+ 459a755:	0f 85 66 01 00 00    	jne    459a8c1 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x261>
+ 459a75b:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 459a760:	48 83 c2 fc          	add    $0xfffffffffffffffc,%rdx
+ 459a764:	48 83 fa 04          	cmp    $0x4,%rdx
+ 459a768:	0f 8c 39 01 00 00    	jl     459a8a7 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x247>
+ 459a76e:	ba 04 00 00 00       	mov    $0x4,%edx
+ 459a773:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 459a778:	48 8d 05 61 d1 60 01 	lea    0x160d161(%rip),%rax        # 5ba78e0 <type:WNona++f@@Base>
+ 459a77f:	90                   	nop
+ 459a780:	e8 5b 5d 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459a785:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 459a78a:	48 8d 51 02          	lea    0x2(%rcx),%rdx
+ 459a78e:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 459a793:	48 39 d3             	cmp    %rdx,%rbx
+ 459a796:	0f 82 94 01 00 00    	jb     459a930 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2d0>
+ 459a79c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459a7a0:	48 39 d1             	cmp    %rdx,%rcx
+ 459a7a3:	0f 87 7c 01 00 00    	ja     459a925 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2c5>
+ 459a7a9:	48 89 de             	mov    %rbx,%rsi
+ 459a7ac:	48 29 cb             	sub    %rcx,%rbx
+ 459a7af:	49 89 d8             	mov    %rbx,%r8
+ 459a7b2:	48 f7 db             	neg    %rbx
+ 459a7b5:	48 c1 fb 3f          	sar    $0x3f,%rbx
+ 459a7b9:	48 21 cb             	and    %rcx,%rbx
+ 459a7bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459a7c0:	49 83 f8 02          	cmp    $0x2,%r8
+ 459a7c4:	0f 82 4d 01 00 00    	jb     459a917 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2b7>
+ 459a7ca:	4c 8b 4c 24 60       	mov    0x60(%rsp),%r9
+ 459a7cf:	46 0f b7 14 0b       	movzwl (%rbx,%r9,1),%r10d
+ 459a7d4:	66 41 c1 c2 08       	rol    $0x8,%r10w
+ 459a7d9:	66 41 f7 c2 00 10    	test   $0x1000,%r10w
+ 459a7df:	45 89 d3             	mov    %r10d,%r11d
+ 459a7e2:	66 41 c1 ea 0d       	shr    $0xd,%r10w
+ 459a7e7:	44 88 10             	mov    %r10b,(%rax)
+ 459a7ea:	66 41 f7 c3 00 10    	test   $0x1000,%r11w
+ 459a7f0:	0f 95 40 01          	setne  0x1(%rax)
+ 459a7f4:	41 81 e3 ff 0f 00 00 	and    $0xfff,%r11d
+ 459a7fb:	66 44 89 58 02       	mov    %r11w,0x2(%rax)
+ 459a800:	66 41 81 fb ff 0f    	cmp    $0xfff,%r11w
+ 459a806:	72 10                	jb     459a818 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x1b8>
+ 459a808:	4c 8b 15 61 80 89 03 	mov    0x3898061(%rip),%r10        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459a80f:	4c 8b 1d 62 80 89 03 	mov    0x3898062(%rip),%r11        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459a816:	eb 08                	jmp    459a820 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x1c0>
+ 459a818:	45 31 d2             	xor    %r10d,%r10d
+ 459a81b:	45 31 db             	xor    %r11d,%r11d
+ 459a81e:	66 90                	xchg   %ax,%ax
+ 459a820:	4d 85 d2             	test   %r10,%r10
+ 459a823:	75 70                	jne    459a895 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x235>
+ 459a825:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 459a82a:	84 07                	test   %al,(%rdi)
+ 459a82c:	83 3d 2d 11 8e 03 00 	cmpl   $0x0,0x38e112d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459a833:	75 06                	jne    459a83b <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x1db>
+ 459a835:	48 89 47 38          	mov    %rax,0x38(%rdi)
+ 459a839:	eb 12                	jmp    459a84d <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x1ed>
+ 459a83b:	4c 8d 57 38          	lea    0x38(%rdi),%r10
+ 459a83f:	48 89 fb             	mov    %rdi,%rbx
+ 459a842:	4c 89 d7             	mov    %r10,%rdi
+ 459a845:	e8 b6 bd 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459a84a:	48 89 df             	mov    %rbx,%rdi
+ 459a84d:	48 83 c1 04          	add    $0x4,%rcx
+ 459a851:	48 39 ce             	cmp    %rcx,%rsi
+ 459a854:	0f 82 b5 00 00 00    	jb     459a90f <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2af>
+ 459a85a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 459a860:	48 39 d1             	cmp    %rdx,%rcx
+ 459a863:	0f 82 9e 00 00 00    	jb     459a907 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base+0x2a7>
+ 459a869:	49 8d 70 fe          	lea    -0x2(%r8),%rsi
+ 459a86d:	48 f7 de             	neg    %rsi
+ 459a870:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 459a874:	48 21 f2             	and    %rsi,%rdx
+ 459a877:	42 0f b7 14 0a       	movzwl (%rdx,%r9,1),%edx
+ 459a87c:	66 c1 c2 08          	rol    $0x8,%dx
+ 459a880:	66 89 57 40          	mov    %dx,0x40(%rdi)
+ 459a884:	48 89 c8             	mov    %rcx,%rax
+ 459a887:	31 db                	xor    %ebx,%ebx
+ 459a889:	31 c9                	xor    %ecx,%ecx
+ 459a88b:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a890:	48 83 c4 48          	add    $0x48,%rsp
+ 459a894:	c3                   	ret
+ 459a895:	31 c0                	xor    %eax,%eax
+ 459a897:	4c 89 d3             	mov    %r10,%rbx
+ 459a89a:	4c 89 d9             	mov    %r11,%rcx
+ 459a89d:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a8a2:	48 83 c4 48          	add    $0x48,%rsp
+ 459a8a6:	c3                   	ret
+ 459a8a7:	48 8b 1d e2 9b 89 03 	mov    0x3899be2(%rip),%rbx        # 7e34490 <io.ErrUnexpectedEOF@@Base>
+ 459a8ae:	48 8b 0d e3 9b 89 03 	mov    0x3899be3(%rip),%rcx        # 7e34498 <io.ErrUnexpectedEOF@@Base+0x8>
+ 459a8b5:	31 c0                	xor    %eax,%eax
+ 459a8b7:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a8bc:	48 83 c4 48          	add    $0x48,%rsp
+ 459a8c0:	c3                   	ret
+ 459a8c1:	48 8b 1d a8 7f 89 03 	mov    0x3897fa8(%rip),%rbx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459a8c8:	48 8b 0d a9 7f 89 03 	mov    0x3897fa9(%rip),%rcx        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459a8cf:	31 c0                	xor    %eax,%eax
+ 459a8d1:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a8d6:	48 83 c4 48          	add    $0x48,%rsp
+ 459a8da:	c3                   	ret
+ 459a8db:	31 c0                	xor    %eax,%eax
+ 459a8dd:	48 89 d3             	mov    %rdx,%rbx
+ 459a8e0:	48 89 f1             	mov    %rsi,%rcx
+ 459a8e3:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a8e8:	48 83 c4 48          	add    $0x48,%rsp
+ 459a8ec:	c3                   	ret
+ 459a8ed:	48 8b 1d 9c 9b 89 03 	mov    0x3899b9c(%rip),%rbx        # 7e34490 <io.ErrUnexpectedEOF@@Base>
+ 459a8f4:	48 8b 0d 9d 9b 89 03 	mov    0x3899b9d(%rip),%rcx        # 7e34498 <io.ErrUnexpectedEOF@@Base+0x8>
+ 459a8fb:	31 c0                	xor    %eax,%eax
+ 459a8fd:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459a902:	48 83 c4 48          	add    $0x48,%rsp
+ 459a906:	c3                   	ret
+ 459a907:	48 89 d0             	mov    %rdx,%rax
+ 459a90a:	e8 51 c2 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a90f:	48 89 f2             	mov    %rsi,%rdx
+ 459a912:	e8 09 c2 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a917:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 459a91c:	4c 89 c2             	mov    %r8,%rdx
+ 459a91f:	90                   	nop
+ 459a920:	e8 fb c1 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a925:	48 89 c8             	mov    %rcx,%rax
+ 459a928:	48 89 d1             	mov    %rdx,%rcx
+ 459a92b:	e8 30 c2 9b fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 459a930:	48 89 d1             	mov    %rdx,%rcx
+ 459a933:	48 89 da             	mov    %rbx,%rdx
+ 459a936:	e8 e5 c1 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459a93b:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 459a941:	89 d8                	mov    %ebx,%eax
+ 459a943:	e8 98 32 95 fd       	call   1eedbe0 <runtime.convT16@@Base>
+ 459a948:	48 8d 0d f1 72 31 01 	lea    0x13172f1(%rip),%rcx        # 58b1c40 <type:vowJPqHN@@Base>
+ 459a94f:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 459a954:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 459a959:	48 8d 05 9a c3 83 00 	lea    0x83c39a(%rip),%rax        # 4dd6cfa <_IO_stdin_used@@Base+0x1a3cfa>
+ 459a960:	bb 17 00 00 00       	mov    $0x17,%ebx
+ 459a965:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 459a96a:	bf 01 00 00 00       	mov    $0x1,%edi
+ 459a96f:	48 89 fe             	mov    %rdi,%rsi
+ 459a972:	e8 89 9f a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459a977:	e8 e4 33 95 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 459a97c:	48 89 c3             	mov    %rax,%rbx
+ 459a97f:	48 8d 05 1a 3d 21 01 	lea    0x1213d1a(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 459a986:	e8 b5 23 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 459a98b:	90                   	nop
+ 459a98c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459a991:	66 89 5c 24 10       	mov    %bx,0x10(%rsp)
+ 459a996:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459a99b:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459a9a0:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 459a9a5:	e8 b6 9a 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459a9aa:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459a9af:	0f b7 5c 24 10       	movzwl 0x10(%rsp),%ebx
+ 459a9b4:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459a9b9:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 459a9be:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 459a9c3:	e9 98 fc ff ff       	jmp    459a660 <github.com/mdlayher/ethernet.(*Frame).unmarshalVLANs@@Base>
+ 459a9c8:	cc                   	int3
+ 459a9c9:	cc                   	int3
+ 459a9ca:	cc                   	int3
+ 459a9cb:	cc                   	int3
+ 459a9cc:	cc                   	int3
+ 459a9cd:	cc                   	int3
+ 459a9ce:	cc                   	int3
+ 459a9cf:	cc                   	int3
+ 459a9d0:	cc                   	int3
+ 459a9d1:	cc                   	int3
+ 459a9d2:	cc                   	int3
+ 459a9d3:	cc                   	int3
+ 459a9d4:	cc                   	int3
+ 459a9d5:	cc                   	int3
+ 459a9d6:	cc                   	int3
+ 459a9d7:	cc                   	int3
+ 459a9d8:	cc                   	int3
+ 459a9d9:	cc                   	int3
+ 459a9da:	cc                   	int3
+ 459a9db:	cc                   	int3
+ 459a9dc:	cc                   	int3
+ 459a9dd:	cc                   	int3
+ 459a9de:	cc                   	int3
+ 459a9df:	cc                   	int3
+
+000000000459a9e0 <github.com/mdlayher/ethernet.EtherType.String@@Base>:
+ 459a9e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459a9e4:	0f 86 f4 00 00 00    	jbe    459aade <github.com/mdlayher/ethernet.EtherType.String@@Base+0xfe>
+ 459a9ea:	48 83 ec 40          	sub    $0x40,%rsp
+ 459a9ee:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 459a9f3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 459a9f8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 459a9ff:	00 
+ 459aa00:	66 3d 00 08          	cmp    $0x800,%ax
+ 459aa04:	0f 84 be 00 00 00    	je     459aac8 <github.com/mdlayher/ethernet.EtherType.String@@Base+0xe8>
+ 459aa0a:	66 3d 06 08          	cmp    $0x806,%ax
+ 459aa0e:	0f 84 9e 00 00 00    	je     459aab2 <github.com/mdlayher/ethernet.EtherType.String@@Base+0xd2>
+ 459aa14:	66 3d 00 81          	cmp    $0x8100,%ax
+ 459aa18:	0f 84 7e 00 00 00    	je     459aa9c <github.com/mdlayher/ethernet.EtherType.String@@Base+0xbc>
+ 459aa1e:	66 90                	xchg   %ax,%ax
+ 459aa20:	66 3d dd 86          	cmp    $0x86dd,%ax
+ 459aa24:	74 60                	je     459aa86 <github.com/mdlayher/ethernet.EtherType.String@@Base+0xa6>
+ 459aa26:	66 3d a8 88          	cmp    $0x88a8,%ax
+ 459aa2a:	75 16                	jne    459aa42 <github.com/mdlayher/ethernet.EtherType.String@@Base+0x62>
+ 459aa2c:	48 8d 05 6a d2 82 00 	lea    0x82d26a(%rip),%rax        # 4dc7c9d <_IO_stdin_used@@Base+0x194c9d>
+ 459aa33:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 459aa38:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aa3d:	48 83 c4 40          	add    $0x40,%rsp
+ 459aa41:	c3                   	ret
+ 459aa42:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 459aa48:	e8 93 31 95 fd       	call   1eedbe0 <runtime.convT16@@Base>
+ 459aa4d:	48 8d 0d ec 71 31 01 	lea    0x13171ec(%rip),%rcx        # 58b1c40 <type:vowJPqHN@@Base>
+ 459aa54:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 459aa59:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459aa5e:	48 8d 05 5c 0c 6e 00 	lea    0x6e0c5c(%rip),%rax        # 4c7b6c1 <_IO_stdin_used@@Base+0x486c1>
+ 459aa65:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 459aa6a:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 459aa6f:	bf 01 00 00 00       	mov    $0x1,%edi
+ 459aa74:	48 89 fe             	mov    %rdi,%rsi
+ 459aa77:	e8 84 9e a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459aa7c:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aa81:	48 83 c4 40          	add    $0x40,%rsp
+ 459aa85:	c3                   	ret
+ 459aa86:	48 8d 05 4e 0c 6e 00 	lea    0x6e0c4e(%rip),%rax        # 4c7b6db <_IO_stdin_used@@Base+0x486db>
+ 459aa8d:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 459aa92:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aa97:	48 83 c4 40          	add    $0x40,%rsp
+ 459aa9b:	c3                   	ret
+ 459aa9c:	48 8d 05 45 0c 6e 00 	lea    0x6e0c45(%rip),%rax        # 4c7b6e8 <_IO_stdin_used@@Base+0x486e8>
+ 459aaa3:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 459aaa8:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aaad:	48 83 c4 40          	add    $0x40,%rsp
+ 459aab1:	c3                   	ret
+ 459aab2:	48 8d 05 0a 41 6d 00 	lea    0x6d410a(%rip),%rax        # 4c6ebc3 <_IO_stdin_used@@Base+0x3bbc3>
+ 459aab9:	bb 0c 00 00 00       	mov    $0xc,%ebx
+ 459aabe:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aac3:	48 83 c4 40          	add    $0x40,%rsp
+ 459aac7:	c3                   	ret
+ 459aac8:	48 8d 05 ff 0b 6e 00 	lea    0x6e0bff(%rip),%rax        # 4c7b6ce <_IO_stdin_used@@Base+0x486ce>
+ 459aacf:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 459aad4:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459aad9:	48 83 c4 40          	add    $0x40,%rsp
+ 459aadd:	c3                   	ret
+ 459aade:	66 89 44 24 08       	mov    %ax,0x8(%rsp)
+ 459aae3:	e8 78 99 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459aae8:	0f b7 44 24 08       	movzwl 0x8(%rsp),%eax
+ 459aaed:	e9 ee fe ff ff       	jmp    459a9e0 <github.com/mdlayher/ethernet.EtherType.String@@Base>
+ 459aaf2:	cc                   	int3
+ 459aaf3:	cc                   	int3
+ 459aaf4:	cc                   	int3
+ 459aaf5:	cc                   	int3
+ 459aaf6:	cc                   	int3
+ 459aaf7:	cc                   	int3
+ 459aaf8:	cc                   	int3
+ 459aaf9:	cc                   	int3
+ 459aafa:	cc                   	int3
+ 459aafb:	cc                   	int3
+ 459aafc:	cc                   	int3
+ 459aafd:	cc                   	int3
+ 459aafe:	cc                   	int3
+ 459aaff:	cc                   	int3
+
+000000000459ab00 <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base>:
+ 459ab00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459ab04:	0f 86 9b 00 00 00    	jbe    459aba5 <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base+0xa5>
+ 459ab0a:	48 83 ec 20          	sub    $0x20,%rsp
+ 459ab0e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 459ab13:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 459ab18:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 459ab1d:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 459ab22:	48 89 d9             	mov    %rbx,%rcx
+ 459ab25:	48 8d 05 34 3e 21 01 	lea    0x1213e34(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 459ab2c:	e8 af b8 99 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 459ab31:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 459ab36:	0f b6 32             	movzbl (%rdx),%esi
+ 459ab39:	40 80 fe 07          	cmp    $0x7,%sil
+ 459ab3d:	76 10                	jbe    459ab4f <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base+0x4f>
+ 459ab3f:	48 8b 15 2a 7d 89 03 	mov    0x3897d2a(%rip),%rdx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459ab46:	4c 8b 05 2b 7d 89 03 	mov    0x3897d2b(%rip),%r8        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ab4d:	eb 3e                	jmp    459ab8d <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base+0x8d>
+ 459ab4f:	44 0f b7 42 02       	movzwl 0x2(%rdx),%r8d
+ 459ab54:	66 41 81 f8 ff 0f    	cmp    $0xfff,%r8w
+ 459ab5a:	72 10                	jb     459ab6c <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base+0x6c>
+ 459ab5c:	48 8b 15 0d 7d 89 03 	mov    0x3897d0d(%rip),%rdx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459ab63:	4c 8b 05 0e 7d 89 03 	mov    0x3897d0e(%rip),%r8        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ab6a:	eb 21                	jmp    459ab8d <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base+0x8d>
+ 459ab6c:	c1 e6 0d             	shl    $0xd,%esi
+ 459ab6f:	44 0f b6 4a 01       	movzbl 0x1(%rdx),%r9d
+ 459ab74:	41 c1 e1 0c          	shl    $0xc,%r9d
+ 459ab78:	44 09 ce             	or     %r9d,%esi
+ 459ab7b:	41 09 f0             	or     %esi,%r8d
+ 459ab7e:	90                   	nop
+ 459ab7f:	66 41 c1 c0 08       	rol    $0x8,%r8w
+ 459ab84:	66 44 89 00          	mov    %r8w,(%rax)
+ 459ab88:	31 d2                	xor    %edx,%edx
+ 459ab8a:	45 31 c0             	xor    %r8d,%r8d
+ 459ab8d:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 459ab92:	48 89 d9             	mov    %rbx,%rcx
+ 459ab95:	48 89 d7             	mov    %rdx,%rdi
+ 459ab98:	4c 89 c6             	mov    %r8,%rsi
+ 459ab9b:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 459aba0:	48 83 c4 20          	add    $0x20,%rsp
+ 459aba4:	c3                   	ret
+ 459aba5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459abaa:	e8 b1 98 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459abaf:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459abb4:	e9 47 ff ff ff       	jmp    459ab00 <github.com/mdlayher/ethernet.(*VLAN).MarshalBinary@@Base>
+ 459abb9:	cc                   	int3
+ 459abba:	cc                   	int3
+ 459abbb:	cc                   	int3
+ 459abbc:	cc                   	int3
+ 459abbd:	cc                   	int3
+ 459abbe:	cc                   	int3
+ 459abbf:	cc                   	int3
+
+000000000459abc0 <github.com/mdlayher/ethernet.(*VLAN).read@@Base>:
+ 459abc0:	48 83 ec 18          	sub    $0x18,%rsp
+ 459abc4:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 459abc9:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 459abce:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 459abd3:	0f b6 10             	movzbl (%rax),%edx
+ 459abd6:	80 fa 07             	cmp    $0x7,%dl
+ 459abd9:	77 55                	ja     459ac30 <github.com/mdlayher/ethernet.(*VLAN).read@@Base+0x70>
+ 459abdb:	0f b7 70 02          	movzwl 0x2(%rax),%esi
+ 459abdf:	90                   	nop
+ 459abe0:	66 81 fe ff 0f       	cmp    $0xfff,%si
+ 459abe5:	73 2f                	jae    459ac16 <github.com/mdlayher/ethernet.(*VLAN).read@@Base+0x56>
+ 459abe7:	c1 e2 0d             	shl    $0xd,%edx
+ 459abea:	0f b6 78 01          	movzbl 0x1(%rax),%edi
+ 459abee:	c1 e7 0c             	shl    $0xc,%edi
+ 459abf1:	09 fa                	or     %edi,%edx
+ 459abf3:	09 d6                	or     %edx,%esi
+ 459abf5:	90                   	nop
+ 459abf6:	48 83 f9 01          	cmp    $0x1,%rcx
+ 459abfa:	76 4e                	jbe    459ac4a <github.com/mdlayher/ethernet.(*VLAN).read@@Base+0x8a>
+ 459abfc:	66 c1 c6 08          	rol    $0x8,%si
+ 459ac00:	66 89 33             	mov    %si,(%rbx)
+ 459ac03:	b8 02 00 00 00       	mov    $0x2,%eax
+ 459ac08:	31 db                	xor    %ebx,%ebx
+ 459ac0a:	31 c9                	xor    %ecx,%ecx
+ 459ac0c:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459ac11:	48 83 c4 18          	add    $0x18,%rsp
+ 459ac15:	c3                   	ret
+ 459ac16:	48 8b 1d 53 7c 89 03 	mov    0x3897c53(%rip),%rbx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459ac1d:	48 8b 0d 54 7c 89 03 	mov    0x3897c54(%rip),%rcx        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ac24:	31 c0                	xor    %eax,%eax
+ 459ac26:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459ac2b:	48 83 c4 18          	add    $0x18,%rsp
+ 459ac2f:	c3                   	ret
+ 459ac30:	48 8b 1d 39 7c 89 03 	mov    0x3897c39(%rip),%rbx        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459ac37:	48 8b 0d 3a 7c 89 03 	mov    0x3897c3a(%rip),%rcx        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ac3e:	31 c0                	xor    %eax,%eax
+ 459ac40:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459ac45:	48 83 c4 18          	add    $0x18,%rsp
+ 459ac49:	c3                   	ret
+ 459ac4a:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459ac4f:	e8 4c be 9b fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 459ac54:	90                   	nop
+ 459ac55:	cc                   	int3
+ 459ac56:	cc                   	int3
+ 459ac57:	cc                   	int3
+ 459ac58:	cc                   	int3
+ 459ac59:	cc                   	int3
+ 459ac5a:	cc                   	int3
+ 459ac5b:	cc                   	int3
+ 459ac5c:	cc                   	int3
+ 459ac5d:	cc                   	int3
+ 459ac5e:	cc                   	int3
+ 459ac5f:	cc                   	int3
+
+000000000459ac60 <github.com/mdlayher/ethernet.(*VLAN).UnmarshalBinary@@Base>:
+ 459ac60:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459ac65:	48 83 f9 02          	cmp    $0x2,%rcx
+ 459ac69:	75 43                	jne    459acae <github.com/mdlayher/ethernet.(*VLAN).UnmarshalBinary@@Base+0x4e>
+ 459ac6b:	0f b7 0b             	movzwl (%rbx),%ecx
+ 459ac6e:	66 c1 c1 08          	rol    $0x8,%cx
+ 459ac72:	66 f7 c1 00 10       	test   $0x1000,%cx
+ 459ac77:	90                   	nop
+ 459ac78:	89 ca                	mov    %ecx,%edx
+ 459ac7a:	66 c1 e9 0d          	shr    $0xd,%cx
+ 459ac7e:	88 08                	mov    %cl,(%rax)
+ 459ac80:	66 f7 c2 00 10       	test   $0x1000,%dx
+ 459ac85:	0f 95 40 01          	setne  0x1(%rax)
+ 459ac89:	81 e2 ff 0f 00 00    	and    $0xfff,%edx
+ 459ac8f:	66 89 50 02          	mov    %dx,0x2(%rax)
+ 459ac93:	66 81 fa ff 0f       	cmp    $0xfff,%dx
+ 459ac98:	72 0f                	jb     459aca9 <github.com/mdlayher/ethernet.(*VLAN).UnmarshalBinary@@Base+0x49>
+ 459ac9a:	48 8b 05 cf 7b 89 03 	mov    0x3897bcf(%rip),%rax        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459aca1:	48 8b 1d d0 7b 89 03 	mov    0x3897bd0(%rip),%rbx        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459aca8:	c3                   	ret
+ 459aca9:	31 c0                	xor    %eax,%eax
+ 459acab:	31 db                	xor    %ebx,%ebx
+ 459acad:	c3                   	ret
+ 459acae:	48 8b 05 db 97 89 03 	mov    0x38997db(%rip),%rax        # 7e34490 <io.ErrUnexpectedEOF@@Base>
+ 459acb5:	48 8b 1d dc 97 89 03 	mov    0x38997dc(%rip),%rbx        # 7e34498 <io.ErrUnexpectedEOF@@Base+0x8>
+ 459acbc:	c3                   	ret
+ 459acbd:	cc                   	int3
+ 459acbe:	cc                   	int3
+ 459acbf:	cc                   	int3
+
+000000000459acc0 <github.com/mdlayher/ethernet.init@@Base>:
+ 459acc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459acc4:	0f 86 af 00 00 00    	jbe    459ad79 <github.com/mdlayher/ethernet.init@@Base+0xb9>
+ 459acca:	48 83 ec 18          	sub    $0x18,%rsp
+ 459acce:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 459acd3:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 459acd8:	48 8d 05 21 96 4d 01 	lea    0x14d9621(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459acdf:	90                   	nop
+ 459ace0:	e8 fb 57 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459ace5:	48 c7 40 08 1c 00 00 	movq   $0x1c,0x8(%rax)
+ 459acec:	00 
+ 459aced:	48 8d 0d d0 e8 84 00 	lea    0x84e8d0(%rip),%rcx        # 4de95c4 <_IO_stdin_used@@Base+0x1b65c4>
+ 459acf4:	48 89 08             	mov    %rcx,(%rax)
+ 459acf7:	48 8d 0d c2 31 96 01 	lea    0x19631c2(%rip),%rcx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459acfe:	48 89 0d 5b 7b 89 03 	mov    %rcx,0x3897b5b(%rip)        # 7e32860 <github.com/mdlayher/ethernet.ErrInvalidFCS@@Base>
+ 459ad05:	83 3d 54 0c 8e 03 00 	cmpl   $0x0,0x38e0c54(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459ad0c:	75 09                	jne    459ad17 <github.com/mdlayher/ethernet.init@@Base+0x57>
+ 459ad0e:	48 89 05 53 7b 89 03 	mov    %rax,0x3897b53(%rip)        # 7e32868 <github.com/mdlayher/ethernet.ErrInvalidFCS@@Base+0x8>
+ 459ad15:	eb 0e                	jmp    459ad25 <github.com/mdlayher/ethernet.init@@Base+0x65>
+ 459ad17:	48 8d 3d 4a 7b 89 03 	lea    0x3897b4a(%rip),%rdi        # 7e32868 <github.com/mdlayher/ethernet.ErrInvalidFCS@@Base+0x8>
+ 459ad1e:	66 90                	xchg   %ax,%ax
+ 459ad20:	e8 db b8 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459ad25:	48 8d 05 d4 95 4d 01 	lea    0x14d95d4(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459ad2c:	e8 af 57 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459ad31:	48 c7 40 08 0c 00 00 	movq   $0xc,0x8(%rax)
+ 459ad38:	00 
+ 459ad39:	48 8d 0d 7b 58 6d 00 	lea    0x6d587b(%rip),%rcx        # 4c705bb <_IO_stdin_used@@Base+0x3d5bb>
+ 459ad40:	48 89 08             	mov    %rcx,(%rax)
+ 459ad43:	48 8d 0d 76 31 96 01 	lea    0x1963176(%rip),%rcx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459ad4a:	48 89 0d 1f 7b 89 03 	mov    %rcx,0x3897b1f(%rip)        # 7e32870 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base>
+ 459ad51:	83 3d 08 0c 8e 03 00 	cmpl   $0x0,0x38e0c08(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459ad58:	75 09                	jne    459ad63 <github.com/mdlayher/ethernet.init@@Base+0xa3>
+ 459ad5a:	48 89 05 17 7b 89 03 	mov    %rax,0x3897b17(%rip)        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ad61:	eb 0c                	jmp    459ad6f <github.com/mdlayher/ethernet.init@@Base+0xaf>
+ 459ad63:	48 8d 3d 0e 7b 89 03 	lea    0x3897b0e(%rip),%rdi        # 7e32878 <github.com/mdlayher/ethernet.ErrInvalidVLAN@@Base+0x8>
+ 459ad6a:	e8 91 b8 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459ad6f:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459ad74:	48 83 c4 18          	add    $0x18,%rsp
+ 459ad78:	c3                   	ret
+ 459ad79:	e8 e2 96 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459ad7e:	66 90                	xchg   %ax,%ax
+ 459ad80:	e9 3b ff ff ff       	jmp    459acc0 <github.com/mdlayher/ethernet.init@@Base>
+ 459ad85:	cc                   	int3
+ 459ad86:	cc                   	int3
+ 459ad87:	cc                   	int3
+ 459ad88:	cc                   	int3
+ 459ad89:	cc                   	int3
+ 459ad8a:	cc                   	int3
+ 459ad8b:	cc                   	int3
+ 459ad8c:	cc                   	int3
+ 459ad8d:	cc                   	int3
+ 459ad8e:	cc                   	int3
+ 459ad8f:	cc                   	int3
+ 459ad90:	cc                   	int3
+ 459ad91:	cc                   	int3
+ 459ad92:	cc                   	int3
+ 459ad93:	cc                   	int3
+ 459ad94:	cc                   	int3
+ 459ad95:	cc                   	int3
+ 459ad96:	cc                   	int3
+ 459ad97:	cc                   	int3
+ 459ad98:	cc                   	int3
+ 459ad99:	cc                   	int3
+ 459ad9a:	cc                   	int3
+ 459ad9b:	cc                   	int3
+ 459ad9c:	cc                   	int3
+ 459ad9d:	cc                   	int3
+ 459ad9e:	cc                   	int3
+ 459ad9f:	cc                   	int3
+
+000000000459ada0 <github.com/mdlayher/ethernet.(*EtherType).String@@Base>:
+ 459ada0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459ada4:	76 37                	jbe    459addd <github.com/mdlayher/ethernet.(*EtherType).String@@Base+0x3d>
+ 459ada6:	48 83 ec 10          	sub    $0x10,%rsp
+ 459adaa:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 459adaf:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 459adb4:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 459adb8:	4d 85 e4             	test   %r12,%r12
+ 459adbb:	75 31                	jne    459adee <github.com/mdlayher/ethernet.(*EtherType).String@@Base+0x4e>
+ 459adbd:	0f 1f 00             	nopl   (%rax)
+ 459adc0:	48 85 c0             	test   %rax,%rax
+ 459adc3:	74 12                	je     459add7 <github.com/mdlayher/ethernet.(*EtherType).String@@Base+0x37>
+ 459adc5:	0f b7 00             	movzwl (%rax),%eax
+ 459adc8:	e8 13 fc ff ff       	call   459a9e0 <github.com/mdlayher/ethernet.EtherType.String@@Base>
+ 459adcd:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 459add2:	48 83 c4 10          	add    $0x10,%rsp
+ 459add6:	c3                   	ret
+ 459add7:	e8 e4 14 95 fd       	call   1eec2c0 <runtime.panicwrap@@Base>
+ 459addc:	90                   	nop
+ 459addd:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459ade2:	e8 79 96 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459ade7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459adec:	eb b2                	jmp    459ada0 <github.com/mdlayher/ethernet.(*EtherType).String@@Base>
+ 459adee:	4c 8d 6c 24 18       	lea    0x18(%rsp),%r13
+ 459adf3:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 459adf7:	75 c4                	jne    459adbd <github.com/mdlayher/ethernet.(*EtherType).String@@Base+0x1d>
+ 459adf9:	49 89 24 24          	mov    %rsp,(%r12)
+ 459adfd:	eb be                	jmp    459adbd <github.com/mdlayher/ethernet.(*EtherType).String@@Base+0x1d>
+ 459adff:	cc                   	int3

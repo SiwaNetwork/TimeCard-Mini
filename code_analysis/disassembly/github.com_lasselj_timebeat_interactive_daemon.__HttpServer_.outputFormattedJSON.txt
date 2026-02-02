@@ -1,0 +1,147 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON
+# addr 0x4c27720 size 608 (0x260)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c27720 <github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON@@Base>:
+ 4c27720:	4c 8d 64 24 d8       	lea    -0x28(%rsp),%r12
+ 4c27725:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4c27729:	0f 86 09 02 00 00    	jbe    4c27938 <github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON@@Base+0x218>
+ 4c2772f:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+ 4c27736:	48 89 ac 24 a0 00 00 	mov    %rbp,0xa0(%rsp)
+ 4c2773d:	00 
+ 4c2773e:	48 8d ac 24 a0 00 00 	lea    0xa0(%rsp),%rbp
+ 4c27745:	00 
+ 4c27746:	48 89 9c 24 b8 00 00 	mov    %rbx,0xb8(%rsp)
+ 4c2774d:	00 
+ 4c2774e:	48 89 b4 24 d0 00 00 	mov    %rsi,0xd0(%rsp)
+ 4c27755:	00 
+ 4c27756:	4c 89 84 24 d8 00 00 	mov    %r8,0xd8(%rsp)
+ 4c2775d:	00 
+ 4c2775e:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4c27765:	00 
+ 4c27766:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4c2776b:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 4c27772:	00 
+ 4c27773:	31 ff                	xor    %edi,%edi
+ 4c27775:	48 89 f0             	mov    %rsi,%rax
+ 4c27778:	4c 89 c3             	mov    %r8,%rbx
+ 4c2777b:	31 c9                	xor    %ecx,%ecx
+ 4c2777d:	48 8d 35 d4 ed 8a 00 	lea    0x8aedd4(%rip),%rsi        # 54d6558 <_IO_stdin_used@@Base+0x8a3558>
+ 4c27784:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4c2778a:	e8 d1 4f 64 fd       	call   226c760 <encoding/json.MarshalIndent@@Base>
+ 4c2778f:	48 85 ff             	test   %rdi,%rdi
+ 4c27792:	0f 84 80 00 00 00    	je     4c27818 <github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON@@Base+0xf8>
+ 4c27798:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4c2779d:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4c277a2:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4c277a7:	48 8b 4f 18          	mov    0x18(%rdi),%rcx
+ 4c277ab:	48 89 f0             	mov    %rsi,%rax
+ 4c277ae:	ff d1                	call   *%rcx
+ 4c277b0:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4c277b6:	e8 a5 65 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c277bb:	48 8d 0d de 6e b8 00 	lea    0xb86ede(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c277c2:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4c277c7:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4c277cc:	48 8d 05 ea 89 1c 00 	lea    0x1c89ea(%rip),%rax        # 4df01bd <_IO_stdin_used@@Base+0x1bd1bd>
+ 4c277d3:	bb 1e 00 00 00       	mov    $0x1e,%ebx
+ 4c277d8:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c277dd:	48 89 fe             	mov    %rdi,%rsi
+ 4c277e0:	48 8d 4c 24 70       	lea    0x70(%rsp),%rcx
+ 4c277e5:	e8 16 d1 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c277ea:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4c277f1:	00 
+ 4c277f2:	48 8b 11             	mov    (%rcx),%rdx
+ 4c277f5:	48 89 c6             	mov    %rax,%rsi
+ 4c277f8:	48 89 d0             	mov    %rdx,%rax
+ 4c277fb:	48 89 df             	mov    %rbx,%rdi
+ 4c277fe:	48 89 f3             	mov    %rsi,%rbx
+ 4c27801:	48 89 f9             	mov    %rdi,%rcx
+ 4c27804:	e8 57 f8 7d ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4c27809:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4c2780e:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4c27813:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4c27818:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4c2781e:	66 90                	xchg   %ax,%ax
+ 4c27820:	e8 db 65 2c fd       	call   1eede00 <runtime.convTslice@@Base>
+ 4c27825:	48 8d 15 f4 70 b1 00 	lea    0xb170f4(%rip),%rdx        # 573e920 <type:[]uint8@@Base>
+ 4c2782c:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+ 4c27831:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4c27836:	48 8d 05 23 3b e0 00 	lea    0xe03b23(%rip),%rax        # 5a2b360 <type:io.Writer@@Base>
+ 4c2783d:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4c27842:	e8 79 66 2c fd       	call   1eedec0 <runtime.convI2I@@Base>
+ 4c27847:	48 8b 9c 24 c0 00 00 	mov    0xc0(%rsp),%rbx
+ 4c2784e:	00 
+ 4c2784f:	48 8d 0d 73 bd 00 00 	lea    0xbd73(%rip),%rcx        # 4c335c9 <_IO_stdin_used@@Base+0x5c9>
+ 4c27856:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4c2785b:	48 8d 74 24 70       	lea    0x70(%rsp),%rsi
+ 4c27860:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4c27866:	4d 89 c1             	mov    %r8,%r9
+ 4c27869:	e8 72 cf 3c fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4c2786e:	48 85 db             	test   %rbx,%rbx
+ 4c27871:	0f 84 b1 00 00 00    	je     4c27928 <github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON@@Base+0x208>
+ 4c27877:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4c2787c:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4c27880:	48 89 c8             	mov    %rcx,%rax
+ 4c27883:	ff d2                	call   *%rdx
+ 4c27885:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4c2788a:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4c2788f:	44 0f 11 bc 24 80 00 	movups %xmm15,0x80(%rsp)
+ 4c27896:	00 00 
+ 4c27898:	44 0f 11 bc 24 90 00 	movups %xmm15,0x90(%rsp)
+ 4c2789f:	00 00 
+ 4c278a1:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4c278a6:	e8 35 64 2c fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4c278ab:	48 8d 0d ae 2d b8 00 	lea    0xb82dae(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4c278b2:	48 89 8c 24 80 00 00 	mov    %rcx,0x80(%rsp)
+ 4c278b9:	00 
+ 4c278ba:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4c278c1:	00 
+ 4c278c2:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4c278c7:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4c278cc:	e8 8f 64 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c278d1:	48 8d 0d c8 6d b8 00 	lea    0xb86dc8(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c278d8:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 4c278df:	00 
+ 4c278e0:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4c278e7:	00 
+ 4c278e8:	48 8d 05 26 4b 1b 00 	lea    0x1b4b26(%rip),%rax        # 4ddc415 <_IO_stdin_used@@Base+0x1a9415>
+ 4c278ef:	bb 19 00 00 00       	mov    $0x19,%ebx
+ 4c278f4:	48 8d 8c 24 80 00 00 	lea    0x80(%rsp),%rcx
+ 4c278fb:	00 
+ 4c278fc:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4c27901:	48 89 fe             	mov    %rdi,%rsi
+ 4c27904:	e8 f7 cf 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c27909:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4c27910:	00 
+ 4c27911:	48 8b 09             	mov    (%rcx),%rcx
+ 4c27914:	48 89 c2             	mov    %rax,%rdx
+ 4c27917:	48 89 c8             	mov    %rcx,%rax
+ 4c2791a:	48 89 de             	mov    %rbx,%rsi
+ 4c2791d:	48 89 d3             	mov    %rdx,%rbx
+ 4c27920:	48 89 f1             	mov    %rsi,%rcx
+ 4c27923:	e8 38 f7 7d ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4c27928:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4c2792f:	00 
+ 4c27930:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4c27937:	c3                   	ret
+ 4c27938:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4c2793d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4c27942:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4c27947:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4c2794c:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 4c27951:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 4c27956:	e8 05 cb 32 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4c2795b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4c27960:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4c27965:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4c2796a:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4c2796f:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4c27974:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 4c27979:	e9 a2 fd ff ff       	jmp    4c27720 <github.com/lasselj/timebeat/interactive/daemon.(*HttpServer).outputFormattedJSON@@Base>
+ 4c2797e:	cc                   	int3
+ 4c2797f:	cc                   	int3

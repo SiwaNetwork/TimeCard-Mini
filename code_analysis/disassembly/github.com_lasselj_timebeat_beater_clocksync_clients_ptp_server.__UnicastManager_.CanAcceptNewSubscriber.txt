@@ -1,0 +1,98 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber
+# addr 0x45ce660 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ce660 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base>:
+ 45ce660:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ce664:	0f 86 ea 00 00 00    	jbe    45ce754 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0xf4>
+ 45ce66a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45ce66e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45ce673:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45ce678:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45ce67f:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 45ce684:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45ce689:	c6 44 24 1e 00       	movb   $0x0,0x1e(%rsp)
+ 45ce68e:	be 01 00 00 00       	mov    $0x1,%esi
+ 45ce693:	f0 0f c1 b0 38 08 00 	lock xadd %esi,0x838(%rax)
+ 45ce69a:	00 
+ 45ce69b:	ff c6                	inc    %esi
+ 45ce69d:	0f 1f 00             	nopl   (%rax)
+ 45ce6a0:	85 f6                	test   %esi,%esi
+ 45ce6a2:	7d 1d                	jge    45ce6c1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0x61>
+ 45ce6a4:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45ce6a9:	48 8d 90 34 08 00 00 	lea    0x834(%rax),%rdx
+ 45ce6b0:	31 db                	xor    %ebx,%ebx
+ 45ce6b2:	31 c9                	xor    %ecx,%ecx
+ 45ce6b4:	48 89 d0             	mov    %rdx,%rax
+ 45ce6b7:	e8 24 3c 98 fd       	call   1f522e0 <sync.runtime_SemacquireRWMutexR@@Base>
+ 45ce6bc:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45ce6c1:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 45ce6c7:	48 8d 0d b2 00 00 00 	lea    0xb2(%rip),%rcx        # 45ce780 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber.func1@@Base>
+ 45ce6ce:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 45ce6d3:	48 8d 88 28 08 00 00 	lea    0x828(%rax),%rcx
+ 45ce6da:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45ce6df:	48 8d 4c 24 20       	lea    0x20(%rsp),%rcx
+ 45ce6e4:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 45ce6e9:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 45ce6ee:	48 8b 88 50 08 00 00 	mov    0x850(%rax),%rcx
+ 45ce6f5:	48 85 c9             	test   %rcx,%rcx
+ 45ce6f8:	75 08                	jne    45ce702 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0xa2>
+ 45ce6fa:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45ce6ff:	90                   	nop
+ 45ce700:	eb 19                	jmp    45ce71b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0xbb>
+ 45ce702:	48 8b 80 20 08 00 00 	mov    0x820(%rax),%rax
+ 45ce709:	48 85 c0             	test   %rax,%rax
+ 45ce70c:	74 05                	je     45ce713 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0xb3>
+ 45ce70e:	48 8b 00             	mov    (%rax),%rax
+ 45ce711:	eb 02                	jmp    45ce715 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base+0xb5>
+ 45ce713:	31 c0                	xor    %eax,%eax
+ 45ce715:	48 39 c8             	cmp    %rcx,%rax
+ 45ce718:	0f 9c c0             	setl   %al
+ 45ce71b:	88 44 24 1e          	mov    %al,0x1e(%rsp)
+ 45ce71f:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45ce724:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45ce729:	48 8b 02             	mov    (%rdx),%rax
+ 45ce72c:	ff d0                	call   *%rax
+ 45ce72e:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 45ce733:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45ce738:	48 83 c4 40          	add    $0x40,%rsp
+ 45ce73c:	c3                   	ret
+ 45ce73d:	0f 1f 00             	nopl   (%rax)
+ 45ce740:	e8 1b d8 94 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45ce745:	0f b6 44 24 1e       	movzbl 0x1e(%rsp),%eax
+ 45ce74a:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45ce74f:	48 83 c4 40          	add    $0x40,%rsp
+ 45ce753:	c3                   	ret
+ 45ce754:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ce759:	e8 02 5d 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ce75e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ce763:	e9 f8 fe ff ff       	jmp    45ce660 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).CanAcceptNewSubscriber@@Base>
+ 45ce768:	cc                   	int3
+ 45ce769:	cc                   	int3
+ 45ce76a:	cc                   	int3
+ 45ce76b:	cc                   	int3
+ 45ce76c:	cc                   	int3
+ 45ce76d:	cc                   	int3
+ 45ce76e:	cc                   	int3
+ 45ce76f:	cc                   	int3
+ 45ce770:	cc                   	int3
+ 45ce771:	cc                   	int3
+ 45ce772:	cc                   	int3
+ 45ce773:	cc                   	int3
+ 45ce774:	cc                   	int3
+ 45ce775:	cc                   	int3
+ 45ce776:	cc                   	int3
+ 45ce777:	cc                   	int3
+ 45ce778:	cc                   	int3
+ 45ce779:	cc                   	int3
+ 45ce77a:	cc                   	int3
+ 45ce77b:	cc                   	int3
+ 45ce77c:	cc                   	int3
+ 45ce77d:	cc                   	int3
+ 45ce77e:	cc                   	int3
+ 45ce77f:	cc                   	int3

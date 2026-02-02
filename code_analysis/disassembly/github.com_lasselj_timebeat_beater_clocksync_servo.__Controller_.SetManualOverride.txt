@@ -1,0 +1,129 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride
+# addr 0x45a7f40 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a7f40 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base>:
+ 45a7f40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a7f44:	0f 86 3d 01 00 00    	jbe    45a8087 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base+0x147>
+ 45a7f4a:	48 83 ec 58          	sub    $0x58,%rsp
+ 45a7f4e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 45a7f53:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 45a7f58:	40 88 b4 24 80 00 00 	mov    %sil,0x80(%rsp)
+ 45a7f5f:	00 
+ 45a7f60:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 45a7f65:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 45a7f6a:	48 89 7c 24 30       	mov    %rdi,0x30(%rsp)
+ 45a7f6f:	48 8b 40 30          	mov    0x30(%rax),%rax
+ 45a7f73:	e8 48 e4 fe ff       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45a7f78:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45a7f7f:	00 
+ 45a7f80:	48 85 c0             	test   %rax,%rax
+ 45a7f83:	0f 84 87 00 00 00    	je     45a8010 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base+0xd0>
+ 45a7f89:	0f b6 94 24 80 00 00 	movzbl 0x80(%rsp),%edx
+ 45a7f90:	00 
+ 45a7f91:	84 d2                	test   %dl,%dl
+ 45a7f93:	74 58                	je     45a7fed <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base+0xad>
+ 45a7f95:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45a7f9a:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 45a7f9f:	90                   	nop
+ 45a7fa0:	e8 fb c0 fe ff       	call   45940a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SetManualOverride@@Base>
+ 45a7fa5:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45a7fab:	e8 30 5d 94 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45a7fb0:	48 8d 15 69 27 20 01 	lea    0x1202769(%rip),%rdx        # 57aa720 <type:int64@@Base>
+ 45a7fb7:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45a7fbc:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45a7fc1:	48 8d 05 8d 44 85 00 	lea    0x85448d(%rip),%rax        # 4dfc455 <_IO_stdin_used@@Base+0x1c9455>
+ 45a7fc8:	bb 21 00 00 00       	mov    $0x21,%ebx
+ 45a7fcd:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 45a7fd2:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a7fd7:	48 89 fe             	mov    %rdi,%rsi
+ 45a7fda:	e8 21 c9 a4 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45a7fdf:	31 c9                	xor    %ecx,%ecx
+ 45a7fe1:	31 ff                	xor    %edi,%edi
+ 45a7fe3:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45a7fe8:	48 83 c4 58          	add    $0x58,%rsp
+ 45a7fec:	c3                   	ret
+ 45a7fed:	31 db                	xor    %ebx,%ebx
+ 45a7fef:	31 c9                	xor    %ecx,%ecx
+ 45a7ff1:	e8 aa c0 fe ff       	call   45940a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SetManualOverride@@Base>
+ 45a7ff6:	48 8d 05 4a 00 83 00 	lea    0x83004a(%rip),%rax        # 4dd8047 <_IO_stdin_used@@Base+0x1a5047>
+ 45a7ffd:	bb 18 00 00 00       	mov    $0x18,%ebx
+ 45a8002:	31 c9                	xor    %ecx,%ecx
+ 45a8004:	31 ff                	xor    %edi,%edi
+ 45a8006:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45a800b:	48 83 c4 58          	add    $0x58,%rsp
+ 45a800f:	c3                   	ret
+ 45a8010:	31 c0                	xor    %eax,%eax
+ 45a8012:	48 8d 1d 7d 03 73 00 	lea    0x73037d(%rip),%rbx        # 4cd8396 <_IO_stdin_used@@Base+0xa5396>
+ 45a8019:	b9 0f 00 00 00       	mov    $0xf,%ecx
+ 45a801e:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 45a8023:	48 8b 74 24 70       	mov    0x70(%rsp),%rsi
+ 45a8028:	e8 f3 22 99 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45a802d:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a8032:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45a8037:	48 8d 05 c2 c2 4c 01 	lea    0x14cc2c2(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 45a803e:	66 90                	xchg   %ax,%ax
+ 45a8040:	e8 9b 84 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45a8045:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45a804a:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 45a804e:	83 3d 0b 39 8d 03 00 	cmpl   $0x0,0x38d390b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a8055:	75 0b                	jne    45a8062 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base+0x122>
+ 45a8057:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45a805c:	48 89 10             	mov    %rdx,(%rax)
+ 45a805f:	90                   	nop
+ 45a8060:	eb 0d                	jmp    45a806f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base+0x12f>
+ 45a8062:	48 89 c7             	mov    %rax,%rdi
+ 45a8065:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45a806a:	e8 b1 e6 9a fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45a806f:	31 db                	xor    %ebx,%ebx
+ 45a8071:	48 8d 0d 48 5e 95 01 	lea    0x1955e48(%rip),%rcx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 45a8078:	48 89 c7             	mov    %rax,%rdi
+ 45a807b:	31 c0                	xor    %eax,%eax
+ 45a807d:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45a8082:	48 83 c4 58          	add    $0x58,%rsp
+ 45a8086:	c3                   	ret
+ 45a8087:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a808c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45a8091:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45a8096:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45a809b:	40 88 74 24 28       	mov    %sil,0x28(%rsp)
+ 45a80a0:	e8 bb c3 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a80a5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a80aa:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45a80af:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a80b4:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45a80b9:	0f b6 74 24 28       	movzbl 0x28(%rsp),%esi
+ 45a80be:	66 90                	xchg   %ax,%ax
+ 45a80c0:	e9 7b fe ff ff       	jmp    45a7f40 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base>
+ 45a80c5:	cc                   	int3
+ 45a80c6:	cc                   	int3
+ 45a80c7:	cc                   	int3
+ 45a80c8:	cc                   	int3
+ 45a80c9:	cc                   	int3
+ 45a80ca:	cc                   	int3
+ 45a80cb:	cc                   	int3
+ 45a80cc:	cc                   	int3
+ 45a80cd:	cc                   	int3
+ 45a80ce:	cc                   	int3
+ 45a80cf:	cc                   	int3
+ 45a80d0:	cc                   	int3
+ 45a80d1:	cc                   	int3
+ 45a80d2:	cc                   	int3
+ 45a80d3:	cc                   	int3
+ 45a80d4:	cc                   	int3
+ 45a80d5:	cc                   	int3
+ 45a80d6:	cc                   	int3
+ 45a80d7:	cc                   	int3
+ 45a80d8:	cc                   	int3
+ 45a80d9:	cc                   	int3
+ 45a80da:	cc                   	int3
+ 45a80db:	cc                   	int3
+ 45a80dc:	cc                   	int3
+ 45a80dd:	cc                   	int3
+ 45a80de:	cc                   	int3
+ 45a80df:	cc                   	int3

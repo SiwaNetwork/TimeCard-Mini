@@ -1,0 +1,85 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd
+# addr 0x45e6fa0 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e6fa0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd@@Base>:
+ 45e6fa0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e6fa4:	0f 86 bc 00 00 00    	jbe    45e7066 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd@@Base+0xc6>
+ 45e6faa:	48 83 ec 38          	sub    $0x38,%rsp
+ 45e6fae:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 45e6fb3:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 45e6fb8:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45e6fbd:	0f 1f 00             	nopl   (%rax)
+ 45e6fc0:	48 85 db             	test   %rbx,%rbx
+ 45e6fc3:	0f 86 92 00 00 00    	jbe    45e705b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd@@Base+0xbb>
+ 45e6fc9:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45e6fce:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45e6fd3:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 45e6fd8:	48 8b 08             	mov    (%rax),%rcx
+ 45e6fdb:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 45e6fdf:	48 89 c8             	mov    %rcx,%rax
+ 45e6fe2:	e8 59 f9 ff ff       	call   45e6940 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID@@Base>
+ 45e6fe7:	48 85 c0             	test   %rax,%rax
+ 45e6fea:	74 59                	je     45e7045 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd@@Base+0xa5>
+ 45e6fec:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e6ff1:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45e6ff6:	48 ff c9             	dec    %rcx
+ 45e6ff9:	48 89 ca             	mov    %rcx,%rdx
+ 45e6ffc:	48 f7 d9             	neg    %rcx
+ 45e6fff:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 45e7003:	83 e1 10             	and    $0x10,%ecx
+ 45e7006:	4c 8b 44 24 40       	mov    0x40(%rsp),%r8
+ 45e700b:	49 8d 04 08          	lea    (%r8,%rcx,1),%rax
+ 45e700f:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 45e7014:	48 ff cb             	dec    %rbx
+ 45e7017:	48 89 d1             	mov    %rdx,%rcx
+ 45e701a:	48 8d 3d 17 ab ef 00 	lea    0xefab17(%rip),%rdi        # 54e1b38 <go:link.pkghashbytes.vendor/golang.org/x/text/unicode/norm@@Base+0xb8>
+ 45e7021:	be 01 00 00 00       	mov    $0x1,%esi
+ 45e7026:	e8 f5 05 a2 fd       	call   2007620 <strings.Join@@Base>
+ 45e702b:	48 89 d9             	mov    %rbx,%rcx
+ 45e702e:	48 89 c3             	mov    %rax,%rbx
+ 45e7031:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e7036:	e8 25 d8 fe ff       	call   45d4860 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).AddPeerInfoAssociation@@Base>
+ 45e703b:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e7040:	48 83 c4 38          	add    $0x38,%rsp
+ 45e7044:	c3                   	ret
+ 45e7045:	48 8d 05 34 23 70 00 	lea    0x702334(%rip),%rax        # 4ce9380 <_IO_stdin_used@@Base+0xb6380>
+ 45e704c:	bb 10 00 00 00       	mov    $0x10,%ebx
+ 45e7051:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e7056:	48 83 c4 38          	add    $0x38,%rsp
+ 45e705a:	c3                   	ret
+ 45e705b:	31 c0                	xor    %eax,%eax
+ 45e705d:	48 89 c1             	mov    %rax,%rcx
+ 45e7060:	e8 3b fa 96 fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45e7065:	90                   	nop
+ 45e7066:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e706b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e7070:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e7075:	e8 e6 d3 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e707a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e707f:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e7084:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e7089:	e9 12 ff ff ff       	jmp    45e6fa0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoAssociationsAdd@@Base>
+ 45e708e:	cc                   	int3
+ 45e708f:	cc                   	int3
+ 45e7090:	cc                   	int3
+ 45e7091:	cc                   	int3
+ 45e7092:	cc                   	int3
+ 45e7093:	cc                   	int3
+ 45e7094:	cc                   	int3
+ 45e7095:	cc                   	int3
+ 45e7096:	cc                   	int3
+ 45e7097:	cc                   	int3
+ 45e7098:	cc                   	int3
+ 45e7099:	cc                   	int3
+ 45e709a:	cc                   	int3
+ 45e709b:	cc                   	int3
+ 45e709c:	cc                   	int3
+ 45e709d:	cc                   	int3
+ 45e709e:	cc                   	int3
+ 45e709f:	cc                   	int3

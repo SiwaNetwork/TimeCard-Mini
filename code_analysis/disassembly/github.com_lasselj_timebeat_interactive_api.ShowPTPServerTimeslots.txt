@@ -1,0 +1,92 @@
+# github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots
+# addr 0x4becc60 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004becc60 <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base>:
+ 4becc60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4becc64:	0f 86 fa 00 00 00    	jbe    4becd64 <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base+0x104>
+ 4becc6a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4becc6e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4becc73:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4becc78:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4becc7d:	48 83 3d bb f4 23 03 	cmpq   $0x0,0x323f4bb(%rip)        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 4becc84:	00 
+ 4becc85:	0f 84 c3 00 00 00    	je     4becd4e <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base+0xee>
+ 4becc8b:	48 83 fb 02          	cmp    $0x2,%rbx
+ 4becc8f:	0f 8c a3 00 00 00    	jl     4becd38 <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base+0xd8>
+ 4becc95:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4becc9a:	48 8b 08             	mov    (%rax),%rcx
+ 4becc9d:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4becca1:	48 89 c8             	mov    %rcx,%rax
+ 4becca4:	e8 57 24 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4becca9:	48 85 db             	test   %rbx,%rbx
+ 4beccac:	75 61                	jne    4becd0f <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base+0xaf>
+ 4beccae:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4beccb3:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4beccb8:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4beccbc:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 4beccc0:	e8 3b 24 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4beccc5:	48 85 db             	test   %rbx,%rbx
+ 4beccc8:	74 2a                	je     4beccf4 <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base+0x94>
+ 4beccca:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4becccf:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4beccd3:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4beccd7:	31 c0                	xor    %eax,%eax
+ 4beccd9:	48 8d 1d 80 da 1f 00 	lea    0x1fda80(%rip),%rbx        # 4dea760 <_IO_stdin_used@@Base+0x1b7760>
+ 4becce0:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 4becce5:	e8 36 d6 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beccea:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4beccef:	48 83 c4 38          	add    $0x38,%rsp
+ 4beccf3:	c3                   	ret
+ 4beccf4:	48 89 c3             	mov    %rax,%rbx
+ 4beccf7:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4beccfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4becd00:	e8 7b 9a 9f ff       	call   45e6780 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPServerTimeslots@@Base>
+ 4becd05:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4becd0a:	48 83 c4 38          	add    $0x38,%rsp
+ 4becd0e:	c3                   	ret
+ 4becd0f:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4becd14:	48 8b 3a             	mov    (%rdx),%rdi
+ 4becd17:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 4becd1b:	31 c0                	xor    %eax,%eax
+ 4becd1d:	48 8d 1d a1 59 20 00 	lea    0x2059a1(%rip),%rbx        # 4df26c5 <_IO_stdin_used@@Base+0x1bf6c5>
+ 4becd24:	b9 1e 00 00 00       	mov    $0x1e,%ecx
+ 4becd29:	e8 f2 d5 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4becd2e:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4becd33:	48 83 c4 38          	add    $0x38,%rsp
+ 4becd37:	c3                   	ret
+ 4becd38:	48 8d 05 14 e2 26 00 	lea    0x26e214(%rip),%rax        # 4e5af53 <_IO_stdin_used@@Base+0x227f53>
+ 4becd3f:	bb 3a 00 00 00       	mov    $0x3a,%ebx
+ 4becd44:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4becd49:	48 83 c4 38          	add    $0x38,%rsp
+ 4becd4d:	c3                   	ret
+ 4becd4e:	48 8d 05 73 b1 0e 00 	lea    0xeb173(%rip),%rax        # 4cd7ec8 <_IO_stdin_used@@Base+0xa4ec8>
+ 4becd55:	bb 0f 00 00 00       	mov    $0xf,%ebx
+ 4becd5a:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4becd5f:	48 83 c4 38          	add    $0x38,%rsp
+ 4becd63:	c3                   	ret
+ 4becd64:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4becd69:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4becd6e:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4becd73:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4becd78:	e8 e3 76 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4becd7d:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4becd82:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4becd87:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4becd8c:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4becd91:	e9 ca fe ff ff       	jmp    4becc60 <github.com/lasselj/timebeat/interactive/api.ShowPTPServerTimeslots@@Base>
+ 4becd96:	cc                   	int3
+ 4becd97:	cc                   	int3
+ 4becd98:	cc                   	int3
+ 4becd99:	cc                   	int3
+ 4becd9a:	cc                   	int3
+ 4becd9b:	cc                   	int3
+ 4becd9c:	cc                   	int3
+ 4becd9d:	cc                   	int3
+ 4becd9e:	cc                   	int3
+ 4becd9f:	cc                   	int3

@@ -1,0 +1,119 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV
+# addr 0x45cf2a0 size 480 (0x1e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045cf2a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base>:
+ 45cf2a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45cf2a4:	0f 86 9d 01 00 00    	jbe    45cf447 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0x1a7>
+ 45cf2aa:	48 83 ec 68          	sub    $0x68,%rsp
+ 45cf2ae:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 45cf2b3:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 45cf2b8:	48 89 5c 24 78       	mov    %rbx,0x78(%rsp)
+ 45cf2bd:	48 89 8c 24 80 00 00 	mov    %rcx,0x80(%rsp)
+ 45cf2c4:	00 
+ 45cf2c5:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 45cf2ca:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 45cf2cf:	48 8d 05 0a 51 67 01 	lea    0x167510a(%rip),%rax        # 5c443e0 <type:Ubxk5IfV@@Base>
+ 45cf2d6:	e8 05 12 92 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45cf2db:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45cf2e0:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 45cf2e5:	48 8d 0d b4 4b 97 01 	lea    0x1974bb4(%rip),%rcx        # 5f43ea0 <go:itab.encoding/binary.bigEndian,encoding/binary.ByteOrder@@Base>
+ 45cf2ec:	48 8d 3d 7d bd 8a 03 	lea    0x38abd7d(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 45cf2f3:	48 8d 35 c6 d2 10 01 	lea    0x110d2c6(%rip),%rsi        # 56dc5c0 <type:TEmCKjtT@@Base>
+ 45cf2fa:	49 89 c0             	mov    %rax,%r8
+ 45cf2fd:	48 8d 05 fc e6 92 01 	lea    0x192e6fc(%rip),%rax        # 5efda00 <go:itab.*bytes.Reader,io.Reader@@Base>
+ 45cf304:	e8 b7 3c aa fd       	call   2072fc0 <encoding/binary.Read@@Base>
+ 45cf309:	48 85 c0             	test   %rax,%rax
+ 45cf30c:	0f 85 eb 00 00 00    	jne    45cf3fd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0x15d>
+ 45cf312:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45cf317:	48 8b 11             	mov    (%rcx),%rdx
+ 45cf31a:	48 8b 7a 40          	mov    0x40(%rdx),%rdi
+ 45cf31e:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 45cf323:	48 8b b2 b8 03 00 00 	mov    0x3b8(%rdx),%rsi
+ 45cf32a:	4c 8b 82 c0 03 00 00 	mov    0x3c0(%rdx),%r8
+ 45cf331:	4c 89 47 28          	mov    %r8,0x28(%rdi)
+ 45cf335:	83 3d 24 c6 8a 03 00 	cmpl   $0x0,0x38ac624(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cf33c:	75 06                	jne    45cf344 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0xa4>
+ 45cf33e:	48 89 77 20          	mov    %rsi,0x20(%rdi)
+ 45cf342:	eb 09                	jmp    45cf34d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0xad>
+ 45cf344:	48 83 c7 20          	add    $0x20,%rdi
+ 45cf348:	e8 13 74 98 fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 45cf34d:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 45cf352:	0f b6 59 04          	movzbl 0x4(%rcx),%ebx
+ 45cf356:	48 8b 82 68 05 00 00 	mov    0x568(%rdx),%rax
+ 45cf35d:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 45cf364:	00 
+ 45cf365:	0f b7 71 1c          	movzwl 0x1c(%rcx),%esi
+ 45cf369:	48 8b 79 14          	mov    0x14(%rcx),%rdi
+ 45cf36d:	48 89 7c 24 3e       	mov    %rdi,0x3e(%rsp)
+ 45cf372:	66 89 74 24 46       	mov    %si,0x46(%rsp)
+ 45cf377:	48 8b 7c 24 3e       	mov    0x3e(%rsp),%rdi
+ 45cf37c:	48 89 3c 24          	mov    %rdi,(%rsp)
+ 45cf380:	66 89 74 24 08       	mov    %si,0x8(%rsp)
+ 45cf385:	c0 eb 04             	shr    $0x4,%bl
+ 45cf388:	88 5c 24 33          	mov    %bl,0x33(%rsp)
+ 45cf38c:	e8 cf ef ff ff       	call   45ce360 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).FindSubscriberByPortIDAndType@@Base>
+ 45cf391:	84 db                	test   %bl,%bl
+ 45cf393:	74 5e                	je     45cf3f3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0x153>
+ 45cf395:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45cf39a:	48 8b 91 68 05 00 00 	mov    0x568(%rcx),%rdx
+ 45cf3a1:	48 89 c3             	mov    %rax,%rbx
+ 45cf3a4:	48 89 d0             	mov    %rdx,%rax
+ 45cf3a7:	e8 d4 e1 ff ff       	call   45cd580 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*UnicastManager).RemoveSubscription@@Base>
+ 45cf3ac:	84 c0                	test   %al,%al
+ 45cf3ae:	74 43                	je     45cf3f3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base+0x153>
+ 45cf3b0:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45cf3b7:	00 
+ 45cf3b8:	0f b7 72 1c          	movzwl 0x1c(%rdx),%esi
+ 45cf3bc:	48 8b 52 14          	mov    0x14(%rdx),%rdx
+ 45cf3c0:	48 89 54 24 34       	mov    %rdx,0x34(%rsp)
+ 45cf3c5:	66 89 74 24 3c       	mov    %si,0x3c(%rsp)
+ 45cf3ca:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45cf3cf:	48 8b 12             	mov    (%rdx),%rdx
+ 45cf3d2:	48 8b 7c 24 34       	mov    0x34(%rsp),%rdi
+ 45cf3d7:	48 8b 4a 40          	mov    0x40(%rdx),%rcx
+ 45cf3db:	48 89 3c 24          	mov    %rdi,(%rsp)
+ 45cf3df:	66 89 74 24 08       	mov    %si,0x8(%rsp)
+ 45cf3e4:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 45cf3e9:	0f b6 5c 24 33       	movzbl 0x33(%rsp),%ebx
+ 45cf3ee:	e8 6d 03 00 00       	call   45cf760 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).sendAckCancelUnicastTransmission@@Base>
+ 45cf3f3:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45cf3f8:	48 83 c4 68          	add    $0x68,%rsp
+ 45cf3fc:	c3                   	ret
+ 45cf3fd:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45cf401:	48 89 d8             	mov    %rbx,%rax
+ 45cf404:	ff d1                	call   *%rcx
+ 45cf406:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45cf40b:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 45cf40f:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45cf414:	48 89 c7             	mov    %rax,%rdi
+ 45cf417:	48 89 de             	mov    %rbx,%rsi
+ 45cf41a:	31 c0                	xor    %eax,%eax
+ 45cf41c:	48 8d 1d 42 98 87 00 	lea    0x879842(%rip),%rbx        # 4e48c65 <_IO_stdin_used@@Base+0x215c65>
+ 45cf423:	b9 35 00 00 00       	mov    $0x35,%ecx
+ 45cf428:	e8 f3 ae 96 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45cf42d:	48 89 d9             	mov    %rbx,%rcx
+ 45cf430:	48 89 c3             	mov    %rax,%rbx
+ 45cf433:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45cf438:	e8 63 7d e3 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45cf43d:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45cf442:	48 83 c4 68          	add    $0x68,%rsp
+ 45cf446:	c3                   	ret
+ 45cf447:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45cf44c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45cf451:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45cf456:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45cf45b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45cf460:	e8 fb 4f 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45cf465:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45cf46a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45cf46f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45cf474:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45cf479:	e9 22 fe ff ff       	jmp    45cf2a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).receiveCancelUnicastTransmissionTLV@@Base>
+ 45cf47e:	cc                   	int3
+ 45cf47f:	cc                   	int3

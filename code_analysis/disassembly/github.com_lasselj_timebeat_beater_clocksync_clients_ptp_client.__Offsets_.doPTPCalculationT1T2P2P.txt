@@ -1,0 +1,81 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).doPTPCalculationT1T2P2P
+# addr 0x45d8600 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045d8600 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).doPTPCalculationT1T2P2P@@Base>:
+ 45d8600:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45d8604:	0f 86 e6 00 00 00    	jbe    45d86f0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).doPTPCalculationT1T2P2P@@Base+0xf0>
+ 45d860a:	48 83 ec 60          	sub    $0x60,%rsp
+ 45d860e:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 45d8613:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 45d8618:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45d861d:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 45d8622:	48 8b 93 80 00 00 00 	mov    0x80(%rbx),%rdx
+ 45d8629:	4c 8b 8b 88 00 00 00 	mov    0x88(%rbx),%r9
+ 45d8630:	48 8b 8b 90 00 00 00 	mov    0x90(%rbx),%rcx
+ 45d8637:	48 8b 7b 68          	mov    0x68(%rbx),%rdi
+ 45d863b:	48 8b 73 70          	mov    0x70(%rbx),%rsi
+ 45d863f:	4c 8b 43 78          	mov    0x78(%rbx),%r8
+ 45d8643:	48 89 d0             	mov    %rdx,%rax
+ 45d8646:	4c 89 cb             	mov    %r9,%rbx
+ 45d8649:	e8 72 2f 9f fd       	call   1fcb5c0 <time.Time.Sub@@Base>
+ 45d864e:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 45d8653:	84 02                	test   %al,(%rdx)
+ 45d8655:	4c 8b 4c 24 70       	mov    0x70(%rsp),%r9
+ 45d865a:	49 2b 81 f0 00 00 00 	sub    0xf0(%r9),%rax
+ 45d8661:	48 89 82 a8 22 01 00 	mov    %rax,0x122a8(%rdx)
+ 45d8668:	80 ba b0 22 01 00 00 	cmpb   $0x0,0x122b0(%rdx)
+ 45d866f:	74 75                	je     45d86e6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).doPTPCalculationT1T2P2P@@Base+0xe6>
+ 45d8671:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 45d8677:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45d867d:	41 0f b7 01          	movzwl (%r9),%eax
+ 45d8681:	e8 5a 55 91 fd       	call   1eedbe0 <runtime.convT16@@Base>
+ 45d8686:	48 8d 0d 13 62 1d 01 	lea    0x11d6213(%rip),%rcx        # 57ae8a0 <type:uint16@@Base>
+ 45d868d:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 45d8692:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45d8697:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 45d869c:	48 8b 81 a8 22 01 00 	mov    0x122a8(%rcx),%rax
+ 45d86a3:	e8 38 56 91 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45d86a8:	48 8d 0d 11 bc 6e 01 	lea    0x16ebc11(%rip),%rcx        # 5cc42c0 <type:cP1vjca2@@Base>
+ 45d86af:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45d86b4:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45d86b9:	48 8b 1d 80 6b 85 03 	mov    0x3856b80(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45d86c0:	48 8d 05 59 cb 92 01 	lea    0x192cb59(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45d86c7:	48 8d 0d e2 3c 71 00 	lea    0x713ce2(%rip),%rcx        # 4cec3b0 <_IO_stdin_used@@Base+0xb93b0>
+ 45d86ce:	bf 11 00 00 00       	mov    $0x11,%edi
+ 45d86d3:	48 8d 74 24 38       	lea    0x38(%rsp),%rsi
+ 45d86d8:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 45d86de:	4d 89 c1             	mov    %r8,%r9
+ 45d86e1:	e8 fa c0 a1 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45d86e6:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45d86eb:	48 83 c4 60          	add    $0x60,%rsp
+ 45d86ef:	c3                   	ret
+ 45d86f0:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45d86f5:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45d86fa:	e8 61 bd 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45d86ff:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45d8704:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45d8709:	e9 f2 fe ff ff       	jmp    45d8600 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).doPTPCalculationT1T2P2P@@Base>
+ 45d870e:	cc                   	int3
+ 45d870f:	cc                   	int3
+ 45d8710:	cc                   	int3
+ 45d8711:	cc                   	int3
+ 45d8712:	cc                   	int3
+ 45d8713:	cc                   	int3
+ 45d8714:	cc                   	int3
+ 45d8715:	cc                   	int3
+ 45d8716:	cc                   	int3
+ 45d8717:	cc                   	int3
+ 45d8718:	cc                   	int3
+ 45d8719:	cc                   	int3
+ 45d871a:	cc                   	int3
+ 45d871b:	cc                   	int3
+ 45d871c:	cc                   	int3
+ 45d871d:	cc                   	int3
+ 45d871e:	cc                   	int3
+ 45d871f:	cc                   	int3

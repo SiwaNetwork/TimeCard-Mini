@@ -1,0 +1,184 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes
+# addr 0x4400540 size 640 (0x280)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004400540 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base>:
+ 4400540:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4400544:	0f 86 51 02 00 00    	jbe    440079b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x25b>
+ 440054a:	48 83 ec 60          	sub    $0x60,%rsp
+ 440054e:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 4400553:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 4400558:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 440055d:	48 8d 05 bc c8 78 01 	lea    0x178c8bc(%rip),%rax        # 5b8ce20 <type:StgAKJp2@@Base>
+ 4400564:	e8 77 ff ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4400569:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 440056e:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4400573:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 4400577:	48 8d 14 d2          	lea    (%rdx,%rdx,8),%rdx
+ 440057b:	48 c1 e2 02          	shl    $0x2,%rdx
+ 440057f:	48 83 c2 04          	add    $0x4,%rdx
+ 4400583:	66 89 51 04          	mov    %dx,0x4(%rcx)
+ 4400587:	48 89 c8             	mov    %rcx,%rax
+ 440058a:	e8 d1 14 00 00       	call   4401a60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXMessageHeader).ToBytes@@Base>
+ 440058f:	48 85 ff             	test   %rdi,%rdi
+ 4400592:	75 5b                	jne    44005ef <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0xaf>
+ 4400594:	48 89 cf             	mov    %rcx,%rdi
+ 4400597:	48 89 d9             	mov    %rbx,%rcx
+ 440059a:	48 89 c3             	mov    %rax,%rbx
+ 440059d:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44005a2:	e8 99 c3 c6 fd       	call   206c940 <bytes.(*Buffer).Write@@Base>
+ 44005a7:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 44005ac:	0f b6 5a 06          	movzbl 0x6(%rdx),%ebx
+ 44005b0:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44005b5:	e8 46 ca c6 fd       	call   206d000 <bytes.(*Buffer).WriteByte@@Base>
+ 44005ba:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 44005bf:	0f b6 5a 07          	movzbl 0x7(%rdx),%ebx
+ 44005c3:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44005c8:	e8 33 ca c6 fd       	call   206d000 <bytes.(*Buffer).WriteByte@@Base>
+ 44005cd:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 44005d2:	48 8d 53 08          	lea    0x8(%rbx),%rdx
+ 44005d6:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44005db:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 44005e0:	48 89 cf             	mov    %rcx,%rdi
+ 44005e3:	48 89 d3             	mov    %rdx,%rbx
+ 44005e6:	e8 55 c3 c6 fd       	call   206c940 <bytes.(*Buffer).Write@@Base>
+ 44005eb:	31 c0                	xor    %eax,%eax
+ 44005ed:	eb 37                	jmp    4400626 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0xe6>
+ 44005ef:	48 8d 05 62 5f 9e 00 	lea    0x9e5f62(%rip),%rax        # 4de6558 <_IO_stdin_used@@Base+0x1b3558>
+ 44005f6:	bb 1b 00 00 00       	mov    $0x1b,%ebx
+ 44005fb:	31 c9                	xor    %ecx,%ecx
+ 44005fd:	31 ff                	xor    %edi,%edi
+ 44005ff:	48 89 fe             	mov    %rdi,%rsi
+ 4400602:	e8 59 0c bf fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4400607:	31 c9                	xor    %ecx,%ecx
+ 4400609:	48 89 c7             	mov    %rax,%rdi
+ 440060c:	48 89 de             	mov    %rbx,%rsi
+ 440060f:	31 c0                	xor    %eax,%eax
+ 4400611:	48 89 cb             	mov    %rcx,%rbx
+ 4400614:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 4400619:	48 83 c4 60          	add    $0x60,%rsp
+ 440061d:	c3                   	ret
+ 440061e:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4400623:	48 ff c0             	inc    %rax
+ 4400626:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 440062b:	48 8b 72 10          	mov    0x10(%rdx),%rsi
+ 440062f:	48 39 42 18          	cmp    %rax,0x18(%rdx)
+ 4400633:	0f 8e a6 00 00 00    	jle    44006df <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x19f>
+ 4400639:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 440063e:	48 8d 0c c0          	lea    (%rax,%rax,8),%rcx
+ 4400642:	48 8d 1c 8e          	lea    (%rsi,%rcx,4),%rbx
+ 4400646:	48 8d 05 b3 51 9d 01 	lea    0x19d51b3(%rip),%rax        # 5dd5800 <type:OgPrDlac@@Base>
+ 440064d:	e8 0e d5 ae fd       	call   1eedb60 <runtime.convTnoptr@@Base>
+ 4400652:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4400657:	48 8d 0d 92 38 b4 01 	lea    0x1b43892(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 440065e:	48 8d 3d 0b aa a7 03 	lea    0x3a7aa0b(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 4400665:	48 8d 35 94 51 9d 01 	lea    0x19d5194(%rip),%rsi        # 5dd5800 <type:OgPrDlac@@Base>
+ 440066c:	49 89 c0             	mov    %rax,%r8
+ 440066f:	48 8d 05 4a d3 af 01 	lea    0x1afd34a(%rip),%rax        # 5efd9c0 <go:itab.*bytes.Buffer,io.Writer@@Base>
+ 4400676:	e8 25 3c c7 fd       	call   20742a0 <encoding/binary.Write@@Base>
+ 440067b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4400680:	48 85 c0             	test   %rax,%rax
+ 4400683:	74 99                	je     440061e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0xde>
+ 4400685:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4400689:	48 89 d8             	mov    %rbx,%rax
+ 440068c:	ff d1                	call   *%rcx
+ 440068e:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 4400694:	e8 c7 d6 ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4400699:	48 8d 0d 00 e0 3a 01 	lea    0x13ae000(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 44006a0:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 44006a5:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 44006aa:	48 8d 05 11 e9 a0 00 	lea    0xa0e911(%rip),%rax        # 4e0efc2 <_IO_stdin_used@@Base+0x1dbfc2>
+ 44006b1:	bb 25 00 00 00       	mov    $0x25,%ebx
+ 44006b6:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 44006bb:	bf 01 00 00 00       	mov    $0x1,%edi
+ 44006c0:	48 89 fe             	mov    %rdi,%rsi
+ 44006c3:	e8 98 0b bf fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 44006c8:	31 c9                	xor    %ecx,%ecx
+ 44006ca:	48 89 c7             	mov    %rax,%rdi
+ 44006cd:	48 89 de             	mov    %rbx,%rsi
+ 44006d0:	31 c0                	xor    %eax,%eax
+ 44006d2:	48 89 cb             	mov    %rcx,%rbx
+ 44006d5:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 44006da:	48 83 c4 60          	add    $0x60,%rsp
+ 44006de:	c3                   	ret
+ 44006df:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44006e4:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 44006e8:	48 8b 10             	mov    (%rax),%rdx
+ 44006eb:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 44006ef:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 44006f3:	48 39 cf             	cmp    %rcx,%rdi
+ 44006f6:	0f 87 96 00 00 00    	ja     4400792 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x252>
+ 44006fc:	49 89 f8             	mov    %rdi,%r8
+ 44006ff:	48 29 f7             	sub    %rsi,%rdi
+ 4400702:	4c 29 c1             	sub    %r8,%rcx
+ 4400705:	48 c1 ff 3f          	sar    $0x3f,%rdi
+ 4400709:	4c 21 c7             	and    %r8,%rdi
+ 440070c:	48 01 fa             	add    %rdi,%rdx
+ 440070f:	31 db                	xor    %ebx,%ebx
+ 4400711:	31 f6                	xor    %esi,%esi
+ 4400713:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4400718:	eb 11                	jmp    440072b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x1eb>
+ 440071a:	4c 8d 47 01          	lea    0x1(%rdi),%r8
+ 440071e:	44 0f b6 0c 3a       	movzbl (%rdx,%rdi,1),%r9d
+ 4400723:	44 01 ce             	add    %r9d,%esi
+ 4400726:	01 f3                	add    %esi,%ebx
+ 4400728:	4c 89 c7             	mov    %r8,%rdi
+ 440072b:	48 39 cf             	cmp    %rcx,%rdi
+ 440072e:	7c ea                	jl     440071a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x1da>
+ 4400730:	88 5c 24 37          	mov    %bl,0x37(%rsp)
+ 4400734:	89 f3                	mov    %esi,%ebx
+ 4400736:	e8 c5 c8 c6 fd       	call   206d000 <bytes.(*Buffer).WriteByte@@Base>
+ 440073b:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4400740:	0f b6 5c 24 37       	movzbl 0x37(%rsp),%ebx
+ 4400745:	e8 b6 c8 c6 fd       	call   206d000 <bytes.(*Buffer).WriteByte@@Base>
+ 440074a:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 440074f:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 4400753:	48 8b 11             	mov    (%rcx),%rdx
+ 4400756:	48 8b 71 10          	mov    0x10(%rcx),%rsi
+ 440075a:	48 8b 41 18          	mov    0x18(%rcx),%rax
+ 440075e:	66 90                	xchg   %ax,%ax
+ 4400760:	48 39 c3             	cmp    %rax,%rbx
+ 4400763:	72 25                	jb     440078a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base+0x24a>
+ 4400765:	48 29 c6             	sub    %rax,%rsi
+ 4400768:	48 29 c3             	sub    %rax,%rbx
+ 440076b:	48 89 f1             	mov    %rsi,%rcx
+ 440076e:	48 f7 de             	neg    %rsi
+ 4400771:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 4400775:	48 21 c6             	and    %rax,%rsi
+ 4400778:	48 8d 04 16          	lea    (%rsi,%rdx,1),%rax
+ 440077c:	31 ff                	xor    %edi,%edi
+ 440077e:	31 f6                	xor    %esi,%esi
+ 4400780:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 4400785:	48 83 c4 60          	add    $0x60,%rsp
+ 4400789:	c3                   	ret
+ 440078a:	48 89 d9             	mov    %rbx,%rcx
+ 440078d:	e8 ce 63 b5 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 4400792:	48 89 f8             	mov    %rdi,%rax
+ 4400795:	e8 c6 63 b5 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 440079a:	90                   	nop
+ 440079b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 44007a0:	e8 bb 3c b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 44007a5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 44007aa:	e9 91 fd ff ff       	jmp    4400540 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXESRCMessage).ToBytes@@Base>
+ 44007af:	cc                   	int3
+ 44007b0:	cc                   	int3
+ 44007b1:	cc                   	int3
+ 44007b2:	cc                   	int3
+ 44007b3:	cc                   	int3
+ 44007b4:	cc                   	int3
+ 44007b5:	cc                   	int3
+ 44007b6:	cc                   	int3
+ 44007b7:	cc                   	int3
+ 44007b8:	cc                   	int3
+ 44007b9:	cc                   	int3
+ 44007ba:	cc                   	int3
+ 44007bb:	cc                   	int3
+ 44007bc:	cc                   	int3
+ 44007bd:	cc                   	int3
+ 44007be:	cc                   	int3
+ 44007bf:	cc                   	int3

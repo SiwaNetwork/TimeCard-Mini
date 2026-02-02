@@ -1,0 +1,100 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker
+# addr 0x45bd360 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045bd360 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base>:
+ 45bd360:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45bd364:	0f 86 0b 01 00 00    	jbe    45bd475 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base+0x115>
+ 45bd36a:	48 83 ec 78          	sub    $0x78,%rsp
+ 45bd36e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 45bd373:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 45bd378:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45bd37f:	00 
+ 45bd380:	b8 00 ca 9a 3b       	mov    $0x3b9aca00,%eax
+ 45bd385:	e8 b6 c5 a0 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 45bd38a:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45bd38f:	eb 10                	jmp    45bd3a1 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base+0x41>
+ 45bd391:	48 c7 82 38 03 00 00 	movq   $0x0,0x338(%rdx)
+ 45bd398:	00 00 00 00 
+ 45bd39c:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45bd3a1:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45bd3a8:	00 
+ 45bd3a9:	4c 8b 8a 98 00 00 00 	mov    0x98(%rdx),%r9
+ 45bd3b0:	4c 8b 10             	mov    (%rax),%r10
+ 45bd3b3:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45bd3b9:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 45bd3bf:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 45bd3c4:	4c 89 54 24 50       	mov    %r10,0x50(%rsp)
+ 45bd3c9:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+ 45bd3ce:	31 c9                	xor    %ecx,%ecx
+ 45bd3d0:	31 ff                	xor    %edi,%edi
+ 45bd3d2:	be 02 00 00 00       	mov    $0x2,%esi
+ 45bd3d7:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45bd3dd:	48 8d 44 24 50       	lea    0x50(%rsp),%rax
+ 45bd3e2:	e8 d9 37 97 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45bd3e7:	48 85 c0             	test   %rax,%rax
+ 45bd3ea:	75 7f                	jne    45bd46b <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base+0x10b>
+ 45bd3ec:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45bd3f3:	00 
+ 45bd3f4:	48 83 ba 38 03 00 00 	cmpq   $0x2,0x338(%rdx)
+ 45bd3fb:	02 
+ 45bd3fc:	7e 93                	jle    45bd391 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base+0x31>
+ 45bd3fe:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45bd404:	48 8b 82 38 03 00 00 	mov    0x338(%rdx),%rax
+ 45bd40b:	e8 d0 08 93 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45bd410:	48 8d 0d 49 d2 1e 01 	lea    0x11ed249(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 45bd417:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 45bd41c:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45bd421:	48 8d 05 97 88 84 00 	lea    0x848897(%rip),%rax        # 4e05cbf <_IO_stdin_used@@Base+0x1d2cbf>
+ 45bd428:	bb 23 00 00 00       	mov    $0x23,%ebx
+ 45bd42d:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45bd432:	48 89 fe             	mov    %rdi,%rsi
+ 45bd435:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 45bd43a:	e8 c1 74 a3 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45bd43f:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 45bd446:	00 
+ 45bd447:	48 8b 11             	mov    (%rcx),%rdx
+ 45bd44a:	48 89 c6             	mov    %rax,%rsi
+ 45bd44d:	48 89 d0             	mov    %rdx,%rax
+ 45bd450:	48 89 df             	mov    %rbx,%rdi
+ 45bd453:	48 89 f3             	mov    %rsi,%rbx
+ 45bd456:	48 89 f9             	mov    %rdi,%rcx
+ 45bd459:	e8 02 9c e4 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45bd45e:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45bd465:	00 
+ 45bd466:	e9 26 ff ff ff       	jmp    45bd391 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base+0x31>
+ 45bd46b:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45bd470:	48 83 c4 78          	add    $0x78,%rsp
+ 45bd474:	c3                   	ret
+ 45bd475:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45bd47a:	e8 e1 6f 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45bd47f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45bd484:	e9 d7 fe ff ff       	jmp    45bd360 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).RunSanityTicker@@Base>
+ 45bd489:	cc                   	int3
+ 45bd48a:	cc                   	int3
+ 45bd48b:	cc                   	int3
+ 45bd48c:	cc                   	int3
+ 45bd48d:	cc                   	int3
+ 45bd48e:	cc                   	int3
+ 45bd48f:	cc                   	int3
+ 45bd490:	cc                   	int3
+ 45bd491:	cc                   	int3
+ 45bd492:	cc                   	int3
+ 45bd493:	cc                   	int3
+ 45bd494:	cc                   	int3
+ 45bd495:	cc                   	int3
+ 45bd496:	cc                   	int3
+ 45bd497:	cc                   	int3
+ 45bd498:	cc                   	int3
+ 45bd499:	cc                   	int3
+ 45bd49a:	cc                   	int3
+ 45bd49b:	cc                   	int3
+ 45bd49c:	cc                   	int3
+ 45bd49d:	cc                   	int3
+ 45bd49e:	cc                   	int3
+ 45bd49f:	cc                   	int3

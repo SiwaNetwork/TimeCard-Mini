@@ -1,0 +1,140 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload
+# addr 0x4400160 size 544 (0x220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004400160 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base>:
+ 4400160:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4400164:	0f 86 e6 01 00 00    	jbe    4400350 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x1f0>
+ 440016a:	48 83 ec 50          	sub    $0x50,%rsp
+ 440016e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4400173:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4400178:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 440017d:	0f 1f 00             	nopl   (%rax)
+ 4400180:	48 83 fb 02          	cmp    $0x2,%rbx
+ 4400184:	0f 8c ba 01 00 00    	jl     4400344 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x1e4>
+ 440018a:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 440018f:	48 8d 05 ca 46 84 01 	lea    0x18446ca(%rip),%rax        # 5c44860 <type:q6sHKWBC@@Base>
+ 4400196:	e8 45 03 af fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 440019b:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 44001a0:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 44001a5:	0f b6 11             	movzbl (%rcx),%edx
+ 44001a8:	88 10                	mov    %dl,(%rax)
+ 44001aa:	0f b6 51 01          	movzbl 0x1(%rcx),%edx
+ 44001ae:	88 50 18             	mov    %dl,0x18(%rax)
+ 44001b1:	48 8b 1d e8 bf a2 03 	mov    0x3a2bfe8(%rip),%rbx        # 7e2c1a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UbxCfgLookup@@Base>
+ 44001b8:	0f b6 11             	movzbl (%rcx),%edx
+ 44001bb:	48 8d 05 de 4e 54 01 	lea    0x1544ede(%rip),%rax        # 59450a0 <type:EAlsZ0ao@@Base>
+ 44001c2:	48 89 d1             	mov    %rdx,%rcx
+ 44001c5:	e8 b6 47 af fd       	call   1ef4980 <runtime.mapaccess2_fast64@@Base>
+ 44001ca:	48 8b 08             	mov    (%rax),%rcx
+ 44001cd:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 44001d1:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 44001d6:	48 89 57 10          	mov    %rdx,0x10(%rdi)
+ 44001da:	48 8d 57 08          	lea    0x8(%rdi),%rdx
+ 44001de:	83 3d 7b b7 a7 03 00 	cmpl   $0x0,0x3a7b77b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44001e5:	75 06                	jne    44001ed <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x8d>
+ 44001e7:	48 89 4f 08          	mov    %rcx,0x8(%rdi)
+ 44001eb:	eb 0e                	jmp    44001fb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x9b>
+ 44001ed:	48 89 f8             	mov    %rdi,%rax
+ 44001f0:	48 89 d7             	mov    %rdx,%rdi
+ 44001f3:	e8 08 65 b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 44001f8:	48 89 c7             	mov    %rax,%rdi
+ 44001fb:	84 db                	test   %bl,%bl
+ 44001fd:	75 70                	jne    440026f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x10f>
+ 44001ff:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4400204:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 440020a:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 440020f:	44 0f b6 02          	movzbl (%rdx),%r8d
+ 4400213:	4c 8d 0d 46 e7 3a 01 	lea    0x13ae746(%rip),%r9        # 57ae960 <type:uint8@@Base>
+ 440021a:	4c 89 4c 24 38       	mov    %r9,0x38(%rsp)
+ 440021f:	4c 8d 15 fa be 86 03 	lea    0x386befa(%rip),%r10        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4400226:	4f 8d 04 c2          	lea    (%r10,%r8,8),%r8
+ 440022a:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+ 440022f:	48 8d 05 7b 33 83 00 	lea    0x83337b(%rip),%rax        # 4c335b1 <_IO_stdin_used@@Base+0x5b1>
+ 4400236:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 440023b:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 4400240:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4400245:	48 89 fe             	mov    %rdi,%rsi
+ 4400248:	e8 b3 46 bf fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 440024d:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4400252:	48 89 5a 10          	mov    %rbx,0x10(%rdx)
+ 4400256:	83 3d 03 b7 a7 03 00 	cmpl   $0x0,0x3a7b703(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440025d:	75 06                	jne    4400265 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x105>
+ 440025f:	48 89 42 08          	mov    %rax,0x8(%rdx)
+ 4400263:	eb 0a                	jmp    440026f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x10f>
+ 4400265:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 440026a:	e8 91 63 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 440026f:	48 8b 1d 2a bf a2 03 	mov    0x3a2bf2a(%rip),%rbx        # 7e2c1a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UbxCfgLookup@@Base>
+ 4400276:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 440027b:	0f b6 4a 01          	movzbl 0x1(%rdx),%ecx
+ 440027f:	48 8d 05 1a 4e 54 01 	lea    0x1544e1a(%rip),%rax        # 59450a0 <type:EAlsZ0ao@@Base>
+ 4400286:	e8 f5 46 af fd       	call   1ef4980 <runtime.mapaccess2_fast64@@Base>
+ 440028b:	48 8b 10             	mov    (%rax),%rdx
+ 440028e:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4400292:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 4400297:	48 89 77 28          	mov    %rsi,0x28(%rdi)
+ 440029b:	48 8d 77 20          	lea    0x20(%rdi),%rsi
+ 440029f:	83 3d ba b6 a7 03 00 	cmpl   $0x0,0x3a7b6ba(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44002a6:	75 06                	jne    44002ae <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x14e>
+ 44002a8:	48 89 57 20          	mov    %rdx,0x20(%rdi)
+ 44002ac:	eb 0e                	jmp    44002bc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x15c>
+ 44002ae:	48 89 f8             	mov    %rdi,%rax
+ 44002b1:	48 89 f7             	mov    %rsi,%rdi
+ 44002b4:	e8 67 64 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 44002b9:	48 89 c7             	mov    %rax,%rdi
+ 44002bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44002c0:	84 db                	test   %bl,%bl
+ 44002c2:	75 73                	jne    4400337 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x1d7>
+ 44002c4:	48 89 74 24 30       	mov    %rsi,0x30(%rsp)
+ 44002c9:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 44002cf:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 44002d4:	0f b6 52 01          	movzbl 0x1(%rdx),%edx
+ 44002d8:	4c 8d 05 81 e6 3a 01 	lea    0x13ae681(%rip),%r8        # 57ae960 <type:uint8@@Base>
+ 44002df:	4c 89 44 24 38       	mov    %r8,0x38(%rsp)
+ 44002e4:	4c 8d 05 35 be 86 03 	lea    0x386be35(%rip),%r8        # 7c6c120 <runtime.staticuint64s@@Base>
+ 44002eb:	49 8d 14 d0          	lea    (%r8,%rdx,8),%rdx
+ 44002ef:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 44002f4:	48 8d 05 b6 32 83 00 	lea    0x8332b6(%rip),%rax        # 4c335b1 <_IO_stdin_used@@Base+0x5b1>
+ 44002fb:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 4400300:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 4400305:	bf 01 00 00 00       	mov    $0x1,%edi
+ 440030a:	48 89 fe             	mov    %rdi,%rsi
+ 440030d:	e8 ee 45 bf fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4400312:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4400317:	48 89 5a 28          	mov    %rbx,0x28(%rdx)
+ 440031b:	83 3d 3e b6 a7 03 00 	cmpl   $0x0,0x3a7b63e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4400322:	75 06                	jne    440032a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x1ca>
+ 4400324:	48 89 42 20          	mov    %rax,0x20(%rdx)
+ 4400328:	eb 0a                	jmp    4400334 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base+0x1d4>
+ 440032a:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 440032f:	e8 cc 62 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4400334:	48 89 d7             	mov    %rdx,%rdi
+ 4400337:	48 89 f8             	mov    %rdi,%rax
+ 440033a:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 440033f:	48 83 c4 50          	add    $0x50,%rsp
+ 4400343:	c3                   	ret
+ 4400344:	31 c0                	xor    %eax,%eax
+ 4400346:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 440034b:	48 83 c4 50          	add    $0x50,%rsp
+ 440034f:	c3                   	ret
+ 4400350:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4400355:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 440035a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 440035f:	90                   	nop
+ 4400360:	e8 fb 40 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4400365:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 440036a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 440036f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4400374:	e9 e7 fd ff ff       	jmp    4400160 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAckPayload@@Base>
+ 4400379:	cc                   	int3
+ 440037a:	cc                   	int3
+ 440037b:	cc                   	int3
+ 440037c:	cc                   	int3
+ 440037d:	cc                   	int3
+ 440037e:	cc                   	int3
+ 440037f:	cc                   	int3

@@ -1,0 +1,135 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue
+# addr 0x45cc500 size 448 (0x1c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045cc500 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base>:
+ 45cc500:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45cc504:	0f 86 90 01 00 00    	jbe    45cc69a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x19a>
+ 45cc50a:	48 83 ec 50          	sub    $0x50,%rsp
+ 45cc50e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 45cc513:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 45cc518:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45cc51f:	4c 89 6c 24 40       	mov    %r13,0x40(%rsp)
+ 45cc524:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45cc529:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 45cc530:	00 00 
+ 45cc532:	48 89 c1             	mov    %rax,%rcx
+ 45cc535:	31 c0                	xor    %eax,%eax
+ 45cc537:	be 01 00 00 00       	mov    $0x1,%esi
+ 45cc53c:	f0 0f b1 31          	lock cmpxchg %esi,(%rcx)
+ 45cc540:	40 0f 94 c6          	sete   %sil
+ 45cc544:	40 84 f6             	test   %sil,%sil
+ 45cc547:	75 12                	jne    45cc55b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x5b>
+ 45cc549:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45cc54e:	48 89 c8             	mov    %rcx,%rax
+ 45cc551:	e8 ea bf 9a fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45cc556:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45cc55b:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 45cc561:	48 8d 35 58 01 00 00 	lea    0x158(%rip),%rsi        # 45cc6c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue.func1@@Base>
+ 45cc568:	48 89 74 24 30       	mov    %rsi,0x30(%rsp)
+ 45cc56d:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 45cc572:	48 8d 74 24 30       	lea    0x30(%rsp),%rsi
+ 45cc577:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 45cc57c:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 45cc581:	48 8b 71 08          	mov    0x8(%rcx),%rsi
+ 45cc585:	48 83 7e 28 00       	cmpq   $0x0,0x28(%rsi)
+ 45cc58a:	75 05                	jne    45cc591 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x91>
+ 45cc58c:	45 31 c0             	xor    %r8d,%r8d
+ 45cc58f:	eb 03                	jmp    45cc594 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x94>
+ 45cc591:	4c 8b 06             	mov    (%rsi),%r8
+ 45cc594:	4d 85 c0             	test   %r8,%r8
+ 45cc597:	0f 84 b1 00 00 00    	je     45cc64e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x14e>
+ 45cc59d:	49 8b 40 18          	mov    0x18(%r8),%rax
+ 45cc5a1:	4d 8b 48 20          	mov    0x20(%r8),%r9
+ 45cc5a5:	48 8d 1d 94 06 11 01 	lea    0x1110694(%rip),%rbx        # 56dcc40 <type:bUdCrYva@@Base>
+ 45cc5ac:	48 39 d8             	cmp    %rbx,%rax
+ 45cc5af:	0f 85 c0 00 00 00    	jne    45cc675 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x175>
+ 45cc5b5:	90                   	nop
+ 45cc5b6:	49 39 70 10          	cmp    %rsi,0x10(%r8)
+ 45cc5ba:	75 6f                	jne    45cc62b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x12b>
+ 45cc5bc:	49 8b 78 08          	mov    0x8(%r8),%rdi
+ 45cc5c0:	84 07                	test   %al,(%rdi)
+ 45cc5c2:	90                   	nop
+ 45cc5c3:	49 8b 00             	mov    (%r8),%rax
+ 45cc5c6:	83 3d 93 f3 8a 03 00 	cmpl   $0x0,0x38af393(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cc5cd:	75 05                	jne    45cc5d4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0xd4>
+ 45cc5cf:	48 89 07             	mov    %rax,(%rdi)
+ 45cc5d2:	eb 05                	jmp    45cc5d9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0xd9>
+ 45cc5d4:	e8 27 a0 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cc5d9:	49 8b 38             	mov    (%r8),%rdi
+ 45cc5dc:	84 07                	test   %al,(%rdi)
+ 45cc5de:	49 8b 40 08          	mov    0x8(%r8),%rax
+ 45cc5e2:	83 3d 77 f3 8a 03 00 	cmpl   $0x0,0x38af377(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45cc5e9:	75 12                	jne    45cc5fd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0xfd>
+ 45cc5eb:	48 89 47 08          	mov    %rax,0x8(%rdi)
+ 45cc5ef:	45 0f 11 38          	movups %xmm15,(%r8)
+ 45cc5f3:	49 c7 40 10 00 00 00 	movq   $0x0,0x10(%r8)
+ 45cc5fa:	00 
+ 45cc5fb:	eb 2a                	jmp    45cc627 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base+0x127>
+ 45cc5fd:	48 83 c7 08          	add    $0x8,%rdi
+ 45cc601:	e8 fa 9f 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cc606:	4c 89 c7             	mov    %r8,%rdi
+ 45cc609:	31 c0                	xor    %eax,%eax
+ 45cc60b:	e8 f0 9f 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cc610:	48 8d 4f 08          	lea    0x8(%rdi),%rcx
+ 45cc614:	48 89 cf             	mov    %rcx,%rdi
+ 45cc617:	e8 e4 9f 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cc61c:	49 8d 78 10          	lea    0x10(%r8),%rdi
+ 45cc620:	31 c0                	xor    %eax,%eax
+ 45cc622:	e8 d9 9f 98 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45cc627:	48 ff 4e 28          	decq   0x28(%rsi)
+ 45cc62b:	4c 89 4c 24 20       	mov    %r9,0x20(%rsp)
+ 45cc630:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45cc635:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 45cc63a:	48 8b 02             	mov    (%rdx),%rax
+ 45cc63d:	ff d0                	call   *%rax
+ 45cc63f:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45cc644:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45cc649:	48 83 c4 50          	add    $0x50,%rsp
+ 45cc64d:	c3                   	ret
+ 45cc64e:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 45cc655:	00 00 
+ 45cc657:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45cc65c:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 45cc661:	48 8b 02             	mov    (%rdx),%rax
+ 45cc664:	ff d0                	call   *%rax
+ 45cc666:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45cc66b:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45cc670:	48 83 c4 50          	add    $0x50,%rsp
+ 45cc674:	c3                   	ret
+ 45cc675:	48 8d 0d c4 7c 2e 01 	lea    0x12e7cc4(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 45cc67c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45cc680:	e8 1b 12 92 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 45cc685:	90                   	nop
+ 45cc686:	e8 d5 f8 94 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45cc68b:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45cc690:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45cc695:	48 83 c4 50          	add    $0x50,%rsp
+ 45cc699:	c3                   	ret
+ 45cc69a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45cc69f:	90                   	nop
+ 45cc6a0:	e8 bb 7d 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45cc6a5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45cc6aa:	e9 51 fe ff ff       	jmp    45cc500 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*TxQueue).Dequeue@@Base>
+ 45cc6af:	cc                   	int3
+ 45cc6b0:	cc                   	int3
+ 45cc6b1:	cc                   	int3
+ 45cc6b2:	cc                   	int3
+ 45cc6b3:	cc                   	int3
+ 45cc6b4:	cc                   	int3
+ 45cc6b5:	cc                   	int3
+ 45cc6b6:	cc                   	int3
+ 45cc6b7:	cc                   	int3
+ 45cc6b8:	cc                   	int3
+ 45cc6b9:	cc                   	int3
+ 45cc6ba:	cc                   	int3
+ 45cc6bb:	cc                   	int3
+ 45cc6bc:	cc                   	int3
+ 45cc6bd:	cc                   	int3
+ 45cc6be:	cc                   	int3
+ 45cc6bf:	cc                   	int3

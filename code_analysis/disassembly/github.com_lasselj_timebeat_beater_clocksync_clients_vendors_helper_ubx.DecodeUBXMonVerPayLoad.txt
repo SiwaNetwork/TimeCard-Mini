@@ -1,0 +1,193 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad
+# addr 0x44017a0 size 704 (0x2c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044017a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base>:
+ 44017a0:	4c 8d 64 24 f8       	lea    -0x8(%rsp),%r12
+ 44017a5:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 44017a9:	0f 86 77 02 00 00    	jbe    4401a26 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x286>
+ 44017af:	48 81 ec 88 00 00 00 	sub    $0x88,%rsp
+ 44017b6:	48 89 ac 24 80 00 00 	mov    %rbp,0x80(%rsp)
+ 44017bd:	00 
+ 44017be:	48 8d ac 24 80 00 00 	lea    0x80(%rsp),%rbp
+ 44017c5:	00 
+ 44017c6:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 44017cd:	00 
+ 44017ce:	48 8d 53 d8          	lea    -0x28(%rbx),%rdx
+ 44017d2:	48 89 c6             	mov    %rax,%rsi
+ 44017d5:	48 b8 89 88 88 88 88 	movabs $0x8888888888888889,%rax
+ 44017dc:	88 88 88 
+ 44017df:	48 89 d7             	mov    %rdx,%rdi
+ 44017e2:	48 f7 ea             	imul   %rdx
+ 44017e5:	48 8d 14 1a          	lea    (%rdx,%rbx,1),%rdx
+ 44017e9:	48 8d 52 d8          	lea    -0x28(%rdx),%rdx
+ 44017ed:	48 c1 fa 04          	sar    $0x4,%rdx
+ 44017f1:	48 89 fb             	mov    %rdi,%rbx
+ 44017f4:	48 c1 ff 3f          	sar    $0x3f,%rdi
+ 44017f8:	48 29 fa             	sub    %rdi,%rdx
+ 44017fb:	48 6b fa 1e          	imul   $0x1e,%rdx,%rdi
+ 44017ff:	90                   	nop
+ 4401800:	48 39 df             	cmp    %rbx,%rdi
+ 4401803:	0f 85 8d 00 00 00    	jne    4401896 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0xf6>
+ 4401809:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4401810:	00 
+ 4401811:	48 89 74 24 78       	mov    %rsi,0x78(%rsp)
+ 4401816:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 440181b:	48 8d 05 7e 22 7a 01 	lea    0x17a227e(%rip),%rax        # 5ba3aa0 <type:gFqoVl7/@@Base>
+ 4401822:	e8 b9 ec ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4401827:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 440182e:	00 
+ 440182f:	48 83 fa 1e          	cmp    $0x1e,%rdx
+ 4401833:	0f 82 de 01 00 00    	jb     4401a17 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x277>
+ 4401839:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 440183e:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 4401843:	48 39 d8             	cmp    %rbx,%rax
+ 4401846:	74 1c                	je     4401864 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0xc4>
+ 4401848:	b9 1e 00 00 00       	mov    $0x1e,%ecx
+ 440184d:	e8 4e 5c b5 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4401852:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 4401857:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 440185e:	00 
+ 440185f:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 4401864:	48 83 fa 28          	cmp    $0x28,%rdx
+ 4401868:	0f 82 9f 01 00 00    	jb     4401a0d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x26d>
+ 440186e:	4c 8d 40 1e          	lea    0x1e(%rax),%r8
+ 4401872:	4c 8d 4b 1e          	lea    0x1e(%rbx),%r9
+ 4401876:	4d 39 c1             	cmp    %r8,%r9
+ 4401879:	74 12                	je     440188d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0xed>
+ 440187b:	4c 8b 43 1e          	mov    0x1e(%rbx),%r8
+ 440187f:	44 0f b7 4b 26       	movzwl 0x26(%rbx),%r9d
+ 4401884:	4c 89 40 1e          	mov    %r8,0x1e(%rax)
+ 4401888:	66 44 89 48 26       	mov    %r9w,0x26(%rax)
+ 440188d:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 4401892:	31 c9                	xor    %ecx,%ecx
+ 4401894:	eb 3b                	jmp    44018d1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x131>
+ 4401896:	31 c0                	xor    %eax,%eax
+ 4401898:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 440189f:	00 
+ 44018a0:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 44018a7:	c3                   	ret
+ 44018a8:	4c 89 60 30          	mov    %r12,0x30(%rax)
+ 44018ac:	4d 6b dc 1e          	imul   $0x1e,%r12,%r11
+ 44018b0:	4f 8d 0c 0b          	lea    (%r11,%r9,1),%r9
+ 44018b4:	4d 8d 49 e2          	lea    -0x1e(%r9),%r9
+ 44018b8:	0f 10 44 24 52       	movups 0x52(%rsp),%xmm0
+ 44018bd:	41 0f 11 01          	movups %xmm0,(%r9)
+ 44018c1:	0f 10 44 24 60       	movups 0x60(%rsp),%xmm0
+ 44018c6:	41 0f 11 41 0e       	movups %xmm0,0xe(%r9)
+ 44018cb:	48 ff c1             	inc    %rcx
+ 44018ce:	4c 89 d2             	mov    %r10,%rdx
+ 44018d1:	4c 39 c1             	cmp    %r8,%rcx
+ 44018d4:	0f 8d 0b 01 00 00    	jge    44019e5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x245>
+ 44018da:	44 0f 11 7c 24 52    	movups %xmm15,0x52(%rsp)
+ 44018e0:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 44018e6:	4c 6b c9 1e          	imul   $0x1e,%rcx,%r9
+ 44018ea:	4d 8d 51 46          	lea    0x46(%r9),%r10
+ 44018ee:	4c 39 d2             	cmp    %r10,%rdx
+ 44018f1:	0f 82 0e 01 00 00    	jb     4401a05 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x265>
+ 44018f7:	4d 8d 59 28          	lea    0x28(%r9),%r11
+ 44018fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4401900:	4d 39 da             	cmp    %r11,%r10
+ 4401903:	0f 82 ec 00 00 00    	jb     44019f5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x255>
+ 4401909:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 440190e:	49 89 d2             	mov    %rdx,%r10
+ 4401911:	4c 29 ca             	sub    %r9,%rdx
+ 4401914:	4c 8d 4a d8          	lea    -0x28(%rdx),%r9
+ 4401918:	49 f7 d9             	neg    %r9
+ 440191b:	49 c1 f9 3f          	sar    $0x3f,%r9
+ 440191f:	4d 21 cb             	and    %r9,%r11
+ 4401922:	4e 8d 0c 1b          	lea    (%rbx,%r11,1),%r9
+ 4401926:	4c 8d 5c 24 52       	lea    0x52(%rsp),%r11
+ 440192b:	4d 39 cb             	cmp    %r9,%r11
+ 440192e:	74 31                	je     4401961 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x1c1>
+ 4401930:	4c 89 d8             	mov    %r11,%rax
+ 4401933:	4c 89 cb             	mov    %r9,%rbx
+ 4401936:	b9 1e 00 00 00       	mov    $0x1e,%ecx
+ 440193b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4401940:	e8 5b 5b b5 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4401945:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 440194a:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 440194f:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 4401954:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 4401959:	4c 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%r10
+ 4401960:	00 
+ 4401961:	4c 8b 48 28          	mov    0x28(%rax),%r9
+ 4401965:	4c 8b 58 38          	mov    0x38(%rax),%r11
+ 4401969:	4c 8b 60 30          	mov    0x30(%rax),%r12
+ 440196d:	49 ff c4             	inc    %r12
+ 4401970:	4d 39 e3             	cmp    %r12,%r11
+ 4401973:	0f 83 2f ff ff ff    	jae    44018a8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x108>
+ 4401979:	4c 89 c8             	mov    %r9,%rax
+ 440197c:	4c 89 e3             	mov    %r12,%rbx
+ 440197f:	4c 89 d9             	mov    %r11,%rcx
+ 4401982:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4401987:	48 8d 35 b2 01 3d 01 	lea    0x13d01b2(%rip),%rsi        # 57d1b40 <type:[30]uint8@@Base>
+ 440198e:	e8 2d 4b b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401993:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 4401998:	48 89 4f 38          	mov    %rcx,0x38(%rdi)
+ 440199c:	83 3d bd 9f a7 03 00 	cmpl   $0x0,0x3a79fbd(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44019a3:	75 06                	jne    44019ab <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x20b>
+ 44019a5:	48 89 47 28          	mov    %rax,0x28(%rdi)
+ 44019a9:	eb 12                	jmp    44019bd <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x21d>
+ 44019ab:	4c 8d 47 28          	lea    0x28(%rdi),%r8
+ 44019af:	48 89 f9             	mov    %rdi,%rcx
+ 44019b2:	4c 89 c7             	mov    %r8,%rdi
+ 44019b5:	e8 46 4c b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 44019ba:	48 89 cf             	mov    %rcx,%rdi
+ 44019bd:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 44019c2:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 44019c7:	4c 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%r10
+ 44019ce:	00 
+ 44019cf:	49 89 dc             	mov    %rbx,%r12
+ 44019d2:	49 89 c1             	mov    %rax,%r9
+ 44019d5:	48 89 f8             	mov    %rdi,%rax
+ 44019d8:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 44019dd:	0f 1f 00             	nopl   (%rax)
+ 44019e0:	e9 c3 fe ff ff       	jmp    44018a8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base+0x108>
+ 44019e5:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 44019ec:	00 
+ 44019ed:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 44019f4:	c3                   	ret
+ 44019f5:	4c 89 d8             	mov    %r11,%rax
+ 44019f8:	4c 89 d1             	mov    %r10,%rcx
+ 44019fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4401a00:	e8 5b 51 b5 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 4401a05:	4c 89 d1             	mov    %r10,%rcx
+ 4401a08:	e8 13 51 b5 fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 4401a0d:	b9 28 00 00 00       	mov    $0x28,%ecx
+ 4401a12:	e8 09 51 b5 fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 4401a17:	b9 1e 00 00 00       	mov    $0x1e,%ecx
+ 4401a1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4401a20:	e8 fb 50 b5 fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 4401a25:	90                   	nop
+ 4401a26:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4401a2b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4401a30:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4401a35:	e8 26 2a b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4401a3a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4401a3f:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4401a44:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4401a49:	e9 52 fd ff ff       	jmp    44017a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXMonVerPayLoad@@Base>
+ 4401a4e:	cc                   	int3
+ 4401a4f:	cc                   	int3
+ 4401a50:	cc                   	int3
+ 4401a51:	cc                   	int3
+ 4401a52:	cc                   	int3
+ 4401a53:	cc                   	int3
+ 4401a54:	cc                   	int3
+ 4401a55:	cc                   	int3
+ 4401a56:	cc                   	int3
+ 4401a57:	cc                   	int3
+ 4401a58:	cc                   	int3
+ 4401a59:	cc                   	int3
+ 4401a5a:	cc                   	int3
+ 4401a5b:	cc                   	int3
+ 4401a5c:	cc                   	int3
+ 4401a5d:	cc                   	int3
+ 4401a5e:	cc                   	int3
+ 4401a5f:	cc                   	int3

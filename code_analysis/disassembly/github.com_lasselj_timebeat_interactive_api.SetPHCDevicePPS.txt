@@ -1,0 +1,133 @@
+# github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS
+# addr 0x4beb780 size 480 (0x1e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004beb780 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base>:
+ 4beb780:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4beb784:	0f 86 9b 01 00 00    	jbe    4beb925 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x1a5>
+ 4beb78a:	48 83 ec 48          	sub    $0x48,%rsp
+ 4beb78e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4beb793:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4beb798:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4beb79d:	0f 1f 00             	nopl   (%rax)
+ 4beb7a0:	48 83 fb 04          	cmp    $0x4,%rbx
+ 4beb7a4:	0f 85 65 01 00 00    	jne    4beb90f <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x18f>
+ 4beb7aa:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4beb7af:	e8 cc 6b 99 ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 4beb7b4:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4beb7b9:	48 8b 19             	mov    (%rcx),%rbx
+ 4beb7bc:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4beb7c0:	48 89 d1             	mov    %rdx,%rcx
+ 4beb7c3:	e8 78 70 99 ff       	call   4582840 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GetDeviceWithName@@Base>
+ 4beb7c8:	48 85 c0             	test   %rax,%rax
+ 4beb7cb:	0f 84 12 01 00 00    	je     4beb8e3 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x163>
+ 4beb7d1:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4beb7d6:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4beb7db:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4beb7df:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 4beb7e3:	e8 18 39 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4beb7e8:	48 85 db             	test   %rbx,%rbx
+ 4beb7eb:	0f 85 c8 00 00 00    	jne    4beb8b9 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x139>
+ 4beb7f1:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4beb7f6:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+ 4beb7fa:	48 83 7a 38 06       	cmpq   $0x6,0x38(%rdx)
+ 4beb7ff:	90                   	nop
+ 4beb800:	75 14                	jne    4beb816 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x96>
+ 4beb802:	81 3e 65 6e 61 62    	cmpl   $0x62616e65,(%rsi)
+ 4beb808:	75 0c                	jne    4beb816 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x96>
+ 4beb80a:	66 81 7e 04 6c 65    	cmpw   $0x656c,0x4(%rsi)
+ 4beb810:	40 0f 94 c6          	sete   %sil
+ 4beb814:	eb 02                	jmp    4beb818 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x98>
+ 4beb816:	31 f6                	xor    %esi,%esi
+ 4beb818:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4beb81d:	40 88 74 24 2f       	mov    %sil,0x2f(%rsp)
+ 4beb822:	48 8b 5a 18          	mov    0x18(%rdx),%rbx
+ 4beb826:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4beb82a:	48 83 fb 07          	cmp    $0x7,%rbx
+ 4beb82e:	75 31                	jne    4beb861 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0xe1>
+ 4beb830:	81 3f 63 68 61 6e    	cmpl   $0x6e616863,(%rdi)
+ 4beb836:	75 29                	jne    4beb861 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0xe1>
+ 4beb838:	66 81 7f 04 6e 65    	cmpw   $0x656e,0x4(%rdi)
+ 4beb83e:	66 90                	xchg   %ax,%ax
+ 4beb840:	75 1f                	jne    4beb861 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0xe1>
+ 4beb842:	80 7f 06 6c          	cmpb   $0x6c,0x6(%rdi)
+ 4beb846:	75 19                	jne    4beb861 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0xe1>
+ 4beb848:	48 89 c3             	mov    %rax,%rbx
+ 4beb84b:	89 f1                	mov    %esi,%ecx
+ 4beb84d:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4beb852:	e8 29 1e 9a ff       	call   458d680 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOutOnChannel@@Base>
+ 4beb857:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb85c:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb860:	c3                   	ret
+ 4beb861:	48 89 f8             	mov    %rdi,%rax
+ 4beb864:	e8 97 38 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4beb869:	48 85 db             	test   %rbx,%rbx
+ 4beb86c:	74 2a                	je     4beb898 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base+0x118>
+ 4beb86e:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4beb873:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4beb877:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4beb87b:	31 c0                	xor    %eax,%eax
+ 4beb87d:	48 8d 1d 72 08 09 00 	lea    0x90872(%rip),%rbx        # 4c7c0f6 <_IO_stdin_used@@Base+0x490f6>
+ 4beb884:	b9 0d 00 00 00       	mov    $0xd,%ecx
+ 4beb889:	e8 92 ea 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beb88e:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb893:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb897:	c3                   	ret
+ 4beb898:	48 89 c3             	mov    %rax,%rbx
+ 4beb89b:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4beb8a0:	0f b6 7c 24 2f       	movzbl 0x2f(%rsp),%edi
+ 4beb8a5:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4beb8aa:	e8 51 22 9a ff       	call   458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>
+ 4beb8af:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb8b4:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb8b8:	c3                   	ret
+ 4beb8b9:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4beb8be:	48 8b 7a 20          	mov    0x20(%rdx),%rdi
+ 4beb8c2:	48 8b 72 28          	mov    0x28(%rdx),%rsi
+ 4beb8c6:	31 c0                	xor    %eax,%eax
+ 4beb8c8:	48 8d 1d e5 ca 0e 00 	lea    0xecae5(%rip),%rbx        # 4cd83b4 <_IO_stdin_used@@Base+0xa53b4>
+ 4beb8cf:	b9 0f 00 00 00       	mov    $0xf,%ecx
+ 4beb8d4:	e8 47 ea 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beb8d9:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb8de:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb8e2:	c3                   	ret
+ 4beb8e3:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4beb8e8:	48 8b 3a             	mov    (%rdx),%rdi
+ 4beb8eb:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 4beb8ef:	31 c0                	xor    %eax,%eax
+ 4beb8f1:	48 8d 1d d7 82 20 00 	lea    0x2082d7(%rip),%rbx        # 4df3bcf <_IO_stdin_used@@Base+0x1c0bcf>
+ 4beb8f8:	b9 1f 00 00 00       	mov    $0x1f,%ecx
+ 4beb8fd:	0f 1f 00             	nopl   (%rax)
+ 4beb900:	e8 1b ea 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beb905:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb90a:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb90e:	c3                   	ret
+ 4beb90f:	48 8d 05 4c e1 28 00 	lea    0x28e14c(%rip),%rax        # 4e79a62 <_IO_stdin_used@@Base+0x246a62>
+ 4beb916:	bb 4d 00 00 00       	mov    $0x4d,%ebx
+ 4beb91b:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4beb920:	48 83 c4 48          	add    $0x48,%rsp
+ 4beb924:	c3                   	ret
+ 4beb925:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4beb92a:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4beb92f:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4beb934:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4beb939:	e8 22 8b 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4beb93e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4beb943:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4beb948:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4beb94d:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4beb952:	e9 29 fe ff ff       	jmp    4beb780 <github.com/lasselj/timebeat/interactive/api.SetPHCDevicePPS@@Base>
+ 4beb957:	cc                   	int3
+ 4beb958:	cc                   	int3
+ 4beb959:	cc                   	int3
+ 4beb95a:	cc                   	int3
+ 4beb95b:	cc                   	int3
+ 4beb95c:	cc                   	int3
+ 4beb95d:	cc                   	int3
+ 4beb95e:	cc                   	int3
+ 4beb95f:	cc                   	int3

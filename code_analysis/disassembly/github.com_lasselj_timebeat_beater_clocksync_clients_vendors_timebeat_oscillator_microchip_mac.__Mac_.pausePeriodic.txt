@@ -1,0 +1,94 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic
+# addr 0x4ba0b80 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004ba0b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base>:
+ 4ba0b80:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4ba0b84:	0f 86 e9 00 00 00    	jbe    4ba0c73 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base+0xf3>
+ 4ba0b8a:	48 83 ec 40          	sub    $0x40,%rsp
+ 4ba0b8e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4ba0b93:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4ba0b98:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4ba0b9f:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 4ba0ba4:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4ba0ba9:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 4ba0bae:	48 89 c1             	mov    %rax,%rcx
+ 4ba0bb1:	31 c0                	xor    %eax,%eax
+ 4ba0bb3:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4ba0bb8:	f0 0f b1 51 38       	lock cmpxchg %edx,0x38(%rcx)
+ 4ba0bbd:	0f 94 c2             	sete   %dl
+ 4ba0bc0:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 4ba0bc4:	84 d2                	test   %dl,%dl
+ 4ba0bc6:	75 14                	jne    4ba0bdc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base+0x5c>
+ 4ba0bc8:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4ba0bcd:	e8 6e 79 3d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4ba0bd2:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4ba0bd7:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba0bdc:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 4ba0be2:	48 8d 15 b7 00 00 00 	lea    0xb7(%rip),%rdx        # 4ba0ca0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic.func1@@Base>
+ 4ba0be9:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 4ba0bee:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4ba0bf3:	48 8d 54 24 20       	lea    0x20(%rsp),%rdx
+ 4ba0bf8:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4ba0bfd:	c6 44 24 17 01       	movb   $0x1,0x17(%rsp)
+ 4ba0c02:	c6 41 41 01          	movb   $0x1,0x41(%rcx)
+ 4ba0c06:	48 8d 05 d3 1d f1 00 	lea    0xf11dd3(%rip),%rax        # 5ab29e0 <type:GY3OlQsZ@@Base>
+ 4ba0c0d:	e8 ce f8 34 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4ba0c12:	48 8d 0d 27 02 00 00 	lea    0x227(%rip),%rcx        # 4ba0e40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).reenablePeriodic-fm@@Base>
+ 4ba0c19:	48 89 08             	mov    %rcx,(%rax)
+ 4ba0c1c:	83 3d 3d ad 2d 03 00 	cmpl   $0x0,0x32dad3d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4ba0c23:	75 0b                	jne    4ba0c30 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base+0xb0>
+ 4ba0c25:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba0c2a:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4ba0c2e:	eb 0e                	jmp    4ba0c3e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base+0xbe>
+ 4ba0c30:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4ba0c34:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba0c39:	e8 c2 5a 3b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4ba0c3e:	48 89 c3             	mov    %rax,%rbx
+ 4ba0c41:	b8 00 5e d0 b2       	mov    $0xb2d05e00,%eax
+ 4ba0c46:	e8 75 89 42 fd       	call   1fc95c0 <time.AfterFunc@@Base>
+ 4ba0c4b:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 4ba0c50:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4ba0c55:	48 8b 0a             	mov    (%rdx),%rcx
+ 4ba0c58:	ff d1                	call   *%rcx
+ 4ba0c5a:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4ba0c5f:	48 83 c4 40          	add    $0x40,%rsp
+ 4ba0c63:	c3                   	ret
+ 4ba0c64:	e8 f7 b2 37 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4ba0c69:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4ba0c6e:	48 83 c4 40          	add    $0x40,%rsp
+ 4ba0c72:	c3                   	ret
+ 4ba0c73:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4ba0c78:	e8 e3 37 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4ba0c7d:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4ba0c82:	e9 f9 fe ff ff       	jmp    4ba0b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/oscillator/microchip_mac.(*Mac).pausePeriodic@@Base>
+ 4ba0c87:	cc                   	int3
+ 4ba0c88:	cc                   	int3
+ 4ba0c89:	cc                   	int3
+ 4ba0c8a:	cc                   	int3
+ 4ba0c8b:	cc                   	int3
+ 4ba0c8c:	cc                   	int3
+ 4ba0c8d:	cc                   	int3
+ 4ba0c8e:	cc                   	int3
+ 4ba0c8f:	cc                   	int3
+ 4ba0c90:	cc                   	int3
+ 4ba0c91:	cc                   	int3
+ 4ba0c92:	cc                   	int3
+ 4ba0c93:	cc                   	int3
+ 4ba0c94:	cc                   	int3
+ 4ba0c95:	cc                   	int3
+ 4ba0c96:	cc                   	int3
+ 4ba0c97:	cc                   	int3
+ 4ba0c98:	cc                   	int3
+ 4ba0c99:	cc                   	int3
+ 4ba0c9a:	cc                   	int3
+ 4ba0c9b:	cc                   	int3
+ 4ba0c9c:	cc                   	int3
+ 4ba0c9d:	cc                   	int3
+ 4ba0c9e:	cc                   	int3
+ 4ba0c9f:	cc                   	int3

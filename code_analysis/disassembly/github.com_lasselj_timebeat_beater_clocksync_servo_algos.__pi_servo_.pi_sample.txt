@@ -1,0 +1,237 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample
+# addr 0x457ffa0 size 800 (0x320)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457ffa0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base>:
+ 457ffa0:	48 83 ec 08          	sub    $0x8,%rsp
+ 457ffa4:	48 89 2c 24          	mov    %rbp,(%rsp)
+ 457ffa8:	48 8d 2c 24          	lea    (%rsp),%rbp
+ 457ffac:	f2 0f 10 48 70       	movsd  0x70(%rax),%xmm1
+ 457ffb1:	48 8b 50 78          	mov    0x78(%rax),%rdx
+ 457ffb5:	48 85 d2             	test   %rdx,%rdx
+ 457ffb8:	75 26                	jne    457ffe0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x40>
+ 457ffba:	48 89 58 38          	mov    %rbx,0x38(%rax)
+ 457ffbe:	48 89 48 48          	mov    %rcx,0x48(%rax)
+ 457ffc2:	48 c7 07 00 00 00 00 	movq   $0x0,(%rdi)
+ 457ffc9:	48 c7 40 78 01 00 00 	movq   $0x1,0x78(%rax)
+ 457ffd0:	00 
+ 457ffd1:	49 89 c0             	mov    %rax,%r8
+ 457ffd4:	e9 b9 02 00 00       	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 457ffd9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 457ffe0:	48 83 fa 01          	cmp    $0x1,%rdx
+ 457ffe4:	0f 85 e1 01 00 00    	jne    45801cb <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x22b>
+ 457ffea:	48 89 58 40          	mov    %rbx,0x40(%rax)
+ 457ffee:	48 89 48 50          	mov    %rcx,0x50(%rax)
+ 457fff2:	48 8b 50 48          	mov    0x48(%rax),%rdx
+ 457fff6:	48 39 d1             	cmp    %rdx,%rcx
+ 457fff9:	77 17                	ja     4580012 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x72>
+ 457fffb:	48 c7 07 00 00 00 00 	movq   $0x0,(%rdi)
+ 4580002:	48 c7 40 78 00 00 00 	movq   $0x0,0x78(%rax)
+ 4580009:	00 
+ 458000a:	49 89 c0             	mov    %rax,%r8
+ 458000d:	e9 80 02 00 00       	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 4580012:	48 89 d6             	mov    %rdx,%rsi
+ 4580015:	48 d1 ea             	shr    $1,%rdx
+ 4580018:	49 89 c0             	mov    %rax,%r8
+ 458001b:	48 b8 98 a5 b4 36 41 	movabs $0x89705f4136b4a598,%rax
+ 4580022:	5f 70 89 
+ 4580025:	48 f7 e2             	mul    %rdx
+ 4580028:	48 c1 ea 1c          	shr    $0x1c,%rdx
+ 458002c:	49 89 c9             	mov    %rcx,%r9
+ 458002f:	48 29 d1             	sub    %rdx,%rcx
+ 4580032:	48 85 c9             	test   %rcx,%rcx
+ 4580035:	7c 0b                	jl     4580042 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0xa2>
+ 4580037:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 458003a:	f2 48 0f 2a d1       	cvtsi2sd %rcx,%xmm2
+ 458003f:	90                   	nop
+ 4580040:	eb 18                	jmp    458005a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0xba>
+ 4580042:	48 89 ca             	mov    %rcx,%rdx
+ 4580045:	48 d1 e9             	shr    $1,%rcx
+ 4580048:	83 e2 01             	and    $0x1,%edx
+ 458004b:	48 09 d1             	or     %rdx,%rcx
+ 458004e:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 4580051:	f2 48 0f 2a d1       	cvtsi2sd %rcx,%xmm2
+ 4580056:	f2 0f 58 d2          	addsd  %xmm2,%xmm2
+ 458005a:	f2 0f 10 1d fe e1 f5 	movsd  0xf5e1fe(%rip),%xmm3        # 54de260 <_IO_stdin_used@@Base+0x8ab260>
+ 4580061:	00 
+ 4580062:	f2 0f 59 da          	mulsd  %xmm2,%xmm3
+ 4580066:	f2 0f 58 d3          	addsd  %xmm3,%xmm2
+ 458006a:	f2 0f 10 1d 2e e2 f5 	movsd  0xf5e22e(%rip),%xmm3        # 54de2a0 <_IO_stdin_used@@Base+0x8ab2a0>
+ 4580071:	00 
+ 4580072:	f2 41 0f 5e 58 68    	divsd  0x68(%r8),%xmm3
+ 4580078:	f2 0f 10 25 c0 e6 f5 	movsd  0xf5e6c0(%rip),%xmm4        # 54de740 <_IO_stdin_used@@Base+0x8ab740>
+ 458007f:	00 
+ 4580080:	66 0f 2e dc          	ucomisd %xmm4,%xmm3
+ 4580084:	76 08                	jbe    458008e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0xee>
+ 4580086:	f2 0f 10 1d b2 e6 f5 	movsd  0xf5e6b2(%rip),%xmm3        # 54de740 <_IO_stdin_used@@Base+0x8ab740>
+ 458008d:	00 
+ 458008e:	66 0f 2e da          	ucomisd %xmm2,%xmm3
+ 4580092:	76 11                	jbe    45800a5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x105>
+ 4580094:	48 c7 07 00 00 00 00 	movq   $0x0,(%rdi)
+ 458009b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45800a0:	e9 ed 01 00 00       	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 45800a5:	f2 41 0f 10 48 58    	movsd  0x58(%r8),%xmm1
+ 45800ab:	f2 48 0f 2c c1       	cvttsd2si %xmm1,%rax
+ 45800b0:	48 05 00 36 65 c4    	add    $0xffffffffc4653600,%rax
+ 45800b6:	48 f7 d8             	neg    %rax
+ 45800b9:	49 8b 48 38          	mov    0x38(%r8),%rcx
+ 45800bd:	48 89 da             	mov    %rbx,%rdx
+ 45800c0:	48 29 cb             	sub    %rcx,%rbx
+ 45800c3:	48 0f af c3          	imul   %rbx,%rax
+ 45800c7:	49 29 f1             	sub    %rsi,%r9
+ 45800ca:	4d 85 c9             	test   %r9,%r9
+ 45800cd:	0f 84 d1 01 00 00    	je     45802a4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x304>
+ 45800d3:	48 89 d1             	mov    %rdx,%rcx
+ 45800d6:	49 83 f9 ff          	cmp    $0xffffffffffffffff,%r9
+ 45800da:	74 07                	je     45800e3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x143>
+ 45800dc:	48 99                	cqto
+ 45800de:	49 f7 f9             	idiv   %r9
+ 45800e1:	eb 05                	jmp    45800e8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x148>
+ 45800e3:	48 f7 d8             	neg    %rax
+ 45800e6:	31 d2                	xor    %edx,%edx
+ 45800e8:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 45800eb:	f2 48 0f 2a d0       	cvtsi2sd %rax,%xmm2
+ 45800f0:	f2 0f 58 ca          	addsd  %xmm2,%xmm1
+ 45800f4:	f2 41 0f 11 48 58    	movsd  %xmm1,0x58(%r8)
+ 45800fa:	f2 41 0f 10 10       	movsd  (%r8),%xmm2
+ 45800ff:	f2 0f 10 1d c1 e8 f5 	movsd  0xf5e8c1(%rip),%xmm3        # 54de9c8 <_IO_stdin_used@@Base+0x8ab9c8>
+ 4580106:	00 
+ 4580107:	66 0f ef da          	pxor   %xmm2,%xmm3
+ 458010b:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 458010f:	76 08                	jbe    4580119 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x179>
+ 4580111:	f2 41 0f 11 58 58    	movsd  %xmm3,0x58(%r8)
+ 4580117:	eb 0c                	jmp    4580125 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x185>
+ 4580119:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 458011d:	76 06                	jbe    4580125 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x185>
+ 458011f:	f2 41 0f 11 50 58    	movsd  %xmm2,0x58(%r8)
+ 4580125:	49 83 78 18 00       	cmpq   $0x0,0x18(%r8)
+ 458012a:	74 37                	je     4580163 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x1c3>
+ 458012c:	f2 41 0f 10 48 10    	movsd  0x10(%r8),%xmm1
+ 4580132:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 4580135:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 4580139:	75 02                	jne    458013d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x19d>
+ 458013b:	7b 29                	jnp    4580166 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x1c6>
+ 458013d:	f2 41 0f 10 48 10    	movsd  0x10(%r8),%xmm1
+ 4580143:	0f 57 db             	xorps  %xmm3,%xmm3
+ 4580146:	f2 48 0f 2a d9       	cvtsi2sd %rcx,%xmm3
+ 458014b:	66 48 0f 7e d8       	movq   %xmm3,%rax
+ 4580150:	48 0f ba f0 3f       	btr    $0x3f,%rax
+ 4580155:	66 48 0f 6e d8       	movq   %rax,%xmm3
+ 458015a:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 458015e:	0f 97 c0             	seta   %al
+ 4580161:	eb 05                	jmp    4580168 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x1c8>
+ 4580163:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 4580166:	31 c0                	xor    %eax,%eax
+ 4580168:	84 c0                	test   %al,%al
+ 458016a:	75 3c                	jne    45801a8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x208>
+ 458016c:	f2 41 0f 10 48 08    	movsd  0x8(%r8),%xmm1
+ 4580172:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 4580176:	75 02                	jne    458017a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x1da>
+ 4580178:	7b 28                	jnp    45801a2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x202>
+ 458017a:	f2 41 0f 10 48 08    	movsd  0x8(%r8),%xmm1
+ 4580180:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 4580183:	f2 48 0f 2a d1       	cvtsi2sd %rcx,%xmm2
+ 4580188:	66 48 0f 7e d0       	movq   %xmm2,%rax
+ 458018d:	48 0f ba f0 3f       	btr    $0x3f,%rax
+ 4580192:	66 48 0f 6e d0       	movq   %rax,%xmm2
+ 4580197:	66 0f 2e d1          	ucomisd %xmm1,%xmm2
+ 458019b:	0f 97 c0             	seta   %al
+ 458019e:	66 90                	xchg   %ax,%ax
+ 45801a0:	eb 02                	jmp    45801a4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x204>
+ 45801a2:	31 c0                	xor    %eax,%eax
+ 45801a4:	84 c0                	test   %al,%al
+ 45801a6:	74 09                	je     45801b1 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x211>
+ 45801a8:	48 c7 07 01 00 00 00 	movq   $0x1,(%rdi)
+ 45801af:	eb 07                	jmp    45801b8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x218>
+ 45801b1:	48 c7 07 02 00 00 00 	movq   $0x2,(%rdi)
+ 45801b8:	f2 41 0f 10 48 58    	movsd  0x58(%r8),%xmm1
+ 45801be:	49 c7 40 78 02 00 00 	movq   $0x2,0x78(%r8)
+ 45801c5:	00 
+ 45801c6:	e9 c7 00 00 00       	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 45801cb:	48 83 fa 02          	cmp    $0x2,%rdx
+ 45801cf:	0f 85 ba 00 00 00    	jne    458028f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2ef>
+ 45801d5:	f2 0f 10 50 08       	movsd  0x8(%rax),%xmm2
+ 45801da:	0f 57 db             	xorps  %xmm3,%xmm3
+ 45801dd:	66 0f 2e d3          	ucomisd %xmm3,%xmm2
+ 45801e1:	75 02                	jne    45801e5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x245>
+ 45801e3:	7b 25                	jnp    458020a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x26a>
+ 45801e5:	f2 0f 10 50 08       	movsd  0x8(%rax),%xmm2
+ 45801ea:	0f 57 db             	xorps  %xmm3,%xmm3
+ 45801ed:	f2 48 0f 2a db       	cvtsi2sd %rbx,%xmm3
+ 45801f2:	66 48 0f 7e d9       	movq   %xmm3,%rcx
+ 45801f7:	48 0f ba f1 3f       	btr    $0x3f,%rcx
+ 45801fc:	66 48 0f 6e d9       	movq   %rcx,%xmm3
+ 4580201:	66 0f 2e da          	ucomisd %xmm2,%xmm3
+ 4580205:	0f 97 c1             	seta   %cl
+ 4580208:	eb 02                	jmp    458020c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x26c>
+ 458020a:	31 c9                	xor    %ecx,%ecx
+ 458020c:	84 c9                	test   %cl,%cl
+ 458020e:	74 14                	je     4580224 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x284>
+ 4580210:	48 c7 07 00 00 00 00 	movq   $0x0,(%rdi)
+ 4580217:	48 c7 40 78 00 00 00 	movq   $0x0,0x78(%rax)
+ 458021e:	00 
+ 458021f:	49 89 c0             	mov    %rax,%r8
+ 4580222:	eb 6e                	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 4580224:	f2 0f 10 48 68       	movsd  0x68(%rax),%xmm1
+ 4580229:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 458022c:	f2 48 0f 2a d3       	cvtsi2sd %rbx,%xmm2
+ 4580231:	f2 0f 59 ca          	mulsd  %xmm2,%xmm1
+ 4580235:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+ 4580239:	f2 0f 10 58 60       	movsd  0x60(%rax),%xmm3
+ 458023e:	f2 0f 59 da          	mulsd  %xmm2,%xmm3
+ 4580242:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 4580246:	f2 0f 10 50 58       	movsd  0x58(%rax),%xmm2
+ 458024b:	f2 0f 58 da          	addsd  %xmm2,%xmm3
+ 458024f:	f2 0f 58 d9          	addsd  %xmm1,%xmm3
+ 4580253:	f2 0f 10 20          	movsd  (%rax),%xmm4
+ 4580257:	f2 0f 10 2d 69 e7 f5 	movsd  0xf5e769(%rip),%xmm5        # 54de9c8 <_IO_stdin_used@@Base+0x8ab9c8>
+ 458025e:	00 
+ 458025f:	66 0f ef ec          	pxor   %xmm4,%xmm5
+ 4580263:	66 0f 2e eb          	ucomisd %xmm3,%xmm5
+ 4580267:	76 05                	jbe    458026e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2ce>
+ 4580269:	0f 10 e5             	movups %xmm5,%xmm4
+ 458026c:	eb 12                	jmp    4580280 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2e0>
+ 458026e:	66 0f 2e dc          	ucomisd %xmm4,%xmm3
+ 4580272:	77 0c                	ja     4580280 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2e0>
+ 4580274:	f2 0f 58 d1          	addsd  %xmm1,%xmm2
+ 4580278:	f2 0f 11 50 58       	movsd  %xmm2,0x58(%rax)
+ 458027d:	0f 10 e3             	movups %xmm3,%xmm4
+ 4580280:	48 c7 07 02 00 00 00 	movq   $0x2,(%rdi)
+ 4580287:	49 89 c0             	mov    %rax,%r8
+ 458028a:	0f 10 cc             	movups %xmm4,%xmm1
+ 458028d:	eb 03                	jmp    4580292 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sample@@Base+0x2f2>
+ 458028f:	49 89 c0             	mov    %rax,%r8
+ 4580292:	f2 41 0f 11 48 70    	movsd  %xmm1,0x70(%r8)
+ 4580298:	0f 10 c1             	movups %xmm1,%xmm0
+ 458029b:	48 8b 2c 24          	mov    (%rsp),%rbp
+ 458029f:	48 83 c4 08          	add    $0x8,%rsp
+ 45802a3:	c3                   	ret
+ 45802a4:	e8 d7 b4 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 45802a9:	90                   	nop
+ 45802aa:	cc                   	int3
+ 45802ab:	cc                   	int3
+ 45802ac:	cc                   	int3
+ 45802ad:	cc                   	int3
+ 45802ae:	cc                   	int3
+ 45802af:	cc                   	int3
+ 45802b0:	cc                   	int3
+ 45802b1:	cc                   	int3
+ 45802b2:	cc                   	int3
+ 45802b3:	cc                   	int3
+ 45802b4:	cc                   	int3
+ 45802b5:	cc                   	int3
+ 45802b6:	cc                   	int3
+ 45802b7:	cc                   	int3
+ 45802b8:	cc                   	int3
+ 45802b9:	cc                   	int3
+ 45802ba:	cc                   	int3
+ 45802bb:	cc                   	int3
+ 45802bc:	cc                   	int3
+ 45802bd:	cc                   	int3
+ 45802be:	cc                   	int3
+ 45802bf:	cc                   	int3

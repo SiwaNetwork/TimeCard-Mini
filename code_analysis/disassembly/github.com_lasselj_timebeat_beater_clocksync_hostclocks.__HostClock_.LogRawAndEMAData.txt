@@ -1,0 +1,94 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData
+# addr 0x4593980 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004593980 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base>:
+ 4593980:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4593984:	0f 86 df 00 00 00    	jbe    4593a69 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0xe9>
+ 459398a:	48 83 ec 38          	sub    $0x38,%rsp
+ 459398e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4593993:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4593998:	88 4c 24 27          	mov    %cl,0x27(%rsp)
+ 459399c:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45939a1:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45939a6:	e8 75 0d 00 00       	call   4594720 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.lockPHCFunctions@@Base>
+ 45939ab:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45939b0:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 45939b4:	8b 42 64             	mov    0x64(%rdx),%eax
+ 45939b7:	e8 e4 5d e8 ff       	call   44197a0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.PerformGranularityMeasurement@@Base>
+ 45939bc:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45939c1:	48 8b 11             	mov    (%rcx),%rdx
+ 45939c4:	48 89 42 18          	mov    %rax,0x18(%rdx)
+ 45939c8:	48 89 c8             	mov    %rcx,%rax
+ 45939cb:	e8 10 0e 00 00       	call   45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 45939d0:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45939d5:	80 b8 91 00 00 00 00 	cmpb   $0x0,0x91(%rax)
+ 45939dc:	74 0c                	je     45939ea <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0x6a>
+ 45939de:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45939e3:	e8 b8 00 00 00       	call   4593aa0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).maintainExponentiallyWeightedMovingAveragesClientStore@@Base>
+ 45939e8:	eb 12                	jmp    45939fc <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0x7c>
+ 45939ea:	48 8b 08             	mov    (%rax),%rcx
+ 45939ed:	48 c7 41 10 00 00 00 	movq   $0x0,0x10(%rcx)
+ 45939f4:	00 
+ 45939f5:	31 db                	xor    %ebx,%ebx
+ 45939f7:	e8 a4 00 00 00       	call   4593aa0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).maintainExponentiallyWeightedMovingAveragesClientStore@@Base>
+ 45939fc:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4593a01:	48 8b 50 60          	mov    0x60(%rax),%rdx
+ 4593a05:	48 85 d2             	test   %rdx,%rdx
+ 4593a08:	74 25                	je     4593a2f <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0xaf>
+ 4593a0a:	48 8b 52 40          	mov    0x40(%rdx),%rdx
+ 4593a0e:	48 85 d2             	test   %rdx,%rdx
+ 4593a11:	75 06                	jne    4593a19 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0x99>
+ 4593a13:	31 db                	xor    %ebx,%ebx
+ 4593a15:	31 c9                	xor    %ecx,%ecx
+ 4593a17:	eb 1a                	jmp    4593a33 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0xb3>
+ 4593a19:	48 89 d0             	mov    %rdx,%rax
+ 4593a1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4593a20:	e8 1b 3c ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4593a25:	48 89 c1             	mov    %rax,%rcx
+ 4593a28:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4593a2d:	eb 04                	jmp    4593a33 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0xb3>
+ 4593a2f:	31 db                	xor    %ebx,%ebx
+ 4593a31:	31 c9                	xor    %ecx,%ecx
+ 4593a33:	0f b6 7c 24 27       	movzbl 0x27(%rsp),%edi
+ 4593a38:	48 89 da             	mov    %rbx,%rdx
+ 4593a3b:	48 89 cb             	mov    %rcx,%rbx
+ 4593a3e:	48 89 d1             	mov    %rdx,%rcx
+ 4593a41:	e8 1a 01 00 00       	call   4593b60 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogClientData@@Base>
+ 4593a46:	80 3d 73 12 8b 03 00 	cmpb   $0x0,0x38b1273(%rip)        # 7e44cc0 <github.com/lasselj/timebeat/config.appConfig@@Base+0xe0>
+ 4593a4d:	74 10                	je     4593a5f <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base+0xdf>
+ 4593a4f:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4593a54:	48 05 98 00 00 00    	add    $0x98,%rax
+ 4593a5a:	e8 41 13 e7 ff       	call   4404da0 <github.com/lasselj/timebeat/beater/logging.(*AlgoLogEntry).Log@@Base>
+ 4593a5f:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4593a64:	48 83 c4 38          	add    $0x38,%rsp
+ 4593a68:	c3                   	ret
+ 4593a69:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4593a6e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4593a73:	88 4c 24 18          	mov    %cl,0x18(%rsp)
+ 4593a77:	e8 e4 09 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4593a7c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4593a81:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4593a86:	0f b6 4c 24 18       	movzbl 0x18(%rsp),%ecx
+ 4593a8b:	e9 f0 fe ff ff       	jmp    4593980 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base>
+ 4593a90:	cc                   	int3
+ 4593a91:	cc                   	int3
+ 4593a92:	cc                   	int3
+ 4593a93:	cc                   	int3
+ 4593a94:	cc                   	int3
+ 4593a95:	cc                   	int3
+ 4593a96:	cc                   	int3
+ 4593a97:	cc                   	int3
+ 4593a98:	cc                   	int3
+ 4593a99:	cc                   	int3
+ 4593a9a:	cc                   	int3
+ 4593a9b:	cc                   	int3
+ 4593a9c:	cc                   	int3
+ 4593a9d:	cc                   	int3
+ 4593a9e:	cc                   	int3
+ 4593a9f:	cc                   	int3

@@ -1,0 +1,71 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop
+# addr 0x45dd120 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045dd120 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base>:
+ 45dd120:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45dd124:	0f 86 b9 00 00 00    	jbe    45dd1e3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base+0xc3>
+ 45dd12a:	48 83 ec 78          	sub    $0x78,%rsp
+ 45dd12e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 45dd133:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 45dd138:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45dd13f:	00 
+ 45dd140:	48 83 78 08 02       	cmpq   $0x2,0x8(%rax)
+ 45dd145:	75 0d                	jne    45dd154 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base+0x34>
+ 45dd147:	e8 b4 09 00 00       	call   45ddb00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).startSubscriptions@@Base>
+ 45dd14c:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 45dd153:	00 
+ 45dd154:	eb 1a                	jmp    45dd170 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base+0x50>
+ 45dd156:	90                   	nop
+ 45dd157:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 45dd15e:	00 
+ 45dd15f:	48 ff 40 30          	incq   0x30(%rax)
+ 45dd163:	e8 d8 00 00 00       	call   45dd240 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).sendSimulatorDelayRequest@@Base>
+ 45dd168:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 45dd16f:	00 
+ 45dd170:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 45dd174:	4c 8b 48 20          	mov    0x20(%rax),%r9
+ 45dd178:	4c 8b 50 28          	mov    0x28(%rax),%r10
+ 45dd17c:	48 8b 12             	mov    (%rdx),%rdx
+ 45dd17f:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45dd185:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45dd18b:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 45dd191:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 45dd196:	4c 89 54 24 50       	mov    %r10,0x50(%rsp)
+ 45dd19b:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45dd1a0:	48 8d 5c 24 34       	lea    0x34(%rsp),%rbx
+ 45dd1a5:	31 c9                	xor    %ecx,%ecx
+ 45dd1a7:	31 ff                	xor    %edi,%edi
+ 45dd1a9:	be 03 00 00 00       	mov    $0x3,%esi
+ 45dd1ae:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45dd1b4:	48 8d 44 24 40       	lea    0x40(%rsp),%rax
+ 45dd1b9:	e8 02 3a 95 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45dd1be:	66 90                	xchg   %ax,%ax
+ 45dd1c0:	48 85 c0             	test   %rax,%rax
+ 45dd1c3:	74 91                	je     45dd156 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base+0x36>
+ 45dd1c5:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 45dd1cc:	00 
+ 45dd1cd:	48 83 78 08 02       	cmpq   $0x2,0x8(%rax)
+ 45dd1d2:	75 05                	jne    45dd1d9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base+0xb9>
+ 45dd1d4:	e8 67 0e 00 00       	call   45de040 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).stopSubscriptions@@Base>
+ 45dd1d9:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45dd1de:	48 83 c4 78          	add    $0x78,%rsp
+ 45dd1e2:	c3                   	ret
+ 45dd1e3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45dd1e8:	e8 73 72 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45dd1ed:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45dd1f2:	e9 29 ff ff ff       	jmp    45dd120 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Simulator).RunSimulatorLoop@@Base>
+ 45dd1f7:	cc                   	int3
+ 45dd1f8:	cc                   	int3
+ 45dd1f9:	cc                   	int3
+ 45dd1fa:	cc                   	int3
+ 45dd1fb:	cc                   	int3
+ 45dd1fc:	cc                   	int3
+ 45dd1fd:	cc                   	int3
+ 45dd1fe:	cc                   	int3
+ 45dd1ff:	cc                   	int3

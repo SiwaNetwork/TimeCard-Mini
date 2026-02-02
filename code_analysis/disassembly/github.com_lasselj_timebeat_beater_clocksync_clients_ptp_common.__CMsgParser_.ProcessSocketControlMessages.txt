@@ -1,0 +1,252 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages
+# addr 0x459b500 size 896 (0x380)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459b500 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base>:
+ 459b500:	4c 8d 64 24 c0       	lea    -0x40(%rsp),%r12
+ 459b505:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 459b509:	0f 86 1f 03 00 00    	jbe    459b82e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x32e>
+ 459b50f:	48 81 ec c0 00 00 00 	sub    $0xc0,%rsp
+ 459b516:	48 89 ac 24 b8 00 00 	mov    %rbp,0xb8(%rsp)
+ 459b51d:	00 
+ 459b51e:	48 8d ac 24 b8 00 00 	lea    0xb8(%rsp),%rbp
+ 459b525:	00 
+ 459b526:	48 8b 53 30          	mov    0x30(%rbx),%rdx
+ 459b52a:	48 8b 73 20          	mov    0x20(%rbx),%rsi
+ 459b52e:	4c 8b 43 38          	mov    0x38(%rbx),%r8
+ 459b532:	4c 39 c2             	cmp    %r8,%rdx
+ 459b535:	0f 82 ea 02 00 00    	jb     459b825 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x325>
+ 459b53b:	48 89 9c 24 d0 00 00 	mov    %rbx,0xd0(%rsp)
+ 459b542:	00 
+ 459b543:	48 89 bc 24 e0 00 00 	mov    %rdi,0xe0(%rsp)
+ 459b54a:	00 
+ 459b54b:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 459b550:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 459b557:	00 
+ 459b558:	48 89 f0             	mov    %rsi,%rax
+ 459b55b:	4c 89 c3             	mov    %r8,%rbx
+ 459b55e:	48 89 d1             	mov    %rdx,%rcx
+ 459b561:	e8 5a d1 a1 fd       	call   1fb86c0 <syscall.ParseSocketControlMessage@@Base>
+ 459b566:	48 85 ff             	test   %rdi,%rdi
+ 459b569:	75 0c                	jne    459b577 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x77>
+ 459b56b:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 459b570:	31 c9                	xor    %ecx,%ecx
+ 459b572:	e9 a9 00 00 00       	jmp    459b620 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x120>
+ 459b577:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 459b57c:	48 89 74 24 78       	mov    %rsi,0x78(%rsp)
+ 459b581:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 459b588:	00 
+ 459b589:	48 8b 41 38          	mov    0x38(%rcx),%rax
+ 459b58d:	bb 0a 00 00 00       	mov    $0xa,%ebx
+ 459b592:	e8 49 85 9d fd       	call   1f73ae0 <strconv.FormatInt@@Base>
+ 459b597:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 459b59c:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 459b5a1:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459b5a6:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 459b5aa:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 459b5af:	ff d1                	call   *%rcx
+ 459b5b1:	48 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%rcx
+ 459b5b8:	00 
+ 459b5b9:	48 8b 09             	mov    (%rcx),%rcx
+ 459b5bc:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 459b5c3:	00 
+ 459b5c4:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 459b5c9:	48 8b 74 24 48       	mov    0x48(%rsp),%rsi
+ 459b5ce:	4c 8d 05 2f ac 69 00 	lea    0x69ac2f(%rip),%r8        # 4c36204 <_IO_stdin_used@@Base+0x3204>
+ 459b5d5:	41 b9 04 00 00 00    	mov    $0x4,%r9d
+ 459b5db:	49 89 c2             	mov    %rax,%r10
+ 459b5de:	49 89 db             	mov    %rbx,%r11
+ 459b5e1:	31 c0                	xor    %eax,%eax
+ 459b5e3:	48 8d 1d a6 2f 89 00 	lea    0x892fa6(%rip),%rbx        # 4e2e590 <_IO_stdin_used@@Base+0x1fb590>
+ 459b5ea:	b9 2e 00 00 00       	mov    $0x2e,%ecx
+ 459b5ef:	e8 ac ee 99 fd       	call   1f3a4a0 <runtime.concatstring4@@Base>
+ 459b5f4:	48 89 d9             	mov    %rbx,%rcx
+ 459b5f7:	48 89 c3             	mov    %rax,%rbx
+ 459b5fa:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 459b601:	00 
+ 459b602:	e8 59 ba e6 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 459b607:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 459b60e:	00 
+ 459b60f:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 459b616:	c3                   	ret
+ 459b617:	48 83 c0 28          	add    $0x28,%rax
+ 459b61b:	48 ff c1             	inc    %rcx
+ 459b61e:	66 90                	xchg   %ax,%ax
+ 459b620:	48 39 cb             	cmp    %rcx,%rbx
+ 459b623:	7e e2                	jle    459b607 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x107>
+ 459b625:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 459b62a:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 459b631:	00 
+ 459b632:	48 8b 10             	mov    (%rax),%rdx
+ 459b635:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+ 459b63c:	00 
+ 459b63d:	0f 10 40 08          	movups 0x8(%rax),%xmm0
+ 459b641:	0f 11 84 24 98 00 00 	movups %xmm0,0x98(%rsp)
+ 459b648:	00 
+ 459b649:	0f 10 40 18          	movups 0x18(%rax),%xmm0
+ 459b64d:	0f 11 84 24 a8 00 00 	movups %xmm0,0xa8(%rsp)
+ 459b654:	00 
+ 459b655:	8b 94 24 98 00 00 00 	mov    0x98(%rsp),%edx
+ 459b65c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459b660:	83 fa 01             	cmp    $0x1,%edx
+ 459b663:	75 0e                	jne    459b673 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x173>
+ 459b665:	83 bc 24 9c 00 00 00 	cmpl   $0x25,0x9c(%rsp)
+ 459b66c:	25 
+ 459b66d:	0f 84 28 01 00 00    	je     459b79b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x29b>
+ 459b673:	8b bc 24 9c 00 00 00 	mov    0x9c(%rsp),%edi
+ 459b67a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 459b680:	83 ff 41             	cmp    $0x41,%edi
+ 459b683:	0f 84 12 01 00 00    	je     459b79b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x29b>
+ 459b689:	83 fa 01             	cmp    $0x1,%edx
+ 459b68c:	75 7e                	jne    459b70c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x20c>
+ 459b68e:	83 ff 3a             	cmp    $0x3a,%edi
+ 459b691:	75 79                	jne    459b70c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x20c>
+ 459b693:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 459b69a:	00 
+ 459b69b:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 459b6a2:	00 
+ 459b6a3:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 459b6aa:	00 
+ 459b6ab:	4c 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%r9
+ 459b6b2:	00 
+ 459b6b3:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 459b6ba:	00 
+ 459b6bb:	89 d1                	mov    %edx,%ecx
+ 459b6bd:	0f 1f 00             	nopl   (%rax)
+ 459b6c0:	e8 7b 09 00 00       	call   459c040 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ParsetScmTsPktInfo@@Base>
+ 459b6c5:	48 8b bc 24 e0 00 00 	mov    0xe0(%rsp),%rdi
+ 459b6cc:	00 
+ 459b6cd:	89 47 60             	mov    %eax,0x60(%rdi)
+ 459b6d0:	48 89 4f 58          	mov    %rcx,0x58(%rdi)
+ 459b6d4:	83 3d 85 02 8e 03 00 	cmpl   $0x0,0x38e0285(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459b6db:	75 06                	jne    459b6e3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x1e3>
+ 459b6dd:	48 89 5f 50          	mov    %rbx,0x50(%rdi)
+ 459b6e1:	eb 12                	jmp    459b6f5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x1f5>
+ 459b6e3:	48 8d 57 50          	lea    0x50(%rdi),%rdx
+ 459b6e7:	48 89 f8             	mov    %rdi,%rax
+ 459b6ea:	48 89 d7             	mov    %rdx,%rdi
+ 459b6ed:	e8 4e b0 9b fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 459b6f2:	48 89 c7             	mov    %rax,%rdi
+ 459b6f5:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 459b6fc:	00 
+ 459b6fd:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 459b702:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 459b707:	e9 0b ff ff ff       	jmp    459b617 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x117>
+ 459b70c:	85 d2                	test   %edx,%edx
+ 459b70e:	0f 85 03 ff ff ff    	jne    459b617 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x117>
+ 459b714:	83 ff 08             	cmp    $0x8,%edi
+ 459b717:	0f 85 fa fe ff ff    	jne    459b617 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x117>
+ 459b71d:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 459b724:	00 
+ 459b725:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 459b72c:	00 
+ 459b72d:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 459b734:	00 
+ 459b735:	4c 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%r9
+ 459b73c:	00 
+ 459b73d:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 459b744:	00 
+ 459b745:	89 d1                	mov    %edx,%ecx
+ 459b747:	e8 94 03 00 00       	call   459bae0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ParsetIPPktInfo@@Base>
+ 459b74c:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+ 459b753:	00 
+ 459b754:	80 7a 4c 00          	cmpb   $0x0,0x4c(%rdx)
+ 459b758:	75 2a                	jne    459b784 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x284>
+ 459b75a:	89 42 48             	mov    %eax,0x48(%rdx)
+ 459b75d:	48 89 4a 40          	mov    %rcx,0x40(%rdx)
+ 459b761:	83 3d f8 01 8e 03 00 	cmpl   $0x0,0x38e01f8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459b768:	75 06                	jne    459b770 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x270>
+ 459b76a:	48 89 5a 38          	mov    %rbx,0x38(%rdx)
+ 459b76e:	eb 10                	jmp    459b780 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x280>
+ 459b770:	4c 8d 5a 38          	lea    0x38(%rdx),%r11
+ 459b774:	89 f8                	mov    %edi,%eax
+ 459b776:	4c 89 df             	mov    %r11,%rdi
+ 459b779:	e8 c2 af 9b fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 459b77e:	89 c7                	mov    %eax,%edi
+ 459b780:	40 88 7a 4c          	mov    %dil,0x4c(%rdx)
+ 459b784:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 459b78b:	00 
+ 459b78c:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 459b791:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 459b796:	e9 7c fe ff ff       	jmp    459b617 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x117>
+ 459b79b:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 459b7a2:	00 
+ 459b7a3:	8b bc 24 9c 00 00 00 	mov    0x9c(%rsp),%edi
+ 459b7aa:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 459b7b1:	00 
+ 459b7b2:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 459b7b9:	00 
+ 459b7ba:	4c 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%r9
+ 459b7c1:	00 
+ 459b7c2:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 459b7c9:	00 
+ 459b7ca:	89 d1                	mov    %edx,%ecx
+ 459b7cc:	4c 8b 54 24 68       	mov    0x68(%rsp),%r10
+ 459b7d1:	e8 aa 00 00 00       	call   459b880 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ParseSOTimestampingMessage@@Base>
+ 459b7d6:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+ 459b7dd:	00 
+ 459b7de:	48 89 42 18          	mov    %rax,0x18(%rdx)
+ 459b7e2:	48 89 5a 20          	mov    %rbx,0x20(%rdx)
+ 459b7e6:	83 3d 73 01 8e 03 00 	cmpl   $0x0,0x38e0173(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459b7ed:	75 06                	jne    459b7f5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x2f5>
+ 459b7ef:	48 89 4a 28          	mov    %rcx,0x28(%rdx)
+ 459b7f3:	eb 13                	jmp    459b808 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x308>
+ 459b7f5:	4c 8d 5a 28          	lea    0x28(%rdx),%r11
+ 459b7f9:	48 89 f8             	mov    %rdi,%rax
+ 459b7fc:	4c 89 df             	mov    %r11,%rdi
+ 459b7ff:	90                   	nop
+ 459b800:	e8 fb ae 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459b805:	48 89 c7             	mov    %rax,%rdi
+ 459b808:	48 89 7a 30          	mov    %rdi,0x30(%rdx)
+ 459b80c:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 459b813:	00 
+ 459b814:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 459b819:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 459b81e:	66 90                	xchg   %ax,%ax
+ 459b820:	e9 f2 fd ff ff       	jmp    459b617 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base+0x117>
+ 459b825:	4c 89 c1             	mov    %r8,%rcx
+ 459b828:	e8 f3 b2 9b fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 459b82d:	90                   	nop
+ 459b82e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459b833:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459b838:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459b83d:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 459b842:	e8 19 8c 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459b847:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459b84c:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459b851:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459b856:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 459b85b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 459b860:	e9 9b fc ff ff       	jmp    459b500 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.(*CMsgParser).ProcessSocketControlMessages@@Base>
+ 459b865:	cc                   	int3
+ 459b866:	cc                   	int3
+ 459b867:	cc                   	int3
+ 459b868:	cc                   	int3
+ 459b869:	cc                   	int3
+ 459b86a:	cc                   	int3
+ 459b86b:	cc                   	int3
+ 459b86c:	cc                   	int3
+ 459b86d:	cc                   	int3
+ 459b86e:	cc                   	int3
+ 459b86f:	cc                   	int3
+ 459b870:	cc                   	int3
+ 459b871:	cc                   	int3
+ 459b872:	cc                   	int3
+ 459b873:	cc                   	int3
+ 459b874:	cc                   	int3
+ 459b875:	cc                   	int3
+ 459b876:	cc                   	int3
+ 459b877:	cc                   	int3
+ 459b878:	cc                   	int3
+ 459b879:	cc                   	int3
+ 459b87a:	cc                   	int3
+ 459b87b:	cc                   	int3
+ 459b87c:	cc                   	int3
+ 459b87d:	cc                   	int3
+ 459b87e:	cc                   	int3
+ 459b87f:	cc                   	int3

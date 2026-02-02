@@ -1,0 +1,125 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference
+# addr 0x4597140 size 448 (0x1c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004597140 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base>:
+ 4597140:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4597144:	0f 86 89 01 00 00    	jbe    45972d3 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base+0x193>
+ 459714a:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+ 459714e:	48 89 6c 24 78       	mov    %rbp,0x78(%rsp)
+ 4597153:	48 8d 6c 24 78       	lea    0x78(%rsp),%rbp
+ 4597158:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 459715f:	00 
+ 4597160:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4597165:	e8 d6 fb ff ff       	call   4596d40 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).setState@@Base>
+ 459716a:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4597171:	00 
+ 4597172:	e8 09 fd ff ff       	call   4596e80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).getState@@Base>
+ 4597177:	48 0f be c0          	movsbq %al,%rax
+ 459717b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4597180:	48 83 f8 04          	cmp    $0x4,%rax
+ 4597184:	0f 83 3e 01 00 00    	jae    45972c8 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base+0x188>
+ 459718a:	48 c1 e0 04          	shl    $0x4,%rax
+ 459718e:	48 8d 0d 2b a8 3f 03 	lea    0x33fa82b(%rip),%rcx        # 79919c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.StateNames@@Base>
+ 4597195:	48 8b 14 01          	mov    (%rcx,%rax,1),%rdx
+ 4597199:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 459719e:	48 8b 4c 01 08       	mov    0x8(%rcx,%rax,1),%rcx
+ 45971a3:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45971a8:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 45971ae:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45971b4:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 45971ba:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 45971c0:	48 8b b4 24 88 00 00 	mov    0x88(%rsp),%rsi
+ 45971c7:	00 
+ 45971c8:	48 8b 46 38          	mov    0x38(%rsi),%rax
+ 45971cc:	48 8b 5e 40          	mov    0x40(%rsi),%rbx
+ 45971d0:	e8 8b 6b 95 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45971d5:	48 8d 0d c4 74 21 01 	lea    0x12174c4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45971dc:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 45971e1:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45971e6:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45971ed:	00 
+ 45971ee:	48 8b 42 20          	mov    0x20(%rdx),%rax
+ 45971f2:	e8 e9 6a 95 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45971f7:	48 8d 0d 22 35 21 01 	lea    0x1213522(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 45971fe:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 4597203:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4597208:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 459720f:	00 
+ 4597210:	48 8b 42 18          	mov    0x18(%rdx),%rax
+ 4597214:	e8 c7 6a 95 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4597219:	48 8d 0d 00 35 21 01 	lea    0x1213500(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 4597220:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4597225:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 459722a:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 459722f:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4597234:	e8 27 6b 95 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4597239:	48 8d 0d 60 74 21 01 	lea    0x1217460(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4597240:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4597245:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 459724a:	48 8d 05 10 53 8f 00 	lea    0x8f5310(%rip),%rax        # 4e8c561 <_IO_stdin_used@@Base+0x259561>
+ 4597251:	bb 75 00 00 00       	mov    $0x75,%ebx
+ 4597256:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 459725b:	bf 04 00 00 00       	mov    $0x4,%edi
+ 4597260:	48 89 fe             	mov    %rdi,%rsi
+ 4597263:	e8 98 d6 a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4597268:	48 89 d9             	mov    %rbx,%rcx
+ 459726b:	48 89 c3             	mov    %rax,%rbx
+ 459726e:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4597275:	00 
+ 4597276:	e8 45 02 00 00       	call   45974c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).logInterferenceStateChange@@Base>
+ 459727b:	48 8d 05 de 6c 52 01 	lea    0x1526cde(%rip),%rax        # 5abdf60 <type:41XJWzmR@@Base>
+ 4597282:	e8 59 92 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4597287:	48 8d 0d 72 00 00 00 	lea    0x72(%rip),%rcx        # 4597300 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference.func1@@Base>
+ 459728e:	48 89 08             	mov    %rcx,(%rax)
+ 4597291:	83 3d c8 46 8e 03 00 	cmpl   $0x0,0x38e46c8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4597298:	75 0e                	jne    45972a8 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base+0x168>
+ 459729a:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 45972a1:	00 
+ 45972a2:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45972a6:	eb 11                	jmp    45972b9 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base+0x179>
+ 45972a8:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45972ac:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 45972b3:	00 
+ 45972b4:	e8 47 f4 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45972b9:	e8 a2 18 99 fd       	call   1f28b60 <runtime.newproc@@Base>
+ 45972be:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 45972c3:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 45972c7:	c3                   	ret
+ 45972c8:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 45972cd:	e8 ce f7 9b fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45972d2:	90                   	nop
+ 45972d3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45972d8:	e8 83 d1 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45972dd:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45972e2:	e9 59 fe ff ff       	jmp    4597140 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base>
+ 45972e7:	cc                   	int3
+ 45972e8:	cc                   	int3
+ 45972e9:	cc                   	int3
+ 45972ea:	cc                   	int3
+ 45972eb:	cc                   	int3
+ 45972ec:	cc                   	int3
+ 45972ed:	cc                   	int3
+ 45972ee:	cc                   	int3
+ 45972ef:	cc                   	int3
+ 45972f0:	cc                   	int3
+ 45972f1:	cc                   	int3
+ 45972f2:	cc                   	int3
+ 45972f3:	cc                   	int3
+ 45972f4:	cc                   	int3
+ 45972f5:	cc                   	int3
+ 45972f6:	cc                   	int3
+ 45972f7:	cc                   	int3
+ 45972f8:	cc                   	int3
+ 45972f9:	cc                   	int3
+ 45972fa:	cc                   	int3
+ 45972fb:	cc                   	int3
+ 45972fc:	cc                   	int3
+ 45972fd:	cc                   	int3
+ 45972fe:	cc                   	int3
+ 45972ff:	cc                   	int3

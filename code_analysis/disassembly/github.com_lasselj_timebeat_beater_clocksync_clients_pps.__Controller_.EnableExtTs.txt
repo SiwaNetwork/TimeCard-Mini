@@ -1,0 +1,109 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs
+# addr 0x45be3c0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045be3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base>:
+ 45be3c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45be3c4:	0f 86 10 01 00 00    	jbe    45be4da <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base+0x11a>
+ 45be3ca:	48 83 ec 60          	sub    $0x60,%rsp
+ 45be3ce:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 45be3d3:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 45be3d8:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 45be3dd:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 45be3e2:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 45be3e7:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 45be3ec:	48 8b 40 18          	mov    0x18(%rax),%rax
+ 45be3f0:	48 8d 1d a9 02 1f 01 	lea    0x11f02a9(%rip),%rbx        # 57ae6a0 <type:string@@Base>
+ 45be3f7:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 45be3fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45be400:	e8 1b 85 9b fd       	call   1f76920 <sync.(*Map).Load@@Base>
+ 45be405:	84 c9                	test   %cl,%cl
+ 45be407:	74 2a                	je     45be433 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base+0x73>
+ 45be409:	48 8d 15 90 89 70 01 	lea    0x1708990(%rip),%rdx        # 5cc6da0 <type:gU0wjPqB@@Base>
+ 45be410:	48 39 d0             	cmp    %rdx,%rax
+ 45be413:	0f 85 b1 00 00 00    	jne    45be4ca <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base+0x10a>
+ 45be419:	48 89 d8             	mov    %rbx,%rax
+ 45be41c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45be420:	e8 1b f3 ff ff       	call   45bd740 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base>
+ 45be425:	31 c0                	xor    %eax,%eax
+ 45be427:	31 db                	xor    %ebx,%ebx
+ 45be429:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45be42e:	48 83 c4 60          	add    $0x60,%rsp
+ 45be432:	c3                   	ret
+ 45be433:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45be439:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 45be43e:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 45be443:	e8 18 f9 92 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45be448:	48 8d 0d 51 02 1f 01 	lea    0x11f0251(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45be44f:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45be454:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45be459:	48 8d 05 77 5e 81 00 	lea    0x815e77(%rip),%rax        # 4dd42d7 <_IO_stdin_used@@Base+0x1a12d7>
+ 45be460:	bb 17 00 00 00       	mov    $0x17,%ebx
+ 45be465:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 45be46a:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45be46f:	48 89 fe             	mov    %rdi,%rsi
+ 45be472:	e8 89 64 a3 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45be477:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45be47c:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45be481:	48 8d 05 78 5e 4b 01 	lea    0x14b5e78(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 45be488:	e8 53 20 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45be48d:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45be492:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45be496:	83 3d c3 d4 8b 03 00 	cmpl   $0x0,0x38bd4c3(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45be49d:	75 0a                	jne    45be4a9 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base+0xe9>
+ 45be49f:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45be4a4:	48 89 08             	mov    %rcx,(%rax)
+ 45be4a7:	eb 0d                	jmp    45be4b6 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base+0xf6>
+ 45be4a9:	48 89 c7             	mov    %rax,%rdi
+ 45be4ac:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45be4b1:	e8 4a 82 99 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45be4b6:	48 89 c3             	mov    %rax,%rbx
+ 45be4b9:	48 8d 05 00 fa 93 01 	lea    0x193fa00(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 45be4c0:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45be4c5:	48 83 c4 60          	add    $0x60,%rsp
+ 45be4c9:	c3                   	ret
+ 45be4ca:	48 89 d3             	mov    %rdx,%rbx
+ 45be4cd:	48 8d 0d 6c 5e 2f 01 	lea    0x12f5e6c(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 45be4d4:	e8 c7 f3 92 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 45be4d9:	90                   	nop
+ 45be4da:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45be4df:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45be4e4:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45be4e9:	e8 72 5f 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45be4ee:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45be4f3:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45be4f8:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45be4fd:	0f 1f 00             	nopl   (%rax)
+ 45be500:	e9 bb fe ff ff       	jmp    45be3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base>
+ 45be505:	cc                   	int3
+ 45be506:	cc                   	int3
+ 45be507:	cc                   	int3
+ 45be508:	cc                   	int3
+ 45be509:	cc                   	int3
+ 45be50a:	cc                   	int3
+ 45be50b:	cc                   	int3
+ 45be50c:	cc                   	int3
+ 45be50d:	cc                   	int3
+ 45be50e:	cc                   	int3
+ 45be50f:	cc                   	int3
+ 45be510:	cc                   	int3
+ 45be511:	cc                   	int3
+ 45be512:	cc                   	int3
+ 45be513:	cc                   	int3
+ 45be514:	cc                   	int3
+ 45be515:	cc                   	int3
+ 45be516:	cc                   	int3
+ 45be517:	cc                   	int3
+ 45be518:	cc                   	int3
+ 45be519:	cc                   	int3
+ 45be51a:	cc                   	int3
+ 45be51b:	cc                   	int3
+ 45be51c:	cc                   	int3
+ 45be51d:	cc                   	int3
+ 45be51e:	cc                   	int3
+ 45be51f:	cc                   	int3

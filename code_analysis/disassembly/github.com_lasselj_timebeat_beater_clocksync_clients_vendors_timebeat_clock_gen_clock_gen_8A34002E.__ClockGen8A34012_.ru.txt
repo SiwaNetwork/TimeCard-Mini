@@ -1,0 +1,68 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop
+# addr 0x4b96280 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b96280 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base>:
+ 4b96280:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b96284:	0f 86 92 00 00 00    	jbe    4b9631c <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x9c>
+ 4b9628a:	48 83 ec 30          	sub    $0x30,%rsp
+ 4b9628e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4b96293:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4b96298:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4b9629d:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 4b962a2:	e8 39 b1 ff ff       	call   4b913e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).GetDPLL@@Base>
+ 4b962a7:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4b962ac:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b962b1:	80 79 28 00          	cmpb   $0x0,0x28(%rcx)
+ 4b962b5:	74 14                	je     4b962cb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x4b>
+ 4b962b7:	48 8b 01             	mov    (%rcx),%rax
+ 4b962ba:	48 8d 1d fa 90 0d 00 	lea    0xd90fa(%rip),%rbx        # 4c6f3bb <_IO_stdin_used@@Base+0x3c3bb>
+ 4b962c1:	b9 0c 00 00 00       	mov    $0xc,%ecx
+ 4b962c6:	e8 15 10 87 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 4b962cb:	b8 00 ca 9a 3b       	mov    $0x3b9aca00,%eax
+ 4b962d0:	e8 6b 36 43 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 4b962d5:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4b962da:	eb 05                	jmp    4b962e1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x61>
+ 4b962dc:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4b962e1:	48 8b 08             	mov    (%rax),%rcx
+ 4b962e4:	31 db                	xor    %ebx,%ebx
+ 4b962e6:	48 89 c8             	mov    %rcx,%rax
+ 4b962e9:	e8 32 25 35 fd       	call   1ee8820 <runtime.chanrecv1@@Base>
+ 4b962ee:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b962f3:	80 78 28 00          	cmpb   $0x0,0x28(%rax)
+ 4b962f7:	74 e3                	je     4b962dc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x5c>
+ 4b962f9:	e8 e2 10 00 00       	call   4b973e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).isPaused@@Base>
+ 4b962fe:	66 90                	xchg   %ax,%ax
+ 4b96300:	84 c0                	test   %al,%al
+ 4b96302:	74 07                	je     4b9630b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x8b>
+ 4b96304:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b96309:	eb d1                	jmp    4b962dc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x5c>
+ 4b9630b:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b96310:	e8 8b 8f ff ff       	call   4b8f2a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*DPLL).disciplineDPLLWithOffsetFromPTPGroup@@Base>
+ 4b96315:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b9631a:	eb c0                	jmp    4b962dc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base+0x5c>
+ 4b9631c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b96321:	e8 3a e1 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b96326:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b9632b:	e9 50 ff ff ff       	jmp    4b96280 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).runLoop@@Base>
+ 4b96330:	cc                   	int3
+ 4b96331:	cc                   	int3
+ 4b96332:	cc                   	int3
+ 4b96333:	cc                   	int3
+ 4b96334:	cc                   	int3
+ 4b96335:	cc                   	int3
+ 4b96336:	cc                   	int3
+ 4b96337:	cc                   	int3
+ 4b96338:	cc                   	int3
+ 4b96339:	cc                   	int3
+ 4b9633a:	cc                   	int3
+ 4b9633b:	cc                   	int3
+ 4b9633c:	cc                   	int3
+ 4b9633d:	cc                   	int3
+ 4b9633e:	cc                   	int3
+ 4b9633f:	cc                   	int3

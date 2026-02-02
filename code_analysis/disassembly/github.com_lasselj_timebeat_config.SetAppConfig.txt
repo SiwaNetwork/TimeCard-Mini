@@ -1,0 +1,90 @@
+# github.com/lasselj/timebeat/config.SetAppConfig
+# addr 0x4403300 size 320 (0x140)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004403300 <github.com/lasselj/timebeat/config.SetAppConfig@@Base>:
+ 4403300:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4403304:	0f 86 1b 01 00 00    	jbe    4403425 <github.com/lasselj/timebeat/config.SetAppConfig@@Base+0x125>
+ 440330a:	48 83 ec 40          	sub    $0x40,%rsp
+ 440330e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4403313:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4403318:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 440331f:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 4403324:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 4403329:	90                   	nop
+ 440332a:	31 c0                	xor    %eax,%eax
+ 440332c:	4c 8d 05 55 79 a7 03 	lea    0x3a77955(%rip),%r8        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403333:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 4403339:	f0 45 0f b1 08       	lock cmpxchg %r9d,(%r8)
+ 440333e:	41 0f 94 c0          	sete   %r8b
+ 4403342:	45 84 c0             	test   %r8b,%r8b
+ 4403345:	75 0c                	jne    4403353 <github.com/lasselj/timebeat/config.SetAppConfig@@Base+0x53>
+ 4403347:	48 8d 05 3a 79 a7 03 	lea    0x3a7793a(%rip),%rax        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 440334e:	e8 ed 51 b7 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4403353:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 4403359:	4c 8d 05 e0 00 00 00 	lea    0xe0(%rip),%r8        # 4403440 <github.com/lasselj/timebeat/config.SetAppConfig.func1@@Base>
+ 4403360:	4c 89 44 24 20       	mov    %r8,0x20(%rsp)
+ 4403365:	4c 8d 05 1c 79 a7 03 	lea    0x3a7791c(%rip),%r8        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 440336c:	4c 89 44 24 28       	mov    %r8,0x28(%rsp)
+ 4403371:	4c 8d 44 24 20       	lea    0x20(%rsp),%r8
+ 4403376:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 440337b:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 4403380:	83 3d d9 85 a7 03 00 	cmpl   $0x0,0x3a785d9(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4403387:	75 42                	jne    44033cb <github.com/lasselj/timebeat/config.SetAppConfig@@Base+0xcb>
+ 4403389:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 440338e:	48 89 05 4b 18 a4 03 	mov    %rax,0x3a4184b(%rip)        # 7e44be0 <github.com/lasselj/timebeat/config.appConfig@@Base>
+ 4403395:	48 8d 3d 4c 18 a4 03 	lea    0x3a4184c(%rip),%rdi        # 7e44be8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x8>
+ 440339c:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 44033a1:	b9 a2 00 00 00       	mov    $0xa2,%ecx
+ 44033a6:	f3 48 a5             	rep movsq %ds:(%rsi),%es:(%rdi)
+ 44033a9:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 44033ae:	48 89 05 4b 1d a4 03 	mov    %rax,0x3a41d4b(%rip)        # 7e45100 <github.com/lasselj/timebeat/config.startupConfig@@Base>
+ 44033b5:	48 8d 3d 4c 1d a4 03 	lea    0x3a41d4c(%rip),%rdi        # 7e45108 <github.com/lasselj/timebeat/config.startupConfig@@Base+0x8>
+ 44033bc:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 44033c1:	b9 a2 00 00 00       	mov    $0xa2,%ecx
+ 44033c6:	f3 48 a5             	rep movsq %ds:(%rsi),%es:(%rdi)
+ 44033c9:	eb 32                	jmp    44033fd <github.com/lasselj/timebeat/config.SetAppConfig@@Base+0xfd>
+ 44033cb:	48 8d 05 4e d2 ac 01 	lea    0x1acd24e(%rip),%rax        # 5ed0620 <type:ugenevto@@Base>
+ 44033d2:	48 8d 1d 07 18 a4 03 	lea    0x3a41807(%rip),%rbx        # 7e44be0 <github.com/lasselj/timebeat/config.appConfig@@Base>
+ 44033d9:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 44033de:	66 90                	xchg   %ax,%ax
+ 44033e0:	e8 5b 3a af fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 44033e5:	48 8d 05 34 d2 ac 01 	lea    0x1acd234(%rip),%rax        # 5ed0620 <type:ugenevto@@Base>
+ 44033ec:	48 8d 1d 0d 1d a4 03 	lea    0x3a41d0d(%rip),%rbx        # 7e45100 <github.com/lasselj/timebeat/config.startupConfig@@Base>
+ 44033f3:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 44033f8:	e8 43 3a af fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 44033fd:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 4403402:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4403407:	48 8b 02             	mov    (%rdx),%rax
+ 440340a:	ff d0                	call   *%rax
+ 440340c:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4403411:	48 83 c4 40          	add    $0x40,%rsp
+ 4403415:	c3                   	ret
+ 4403416:	e8 45 8b b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 440341b:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4403420:	48 83 c4 40          	add    $0x40,%rsp
+ 4403424:	c3                   	ret
+ 4403425:	e8 36 10 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440342a:	e9 d1 fe ff ff       	jmp    4403300 <github.com/lasselj/timebeat/config.SetAppConfig@@Base>
+ 440342f:	cc                   	int3
+ 4403430:	cc                   	int3
+ 4403431:	cc                   	int3
+ 4403432:	cc                   	int3
+ 4403433:	cc                   	int3
+ 4403434:	cc                   	int3
+ 4403435:	cc                   	int3
+ 4403436:	cc                   	int3
+ 4403437:	cc                   	int3
+ 4403438:	cc                   	int3
+ 4403439:	cc                   	int3
+ 440343a:	cc                   	int3
+ 440343b:	cc                   	int3
+ 440343c:	cc                   	int3
+ 440343d:	cc                   	int3
+ 440343e:	cc                   	int3
+ 440343f:	cc                   	int3

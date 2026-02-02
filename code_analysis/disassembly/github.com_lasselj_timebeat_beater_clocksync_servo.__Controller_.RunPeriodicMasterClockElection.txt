@@ -1,0 +1,75 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection
+# addr 0x45a2080 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a2080 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base>:
+ 45a2080:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a2084:	0f 86 dc 00 00 00    	jbe    45a2166 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0xe6>
+ 45a208a:	48 83 ec 70          	sub    $0x70,%rsp
+ 45a208e:	48 89 6c 24 68       	mov    %rbp,0x68(%rsp)
+ 45a2093:	48 8d 6c 24 68       	lea    0x68(%rsp),%rbp
+ 45a2098:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 45a209d:	b8 00 ca 9a 3b       	mov    $0x3b9aca00,%eax
+ 45a20a2:	e8 99 78 a2 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 45a20a7:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a20ac:	eb 05                	jmp    45a20b3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0x33>
+ 45a20ae:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45a20b3:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45a20b8:	4c 8b 0a             	mov    (%rdx),%r9
+ 45a20bb:	4c 8b 10             	mov    (%rax),%r10
+ 45a20be:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45a20c4:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 45a20ca:	4c 89 4c 24 58       	mov    %r9,0x58(%rsp)
+ 45a20cf:	4c 89 54 24 48       	mov    %r10,0x48(%rsp)
+ 45a20d4:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+ 45a20d9:	31 c9                	xor    %ecx,%ecx
+ 45a20db:	31 ff                	xor    %edi,%edi
+ 45a20dd:	be 02 00 00 00       	mov    $0x2,%esi
+ 45a20e2:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a20e8:	48 8d 44 24 48       	lea    0x48(%rsp),%rax
+ 45a20ed:	e8 ce ea 98 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45a20f2:	48 85 c0             	test   %rax,%rax
+ 45a20f5:	75 65                	jne    45a215c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0xdc>
+ 45a20f7:	31 c0                	xor    %eax,%eax
+ 45a20f9:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45a20fe:	ba 01 00 00 00       	mov    $0x1,%edx
+ 45a2103:	f0 0f b1 51 44       	lock cmpxchg %edx,0x44(%rcx)
+ 45a2108:	0f 94 c3             	sete   %bl
+ 45a210b:	48 8d 41 44          	lea    0x44(%rcx),%rax
+ 45a210f:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45a2114:	84 db                	test   %bl,%bl
+ 45a2116:	75 0a                	jne    45a2122 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0xa2>
+ 45a2118:	e8 23 64 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45a211d:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45a2122:	48 89 c8             	mov    %rcx,%rax
+ 45a2125:	e8 f6 4d 00 00       	call   45a6f20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base>
+ 45a212a:	90                   	nop
+ 45a212b:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 45a2130:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45a2135:	f0 0f c1 59 44       	lock xadd %ebx,0x44(%rcx)
+ 45a213a:	ff cb                	dec    %ebx
+ 45a213c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a2140:	85 db                	test   %ebx,%ebx
+ 45a2142:	0f 84 66 ff ff ff    	je     45a20ae <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0x2e>
+ 45a2148:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45a214d:	e8 ee 66 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 45a2152:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45a2157:	e9 52 ff ff ff       	jmp    45a20ae <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base+0x2e>
+ 45a215c:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 45a2161:	48 83 c4 70          	add    $0x70,%rsp
+ 45a2165:	c3                   	ret
+ 45a2166:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a216b:	e8 f0 22 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a2170:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a2175:	e9 06 ff ff ff       	jmp    45a2080 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicMasterClockElection@@Base>
+ 45a217a:	cc                   	int3
+ 45a217b:	cc                   	int3
+ 45a217c:	cc                   	int3
+ 45a217d:	cc                   	int3
+ 45a217e:	cc                   	int3
+ 45a217f:	cc                   	int3

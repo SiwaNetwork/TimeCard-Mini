@@ -1,0 +1,91 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1
+# addr 0x45e69e0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e69e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base>:
+ 45e69e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e69e4:	0f 86 d2 00 00 00    	jbe    45e6abc <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xdc>
+ 45e69ea:	48 83 ec 38          	sub    $0x38,%rsp
+ 45e69ee:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 45e69f3:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 45e69f8:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45e69fd:	48 89 7c 24 58       	mov    %rdi,0x58(%rsp)
+ 45e6a02:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 45e6a06:	4c 8b 42 08          	mov    0x8(%rdx),%r8
+ 45e6a0a:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 45e6a0e:	48 8d 1d eb d1 8d 01 	lea    0x18dd1eb(%rip),%rbx        # 5ec3c00 <type:97XPxJCH@@Base>
+ 45e6a15:	48 39 d9             	cmp    %rbx,%rcx
+ 45e6a18:	0f 85 8e 00 00 00    	jne    45e6aac <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xcc>
+ 45e6a1e:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 45e6a23:	4c 89 44 24 20       	mov    %r8,0x20(%rsp)
+ 45e6a28:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+ 45e6a2d:	48 89 7c 24 58       	mov    %rdi,0x58(%rsp)
+ 45e6a32:	84 07                	test   %al,(%rdi)
+ 45e6a34:	48 8d 87 f0 03 00 00 	lea    0x3f0(%rdi),%rax
+ 45e6a3b:	48 8d 1d 3e 91 96 01 	lea    0x196913e(%rip),%rbx        # 5f4fb80 <sync/atomic..dict.Pointer[github.com/lasselj/timebeat/config.Identity]@@Base>
+ 45e6a42:	e8 39 bf ff ff       	call   45e2980 <sync/atomic.(*Pointer[go.shape.struct { ID string "json:\"id\""; Data string "json:\"data\""; Associations []string "json:\"associations\""; DataJSON interface {} "json:\"json_data\""; AssociationsJSON []interface {} "json:\"json_associations\"" }]).Load@@Base>
+ 45e6a47:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45e6a4b:	48 8b 00             	mov    (%rax),%rax
+ 45e6a4e:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 45e6a53:	48 39 d1             	cmp    %rdx,%rcx
+ 45e6a56:	75 45                	jne    45e6a9d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xbd>
+ 45e6a58:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 45e6a5d:	0f 1f 00             	nopl   (%rax)
+ 45e6a60:	e8 bb d0 8f fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e6a65:	84 c0                	test   %al,%al
+ 45e6a67:	74 34                	je     45e6a9d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xbd>
+ 45e6a69:	83 3d f0 4e 89 03 00 	cmpl   $0x0,0x3894ef0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45e6a70:	75 10                	jne    45e6a82 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xa2>
+ 45e6a72:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 45e6a77:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45e6a7c:	48 89 0a             	mov    %rcx,(%rdx)
+ 45e6a7f:	90                   	nop
+ 45e6a80:	eb 0f                	jmp    45e6a91 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base+0xb1>
+ 45e6a82:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45e6a87:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 45e6a8c:	e8 6f fc 96 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45e6a91:	31 c0                	xor    %eax,%eax
+ 45e6a93:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e6a98:	48 83 c4 38          	add    $0x38,%rsp
+ 45e6a9c:	c3                   	ret
+ 45e6a9d:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e6aa2:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e6aa7:	48 83 c4 38          	add    $0x38,%rsp
+ 45e6aab:	c3                   	ret
+ 45e6aac:	48 89 c8             	mov    %rcx,%rax
+ 45e6aaf:	48 8d 0d 8a d8 2c 01 	lea    0x12cd88a(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 45e6ab6:	e8 e5 6d 90 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 45e6abb:	90                   	nop
+ 45e6abc:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e6ac1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e6ac6:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e6acb:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45e6ad0:	e8 eb d8 96 fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 45e6ad5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e6ada:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e6adf:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e6ae4:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45e6ae9:	e9 f2 fe ff ff       	jmp    45e69e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID.func1@@Base>
+ 45e6aee:	cc                   	int3
+ 45e6aef:	cc                   	int3
+ 45e6af0:	cc                   	int3
+ 45e6af1:	cc                   	int3
+ 45e6af2:	cc                   	int3
+ 45e6af3:	cc                   	int3
+ 45e6af4:	cc                   	int3
+ 45e6af5:	cc                   	int3
+ 45e6af6:	cc                   	int3
+ 45e6af7:	cc                   	int3
+ 45e6af8:	cc                   	int3
+ 45e6af9:	cc                   	int3
+ 45e6afa:	cc                   	int3
+ 45e6afb:	cc                   	int3
+ 45e6afc:	cc                   	int3
+ 45e6afd:	cc                   	int3
+ 45e6afe:	cc                   	int3
+ 45e6aff:	cc                   	int3

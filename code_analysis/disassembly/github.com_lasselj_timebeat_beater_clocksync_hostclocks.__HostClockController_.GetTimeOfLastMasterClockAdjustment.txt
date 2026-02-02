@@ -1,0 +1,82 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment
+# addr 0x4596920 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004596920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment@@Base>:
+ 4596920:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4596924:	0f 86 f5 00 00 00    	jbe    4596a1f <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment@@Base+0xff>
+ 459692a:	48 83 ec 58          	sub    $0x58,%rsp
+ 459692e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 4596933:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 4596938:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459693f:	4c 89 6c 24 48       	mov    %r13,0x48(%rsp)
+ 4596944:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 4596949:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 459694f:	48 c7 44 24 40 00 00 	movq   $0x0,0x40(%rsp)
+ 4596956:	00 00 
+ 4596958:	48 89 c1             	mov    %rax,%rcx
+ 459695b:	31 c0                	xor    %eax,%eax
+ 459695d:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4596962:	f0 0f b1 59 38       	lock cmpxchg %ebx,0x38(%rcx)
+ 4596967:	0f 94 c3             	sete   %bl
+ 459696a:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 459696e:	84 db                	test   %bl,%bl
+ 4596970:	75 1d                	jne    459698f <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment@@Base+0x6f>
+ 4596972:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4596977:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 459697c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4596980:	e8 bb 1b 9e fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4596985:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 459698a:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459698f:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 4596995:	48 8d 1d a4 00 00 00 	lea    0xa4(%rip),%rbx        # 4596a40 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment.func1@@Base>
+ 459699c:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 45969a1:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45969a6:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 45969ab:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45969b0:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 45969b5:	48 8b 81 b0 00 00 00 	mov    0xb0(%rcx),%rax
+ 45969bc:	48 8b 99 b8 00 00 00 	mov    0xb8(%rcx),%rbx
+ 45969c3:	48 8b 89 a8 00 00 00 	mov    0xa8(%rcx),%rcx
+ 45969ca:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 45969cf:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45969d4:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 45969d9:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45969de:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45969e3:	48 8b 02             	mov    (%rdx),%rax
+ 45969e6:	ff d0                	call   *%rax
+ 45969e8:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45969ed:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 45969f2:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45969f7:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45969fc:	48 83 c4 58          	add    $0x58,%rsp
+ 4596a00:	c3                   	ret
+ 4596a01:	e8 5a 55 98 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4596a06:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4596a0b:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4596a10:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4596a15:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4596a1a:	48 83 c4 58          	add    $0x58,%rsp
+ 4596a1e:	c3                   	ret
+ 4596a1f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4596a24:	e8 37 da 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4596a29:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4596a2e:	e9 ed fe ff ff       	jmp    4596920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetTimeOfLastMasterClockAdjustment@@Base>
+ 4596a33:	cc                   	int3
+ 4596a34:	cc                   	int3
+ 4596a35:	cc                   	int3
+ 4596a36:	cc                   	int3
+ 4596a37:	cc                   	int3
+ 4596a38:	cc                   	int3
+ 4596a39:	cc                   	int3
+ 4596a3a:	cc                   	int3
+ 4596a3b:	cc                   	int3
+ 4596a3c:	cc                   	int3
+ 4596a3d:	cc                   	int3
+ 4596a3e:	cc                   	int3
+ 4596a3f:	cc                   	int3

@@ -1,0 +1,73 @@
+# github.com/lasselj/timebeat/beater/logging.SetHTTPUMT
+# addr 0x440a3e0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000440a3e0 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base>:
+ 440a3e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 440a3e4:	0f 86 ec 00 00 00    	jbe    440a4d6 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base+0xf6>
+ 440a3ea:	48 83 ec 48          	sub    $0x48,%rsp
+ 440a3ee:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 440a3f3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 440a3f8:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 440a3fd:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 440a404:	4c 89 6c 24 38       	mov    %r13,0x38(%rsp)
+ 440a409:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a40e:	90                   	nop
+ 440a40f:	48 89 c2             	mov    %rax,%rdx
+ 440a412:	31 c0                	xor    %eax,%eax
+ 440a414:	48 8d 35 65 08 a7 03 	lea    0x3a70865(%rip),%rsi        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a41b:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 440a421:	f0 44 0f b1 06       	lock cmpxchg %r8d,(%rsi)
+ 440a426:	40 0f 94 c6          	sete   %sil
+ 440a42a:	40 84 f6             	test   %sil,%sil
+ 440a42d:	75 2a                	jne    440a459 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base+0x79>
+ 440a42f:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 440a434:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+ 440a439:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 440a43e:	48 8d 05 3b 08 a7 03 	lea    0x3a7083b(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a445:	e8 f6 e0 b6 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 440a44a:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 440a44f:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 440a454:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+ 440a459:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 440a45f:	48 8d 05 9a 00 00 00 	lea    0x9a(%rip),%rax        # 440a500 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT.func1@@Base>
+ 440a466:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 440a46b:	48 8d 05 0e 08 a7 03 	lea    0x3a7080e(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a472:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 440a477:	48 8d 44 24 28       	lea    0x28(%rsp),%rax
+ 440a47c:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 440a481:	48 89 1d a0 c0 a2 03 	mov    %rbx,0x3a2c0a0(%rip)        # 7e36528 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base+0x8>
+ 440a488:	48 89 0d a1 c0 a2 03 	mov    %rcx,0x3a2c0a1(%rip)        # 7e36530 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base+0x10>
+ 440a48f:	83 3d ca 14 a7 03 00 	cmpl   $0x0,0x3a714ca(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440a496:	75 0a                	jne    440a4a2 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base+0xc2>
+ 440a498:	48 89 15 81 c0 a2 03 	mov    %rdx,0x3a2c081(%rip)        # 7e36520 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base>
+ 440a49f:	90                   	nop
+ 440a4a0:	eb 0c                	jmp    440a4ae <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base+0xce>
+ 440a4a2:	48 8d 3d 77 c0 a2 03 	lea    0x3a2c077(%rip),%rdi        # 7e36520 <github.com/lasselj/timebeat/beater/logging.unicastMasterTable@@Base>
+ 440a4a9:	e8 72 c2 b4 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 440a4ae:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a4b3:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 440a4b8:	48 8b 02             	mov    (%rdx),%rax
+ 440a4bb:	ff d0                	call   *%rax
+ 440a4bd:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a4c2:	48 83 c4 48          	add    $0x48,%rsp
+ 440a4c6:	c3                   	ret
+ 440a4c7:	e8 94 1a b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 440a4cc:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a4d1:	48 83 c4 48          	add    $0x48,%rsp
+ 440a4d5:	c3                   	ret
+ 440a4d6:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 440a4db:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 440a4e0:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 440a4e5:	e8 76 9f b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440a4ea:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 440a4ef:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 440a4f4:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 440a4f9:	e9 e2 fe ff ff       	jmp    440a3e0 <github.com/lasselj/timebeat/beater/logging.SetHTTPUMT@@Base>
+ 440a4fe:	cc                   	int3
+ 440a4ff:	cc                   	int3

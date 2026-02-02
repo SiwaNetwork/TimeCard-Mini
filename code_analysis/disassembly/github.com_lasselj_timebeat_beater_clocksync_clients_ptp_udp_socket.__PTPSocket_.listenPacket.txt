@@ -1,0 +1,133 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket
+# addr 0x45b9dc0 size 480 (0x1e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045b9dc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base>:
+ 45b9dc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45b9dc4:	0f 86 ac 01 00 00    	jbe    45b9f76 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x1b6>
+ 45b9dca:	48 83 ec 68          	sub    $0x68,%rsp
+ 45b9dce:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 45b9dd3:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 45b9dd8:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 45b9ddd:	84 00                	test   %al,(%rax)
+ 45b9ddf:	48 8d 48 08          	lea    0x8(%rax),%rcx
+ 45b9de3:	48 8b 15 96 11 87 03 	mov    0x3871196(%rip),%rdx        # 7e2af80 <context.background@@Base>
+ 45b9dea:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 45b9def:	48 89 c8             	mov    %rcx,%rax
+ 45b9df2:	e8 49 35 aa fd       	call   205d340 <net.(*UDPAddr).String@@Base>
+ 45b9df7:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45b9dfc:	48 8d 91 a8 00 00 00 	lea    0xa8(%rcx),%rdx
+ 45b9e03:	48 8d 3d 5b a1 67 00 	lea    0x67a15b(%rip),%rdi        # 4c33f65 <_IO_stdin_used@@Base+0xf65>
+ 45b9e0a:	be 03 00 00 00       	mov    $0x3,%esi
+ 45b9e0f:	49 89 c0             	mov    %rax,%r8
+ 45b9e12:	49 89 d9             	mov    %rbx,%r9
+ 45b9e15:	48 89 d0             	mov    %rdx,%rax
+ 45b9e18:	48 8d 1d 39 d8 97 01 	lea    0x197d839(%rip),%rbx        # 5f37658 <go:itab.*context.emptyCtx,context.Context@@Base>
+ 45b9e1f:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45b9e24:	e8 b7 88 a7 fd       	call   20326e0 <net.(*ListenConfig).ListenPacket@@Base>
+ 45b9e29:	48 85 c9             	test   %rcx,%rcx
+ 45b9e2c:	74 75                	je     45b9ea3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0xe3>
+ 45b9e2e:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 45b9e33:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45b9e38:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 45b9e3c:	48 89 f8             	mov    %rdi,%rax
+ 45b9e3f:	90                   	nop
+ 45b9e40:	ff d1                	call   *%rcx
+ 45b9e42:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45b9e48:	e8 13 3f 93 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45b9e4d:	48 8d 0d 4c 48 1f 01 	lea    0x11f484c(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45b9e54:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45b9e59:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45b9e5e:	48 8d 05 56 1b 82 00 	lea    0x821b56(%rip),%rax        # 4ddb9bb <_IO_stdin_used@@Base+0x1a89bb>
+ 45b9e65:	bb 19 00 00 00       	mov    $0x19,%ebx
+ 45b9e6a:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 45b9e6f:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45b9e74:	48 89 fe             	mov    %rdi,%rsi
+ 45b9e77:	e8 84 aa a3 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45b9e7c:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45b9e81:	48 8b 51 48          	mov    0x48(%rcx),%rdx
+ 45b9e85:	48 89 c6             	mov    %rax,%rsi
+ 45b9e88:	48 89 d0             	mov    %rdx,%rax
+ 45b9e8b:	48 89 df             	mov    %rbx,%rdi
+ 45b9e8e:	48 89 f3             	mov    %rsi,%rbx
+ 45b9e91:	48 89 f9             	mov    %rdi,%rcx
+ 45b9e94:	e8 e7 cf e4 ff       	call   4406e80 <github.com/lasselj/timebeat/beater/logging.(*Logger).Critical@@Base>
+ 45b9e99:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45b9e9e:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 45b9ea3:	48 8b 15 be 9e 98 01 	mov    0x1989ebe(%rip),%rdx        # 5f43d68 <go:itab.*net.UDPConn,net.PacketConn@@Base+0x8>
+ 45b9eaa:	48 8d 35 af 9e 98 01 	lea    0x1989eaf(%rip),%rsi        # 5f43d60 <go:itab.*net.UDPConn,net.PacketConn@@Base>
+ 45b9eb1:	48 39 f0             	cmp    %rsi,%rax
+ 45b9eb4:	0f 85 ac 00 00 00    	jne    45b9f66 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x1a6>
+ 45b9eba:	83 3d 9f 1a 8c 03 00 	cmpl   $0x0,0x38c1a9f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b9ec1:	75 0b                	jne    45b9ece <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x10e>
+ 45b9ec3:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45b9ec8:	48 89 59 58          	mov    %rbx,0x58(%rcx)
+ 45b9ecc:	eb 11                	jmp    45b9edf <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x11f>
+ 45b9ece:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45b9ed3:	48 8d 4f 58          	lea    0x58(%rdi),%rcx
+ 45b9ed7:	48 89 cf             	mov    %rcx,%rdi
+ 45b9eda:	e8 61 c8 99 fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 45b9edf:	48 89 f0             	mov    %rsi,%rax
+ 45b9ee2:	e8 39 9e fe fe       	call   35a3d20 <golang.org/x/net/ipv4.NewPacketConn@@Base>
+ 45b9ee7:	83 3d 72 1a 8c 03 00 	cmpl   $0x0,0x38c1a72(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b9eee:	75 0b                	jne    45b9efb <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x13b>
+ 45b9ef0:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45b9ef5:	48 89 41 70          	mov    %rax,0x70(%rcx)
+ 45b9ef9:	eb 17                	jmp    45b9f12 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x152>
+ 45b9efb:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45b9f00:	48 8d 4f 70          	lea    0x70(%rdi),%rcx
+ 45b9f04:	48 89 fa             	mov    %rdi,%rdx
+ 45b9f07:	48 89 cf             	mov    %rcx,%rdi
+ 45b9f0a:	e8 f1 c6 99 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45b9f0f:	48 89 d1             	mov    %rdx,%rcx
+ 45b9f12:	48 8b 59 58          	mov    0x58(%rcx),%rbx
+ 45b9f16:	48 8d 05 43 9e 98 01 	lea    0x1989e43(%rip),%rax        # 5f43d60 <go:itab.*net.UDPConn,net.PacketConn@@Base>
+ 45b9f1d:	0f 1f 00             	nopl   (%rax)
+ 45b9f20:	e8 9b 43 ff fe       	call   35ae2c0 <golang.org/x/net/ipv6.NewPacketConn@@Base>
+ 45b9f25:	83 3d 34 1a 8c 03 00 	cmpl   $0x0,0x38c1a34(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45b9f2c:	75 0b                	jne    45b9f39 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x179>
+ 45b9f2e:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 45b9f33:	48 89 42 78          	mov    %rax,0x78(%rdx)
+ 45b9f37:	eb 0e                	jmp    45b9f47 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base+0x187>
+ 45b9f39:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45b9f3e:	48 83 c7 78          	add    $0x78,%rdi
+ 45b9f42:	e8 b9 c6 99 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45b9f47:	90                   	nop
+ 45b9f48:	b8 02 00 00 00       	mov    $0x2,%eax
+ 45b9f4d:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 45b9f52:	b9 f7 88 00 00       	mov    $0x88f7,%ecx
+ 45b9f57:	e8 04 4a a0 fd       	call   1fbe960 <syscall.socket@@Base>
+ 45b9f5c:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45b9f61:	48 83 c4 68          	add    $0x68,%rsp
+ 45b9f65:	c3                   	ret
+ 45b9f66:	48 89 d3             	mov    %rdx,%rbx
+ 45b9f69:	48 8d 0d b0 52 59 01 	lea    0x15952b0(%rip),%rcx        # 5b4f220 <type:eiJpgtIs@@Base>
+ 45b9f70:	e8 0b 3a 93 fd       	call   1eed980 <runtime.panicdottypeI@@Base>
+ 45b9f75:	90                   	nop
+ 45b9f76:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45b9f7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45b9f80:	e8 db a4 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45b9f85:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45b9f8a:	e9 31 fe ff ff       	jmp    45b9dc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*PTPSocket).listenPacket@@Base>
+ 45b9f8f:	cc                   	int3
+ 45b9f90:	cc                   	int3
+ 45b9f91:	cc                   	int3
+ 45b9f92:	cc                   	int3
+ 45b9f93:	cc                   	int3
+ 45b9f94:	cc                   	int3
+ 45b9f95:	cc                   	int3
+ 45b9f96:	cc                   	int3
+ 45b9f97:	cc                   	int3
+ 45b9f98:	cc                   	int3
+ 45b9f99:	cc                   	int3
+ 45b9f9a:	cc                   	int3
+ 45b9f9b:	cc                   	int3
+ 45b9f9c:	cc                   	int3
+ 45b9f9d:	cc                   	int3
+ 45b9f9e:	cc                   	int3
+ 45b9f9f:	cc                   	int3

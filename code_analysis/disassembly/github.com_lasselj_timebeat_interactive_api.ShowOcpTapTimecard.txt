@@ -1,0 +1,43 @@
+# github.com/lasselj/timebeat/interactive/api.ShowOcpTapTimecard
+# addr 0x4becde0 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004becde0 <github.com/lasselj/timebeat/interactive/api.ShowOcpTapTimecard@@Base>:
+ 4becde0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4becde4:	76 49                	jbe    4bece2f <github.com/lasselj/timebeat/interactive/api.ShowOcpTapTimecard@@Base+0x4f>
+ 4becde6:	48 83 ec 18          	sub    $0x18,%rsp
+ 4becdea:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4becdef:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4becdf4:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4becdf9:	48 85 db             	test   %rbx,%rbx
+ 4becdfc:	75 16                	jne    4bece14 <github.com/lasselj/timebeat/interactive/api.ShowOcpTapTimecard@@Base+0x34>
+ 4becdfe:	48 8d 05 25 50 24 00 	lea    0x245025(%rip),%rax        # 4e31e2a <_IO_stdin_used@@Base+0x1fee2a>
+ 4bece05:	bb 2e 00 00 00       	mov    $0x2e,%ebx
+ 4bece0a:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4bece0f:	48 83 c4 18          	add    $0x18,%rsp
+ 4bece13:	c3                   	ret
+ 4bece14:	48 8b 08             	mov    (%rax),%rcx
+ 4bece17:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4bece1b:	48 89 c8             	mov    %rcx,%rax
+ 4bece1e:	66 90                	xchg   %ax,%ax
+ 4bece20:	e8 5b ca f7 ff       	call   4b69880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base>
+ 4bece25:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4bece2a:	48 83 c4 18          	add    $0x18,%rsp
+ 4bece2e:	c3                   	ret
+ 4bece2f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4bece34:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4bece39:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4bece3e:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4bece43:	e8 18 76 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4bece48:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4bece4d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4bece52:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4bece57:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4bece5c:	eb 82                	jmp    4becde0 <github.com/lasselj/timebeat/interactive/api.ShowOcpTapTimecard@@Base>
+ 4bece5e:	cc                   	int3
+ 4bece5f:	cc                   	int3

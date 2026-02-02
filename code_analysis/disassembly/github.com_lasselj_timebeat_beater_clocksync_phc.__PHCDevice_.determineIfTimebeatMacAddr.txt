@@ -1,0 +1,92 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr
+# addr 0x45890c0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045890c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base>:
+ 45890c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45890c4:	0f 86 ee 00 00 00    	jbe    45891b8 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0xf8>
+ 45890ca:	48 83 ec 70          	sub    $0x70,%rsp
+ 45890ce:	48 89 6c 24 68       	mov    %rbp,0x68(%rsp)
+ 45890d3:	48 8d 6c 24 68       	lea    0x68(%rsp),%rbp
+ 45890d8:	48 8b 48 48          	mov    0x48(%rax),%rcx
+ 45890dc:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 45890e0:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45890e5:	31 c0                	xor    %eax,%eax
+ 45890e7:	eb 07                	jmp    45890f0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0x30>
+ 45890e9:	48 83 c1 10          	add    $0x10,%rcx
+ 45890ed:	48 ff c0             	inc    %rax
+ 45890f0:	48 39 d0             	cmp    %rdx,%rax
+ 45890f3:	7d 3d                	jge    4589132 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0x72>
+ 45890f5:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45890fa:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45890ff:	48 8b 31             	mov    (%rcx),%rsi
+ 4589102:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 4589107:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 458910b:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 4589110:	48 8b 3d 29 6f 3f 03 	mov    0x33f6f29(%rip),%rdi        # 7980040 <github.com/lasselj/timebeat/beater/clocksync/phc.TIMEBEAT_HW_ADDR_PREFIXS@@Base>
+ 4589117:	4c 8b 05 2a 6f 3f 03 	mov    0x33f6f2a(%rip),%r8        # 7980048 <github.com/lasselj/timebeat/beater/clocksync/phc.TIMEBEAT_HW_ADDR_PREFIXS@@Base+0x8>
+ 458911e:	48 89 7c 24 58       	mov    %rdi,0x58(%rsp)
+ 4589123:	4c 89 44 24 60       	mov    %r8,0x60(%rsp)
+ 4589128:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 458912d:	45 31 c0             	xor    %r8d,%r8d
+ 4589130:	eb 34                	jmp    4589166 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0xa6>
+ 4589132:	31 c0                	xor    %eax,%eax
+ 4589134:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 4589139:	48 83 c4 70          	add    $0x70,%rsp
+ 458913d:	c3                   	ret
+ 458913e:	48 8b 7c 24 48       	mov    0x48(%rsp),%rdi
+ 4589143:	48 83 c7 10          	add    $0x10,%rdi
+ 4589147:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 458914c:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4589151:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4589156:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 458915b:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+ 4589160:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4589166:	49 83 f8 01          	cmp    $0x1,%r8
+ 458916a:	0f 8d 79 ff ff ff    	jge    45890e9 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0x29>
+ 4589170:	48 89 7c 24 48       	mov    %rdi,0x48(%rsp)
+ 4589175:	48 8b 4f 08          	mov    0x8(%rdi),%rcx
+ 4589179:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 458917e:	48 8b 17             	mov    (%rdi),%rdx
+ 4589181:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 4589186:	48 89 f0             	mov    %rsi,%rax
+ 4589189:	e8 f2 f9 a7 fd       	call   2008b80 <strings.ToLower@@Base>
+ 458918e:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4589193:	48 39 cb             	cmp    %rcx,%rbx
+ 4589196:	7c a6                	jl     458913e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0x7e>
+ 4589198:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 458919d:	0f 1f 00             	nopl   (%rax)
+ 45891a0:	e8 7b a9 95 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45891a5:	84 c0                	test   %al,%al
+ 45891a7:	74 95                	je     458913e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base+0x7e>
+ 45891a9:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45891ae:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 45891b3:	48 83 c4 70          	add    $0x70,%rsp
+ 45891b7:	c3                   	ret
+ 45891b8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45891bd:	0f 1f 00             	nopl   (%rax)
+ 45891c0:	e8 9b b2 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45891c5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45891ca:	e9 f1 fe ff ff       	jmp    45890c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).determineIfTimebeatMacAddr@@Base>
+ 45891cf:	cc                   	int3
+ 45891d0:	cc                   	int3
+ 45891d1:	cc                   	int3
+ 45891d2:	cc                   	int3
+ 45891d3:	cc                   	int3
+ 45891d4:	cc                   	int3
+ 45891d5:	cc                   	int3
+ 45891d6:	cc                   	int3
+ 45891d7:	cc                   	int3
+ 45891d8:	cc                   	int3
+ 45891d9:	cc                   	int3
+ 45891da:	cc                   	int3
+ 45891db:	cc                   	int3
+ 45891dc:	cc                   	int3
+ 45891dd:	cc                   	int3
+ 45891de:	cc                   	int3
+ 45891df:	cc                   	int3

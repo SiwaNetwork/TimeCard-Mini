@@ -1,0 +1,454 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync
+# addr 0x45932a0 size 1760 (0x6e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045932a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base>:
+ 45932a0:	4c 8d a4 24 b8 fe ff 	lea    -0x148(%rsp),%r12
+ 45932a7:	ff 
+ 45932a8:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45932ac:	0f 86 a8 06 00 00    	jbe    459395a <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x6ba>
+ 45932b2:	48 81 ec c8 01 00 00 	sub    $0x1c8,%rsp
+ 45932b9:	48 89 ac 24 c0 01 00 	mov    %rbp,0x1c0(%rsp)
+ 45932c0:	00 
+ 45932c1:	48 8d ac 24 c0 01 00 	lea    0x1c0(%rsp),%rbp
+ 45932c8:	00 
+ 45932c9:	80 b8 f0 00 00 00 00 	cmpb   $0x0,0xf0(%rax)
+ 45932d0:	0f 84 5e 06 00 00    	je     4593934 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x694>
+ 45932d6:	48 89 84 24 d0 01 00 	mov    %rax,0x1d0(%rsp)
+ 45932dd:	00 
+ 45932de:	48 8b 48 10          	mov    0x10(%rax),%rcx
+ 45932e2:	48 89 c8             	mov    %rcx,%rax
+ 45932e5:	e8 96 3b 00 00       	call   4596e80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).getState@@Base>
+ 45932ea:	84 c0                	test   %al,%al
+ 45932ec:	0f 84 13 01 00 00    	je     4593405 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x165>
+ 45932f2:	3c 03                	cmp    $0x3,%al
+ 45932f4:	0f 85 1a 06 00 00    	jne    4593914 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x674>
+ 45932fa:	80 3d bf 19 8b 03 00 	cmpb   $0x0,0x38b19bf(%rip)        # 7e44cc0 <github.com/lasselj/timebeat/config.appConfig@@Base+0xe0>
+ 4593301:	0f 84 0d 06 00 00    	je     4593914 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x674>
+ 4593307:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459330e:	00 
+ 459330f:	48 8b 41 40          	mov    0x40(%rcx),%rax
+ 4593313:	48 85 c0             	test   %rax,%rax
+ 4593316:	75 06                	jne    459331e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x7e>
+ 4593318:	31 db                	xor    %ebx,%ebx
+ 459331a:	31 c0                	xor    %eax,%eax
+ 459331c:	eb 0f                	jmp    459332d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x8d>
+ 459331e:	66 90                	xchg   %ax,%ax
+ 4593320:	e8 1b 43 ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4593325:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459332c:	00 
+ 459332d:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4593332:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4593337:	48 8b 49 40          	mov    0x40(%rcx),%rcx
+ 459333b:	8b 49 64             	mov    0x64(%rcx),%ecx
+ 459333e:	48 89 c8             	mov    %rcx,%rax
+ 4593341:	e8 fa 54 e8 ff       	call   4418840 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockFrequency@@Base>
+ 4593346:	44 0f 11 bc 24 68 01 	movups %xmm15,0x168(%rsp)
+ 459334d:	00 00 
+ 459334f:	48 8d bc 24 70 01 00 	lea    0x170(%rsp),%rdi
+ 4593356:	00 
+ 4593357:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 459335b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4593360:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4593365:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 459336a:	e8 61 3a 9c fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 459336f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4593373:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4593378:	48 89 8c 24 68 01 00 	mov    %rcx,0x168(%rsp)
+ 459337f:	00 
+ 4593380:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4593385:	48 89 8c 24 70 01 00 	mov    %rcx,0x170(%rsp)
+ 459338c:	00 
+ 459338d:	48 89 84 24 78 01 00 	mov    %rax,0x178(%rsp)
+ 4593394:	00 
+ 4593395:	48 8b 0d 14 e7 3f 03 	mov    0x33fe714(%rip),%rcx        # 7991ab0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.SteeringNames@@Base+0x30>
+ 459339c:	48 8b 15 15 e7 3f 03 	mov    0x33fe715(%rip),%rdx        # 7991ab8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.SteeringNames@@Base+0x38>
+ 45933a3:	48 89 8c 24 98 01 00 	mov    %rcx,0x198(%rsp)
+ 45933aa:	00 
+ 45933ab:	48 89 94 24 a0 01 00 	mov    %rdx,0x1a0(%rsp)
+ 45933b2:	00 
+ 45933b3:	0f b6 0d 06 19 8b 03 	movzbl 0x38b1906(%rip),%ecx        # 7e44cc0 <github.com/lasselj/timebeat/config.appConfig@@Base+0xe0>
+ 45933ba:	88 8c 24 b0 01 00 00 	mov    %cl,0x1b0(%rsp)
+ 45933c1:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 45933c8:	00 
+ 45933c9:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 45933ce:	48 8d 7c 24 68       	lea    0x68(%rsp),%rdi
+ 45933d3:	48 8d b4 24 70 01 00 	lea    0x170(%rsp),%rsi
+ 45933da:	00 
+ 45933db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45933e0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45933e5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45933ea:	e8 4b 3d 9c fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45933ef:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45933f3:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+ 45933f8:	e8 a3 19 e7 ff       	call   4404da0 <github.com/lasselj/timebeat/beater/logging.(*AlgoLogEntry).Log@@Base>
+ 45933fd:	0f 1f 00             	nopl   (%rax)
+ 4593400:	e9 0f 05 00 00       	jmp    4593914 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x674>
+ 4593405:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 459340c:	00 
+ 459340d:	e8 0e 13 00 00       	call   4594720 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.lockPHCFunctions@@Base>
+ 4593412:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 4593419:	00 
+ 459341a:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 459341e:	8b 42 64             	mov    0x64(%rdx),%eax
+ 4593421:	e8 1a 54 e8 ff       	call   4418840 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockFrequency@@Base>
+ 4593426:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459342d:	00 
+ 459342e:	48 8b 51 10          	mov    0x10(%rcx),%rdx
+ 4593432:	48 89 c3             	mov    %rax,%rbx
+ 4593435:	48 89 d0             	mov    %rdx,%rax
+ 4593438:	e8 83 3b 00 00       	call   4596fc0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).isFrequencyUnchanged@@Base>
+ 459343d:	0f 1f 00             	nopl   (%rax)
+ 4593440:	84 c0                	test   %al,%al
+ 4593442:	75 11                	jne    4593455 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x1b5>
+ 4593444:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459344b:	00 
+ 459344c:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4593450:	e8 eb 3c 00 00       	call   4597140 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).triggerInterference@@Base>
+ 4593455:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459345c:	00 
+ 459345d:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 4593461:	8b 42 64             	mov    0x64(%rdx),%eax
+ 4593464:	e8 37 61 e8 ff       	call   44195a0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base>
+ 4593469:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 459346e:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4593473:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4593478:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 459347f:	00 
+ 4593480:	e8 5b 13 00 00       	call   45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 4593485:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 459348c:	00 
+ 459348d:	80 b8 91 00 00 00 00 	cmpb   $0x0,0x91(%rax)
+ 4593494:	74 47                	je     45934dd <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x23d>
+ 4593496:	48 8b 38             	mov    (%rax),%rdi
+ 4593499:	48 8b 57 28          	mov    0x28(%rdi),%rdx
+ 459349d:	48 8b 77 30          	mov    0x30(%rdi),%rsi
+ 45934a1:	4c 8b 47 38          	mov    0x38(%rdi),%r8
+ 45934a5:	90                   	nop
+ 45934a6:	4c 8b 0d 4b ba 3e 03 	mov    0x33eba4b(%rip),%r9        # 797eef8 <time.Local@@Base>
+ 45934ad:	48 c7 47 28 00 00 00 	movq   $0x0,0x28(%rdi)
+ 45934b4:	00 
+ 45934b5:	49 ba 00 f7 91 77 0e 	movabs $0xe7791f700,%r10
+ 45934bc:	00 00 00 
+ 45934bf:	4c 89 57 30          	mov    %r10,0x30(%rdi)
+ 45934c3:	83 3d 96 84 8e 03 00 	cmpl   $0x0,0x38e8496(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45934ca:	75 06                	jne    45934d2 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x232>
+ 45934cc:	4c 89 4f 38          	mov    %r9,0x38(%rdi)
+ 45934d0:	eb 2a                	jmp    45934fc <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x25c>
+ 45934d2:	48 83 c7 38          	add    $0x38,%rdi
+ 45934d6:	e8 c5 32 9c fd       	call   1f567a0 <runtime.gcWriteBarrierR9@@Base>
+ 45934db:	eb 1f                	jmp    45934fc <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x25c>
+ 45934dd:	0f 1f 00             	nopl   (%rax)
+ 45934e0:	e8 3b fc ff ff       	call   4593120 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).AddCurrentPHCOffset@@Base>
+ 45934e5:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 45934ec:	00 
+ 45934ed:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45934f2:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+ 45934f7:	4c 8b 44 24 58       	mov    0x58(%rsp),%r8
+ 45934fc:	80 78 48 00          	cmpb   $0x0,0x48(%rax)
+ 4593500:	0f 85 1e 04 00 00    	jne    4593924 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x684>
+ 4593506:	48 89 74 24 38       	mov    %rsi,0x38(%rsp)
+ 459350b:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4593510:	4c 8b 48 20          	mov    0x20(%rax),%r9
+ 4593514:	4c 8b 10             	mov    (%rax),%r10
+ 4593517:	4c 8b 58 28          	mov    0x28(%rax),%r11
+ 459351b:	4d 8b 49 18          	mov    0x18(%r9),%r9
+ 459351f:	4d 8b 12             	mov    (%r10),%r10
+ 4593522:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4593525:	f2 49 0f 2a c2       	cvtsi2sd %r10,%xmm0
+ 459352a:	48 89 d3             	mov    %rdx,%rbx
+ 459352d:	48 89 f1             	mov    %rsi,%rcx
+ 4593530:	4c 89 c7             	mov    %r8,%rdi
+ 4593533:	4c 89 d8             	mov    %r11,%rax
+ 4593536:	41 ff d1             	call   *%r9
+ 4593539:	48 89 84 24 10 01 00 	mov    %rax,0x110(%rsp)
+ 4593540:	00 
+ 4593541:	48 89 9c 24 18 01 00 	mov    %rbx,0x118(%rsp)
+ 4593548:	00 
+ 4593549:	48 89 8c 24 20 01 00 	mov    %rcx,0x120(%rsp)
+ 4593550:	00 
+ 4593551:	f2 0f 11 84 24 28 01 	movsd  %xmm0,0x128(%rsp)
+ 4593558:	00 00 
+ 459355a:	f2 0f 11 8c 24 30 01 	movsd  %xmm1,0x130(%rsp)
+ 4593561:	00 00 
+ 4593563:	f2 0f 11 94 24 38 01 	movsd  %xmm2,0x138(%rsp)
+ 459356a:	00 00 
+ 459356c:	48 89 bc 24 40 01 00 	mov    %rdi,0x140(%rsp)
+ 4593573:	00 
+ 4593574:	48 89 b4 24 48 01 00 	mov    %rsi,0x148(%rsp)
+ 459357b:	00 
+ 459357c:	4c 89 84 24 50 01 00 	mov    %r8,0x150(%rsp)
+ 4593583:	00 
+ 4593584:	44 88 8c 24 58 01 00 	mov    %r9b,0x158(%rsp)
+ 459358b:	00 
+ 459358c:	4c 89 94 24 60 01 00 	mov    %r10,0x160(%rsp)
+ 4593593:	00 
+ 4593594:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 459359b:	00 
+ 459359c:	48 89 94 24 b8 00 00 	mov    %rdx,0xb8(%rsp)
+ 45935a3:	00 
+ 45935a4:	48 8d bc 24 c0 00 00 	lea    0xc0(%rsp),%rdi
+ 45935ab:	00 
+ 45935ac:	48 8d b4 24 18 01 00 	lea    0x118(%rsp),%rsi
+ 45935b3:	00 
+ 45935b4:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45935bb:	00 00 
+ 45935bd:	0f 1f 00             	nopl   (%rax)
+ 45935c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45935c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45935ca:	e8 6b 3b 9c fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45935cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45935d3:	49 83 fb 01          	cmp    $0x1,%r11
+ 45935d7:	0f 84 f7 00 00 00    	je     45936d4 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x434>
+ 45935dd:	0f 1f 00             	nopl   (%rax)
+ 45935e0:	49 83 fb 02          	cmp    $0x2,%r11
+ 45935e4:	0f 85 e8 01 00 00    	jne    45937d2 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x532>
+ 45935ea:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 45935f1:	00 
+ 45935f2:	e8 29 11 00 00       	call   4594720 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.lockPHCFunctions@@Base>
+ 45935f7:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 45935fe:	00 
+ 45935ff:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 4593603:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 459360a:	00 
+ 459360b:	8b 42 64             	mov    0x64(%rdx),%eax
+ 459360e:	e8 6d 55 e8 ff       	call   4418b80 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base>
+ 4593613:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4593618:	48 0f ba e1 3f       	bt     $0x3f,%rcx
+ 459361d:	73 1a                	jae    4593639 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x399>
+ 459361f:	48 89 ca             	mov    %rcx,%rdx
+ 4593622:	48 d1 e1             	shl    $1,%rcx
+ 4593625:	48 c1 e9 1f          	shr    $0x1f,%rcx
+ 4593629:	48 bb 80 7f b1 d7 0d 	movabs $0xdd7b17f80,%rbx
+ 4593630:	00 00 00 
+ 4593633:	48 8d 34 19          	lea    (%rcx,%rbx,1),%rsi
+ 4593637:	eb 08                	jmp    4593641 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x3a1>
+ 4593639:	48 89 ca             	mov    %rcx,%rdx
+ 459363c:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 4593641:	48 8b 9c 24 d0 01 00 	mov    0x1d0(%rsp),%rbx
+ 4593648:	00 
+ 4593649:	48 8b 7b 30          	mov    0x30(%rbx),%rdi
+ 459364d:	4c 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%r8
+ 4593654:	00 
+ 4593655:	48 69 f6 00 ca 9a 3b 	imul   $0x3b9aca00,%rsi,%rsi
+ 459365c:	81 e2 ff ff ff 3f    	and    $0x3fffffff,%edx
+ 4593662:	48 63 d2             	movslq %edx,%rdx
+ 4593665:	48 01 f2             	add    %rsi,%rdx
+ 4593668:	48 8b 47 20          	mov    0x20(%rdi),%rax
+ 459366c:	48 8b 37             	mov    (%rdi),%rsi
+ 459366f:	48 85 f6             	test   %rsi,%rsi
+ 4593672:	0f 84 dc 02 00 00    	je     4593954 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x6b4>
+ 4593678:	48 89 d1             	mov    %rdx,%rcx
+ 459367b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4593680:	48 83 fe ff          	cmp    $0xffffffffffffffff,%rsi
+ 4593684:	74 07                	je     459368d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x3ed>
+ 4593686:	48 99                	cqto
+ 4593688:	48 f7 fe             	idiv   %rsi
+ 459368b:	eb 05                	jmp    4593692 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x3f2>
+ 459368d:	48 f7 d8             	neg    %rax
+ 4593690:	31 d2                	xor    %edx,%edx
+ 4593692:	48 8b 77 08          	mov    0x8(%rdi),%rsi
+ 4593696:	4c 8b 4f 10          	mov    0x10(%rdi),%r9
+ 459369a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 45936a0:	4c 39 ca             	cmp    %r9,%rdx
+ 45936a3:	0f 83 a0 02 00 00    	jae    4593949 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x6a9>
+ 45936a9:	49 b9 00 00 1a 3d eb 	movabs $0xa1b203eb3d1a0000,%r9
+ 45936b0:	03 b2 a1 
+ 45936b3:	4c 01 c9             	add    %r9,%rcx
+ 45936b6:	48 c1 e2 04          	shl    $0x4,%rdx
+ 45936ba:	48 89 0c 16          	mov    %rcx,(%rsi,%rdx,1)
+ 45936be:	4c 89 44 16 08       	mov    %r8,0x8(%rsi,%rdx,1)
+ 45936c3:	48 ff 47 20          	incq   0x20(%rdi)
+ 45936c7:	48 89 d8             	mov    %rbx,%rax
+ 45936ca:	e8 11 11 00 00       	call   45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 45936cf:	e9 fe 00 00 00       	jmp    45937d2 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x532>
+ 45936d4:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 45936db:	00 
+ 45936dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45936e0:	e8 3b 10 00 00       	call   4594720 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.lockPHCFunctions@@Base>
+ 45936e5:	e8 d6 11 00 00       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45936ea:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 45936f1:	00 
+ 45936f2:	48 8b 11             	mov    (%rcx),%rdx
+ 45936f5:	48 8b 12             	mov    (%rdx),%rdx
+ 45936f8:	48 85 d2             	test   %rdx,%rdx
+ 45936fb:	7e 33                	jle    4593730 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x490>
+ 45936fd:	48 8b 70 60          	mov    0x60(%rax),%rsi
+ 4593701:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4593704:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 4593709:	48 8b 16             	mov    (%rsi),%rdx
+ 459370c:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 459370f:	f2 48 0f 2a ca       	cvtsi2sd %rdx,%xmm1
+ 4593714:	66 48 0f 7e c2       	movq   %xmm0,%rdx
+ 4593719:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 459371e:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 4593723:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4593727:	0f 97 c2             	seta   %dl
+ 459372a:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 459372e:	eb 32                	jmp    4593762 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x4c2>
+ 4593730:	48 8b 78 60          	mov    0x60(%rax),%rdi
+ 4593734:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4593737:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 459373c:	4c 8b 47 10          	mov    0x10(%rdi),%r8
+ 4593740:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4593743:	f2 49 0f 2a c8       	cvtsi2sd %r8,%xmm1
+ 4593748:	66 49 0f 7e c0       	movq   %xmm0,%r8
+ 459374d:	49 0f ba f0 3f       	btr    $0x3f,%r8
+ 4593752:	66 49 0f 6e c0       	movq   %r8,%xmm0
+ 4593757:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 459375b:	0f 97 c2             	seta   %dl
+ 459375e:	48 8b 77 18          	mov    0x18(%rdi),%rsi
+ 4593762:	84 d2                	test   %dl,%dl
+ 4593764:	74 47                	je     45937ad <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x50d>
+ 4593766:	48 8b 11             	mov    (%rcx),%rdx
+ 4593769:	48 8b 12             	mov    (%rdx),%rdx
+ 459376c:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 459376f:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 4593774:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4593777:	f2 48 0f 2a ce       	cvtsi2sd %rsi,%xmm1
+ 459377c:	66 48 0f 7e c2       	movq   %xmm0,%rdx
+ 4593781:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 4593786:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 459378b:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 459378f:	76 1c                	jbe    45937ad <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x50d>
+ 4593791:	48 8b 11             	mov    (%rcx),%rdx
+ 4593794:	48 8b 71 40          	mov    0x40(%rcx),%rsi
+ 4593798:	48 8b 1a             	mov    (%rdx),%rbx
+ 459379b:	8b 46 64             	mov    0x64(%rsi),%eax
+ 459379e:	66 90                	xchg   %ax,%ax
+ 45937a0:	e8 9b 56 e8 ff       	call   4418e40 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base>
+ 45937a5:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 45937ac:	00 
+ 45937ad:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 45937b1:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 45937b8:	00 
+ 45937b9:	48 f7 db             	neg    %rbx
+ 45937bc:	8b 42 64             	mov    0x64(%rdx),%eax
+ 45937bf:	90                   	nop
+ 45937c0:	e8 bb 53 e8 ff       	call   4418b80 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base>
+ 45937c5:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 45937cc:	00 
+ 45937cd:	e8 0e 10 00 00       	call   45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 45937d2:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 45937d9:	00 
+ 45937da:	e8 41 0f 00 00       	call   4594720 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.lockPHCFunctions@@Base>
+ 45937df:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 45937e6:	00 
+ 45937e7:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 45937eb:	8b 42 64             	mov    0x64(%rdx),%eax
+ 45937ee:	e8 4d 50 e8 ff       	call   4418840 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockFrequency@@Base>
+ 45937f3:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 45937fa:	00 
+ 45937fb:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 4593802:	00 
+ 4593803:	e8 d8 0f 00 00       	call   45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 4593808:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459380f:	00 
+ 4593810:	48 8b 41 40          	mov    0x40(%rcx),%rax
+ 4593814:	48 85 c0             	test   %rax,%rax
+ 4593817:	75 07                	jne    4593820 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x580>
+ 4593819:	31 db                	xor    %ebx,%ebx
+ 459381b:	31 c0                	xor    %eax,%eax
+ 459381d:	eb 0e                	jmp    459382d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x58d>
+ 459381f:	90                   	nop
+ 4593820:	e8 1b 3e ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4593825:	48 8b 8c 24 d0 01 00 	mov    0x1d0(%rsp),%rcx
+ 459382c:	00 
+ 459382d:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 4593834:	00 
+ 4593835:	48 89 9c 24 c0 00 00 	mov    %rbx,0xc0(%rsp)
+ 459383c:	00 
+ 459383d:	48 8b 15 3c e2 3f 03 	mov    0x33fe23c(%rip),%rdx        # 7991a80 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.SteeringNames@@Base>
+ 4593844:	48 8b 1d 3d e2 3f 03 	mov    0x33fe23d(%rip),%rbx        # 7991a88 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.SteeringNames@@Base+0x8>
+ 459384b:	48 89 94 24 e8 00 00 	mov    %rdx,0xe8(%rsp)
+ 4593852:	00 
+ 4593853:	48 89 9c 24 f0 00 00 	mov    %rbx,0xf0(%rsp)
+ 459385a:	00 
+ 459385b:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 459385f:	48 8b 41 28          	mov    0x28(%rcx),%rax
+ 4593863:	48 8b 52 30          	mov    0x30(%rdx),%rdx
+ 4593867:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 459386e:	00 
+ 459386f:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4593872:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 4593877:	ff d2                	call   *%rdx
+ 4593879:	83 3d e0 80 8e 03 00 	cmpl   $0x0,0x38e80e0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4593880:	75 53                	jne    45938d5 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x635>
+ 4593882:	48 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%rcx
+ 4593889:	00 
+ 459388a:	48 8b bc 24 d0 01 00 	mov    0x1d0(%rsp),%rdi
+ 4593891:	00 
+ 4593892:	48 89 8f 98 00 00 00 	mov    %rcx,0x98(%rdi)
+ 4593899:	48 8d 8f a0 00 00 00 	lea    0xa0(%rdi),%rcx
+ 45938a0:	48 8d b4 24 c0 00 00 	lea    0xc0(%rsp),%rsi
+ 45938a7:	00 
+ 45938a8:	48 89 f8             	mov    %rdi,%rax
+ 45938ab:	48 89 cf             	mov    %rcx,%rdi
+ 45938ae:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45938b5:	00 00 
+ 45938b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45938be:	00 00 
+ 45938c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45938c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45938ca:	e8 6b 38 9c fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45938cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45938d3:	eb 2e                	jmp    4593903 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base+0x663>
+ 45938d5:	48 8b 9c 24 d0 01 00 	mov    0x1d0(%rsp),%rbx
+ 45938dc:	00 
+ 45938dd:	48 8d 93 98 00 00 00 	lea    0x98(%rbx),%rdx
+ 45938e4:	48 8d 05 35 bb 7c 01 	lea    0x17cbb35(%rip),%rax        # 5d5f420 <type:tPSB/bg3@@Base>
+ 45938eb:	48 8d 8c 24 b8 00 00 	lea    0xb8(%rsp),%rcx
+ 45938f2:	00 
+ 45938f3:	48 89 d3             	mov    %rdx,%rbx
+ 45938f6:	e8 45 35 96 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45938fb:	48 8b 84 24 d0 01 00 	mov    0x1d0(%rsp),%rax
+ 4593902:	00 
+ 4593903:	48 8b 40 10          	mov    0x10(%rax),%rax
+ 4593907:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 459390e:	00 
+ 459390f:	e8 8c 37 00 00       	call   45970a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).commitFrequency@@Base>
+ 4593914:	48 8b ac 24 c0 01 00 	mov    0x1c0(%rsp),%rbp
+ 459391b:	00 
+ 459391c:	48 81 c4 c8 01 00 00 	add    $0x1c8,%rsp
+ 4593923:	c3                   	ret
+ 4593924:	48 8b ac 24 c0 01 00 	mov    0x1c0(%rsp),%rbp
+ 459392b:	00 
+ 459392c:	48 81 c4 c8 01 00 00 	add    $0x1c8,%rsp
+ 4593933:	c3                   	ret
+ 4593934:	e8 e7 f7 ff ff       	call   4593120 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).AddCurrentPHCOffset@@Base>
+ 4593939:	48 8b ac 24 c0 01 00 	mov    0x1c0(%rsp),%rbp
+ 4593940:	00 
+ 4593941:	48 81 c4 c8 01 00 00 	add    $0x1c8,%rsp
+ 4593948:	c3                   	ret
+ 4593949:	48 89 d0             	mov    %rdx,%rax
+ 459394c:	4c 89 c9             	mov    %r9,%rcx
+ 459394f:	e8 4c 31 9c fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4593954:	e8 27 7e 98 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 4593959:	90                   	nop
+ 459395a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459395f:	90                   	nop
+ 4593960:	e8 fb 0a 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4593965:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459396a:	e9 31 f9 ff ff       	jmp    45932a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base>
+ 459396f:	cc                   	int3
+ 4593970:	cc                   	int3
+ 4593971:	cc                   	int3
+ 4593972:	cc                   	int3
+ 4593973:	cc                   	int3
+ 4593974:	cc                   	int3
+ 4593975:	cc                   	int3
+ 4593976:	cc                   	int3
+ 4593977:	cc                   	int3
+ 4593978:	cc                   	int3
+ 4593979:	cc                   	int3
+ 459397a:	cc                   	int3
+ 459397b:	cc                   	int3
+ 459397c:	cc                   	int3
+ 459397d:	cc                   	int3
+ 459397e:	cc                   	int3
+ 459397f:	cc                   	int3

@@ -1,0 +1,277 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes
+# addr 0x4401d00 size 1120 (0x460)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004401d00 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base>:
+ 4401d00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4401d04:	0f 86 40 04 00 00    	jbe    440214a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x44a>
+ 4401d0a:	48 83 ec 68          	sub    $0x68,%rsp
+ 4401d0e:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 4401d13:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 4401d18:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4401d1d:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4401d21:	48 83 c1 04          	add    $0x4,%rcx
+ 4401d25:	66 89 48 04          	mov    %cx,0x4(%rax)
+ 4401d29:	48 8d 05 f0 b0 78 01 	lea    0x178b0f0(%rip),%rax        # 5b8ce20 <type:StgAKJp2@@Base>
+ 4401d30:	e8 ab e7 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4401d35:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4401d3a:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 4401d3f:	90                   	nop
+ 4401d40:	e8 1b fd ff ff       	call   4401a60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXMessageHeader).ToBytes@@Base>
+ 4401d45:	48 85 ff             	test   %rdi,%rdi
+ 4401d48:	0f 85 51 03 00 00    	jne    440209f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x39f>
+ 4401d4e:	48 89 cf             	mov    %rcx,%rdi
+ 4401d51:	48 89 d9             	mov    %rbx,%rcx
+ 4401d54:	48 89 c3             	mov    %rax,%rbx
+ 4401d57:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4401d5c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4401d60:	e8 db ab c6 fd       	call   206c940 <bytes.(*Buffer).Write@@Base>
+ 4401d65:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401d6a:	0f b6 72 08          	movzbl 0x8(%rdx),%esi
+ 4401d6e:	4c 8d 05 ab a3 86 03 	lea    0x386a3ab(%rip),%r8        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4401d75:	49 8d 34 f0          	lea    (%r8,%rsi,8),%rsi
+ 4401d79:	48 8d 05 40 bc af 01 	lea    0x1afbc40(%rip),%rax        # 5efd9c0 <go:itab.*bytes.Buffer,io.Writer@@Base>
+ 4401d80:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4401d85:	48 8d 0d 64 21 b4 01 	lea    0x1b42164(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 4401d8c:	48 8d 3d dd 92 a7 03 	lea    0x3a792dd(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 4401d93:	49 89 f1             	mov    %rsi,%r9
+ 4401d96:	48 8d 35 c3 cb 3a 01 	lea    0x13acbc3(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401d9d:	4d 89 c8             	mov    %r9,%r8
+ 4401da0:	e8 fb 24 c7 fd       	call   20742a0 <encoding/binary.Write@@Base>
+ 4401da5:	48 85 c0             	test   %rax,%rax
+ 4401da8:	0f 85 97 02 00 00    	jne    4402045 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x345>
+ 4401dae:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401db3:	44 0f b6 4a 09       	movzbl 0x9(%rdx),%r9d
+ 4401db8:	4c 8d 15 61 a3 86 03 	lea    0x386a361(%rip),%r10        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4401dbf:	4f 8d 04 ca          	lea    (%r10,%r9,8),%r8
+ 4401dc3:	48 8d 05 f6 bb af 01 	lea    0x1afbbf6(%rip),%rax        # 5efd9c0 <go:itab.*bytes.Buffer,io.Writer@@Base>
+ 4401dca:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4401dcf:	48 8d 0d 1a 21 b4 01 	lea    0x1b4211a(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 4401dd6:	48 8d 3d 93 92 a7 03 	lea    0x3a79293(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 4401ddd:	48 8d 35 7c cb 3a 01 	lea    0x13acb7c(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401de4:	e8 b7 24 c7 fd       	call   20742a0 <encoding/binary.Write@@Base>
+ 4401de9:	48 85 c0             	test   %rax,%rax
+ 4401dec:	0f 85 f9 01 00 00    	jne    4401feb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x2eb>
+ 4401df2:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401df7:	44 0f b6 4a 0a       	movzbl 0xa(%rdx),%r9d
+ 4401dfc:	4c 8d 15 1d a3 86 03 	lea    0x386a31d(%rip),%r10        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4401e03:	4f 8d 04 ca          	lea    (%r10,%r9,8),%r8
+ 4401e07:	48 8d 05 b2 bb af 01 	lea    0x1afbbb2(%rip),%rax        # 5efd9c0 <go:itab.*bytes.Buffer,io.Writer@@Base>
+ 4401e0e:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4401e13:	48 8d 0d d6 20 b4 01 	lea    0x1b420d6(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 4401e1a:	48 8d 3d 4f 92 a7 03 	lea    0x3a7924f(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 4401e21:	48 8d 35 38 cb 3a 01 	lea    0x13acb38(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401e28:	e8 73 24 c7 fd       	call   20742a0 <encoding/binary.Write@@Base>
+ 4401e2d:	48 85 c0             	test   %rax,%rax
+ 4401e30:	0f 85 5a 01 00 00    	jne    4401f90 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x290>
+ 4401e36:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401e3b:	44 0f b6 4a 0b       	movzbl 0xb(%rdx),%r9d
+ 4401e40:	4c 8d 15 d9 a2 86 03 	lea    0x386a2d9(%rip),%r10        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4401e47:	4f 8d 04 ca          	lea    (%r10,%r9,8),%r8
+ 4401e4b:	48 8d 05 6e bb af 01 	lea    0x1afbb6e(%rip),%rax        # 5efd9c0 <go:itab.*bytes.Buffer,io.Writer@@Base>
+ 4401e52:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4401e57:	48 8d 0d 92 20 b4 01 	lea    0x1b42092(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 4401e5e:	48 8d 3d 0b 92 a7 03 	lea    0x3a7920b(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 4401e65:	48 8d 35 f4 ca 3a 01 	lea    0x13acaf4(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401e6c:	e8 2f 24 c7 fd       	call   20742a0 <encoding/binary.Write@@Base>
+ 4401e71:	48 85 c0             	test   %rax,%rax
+ 4401e74:	0f 85 bc 00 00 00    	jne    4401f36 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x236>
+ 4401e7a:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401e7f:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 4401e83:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+ 4401e87:	48 8b 7a 20          	mov    0x20(%rdx),%rdi
+ 4401e8b:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4401e90:	e8 ab aa c6 fd       	call   206c940 <bytes.(*Buffer).Write@@Base>
+ 4401e95:	48 85 db             	test   %rbx,%rbx
+ 4401e98:	75 42                	jne    4401edc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x1dc>
+ 4401e9a:	90                   	nop
+ 4401e9b:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4401ea0:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4401ea4:	4c 8b 02             	mov    (%rdx),%r8
+ 4401ea7:	4c 8b 4a 10          	mov    0x10(%rdx),%r9
+ 4401eab:	48 8b 42 18          	mov    0x18(%rdx),%rax
+ 4401eaf:	48 39 c8             	cmp    %rcx,%rax
+ 4401eb2:	0f 87 8c 02 00 00    	ja     4402144 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x444>
+ 4401eb8:	49 29 c1             	sub    %rax,%r9
+ 4401ebb:	4c 89 ca             	mov    %r9,%rdx
+ 4401ebe:	49 f7 d9             	neg    %r9
+ 4401ec1:	49 c1 f9 3f          	sar    $0x3f,%r9
+ 4401ec5:	49 21 c1             	and    %rax,%r9
+ 4401ec8:	4d 01 c8             	add    %r9,%r8
+ 4401ecb:	48 29 c1             	sub    %rax,%rcx
+ 4401ece:	31 c0                	xor    %eax,%eax
+ 4401ed0:	31 db                	xor    %ebx,%ebx
+ 4401ed2:	be 02 00 00 00       	mov    $0x2,%esi
+ 4401ed7:	e9 04 02 00 00       	jmp    44020e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x3e0>
+ 4401edc:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4401ee0:	48 89 c8             	mov    %rcx,%rax
+ 4401ee3:	ff d2                	call   *%rdx
+ 4401ee5:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4401eeb:	e8 70 be ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4401ef0:	48 8d 0d a9 c7 3a 01 	lea    0x13ac7a9(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4401ef7:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4401efc:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4401f01:	48 8d 05 f2 49 9f 00 	lea    0x9f49f2(%rip),%rax        # 4df68fa <_IO_stdin_used@@Base+0x1c38fa>
+ 4401f08:	bb 1f 00 00 00       	mov    $0x1f,%ebx
+ 4401f0d:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4401f12:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4401f17:	48 89 fe             	mov    %rdi,%rsi
+ 4401f1a:	e8 41 f3 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4401f1f:	31 c9                	xor    %ecx,%ecx
+ 4401f21:	48 89 c7             	mov    %rax,%rdi
+ 4401f24:	48 89 de             	mov    %rbx,%rsi
+ 4401f27:	31 c0                	xor    %eax,%eax
+ 4401f29:	48 89 cb             	mov    %rcx,%rbx
+ 4401f2c:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4401f31:	48 83 c4 68          	add    $0x68,%rsp
+ 4401f35:	c3                   	ret
+ 4401f36:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4401f3a:	48 89 d8             	mov    %rbx,%rax
+ 4401f3d:	ff d1                	call   *%rcx
+ 4401f3f:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4401f45:	e8 16 be ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4401f4a:	48 8d 0d 4f c7 3a 01 	lea    0x13ac74f(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4401f51:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4401f56:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4401f5b:	48 8d 05 aa d0 a0 00 	lea    0xa0d0aa(%rip),%rax        # 4e0f00c <_IO_stdin_used@@Base+0x1dc00c>
+ 4401f62:	bb 25 00 00 00       	mov    $0x25,%ebx
+ 4401f67:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4401f6c:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4401f71:	48 89 fe             	mov    %rdi,%rsi
+ 4401f74:	e8 e7 f2 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4401f79:	31 c9                	xor    %ecx,%ecx
+ 4401f7b:	48 89 c7             	mov    %rax,%rdi
+ 4401f7e:	48 89 de             	mov    %rbx,%rsi
+ 4401f81:	31 c0                	xor    %eax,%eax
+ 4401f83:	48 89 cb             	mov    %rcx,%rbx
+ 4401f86:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4401f8b:	48 83 c4 68          	add    $0x68,%rsp
+ 4401f8f:	c3                   	ret
+ 4401f90:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4401f94:	48 89 d8             	mov    %rbx,%rax
+ 4401f97:	ff d1                	call   *%rcx
+ 4401f99:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4401f9f:	90                   	nop
+ 4401fa0:	e8 bb bd ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4401fa5:	48 8d 0d f4 c6 3a 01 	lea    0x13ac6f4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4401fac:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4401fb1:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4401fb6:	48 8d 05 aa 8e a0 00 	lea    0xa08eaa(%rip),%rax        # 4e0ae67 <_IO_stdin_used@@Base+0x1d7e67>
+ 4401fbd:	bb 24 00 00 00       	mov    $0x24,%ebx
+ 4401fc2:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4401fc7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4401fcc:	48 89 fe             	mov    %rdi,%rsi
+ 4401fcf:	e8 8c f2 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4401fd4:	31 c9                	xor    %ecx,%ecx
+ 4401fd6:	48 89 c7             	mov    %rax,%rdi
+ 4401fd9:	48 89 de             	mov    %rbx,%rsi
+ 4401fdc:	31 c0                	xor    %eax,%eax
+ 4401fde:	48 89 cb             	mov    %rcx,%rbx
+ 4401fe1:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4401fe6:	48 83 c4 68          	add    $0x68,%rsp
+ 4401fea:	c3                   	ret
+ 4401feb:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4401fef:	48 89 d8             	mov    %rbx,%rax
+ 4401ff2:	ff d1                	call   *%rcx
+ 4401ff4:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4401ffa:	e8 61 bd ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4401fff:	48 8d 0d 9a c6 3a 01 	lea    0x13ac69a(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4402006:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 440200b:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4402010:	48 8d 05 02 49 9f 00 	lea    0x9f4902(%rip),%rax        # 4df6919 <_IO_stdin_used@@Base+0x1c3919>
+ 4402017:	bb 1f 00 00 00       	mov    $0x1f,%ebx
+ 440201c:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4402021:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4402026:	48 89 fe             	mov    %rdi,%rsi
+ 4402029:	e8 32 f2 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 440202e:	31 c9                	xor    %ecx,%ecx
+ 4402030:	48 89 c7             	mov    %rax,%rdi
+ 4402033:	48 89 de             	mov    %rbx,%rsi
+ 4402036:	31 c0                	xor    %eax,%eax
+ 4402038:	48 89 cb             	mov    %rcx,%rbx
+ 440203b:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4402040:	48 83 c4 68          	add    $0x68,%rsp
+ 4402044:	c3                   	ret
+ 4402045:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4402049:	48 89 d8             	mov    %rbx,%rax
+ 440204c:	ff d1                	call   *%rcx
+ 440204e:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4402054:	e8 07 bd ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4402059:	48 8d 0d 40 c6 3a 01 	lea    0x13ac640(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4402060:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4402065:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 440206a:	48 8d 05 18 91 9f 00 	lea    0x9f9118(%rip),%rax        # 4dfb189 <_IO_stdin_used@@Base+0x1c8189>
+ 4402071:	bb 20 00 00 00       	mov    $0x20,%ebx
+ 4402076:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 440207b:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4402080:	48 89 fe             	mov    %rdi,%rsi
+ 4402083:	e8 d8 f1 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4402088:	31 c9                	xor    %ecx,%ecx
+ 440208a:	48 89 c7             	mov    %rax,%rdi
+ 440208d:	48 89 de             	mov    %rbx,%rsi
+ 4402090:	31 c0                	xor    %eax,%eax
+ 4402092:	48 89 cb             	mov    %rcx,%rbx
+ 4402095:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 440209a:	48 83 c4 68          	add    $0x68,%rsp
+ 440209e:	c3                   	ret
+ 440209f:	48 8d 05 b2 44 9e 00 	lea    0x9e44b2(%rip),%rax        # 4de6558 <_IO_stdin_used@@Base+0x1b3558>
+ 44020a6:	bb 1b 00 00 00       	mov    $0x1b,%ebx
+ 44020ab:	31 c9                	xor    %ecx,%ecx
+ 44020ad:	31 ff                	xor    %edi,%edi
+ 44020af:	48 89 fe             	mov    %rdi,%rsi
+ 44020b2:	e8 a9 f1 be fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 44020b7:	31 c9                	xor    %ecx,%ecx
+ 44020b9:	48 89 c7             	mov    %rax,%rdi
+ 44020bc:	48 89 de             	mov    %rbx,%rsi
+ 44020bf:	31 c0                	xor    %eax,%eax
+ 44020c1:	48 89 cb             	mov    %rcx,%rbx
+ 44020c4:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 44020c9:	48 83 c4 68          	add    $0x68,%rsp
+ 44020cd:	c3                   	ret
+ 44020ce:	4c 8d 4e 01          	lea    0x1(%rsi),%r9
+ 44020d2:	45 0f b6 14 30       	movzbl (%r8,%rsi,1),%r10d
+ 44020d7:	44 01 d3             	add    %r10d,%ebx
+ 44020da:	01 d8                	add    %ebx,%eax
+ 44020dc:	4c 89 ce             	mov    %r9,%rsi
+ 44020df:	90                   	nop
+ 44020e0:	48 39 ce             	cmp    %rcx,%rsi
+ 44020e3:	7c e9                	jl     44020ce <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x3ce>
+ 44020e5:	4c 8d 49 02          	lea    0x2(%rcx),%r9
+ 44020e9:	4c 39 ca             	cmp    %r9,%rdx
+ 44020ec:	73 35                	jae    4402123 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base+0x423>
+ 44020ee:	88 44 24 46          	mov    %al,0x46(%rsp)
+ 44020f2:	88 5c 24 47          	mov    %bl,0x47(%rsp)
+ 44020f6:	4c 89 c0             	mov    %r8,%rax
+ 44020f9:	4c 89 cb             	mov    %r9,%rbx
+ 44020fc:	48 89 d1             	mov    %rdx,%rcx
+ 44020ff:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4402104:	48 8d 35 55 c8 3a 01 	lea    0x13ac855(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 440210b:	e8 b0 43 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4402110:	49 89 d9             	mov    %rbx,%r9
+ 4402113:	49 89 c0             	mov    %rax,%r8
+ 4402116:	48 89 ca             	mov    %rcx,%rdx
+ 4402119:	0f b6 44 24 46       	movzbl 0x46(%rsp),%eax
+ 440211e:	0f b6 5c 24 47       	movzbl 0x47(%rsp),%ebx
+ 4402123:	43 88 5c 01 fe       	mov    %bl,-0x2(%r9,%r8,1)
+ 4402128:	43 88 44 01 ff       	mov    %al,-0x1(%r9,%r8,1)
+ 440212d:	4c 89 c0             	mov    %r8,%rax
+ 4402130:	4c 89 cb             	mov    %r9,%rbx
+ 4402133:	48 89 d1             	mov    %rdx,%rcx
+ 4402136:	31 ff                	xor    %edi,%edi
+ 4402138:	31 f6                	xor    %esi,%esi
+ 440213a:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 440213f:	48 83 c4 68          	add    $0x68,%rsp
+ 4402143:	c3                   	ret
+ 4402144:	e8 17 4a b5 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 4402149:	90                   	nop
+ 440214a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 440214f:	e8 0c 23 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4402154:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4402159:	e9 a2 fb ff ff       	jmp    4401d00 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXValMessage).ToBytes@@Base>
+ 440215e:	cc                   	int3
+ 440215f:	cc                   	int3

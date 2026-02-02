@@ -1,0 +1,218 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage
+# addr 0x45ea9a0 size 800 (0x320)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ea9a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base>:
+ 45ea9a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ea9a4:	0f 86 e7 02 00 00    	jbe    45eac91 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2f1>
+ 45ea9aa:	48 83 ec 68          	sub    $0x68,%rsp
+ 45ea9ae:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 45ea9b3:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 45ea9b8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45ea9bf:	4c 89 6c 24 58       	mov    %r13,0x58(%rsp)
+ 45ea9c4:	48 89 5c 24 78       	mov    %rbx,0x78(%rsp)
+ 45ea9c9:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 45ea9ce:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 45ea9d3:	48 89 c1             	mov    %rax,%rcx
+ 45ea9d6:	31 c0                	xor    %eax,%eax
+ 45ea9d8:	ba 01 00 00 00       	mov    $0x1,%edx
+ 45ea9dd:	f0 0f b1 91 a8 00 00 	lock cmpxchg %edx,0xa8(%rcx)
+ 45ea9e4:	00 
+ 45ea9e5:	0f 94 c2             	sete   %dl
+ 45ea9e8:	48 8d 81 a8 00 00 00 	lea    0xa8(%rcx),%rax
+ 45ea9ef:	84 d2                	test   %dl,%dl
+ 45ea9f1:	75 14                	jne    45eaa07 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x67>
+ 45ea9f3:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45ea9f8:	e8 43 db 98 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45ea9fd:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45eaa02:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 45eaa07:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45eaa0d:	48 8d 0d ac 02 00 00 	lea    0x2ac(%rip),%rcx        # 45eacc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage.func1@@Base>
+ 45eaa14:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45eaa19:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45eaa1e:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 45eaa23:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45eaa28:	c6 44 24 27 01       	movb   $0x1,0x27(%rsp)
+ 45eaa2d:	48 89 d8             	mov    %rbx,%rax
+ 45eaa30:	e8 cb 04 00 00       	call   45eaf00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetHash@@Base>
+ 45eaa35:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45eaa3a:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45eaa3f:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45eaa44:	48 8b 91 a0 00 00 00 	mov    0xa0(%rcx),%rdx
+ 45eaa4b:	48 89 df             	mov    %rbx,%rdi
+ 45eaa4e:	48 89 d3             	mov    %rdx,%rbx
+ 45eaa51:	48 89 c2             	mov    %rax,%rdx
+ 45eaa54:	48 8d 05 25 d8 35 01 	lea    0x135d825(%rip),%rax        # 5948280 <type:MhjCoGsw@@Base>
+ 45eaa5b:	48 89 d1             	mov    %rdx,%rcx
+ 45eaa5e:	66 90                	xchg   %ax,%ax
+ 45eaa60:	e8 5b b3 90 fd       	call   1ef5dc0 <runtime.mapaccess2_faststr@@Base>
+ 45eaa65:	48 8b 08             	mov    (%rax),%rcx
+ 45eaa68:	84 db                	test   %bl,%bl
+ 45eaa6a:	74 05                	je     45eaa71 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0xd1>
+ 45eaa6c:	48 89 c8             	mov    %rcx,%rax
+ 45eaa6f:	eb 74                	jmp    45eaae5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x145>
+ 45eaa71:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 45eaa76:	48 8b 90 a0 00 00 00 	mov    0xa0(%rax),%rdx
+ 45eaa7d:	0f 1f 00             	nopl   (%rax)
+ 45eaa80:	48 85 d2             	test   %rdx,%rdx
+ 45eaa83:	74 05                	je     45eaa8a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0xea>
+ 45eaa85:	48 8b 12             	mov    (%rdx),%rdx
+ 45eaa88:	eb 02                	jmp    45eaa8c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0xec>
+ 45eaa8a:	31 d2                	xor    %edx,%edx
+ 45eaa8c:	48 81 fa f4 01 00 00 	cmp    $0x1f4,%rdx
+ 45eaa93:	7e 39                	jle    45eaace <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x12e>
+ 45eaa95:	e8 a6 67 90 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 45eaa9a:	83 3d bf 0e 89 03 00 	cmpl   $0x0,0x3890ebf(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45eaaa1:	75 0e                	jne    45eaab1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x111>
+ 45eaaa3:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 45eaaa8:	48 89 82 a0 00 00 00 	mov    %rax,0xa0(%rdx)
+ 45eaaaf:	eb 1a                	jmp    45eaacb <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x12b>
+ 45eaab1:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 45eaab6:	48 8d 97 a0 00 00 00 	lea    0xa0(%rdi),%rdx
+ 45eaabd:	48 89 f9             	mov    %rdi,%rcx
+ 45eaac0:	48 89 d7             	mov    %rdx,%rdi
+ 45eaac3:	e8 38 bb 96 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45eaac8:	48 89 ca             	mov    %rcx,%rdx
+ 45eaacb:	48 89 d0             	mov    %rdx,%rax
+ 45eaace:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 45eaad3:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 45eaad8:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45eaadd:	0f 1f 00             	nopl   (%rax)
+ 45eaae0:	e8 3b 02 00 00       	call   45ead20 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).createLoggingRecord@@Base>
+ 45eaae5:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45eaaea:	e8 31 ec e2 ff       	call   4419720 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base>
+ 45eaaef:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 45eaaf4:	48 89 47 48          	mov    %rax,0x48(%rdi)
+ 45eaaf8:	48 89 5f 50          	mov    %rbx,0x50(%rdi)
+ 45eaafc:	83 3d 5d 0e 89 03 00 	cmpl   $0x0,0x3890e5d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45eab03:	75 06                	jne    45eab0b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x16b>
+ 45eab05:	48 89 4f 58          	mov    %rcx,0x58(%rdi)
+ 45eab09:	eb 12                	jmp    45eab1d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x17d>
+ 45eab0b:	48 8d 47 58          	lea    0x58(%rdi),%rax
+ 45eab0f:	48 89 fa             	mov    %rdi,%rdx
+ 45eab12:	48 89 c7             	mov    %rax,%rdi
+ 45eab15:	e8 e6 bb 96 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45eab1a:	48 89 d7             	mov    %rdx,%rdi
+ 45eab1d:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 45eab22:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45eab26:	0f b6 09             	movzbl (%rcx),%ecx
+ 45eab29:	80 f9 08             	cmp    $0x8,%cl
+ 45eab2c:	0f 87 7f 00 00 00    	ja     45eabb1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x211>
+ 45eab32:	84 c9                	test   %cl,%cl
+ 45eab34:	75 1f                	jne    45eab55 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x1b5>
+ 45eab36:	48 8b 00             	mov    (%rax),%rax
+ 45eab39:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eab40:	00 
+ 45eab41:	75 09                	jne    45eab4c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x1ac>
+ 45eab43:	48 ff 47 70          	incq   0x70(%rdi)
+ 45eab47:	e9 1d 01 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eab4c:	48 ff 47 78          	incq   0x78(%rdi)
+ 45eab50:	e9 14 01 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eab55:	80 f9 01             	cmp    $0x1,%cl
+ 45eab58:	75 26                	jne    45eab80 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x1e0>
+ 45eab5a:	48 8b 00             	mov    (%rax),%rax
+ 45eab5d:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eab64:	00 
+ 45eab65:	75 0c                	jne    45eab73 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x1d3>
+ 45eab67:	48 ff 87 90 00 00 00 	incq   0x90(%rdi)
+ 45eab6e:	e9 f6 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eab73:	48 ff 87 98 00 00 00 	incq   0x98(%rdi)
+ 45eab7a:	e9 ea 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eab7f:	90                   	nop
+ 45eab80:	80 f9 08             	cmp    $0x8,%cl
+ 45eab83:	0f 85 c2 00 00 00    	jne    45eac4b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2ab>
+ 45eab89:	48 8b 00             	mov    (%rax),%rax
+ 45eab8c:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eab93:	00 
+ 45eab94:	75 0f                	jne    45eaba5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x205>
+ 45eab96:	48 ff 87 80 00 00 00 	incq   0x80(%rdi)
+ 45eab9d:	0f 1f 00             	nopl   (%rax)
+ 45eaba0:	e9 c4 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eaba5:	48 ff 87 88 00 00 00 	incq   0x88(%rdi)
+ 45eabac:	e9 b8 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eabb1:	80 f9 0b             	cmp    $0xb,%cl
+ 45eabb4:	77 4d                	ja     45eac03 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x263>
+ 45eabb6:	80 f9 09             	cmp    $0x9,%cl
+ 45eabb9:	75 2a                	jne    45eabe5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x245>
+ 45eabbb:	48 8b 00             	mov    (%rax),%rax
+ 45eabbe:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eabc5:	00 
+ 45eabc6:	75 0c                	jne    45eabd4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x234>
+ 45eabc8:	48 ff 87 a0 00 00 00 	incq   0xa0(%rdi)
+ 45eabcf:	e9 95 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eabd4:	48 ff 87 a8 00 00 00 	incq   0xa8(%rdi)
+ 45eabdb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45eabe0:	e9 84 00 00 00       	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eabe5:	80 f9 0b             	cmp    $0xb,%cl
+ 45eabe8:	75 61                	jne    45eac4b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2ab>
+ 45eabea:	48 8b 00             	mov    (%rax),%rax
+ 45eabed:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eabf4:	00 
+ 45eabf5:	75 06                	jne    45eabfd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x25d>
+ 45eabf7:	48 ff 47 60          	incq   0x60(%rdi)
+ 45eabfb:	eb 6c                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eabfd:	48 ff 47 68          	incq   0x68(%rdi)
+ 45eac01:	eb 66                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac03:	80 f9 0c             	cmp    $0xc,%cl
+ 45eac06:	75 1f                	jne    45eac27 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x287>
+ 45eac08:	48 8b 00             	mov    (%rax),%rax
+ 45eac0b:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eac12:	00 
+ 45eac13:	75 09                	jne    45eac1e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x27e>
+ 45eac15:	48 ff 87 b0 00 00 00 	incq   0xb0(%rdi)
+ 45eac1c:	eb 4b                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac1e:	48 ff 87 b8 00 00 00 	incq   0xb8(%rdi)
+ 45eac25:	eb 42                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac27:	80 f9 0d             	cmp    $0xd,%cl
+ 45eac2a:	75 1f                	jne    45eac4b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2ab>
+ 45eac2c:	48 8b 00             	mov    (%rax),%rax
+ 45eac2f:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eac36:	00 
+ 45eac37:	75 09                	jne    45eac42 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2a2>
+ 45eac39:	48 ff 87 c0 00 00 00 	incq   0xc0(%rdi)
+ 45eac40:	eb 27                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac42:	48 ff 87 c8 00 00 00 	incq   0xc8(%rdi)
+ 45eac49:	eb 1e                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac4b:	48 8b 00             	mov    (%rax),%rax
+ 45eac4e:	48 83 b8 c0 00 00 00 	cmpq   $0x0,0xc0(%rax)
+ 45eac55:	00 
+ 45eac56:	75 0a                	jne    45eac62 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c2>
+ 45eac58:	48 ff 87 d0 00 00 00 	incq   0xd0(%rdi)
+ 45eac5f:	90                   	nop
+ 45eac60:	eb 07                	jmp    45eac69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base+0x2c9>
+ 45eac62:	48 ff 87 d8 00 00 00 	incq   0xd8(%rdi)
+ 45eac69:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 45eac6e:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45eac73:	48 8b 02             	mov    (%rdx),%rax
+ 45eac76:	ff d0                	call   *%rax
+ 45eac78:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45eac7d:	48 83 c4 68          	add    $0x68,%rsp
+ 45eac81:	c3                   	ret
+ 45eac82:	e8 d9 12 93 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45eac87:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45eac8c:	48 83 c4 68          	add    $0x68,%rsp
+ 45eac90:	c3                   	ret
+ 45eac91:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45eac96:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45eac9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45eaca0:	e8 bb 97 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45eaca5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45eacaa:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45eacaf:	e9 ec fc ff ff       	jmp    45ea9a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).logReceiptOfMessage@@Base>
+ 45eacb4:	cc                   	int3
+ 45eacb5:	cc                   	int3
+ 45eacb6:	cc                   	int3
+ 45eacb7:	cc                   	int3
+ 45eacb8:	cc                   	int3
+ 45eacb9:	cc                   	int3
+ 45eacba:	cc                   	int3
+ 45eacbb:	cc                   	int3
+ 45eacbc:	cc                   	int3
+ 45eacbd:	cc                   	int3
+ 45eacbe:	cc                   	int3
+ 45eacbf:	cc                   	int3

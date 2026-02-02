@@ -1,0 +1,136 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived
+# addr 0x4402680 size 448 (0x1c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004402680 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base>:
+ 4402680:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4402684:	0f 86 74 01 00 00    	jbe    44027fe <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x17e>
+ 440268a:	48 83 ec 50          	sub    $0x50,%rsp
+ 440268e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4402693:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4402698:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 440269d:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 44026a2:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 44026a7:	48 8d 3d 9c 4a 81 03 	lea    0x3814a9c(%rip),%rdi        # 7c1714a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UBX_HEADER@@Base>
+ 44026ae:	be 02 00 00 00       	mov    $0x2,%esi
+ 44026b3:	49 89 f0             	mov    %rsi,%r8
+ 44026b6:	e8 25 e7 c6 fd       	call   2070de0 <bytes.Index@@Base>
+ 44026bb:	48 8d 50 06          	lea    0x6(%rax),%rdx
+ 44026bf:	4c 8b 4c 24 60       	mov    0x60(%rsp),%r9
+ 44026c4:	4d 8d 51 ff          	lea    -0x1(%r9),%r10
+ 44026c8:	49 39 d2             	cmp    %rdx,%r10
+ 44026cb:	0f 8c 13 01 00 00    	jl     44027e4 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x164>
+ 44026d1:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 44026d6:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 44026db:	48 8d 05 3e 22 84 01 	lea    0x184223e(%rip),%rax        # 5c44920 <type:kv7bqe43@@Base>
+ 44026e2:	e8 f9 dd ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 44026e7:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 44026ec:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 44026f1:	48 39 ca             	cmp    %rcx,%rdx
+ 44026f4:	0f 82 fe 00 00 00    	jb     44027f8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x178>
+ 44026fa:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 44026ff:	90                   	nop
+ 4402700:	48 39 cb             	cmp    %rcx,%rbx
+ 4402703:	0f 87 e7 00 00 00    	ja     44027f0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x170>
+ 4402709:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 440270e:	48 8d 05 cb a7 78 01 	lea    0x178a7cb(%rip),%rax        # 5b8cee0 <type:qfCPvgog@@Base>
+ 4402715:	e8 c6 dd ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 440271a:	48 c7 40 08 06 00 00 	movq   $0x6,0x8(%rax)
+ 4402721:	00 
+ 4402722:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4402727:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 440272c:	48 29 d1             	sub    %rdx,%rcx
+ 440272f:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4402733:	48 f7 d9             	neg    %rcx
+ 4402736:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 440273a:	48 21 d1             	and    %rdx,%rcx
+ 440273d:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 4402742:	48 01 d9             	add    %rbx,%rcx
+ 4402745:	83 3d 14 92 a7 03 00 	cmpl   $0x0,0x3a79214(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440274c:	75 05                	jne    4402753 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0xd3>
+ 440274e:	48 89 08             	mov    %rcx,(%rax)
+ 4402751:	eb 08                	jmp    440275b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0xdb>
+ 4402753:	48 89 c7             	mov    %rax,%rdi
+ 4402756:	e8 a5 3f b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 440275b:	48 c7 40 18 00 00 00 	movq   $0x0,0x18(%rax)
+ 4402762:	00 
+ 4402763:	48 c7 40 20 ff ff ff 	movq   $0xffffffffffffffff,0x20(%rax)
+ 440276a:	ff 
+ 440276b:	48 89 c3             	mov    %rax,%rbx
+ 440276e:	48 8d 0d 7b 17 b4 01 	lea    0x1b4177b(%rip),%rcx        # 5f43ef0 <go:itab.encoding/binary.littleEndian,encoding/binary.ByteOrder@@Base>
+ 4402775:	48 8d 3d f4 88 a7 03 	lea    0x3a788f4(%rip),%rdi        # 7e7b070 <runtime.zerobase@@Base>
+ 440277c:	48 8d 35 dd 23 50 01 	lea    0x15023dd(%rip),%rsi        # 5904b60 <type:9lbZxTfZ@@Base>
+ 4402783:	4c 8b 44 24 40       	mov    0x40(%rsp),%r8
+ 4402788:	48 8d 05 71 b2 af 01 	lea    0x1afb271(%rip),%rax        # 5efda00 <go:itab.*bytes.Reader,io.Reader@@Base>
+ 440278f:	e8 2c 08 c7 fd       	call   2072fc0 <encoding/binary.Read@@Base>
+ 4402794:	48 85 c0             	test   %rax,%rax
+ 4402797:	75 3f                	jne    44027d8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x158>
+ 4402799:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 440279e:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 44027a3:	48 29 d1             	sub    %rdx,%rcx
+ 44027a6:	48 ff c9             	dec    %rcx
+ 44027a9:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 44027ae:	0f b7 52 04          	movzwl 0x4(%rdx),%edx
+ 44027b2:	83 c2 06             	add    $0x6,%edx
+ 44027b5:	0f b7 d2             	movzwl %dx,%edx
+ 44027b8:	48 39 ca             	cmp    %rcx,%rdx
+ 44027bb:	7e 0c                	jle    44027c9 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base+0x149>
+ 44027bd:	31 c0                	xor    %eax,%eax
+ 44027bf:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 44027c4:	48 83 c4 50          	add    $0x50,%rsp
+ 44027c8:	c3                   	ret
+ 44027c9:	b8 01 00 00 00       	mov    $0x1,%eax
+ 44027ce:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 44027d3:	48 83 c4 50          	add    $0x50,%rsp
+ 44027d7:	c3                   	ret
+ 44027d8:	31 c0                	xor    %eax,%eax
+ 44027da:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 44027df:	48 83 c4 50          	add    $0x50,%rsp
+ 44027e3:	c3                   	ret
+ 44027e4:	31 c0                	xor    %eax,%eax
+ 44027e6:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 44027eb:	48 83 c4 50          	add    $0x50,%rsp
+ 44027ef:	c3                   	ret
+ 44027f0:	48 89 d8             	mov    %rbx,%rax
+ 44027f3:	e8 68 43 b5 fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 44027f8:	e8 23 43 b5 fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 44027fd:	90                   	nop
+ 44027fe:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4402803:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4402808:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 440280d:	e8 4e 1c b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4402812:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4402817:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 440281c:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4402821:	e9 5a fe ff ff       	jmp    4402680 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.IsEntireUBXMessageReceived@@Base>
+ 4402826:	cc                   	int3
+ 4402827:	cc                   	int3
+ 4402828:	cc                   	int3
+ 4402829:	cc                   	int3
+ 440282a:	cc                   	int3
+ 440282b:	cc                   	int3
+ 440282c:	cc                   	int3
+ 440282d:	cc                   	int3
+ 440282e:	cc                   	int3
+ 440282f:	cc                   	int3
+ 4402830:	cc                   	int3
+ 4402831:	cc                   	int3
+ 4402832:	cc                   	int3
+ 4402833:	cc                   	int3
+ 4402834:	cc                   	int3
+ 4402835:	cc                   	int3
+ 4402836:	cc                   	int3
+ 4402837:	cc                   	int3
+ 4402838:	cc                   	int3
+ 4402839:	cc                   	int3
+ 440283a:	cc                   	int3
+ 440283b:	cc                   	int3
+ 440283c:	cc                   	int3
+ 440283d:	cc                   	int3
+ 440283e:	cc                   	int3
+ 440283f:	cc                   	int3

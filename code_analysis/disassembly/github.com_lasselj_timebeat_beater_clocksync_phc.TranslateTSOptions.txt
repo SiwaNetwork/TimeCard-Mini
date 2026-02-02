@@ -1,0 +1,102 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions
+# addr 0x45853e0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045853e0 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base>:
+ 45853e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45853e4:	0f 86 3c 01 00 00    	jbe    4585526 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x146>
+ 45853ea:	48 83 ec 60          	sub    $0x60,%rsp
+ 45853ee:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 45853f3:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 45853f8:	89 44 24 68          	mov    %eax,0x68(%rsp)
+ 45853fc:	31 c9                	xor    %ecx,%ecx
+ 45853fe:	31 d2                	xor    %edx,%edx
+ 4585400:	31 db                	xor    %ebx,%ebx
+ 4585402:	31 f6                	xor    %esi,%esi
+ 4585404:	eb 07                	jmp    458540d <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x2d>
+ 4585406:	49 8d 49 01          	lea    0x1(%r9),%rcx
+ 458540a:	4c 89 c6             	mov    %r8,%rsi
+ 458540d:	48 83 f9 20          	cmp    $0x20,%rcx
+ 4585411:	0f 8d d9 00 00 00    	jge    45854f0 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x110>
+ 4585417:	83 f9 20             	cmp    $0x20,%ecx
+ 458541a:	45 19 c0             	sbb    %r8d,%r8d
+ 458541d:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 4585423:	41 d3 e1             	shl    %cl,%r9d
+ 4585426:	45 21 c1             	and    %r8d,%r9d
+ 4585429:	41 85 c1             	test   %eax,%r9d
+ 458542c:	0f 84 ac 00 00 00    	je     45854de <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0xfe>
+ 4585432:	48 83 f9 0f          	cmp    $0xf,%rcx
+ 4585436:	0f 83 d8 00 00 00    	jae    4585514 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x134>
+ 458543c:	4c 8d 46 01          	lea    0x1(%rsi),%r8
+ 4585440:	49 89 c9             	mov    %rcx,%r9
+ 4585443:	48 c1 e1 04          	shl    $0x4,%rcx
+ 4585447:	4c 8d 15 b2 47 41 03 	lea    0x34147b2(%rip),%r10        # 7999c00 <github.com/lasselj/timebeat/beater/clocksync/phc.SofTranslation@@Base>
+ 458544e:	4d 8b 1c 0a          	mov    (%r10,%rcx,1),%r11
+ 4585452:	4d 8b 64 0a 08       	mov    0x8(%r10,%rcx,1),%r12
+ 4585457:	4c 39 c2             	cmp    %r8,%rdx
+ 458545a:	73 4c                	jae    45854a8 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0xc8>
+ 458545c:	4c 89 4c 24 40       	mov    %r9,0x40(%rsp)
+ 4585461:	4c 89 5c 24 50       	mov    %r11,0x50(%rsp)
+ 4585466:	4c 89 64 24 48       	mov    %r12,0x48(%rsp)
+ 458546b:	48 89 d8             	mov    %rbx,%rax
+ 458546e:	4c 89 c3             	mov    %r8,%rbx
+ 4585471:	48 89 d1             	mov    %rdx,%rcx
+ 4585474:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4585479:	48 8d 35 20 92 22 01 	lea    0x1229220(%rip),%rsi        # 57ae6a0 <type:string@@Base>
+ 4585480:	e8 3b 10 9b fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4585485:	4c 8b 4c 24 40       	mov    0x40(%rsp),%r9
+ 458548a:	4c 8d 15 6f 47 41 03 	lea    0x341476f(%rip),%r10        # 7999c00 <github.com/lasselj/timebeat/beater/clocksync/phc.SofTranslation@@Base>
+ 4585491:	4c 8b 5c 24 50       	mov    0x50(%rsp),%r11
+ 4585496:	4c 8b 64 24 48       	mov    0x48(%rsp),%r12
+ 458549b:	49 89 d8             	mov    %rbx,%r8
+ 458549e:	48 89 ca             	mov    %rcx,%rdx
+ 45854a1:	48 89 c3             	mov    %rax,%rbx
+ 45854a4:	8b 44 24 68          	mov    0x68(%rsp),%eax
+ 45854a8:	4d 8d 68 ff          	lea    -0x1(%r8),%r13
+ 45854ac:	49 c1 e5 04          	shl    $0x4,%r13
+ 45854b0:	4e 89 64 2b 08       	mov    %r12,0x8(%rbx,%r13,1)
+ 45854b5:	4a 8d 3c 2b          	lea    (%rbx,%r13,1),%rdi
+ 45854b9:	83 3d a0 64 8f 03 00 	cmpl   $0x0,0x38f64a0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45854c0:	75 09                	jne    45854cb <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0xeb>
+ 45854c2:	4e 89 1c 2b          	mov    %r11,(%rbx,%r13,1)
+ 45854c6:	e9 3b ff ff ff       	jmp    4585406 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x26>
+ 45854cb:	4c 89 c9             	mov    %r9,%rcx
+ 45854ce:	4d 89 d9             	mov    %r11,%r9
+ 45854d1:	e8 ca 12 9d fd       	call   1f567a0 <runtime.gcWriteBarrierR9@@Base>
+ 45854d6:	49 89 c9             	mov    %rcx,%r9
+ 45854d9:	e9 28 ff ff ff       	jmp    4585406 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x26>
+ 45854de:	49 89 c9             	mov    %rcx,%r9
+ 45854e1:	4c 8d 15 18 47 41 03 	lea    0x3414718(%rip),%r10        # 7999c00 <github.com/lasselj/timebeat/beater/clocksync/phc.SofTranslation@@Base>
+ 45854e8:	49 89 f0             	mov    %rsi,%r8
+ 45854eb:	e9 16 ff ff ff       	jmp    4585406 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base+0x26>
+ 45854f0:	48 89 d8             	mov    %rbx,%rax
+ 45854f3:	48 89 f3             	mov    %rsi,%rbx
+ 45854f6:	48 89 d1             	mov    %rdx,%rcx
+ 45854f9:	48 8d 3d 38 c6 f5 00 	lea    0xf5c638(%rip),%rdi        # 54e1b38 <go:link.pkghashbytes.vendor/golang.org/x/text/unicode/norm@@Base+0xb8>
+ 4585500:	be 01 00 00 00       	mov    $0x1,%esi
+ 4585505:	e8 16 21 a8 fd       	call   2007620 <strings.Join@@Base>
+ 458550a:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 458550f:	48 83 c4 60          	add    $0x60,%rsp
+ 4585513:	c3                   	ret
+ 4585514:	48 89 c8             	mov    %rcx,%rax
+ 4585517:	b9 0f 00 00 00       	mov    $0xf,%ecx
+ 458551c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4585520:	e8 7b 15 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4585525:	90                   	nop
+ 4585526:	89 44 24 08          	mov    %eax,0x8(%rsp)
+ 458552a:	e8 31 ef 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 458552f:	8b 44 24 08          	mov    0x8(%rsp),%eax
+ 4585533:	e9 a8 fe ff ff       	jmp    45853e0 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base>
+ 4585538:	cc                   	int3
+ 4585539:	cc                   	int3
+ 458553a:	cc                   	int3
+ 458553b:	cc                   	int3
+ 458553c:	cc                   	int3
+ 458553d:	cc                   	int3
+ 458553e:	cc                   	int3
+ 458553f:	cc                   	int3

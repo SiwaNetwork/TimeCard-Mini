@@ -1,0 +1,116 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start
+# addr 0x45aeac0 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045aeac0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base>:
+ 45aeac0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45aeac4:	0f 86 74 01 00 00    	jbe    45aec3e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0x17e>
+ 45aeaca:	48 83 ec 78          	sub    $0x78,%rsp
+ 45aeace:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 45aead3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 45aead8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45aeadf:	4c 89 6c 24 68       	mov    %r13,0x68(%rsp)
+ 45aeae4:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45aeaeb:	00 
+ 45aeaec:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 45aeaf1:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45aeaf7:	bb 18 00 00 00       	mov    $0x18,%ebx
+ 45aeafc:	31 c9                	xor    %ecx,%ecx
+ 45aeafe:	31 ff                	xor    %edi,%edi
+ 45aeb00:	48 89 fe             	mov    %rdi,%rsi
+ 45aeb03:	48 8d 05 bd 99 82 00 	lea    0x8299bd(%rip),%rax        # 4dd84c7 <_IO_stdin_used@@Base+0x1a54c7>
+ 45aeb0a:	e8 f1 5d a4 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45aeb0f:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45aeb16:	00 
+ 45aeb17:	4c 8b 42 18          	mov    0x18(%rdx),%r8
+ 45aeb1b:	48 89 d9             	mov    %rbx,%rcx
+ 45aeb1e:	48 89 c3             	mov    %rax,%rbx
+ 45aeb21:	4c 89 c0             	mov    %r8,%rax
+ 45aeb24:	e8 b7 87 e5 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45aeb29:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45aeb30:	00 
+ 45aeb31:	48 8b 0a             	mov    (%rdx),%rcx
+ 45aeb34:	48 8d 05 00 54 68 00 	lea    0x685400(%rip),%rax        # 4c33f3b <_IO_stdin_used@@Base+0xf3b>
+ 45aeb3b:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 45aeb40:	e8 5b d3 aa fd       	call   205bea0 <net.ListenTCP@@Base>
+ 45aeb45:	48 85 db             	test   %rbx,%rbx
+ 45aeb48:	75 2d                	jne    45aeb77 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0xb7>
+ 45aeb4a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45aeb4f:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 45aeb55:	48 8d 0d 64 01 00 00 	lea    0x164(%rip),%rcx        # 45aecc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start.func1@@Base>
+ 45aeb5c:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45aeb61:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45aeb66:	48 8d 4c 24 58       	lea    0x58(%rsp),%rcx
+ 45aeb6b:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 45aeb70:	c6 44 24 2f 01       	movb   $0x1,0x2f(%rsp)
+ 45aeb75:	eb 21                	jmp    45aeb98 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0xd8>
+ 45aeb77:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 45aeb7c:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45aeb81:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45aeb86:	48 89 cb             	mov    %rcx,%rbx
+ 45aeb89:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45aeb8e:	48 83 c4 78          	add    $0x78,%rsp
+ 45aeb92:	c3                   	ret
+ 45aeb93:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45aeb98:	e8 43 cd aa fd       	call   205b8e0 <net.(*TCPListener).Accept@@Base>
+ 45aeb9d:	0f 1f 00             	nopl   (%rax)
+ 45aeba0:	48 85 c9             	test   %rcx,%rcx
+ 45aeba3:	75 ee                	jne    45aeb93 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0xd3>
+ 45aeba5:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 45aebaa:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45aebaf:	48 8d 05 ca 6e 5a 01 	lea    0x15a6eca(%rip),%rax        # 5b55a80 <type:LOYs7uhk@@Base>
+ 45aebb6:	e8 25 19 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45aebbb:	48 8d 0d 9e 00 00 00 	lea    0x9e(%rip),%rcx        # 45aec60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start.func2@@Base>
+ 45aebc2:	48 89 08             	mov    %rcx,(%rax)
+ 45aebc5:	83 3d 94 cd 8c 03 00 	cmpl   $0x0,0x38ccd94(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45aebcc:	75 0e                	jne    45aebdc <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0x11c>
+ 45aebce:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45aebd5:	00 
+ 45aebd6:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 45aebda:	eb 11                	jmp    45aebed <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0x12d>
+ 45aebdc:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45aebe0:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45aebe7:	00 
+ 45aebe8:	e8 33 7b 9a fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45aebed:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45aebf2:	48 89 58 10          	mov    %rbx,0x10(%rax)
+ 45aebf6:	83 3d 63 cd 8c 03 00 	cmpl   $0x0,0x38ccd63(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45aebfd:	75 0b                	jne    45aec0a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0x14a>
+ 45aebff:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 45aec04:	48 89 58 18          	mov    %rbx,0x18(%rax)
+ 45aec08:	eb 0e                	jmp    45aec18 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0x158>
+ 45aec0a:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 45aec0e:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 45aec13:	e8 28 7b 9a fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 45aec18:	e8 43 9f 97 fd       	call   1f28b60 <runtime.newproc@@Base>
+ 45aec1d:	0f 1f 00             	nopl   (%rax)
+ 45aec20:	e9 6e ff ff ff       	jmp    45aeb93 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base+0xd3>
+ 45aec25:	e8 36 d3 96 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45aec2a:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45aec2f:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 45aec34:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45aec39:	48 83 c4 78          	add    $0x78,%rsp
+ 45aec3d:	c3                   	ret
+ 45aec3e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45aec43:	e8 18 58 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45aec48:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45aec4d:	e9 6e fe ff ff       	jmp    45aeac0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*NmeaTcpServer).Start@@Base>
+ 45aec52:	cc                   	int3
+ 45aec53:	cc                   	int3
+ 45aec54:	cc                   	int3
+ 45aec55:	cc                   	int3
+ 45aec56:	cc                   	int3
+ 45aec57:	cc                   	int3
+ 45aec58:	cc                   	int3
+ 45aec59:	cc                   	int3
+ 45aec5a:	cc                   	int3
+ 45aec5b:	cc                   	int3
+ 45aec5c:	cc                   	int3
+ 45aec5d:	cc                   	int3
+ 45aec5e:	cc                   	int3
+ 45aec5f:	cc                   	int3

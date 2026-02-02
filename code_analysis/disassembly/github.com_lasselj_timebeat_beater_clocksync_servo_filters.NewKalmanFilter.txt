@@ -1,0 +1,598 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter
+# addr 0x4579400 size 2464 (0x9a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004579400 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base>:
+ 4579400:	4c 8d 64 24 a0       	lea    -0x60(%rsp),%r12
+ 4579405:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4579409:	0f 86 59 09 00 00    	jbe    4579d68 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x968>
+ 457940f:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+ 4579416:	48 89 ac 24 d8 00 00 	mov    %rbp,0xd8(%rsp)
+ 457941d:	00 
+ 457941e:	48 8d ac 24 d8 00 00 	lea    0xd8(%rsp),%rbp
+ 4579425:	00 
+ 4579426:	48 89 9c 24 f0 00 00 	mov    %rbx,0xf0(%rsp)
+ 457942d:	00 
+ 457942e:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 4579435:	00 
+ 4579436:	48 8d 05 e3 2a 73 01 	lea    0x1732ae3(%rip),%rax        # 5cabf20 <type:dWFQC5Uu@@Base>
+ 457943d:	0f 1f 00             	nopl   (%rax)
+ 4579440:	e8 9b 70 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579445:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 457944a:	48 8b 8c 24 f0 00 00 	mov    0xf0(%rsp),%rcx
+ 4579451:	00 
+ 4579452:	48 89 48 38          	mov    %rcx,0x38(%rax)
+ 4579456:	83 3d 03 25 90 03 00 	cmpl   $0x0,0x3902503(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457945d:	75 0e                	jne    457946d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x6d>
+ 457945f:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 4579466:	00 
+ 4579467:	48 89 48 30          	mov    %rcx,0x30(%rax)
+ 457946b:	eb 11                	jmp    457947e <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x7e>
+ 457946d:	48 8d 78 30          	lea    0x30(%rax),%rdi
+ 4579471:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 4579478:	00 
+ 4579479:	e8 82 d2 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457947e:	48 8d 05 1b 4e 25 01 	lea    0x1254e1b(%rip),%rax        # 57ce2a0 <type:XoWFWPa5@@Base>
+ 4579485:	e8 56 70 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457948a:	48 85 c0             	test   %rax,%rax
+ 457948d:	75 16                	jne    45794a5 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0xa5>
+ 457948f:	48 8d 05 ca 90 1e 01 	lea    0x11e90ca(%rip),%rax        # 5762560 <type:float64@@Base>
+ 4579496:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 457949b:	48 89 d9             	mov    %rbx,%rcx
+ 457949e:	66 90                	xchg   %ax,%ax
+ 45794a0:	e8 3b cf 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45794a5:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 45794ac:	00 
+ 45794ad:	48 8d 05 cc 52 5d 01 	lea    0x15d52cc(%rip),%rax        # 5b4e780 <type:ysCNyuTO@@Base>
+ 45794b4:	e8 27 70 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45794b9:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45794be:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 45794c5:	48 c7 40 20 01 00 00 	movq   $0x1,0x20(%rax)
+ 45794cc:	00 
+ 45794cd:	48 c7 40 10 02 00 00 	movq   $0x2,0x10(%rax)
+ 45794d4:	00 
+ 45794d5:	48 c7 40 18 02 00 00 	movq   $0x2,0x18(%rax)
+ 45794dc:	00 
+ 45794dd:	83 3d 7c 24 90 03 00 	cmpl   $0x0,0x390247c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45794e4:	75 0e                	jne    45794f4 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0xf4>
+ 45794e6:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 45794ed:	00 
+ 45794ee:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45794f2:	eb 11                	jmp    4579505 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x105>
+ 45794f4:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45794f8:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 45794ff:	00 
+ 4579500:	e8 fb d1 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4579505:	48 8d 05 34 b0 25 01 	lea    0x125b034(%rip),%rax        # 57d4540 <type:M1LyW3EF@@Base>
+ 457950c:	e8 cf 6f 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579511:	f2 0f 10 05 7f 4f f6 	movsd  0xf64f7f(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579518:	00 
+ 4579519:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457951d:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4579520:	f2 0f 11 48 08       	movsd  %xmm1,0x8(%rax)
+ 4579525:	f2 0f 11 48 10       	movsd  %xmm1,0x10(%rax)
+ 457952a:	f2 0f 11 40 18       	movsd  %xmm0,0x18(%rax)
+ 457952f:	48 85 c0             	test   %rax,%rax
+ 4579532:	75 14                	jne    4579548 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x148>
+ 4579534:	48 8d 05 25 90 1e 01 	lea    0x11e9025(%rip),%rax        # 5762560 <type:float64@@Base>
+ 457953b:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4579540:	48 89 d9             	mov    %rbx,%rcx
+ 4579543:	e8 98 ce 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579548:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+ 457954f:	00 
+ 4579550:	48 8d 05 89 45 6f 01 	lea    0x16f4589(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579557:	e8 84 6f 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457955c:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 4579563:	48 c7 40 08 02 00 00 	movq   $0x2,0x8(%rax)
+ 457956a:	00 
+ 457956b:	48 c7 40 28 02 00 00 	movq   $0x2,0x28(%rax)
+ 4579572:	00 
+ 4579573:	48 c7 40 18 04 00 00 	movq   $0x4,0x18(%rax)
+ 457957a:	00 
+ 457957b:	48 c7 40 20 04 00 00 	movq   $0x4,0x20(%rax)
+ 4579582:	00 
+ 4579583:	83 3d d6 23 90 03 00 	cmpl   $0x0,0x39023d6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457958a:	75 0e                	jne    457959a <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x19a>
+ 457958c:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 4579593:	00 
+ 4579594:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579598:	eb 11                	jmp    45795ab <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x1ab>
+ 457959a:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 457959e:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 45795a5:	00 
+ 45795a6:	e8 55 d1 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45795ab:	48 c7 40 30 02 00 00 	movq   $0x2,0x30(%rax)
+ 45795b2:	00 
+ 45795b3:	48 c7 40 38 02 00 00 	movq   $0x2,0x38(%rax)
+ 45795ba:	00 
+ 45795bb:	83 3d 9e 23 90 03 00 	cmpl   $0x0,0x390239e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45795c2:	75 13                	jne    45795d7 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x1d7>
+ 45795c4:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45795c9:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 45795ce:	48 89 0a             	mov    %rcx,(%rdx)
+ 45795d1:	48 89 42 08          	mov    %rax,0x8(%rdx)
+ 45795d5:	eb 1b                	jmp    45795f2 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x1f2>
+ 45795d7:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 45795dc:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45795e1:	e8 1a d1 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45795e6:	48 8d 4f 08          	lea    0x8(%rdi),%rcx
+ 45795ea:	48 89 cf             	mov    %rcx,%rdi
+ 45795ed:	e8 0e d0 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45795f2:	48 8d 05 47 af 25 01 	lea    0x125af47(%rip),%rax        # 57d4540 <type:M1LyW3EF@@Base>
+ 45795f9:	e8 e2 6e 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45795fe:	f2 0f 10 05 92 4e f6 	movsd  0xf64e92(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579605:	00 
+ 4579606:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457960a:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457960f:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4579612:	f2 0f 11 48 10       	movsd  %xmm1,0x10(%rax)
+ 4579617:	f2 0f 11 40 18       	movsd  %xmm0,0x18(%rax)
+ 457961c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4579620:	48 85 c0             	test   %rax,%rax
+ 4579623:	75 14                	jne    4579639 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x239>
+ 4579625:	48 8d 05 34 8f 1e 01 	lea    0x11e8f34(%rip),%rax        # 5762560 <type:float64@@Base>
+ 457962c:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4579631:	48 89 d9             	mov    %rbx,%rcx
+ 4579634:	e8 a7 cd 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579639:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4579640:	00 
+ 4579641:	48 8d 05 98 44 6f 01 	lea    0x16f4498(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579648:	e8 93 6e 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457964d:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 4579654:	48 c7 40 08 02 00 00 	movq   $0x2,0x8(%rax)
+ 457965b:	00 
+ 457965c:	48 c7 40 28 02 00 00 	movq   $0x2,0x28(%rax)
+ 4579663:	00 
+ 4579664:	48 c7 40 18 04 00 00 	movq   $0x4,0x18(%rax)
+ 457966b:	00 
+ 457966c:	48 c7 40 20 04 00 00 	movq   $0x4,0x20(%rax)
+ 4579673:	00 
+ 4579674:	83 3d e5 22 90 03 00 	cmpl   $0x0,0x39022e5(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457967b:	75 0e                	jne    457968b <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x28b>
+ 457967d:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4579684:	00 
+ 4579685:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4579689:	eb 11                	jmp    457969c <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x29c>
+ 457968b:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 457968f:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4579696:	00 
+ 4579697:	e8 84 d0 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 457969c:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45796a1:	48 c7 40 30 02 00 00 	movq   $0x2,0x30(%rax)
+ 45796a8:	00 
+ 45796a9:	48 c7 40 38 02 00 00 	movq   $0x2,0x38(%rax)
+ 45796b0:	00 
+ 45796b1:	90                   	nop
+ 45796b2:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 45796b7:	48 89 d9             	mov    %rbx,%rcx
+ 45796ba:	48 8d 05 9f 8e 1e 01 	lea    0x11e8e9f(%rip),%rax        # 5762560 <type:float64@@Base>
+ 45796c1:	e8 1a cd 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45796c6:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 45796cd:	00 
+ 45796ce:	48 8d 05 0b 44 6f 01 	lea    0x16f440b(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 45796d5:	e8 06 6e 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45796da:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 45796e1:	48 c7 40 08 02 00 00 	movq   $0x2,0x8(%rax)
+ 45796e8:	00 
+ 45796e9:	48 c7 40 28 02 00 00 	movq   $0x2,0x28(%rax)
+ 45796f0:	00 
+ 45796f1:	48 c7 40 18 04 00 00 	movq   $0x4,0x18(%rax)
+ 45796f8:	00 
+ 45796f9:	48 c7 40 20 04 00 00 	movq   $0x4,0x20(%rax)
+ 4579700:	00 
+ 4579701:	83 3d 58 22 90 03 00 	cmpl   $0x0,0x3902258(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579708:	75 0e                	jne    4579718 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x318>
+ 457970a:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4579711:	00 
+ 4579712:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579716:	eb 11                	jmp    4579729 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x329>
+ 4579718:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 457971c:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4579723:	00 
+ 4579724:	e8 d7 cf 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4579729:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 457972e:	48 c7 40 30 02 00 00 	movq   $0x2,0x30(%rax)
+ 4579735:	00 
+ 4579736:	48 c7 40 38 02 00 00 	movq   $0x2,0x38(%rax)
+ 457973d:	00 
+ 457973e:	48 8d 05 5b 4b 25 01 	lea    0x1254b5b(%rip),%rax        # 57ce2a0 <type:XoWFWPa5@@Base>
+ 4579745:	e8 96 6d 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457974a:	f2 0f 10 05 46 4d f6 	movsd  0xf64d46(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579751:	00 
+ 4579752:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4579756:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457975b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4579760:	48 85 c0             	test   %rax,%rax
+ 4579763:	75 14                	jne    4579779 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x379>
+ 4579765:	48 8d 05 f4 8d 1e 01 	lea    0x11e8df4(%rip),%rax        # 5762560 <type:float64@@Base>
+ 457976c:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4579771:	48 89 d9             	mov    %rbx,%rcx
+ 4579774:	e8 67 cc 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579779:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 4579780:	00 
+ 4579781:	48 8d 05 58 43 6f 01 	lea    0x16f4358(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579788:	e8 53 6d 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457978d:	48 c7 00 01 00 00 00 	movq   $0x1,(%rax)
+ 4579794:	48 c7 40 08 02 00 00 	movq   $0x2,0x8(%rax)
+ 457979b:	00 
+ 457979c:	48 c7 40 28 02 00 00 	movq   $0x2,0x28(%rax)
+ 45797a3:	00 
+ 45797a4:	48 c7 40 18 02 00 00 	movq   $0x2,0x18(%rax)
+ 45797ab:	00 
+ 45797ac:	48 c7 40 20 02 00 00 	movq   $0x2,0x20(%rax)
+ 45797b3:	00 
+ 45797b4:	83 3d a5 21 90 03 00 	cmpl   $0x0,0x39021a5(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45797bb:	75 0e                	jne    45797cb <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x3cb>
+ 45797bd:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+ 45797c4:	00 
+ 45797c5:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 45797c9:	eb 11                	jmp    45797dc <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x3dc>
+ 45797cb:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 45797cf:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+ 45797d6:	00 
+ 45797d7:	e8 24 cf 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45797dc:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45797e1:	48 c7 40 30 01 00 00 	movq   $0x1,0x30(%rax)
+ 45797e8:	00 
+ 45797e9:	48 c7 40 38 02 00 00 	movq   $0x2,0x38(%rax)
+ 45797f0:	00 
+ 45797f1:	48 8d 05 a8 4a 25 01 	lea    0x1254aa8(%rip),%rax        # 57ce2a0 <type:XoWFWPa5@@Base>
+ 45797f8:	e8 e3 6c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45797fd:	f2 0f 10 05 93 4c f6 	movsd  0xf64c93(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579804:	00 
+ 4579805:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4579809:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457980e:	48 85 c0             	test   %rax,%rax
+ 4579811:	75 14                	jne    4579827 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x427>
+ 4579813:	48 8d 05 46 8d 1e 01 	lea    0x11e8d46(%rip),%rax        # 5762560 <type:float64@@Base>
+ 457981a:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 457981f:	48 89 d9             	mov    %rbx,%rcx
+ 4579822:	e8 b9 cb 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579827:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 457982e:	00 
+ 457982f:	48 8d 05 aa 42 6f 01 	lea    0x16f42aa(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579836:	e8 a5 6c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457983b:	48 c7 00 01 00 00 00 	movq   $0x1,(%rax)
+ 4579842:	48 c7 40 08 02 00 00 	movq   $0x2,0x8(%rax)
+ 4579849:	00 
+ 457984a:	48 c7 40 28 02 00 00 	movq   $0x2,0x28(%rax)
+ 4579851:	00 
+ 4579852:	48 c7 40 18 02 00 00 	movq   $0x2,0x18(%rax)
+ 4579859:	00 
+ 457985a:	48 c7 40 20 02 00 00 	movq   $0x2,0x20(%rax)
+ 4579861:	00 
+ 4579862:	83 3d f7 20 90 03 00 	cmpl   $0x0,0x39020f7(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579869:	75 0e                	jne    4579879 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x479>
+ 457986b:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4579872:	00 
+ 4579873:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579877:	eb 11                	jmp    457988a <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x48a>
+ 4579879:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 457987d:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4579884:	00 
+ 4579885:	e8 76 ce 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457988a:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 457988f:	48 c7 40 30 01 00 00 	movq   $0x1,0x30(%rax)
+ 4579896:	00 
+ 4579897:	48 c7 40 38 02 00 00 	movq   $0x2,0x38(%rax)
+ 457989e:	00 
+ 457989f:	48 8d 05 fa 49 25 01 	lea    0x12549fa(%rip),%rax        # 57ce2a0 <type:XoWFWPa5@@Base>
+ 45798a6:	e8 35 6c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45798ab:	f2 0f 10 05 e5 4b f6 	movsd  0xf64be5(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 45798b2:	00 
+ 45798b3:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 45798b7:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 45798ba:	f2 0f 11 48 08       	movsd  %xmm1,0x8(%rax)
+ 45798bf:	90                   	nop
+ 45798c0:	48 85 c0             	test   %rax,%rax
+ 45798c3:	75 14                	jne    45798d9 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x4d9>
+ 45798c5:	48 8d 05 94 8c 1e 01 	lea    0x11e8c94(%rip),%rax        # 5762560 <type:float64@@Base>
+ 45798cc:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 45798d1:	48 89 d9             	mov    %rbx,%rcx
+ 45798d4:	e8 07 cb 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45798d9:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45798e0:	00 
+ 45798e1:	48 8d 05 f8 41 6f 01 	lea    0x16f41f8(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 45798e8:	e8 f3 6b 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45798ed:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 45798f4:	48 c7 40 08 01 00 00 	movq   $0x1,0x8(%rax)
+ 45798fb:	00 
+ 45798fc:	48 c7 40 28 01 00 00 	movq   $0x1,0x28(%rax)
+ 4579903:	00 
+ 4579904:	48 c7 40 18 02 00 00 	movq   $0x2,0x18(%rax)
+ 457990b:	00 
+ 457990c:	48 c7 40 20 02 00 00 	movq   $0x2,0x20(%rax)
+ 4579913:	00 
+ 4579914:	83 3d 45 20 90 03 00 	cmpl   $0x0,0x3902045(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457991b:	75 0e                	jne    457992b <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x52b>
+ 457991d:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4579924:	00 
+ 4579925:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579929:	eb 11                	jmp    457993c <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x53c>
+ 457992b:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 457992f:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4579936:	00 
+ 4579937:	e8 c4 cd 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457993c:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4579941:	48 c7 40 30 02 00 00 	movq   $0x2,0x30(%rax)
+ 4579948:	00 
+ 4579949:	48 c7 40 38 01 00 00 	movq   $0x1,0x38(%rax)
+ 4579950:	00 
+ 4579951:	48 8d 05 88 41 6f 01 	lea    0x16f4188(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579958:	e8 83 6b 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457995d:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4579964:	00 
+ 4579965:	48 8d 1d 14 17 9b 01 	lea    0x19b1714(%rip),%rbx        # 5f2b080 <go:itab.*gonum.org/v1/gonum/mat.Dense,gonum.org/v1/gonum/mat.Matrix@@Base>
+ 457996c:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4579971:	48 89 df             	mov    %rbx,%rdi
+ 4579974:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 4579979:	e8 e2 fe fc ff       	call   4549860 <gonum.org/v1/gonum/mat.(*Dense).Mul@@Base>
+ 457997e:	48 8d 05 5b 00 25 01 	lea    0x125005b(%rip),%rax        # 57c99e0 <type:j6tpxGLR@@Base>
+ 4579985:	e8 56 6b 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457998a:	f2 0f 10 05 06 4b f6 	movsd  0xf64b06(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579991:	00 
+ 4579992:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4579996:	48 85 c0             	test   %rax,%rax
+ 4579999:	75 14                	jne    45799af <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x5af>
+ 457999b:	48 8d 05 be 8b 1e 01 	lea    0x11e8bbe(%rip),%rax        # 5762560 <type:float64@@Base>
+ 45799a2:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45799a7:	48 89 d9             	mov    %rbx,%rcx
+ 45799aa:	e8 31 ca 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45799af:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 45799b4:	48 8d 05 25 41 6f 01 	lea    0x16f4125(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 45799bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45799c0:	e8 1b 6b 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45799c5:	48 c7 00 01 00 00 00 	movq   $0x1,(%rax)
+ 45799cc:	48 c7 40 08 01 00 00 	movq   $0x1,0x8(%rax)
+ 45799d3:	00 
+ 45799d4:	48 c7 40 28 01 00 00 	movq   $0x1,0x28(%rax)
+ 45799db:	00 
+ 45799dc:	48 c7 40 18 01 00 00 	movq   $0x1,0x18(%rax)
+ 45799e3:	00 
+ 45799e4:	48 c7 40 20 01 00 00 	movq   $0x1,0x20(%rax)
+ 45799eb:	00 
+ 45799ec:	83 3d 6d 1f 90 03 00 	cmpl   $0x0,0x3901f6d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45799f3:	75 0d                	jne    4579a02 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x602>
+ 45799f5:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45799fa:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 45799fe:	66 90                	xchg   %ax,%ax
+ 4579a00:	eb 0e                	jmp    4579a10 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x610>
+ 4579a02:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4579a06:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 4579a0b:	e8 f0 cc 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4579a10:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4579a15:	48 c7 40 30 01 00 00 	movq   $0x1,0x30(%rax)
+ 4579a1c:	00 
+ 4579a1d:	48 c7 40 38 01 00 00 	movq   $0x1,0x38(%rax)
+ 4579a24:	00 
+ 4579a25:	48 8d 05 b4 40 6f 01 	lea    0x16f40b4(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579a2c:	e8 af 6a 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579a31:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 4579a38:	00 
+ 4579a39:	44 0f 11 bc 24 c8 00 	movups %xmm15,0xc8(%rsp)
+ 4579a40:	00 00 
+ 4579a42:	48 8d 0d 37 16 9b 01 	lea    0x19b1637(%rip),%rcx        # 5f2b080 <go:itab.*gonum.org/v1/gonum/mat.Dense,gonum.org/v1/gonum/mat.Matrix@@Base>
+ 4579a49:	48 89 8c 24 c8 00 00 	mov    %rcx,0xc8(%rsp)
+ 4579a50:	00 
+ 4579a51:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 4579a58:	00 
+ 4579a59:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4579a60:	00 
+ 4579a61:	48 8d 9c 24 c8 00 00 	lea    0xc8(%rsp),%rbx
+ 4579a68:	00 
+ 4579a69:	48 8d 05 b0 e6 6a 01 	lea    0x16ae6b0(%rip),%rax        # 5c28120 <type:WCj45uzX@@Base>
+ 4579a70:	e8 6b 40 97 fd       	call   1eedae0 <runtime.convT@@Base>
+ 4579a75:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4579a7c:	00 
+ 4579a7d:	48 8d 05 3c a0 25 01 	lea    0x125a03c(%rip),%rax        # 57d3ac0 <type:BfyQTNI7@@Base>
+ 4579a84:	e8 57 6a 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579a89:	48 8d 0d f0 15 9b 01 	lea    0x19b15f0(%rip),%rcx        # 5f2b080 <go:itab.*gonum.org/v1/gonum/mat.Dense,gonum.org/v1/gonum/mat.Matrix@@Base>
+ 4579a90:	48 89 08             	mov    %rcx,(%rax)
+ 4579a93:	83 3d c6 1e 90 03 00 	cmpl   $0x0,0x3901ec6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579a9a:	75 0e                	jne    4579aaa <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x6aa>
+ 4579a9c:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 4579aa3:	00 
+ 4579aa4:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4579aa8:	eb 11                	jmp    4579abb <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x6bb>
+ 4579aaa:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4579aae:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 4579ab5:	00 
+ 4579ab6:	e8 65 cc 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579abb:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579abf:	83 3d 9a 1e 90 03 00 	cmpl   $0x0,0x3901e9a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579ac6:	75 0b                	jne    4579ad3 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x6d3>
+ 4579ac8:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4579acd:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4579ad1:	eb 12                	jmp    4579ae5 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x6e5>
+ 4579ad3:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 4579ad7:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4579adc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4579ae0:	e8 3b cc 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579ae5:	48 8d 15 04 d5 9b 01 	lea    0x19bd504(%rip),%rdx        # 5f36ff0 <go:itab.gonum.org/v1/gonum/mat.Transpose,gonum.org/v1/gonum/mat.Matrix@@Base>
+ 4579aec:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 4579af0:	83 3d 69 1e 90 03 00 	cmpl   $0x0,0x3901e69(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579af7:	75 0e                	jne    4579b07 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x707>
+ 4579af9:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4579b00:	00 
+ 4579b01:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 4579b05:	eb 11                	jmp    4579b18 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x718>
+ 4579b07:	48 8d 78 28          	lea    0x28(%rax),%rdi
+ 4579b0b:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4579b12:	00 
+ 4579b13:	e8 08 cc 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579b18:	48 89 c3             	mov    %rax,%rbx
+ 4579b1b:	b9 03 00 00 00       	mov    $0x3,%ecx
+ 4579b20:	48 89 cf             	mov    %rcx,%rdi
+ 4579b23:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 4579b2a:	00 
+ 4579b2b:	e8 f0 14 fe ff       	call   455b020 <gonum.org/v1/gonum/mat.(*Dense).Product@@Base>
+ 4579b30:	f2 0f 10 05 e8 4a f6 	movsd  0xf64ae8(%rip),%xmm0        # 54de620 <_IO_stdin_used@@Base+0x8ab620>
+ 4579b37:	00 
+ 4579b38:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4579b3d:	f2 0f 11 42 28       	movsd  %xmm0,0x28(%rdx)
+ 4579b42:	48 8d 05 97 fe 24 01 	lea    0x124fe97(%rip),%rax        # 57c99e0 <type:j6tpxGLR@@Base>
+ 4579b49:	e8 92 69 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579b4e:	f2 0f 10 05 42 49 f6 	movsd  0xf64942(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 4579b55:	00 
+ 4579b56:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4579b5a:	48 85 c0             	test   %rax,%rax
+ 4579b5d:	75 14                	jne    4579b73 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x773>
+ 4579b5f:	48 8d 05 fa 89 1e 01 	lea    0x11e89fa(%rip),%rax        # 5762560 <type:float64@@Base>
+ 4579b66:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4579b6b:	48 89 d9             	mov    %rbx,%rcx
+ 4579b6e:	e8 6d c8 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579b73:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4579b78:	48 8d 05 61 3f 6f 01 	lea    0x16f3f61(%rip),%rax        # 5c6dae0 <type:djk0P29a@@Base>
+ 4579b7f:	90                   	nop
+ 4579b80:	e8 5b 69 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579b85:	48 c7 00 01 00 00 00 	movq   $0x1,(%rax)
+ 4579b8c:	48 c7 40 08 01 00 00 	movq   $0x1,0x8(%rax)
+ 4579b93:	00 
+ 4579b94:	48 c7 40 28 01 00 00 	movq   $0x1,0x28(%rax)
+ 4579b9b:	00 
+ 4579b9c:	48 c7 40 18 01 00 00 	movq   $0x1,0x18(%rax)
+ 4579ba3:	00 
+ 4579ba4:	48 c7 40 20 01 00 00 	movq   $0x1,0x20(%rax)
+ 4579bab:	00 
+ 4579bac:	83 3d ad 1d 90 03 00 	cmpl   $0x0,0x3901dad(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579bb3:	75 0d                	jne    4579bc2 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x7c2>
+ 4579bb5:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4579bba:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4579bbe:	66 90                	xchg   %ax,%ax
+ 4579bc0:	eb 0e                	jmp    4579bd0 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x7d0>
+ 4579bc2:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4579bc6:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4579bcb:	e8 30 cb 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4579bd0:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4579bd5:	48 c7 40 30 01 00 00 	movq   $0x1,0x30(%rax)
+ 4579bdc:	00 
+ 4579bdd:	48 c7 40 38 01 00 00 	movq   $0x1,0x38(%rax)
+ 4579be4:	00 
+ 4579be5:	48 8d 05 f4 8b 62 01 	lea    0x1628bf4(%rip),%rax        # 5ba27e0 <type:Gyfe8sR0@@Base>
+ 4579bec:	e8 ef 68 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579bf1:	83 3d 68 1d 90 03 00 	cmpl   $0x0,0x3901d68(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579bf8:	75 3a                	jne    4579c34 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x834>
+ 4579bfa:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4579bff:	48 89 10             	mov    %rdx,(%rax)
+ 4579c02:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4579c07:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4579c0b:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4579c10:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4579c14:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4579c19:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4579c1d:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 4579c24:	00 
+ 4579c25:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 4579c29:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 4579c2e:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 4579c32:	eb 5f                	jmp    4579c93 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x893>
+ 4579c34:	48 89 c7             	mov    %rax,%rdi
+ 4579c37:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4579c3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4579c40:	e8 db ca 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579c45:	48 8d 50 08          	lea    0x8(%rax),%rdx
+ 4579c49:	48 89 d7             	mov    %rdx,%rdi
+ 4579c4c:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+ 4579c51:	e8 0a cb 9d fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 4579c56:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4579c5a:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4579c5f:	90                   	nop
+ 4579c60:	e8 bb ca 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579c65:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 4579c69:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4579c6e:	e8 ad ca 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579c73:	48 8d 78 20          	lea    0x20(%rax),%rdi
+ 4579c77:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 4579c7e:	00 
+ 4579c7f:	90                   	nop
+ 4579c80:	e8 9b ca 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579c85:	48 8d 78 28          	lea    0x28(%rax),%rdi
+ 4579c89:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 4579c8e:	e8 8d ca 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579c93:	48 c7 40 30 00 00 00 	movq   $0x0,0x30(%rax)
+ 4579c9a:	00 
+ 4579c9b:	48 8d 15 6e 5b 9a 01 	lea    0x19a5b6e(%rip),%rdx        # 5f1f810 <go:itab.*github.com/konimarti/kalman.filterImpl,github.com/konimarti/kalman.Filter@@Base>
+ 4579ca2:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 4579ca7:	48 89 57 10          	mov    %rdx,0x10(%rdi)
+ 4579cab:	83 3d ae 1c 90 03 00 	cmpl   $0x0,0x3901cae(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579cb2:	75 06                	jne    4579cba <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x8ba>
+ 4579cb4:	48 89 47 18          	mov    %rax,0x18(%rdi)
+ 4579cb8:	eb 0c                	jmp    4579cc6 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x8c6>
+ 4579cba:	48 8d 57 18          	lea    0x18(%rdi),%rdx
+ 4579cbe:	48 89 d7             	mov    %rdx,%rdi
+ 4579cc1:	e8 3a c9 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4579cc6:	48 8d 05 93 88 1e 01 	lea    0x11e8893(%rip),%rax        # 5762560 <type:float64@@Base>
+ 4579ccd:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4579cd2:	48 89 d9             	mov    %rbx,%rcx
+ 4579cd5:	e8 06 c7 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579cda:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4579ce1:	00 
+ 4579ce2:	48 8d 05 97 4a 5d 01 	lea    0x15d4a97(%rip),%rax        # 5b4e780 <type:ysCNyuTO@@Base>
+ 4579ce9:	e8 f2 67 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579cee:	48 c7 00 02 00 00 00 	movq   $0x2,(%rax)
+ 4579cf5:	48 c7 40 20 01 00 00 	movq   $0x1,0x20(%rax)
+ 4579cfc:	00 
+ 4579cfd:	48 c7 40 10 02 00 00 	movq   $0x2,0x10(%rax)
+ 4579d04:	00 
+ 4579d05:	48 c7 40 18 02 00 00 	movq   $0x2,0x18(%rax)
+ 4579d0c:	00 
+ 4579d0d:	83 3d 4c 1c 90 03 00 	cmpl   $0x0,0x3901c4c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579d14:	75 17                	jne    4579d2d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x92d>
+ 4579d16:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4579d1d:	00 
+ 4579d1e:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4579d22:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4579d27:	48 89 41 20          	mov    %rax,0x20(%rcx)
+ 4579d2b:	eb 28                	jmp    4579d55 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base+0x955>
+ 4579d2d:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4579d31:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4579d38:	00 
+ 4579d39:	e8 c2 c9 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4579d3e:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 4579d43:	48 8d 4f 20          	lea    0x20(%rdi),%rcx
+ 4579d47:	48 89 fa             	mov    %rdi,%rdx
+ 4579d4a:	48 89 cf             	mov    %rcx,%rdi
+ 4579d4d:	e8 ae c8 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4579d52:	48 89 d1             	mov    %rdx,%rcx
+ 4579d55:	48 89 c8             	mov    %rcx,%rax
+ 4579d58:	48 8b ac 24 d8 00 00 	mov    0xd8(%rsp),%rbp
+ 4579d5f:	00 
+ 4579d60:	48 81 c4 e0 00 00 00 	add    $0xe0,%rsp
+ 4579d67:	c3                   	ret
+ 4579d68:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4579d6d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4579d72:	e8 e9 a6 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4579d77:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4579d7c:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4579d81:	e9 7a f6 ff ff       	jmp    4579400 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.NewKalmanFilter@@Base>
+ 4579d86:	cc                   	int3
+ 4579d87:	cc                   	int3
+ 4579d88:	cc                   	int3
+ 4579d89:	cc                   	int3
+ 4579d8a:	cc                   	int3
+ 4579d8b:	cc                   	int3
+ 4579d8c:	cc                   	int3
+ 4579d8d:	cc                   	int3
+ 4579d8e:	cc                   	int3
+ 4579d8f:	cc                   	int3
+ 4579d90:	cc                   	int3
+ 4579d91:	cc                   	int3
+ 4579d92:	cc                   	int3
+ 4579d93:	cc                   	int3
+ 4579d94:	cc                   	int3
+ 4579d95:	cc                   	int3
+ 4579d96:	cc                   	int3
+ 4579d97:	cc                   	int3
+ 4579d98:	cc                   	int3
+ 4579d99:	cc                   	int3
+ 4579d9a:	cc                   	int3
+ 4579d9b:	cc                   	int3
+ 4579d9c:	cc                   	int3
+ 4579d9d:	cc                   	int3
+ 4579d9e:	cc                   	int3
+ 4579d9f:	cc                   	int3

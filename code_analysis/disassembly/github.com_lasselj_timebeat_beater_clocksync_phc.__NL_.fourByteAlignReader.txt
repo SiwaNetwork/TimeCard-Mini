@@ -1,0 +1,44 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).fourByteAlignReader
+# addr 0x458ab00 size 96 (0x60)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000458ab00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).fourByteAlignReader@@Base>:
+ 458ab00:	0f b7 13             	movzwl (%rbx),%edx
+ 458ab03:	48 8d 5a fc          	lea    -0x4(%rdx),%rbx
+ 458ab07:	48 89 de             	mov    %rbx,%rsi
+ 458ab0a:	48 c1 fb 3f          	sar    $0x3f,%rbx
+ 458ab0e:	48 c1 eb 3e          	shr    $0x3e,%rbx
+ 458ab12:	48 8d 1c 13          	lea    (%rbx,%rdx,1),%rbx
+ 458ab16:	48 8d 5b fc          	lea    -0x4(%rbx),%rbx
+ 458ab1a:	48 83 e3 fc          	and    $0xfffffffffffffffc,%rbx
+ 458ab1e:	48 89 d7             	mov    %rdx,%rdi
+ 458ab21:	48 29 da             	sub    %rbx,%rdx
+ 458ab24:	48 8d 5a fc          	lea    -0x4(%rdx),%rbx
+ 458ab28:	48 85 db             	test   %rbx,%rbx
+ 458ab2b:	7e 10                	jle    458ab3d <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).fourByteAlignReader@@Base+0x3d>
+ 458ab2d:	48 8d 5a f8          	lea    -0x8(%rdx),%rbx
+ 458ab31:	48 f7 db             	neg    %rbx
+ 458ab34:	48 29 d7             	sub    %rdx,%rdi
+ 458ab37:	48 8d 57 04          	lea    0x4(%rdi),%rdx
+ 458ab3b:	eb 03                	jmp    458ab40 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).fourByteAlignReader@@Base+0x40>
+ 458ab3d:	48 89 f2             	mov    %rsi,%rdx
+ 458ab40:	48 c7 41 20 ff ff ff 	movq   $0xffffffffffffffff,0x20(%rcx)
+ 458ab47:	ff 
+ 458ab48:	48 03 51 18          	add    0x18(%rcx),%rdx
+ 458ab4c:	48 85 d2             	test   %rdx,%rdx
+ 458ab4f:	7c 04                	jl     458ab55 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).fourByteAlignReader@@Base+0x55>
+ 458ab51:	48 89 51 18          	mov    %rdx,0x18(%rcx)
+ 458ab55:	48 89 d8             	mov    %rbx,%rax
+ 458ab58:	c3                   	ret
+ 458ab59:	cc                   	int3
+ 458ab5a:	cc                   	int3
+ 458ab5b:	cc                   	int3
+ 458ab5c:	cc                   	int3
+ 458ab5d:	cc                   	int3
+ 458ab5e:	cc                   	int3
+ 458ab5f:	cc                   	int3

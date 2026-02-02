@@ -1,0 +1,54 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).setRTCIntervalOrExit
+# addr 0x45a8400 size 160 (0xa0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a8400 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).setRTCIntervalOrExit@@Base>:
+ 45a8400:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a8404:	76 7b                	jbe    45a8481 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).setRTCIntervalOrExit@@Base+0x81>
+ 45a8406:	48 83 ec 20          	sub    $0x20,%rsp
+ 45a840a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45a840f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45a8414:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45a8419:	48 8b 0d c8 ca 89 03 	mov    0x389cac8(%rip),%rcx        # 7e44ee8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x308>
+ 45a8420:	48 8b 1d c9 ca 89 03 	mov    0x389cac9(%rip),%rbx        # 7e44ef0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x310>
+ 45a8427:	48 89 c8             	mov    %rcx,%rax
+ 45a842a:	e8 f1 c7 e5 ff       	call   4404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>
+ 45a842f:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45a8434:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45a8438:	48 89 42 20          	mov    %rax,0x20(%rdx)
+ 45a843c:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45a8440:	48 8b 52 20          	mov    0x20(%rdx),%rdx
+ 45a8444:	48 ff ca             	dec    %rdx
+ 45a8447:	48 be ff 57 47 f8 0d 	movabs $0xdf84757ff,%rsi
+ 45a844e:	00 00 00 
+ 45a8451:	48 39 d6             	cmp    %rdx,%rsi
+ 45a8454:	76 21                	jbe    45a8477 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).setRTCIntervalOrExit@@Base+0x77>
+ 45a8456:	48 8b 41 08          	mov    0x8(%rcx),%rax
+ 45a845a:	48 8d 1d 06 21 89 00 	lea    0x892106(%rip),%rbx        # 4e3a567 <_IO_stdin_used@@Base+0x207567>
+ 45a8461:	b9 31 00 00 00       	mov    $0x31,%ecx
+ 45a8466:	e8 15 ea e5 ff       	call   4406e80 <github.com/lasselj/timebeat/beater/logging.(*Logger).Critical@@Base>
+ 45a846b:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 45a8472:	e8 49 58 a4 fd       	call   1fedcc0 <os.Exit@@Base>
+ 45a8477:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45a847c:	48 83 c4 20          	add    $0x20,%rsp
+ 45a8480:	c3                   	ret
+ 45a8481:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a8486:	e8 d5 bf 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a848b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a8490:	e9 6b ff ff ff       	jmp    45a8400 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).setRTCIntervalOrExit@@Base>
+ 45a8495:	cc                   	int3
+ 45a8496:	cc                   	int3
+ 45a8497:	cc                   	int3
+ 45a8498:	cc                   	int3
+ 45a8499:	cc                   	int3
+ 45a849a:	cc                   	int3
+ 45a849b:	cc                   	int3
+ 45a849c:	cc                   	int3
+ 45a849d:	cc                   	int3
+ 45a849e:	cc                   	int3
+ 45a849f:	cc                   	int3

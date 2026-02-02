@@ -1,0 +1,89 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource
+# addr 0x4b6b3c0 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b6b3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource@@Base>:
+ 4b6b3c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b6b3c4:	0f 86 ba 00 00 00    	jbe    4b6b484 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource@@Base+0xc4>
+ 4b6b3ca:	48 83 ec 50          	sub    $0x50,%rsp
+ 4b6b3ce:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4b6b3d3:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4b6b3d8:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b6b3dd:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 4b6b3e3:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 4b6b3e9:	48 8d 0d b0 32 c4 00 	lea    0xc432b0(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6b3f0:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 4b6b3f5:	48 8d 15 6c 7d 38 01 	lea    0x1387d6c(%rip),%rdx        # 5ef3168 <time..dict.leadingInt[string]@@Base+0x2ed8>
+ 4b6b3fc:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4b6b401:	e8 5a 29 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6b406:	48 8d 0d 93 32 c4 00 	lea    0xc43293(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6b40d:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4b6b412:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4b6b417:	48 8d 05 6e 64 1a 00 	lea    0x1a646e(%rip),%rax        # 4d1188c <_IO_stdin_used@@Base+0xde88c>
+ 4b6b41e:	bb 12 00 00 00       	mov    $0x12,%ebx
+ 4b6b423:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 4b6b428:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b6b42d:	48 89 fe             	mov    %rdi,%rsi
+ 4b6b430:	e8 cb 94 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6b435:	e8 86 f9 47 fd       	call   1feadc0 <os.ReadFile@@Base>
+ 4b6b43a:	48 85 ff             	test   %rdi,%rdi
+ 4b6b43d:	74 14                	je     4b6b453 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource@@Base+0x93>
+ 4b6b43f:	31 c0                	xor    %eax,%eax
+ 4b6b441:	31 db                	xor    %ebx,%ebx
+ 4b6b443:	48 89 f9             	mov    %rdi,%rcx
+ 4b6b446:	48 89 f7             	mov    %rsi,%rdi
+ 4b6b449:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4b6b44e:	48 83 c4 50          	add    $0x50,%rsp
+ 4b6b452:	c3                   	ret
+ 4b6b453:	48 89 d9             	mov    %rbx,%rcx
+ 4b6b456:	48 89 c3             	mov    %rax,%rbx
+ 4b6b459:	31 c0                	xor    %eax,%eax
+ 4b6b45b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b6b460:	e8 5b f2 3c fd       	call   1f3a6c0 <runtime.slicebytetostring@@Base>
+ 4b6b465:	48 8d 0d 6a 7e 0c 00 	lea    0xc7e6a(%rip),%rcx        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 4b6b46c:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b6b471:	e8 aa e6 49 fd       	call   2009b20 <strings.TrimRight@@Base>
+ 4b6b476:	31 c9                	xor    %ecx,%ecx
+ 4b6b478:	31 ff                	xor    %edi,%edi
+ 4b6b47a:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4b6b47f:	48 83 c4 50          	add    $0x50,%rsp
+ 4b6b483:	c3                   	ret
+ 4b6b484:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6b489:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b6b48e:	e8 cd 8f 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6b493:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b6b498:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b6b49d:	0f 1f 00             	nopl   (%rax)
+ 4b6b4a0:	e9 1b ff ff ff       	jmp    4b6b3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource@@Base>
+ 4b6b4a5:	cc                   	int3
+ 4b6b4a6:	cc                   	int3
+ 4b6b4a7:	cc                   	int3
+ 4b6b4a8:	cc                   	int3
+ 4b6b4a9:	cc                   	int3
+ 4b6b4aa:	cc                   	int3
+ 4b6b4ab:	cc                   	int3
+ 4b6b4ac:	cc                   	int3
+ 4b6b4ad:	cc                   	int3
+ 4b6b4ae:	cc                   	int3
+ 4b6b4af:	cc                   	int3
+ 4b6b4b0:	cc                   	int3
+ 4b6b4b1:	cc                   	int3
+ 4b6b4b2:	cc                   	int3
+ 4b6b4b3:	cc                   	int3
+ 4b6b4b4:	cc                   	int3
+ 4b6b4b5:	cc                   	int3
+ 4b6b4b6:	cc                   	int3
+ 4b6b4b7:	cc                   	int3
+ 4b6b4b8:	cc                   	int3
+ 4b6b4b9:	cc                   	int3
+ 4b6b4ba:	cc                   	int3
+ 4b6b4bb:	cc                   	int3
+ 4b6b4bc:	cc                   	int3
+ 4b6b4bd:	cc                   	int3
+ 4b6b4be:	cc                   	int3
+ 4b6b4bf:	cc                   	int3

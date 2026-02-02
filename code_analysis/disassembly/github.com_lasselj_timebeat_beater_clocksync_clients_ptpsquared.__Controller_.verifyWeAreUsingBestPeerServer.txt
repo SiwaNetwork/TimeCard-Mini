@@ -1,0 +1,234 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer
+# addr 0x4b55fe0 size 832 (0x340)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b55fe0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base>:
+ 4b55fe0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b55fe4:	0f 86 05 03 00 00    	jbe    4b562ef <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x30f>
+ 4b55fea:	48 83 ec 48          	sub    $0x48,%rsp
+ 4b55fee:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4b55ff3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4b55ff8:	48 8b 48 38          	mov    0x38(%rax),%rcx
+ 4b55ffc:	80 79 28 00          	cmpb   $0x0,0x28(%rcx)
+ 4b56000:	75 06                	jne    4b56008 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x28>
+ 4b56002:	80 78 50 00          	cmpb   $0x0,0x50(%rax)
+ 4b56006:	74 0a                	je     4b56012 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x32>
+ 4b56008:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b5600d:	48 83 c4 48          	add    $0x48,%rsp
+ 4b56011:	c3                   	ret
+ 4b56012:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b56017:	e8 c4 dd 00 00       	call   4b63de0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore@@Base>
+ 4b5601c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b56020:	e8 1b de 00 00       	call   4b63e40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).GetServerWithHighestRemoteRootDistance@@Base>
+ 4b56025:	48 85 c9             	test   %rcx,%rcx
+ 4b56028:	0f 85 b7 02 00 00    	jne    4b562e5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x305>
+ 4b5602e:	f3 0f 11 44 24 1c    	movss  %xmm0,0x1c(%rsp)
+ 4b56034:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 4b56039:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4b5603e:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b56043:	48 8b 41 48          	mov    0x48(%rcx),%rax
+ 4b56047:	31 db                	xor    %ebx,%ebx
+ 4b56049:	e8 72 4d 00 00       	call   4b5adc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*NodeDiscovery).GetBestServerAvailable@@Base>
+ 4b5604e:	48 85 c9             	test   %rcx,%rcx
+ 4b56051:	74 15                	je     4b56068 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x88>
+ 4b56053:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4b56058:	48 c7 80 a0 00 00 00 	movq   $0x1,0xa0(%rax)
+ 4b5605f:	01 00 00 00 
+ 4b56063:	e9 7d 02 00 00       	jmp    4b562e5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x305>
+ 4b56068:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4b5606d:	48 8b 57 38          	mov    0x38(%rdi),%rdx
+ 4b56071:	48 8b 12             	mov    (%rdx),%rdx
+ 4b56074:	f3 0f 10 4a 68       	movss  0x68(%rdx),%xmm1
+ 4b56079:	f3 0f 59 c8          	mulss  %xmm0,%xmm1
+ 4b5607d:	f3 0f 10 54 24 1c    	movss  0x1c(%rsp),%xmm2
+ 4b56083:	0f 2e d1             	ucomiss %xmm1,%xmm2
+ 4b56086:	76 28                	jbe    4b560b0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0xd0>
+ 4b56088:	f3 0f 5c d0          	subss  %xmm0,%xmm2
+ 4b5608c:	f3 0f 5a c2          	cvtss2sd %xmm2,%xmm0
+ 4b56090:	66 48 0f 7e c2       	movq   %xmm0,%rdx
+ 4b56095:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 4b5609a:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 4b5609f:	f2 0f 10 0d d1 85 98 	movsd  0x9885d1(%rip),%xmm1        # 54de678 <_IO_stdin_used@@Base+0x8ab678>
+ 4b560a6:	00 
+ 4b560a7:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4b560ab:	0f 97 c2             	seta   %dl
+ 4b560ae:	eb 02                	jmp    4b560b2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0xd2>
+ 4b560b0:	31 d2                	xor    %edx,%edx
+ 4b560b2:	84 d2                	test   %dl,%dl
+ 4b560b4:	0f 84 2b 02 00 00    	je     4b562e5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x305>
+ 4b560ba:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4b560bf:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4b560c4:	48 8b 8f 98 00 00 00 	mov    0x98(%rdi),%rcx
+ 4b560cb:	48 8b 97 90 00 00 00 	mov    0x90(%rdi),%rdx
+ 4b560d2:	48 39 cb             	cmp    %rcx,%rbx
+ 4b560d5:	74 07                	je     4b560de <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0xfe>
+ 4b560d7:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b560dc:	eb 22                	jmp    4b56100 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x120>
+ 4b560de:	48 89 c3             	mov    %rax,%rbx
+ 4b560e1:	48 89 d0             	mov    %rdx,%rax
+ 4b560e4:	e8 37 da 38 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b560e9:	83 f0 01             	xor    $0x1,%eax
+ 4b560ec:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b560f1:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4b560f6:	89 c1                	mov    %eax,%ecx
+ 4b560f8:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b560fd:	0f 1f 00             	nopl   (%rax)
+ 4b56100:	84 c9                	test   %cl,%cl
+ 4b56102:	74 07                	je     4b5610b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x12b>
+ 4b56104:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4b56109:	eb 4b                	jmp    4b56156 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x176>
+ 4b5610b:	48 8b 8f 88 00 00 00 	mov    0x88(%rdi),%rcx
+ 4b56112:	48 8b 97 80 00 00 00 	mov    0x80(%rdi),%rdx
+ 4b56119:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4b5611e:	66 90                	xchg   %ax,%ax
+ 4b56120:	48 39 ce             	cmp    %rcx,%rsi
+ 4b56123:	74 07                	je     4b5612c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x14c>
+ 4b56125:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b5612a:	eb 26                	jmp    4b56152 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x172>
+ 4b5612c:	48 89 d0             	mov    %rdx,%rax
+ 4b5612f:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b56134:	e8 e7 d9 38 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b56139:	83 f0 01             	xor    $0x1,%eax
+ 4b5613c:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b56141:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4b56146:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4b5614b:	89 c1                	mov    %eax,%ecx
+ 4b5614d:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b56152:	84 c9                	test   %cl,%cl
+ 4b56154:	74 7f                	je     4b561d5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x1f5>
+ 4b56156:	48 89 9f 98 00 00 00 	mov    %rbx,0x98(%rdi)
+ 4b5615d:	83 3d fc 57 32 03 00 	cmpl   $0x0,0x33257fc(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b56164:	75 09                	jne    4b5616f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x18f>
+ 4b56166:	48 89 87 90 00 00 00 	mov    %rax,0x90(%rdi)
+ 4b5616d:	eb 19                	jmp    4b56188 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x1a8>
+ 4b5616f:	48 8d 8f 90 00 00 00 	lea    0x90(%rdi),%rcx
+ 4b56176:	48 89 fa             	mov    %rdi,%rdx
+ 4b56179:	48 89 cf             	mov    %rcx,%rdi
+ 4b5617c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b56180:	e8 7b 04 40 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b56185:	48 89 d7             	mov    %rdx,%rdi
+ 4b56188:	48 89 b7 88 00 00 00 	mov    %rsi,0x88(%rdi)
+ 4b5618f:	83 3d ca 57 32 03 00 	cmpl   $0x0,0x33257ca(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b56196:	75 0e                	jne    4b561a6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x1c6>
+ 4b56198:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4b5619d:	48 89 87 80 00 00 00 	mov    %rax,0x80(%rdi)
+ 4b561a4:	eb 1a                	jmp    4b561c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x1e0>
+ 4b561a6:	48 8d 87 80 00 00 00 	lea    0x80(%rdi),%rax
+ 4b561ad:	48 89 f9             	mov    %rdi,%rcx
+ 4b561b0:	48 89 c7             	mov    %rax,%rdi
+ 4b561b3:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4b561b8:	e8 63 05 40 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b561bd:	48 89 cf             	mov    %rcx,%rdi
+ 4b561c0:	48 c7 87 a0 00 00 00 	movq   $0x1,0xa0(%rdi)
+ 4b561c7:	01 00 00 00 
+ 4b561cb:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b561d0:	48 83 c4 48          	add    $0x48,%rsp
+ 4b561d4:	c3                   	ret
+ 4b561d5:	48 8b 8f 98 00 00 00 	mov    0x98(%rdi),%rcx
+ 4b561dc:	48 8b 97 90 00 00 00 	mov    0x90(%rdi),%rdx
+ 4b561e3:	48 39 cb             	cmp    %rcx,%rbx
+ 4b561e6:	74 04                	je     4b561ec <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x20c>
+ 4b561e8:	31 c9                	xor    %ecx,%ecx
+ 4b561ea:	eb 21                	jmp    4b5620d <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x22d>
+ 4b561ec:	48 89 c3             	mov    %rax,%rbx
+ 4b561ef:	48 89 d0             	mov    %rdx,%rax
+ 4b561f2:	e8 29 d9 38 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b561f7:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b561fc:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4b56201:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4b56206:	89 c1                	mov    %eax,%ecx
+ 4b56208:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b5620d:	84 c9                	test   %cl,%cl
+ 4b5620f:	74 38                	je     4b56249 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x269>
+ 4b56211:	48 8b 8f 88 00 00 00 	mov    0x88(%rdi),%rcx
+ 4b56218:	48 8b 97 80 00 00 00 	mov    0x80(%rdi),%rdx
+ 4b5621f:	90                   	nop
+ 4b56220:	48 39 ce             	cmp    %rcx,%rsi
+ 4b56223:	74 04                	je     4b56229 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x249>
+ 4b56225:	31 c9                	xor    %ecx,%ecx
+ 4b56227:	eb 22                	jmp    4b5624b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x26b>
+ 4b56229:	48 89 d0             	mov    %rdx,%rax
+ 4b5622c:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b56231:	e8 ea d8 38 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b56236:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b5623b:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4b56240:	89 c1                	mov    %eax,%ecx
+ 4b56242:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4b56247:	eb 02                	jmp    4b5624b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x26b>
+ 4b56249:	31 c9                	xor    %ecx,%ecx
+ 4b5624b:	84 c9                	test   %cl,%cl
+ 4b5624d:	74 22                	je     4b56271 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x291>
+ 4b5624f:	48 8b 8f a0 00 00 00 	mov    0xa0(%rdi),%rcx
+ 4b56256:	48 83 f9 05          	cmp    $0x5,%rcx
+ 4b5625a:	7d 15                	jge    4b56271 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x291>
+ 4b5625c:	48 8d 41 01          	lea    0x1(%rcx),%rax
+ 4b56260:	48 89 87 a0 00 00 00 	mov    %rax,0xa0(%rdi)
+ 4b56267:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b5626c:	48 83 c4 48          	add    $0x48,%rsp
+ 4b56270:	c3                   	ret
+ 4b56271:	c6 47 50 01          	movb   $0x1,0x50(%rdi)
+ 4b56275:	48 8d 05 24 f6 ff 00 	lea    0xfff624(%rip),%rax        # 5b558a0 <type:6BjxaQUu@@Base>
+ 4b5627c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b56280:	e8 5b a2 39 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b56285:	48 8d 0d 94 00 00 00 	lea    0x94(%rip),%rcx        # 4b56320 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer.func1@@Base>
+ 4b5628c:	48 89 08             	mov    %rcx,(%rax)
+ 4b5628f:	83 3d ca 56 32 03 00 	cmpl   $0x0,0x33256ca(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b56296:	75 0b                	jne    4b562a3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x2c3>
+ 4b56298:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b5629d:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b562a1:	eb 0e                	jmp    4b562b1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x2d1>
+ 4b562a3:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b562a7:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b562ac:	e8 4f 04 40 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b562b1:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b562b6:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 4b562ba:	83 3d 9f 56 32 03 00 	cmpl   $0x0,0x332569f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b562c1:	75 0b                	jne    4b562ce <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x2ee>
+ 4b562c3:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b562c8:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4b562cc:	eb 0e                	jmp    4b562dc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base+0x2fc>
+ 4b562ce:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b562d2:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b562d7:	e8 24 04 40 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b562dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b562e0:	e8 7b 28 3d fd       	call   1f28b60 <runtime.newproc@@Base>
+ 4b562e5:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b562ea:	48 83 c4 48          	add    $0x48,%rsp
+ 4b562ee:	c3                   	ret
+ 4b562ef:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b562f4:	e8 67 e1 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b562f9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b562fe:	66 90                	xchg   %ax,%ax
+ 4b56300:	e9 db fc ff ff       	jmp    4b55fe0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*Controller).verifyWeAreUsingBestPeerServer@@Base>
+ 4b56305:	cc                   	int3
+ 4b56306:	cc                   	int3
+ 4b56307:	cc                   	int3
+ 4b56308:	cc                   	int3
+ 4b56309:	cc                   	int3
+ 4b5630a:	cc                   	int3
+ 4b5630b:	cc                   	int3
+ 4b5630c:	cc                   	int3
+ 4b5630d:	cc                   	int3
+ 4b5630e:	cc                   	int3
+ 4b5630f:	cc                   	int3
+ 4b56310:	cc                   	int3
+ 4b56311:	cc                   	int3
+ 4b56312:	cc                   	int3
+ 4b56313:	cc                   	int3
+ 4b56314:	cc                   	int3
+ 4b56315:	cc                   	int3
+ 4b56316:	cc                   	int3
+ 4b56317:	cc                   	int3
+ 4b56318:	cc                   	int3
+ 4b56319:	cc                   	int3
+ 4b5631a:	cc                   	int3
+ 4b5631b:	cc                   	int3
+ 4b5631c:	cc                   	int3
+ 4b5631d:	cc                   	int3
+ 4b5631e:	cc                   	int3
+ 4b5631f:	cc                   	int3

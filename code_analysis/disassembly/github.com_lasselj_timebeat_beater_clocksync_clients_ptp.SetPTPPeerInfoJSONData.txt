@@ -1,0 +1,85 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData
+# addr 0x45e6d60 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e6d60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData@@Base>:
+ 45e6d60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e6d64:	0f 86 bc 00 00 00    	jbe    45e6e26 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData@@Base+0xc6>
+ 45e6d6a:	48 83 ec 38          	sub    $0x38,%rsp
+ 45e6d6e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 45e6d73:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 45e6d78:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45e6d7d:	0f 1f 00             	nopl   (%rax)
+ 45e6d80:	48 85 db             	test   %rbx,%rbx
+ 45e6d83:	0f 86 92 00 00 00    	jbe    45e6e1b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData@@Base+0xbb>
+ 45e6d89:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45e6d8e:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45e6d93:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 45e6d98:	48 8b 08             	mov    (%rax),%rcx
+ 45e6d9b:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 45e6d9f:	48 89 c8             	mov    %rcx,%rax
+ 45e6da2:	e8 99 fb ff ff       	call   45e6940 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetClientWithPeerID@@Base>
+ 45e6da7:	48 85 c0             	test   %rax,%rax
+ 45e6daa:	74 59                	je     45e6e05 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData@@Base+0xa5>
+ 45e6dac:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e6db1:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45e6db6:	48 ff c9             	dec    %rcx
+ 45e6db9:	48 89 ca             	mov    %rcx,%rdx
+ 45e6dbc:	48 f7 d9             	neg    %rcx
+ 45e6dbf:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 45e6dc3:	83 e1 10             	and    $0x10,%ecx
+ 45e6dc6:	4c 8b 44 24 40       	mov    0x40(%rsp),%r8
+ 45e6dcb:	49 8d 04 08          	lea    (%r8,%rcx,1),%rax
+ 45e6dcf:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 45e6dd4:	48 ff cb             	dec    %rbx
+ 45e6dd7:	48 89 d1             	mov    %rdx,%rcx
+ 45e6dda:	48 8d 3d 57 ad ef 00 	lea    0xefad57(%rip),%rdi        # 54e1b38 <go:link.pkghashbytes.vendor/golang.org/x/text/unicode/norm@@Base+0xb8>
+ 45e6de1:	be 01 00 00 00       	mov    $0x1,%esi
+ 45e6de6:	e8 35 08 a2 fd       	call   2007620 <strings.Join@@Base>
+ 45e6deb:	48 89 d9             	mov    %rbx,%rcx
+ 45e6dee:	48 89 c3             	mov    %rax,%rbx
+ 45e6df1:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45e6df6:	e8 05 f3 fe ff       	call   45d6100 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).SetPeerInfoJSONData@@Base>
+ 45e6dfb:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e6e00:	48 83 c4 38          	add    $0x38,%rsp
+ 45e6e04:	c3                   	ret
+ 45e6e05:	48 8d 05 74 25 70 00 	lea    0x702574(%rip),%rax        # 4ce9380 <_IO_stdin_used@@Base+0xb6380>
+ 45e6e0c:	bb 10 00 00 00       	mov    $0x10,%ebx
+ 45e6e11:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45e6e16:	48 83 c4 38          	add    $0x38,%rsp
+ 45e6e1a:	c3                   	ret
+ 45e6e1b:	31 c0                	xor    %eax,%eax
+ 45e6e1d:	48 89 c1             	mov    %rax,%rcx
+ 45e6e20:	e8 7b fc 96 fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45e6e25:	90                   	nop
+ 45e6e26:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e6e2b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e6e30:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e6e35:	e8 26 d6 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e6e3a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e6e3f:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e6e44:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e6e49:	e9 12 ff ff ff       	jmp    45e6d60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPPeerInfoJSONData@@Base>
+ 45e6e4e:	cc                   	int3
+ 45e6e4f:	cc                   	int3
+ 45e6e50:	cc                   	int3
+ 45e6e51:	cc                   	int3
+ 45e6e52:	cc                   	int3
+ 45e6e53:	cc                   	int3
+ 45e6e54:	cc                   	int3
+ 45e6e55:	cc                   	int3
+ 45e6e56:	cc                   	int3
+ 45e6e57:	cc                   	int3
+ 45e6e58:	cc                   	int3
+ 45e6e59:	cc                   	int3
+ 45e6e5a:	cc                   	int3
+ 45e6e5b:	cc                   	int3
+ 45e6e5c:	cc                   	int3
+ 45e6e5d:	cc                   	int3
+ 45e6e5e:	cc                   	int3
+ 45e6e5f:	cc                   	int3

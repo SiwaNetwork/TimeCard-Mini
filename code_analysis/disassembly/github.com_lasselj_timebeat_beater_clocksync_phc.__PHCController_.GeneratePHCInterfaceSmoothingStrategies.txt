@@ -1,0 +1,223 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies
+# addr 0x4584780 size 832 (0x340)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004584780 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base>:
+ 4584780:	4c 8d 64 24 d8       	lea    -0x28(%rsp),%r12
+ 4584785:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4584789:	0f 86 06 03 00 00    	jbe    4584a95 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x315>
+ 458478f:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+ 4584796:	48 89 ac 24 a0 00 00 	mov    %rbp,0xa0(%rsp)
+ 458479d:	00 
+ 458479e:	48 8d ac 24 a0 00 00 	lea    0xa0(%rsp),%rbp
+ 45847a5:	00 
+ 45847a6:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 45847ad:	00 
+ 45847ae:	48 8b 0d eb 05 8c 03 	mov    0x38c05eb(%rip),%rcx        # 7e44da0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x1c0>
+ 45847b5:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45847ba:	48 8b 15 e7 05 8c 03 	mov    0x38c05e7(%rip),%rdx        # 7e44da8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x1c8>
+ 45847c1:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 45847c6:	e8 75 ca 96 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 45847cb:	48 8b bc 24 b0 00 00 	mov    0xb0(%rsp),%rdi
+ 45847d2:	00 
+ 45847d3:	84 07                	test   %al,(%rdi)
+ 45847d5:	83 3d 84 71 8f 03 00 	cmpl   $0x0,0x38f7184(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45847dc:	75 06                	jne    45847e4 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x64>
+ 45847de:	48 89 47 48          	mov    %rax,0x48(%rdi)
+ 45847e2:	eb 12                	jmp    45847f6 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x76>
+ 45847e4:	48 8d 57 48          	lea    0x48(%rdi),%rdx
+ 45847e8:	48 89 f9             	mov    %rdi,%rcx
+ 45847eb:	48 89 d7             	mov    %rdx,%rdi
+ 45847ee:	e8 0d 1e 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45847f3:	48 89 cf             	mov    %rcx,%rdi
+ 45847f6:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45847fb:	31 c0                	xor    %eax,%eax
+ 45847fd:	eb 19                	jmp    4584818 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x98>
+ 45847ff:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4584804:	48 83 c2 10          	add    $0x10,%rdx
+ 4584808:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 458480d:	48 ff c0             	inc    %rax
+ 4584810:	48 8b bc 24 b0 00 00 	mov    0xb0(%rsp),%rdi
+ 4584817:	00 
+ 4584818:	4c 8b 4c 24 38       	mov    0x38(%rsp),%r9
+ 458481d:	0f 1f 00             	nopl   (%rax)
+ 4584820:	4c 39 c8             	cmp    %r9,%rax
+ 4584823:	0f 8d 5c 02 00 00    	jge    4584a85 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x305>
+ 4584829:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 458482e:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4584833:	48 8b 02             	mov    (%rdx),%rax
+ 4584836:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 458483b:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 458483f:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4584844:	90                   	nop
+ 4584845:	48 8d 0d 6c 28 f5 00 	lea    0xf5286c(%rip),%rcx        # 54d70b8 <_IO_stdin_used@@Base+0x8a40b8>
+ 458484c:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4584851:	31 f6                	xor    %esi,%esi
+ 4584853:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 458485a:	e8 21 26 a8 fd       	call   2006e80 <strings.genSplit@@Base>
+ 458485f:	90                   	nop
+ 4584860:	48 83 fb 02          	cmp    $0x2,%rbx
+ 4584864:	74 69                	je     45848cf <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x14f>
+ 4584866:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 458486c:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4584871:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4584876:	e8 e5 94 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 458487b:	48 8d 0d 1e 9e 22 01 	lea    0x1229e1e(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4584882:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4584887:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 458488c:	48 8d 05 a1 a6 89 00 	lea    0x89a6a1(%rip),%rax        # 4e1ef34 <_IO_stdin_used@@Base+0x1ebf34>
+ 4584893:	bb 2a 00 00 00       	mov    $0x2a,%ebx
+ 4584898:	bf 01 00 00 00       	mov    $0x1,%edi
+ 458489d:	48 89 fe             	mov    %rdi,%rsi
+ 45848a0:	48 8d 4c 24 70       	lea    0x70(%rsp),%rcx
+ 45848a5:	e8 56 00 a7 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45848aa:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 45848b1:	00 
+ 45848b2:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 45848b6:	48 89 c6             	mov    %rax,%rsi
+ 45848b9:	48 89 d0             	mov    %rdx,%rax
+ 45848bc:	48 89 df             	mov    %rbx,%rdi
+ 45848bf:	48 89 f3             	mov    %rsi,%rbx
+ 45848c2:	48 89 f9             	mov    %rdi,%rcx
+ 45848c5:	e8 96 27 e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45848ca:	e9 30 ff ff ff       	jmp    45847ff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x7f>
+ 45848cf:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45848d4:	48 8b 08             	mov    (%rax),%rcx
+ 45848d7:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 45848db:	48 89 c8             	mov    %rcx,%rax
+ 45848de:	66 90                	xchg   %ax,%ax
+ 45848e0:	e8 db b9 ab fd       	call   20402c0 <net.InterfaceByName@@Base>
+ 45848e5:	48 85 db             	test   %rbx,%rbx
+ 45848e8:	0f 85 ed 00 00 00    	jne    45849db <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x25b>
+ 45848ee:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 45848f3:	48 8b 72 10          	mov    0x10(%rdx),%rsi
+ 45848f7:	4c 8b 42 18          	mov    0x18(%rdx),%r8
+ 45848fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4584900:	49 83 f8 06          	cmp    $0x6,%r8
+ 4584904:	75 1a                	jne    4584920 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1a0>
+ 4584906:	81 3e 6d 65 64 69    	cmpl   $0x6964656d,(%rsi)
+ 458490c:	75 64                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 458490e:	66 81 7e 04 61 6e    	cmpw   $0x6e61,0x4(%rsi)
+ 4584914:	75 5c                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 4584916:	b8 02 00 00 00       	mov    $0x2,%eax
+ 458491b:	eb 24                	jmp    4584941 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1c1>
+ 458491d:	0f 1f 00             	nopl   (%rax)
+ 4584920:	49 83 f8 07          	cmp    $0x7,%r8
+ 4584924:	75 4c                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 4584926:	81 3e 6d 69 6e 69    	cmpl   $0x696e696d,(%rsi)
+ 458492c:	75 44                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 458492e:	66 81 7e 04 6d 75    	cmpw   $0x756d,0x4(%rsi)
+ 4584934:	75 3c                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 4584936:	80 7e 06 6d          	cmpb   $0x6d,0x6(%rsi)
+ 458493a:	75 36                	jne    4584972 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x1f2>
+ 458493c:	b8 01 00 00 00       	mov    $0x1,%eax
+ 4584941:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4584946:	48 8b b4 24 b0 00 00 	mov    0xb0(%rsp),%rsi
+ 458494d:	00 
+ 458494e:	48 8b 5e 48          	mov    0x48(%rsi),%rbx
+ 4584952:	48 8b 0a             	mov    (%rdx),%rcx
+ 4584955:	48 8b 7a 08          	mov    0x8(%rdx),%rdi
+ 4584959:	48 8d 05 40 a3 3c 01 	lea    0x13ca340(%rip),%rax        # 594eca0 <type:kVRamjhx@@Base>
+ 4584960:	e8 7b 18 97 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4584965:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 458496a:	48 89 10             	mov    %rdx,(%rax)
+ 458496d:	e9 8d fe ff ff       	jmp    45847ff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x7f>
+ 4584972:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 4584978:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 458497d:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4584982:	e8 d9 93 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4584987:	48 8d 0d 12 9d 22 01 	lea    0x1229d12(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458498e:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4584993:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4584998:	48 8d 05 bb e1 87 00 	lea    0x87e1bb(%rip),%rax        # 4e02b5a <_IO_stdin_used@@Base+0x1cfb5a>
+ 458499f:	bb 22 00 00 00       	mov    $0x22,%ebx
+ 45849a4:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45849a9:	48 89 fe             	mov    %rdi,%rsi
+ 45849ac:	48 8d 4c 24 70       	lea    0x70(%rsp),%rcx
+ 45849b1:	e8 4a ff a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45849b6:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 45849bd:	00 
+ 45849be:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 45849c2:	48 89 c6             	mov    %rax,%rsi
+ 45849c5:	48 89 d0             	mov    %rdx,%rax
+ 45849c8:	48 89 df             	mov    %rbx,%rdi
+ 45849cb:	48 89 f3             	mov    %rsi,%rbx
+ 45849ce:	48 89 f9             	mov    %rdi,%rcx
+ 45849d1:	e8 8a 26 e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45849d6:	e9 24 fe ff ff       	jmp    45847ff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x7f>
+ 45849db:	44 0f 11 bc 24 80 00 	movups %xmm15,0x80(%rsp)
+ 45849e2:	00 00 
+ 45849e4:	44 0f 11 bc 24 90 00 	movups %xmm15,0x90(%rsp)
+ 45849eb:	00 00 
+ 45849ed:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45849f2:	48 8b 01             	mov    (%rcx),%rax
+ 45849f5:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 45849f9:	e8 62 93 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45849fe:	48 8d 0d 9b 9c 22 01 	lea    0x1229c9b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4584a05:	48 89 8c 24 80 00 00 	mov    %rcx,0x80(%rsp)
+ 4584a0c:	00 
+ 4584a0d:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4584a14:	00 
+ 4584a15:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4584a1a:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4584a1f:	90                   	nop
+ 4584a20:	e8 3b 93 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4584a25:	48 8d 0d 74 9c 22 01 	lea    0x1229c74(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4584a2c:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 4584a33:	00 
+ 4584a34:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4584a3b:	00 
+ 4584a3c:	48 8d 05 03 f7 85 00 	lea    0x85f703(%rip),%rax        # 4de4146 <_IO_stdin_used@@Base+0x1b1146>
+ 4584a43:	bb 1b 00 00 00       	mov    $0x1b,%ebx
+ 4584a48:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4584a4d:	48 89 fe             	mov    %rdi,%rsi
+ 4584a50:	48 8d 8c 24 80 00 00 	lea    0x80(%rsp),%rcx
+ 4584a57:	00 
+ 4584a58:	e8 a3 fe a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4584a5d:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4584a64:	00 
+ 4584a65:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 4584a69:	48 89 c6             	mov    %rax,%rsi
+ 4584a6c:	48 89 d0             	mov    %rdx,%rax
+ 4584a6f:	48 89 df             	mov    %rbx,%rdi
+ 4584a72:	48 89 f3             	mov    %rsi,%rbx
+ 4584a75:	48 89 f9             	mov    %rdi,%rcx
+ 4584a78:	e8 e3 25 e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4584a7d:	0f 1f 00             	nopl   (%rax)
+ 4584a80:	e9 7a fd ff ff       	jmp    45847ff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base+0x7f>
+ 4584a85:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4584a8c:	00 
+ 4584a8d:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4584a94:	c3                   	ret
+ 4584a95:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4584a9a:	e8 c1 f9 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4584a9f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4584aa4:	e9 d7 fc ff ff       	jmp    4584780 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GeneratePHCInterfaceSmoothingStrategies@@Base>
+ 4584aa9:	cc                   	int3
+ 4584aaa:	cc                   	int3
+ 4584aab:	cc                   	int3
+ 4584aac:	cc                   	int3
+ 4584aad:	cc                   	int3
+ 4584aae:	cc                   	int3
+ 4584aaf:	cc                   	int3
+ 4584ab0:	cc                   	int3
+ 4584ab1:	cc                   	int3
+ 4584ab2:	cc                   	int3
+ 4584ab3:	cc                   	int3
+ 4584ab4:	cc                   	int3
+ 4584ab5:	cc                   	int3
+ 4584ab6:	cc                   	int3
+ 4584ab7:	cc                   	int3
+ 4584ab8:	cc                   	int3
+ 4584ab9:	cc                   	int3
+ 4584aba:	cc                   	int3
+ 4584abb:	cc                   	int3
+ 4584abc:	cc                   	int3
+ 4584abd:	cc                   	int3
+ 4584abe:	cc                   	int3
+ 4584abf:	cc                   	int3

@@ -1,0 +1,44 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*LinReg).UpdatePPS
+# addr 0x457cc00 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457cc00 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*LinReg).UpdatePPS@@Base>:
+ 457cc00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457cc04:	76 5d                	jbe    457cc63 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*LinReg).UpdatePPS@@Base+0x63>
+ 457cc06:	48 83 ec 18          	sub    $0x18,%rsp
+ 457cc0a:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 457cc0f:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 457cc14:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 457cc19:	48 0f be cb          	movsbq %bl,%rcx
+ 457cc1d:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457cc20:	f2 0f 2a c9          	cvtsi2sd %ecx,%xmm1
+ 457cc24:	f2 0f 10 05 14 19 f6 	movsd  0xf61914(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 457cc2b:	00 
+ 457cc2c:	e8 ef cb 9e fd       	call   1f69820 <math.pow@@Base>
+ 457cc31:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 457cc36:	48 8b 00             	mov    (%rax),%rax
+ 457cc39:	f2 0f 10 15 57 18 f6 	movsd  0xf61857(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457cc40:	00 
+ 457cc41:	f2 0f 5e d0          	divsd  %xmm0,%xmm2
+ 457cc45:	f2 0f 10 1d 4b 18 f6 	movsd  0xf6184b(%rip),%xmm3        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457cc4c:	00 
+ 457cc4d:	f2 0f 5e da          	divsd  %xmm2,%xmm3
+ 457cc51:	f2 0f 11 98 e8 06 00 	movsd  %xmm3,0x6e8(%rax)
+ 457cc58:	00 
+ 457cc59:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 457cc5e:	48 83 c4 18          	add    $0x18,%rsp
+ 457cc62:	c3                   	ret
+ 457cc63:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457cc68:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 457cc6c:	e8 ef 77 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457cc71:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457cc76:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 457cc7b:	eb 83                	jmp    457cc00 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*LinReg).UpdatePPS@@Base>
+ 457cc7d:	cc                   	int3
+ 457cc7e:	cc                   	int3
+ 457cc7f:	cc                   	int3

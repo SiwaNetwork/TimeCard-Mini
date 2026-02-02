@@ -1,0 +1,173 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset
+# addr 0x45a80e0 size 576 (0x240)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a80e0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base>:
+ 45a80e0:	4c 8d a4 24 48 ff ff 	lea    -0xb8(%rsp),%r12
+ 45a80e7:	ff 
+ 45a80e8:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a80ec:	0f 86 fb 01 00 00    	jbe    45a82ed <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x20d>
+ 45a80f2:	48 81 ec 38 01 00 00 	sub    $0x138,%rsp
+ 45a80f9:	48 89 ac 24 30 01 00 	mov    %rbp,0x130(%rsp)
+ 45a8100:	00 
+ 45a8101:	48 8d ac 24 30 01 00 	lea    0x130(%rsp),%rbp
+ 45a8108:	00 
+ 45a8109:	48 8b 40 10          	mov    0x10(%rax),%rax
+ 45a810d:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 45a8112:	31 c9                	xor    %ecx,%ecx
+ 45a8114:	e8 07 cd ff ff       	call   45a4e20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetSourcesSnapshot@@Base>
+ 45a8119:	48 85 c0             	test   %rax,%rax
+ 45a811c:	74 05                	je     45a8123 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x43>
+ 45a811e:	48 8b 10             	mov    (%rax),%rdx
+ 45a8121:	eb 02                	jmp    45a8125 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x45>
+ 45a8123:	31 d2                	xor    %edx,%edx
+ 45a8125:	48 85 d2             	test   %rdx,%rdx
+ 45a8128:	74 73                	je     45a819d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0xbd>
+ 45a812a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45a812f:	48 85 c0             	test   %rax,%rax
+ 45a8132:	74 05                	je     45a8139 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x59>
+ 45a8134:	48 8b 10             	mov    (%rax),%rdx
+ 45a8137:	eb 02                	jmp    45a813b <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x5b>
+ 45a8139:	31 d2                	xor    %edx,%edx
+ 45a813b:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45a8140:	48 8d 05 39 62 13 01 	lea    0x1136239(%rip),%rax        # 56de380 <type:adBBnLm7@@Base>
+ 45a8147:	48 89 d3             	mov    %rdx,%rbx
+ 45a814a:	48 89 d9             	mov    %rbx,%rcx
+ 45a814d:	e8 8e e2 98 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45a8152:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a8157:	48 8d bc 24 d0 00 00 	lea    0xd0(%rsp),%rdi
+ 45a815e:	00 
+ 45a815f:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45a8163:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a8168:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a816d:	e8 59 ec 9a fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45a8172:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a8176:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45a817b:	48 8d 8c 24 d0 00 00 	lea    0xd0(%rsp),%rcx
+ 45a8182:	00 
+ 45a8183:	48 8d 05 96 03 3a 01 	lea    0x13a0396(%rip),%rax        # 5948520 <type:UCSwdOcC@@Base>
+ 45a818a:	e8 31 a5 94 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45a818f:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 45a8194:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45a8199:	31 c0                	xor    %eax,%eax
+ 45a819b:	eb 5a                	jmp    45a81f7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x117>
+ 45a819d:	48 8d 05 5c c1 4c 01 	lea    0x14cc15c(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 45a81a4:	e8 37 83 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45a81a9:	48 c7 40 08 1a 00 00 	movq   $0x1a,0x8(%rax)
+ 45a81b0:	00 
+ 45a81b1:	48 8d 0d 6e 78 83 00 	lea    0x83786e(%rip),%rcx        # 4ddfa26 <_IO_stdin_used@@Base+0x1aca26>
+ 45a81b8:	48 89 08             	mov    %rcx,(%rax)
+ 45a81bb:	48 8d 1d fe 5c 95 01 	lea    0x1955cfe(%rip),%rbx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 45a81c2:	48 89 c1             	mov    %rax,%rcx
+ 45a81c5:	31 c0                	xor    %eax,%eax
+ 45a81c7:	48 8b ac 24 30 01 00 	mov    0x130(%rsp),%rbp
+ 45a81ce:	00 
+ 45a81cf:	48 81 c4 38 01 00 00 	add    $0x138,%rsp
+ 45a81d6:	c3                   	ret
+ 45a81d7:	48 8d 84 24 d0 00 00 	lea    0xd0(%rsp),%rax
+ 45a81de:	00 
+ 45a81df:	90                   	nop
+ 45a81e0:	e8 5b a7 94 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45a81e5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45a81ea:	48 ff c0             	inc    %rax
+ 45a81ed:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 45a81f2:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45a81f7:	48 83 bc 24 d0 00 00 	cmpq   $0x0,0xd0(%rsp)
+ 45a81fe:	00 00 
+ 45a8200:	74 33                	je     45a8235 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x155>
+ 45a8202:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+ 45a8209:	00 
+ 45a820a:	48 8b 1b             	mov    (%rbx),%rbx
+ 45a820d:	48 39 c8             	cmp    %rcx,%rax
+ 45a8210:	0f 83 d1 00 00 00    	jae    45a82e7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x207>
+ 45a8216:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45a821b:	48 8d 3c c2          	lea    (%rdx,%rax,8),%rdi
+ 45a821f:	83 3d 3a 37 8d 03 00 	cmpl   $0x0,0x38d373a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a8226:	75 06                	jne    45a822e <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0x14e>
+ 45a8228:	48 89 1c c2          	mov    %rbx,(%rdx,%rax,8)
+ 45a822c:	eb a9                	jmp    45a81d7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0xf7>
+ 45a822e:	e8 0d e5 9a fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 45a8233:	eb a2                	jmp    45a81d7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base+0xf7>
+ 45a8235:	48 89 d0             	mov    %rdx,%rax
+ 45a8238:	48 89 cb             	mov    %rcx,%rbx
+ 45a823b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a8240:	e8 bb 10 00 00       	call   45a9300 <github.com/lasselj/timebeat/beater/clocksync/servo.determineSnapshotKeyIndicators@@Base>
+ 45a8245:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 45a824c:	00 
+ 45a824d:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 45a8254:	00 
+ 45a8255:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 45a825c:	00 
+ 45a825d:	48 89 bc 24 a0 00 00 	mov    %rdi,0xa0(%rsp)
+ 45a8264:	00 
+ 45a8265:	48 89 b4 24 a8 00 00 	mov    %rsi,0xa8(%rsp)
+ 45a826c:	00 
+ 45a826d:	4c 89 84 24 b0 00 00 	mov    %r8,0xb0(%rsp)
+ 45a8274:	00 
+ 45a8275:	4c 89 8c 24 b8 00 00 	mov    %r9,0xb8(%rsp)
+ 45a827c:	00 
+ 45a827d:	4c 89 94 24 c0 00 00 	mov    %r10,0xc0(%rsp)
+ 45a8284:	00 
+ 45a8285:	4c 89 9c 24 c8 00 00 	mov    %r11,0xc8(%rsp)
+ 45a828c:	00 
+ 45a828d:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45a8294:	00 
+ 45a8295:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45a829a:	0f 10 84 24 90 00 00 	movups 0x90(%rsp),%xmm0
+ 45a82a1:	00 
+ 45a82a2:	0f 11 44 24 48       	movups %xmm0,0x48(%rsp)
+ 45a82a7:	0f 10 84 24 a0 00 00 	movups 0xa0(%rsp),%xmm0
+ 45a82ae:	00 
+ 45a82af:	0f 11 44 24 58       	movups %xmm0,0x58(%rsp)
+ 45a82b4:	0f 10 84 24 b0 00 00 	movups 0xb0(%rsp),%xmm0
+ 45a82bb:	00 
+ 45a82bc:	0f 11 44 24 68       	movups %xmm0,0x68(%rsp)
+ 45a82c1:	0f 10 84 24 c0 00 00 	movups 0xc0(%rsp),%xmm0
+ 45a82c8:	00 
+ 45a82c9:	0f 11 44 24 78       	movups %xmm0,0x78(%rsp)
+ 45a82ce:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45a82d3:	31 db                	xor    %ebx,%ebx
+ 45a82d5:	31 c9                	xor    %ecx,%ecx
+ 45a82d7:	48 8b ac 24 30 01 00 	mov    0x130(%rsp),%rbp
+ 45a82de:	00 
+ 45a82df:	48 81 c4 38 01 00 00 	add    $0x138,%rsp
+ 45a82e6:	c3                   	ret
+ 45a82e7:	e8 b4 e7 9a fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45a82ec:	90                   	nop
+ 45a82ed:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a82f2:	e8 69 c1 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a82f7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a82fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a8300:	e9 db fd ff ff       	jmp    45a80e0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base>
+ 45a8305:	cc                   	int3
+ 45a8306:	cc                   	int3
+ 45a8307:	cc                   	int3
+ 45a8308:	cc                   	int3
+ 45a8309:	cc                   	int3
+ 45a830a:	cc                   	int3
+ 45a830b:	cc                   	int3
+ 45a830c:	cc                   	int3
+ 45a830d:	cc                   	int3
+ 45a830e:	cc                   	int3
+ 45a830f:	cc                   	int3
+ 45a8310:	cc                   	int3
+ 45a8311:	cc                   	int3
+ 45a8312:	cc                   	int3
+ 45a8313:	cc                   	int3
+ 45a8314:	cc                   	int3
+ 45a8315:	cc                   	int3
+ 45a8316:	cc                   	int3
+ 45a8317:	cc                   	int3
+ 45a8318:	cc                   	int3
+ 45a8319:	cc                   	int3
+ 45a831a:	cc                   	int3
+ 45a831b:	cc                   	int3
+ 45a831c:	cc                   	int3
+ 45a831d:	cc                   	int3
+ 45a831e:	cc                   	int3
+ 45a831f:	cc                   	int3

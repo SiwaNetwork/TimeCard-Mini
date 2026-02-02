@@ -1,0 +1,72 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired
+# addr 0x45bd660 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045bd660 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base>:
+ 45bd660:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45bd664:	0f 86 b0 00 00 00    	jbe    45bd71a <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base+0xba>
+ 45bd66a:	48 83 ec 20          	sub    $0x20,%rsp
+ 45bd66e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45bd673:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45bd678:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45bd67d:	48 8b 10             	mov    (%rax),%rdx
+ 45bd680:	48 8d 1d 83 ed 88 00 	lea    0x88ed83(%rip),%rbx        # 4e4c40a <_IO_stdin_used@@Base+0x21940a>
+ 45bd687:	b9 36 00 00 00       	mov    $0x36,%ecx
+ 45bd68c:	48 89 d0             	mov    %rdx,%rax
+ 45bd68f:	e8 cc 99 e4 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45bd694:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45bd699:	e8 a2 00 00 00       	call   45bd740 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base>
+ 45bd69e:	48 8d 05 bb 50 4f 01 	lea    0x14f50bb(%rip),%rax        # 5ab2760 <type:NXydxmeP@@Base>
+ 45bd6a5:	e8 36 2e 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45bd6aa:	48 8d 15 4f 0b 00 00 	lea    0xb4f(%rip),%rdx        # 45be200 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired-fm@@Base>
+ 45bd6b1:	48 89 10             	mov    %rdx,(%rax)
+ 45bd6b4:	83 3d a5 e2 8b 03 00 	cmpl   $0x0,0x38be2a5(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45bd6bb:	75 0b                	jne    45bd6c8 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base+0x68>
+ 45bd6bd:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd6c2:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45bd6c6:	eb 0e                	jmp    45bd6d6 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base+0x76>
+ 45bd6c8:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45bd6cc:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd6d1:	e8 2a 90 99 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45bd6d6:	48 89 c3             	mov    %rax,%rbx
+ 45bd6d9:	48 b8 00 e4 0b 54 02 	movabs $0x2540be400,%rax
+ 45bd6e0:	00 00 00 
+ 45bd6e3:	e8 d8 be a0 fd       	call   1fc95c0 <time.AfterFunc@@Base>
+ 45bd6e8:	83 3d 71 e2 8b 03 00 	cmpl   $0x0,0x38be271(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45bd6ef:	75 0e                	jne    45bd6ff <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base+0x9f>
+ 45bd6f1:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd6f6:	48 89 81 88 00 00 00 	mov    %rax,0x88(%rcx)
+ 45bd6fd:	eb 11                	jmp    45bd710 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base+0xb0>
+ 45bd6ff:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45bd704:	48 81 c7 88 00 00 00 	add    $0x88,%rdi
+ 45bd70b:	e8 f0 8e 99 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45bd710:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45bd715:	48 83 c4 20          	add    $0x20,%rsp
+ 45bd719:	c3                   	ret
+ 45bd71a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45bd71f:	90                   	nop
+ 45bd720:	e8 3b 6d 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45bd725:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45bd72a:	e9 31 ff ff ff       	jmp    45bd660 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired@@Base>
+ 45bd72f:	cc                   	int3
+ 45bd730:	cc                   	int3
+ 45bd731:	cc                   	int3
+ 45bd732:	cc                   	int3
+ 45bd733:	cc                   	int3
+ 45bd734:	cc                   	int3
+ 45bd735:	cc                   	int3
+ 45bd736:	cc                   	int3
+ 45bd737:	cc                   	int3
+ 45bd738:	cc                   	int3
+ 45bd739:	cc                   	int3
+ 45bd73a:	cc                   	int3
+ 45bd73b:	cc                   	int3
+ 45bd73c:	cc                   	int3
+ 45bd73d:	cc                   	int3
+ 45bd73e:	cc                   	int3
+ 45bd73f:	cc                   	int3

@@ -1,0 +1,81 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open
+# addr 0x4589980 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004589980 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base>:
+ 4589980:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4589984:	0f 86 c5 00 00 00    	jbe    4589a4f <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base+0xcf>
+ 458998a:	48 83 ec 30          	sub    $0x30,%rsp
+ 458998e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4589993:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4589998:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 458999d:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+ 45899a2:	48 8d 05 d7 bc 72 01 	lea    0x172bcd7(%rip),%rax        # 5cb5680 <type:mXFJ/Dzx@@Base>
+ 45899a9:	e8 32 6b 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45899ae:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45899b3:	66 c7 00 10 00       	movw   $0x10,(%rax)
+ 45899b8:	c7 40 08 01 00 00 00 	movl   $0x1,0x8(%rax)
+ 45899bf:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 45899c4:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45899c9:	b8 10 00 00 00       	mov    $0x10,%eax
+ 45899ce:	e8 4d 2b db fd       	call   233c520 <golang.org/x/sys/unix.socket@@Base>
+ 45899d3:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 45899d8:	48 89 01             	mov    %rax,(%rcx)
+ 45899db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45899e0:	48 85 db             	test   %rbx,%rbx
+ 45899e3:	75 05                	jne    45899ea <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base+0x6a>
+ 45899e5:	48 85 c0             	test   %rax,%rax
+ 45899e8:	7d 1a                	jge    4589a04 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base+0x84>
+ 45899ea:	48 8b 41 08          	mov    0x8(%rcx),%rax
+ 45899ee:	48 8d 1d 09 65 87 00 	lea    0x876509(%rip),%rbx        # 4dffefe <_IO_stdin_used@@Base+0x1ccefe>
+ 45899f5:	b9 22 00 00 00       	mov    $0x22,%ecx
+ 45899fa:	e8 a1 d7 e7 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45899ff:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4589a04:	48 8b 01             	mov    (%rcx),%rax
+ 4589a07:	48 8d 1d 32 9c 97 01 	lea    0x1979c32(%rip),%rbx        # 5f03640 <go:itab.*golang.org/x/sys/unix.SockaddrNetlink,golang.org/x/sys/unix.Sockaddr@@Base>
+ 4589a0e:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4589a13:	e8 48 0d db fd       	call   233a760 <golang.org/x/sys/unix.Bind@@Base>
+ 4589a18:	48 85 c0             	test   %rax,%rax
+ 4589a1b:	74 28                	je     4589a45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base+0xc5>
+ 4589a1d:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4589a22:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 4589a26:	48 8d 1d dc db 86 00 	lea    0x86dbdc(%rip),%rbx        # 4df7609 <_IO_stdin_used@@Base+0x1c4609>
+ 4589a2d:	b9 20 00 00 00       	mov    $0x20,%ecx
+ 4589a32:	e8 69 d7 e7 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 4589a37:	90                   	nop
+ 4589a38:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4589a3d:	48 8b 02             	mov    (%rdx),%rax
+ 4589a40:	e8 bb 1e db fd       	call   233b900 <golang.org/x/sys/unix.Close@@Base>
+ 4589a45:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 4589a4a:	48 83 c4 30          	add    $0x30,%rsp
+ 4589a4e:	c3                   	ret
+ 4589a4f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4589a54:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4589a59:	e8 02 aa 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4589a5e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4589a63:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4589a68:	e9 13 ff ff ff       	jmp    4589980 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base>
+ 4589a6d:	cc                   	int3
+ 4589a6e:	cc                   	int3
+ 4589a6f:	cc                   	int3
+ 4589a70:	cc                   	int3
+ 4589a71:	cc                   	int3
+ 4589a72:	cc                   	int3
+ 4589a73:	cc                   	int3
+ 4589a74:	cc                   	int3
+ 4589a75:	cc                   	int3
+ 4589a76:	cc                   	int3
+ 4589a77:	cc                   	int3
+ 4589a78:	cc                   	int3
+ 4589a79:	cc                   	int3
+ 4589a7a:	cc                   	int3
+ 4589a7b:	cc                   	int3
+ 4589a7c:	cc                   	int3
+ 4589a7d:	cc                   	int3
+ 4589a7e:	cc                   	int3
+ 4589a7f:	cc                   	int3

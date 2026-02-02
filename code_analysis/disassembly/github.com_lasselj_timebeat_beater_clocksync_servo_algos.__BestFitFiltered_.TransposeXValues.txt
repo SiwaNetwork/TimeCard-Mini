@@ -1,0 +1,103 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues
+# addr 0x457bb60 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457bb60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base>:
+ 457bb60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457bb64:	0f 86 21 01 00 00    	jbe    457bc8b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x12b>
+ 457bb6a:	48 83 ec 28          	sub    $0x28,%rsp
+ 457bb6e:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 457bb73:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 457bb78:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 457bb7c:	48 8b 08             	mov    (%rax),%rcx
+ 457bb7f:	90                   	nop
+ 457bb80:	48 85 c9             	test   %rcx,%rcx
+ 457bb83:	0f 84 fc 00 00 00    	je     457bc85 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x125>
+ 457bb89:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 457bb8e:	48 89 d0             	mov    %rdx,%rax
+ 457bb91:	48 83 f9 ff          	cmp    $0xffffffffffffffff,%rcx
+ 457bb95:	74 07                	je     457bb9e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x3e>
+ 457bb97:	48 99                	cqto
+ 457bb99:	48 f7 f9             	idiv   %rcx
+ 457bb9c:	eb 05                	jmp    457bba3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x43>
+ 457bb9e:	48 f7 d8             	neg    %rax
+ 457bba1:	31 d2                	xor    %edx,%edx
+ 457bba3:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+ 457bba8:	48 8d 05 51 79 59 01 	lea    0x1597951(%rip),%rax        # 5b13500 <type:vMqycTjW@@Base>
+ 457bbaf:	48 89 cb             	mov    %rcx,%rbx
+ 457bbb2:	e8 29 a8 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 457bbb7:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 457bbbc:	48 8b 0a             	mov    (%rdx),%rcx
+ 457bbbf:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 457bbc4:	31 db                	xor    %ebx,%ebx
+ 457bbc6:	31 ff                	xor    %edi,%edi
+ 457bbc8:	45 31 c0             	xor    %r8d,%r8d
+ 457bbcb:	eb 21                	jmp    457bbee <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x8e>
+ 457bbcd:	49 89 fc             	mov    %rdi,%r12
+ 457bbd0:	48 c1 e7 04          	shl    $0x4,%rdi
+ 457bbd4:	49 89 54 3b 08       	mov    %rdx,0x8(%r11,%rdi,1)
+ 457bbd9:	4d 29 c1             	sub    %r8,%r9
+ 457bbdc:	4d 89 0c 3b          	mov    %r9,(%r11,%rdi,1)
+ 457bbe0:	48 ff c3             	inc    %rbx
+ 457bbe3:	49 8d 7c 24 01       	lea    0x1(%r12),%rdi
+ 457bbe8:	4c 89 d8             	mov    %r11,%rax
+ 457bbeb:	4c 89 d2             	mov    %r10,%rdx
+ 457bbee:	4c 8b 0a             	mov    (%rdx),%r9
+ 457bbf1:	4c 39 cb             	cmp    %r9,%rbx
+ 457bbf4:	7d 67                	jge    457bc5d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0xfd>
+ 457bbf6:	4c 8d 14 1e          	lea    (%rsi,%rbx,1),%r10
+ 457bbfa:	49 89 c3             	mov    %rax,%r11
+ 457bbfd:	4c 89 d0             	mov    %r10,%rax
+ 457bc00:	49 89 d2             	mov    %rdx,%r10
+ 457bc03:	49 83 f9 ff          	cmp    $0xffffffffffffffff,%r9
+ 457bc07:	74 07                	je     457bc10 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0xb0>
+ 457bc09:	48 99                	cqto
+ 457bc0b:	49 f7 f9             	idiv   %r9
+ 457bc0e:	eb 05                	jmp    457bc15 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0xb5>
+ 457bc10:	48 f7 d8             	neg    %rax
+ 457bc13:	31 d2                	xor    %edx,%edx
+ 457bc15:	48 85 db             	test   %rbx,%rbx
+ 457bc18:	75 1a                	jne    457bc34 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0xd4>
+ 457bc1a:	4d 8b 42 10          	mov    0x10(%r10),%r8
+ 457bc1e:	4d 8b 4a 08          	mov    0x8(%r10),%r9
+ 457bc22:	4c 39 c2             	cmp    %r8,%rdx
+ 457bc25:	73 53                	jae    457bc7a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x11a>
+ 457bc27:	48 89 d0             	mov    %rdx,%rax
+ 457bc2a:	48 c1 e2 04          	shl    $0x4,%rdx
+ 457bc2e:	4d 8b 04 11          	mov    (%r9,%rdx,1),%r8
+ 457bc32:	eb 03                	jmp    457bc37 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0xd7>
+ 457bc34:	48 89 d0             	mov    %rdx,%rax
+ 457bc37:	49 8b 52 08          	mov    0x8(%r10),%rdx
+ 457bc3b:	4d 8b 4a 10          	mov    0x10(%r10),%r9
+ 457bc3f:	90                   	nop
+ 457bc40:	4c 39 c8             	cmp    %r9,%rax
+ 457bc43:	73 2d                	jae    457bc72 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x112>
+ 457bc45:	48 c1 e0 04          	shl    $0x4,%rax
+ 457bc49:	4c 8b 0c 02          	mov    (%rdx,%rax,1),%r9
+ 457bc4d:	48 8b 54 02 08       	mov    0x8(%rdx,%rax,1),%rdx
+ 457bc52:	48 39 cf             	cmp    %rcx,%rdi
+ 457bc55:	0f 82 72 ff ff ff    	jb     457bbcd <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x6d>
+ 457bc5b:	eb 0d                	jmp    457bc6a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base+0x10a>
+ 457bc5d:	48 89 cb             	mov    %rcx,%rbx
+ 457bc60:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 457bc65:	48 83 c4 28          	add    $0x28,%rsp
+ 457bc69:	c3                   	ret
+ 457bc6a:	48 89 f8             	mov    %rdi,%rax
+ 457bc6d:	e8 2e ae 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457bc72:	4c 89 c9             	mov    %r9,%rcx
+ 457bc75:	e8 26 ae 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457bc7a:	48 89 d0             	mov    %rdx,%rax
+ 457bc7d:	4c 89 c1             	mov    %r8,%rcx
+ 457bc80:	e8 1b ae 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457bc85:	e8 f6 fa 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457bc8a:	90                   	nop
+ 457bc8b:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457bc90:	e8 cb 87 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457bc95:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457bc9a:	e9 c1 fe ff ff       	jmp    457bb60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).TransposeXValues@@Base>
+ 457bc9f:	cc                   	int3

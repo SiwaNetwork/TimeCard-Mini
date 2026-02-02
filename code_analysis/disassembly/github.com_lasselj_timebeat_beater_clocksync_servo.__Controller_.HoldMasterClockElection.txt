@@ -1,0 +1,634 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection
+# addr 0x45a6f20 size 2400 (0x960)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a6f20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base>:
+ 45a6f20:	4c 8d a4 24 68 fd ff 	lea    -0x298(%rsp),%r12
+ 45a6f27:	ff 
+ 45a6f28:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a6f2c:	0f 86 25 09 00 00    	jbe    45a7857 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x937>
+ 45a6f32:	48 81 ec 18 03 00 00 	sub    $0x318,%rsp
+ 45a6f39:	48 89 ac 24 10 03 00 	mov    %rbp,0x310(%rsp)
+ 45a6f40:	00 
+ 45a6f41:	48 8d ac 24 10 03 00 	lea    0x310(%rsp),%rbp
+ 45a6f48:	00 
+ 45a6f49:	48 89 84 24 20 03 00 	mov    %rax,0x320(%rsp)
+ 45a6f50:	00 
+ 45a6f51:	48 8b 48 10          	mov    0x10(%rax),%rcx
+ 45a6f55:	48 89 c8             	mov    %rcx,%rax
+ 45a6f58:	e8 63 e2 ff ff       	call   45a51c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetSourceCandidates@@Base>
+ 45a6f5d:	0f 1f 00             	nopl   (%rax)
+ 45a6f60:	e8 db 0b 00 00       	call   45a7b40 <github.com/lasselj/timebeat/beater/clocksync/servo.getOnlyViableCandidates@@Base>
+ 45a6f65:	90                   	nop
+ 45a6f66:	48 8b 0d eb 52 88 03 	mov    0x38852eb(%rip),%rcx        # 7e2c258 <github.com/lasselj/timebeat/beater/clocksync/servo.orderedList@@Base>
+ 45a6f6d:	48 85 c9             	test   %rcx,%rcx
+ 45a6f70:	74 05                	je     45a6f77 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x57>
+ 45a6f72:	48 8b 11             	mov    (%rcx),%rdx
+ 45a6f75:	eb 05                	jmp    45a6f7c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x5c>
+ 45a6f77:	ba 00 00 00 00       	mov    $0x0,%edx
+ 45a6f7c:	74 05                	je     45a6f83 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x63>
+ 45a6f7e:	4c 8b 01             	mov    (%rcx),%r8
+ 45a6f81:	eb 03                	jmp    45a6f86 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x66>
+ 45a6f83:	45 31 c0             	xor    %r8d,%r8d
+ 45a6f86:	48 89 9c 24 a0 00 00 	mov    %rbx,0xa0(%rsp)
+ 45a6f8d:	00 
+ 45a6f8e:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 45a6f95:	00 
+ 45a6f96:	49 89 c1             	mov    %rax,%r9
+ 45a6f99:	31 c9                	xor    %ecx,%ecx
+ 45a6f9b:	eb 27                	jmp    45a6fc4 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0xa4>
+ 45a6f9d:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 45a6fa4:	00 
+ 45a6fa5:	48 83 c0 58          	add    $0x58,%rax
+ 45a6fa9:	48 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%rcx
+ 45a6fb0:	00 
+ 45a6fb1:	48 ff c1             	inc    %rcx
+ 45a6fb4:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 45a6fbb:	00 
+ 45a6fbc:	4c 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%r9
+ 45a6fc3:	00 
+ 45a6fc4:	4c 89 84 24 80 00 00 	mov    %r8,0x80(%rsp)
+ 45a6fcb:	00 
+ 45a6fcc:	48 39 cb             	cmp    %rcx,%rbx
+ 45a6fcf:	0f 8e a2 00 00 00    	jle    45a7077 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x157>
+ 45a6fd5:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 45a6fdc:	00 
+ 45a6fdd:	48 89 94 24 88 00 00 	mov    %rdx,0x88(%rsp)
+ 45a6fe4:	00 
+ 45a6fe5:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+ 45a6fec:	00 
+ 45a6fed:	48 8b 10             	mov    (%rax),%rdx
+ 45a6ff0:	48 89 94 24 b8 02 00 	mov    %rdx,0x2b8(%rsp)
+ 45a6ff7:	00 
+ 45a6ff8:	48 8d 70 08          	lea    0x8(%rax),%rsi
+ 45a6ffc:	48 8d bc 24 c0 02 00 	lea    0x2c0(%rsp),%rdi
+ 45a7003:	00 
+ 45a7004:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7009:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a700e:	e8 27 01 9b fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a7013:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a7017:	48 8b 1d 3a 52 88 03 	mov    0x388523a(%rip),%rbx        # 7e2c258 <github.com/lasselj/timebeat/beater/clocksync/servo.orderedList@@Base>
+ 45a701e:	48 8b 8c 24 b8 02 00 	mov    0x2b8(%rsp),%rcx
+ 45a7025:	00 
+ 45a7026:	48 8d 05 93 de 39 01 	lea    0x139de93(%rip),%rax        # 5944ec0 <type:hAXEc+d/@@Base>
+ 45a702d:	e8 ae d7 94 fd       	call   1ef47e0 <runtime.mapaccess1_fast64@@Base>
+ 45a7032:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45a7039:	00 
+ 45a703a:	48 39 10             	cmp    %rdx,(%rax)
+ 45a703d:	7c 0d                	jl     45a704c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x12c>
+ 45a703f:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 45a7046:	00 
+ 45a7047:	e9 51 ff ff ff       	jmp    45a6f9d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x7d>
+ 45a704c:	48 8b 1d 05 52 88 03 	mov    0x3885205(%rip),%rbx        # 7e2c258 <github.com/lasselj/timebeat/beater/clocksync/servo.orderedList@@Base>
+ 45a7053:	48 8b 8c 24 b8 02 00 	mov    0x2b8(%rsp),%rcx
+ 45a705a:	00 
+ 45a705b:	48 8d 05 5e de 39 01 	lea    0x139de5e(%rip),%rax        # 5944ec0 <type:hAXEc+d/@@Base>
+ 45a7062:	e8 79 d7 94 fd       	call   1ef47e0 <runtime.mapaccess1_fast64@@Base>
+ 45a7067:	48 8b 10             	mov    (%rax),%rdx
+ 45a706a:	4c 8b 84 24 b8 02 00 	mov    0x2b8(%rsp),%r8
+ 45a7071:	00 
+ 45a7072:	e9 26 ff ff ff       	jmp    45a6f9d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x7d>
+ 45a7077:	31 c0                	xor    %eax,%eax
+ 45a7079:	31 c9                	xor    %ecx,%ecx
+ 45a707b:	31 d2                	xor    %edx,%edx
+ 45a707d:	31 f6                	xor    %esi,%esi
+ 45a707f:	90                   	nop
+ 45a7080:	eb 0a                	jmp    45a708c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x16c>
+ 45a7082:	49 83 c1 58          	add    $0x58,%r9
+ 45a7086:	48 ff c0             	inc    %rax
+ 45a7089:	4c 89 d6             	mov    %r10,%rsi
+ 45a708c:	48 39 c3             	cmp    %rax,%rbx
+ 45a708f:	0f 8e 70 01 00 00    	jle    45a7205 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x2e5>
+ 45a7095:	4d 8b 11             	mov    (%r9),%r10
+ 45a7098:	4c 89 94 24 60 02 00 	mov    %r10,0x260(%rsp)
+ 45a709f:	00 
+ 45a70a0:	4d 8d 51 08          	lea    0x8(%r9),%r10
+ 45a70a4:	48 8d bc 24 68 02 00 	lea    0x268(%rsp),%rdi
+ 45a70ab:	00 
+ 45a70ac:	49 89 f3             	mov    %rsi,%r11
+ 45a70af:	4c 89 d6             	mov    %r10,%rsi
+ 45a70b2:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a70b9:	00 00 
+ 45a70bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a70c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a70c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a70ca:	e8 6b 00 9b fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a70cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a70d3:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a70da:	00 00 
+ 45a70dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a70e0:	4c 39 84 24 60 02 00 	cmp    %r8,0x260(%rsp)
+ 45a70e7:	00 
+ 45a70e8:	0f 85 0e 01 00 00    	jne    45a71fc <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x2dc>
+ 45a70ee:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 45a70f5:	00 
+ 45a70f6:	4c 89 8c 24 f8 00 00 	mov    %r9,0xf8(%rsp)
+ 45a70fd:	00 
+ 45a70fe:	4d 8d 53 01          	lea    0x1(%r11),%r10
+ 45a7102:	4c 39 d2             	cmp    %r10,%rdx
+ 45a7105:	73 47                	jae    45a714e <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x22e>
+ 45a7107:	48 89 c8             	mov    %rcx,%rax
+ 45a710a:	4c 89 d3             	mov    %r10,%rbx
+ 45a710d:	48 89 d1             	mov    %rdx,%rcx
+ 45a7110:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a7115:	48 8d 35 44 7e 79 01 	lea    0x1797e44(%rip),%rsi        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a711c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a7120:	e8 9b f3 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45a7125:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 45a712c:	00 
+ 45a712d:	4c 8b 8c 24 f8 00 00 	mov    0xf8(%rsp),%r9
+ 45a7134:	00 
+ 45a7135:	49 89 da             	mov    %rbx,%r10
+ 45a7138:	48 89 ca             	mov    %rcx,%rdx
+ 45a713b:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 45a7142:	00 
+ 45a7143:	48 89 c1             	mov    %rax,%rcx
+ 45a7146:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a714d:	00 
+ 45a714e:	4d 6b da 58          	imul   $0x58,%r10,%r11
+ 45a7152:	4d 8d 24 0b          	lea    (%r11,%rcx,1),%r12
+ 45a7156:	4d 8d 64 24 a8       	lea    -0x58(%r12),%r12
+ 45a715b:	83 3d fe 47 8d 03 00 	cmpl   $0x0,0x38d47fe(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a7162:	75 35                	jne    45a7199 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x279>
+ 45a7164:	4c 8b a4 24 60 02 00 	mov    0x260(%rsp),%r12
+ 45a716b:	00 
+ 45a716c:	4d 89 64 0b a8       	mov    %r12,-0x58(%r11,%rcx,1)
+ 45a7171:	49 8d 3c 0b          	lea    (%r11,%rcx,1),%rdi
+ 45a7175:	48 8d 7f b0          	lea    -0x50(%rdi),%rdi
+ 45a7179:	48 8d b4 24 68 02 00 	lea    0x268(%rsp),%rsi
+ 45a7180:	00 
+ 45a7181:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7186:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a718b:	e8 aa ff 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a7190:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a7194:	e9 e9 fe ff ff       	jmp    45a7082 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x162>
+ 45a7199:	48 89 8c 24 d8 00 00 	mov    %rcx,0xd8(%rsp)
+ 45a71a0:	00 
+ 45a71a1:	4c 89 54 24 58       	mov    %r10,0x58(%rsp)
+ 45a71a6:	48 89 54 24 78       	mov    %rdx,0x78(%rsp)
+ 45a71ab:	48 8d 05 ae 7d 79 01 	lea    0x1797dae(%rip),%rax        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a71b2:	4c 89 e3             	mov    %r12,%rbx
+ 45a71b5:	48 8d 8c 24 60 02 00 	lea    0x260(%rsp),%rcx
+ 45a71bc:	00 
+ 45a71bd:	0f 1f 00             	nopl   (%rax)
+ 45a71c0:	e8 7b fc 94 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45a71c5:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a71cc:	00 
+ 45a71cd:	48 8b 8c 24 d8 00 00 	mov    0xd8(%rsp),%rcx
+ 45a71d4:	00 
+ 45a71d5:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45a71da:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 45a71e1:	00 
+ 45a71e2:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 45a71e9:	00 
+ 45a71ea:	4c 8b 8c 24 f8 00 00 	mov    0xf8(%rsp),%r9
+ 45a71f1:	00 
+ 45a71f2:	4c 8b 54 24 58       	mov    0x58(%rsp),%r10
+ 45a71f7:	e9 86 fe ff ff       	jmp    45a7082 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x162>
+ 45a71fc:	4d 89 da             	mov    %r11,%r10
+ 45a71ff:	90                   	nop
+ 45a7200:	e9 7d fe ff ff       	jmp    45a7082 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x162>
+ 45a7205:	90                   	nop
+ 45a7206:	48 89 ca             	mov    %rcx,%rdx
+ 45a7209:	31 c0                	xor    %eax,%eax
+ 45a720b:	31 db                	xor    %ebx,%ebx
+ 45a720d:	eb 49                	jmp    45a7258 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x338>
+ 45a720f:	4c 8b 01             	mov    (%rcx),%r8
+ 45a7212:	4c 89 84 24 08 02 00 	mov    %r8,0x208(%rsp)
+ 45a7219:	00 
+ 45a721a:	4c 8d 41 08          	lea    0x8(%rcx),%r8
+ 45a721e:	48 8d bc 24 10 02 00 	lea    0x210(%rsp),%rdi
+ 45a7225:	00 
+ 45a7226:	49 89 f1             	mov    %rsi,%r9
+ 45a7229:	4c 89 c6             	mov    %r8,%rsi
+ 45a722c:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7231:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a7236:	e8 ff fe 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a723b:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a723f:	4c 8b 84 24 10 02 00 	mov    0x210(%rsp),%r8
+ 45a7246:	00 
+ 45a7247:	4c 39 c3             	cmp    %r8,%rbx
+ 45a724a:	49 0f 4c d8          	cmovl  %r8,%rbx
+ 45a724e:	48 83 c1 58          	add    $0x58,%rcx
+ 45a7252:	48 ff c0             	inc    %rax
+ 45a7255:	4c 89 ce             	mov    %r9,%rsi
+ 45a7258:	48 39 f0             	cmp    %rsi,%rax
+ 45a725b:	7c b2                	jl     45a720f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x2ef>
+ 45a725d:	48 89 b4 24 b0 00 00 	mov    %rsi,0xb0(%rsp)
+ 45a7264:	00 
+ 45a7265:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 45a726c:	00 
+ 45a726d:	31 c0                	xor    %eax,%eax
+ 45a726f:	31 c9                	xor    %ecx,%ecx
+ 45a7271:	31 ff                	xor    %edi,%edi
+ 45a7273:	45 31 c0             	xor    %r8d,%r8d
+ 45a7276:	eb 0d                	jmp    45a7285 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x365>
+ 45a7278:	48 83 c2 58          	add    $0x58,%rdx
+ 45a727c:	48 ff c0             	inc    %rax
+ 45a727f:	4c 89 de             	mov    %r11,%rsi
+ 45a7282:	4c 89 d7             	mov    %r10,%rdi
+ 45a7285:	48 39 f0             	cmp    %rsi,%rax
+ 45a7288:	0f 8d 57 01 00 00    	jge    45a73e5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x4c5>
+ 45a728e:	4c 8b 0a             	mov    (%rdx),%r9
+ 45a7291:	4c 89 8c 24 b0 01 00 	mov    %r9,0x1b0(%rsp)
+ 45a7298:	00 
+ 45a7299:	4c 8d 4a 08          	lea    0x8(%rdx),%r9
+ 45a729d:	49 89 fa             	mov    %rdi,%r10
+ 45a72a0:	48 8d bc 24 b8 01 00 	lea    0x1b8(%rsp),%rdi
+ 45a72a7:	00 
+ 45a72a8:	49 89 f3             	mov    %rsi,%r11
+ 45a72ab:	4c 89 ce             	mov    %r9,%rsi
+ 45a72ae:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a72b5:	00 00 
+ 45a72b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a72be:	00 00 
+ 45a72c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a72c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a72ca:	e8 6b fe 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a72cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a72d3:	48 39 9c 24 b8 01 00 	cmp    %rbx,0x1b8(%rsp)
+ 45a72da:	00 
+ 45a72db:	75 9b                	jne    45a7278 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x358>
+ 45a72dd:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 45a72e4:	00 
+ 45a72e5:	48 89 94 24 f8 00 00 	mov    %rdx,0xf8(%rsp)
+ 45a72ec:	00 
+ 45a72ed:	49 ff c0             	inc    %r8
+ 45a72f0:	4d 39 c2             	cmp    %r8,%r10
+ 45a72f3:	73 43                	jae    45a7338 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x418>
+ 45a72f5:	48 89 c8             	mov    %rcx,%rax
+ 45a72f8:	4c 89 c3             	mov    %r8,%rbx
+ 45a72fb:	4c 89 d1             	mov    %r10,%rcx
+ 45a72fe:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a7303:	48 8d 35 56 7c 79 01 	lea    0x1797c56(%rip),%rsi        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a730a:	e8 b1 f1 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45a730f:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 45a7316:	00 
+ 45a7317:	4c 8b 9c 24 b0 00 00 	mov    0xb0(%rsp),%r11
+ 45a731e:	00 
+ 45a731f:	49 89 d8             	mov    %rbx,%r8
+ 45a7322:	49 89 ca             	mov    %rcx,%r10
+ 45a7325:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 45a732c:	00 
+ 45a732d:	48 89 c1             	mov    %rax,%rcx
+ 45a7330:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a7337:	00 
+ 45a7338:	4d 6b c8 58          	imul   $0x58,%r8,%r9
+ 45a733c:	4d 8d 24 09          	lea    (%r9,%rcx,1),%r12
+ 45a7340:	4d 8d 64 24 a8       	lea    -0x58(%r12),%r12
+ 45a7345:	83 3d 14 46 8d 03 00 	cmpl   $0x0,0x38d4614(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a734c:	75 37                	jne    45a7385 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x465>
+ 45a734e:	4c 8b a4 24 b0 01 00 	mov    0x1b0(%rsp),%r12
+ 45a7355:	00 
+ 45a7356:	4d 89 64 09 a8       	mov    %r12,-0x58(%r9,%rcx,1)
+ 45a735b:	49 8d 3c 09          	lea    (%r9,%rcx,1),%rdi
+ 45a735f:	48 8d 7f b0          	lea    -0x50(%rdi),%rdi
+ 45a7363:	48 8d b4 24 b8 01 00 	lea    0x1b8(%rsp),%rsi
+ 45a736a:	00 
+ 45a736b:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7370:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a7375:	e8 c0 fd 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a737a:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a737e:	66 90                	xchg   %ax,%ax
+ 45a7380:	e9 f3 fe ff ff       	jmp    45a7278 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x358>
+ 45a7385:	48 89 8c 24 d0 00 00 	mov    %rcx,0xd0(%rsp)
+ 45a738c:	00 
+ 45a738d:	4c 89 44 24 50       	mov    %r8,0x50(%rsp)
+ 45a7392:	4c 89 54 24 70       	mov    %r10,0x70(%rsp)
+ 45a7397:	48 8d 05 c2 7b 79 01 	lea    0x1797bc2(%rip),%rax        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a739e:	4c 89 e3             	mov    %r12,%rbx
+ 45a73a1:	48 8d 8c 24 b0 01 00 	lea    0x1b0(%rsp),%rcx
+ 45a73a8:	00 
+ 45a73a9:	e8 92 fa 94 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45a73ae:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a73b5:	00 
+ 45a73b6:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 45a73bd:	00 
+ 45a73be:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 45a73c5:	00 
+ 45a73c6:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 45a73cd:	00 
+ 45a73ce:	4c 8b 44 24 50       	mov    0x50(%rsp),%r8
+ 45a73d3:	4c 8b 54 24 70       	mov    0x70(%rsp),%r10
+ 45a73d8:	4c 8b 9c 24 b0 00 00 	mov    0xb0(%rsp),%r11
+ 45a73df:	00 
+ 45a73e0:	e9 93 fe ff ff       	jmp    45a7278 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x358>
+ 45a73e5:	4c 89 84 24 a8 00 00 	mov    %r8,0xa8(%rsp)
+ 45a73ec:	00 
+ 45a73ed:	48 89 8c 24 f0 00 00 	mov    %rcx,0xf0(%rsp)
+ 45a73f4:	00 
+ 45a73f5:	48 89 ca             	mov    %rcx,%rdx
+ 45a73f8:	31 c0                	xor    %eax,%eax
+ 45a73fa:	31 db                	xor    %ebx,%ebx
+ 45a73fc:	31 f6                	xor    %esi,%esi
+ 45a73fe:	31 ff                	xor    %edi,%edi
+ 45a7400:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a7406:	eb 18                	jmp    45a7420 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x500>
+ 45a7408:	48 83 c1 58          	add    $0x58,%rcx
+ 45a740c:	49 8d 7b 01          	lea    0x1(%r11),%rdi
+ 45a7410:	41 89 f2             	mov    %esi,%r10d
+ 45a7413:	4c 89 ce             	mov    %r9,%rsi
+ 45a7416:	45 89 d1             	mov    %r10d,%r9d
+ 45a7419:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 45a7420:	4c 39 c7             	cmp    %r8,%rdi
+ 45a7423:	0f 8d 7c 01 00 00    	jge    45a75a5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x685>
+ 45a7429:	4c 8b 11             	mov    (%rcx),%r10
+ 45a742c:	4c 89 94 24 58 01 00 	mov    %r10,0x158(%rsp)
+ 45a7433:	00 
+ 45a7434:	4c 8d 51 08          	lea    0x8(%rcx),%r10
+ 45a7438:	49 89 fb             	mov    %rdi,%r11
+ 45a743b:	48 8d bc 24 60 01 00 	lea    0x160(%rsp),%rdi
+ 45a7442:	00 
+ 45a7443:	49 89 f4             	mov    %rsi,%r12
+ 45a7446:	4c 89 d6             	mov    %r10,%rsi
+ 45a7449:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a744e:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a7453:	e8 e2 fc 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a7458:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a745c:	4c 8b 94 24 68 01 00 	mov    0x168(%rsp),%r10
+ 45a7463:	00 
+ 45a7464:	48 83 bc 24 70 01 00 	cmpq   $0x6,0x170(%rsp)
+ 45a746b:	00 06 
+ 45a746d:	75 17                	jne    45a7486 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x566>
+ 45a746f:	41 81 3a 73 79 73 74 	cmpl   $0x74737973,(%r10)
+ 45a7476:	75 0e                	jne    45a7486 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x566>
+ 45a7478:	66 41 81 7a 04 65 6d 	cmpw   $0x6d65,0x4(%r10)
+ 45a747f:	90                   	nop
+ 45a7480:	0f 84 11 01 00 00    	je     45a7597 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x677>
+ 45a7486:	4c 89 9c 24 b8 00 00 	mov    %r11,0xb8(%rsp)
+ 45a748d:	00 
+ 45a748e:	48 89 8c 24 f8 00 00 	mov    %rcx,0xf8(%rsp)
+ 45a7495:	00 
+ 45a7496:	4d 8d 4c 24 01       	lea    0x1(%r12),%r9
+ 45a749b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a74a0:	4c 39 c8             	cmp    %r9,%rax
+ 45a74a3:	73 43                	jae    45a74e8 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x5c8>
+ 45a74a5:	48 89 c1             	mov    %rax,%rcx
+ 45a74a8:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a74ad:	48 8d 35 ac 7a 79 01 	lea    0x1797aac(%rip),%rsi        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a74b4:	48 89 d8             	mov    %rbx,%rax
+ 45a74b7:	4c 89 cb             	mov    %r9,%rbx
+ 45a74ba:	e8 01 f0 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45a74bf:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 45a74c6:	00 
+ 45a74c7:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 45a74ce:	00 
+ 45a74cf:	4c 8b 9c 24 b8 00 00 	mov    0xb8(%rsp),%r11
+ 45a74d6:	00 
+ 45a74d7:	49 89 d9             	mov    %rbx,%r9
+ 45a74da:	48 89 c3             	mov    %rax,%rbx
+ 45a74dd:	48 89 c8             	mov    %rcx,%rax
+ 45a74e0:	48 8b 8c 24 f8 00 00 	mov    0xf8(%rsp),%rcx
+ 45a74e7:	00 
+ 45a74e8:	4d 6b d1 58          	imul   $0x58,%r9,%r10
+ 45a74ec:	4d 8d 24 1a          	lea    (%r10,%rbx,1),%r12
+ 45a74f0:	4d 8d 64 24 a8       	lea    -0x58(%r12),%r12
+ 45a74f5:	83 3d 64 44 8d 03 00 	cmpl   $0x0,0x38d4464(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a74fc:	75 37                	jne    45a7535 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x615>
+ 45a74fe:	4c 8b a4 24 58 01 00 	mov    0x158(%rsp),%r12
+ 45a7505:	00 
+ 45a7506:	4d 89 64 1a a8       	mov    %r12,-0x58(%r10,%rbx,1)
+ 45a750b:	49 8d 3c 1a          	lea    (%r10,%rbx,1),%rdi
+ 45a750f:	48 8d 7f b0          	lea    -0x50(%rdi),%rdi
+ 45a7513:	48 8d b4 24 60 01 00 	lea    0x160(%rsp),%rsi
+ 45a751a:	00 
+ 45a751b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a7520:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7525:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a752a:	e8 0b fc 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a752f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a7533:	eb 5b                	jmp    45a7590 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x670>
+ 45a7535:	48 89 9c 24 c8 00 00 	mov    %rbx,0xc8(%rsp)
+ 45a753c:	00 
+ 45a753d:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+ 45a7542:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45a7547:	48 8d 05 12 7a 79 01 	lea    0x1797a12(%rip),%rax        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a754e:	4c 89 e3             	mov    %r12,%rbx
+ 45a7551:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 45a7558:	00 
+ 45a7559:	e8 e2 f8 94 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45a755e:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 45a7563:	48 8b 8c 24 f8 00 00 	mov    0xf8(%rsp),%rcx
+ 45a756a:	00 
+ 45a756b:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 45a7572:	00 
+ 45a7573:	48 8b 9c 24 c8 00 00 	mov    0xc8(%rsp),%rbx
+ 45a757a:	00 
+ 45a757b:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 45a7582:	00 
+ 45a7583:	4c 8b 4c 24 48       	mov    0x48(%rsp),%r9
+ 45a7588:	4c 8b 9c 24 b8 00 00 	mov    0xb8(%rsp),%r11
+ 45a758f:	00 
+ 45a7590:	31 f6                	xor    %esi,%esi
+ 45a7592:	e9 71 fe ff ff       	jmp    45a7408 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x4e8>
+ 45a7597:	44 89 ce             	mov    %r9d,%esi
+ 45a759a:	4d 89 e1             	mov    %r12,%r9
+ 45a759d:	0f 1f 00             	nopl   (%rax)
+ 45a75a0:	e9 63 fe ff ff       	jmp    45a7408 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x4e8>
+ 45a75a5:	45 84 c9             	test   %r9b,%r9b
+ 45a75a8:	75 06                	jne    45a75b0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x690>
+ 45a75aa:	49 89 f0             	mov    %rsi,%r8
+ 45a75ad:	48 89 da             	mov    %rbx,%rdx
+ 45a75b0:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 45a75b7:	00 
+ 45a75b8:	90                   	nop
+ 45a75b9:	31 c0                	xor    %eax,%eax
+ 45a75bb:	31 c9                	xor    %ecx,%ecx
+ 45a75bd:	31 db                	xor    %ebx,%ebx
+ 45a75bf:	31 f6                	xor    %esi,%esi
+ 45a75c1:	31 ff                	xor    %edi,%edi
+ 45a75c3:	eb 10                	jmp    45a75d5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x6b5>
+ 45a75c5:	48 83 c2 58          	add    $0x58,%rdx
+ 45a75c9:	48 ff c0             	inc    %rax
+ 45a75cc:	4c 89 d1             	mov    %r10,%rcx
+ 45a75cf:	4c 89 de             	mov    %r11,%rsi
+ 45a75d2:	4c 89 cf             	mov    %r9,%rdi
+ 45a75d5:	4c 39 c0             	cmp    %r8,%rax
+ 45a75d8:	0f 8d 36 02 00 00    	jge    45a7814 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x8f4>
+ 45a75de:	4c 8b 0a             	mov    (%rdx),%r9
+ 45a75e1:	4c 89 8c 24 00 01 00 	mov    %r9,0x100(%rsp)
+ 45a75e8:	00 
+ 45a75e9:	4c 8d 4a 08          	lea    0x8(%rdx),%r9
+ 45a75ed:	49 89 fa             	mov    %rdi,%r10
+ 45a75f0:	48 8d bc 24 08 01 00 	lea    0x108(%rsp),%rdi
+ 45a75f7:	00 
+ 45a75f8:	49 89 f3             	mov    %rsi,%r11
+ 45a75fb:	4c 89 ce             	mov    %r9,%rsi
+ 45a75fe:	66 90                	xchg   %ax,%ax
+ 45a7600:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a7605:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a760a:	e8 2b fb 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a760f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a7613:	4c 8b 8c 24 20 01 00 	mov    0x120(%rsp),%r9
+ 45a761a:	00 
+ 45a761b:	4d 8b 49 40          	mov    0x40(%r9),%r9
+ 45a761f:	90                   	nop
+ 45a7620:	4d 85 c9             	test   %r9,%r9
+ 45a7623:	74 17                	je     45a763c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x71c>
+ 45a7625:	4d 8b 89 f0 00 00 00 	mov    0xf0(%r9),%r9
+ 45a762c:	4d 85 c9             	test   %r9,%r9
+ 45a762f:	74 06                	je     45a7637 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x717>
+ 45a7631:	4d 8b 49 10          	mov    0x10(%r9),%r9
+ 45a7635:	eb 08                	jmp    45a763f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x71f>
+ 45a7637:	45 31 c9             	xor    %r9d,%r9d
+ 45a763a:	eb 03                	jmp    45a763f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x71f>
+ 45a763c:	45 31 c9             	xor    %r9d,%r9d
+ 45a763f:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 45a7646:	00 
+ 45a7647:	48 89 94 24 f8 00 00 	mov    %rdx,0xf8(%rsp)
+ 45a764e:	00 
+ 45a764f:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 45a7656:	00 
+ 45a7657:	48 85 c9             	test   %rcx,%rcx
+ 45a765a:	74 0d                	je     45a7669 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x749>
+ 45a765c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a7660:	4d 39 ca             	cmp    %r9,%r10
+ 45a7663:	0f 85 f6 00 00 00    	jne    45a775f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x83f>
+ 45a7669:	4c 8d 51 01          	lea    0x1(%rcx),%r10
+ 45a766d:	4c 39 d3             	cmp    %r10,%rbx
+ 45a7670:	73 43                	jae    45a76b5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x795>
+ 45a7672:	4c 89 d8             	mov    %r11,%rax
+ 45a7675:	48 89 d9             	mov    %rbx,%rcx
+ 45a7678:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a767d:	48 8d 35 dc 78 79 01 	lea    0x17978dc(%rip),%rsi        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a7684:	4c 89 d3             	mov    %r10,%rbx
+ 45a7687:	e8 34 ee 98 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45a768c:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 45a7693:	00 
+ 45a7694:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 45a769b:	00 
+ 45a769c:	4c 8b 8c 24 98 00 00 	mov    0x98(%rsp),%r9
+ 45a76a3:	00 
+ 45a76a4:	49 89 c3             	mov    %rax,%r11
+ 45a76a7:	49 89 da             	mov    %rbx,%r10
+ 45a76aa:	48 89 cb             	mov    %rcx,%rbx
+ 45a76ad:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a76b4:	00 
+ 45a76b5:	4d 6b e2 58          	imul   $0x58,%r10,%r12
+ 45a76b9:	4f 8d 2c 1c          	lea    (%r12,%r11,1),%r13
+ 45a76bd:	4d 8d 6d a8          	lea    -0x58(%r13),%r13
+ 45a76c1:	83 3d 98 42 8d 03 00 	cmpl   $0x0,0x38d4298(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a76c8:	75 35                	jne    45a76ff <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x7df>
+ 45a76ca:	4c 8b ac 24 00 01 00 	mov    0x100(%rsp),%r13
+ 45a76d1:	00 
+ 45a76d2:	4f 89 6c 1c a8       	mov    %r13,-0x58(%r12,%r11,1)
+ 45a76d7:	4b 8d 3c 1c          	lea    (%r12,%r11,1),%rdi
+ 45a76db:	48 8d 7f b0          	lea    -0x50(%rdi),%rdi
+ 45a76df:	48 8d b4 24 08 01 00 	lea    0x108(%rsp),%rsi
+ 45a76e6:	00 
+ 45a76e7:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a76ec:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a76f1:	e8 44 fa 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a76f6:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a76fa:	e9 c6 fe ff ff       	jmp    45a75c5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x6a5>
+ 45a76ff:	4c 89 9c 24 c0 00 00 	mov    %r11,0xc0(%rsp)
+ 45a7706:	00 
+ 45a7707:	4c 89 54 24 40       	mov    %r10,0x40(%rsp)
+ 45a770c:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 45a7711:	48 8d 05 48 78 79 01 	lea    0x1797848(%rip),%rax        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a7718:	4c 89 eb             	mov    %r13,%rbx
+ 45a771b:	48 8d 8c 24 00 01 00 	lea    0x100(%rsp),%rcx
+ 45a7722:	00 
+ 45a7723:	e8 18 f7 94 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45a7728:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a772f:	00 
+ 45a7730:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 45a7737:	00 
+ 45a7738:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 45a773d:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 45a7744:	00 
+ 45a7745:	4c 8b 8c 24 98 00 00 	mov    0x98(%rsp),%r9
+ 45a774c:	00 
+ 45a774d:	4c 8b 54 24 40       	mov    0x40(%rsp),%r10
+ 45a7752:	4c 8b 9c 24 c0 00 00 	mov    0xc0(%rsp),%r11
+ 45a7759:	00 
+ 45a775a:	e9 66 fe ff ff       	jmp    45a75c5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x6a5>
+ 45a775f:	90                   	nop
+ 45a7760:	0f 8d a3 00 00 00    	jge    45a7809 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x8e9>
+ 45a7766:	48 8d 05 f3 38 22 01 	lea    0x12238f3(%rip),%rax        # 57cb060 <type:3OUdBqnX@@Base>
+ 45a776d:	e8 6e 8d 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45a7772:	83 3d e7 41 8d 03 00 	cmpl   $0x0,0x38d41e7(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a7779:	75 3a                	jne    45a77b5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x895>
+ 45a777b:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 45a7782:	00 
+ 45a7783:	48 89 10             	mov    %rdx,(%rax)
+ 45a7786:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45a778a:	48 8d b4 24 08 01 00 	lea    0x108(%rsp),%rsi
+ 45a7791:	00 
+ 45a7792:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a7799:	00 00 
+ 45a779b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a77a0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a77a5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a77aa:	e8 8b f9 9a fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 45a77af:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a77b3:	eb 27                	jmp    45a77dc <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x8bc>
+ 45a77b5:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 45a77bc:	00 
+ 45a77bd:	48 89 c3             	mov    %rax,%rbx
+ 45a77c0:	48 8d 8c 24 00 01 00 	lea    0x100(%rsp),%rcx
+ 45a77c7:	00 
+ 45a77c8:	48 8d 05 91 77 79 01 	lea    0x1797791(%rip),%rax        # 5d3ef60 <type:DRYefjYd@@Base>
+ 45a77cf:	e8 6c f6 94 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 45a77d4:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a77db:	00 
+ 45a77dc:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 45a77e3:	00 
+ 45a77e4:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 45a77eb:	00 
+ 45a77ec:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45a77f1:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 45a77f6:	49 89 c3             	mov    %rax,%r11
+ 45a77f9:	4c 8b 94 24 98 00 00 	mov    0x98(%rsp),%r10
+ 45a7800:	00 
+ 45a7801:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 45a7808:	00 
+ 45a7809:	4d 89 d1             	mov    %r10,%r9
+ 45a780c:	49 89 ca             	mov    %rcx,%r10
+ 45a780f:	e9 b1 fd ff ff       	jmp    45a75c5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x6a5>
+ 45a7814:	48 85 c9             	test   %rcx,%rcx
+ 45a7817:	75 04                	jne    45a781d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x8fd>
+ 45a7819:	31 c0                	xor    %eax,%eax
+ 45a781b:	eb 13                	jmp    45a7830 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base+0x910>
+ 45a781d:	48 8b 84 24 20 03 00 	mov    0x320(%rsp),%rax
+ 45a7824:	00 
+ 45a7825:	48 89 df             	mov    %rbx,%rdi
+ 45a7828:	48 89 f3             	mov    %rsi,%rbx
+ 45a782b:	e8 50 00 00 00       	call   45a7880 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).changeIfMasterNotInShortlist@@Base>
+ 45a7830:	48 8b 8c 24 20 03 00 	mov    0x320(%rsp),%rcx
+ 45a7837:	00 
+ 45a7838:	48 8b 49 20          	mov    0x20(%rcx),%rcx
+ 45a783c:	48 89 c3             	mov    %rax,%rbx
+ 45a783f:	48 89 c8             	mov    %rcx,%rax
+ 45a7842:	e8 f9 7d ff ff       	call   459f640 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).UpdateClockQuality@@Base>
+ 45a7847:	48 8b ac 24 10 03 00 	mov    0x310(%rsp),%rbp
+ 45a784e:	00 
+ 45a784f:	48 81 c4 18 03 00 00 	add    $0x318,%rsp
+ 45a7856:	c3                   	ret
+ 45a7857:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a785c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a7860:	e8 fb cb 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a7865:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a786a:	e9 b1 f6 ff ff       	jmp    45a6f20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).HoldMasterClockElection@@Base>
+ 45a786f:	cc                   	int3
+ 45a7870:	cc                   	int3
+ 45a7871:	cc                   	int3
+ 45a7872:	cc                   	int3
+ 45a7873:	cc                   	int3
+ 45a7874:	cc                   	int3
+ 45a7875:	cc                   	int3
+ 45a7876:	cc                   	int3
+ 45a7877:	cc                   	int3
+ 45a7878:	cc                   	int3
+ 45a7879:	cc                   	int3
+ 45a787a:	cc                   	int3
+ 45a787b:	cc                   	int3
+ 45a787c:	cc                   	int3
+ 45a787d:	cc                   	int3
+ 45a787e:	cc                   	int3
+ 45a787f:	cc                   	int3

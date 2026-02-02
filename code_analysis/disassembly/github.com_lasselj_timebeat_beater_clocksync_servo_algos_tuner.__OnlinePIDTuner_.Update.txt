@@ -1,0 +1,197 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update
+# addr 0x457b420 size 672 (0x2a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457b420 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base>:
+ 457b420:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457b424:	0f 86 5c 02 00 00    	jbe    457b686 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x266>
+ 457b42a:	48 83 ec 58          	sub    $0x58,%rsp
+ 457b42e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 457b433:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 457b438:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 457b43d:	48 8b 08             	mov    (%rax),%rcx
+ 457b440:	48 ff c1             	inc    %rcx
+ 457b443:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 457b448:	48 89 08             	mov    %rcx,(%rax)
+ 457b44b:	f2 0f 10 48 68       	movsd  0x68(%rax),%xmm1
+ 457b450:	f2 0f 11 4c 24 28    	movsd  %xmm1,0x28(%rsp)
+ 457b456:	48 8b 90 80 00 00 00 	mov    0x80(%rax),%rdx
+ 457b45d:	48 89 d0             	mov    %rdx,%rax
+ 457b460:	e8 3b fa ff ff       	call   457aea0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base>
+ 457b465:	f2 0f 11 44 24 18    	movsd  %xmm0,0x18(%rsp)
+ 457b46b:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 457b471:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457b474:	f2 0f 11 4c 24 48    	movsd  %xmm1,0x48(%rsp)
+ 457b47a:	48 8d 0d 3f 02 00 00 	lea    0x23f(%rip),%rcx        # 457b6c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update.func1@@Base>
+ 457b481:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 457b486:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 457b48b:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 457b490:	f2 0f 11 44 24 48    	movsd  %xmm0,0x48(%rsp)
+ 457b496:	8b 48 50             	mov    0x50(%rax),%ecx
+ 457b499:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 457b49e:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457b4a1:	f2 48 0f 2a ca       	cvtsi2sd %rdx,%xmm1
+ 457b4a6:	f2 0f 51 c9          	sqrtsd %xmm1,%xmm1
+ 457b4aa:	f2 0f 10 54 24 28    	movsd  0x28(%rsp),%xmm2
+ 457b4b0:	f2 0f 5e d1          	divsd  %xmm1,%xmm2
+ 457b4b4:	f2 0f 11 54 24 20    	movsd  %xmm2,0x20(%rsp)
+ 457b4ba:	85 c9                	test   %ecx,%ecx
+ 457b4bc:	75 22                	jne    457b4e0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0xc0>
+ 457b4be:	48 8d 48 50          	lea    0x50(%rax),%rcx
+ 457b4c2:	48 8d 5c 24 38       	lea    0x38(%rsp),%rbx
+ 457b4c7:	48 89 c8             	mov    %rcx,%rax
+ 457b4ca:	e8 b1 d4 9f fd       	call   1f78980 <sync.(*Once).doSlow@@Base>
+ 457b4cf:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 457b4d4:	f2 0f 10 44 24 18    	movsd  0x18(%rsp),%xmm0
+ 457b4da:	f2 0f 10 54 24 20    	movsd  0x20(%rsp),%xmm2
+ 457b4e0:	48 8b 50 48          	mov    0x48(%rax),%rdx
+ 457b4e4:	48 8b 58 38          	mov    0x38(%rax),%rbx
+ 457b4e8:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 457b4ec:	48 83 f9 01          	cmp    $0x1,%rcx
+ 457b4f0:	0f 82 81 01 00 00    	jb     457b677 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x257>
+ 457b4f6:	48 8d 72 ff          	lea    -0x1(%rdx),%rsi
+ 457b4fa:	48 f7 de             	neg    %rsi
+ 457b4fd:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 457b501:	83 e6 08             	and    $0x8,%esi
+ 457b504:	48 8d 3c 33          	lea    (%rbx,%rsi,1),%rdi
+ 457b508:	4c 8b 40 60          	mov    0x60(%rax),%r8
+ 457b50c:	49 ff c8             	dec    %r8
+ 457b50f:	4c 39 c2             	cmp    %r8,%rdx
+ 457b512:	0f 82 57 01 00 00    	jb     457b66f <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x24f>
+ 457b518:	48 ff c9             	dec    %rcx
+ 457b51b:	49 39 c8             	cmp    %rcx,%r8
+ 457b51e:	49 0f 4c c8          	cmovl  %r8,%rcx
+ 457b522:	48 85 f6             	test   %rsi,%rsi
+ 457b525:	74 1d                	je     457b544 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x124>
+ 457b527:	48 c1 e1 03          	shl    $0x3,%rcx
+ 457b52b:	48 89 f8             	mov    %rdi,%rax
+ 457b52e:	e8 6d bf 9d fd       	call   1f574a0 <runtime.memmove@@Base>
+ 457b533:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 457b538:	f2 0f 10 44 24 18    	movsd  0x18(%rsp),%xmm0
+ 457b53e:	f2 0f 10 54 24 20    	movsd  0x20(%rsp),%xmm2
+ 457b544:	48 8b 50 38          	mov    0x38(%rax),%rdx
+ 457b548:	48 83 78 40 00       	cmpq   $0x0,0x40(%rax)
+ 457b54d:	0f 86 12 01 00 00    	jbe    457b665 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x245>
+ 457b553:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 457b557:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 457b55b:	48 8b 50 38          	mov    0x38(%rax),%rdx
+ 457b55f:	90                   	nop
+ 457b560:	48 83 f9 01          	cmp    $0x1,%rcx
+ 457b564:	0f 86 f1 00 00 00    	jbe    457b65b <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x23b>
+ 457b56a:	f2 0f 10 4a 08       	movsd  0x8(%rdx),%xmm1
+ 457b56f:	f2 0f 59 c9          	mulsd  %xmm1,%xmm1
+ 457b573:	0f 10 d8             	movups %xmm0,%xmm3
+ 457b576:	f2 0f 59 c0          	mulsd  %xmm0,%xmm0
+ 457b57a:	f2 0f 5c c8          	subsd  %xmm0,%xmm1
+ 457b57e:	66 48 0f 7e da       	movq   %xmm3,%rdx
+ 457b583:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 457b588:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 457b58d:	f2 0f 10 1d 53 2c f6 	movsd  0xf62c53(%rip),%xmm3        # 54de1e8 <_IO_stdin_used@@Base+0x8ab1e8>
+ 457b594:	00 
+ 457b595:	f2 0f 58 d8          	addsd  %xmm0,%xmm3
+ 457b599:	f2 0f 5e cb          	divsd  %xmm3,%xmm1
+ 457b59d:	31 c9                	xor    %ecx,%ecx
+ 457b59f:	90                   	nop
+ 457b5a0:	eb 17                	jmp    457b5b9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x199>
+ 457b5a2:	0f 10 c2             	movups %xmm2,%xmm0
+ 457b5a5:	f2 0f 59 d1          	mulsd  %xmm1,%xmm2
+ 457b5a9:	f2 0f 58 14 ca       	addsd  (%rdx,%rcx,8),%xmm2
+ 457b5ae:	f2 0f 11 14 ca       	movsd  %xmm2,(%rdx,%rcx,8)
+ 457b5b3:	48 ff c1             	inc    %rcx
+ 457b5b6:	0f 10 d0             	movups %xmm0,%xmm2
+ 457b5b9:	48 83 f9 03          	cmp    $0x3,%rcx
+ 457b5bd:	7d 13                	jge    457b5d2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x1b2>
+ 457b5bf:	31 d2                	xor    %edx,%edx
+ 457b5c1:	eb 2a                	jmp    457b5ed <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x1cd>
+ 457b5c3:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 457b5c7:	48 8b 58 28          	mov    0x28(%rax),%rbx
+ 457b5cb:	48 39 d9             	cmp    %rbx,%rcx
+ 457b5ce:	72 d2                	jb     457b5a2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x182>
+ 457b5d0:	eb 5d                	jmp    457b62f <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x20f>
+ 457b5d2:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 457b5d7:	48 83 c4 58          	add    $0x58,%rsp
+ 457b5db:	c3                   	ret
+ 457b5dc:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 457b5e0:	f2 0f 58 04 d7       	addsd  (%rdi,%rdx,8),%xmm0
+ 457b5e5:	f2 0f 11 04 d7       	movsd  %xmm0,(%rdi,%rdx,8)
+ 457b5ea:	48 ff c2             	inc    %rdx
+ 457b5ed:	48 39 50 60          	cmp    %rdx,0x60(%rax)
+ 457b5f1:	7e d0                	jle    457b5c3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x1a3>
+ 457b5f3:	48 8b 58 40          	mov    0x40(%rax),%rbx
+ 457b5f7:	48 8b 70 38          	mov    0x38(%rax),%rsi
+ 457b5fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457b600:	48 39 da             	cmp    %rbx,%rdx
+ 457b603:	73 4b                	jae    457b650 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x230>
+ 457b605:	f2 0f 10 04 d6       	movsd  (%rsi,%rdx,8),%xmm0
+ 457b60a:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+ 457b60e:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 457b612:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 457b616:	48 39 f1             	cmp    %rsi,%rcx
+ 457b619:	73 2a                	jae    457b645 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x225>
+ 457b61b:	48 8d 34 49          	lea    (%rcx,%rcx,2),%rsi
+ 457b61f:	48 8b 3c f3          	mov    (%rbx,%rsi,8),%rdi
+ 457b623:	48 8b 5c f3 08       	mov    0x8(%rbx,%rsi,8),%rbx
+ 457b628:	48 39 da             	cmp    %rbx,%rdx
+ 457b62b:	72 af                	jb     457b5dc <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x1bc>
+ 457b62d:	eb 0b                	jmp    457b63a <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base+0x21a>
+ 457b62f:	48 89 c8             	mov    %rcx,%rax
+ 457b632:	48 89 d9             	mov    %rbx,%rcx
+ 457b635:	e8 66 b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b63a:	48 89 d0             	mov    %rdx,%rax
+ 457b63d:	48 89 d9             	mov    %rbx,%rcx
+ 457b640:	e8 5b b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b645:	48 89 c8             	mov    %rcx,%rax
+ 457b648:	48 89 f1             	mov    %rsi,%rcx
+ 457b64b:	e8 50 b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b650:	48 89 d0             	mov    %rdx,%rax
+ 457b653:	48 89 d9             	mov    %rbx,%rcx
+ 457b656:	e8 45 b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b65b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 457b660:	e8 3b b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b665:	31 c0                	xor    %eax,%eax
+ 457b667:	48 89 c1             	mov    %rax,%rcx
+ 457b66a:	e8 31 b4 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457b66f:	4c 89 c1             	mov    %r8,%rcx
+ 457b672:	e8 a9 b4 9d fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 457b677:	b8 01 00 00 00       	mov    $0x1,%eax
+ 457b67c:	31 c9                	xor    %ecx,%ecx
+ 457b67e:	66 90                	xchg   %ax,%ax
+ 457b680:	e8 db b4 9d fd       	call   1f56b60 <runtime.panicSliceB@@Base>
+ 457b685:	90                   	nop
+ 457b686:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457b68b:	f2 0f 11 44 24 10    	movsd  %xmm0,0x10(%rsp)
+ 457b691:	e8 ca 8d 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457b696:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457b69b:	f2 0f 10 44 24 10    	movsd  0x10(%rsp),%xmm0
+ 457b6a1:	e9 7a fd ff ff       	jmp    457b420 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base>
+ 457b6a6:	cc                   	int3
+ 457b6a7:	cc                   	int3
+ 457b6a8:	cc                   	int3
+ 457b6a9:	cc                   	int3
+ 457b6aa:	cc                   	int3
+ 457b6ab:	cc                   	int3
+ 457b6ac:	cc                   	int3
+ 457b6ad:	cc                   	int3
+ 457b6ae:	cc                   	int3
+ 457b6af:	cc                   	int3
+ 457b6b0:	cc                   	int3
+ 457b6b1:	cc                   	int3
+ 457b6b2:	cc                   	int3
+ 457b6b3:	cc                   	int3
+ 457b6b4:	cc                   	int3
+ 457b6b5:	cc                   	int3
+ 457b6b6:	cc                   	int3
+ 457b6b7:	cc                   	int3
+ 457b6b8:	cc                   	int3
+ 457b6b9:	cc                   	int3
+ 457b6ba:	cc                   	int3
+ 457b6bb:	cc                   	int3
+ 457b6bc:	cc                   	int3
+ 457b6bd:	cc                   	int3
+ 457b6be:	cc                   	int3
+ 457b6bf:	cc                   	int3

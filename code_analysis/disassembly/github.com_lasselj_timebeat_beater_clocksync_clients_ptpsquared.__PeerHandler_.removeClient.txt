@@ -1,0 +1,180 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient
+# addr 0x4b60220 size 704 (0x2c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b60220 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base>:
+ 4b60220:	4c 8d 64 24 d8       	lea    -0x28(%rsp),%r12
+ 4b60225:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b60229:	0f 86 86 02 00 00    	jbe    4b604b5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0x295>
+ 4b6022f:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+ 4b60236:	48 89 ac 24 a0 00 00 	mov    %rbp,0xa0(%rsp)
+ 4b6023d:	00 
+ 4b6023e:	48 8d ac 24 a0 00 00 	lea    0xa0(%rsp),%rbp
+ 4b60245:	00 
+ 4b60246:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4b6024d:	4c 89 ac 24 98 00 00 	mov    %r13,0x98(%rsp)
+ 4b60254:	00 
+ 4b60255:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4b6025c:	00 
+ 4b6025d:	48 89 9c 24 b8 00 00 	mov    %rbx,0xb8(%rsp)
+ 4b60264:	00 
+ 4b60265:	c6 44 24 3f 00       	movb   $0x0,0x3f(%rsp)
+ 4b6026a:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4b60270:	48 8b 13             	mov    (%rbx),%rdx
+ 4b60273:	48 8b 4b 08          	mov    0x8(%rbx),%rcx
+ 4b60277:	48 89 d3             	mov    %rdx,%rbx
+ 4b6027a:	e8 01 08 00 00       	call   4b60a80 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).IsClient@@Base>
+ 4b6027f:	90                   	nop
+ 4b60280:	84 c0                	test   %al,%al
+ 4b60282:	0f 84 c4 01 00 00    	je     4b6044c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0x22c>
+ 4b60288:	31 c0                	xor    %eax,%eax
+ 4b6028a:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4b60291:	00 
+ 4b60292:	be 01 00 00 00       	mov    $0x1,%esi
+ 4b60297:	f0 0f b1 72 30       	lock cmpxchg %esi,0x30(%rdx)
+ 4b6029c:	40 0f 94 c6          	sete   %sil
+ 4b602a0:	48 8d 42 30          	lea    0x30(%rdx),%rax
+ 4b602a4:	40 84 f6             	test   %sil,%sil
+ 4b602a7:	75 17                	jne    4b602c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0xa0>
+ 4b602a9:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4b602ae:	e8 8d 82 41 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4b602b3:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4b602b8:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4b602bf:	00 
+ 4b602c0:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 4b602c7:	00 00 
+ 4b602c9:	48 8d 35 10 02 00 00 	lea    0x210(%rip),%rsi        # 4b604e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient.func1@@Base>
+ 4b602d0:	48 89 b4 24 88 00 00 	mov    %rsi,0x88(%rsp)
+ 4b602d7:	00 
+ 4b602d8:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 4b602df:	00 
+ 4b602e0:	48 8d b4 24 88 00 00 	lea    0x88(%rsp),%rsi
+ 4b602e7:	00 
+ 4b602e8:	48 89 b4 24 98 00 00 	mov    %rsi,0x98(%rsp)
+ 4b602ef:	00 
+ 4b602f0:	c6 44 24 3f 01       	movb   $0x1,0x3f(%rsp)
+ 4b602f5:	48 8b 72 20          	mov    0x20(%rdx),%rsi
+ 4b602f9:	48 8b 5e 20          	mov    0x20(%rsi),%rbx
+ 4b602fd:	48 8b b4 24 b8 00 00 	mov    0xb8(%rsp),%rsi
+ 4b60304:	00 
+ 4b60305:	48 8b 0e             	mov    (%rsi),%rcx
+ 4b60308:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+ 4b6030c:	48 8d 05 cd ef dd 00 	lea    0xddefcd(%rip),%rax        # 593f2e0 <type:m80sCF9S@@Base>
+ 4b60313:	e8 e8 62 39 fd       	call   1ef6600 <runtime.mapdelete_faststr@@Base>
+ 4b60318:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4b6031f:	00 
+ 4b60320:	80 7a 38 00          	cmpb   $0x0,0x38(%rdx)
+ 4b60324:	74 7a                	je     4b603a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0x180>
+ 4b60326:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 4b6032d:	00 
+ 4b6032e:	48 8b 1a             	mov    (%rdx),%rbx
+ 4b60331:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4b60335:	48 8d 44 24 40       	lea    0x40(%rsp),%rax
+ 4b6033a:	e8 81 a5 3d fd       	call   1f3a8c0 <runtime.stringtoslicebyte@@Base>
+ 4b6033f:	90                   	nop
+ 4b60340:	48 8b 3d 01 c5 2c 03 	mov    0x32cc501(%rip),%rdi        # 7e2c848 <github.com/mr-tron/base58/base58.BTCAlphabet@@Base>
+ 4b60347:	e8 94 18 a9 ff       	call   45f1be0 <github.com/mr-tron/base58/base58.FastBase58EncodingAlphabet@@Base>
+ 4b6034c:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 4b60352:	e8 09 da 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b60357:	48 8d 15 42 e3 c4 00 	lea    0xc4e342(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4b6035e:	48 89 54 24 78       	mov    %rdx,0x78(%rsp)
+ 4b60363:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4b6036a:	00 
+ 4b6036b:	48 8b 1d ce ee 2c 03 	mov    0x32ceece(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b60372:	48 8d 05 a7 4e 3a 01 	lea    0x13a4ea7(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b60379:	48 8d 0d 8c 3a 26 00 	lea    0x263a8c(%rip),%rcx        # 4dc3e0c <_IO_stdin_used@@Base+0x190e0c>
+ 4b60380:	bf 13 00 00 00       	mov    $0x13,%edi
+ 4b60385:	48 8d 74 24 78       	lea    0x78(%rsp),%rsi
+ 4b6038a:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b60390:	4d 89 c1             	mov    %r8,%r9
+ 4b60393:	e8 48 44 49 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4b60398:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4b6039f:	00 
+ 4b603a0:	48 8b 9c 24 b8 00 00 	mov    0xb8(%rsp),%rbx
+ 4b603a7:	00 
+ 4b603a8:	48 83 bb b0 00 00 00 	cmpq   $0x0,0xb0(%rbx)
+ 4b603af:	00 
+ 4b603b0:	74 0d                	je     4b603bf <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0x19f>
+ 4b603b2:	48 8b 42 20          	mov    0x20(%rdx),%rax
+ 4b603b6:	e8 85 26 00 00       	call   4b62a40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).ReleaseSeat@@Base>
+ 4b603bb:	84 c0                	test   %al,%al
+ 4b603bd:	74 32                	je     4b603f1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base+0x1d1>
+ 4b603bf:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4b603c5:	c6 44 24 3f 00       	movb   $0x0,0x3f(%rsp)
+ 4b603ca:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b603d1:	00 
+ 4b603d2:	48 8b 02             	mov    (%rdx),%rax
+ 4b603d5:	ff d0                	call   *%rax
+ 4b603d7:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4b603dc:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 4b603e1:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4b603e8:	00 
+ 4b603e9:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4b603f0:	c3                   	ret
+ 4b603f1:	48 8d 05 08 3f f1 00 	lea    0xf13f08(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 4b603f8:	e8 e3 00 39 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b603fd:	48 c7 40 08 16 00 00 	movq   $0x16,0x8(%rax)
+ 4b60404:	00 
+ 4b60405:	48 8d 0d b1 07 27 00 	lea    0x2707b1(%rip),%rcx        # 4dd0bbd <_IO_stdin_used@@Base+0x19dbbd>
+ 4b6040c:	48 89 08             	mov    %rcx,(%rax)
+ 4b6040f:	48 8d 0d aa da 39 01 	lea    0x139daaa(%rip),%rcx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 4b60416:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4b6041b:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b60420:	c6 44 24 3f 00       	movb   $0x0,0x3f(%rsp)
+ 4b60425:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6042c:	00 
+ 4b6042d:	48 8b 0a             	mov    (%rdx),%rcx
+ 4b60430:	ff d1                	call   *%rcx
+ 4b60432:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 4b60437:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4b6043c:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4b60443:	00 
+ 4b60444:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4b6044b:	c3                   	ret
+ 4b6044c:	48 8d 05 ad 3e f1 00 	lea    0xf13ead(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 4b60453:	e8 88 00 39 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b60458:	48 c7 40 08 27 00 00 	movq   $0x27,0x8(%rax)
+ 4b6045f:	00 
+ 4b60460:	48 8d 0d 52 2f 2b 00 	lea    0x2b2f52(%rip),%rcx        # 4e133b9 <_IO_stdin_used@@Base+0x1e03b9>
+ 4b60467:	48 89 08             	mov    %rcx,(%rax)
+ 4b6046a:	48 8d 0d 4f da 39 01 	lea    0x139da4f(%rip),%rcx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 4b60471:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4b60476:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b6047b:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4b60480:	48 89 c3             	mov    %rax,%rbx
+ 4b60483:	48 89 c8             	mov    %rcx,%rax
+ 4b60486:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4b6048d:	00 
+ 4b6048e:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4b60495:	c3                   	ret
+ 4b60496:	e8 c5 ba 3b fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4b6049b:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 4b604a0:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4b604a5:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4b604ac:	00 
+ 4b604ad:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4b604b4:	c3                   	ret
+ 4b604b5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b604ba:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b604bf:	90                   	nop
+ 4b604c0:	e8 9b 3f 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b604c5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b604ca:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b604cf:	e9 4c fd ff ff       	jmp    4b60220 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).removeClient@@Base>
+ 4b604d4:	cc                   	int3
+ 4b604d5:	cc                   	int3
+ 4b604d6:	cc                   	int3
+ 4b604d7:	cc                   	int3
+ 4b604d8:	cc                   	int3
+ 4b604d9:	cc                   	int3
+ 4b604da:	cc                   	int3
+ 4b604db:	cc                   	int3
+ 4b604dc:	cc                   	int3
+ 4b604dd:	cc                   	int3
+ 4b604de:	cc                   	int3
+ 4b604df:	cc                   	int3

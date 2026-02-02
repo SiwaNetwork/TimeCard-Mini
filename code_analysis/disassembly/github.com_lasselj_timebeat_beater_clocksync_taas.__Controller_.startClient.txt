@@ -1,0 +1,556 @@
+# github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient
+# addr 0x4be8240 size 2272 (0x8e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004be8240 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base>:
+ 4be8240:	4c 8d a4 24 60 fb ff 	lea    -0x4a0(%rsp),%r12
+ 4be8247:	ff 
+ 4be8248:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4be824c:	0f 86 b5 08 00 00    	jbe    4be8b07 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x8c7>
+ 4be8252:	48 81 ec 20 05 00 00 	sub    $0x520,%rsp
+ 4be8259:	48 89 ac 24 18 05 00 	mov    %rbp,0x518(%rsp)
+ 4be8260:	00 
+ 4be8261:	48 8d ac 24 18 05 00 	lea    0x518(%rsp),%rbp
+ 4be8268:	00 
+ 4be8269:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4be8270:	4c 89 ac 24 10 05 00 	mov    %r13,0x510(%rsp)
+ 4be8277:	00 
+ 4be8278:	48 89 84 24 98 05 00 	mov    %rax,0x598(%rsp)
+ 4be827f:	00 
+ 4be8280:	c6 84 24 47 02 00 00 	movb   $0x0,0x247(%rsp)
+ 4be8287:	00 
+ 4be8288:	48 89 c1             	mov    %rax,%rcx
+ 4be828b:	31 c0                	xor    %eax,%eax
+ 4be828d:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4be8292:	f0 0f b1 51 20       	lock cmpxchg %edx,0x20(%rcx)
+ 4be8297:	0f 94 c2             	sete   %dl
+ 4be829a:	48 8d 41 20          	lea    0x20(%rcx),%rax
+ 4be829e:	66 90                	xchg   %ax,%ax
+ 4be82a0:	84 d2                	test   %dl,%dl
+ 4be82a2:	75 15                	jne    4be82b9 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x79>
+ 4be82a4:	48 89 84 24 68 02 00 	mov    %rax,0x268(%rsp)
+ 4be82ab:	00 
+ 4be82ac:	e8 8f 02 39 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4be82b1:	48 8b 84 24 68 02 00 	mov    0x268(%rsp),%rax
+ 4be82b8:	00 
+ 4be82b9:	44 0f 11 bc 24 a8 02 	movups %xmm15,0x2a8(%rsp)
+ 4be82c0:	00 00 
+ 4be82c2:	48 8d 0d 57 08 00 00 	lea    0x857(%rip),%rcx        # 4be8b20 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient.func1@@Base>
+ 4be82c9:	48 89 8c 24 a8 02 00 	mov    %rcx,0x2a8(%rsp)
+ 4be82d0:	00 
+ 4be82d1:	48 89 84 24 b0 02 00 	mov    %rax,0x2b0(%rsp)
+ 4be82d8:	00 
+ 4be82d9:	48 8d 8c 24 a8 02 00 	lea    0x2a8(%rsp),%rcx
+ 4be82e0:	00 
+ 4be82e1:	48 89 8c 24 10 05 00 	mov    %rcx,0x510(%rsp)
+ 4be82e8:	00 
+ 4be82e9:	c6 84 24 47 02 00 00 	movb   $0x1,0x247(%rsp)
+ 4be82f0:	01 
+ 4be82f1:	48 8d 05 a8 dc 0f 01 	lea    0x10fdca8(%rip),%rax        # 5ce5fa0 <type:WfPHcamK@@Base>
+ 4be82f8:	e8 e3 81 30 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4be82fd:	48 89 84 24 78 02 00 	mov    %rax,0x278(%rsp)
+ 4be8304:	00 
+ 4be8305:	83 3d 54 36 29 03 00 	cmpl   $0x0,0x3293654(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be830c:	75 27                	jne    4be8335 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0xf5>
+ 4be830e:	48 89 c7             	mov    %rax,%rdi
+ 4be8311:	48 8d b4 24 28 05 00 	lea    0x528(%rsp),%rsi
+ 4be8318:	00 
+ 4be8319:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4be8320:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4be8325:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4be832a:	e8 ef ed 36 fd       	call   1f5711e <runtime.duffcopy@@Base+0x31e>
+ 4be832f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4be8333:	eb 17                	jmp    4be834c <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x10c>
+ 4be8335:	48 89 c3             	mov    %rax,%rbx
+ 4be8338:	48 8d 8c 24 28 05 00 	lea    0x528(%rsp),%rcx
+ 4be833f:	00 
+ 4be8340:	48 8d 05 59 e2 0f 01 	lea    0x10fe259(%rip),%rax        # 5ce65a0 <type:0MXuieon@@Base>
+ 4be8347:	e8 f4 ea 30 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4be834c:	48 8b 9c 24 28 05 00 	mov    0x528(%rsp),%rbx
+ 4be8353:	00 
+ 4be8354:	48 8b 8c 24 30 05 00 	mov    0x530(%rsp),%rcx
+ 4be835b:	00 
+ 4be835c:	48 8b bc 24 48 05 00 	mov    0x548(%rsp),%rdi
+ 4be8363:	00 
+ 4be8364:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be836b:	00 
+ 4be836c:	e8 af 1a 00 00       	call   4be9e20 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).createVRF@@Base>
+ 4be8371:	83 3d e8 35 29 03 00 	cmpl   $0x0,0x32935e8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8378:	75 0e                	jne    4be8388 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x148>
+ 4be837a:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be8381:	00 
+ 4be8382:	48 89 42 70          	mov    %rax,0x70(%rdx)
+ 4be8386:	eb 14                	jmp    4be839c <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x15c>
+ 4be8388:	48 8b bc 24 78 02 00 	mov    0x278(%rsp),%rdi
+ 4be838f:	00 
+ 4be8390:	48 8d 57 70          	lea    0x70(%rdi),%rdx
+ 4be8394:	48 89 d7             	mov    %rdx,%rdi
+ 4be8397:	e8 64 e2 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be839c:	48 8b 9c 24 38 05 00 	mov    0x538(%rsp),%rbx
+ 4be83a3:	00 
+ 4be83a4:	48 8b 8c 24 40 05 00 	mov    0x540(%rsp),%rcx
+ 4be83ab:	00 
+ 4be83ac:	48 8b bc 24 48 05 00 	mov    0x548(%rsp),%rdi
+ 4be83b3:	00 
+ 4be83b4:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be83bb:	00 
+ 4be83bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4be83c0:	e8 fb 15 00 00       	call   4be99c0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).createVLANiface@@Base>
+ 4be83c5:	83 3d 94 35 29 03 00 	cmpl   $0x0,0x3293594(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be83cc:	75 0e                	jne    4be83dc <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x19c>
+ 4be83ce:	48 8b 8c 24 78 02 00 	mov    0x278(%rsp),%rcx
+ 4be83d5:	00 
+ 4be83d6:	48 89 41 78          	mov    %rax,0x78(%rcx)
+ 4be83da:	eb 14                	jmp    4be83f0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x1b0>
+ 4be83dc:	48 8b bc 24 78 02 00 	mov    0x278(%rsp),%rdi
+ 4be83e3:	00 
+ 4be83e4:	48 8d 4f 78          	lea    0x78(%rdi),%rcx
+ 4be83e8:	48 89 cf             	mov    %rcx,%rdi
+ 4be83eb:	e8 10 e2 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be83f0:	e8 8b 9f 99 ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 4be83f5:	48 8b 9c 24 38 05 00 	mov    0x538(%rsp),%rbx
+ 4be83fc:	00 
+ 4be83fd:	48 8b 8c 24 40 05 00 	mov    0x540(%rsp),%rcx
+ 4be8404:	00 
+ 4be8405:	e8 36 a4 99 ff       	call   4582840 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GetDeviceWithName@@Base>
+ 4be840a:	48 85 c0             	test   %rax,%rax
+ 4be840d:	74 19                	je     4be8428 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x1e8>
+ 4be840f:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be8416:	00 
+ 4be8417:	48 8b 72 78          	mov    0x78(%rdx),%rsi
+ 4be841b:	48 8b 5e 18          	mov    0x18(%rsi),%rbx
+ 4be841f:	48 8b 4e 20          	mov    0x20(%rsi),%rcx
+ 4be8423:	e8 58 e4 99 ff       	call   4586880 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).AddInterfaceNameToDevice@@Base>
+ 4be8428:	48 8b 94 24 50 05 00 	mov    0x550(%rsp),%rdx
+ 4be842f:	00 
+ 4be8430:	48 8b b4 24 58 05 00 	mov    0x558(%rsp),%rsi
+ 4be8437:	00 
+ 4be8438:	48 89 b4 24 60 02 00 	mov    %rsi,0x260(%rsp)
+ 4be843f:	00 
+ 4be8440:	31 c0                	xor    %eax,%eax
+ 4be8442:	eb 22                	jmp    4be8466 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x226>
+ 4be8444:	4c 8b 84 24 a0 02 00 	mov    0x2a0(%rsp),%r8
+ 4be844b:	00 
+ 4be844c:	49 83 c0 10          	add    $0x10,%r8
+ 4be8450:	48 8b 84 24 58 02 00 	mov    0x258(%rsp),%rax
+ 4be8457:	00 
+ 4be8458:	48 ff c0             	inc    %rax
+ 4be845b:	48 8b b4 24 60 02 00 	mov    0x260(%rsp),%rsi
+ 4be8462:	00 
+ 4be8463:	4c 89 c2             	mov    %r8,%rdx
+ 4be8466:	48 39 f0             	cmp    %rsi,%rax
+ 4be8469:	0f 8d f8 00 00 00    	jge    4be8567 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x327>
+ 4be846f:	48 89 84 24 58 02 00 	mov    %rax,0x258(%rsp)
+ 4be8476:	00 
+ 4be8477:	48 89 94 24 a0 02 00 	mov    %rdx,0x2a0(%rsp)
+ 4be847e:	00 
+ 4be847f:	48 8b 1a             	mov    (%rdx),%rbx
+ 4be8482:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4be8486:	48 8b b4 24 78 02 00 	mov    0x278(%rsp),%rsi
+ 4be848d:	00 
+ 4be848e:	48 8b 7e 78          	mov    0x78(%rsi),%rdi
+ 4be8492:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be8499:	00 
+ 4be849a:	e8 21 13 00 00       	call   4be97c0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base>
+ 4be849f:	90                   	nop
+ 4be84a0:	48 85 c0             	test   %rax,%rax
+ 4be84a3:	0f 84 b1 00 00 00    	je     4be855a <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x31a>
+ 4be84a9:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be84b0:	00 
+ 4be84b1:	4c 8b 82 80 00 00 00 	mov    0x80(%rdx),%r8
+ 4be84b8:	48 8b 8a 90 00 00 00 	mov    0x90(%rdx),%rcx
+ 4be84bf:	48 8b 9a 88 00 00 00 	mov    0x88(%rdx),%rbx
+ 4be84c6:	48 ff c3             	inc    %rbx
+ 4be84c9:	48 39 d9             	cmp    %rbx,%rcx
+ 4be84cc:	73 60                	jae    4be852e <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x2ee>
+ 4be84ce:	48 89 84 24 88 02 00 	mov    %rax,0x288(%rsp)
+ 4be84d5:	00 
+ 4be84d6:	4c 89 c0             	mov    %r8,%rax
+ 4be84d9:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4be84de:	48 8d 35 7b bf f5 00 	lea    0xf5bf7b(%rip),%rsi        # 5b44460 <type:p8rWCnM/@@Base>
+ 4be84e5:	e8 d6 df 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4be84ea:	48 8b bc 24 78 02 00 	mov    0x278(%rsp),%rdi
+ 4be84f1:	00 
+ 4be84f2:	48 89 8f 90 00 00 00 	mov    %rcx,0x90(%rdi)
+ 4be84f9:	83 3d 60 34 29 03 00 	cmpl   $0x0,0x3293460(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8500:	75 09                	jne    4be850b <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x2cb>
+ 4be8502:	48 89 87 80 00 00 00 	mov    %rax,0x80(%rdi)
+ 4be8509:	eb 15                	jmp    4be8520 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x2e0>
+ 4be850b:	48 8d 97 80 00 00 00 	lea    0x80(%rdi),%rdx
+ 4be8512:	48 89 f9             	mov    %rdi,%rcx
+ 4be8515:	48 89 d7             	mov    %rdx,%rdi
+ 4be8518:	e8 e3 e0 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be851d:	48 89 cf             	mov    %rcx,%rdi
+ 4be8520:	48 89 fa             	mov    %rdi,%rdx
+ 4be8523:	49 89 c0             	mov    %rax,%r8
+ 4be8526:	48 8b 84 24 88 02 00 	mov    0x288(%rsp),%rax
+ 4be852d:	00 
+ 4be852e:	48 89 9a 88 00 00 00 	mov    %rbx,0x88(%rdx)
+ 4be8535:	49 8d 3c d8          	lea    (%r8,%rbx,8),%rdi
+ 4be8539:	48 8d 7f f8          	lea    -0x8(%rdi),%rdi
+ 4be853d:	83 3d 1c 34 29 03 00 	cmpl   $0x0,0x329341c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8544:	75 0a                	jne    4be8550 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x310>
+ 4be8546:	49 89 44 d8 f8       	mov    %rax,-0x8(%r8,%rbx,8)
+ 4be854b:	e9 f4 fe ff ff       	jmp    4be8444 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x204>
+ 4be8550:	e8 ab e0 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be8555:	e9 ea fe ff ff       	jmp    4be8444 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x204>
+ 4be855a:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be8561:	00 
+ 4be8562:	e9 dd fe ff ff       	jmp    4be8444 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x204>
+ 4be8567:	48 8b 8c 24 78 02 00 	mov    0x278(%rsp),%rcx
+ 4be856e:	00 
+ 4be856f:	48 8b 59 20          	mov    0x20(%rcx),%rbx
+ 4be8573:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be857a:	00 
+ 4be857b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4be8580:	e8 fb 0a 00 00       	call   4be9080 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addDefaultRouteOfLastResortToVrf@@Base>
+ 4be8585:	48 8b 8c 24 78 02 00 	mov    0x278(%rsp),%rcx
+ 4be858c:	00 
+ 4be858d:	48 8b 59 78          	mov    0x78(%rcx),%rbx
+ 4be8591:	48 8b 51 70          	mov    0x70(%rcx),%rdx
+ 4be8595:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be859c:	00 
+ 4be859d:	48 89 d1             	mov    %rdx,%rcx
+ 4be85a0:	e8 bb 10 00 00       	call   4be9660 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).attachVlanToVrf@@Base>
+ 4be85a5:	48 8b 8c 24 68 05 00 	mov    0x568(%rsp),%rcx
+ 4be85ac:	00 
+ 4be85ad:	48 8b 94 24 70 05 00 	mov    0x570(%rsp),%rdx
+ 4be85b4:	00 
+ 4be85b5:	48 89 94 24 60 02 00 	mov    %rdx,0x260(%rsp)
+ 4be85bc:	00 
+ 4be85bd:	31 c0                	xor    %eax,%eax
+ 4be85bf:	90                   	nop
+ 4be85c0:	eb 1f                	jmp    4be85e1 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x3a1>
+ 4be85c2:	48 8b 8c 24 a0 02 00 	mov    0x2a0(%rsp),%rcx
+ 4be85c9:	00 
+ 4be85ca:	48 83 c1 10          	add    $0x10,%rcx
+ 4be85ce:	48 8b 84 24 58 02 00 	mov    0x258(%rsp),%rax
+ 4be85d5:	00 
+ 4be85d6:	48 ff c0             	inc    %rax
+ 4be85d9:	48 8b 94 24 60 02 00 	mov    0x260(%rsp),%rdx
+ 4be85e0:	00 
+ 4be85e1:	48 39 d0             	cmp    %rdx,%rax
+ 4be85e4:	0f 8d fd 00 00 00    	jge    4be86e7 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x4a7>
+ 4be85ea:	48 89 84 24 58 02 00 	mov    %rax,0x258(%rsp)
+ 4be85f1:	00 
+ 4be85f2:	48 89 8c 24 a0 02 00 	mov    %rcx,0x2a0(%rsp)
+ 4be85f9:	00 
+ 4be85fa:	48 8b 19             	mov    (%rcx),%rbx
+ 4be85fd:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4be8601:	48 8b b4 24 78 02 00 	mov    0x278(%rsp),%rsi
+ 4be8608:	00 
+ 4be8609:	48 8b 7e 70          	mov    0x70(%rsi),%rdi
+ 4be860d:	48 8b 84 24 98 05 00 	mov    0x598(%rsp),%rax
+ 4be8614:	00 
+ 4be8615:	48 89 d1             	mov    %rdx,%rcx
+ 4be8618:	e8 23 0c 00 00       	call   4be9240 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addStaticRouteToVrf@@Base>
+ 4be861d:	0f 1f 00             	nopl   (%rax)
+ 4be8620:	48 85 c0             	test   %rax,%rax
+ 4be8623:	0f 84 b1 00 00 00    	je     4be86da <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x49a>
+ 4be8629:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be8630:	00 
+ 4be8631:	4c 8b 82 98 00 00 00 	mov    0x98(%rdx),%r8
+ 4be8638:	48 8b 8a a8 00 00 00 	mov    0xa8(%rdx),%rcx
+ 4be863f:	48 8b 9a a0 00 00 00 	mov    0xa0(%rdx),%rbx
+ 4be8646:	48 ff c3             	inc    %rbx
+ 4be8649:	48 39 d9             	cmp    %rbx,%rcx
+ 4be864c:	73 60                	jae    4be86ae <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x46e>
+ 4be864e:	48 89 84 24 80 02 00 	mov    %rax,0x280(%rsp)
+ 4be8655:	00 
+ 4be8656:	4c 89 c0             	mov    %r8,%rax
+ 4be8659:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4be865e:	48 8d 35 9b be f5 00 	lea    0xf5be9b(%rip),%rsi        # 5b44500 <type:XXHOqysT@@Base>
+ 4be8665:	e8 56 de 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4be866a:	48 8b bc 24 78 02 00 	mov    0x278(%rsp),%rdi
+ 4be8671:	00 
+ 4be8672:	48 89 8f a8 00 00 00 	mov    %rcx,0xa8(%rdi)
+ 4be8679:	83 3d e0 32 29 03 00 	cmpl   $0x0,0x32932e0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8680:	75 09                	jne    4be868b <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x44b>
+ 4be8682:	48 89 87 98 00 00 00 	mov    %rax,0x98(%rdi)
+ 4be8689:	eb 15                	jmp    4be86a0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x460>
+ 4be868b:	48 8d 97 98 00 00 00 	lea    0x98(%rdi),%rdx
+ 4be8692:	48 89 f9             	mov    %rdi,%rcx
+ 4be8695:	48 89 d7             	mov    %rdx,%rdi
+ 4be8698:	e8 63 df 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be869d:	48 89 cf             	mov    %rcx,%rdi
+ 4be86a0:	48 89 fa             	mov    %rdi,%rdx
+ 4be86a3:	49 89 c0             	mov    %rax,%r8
+ 4be86a6:	48 8b 84 24 80 02 00 	mov    0x280(%rsp),%rax
+ 4be86ad:	00 
+ 4be86ae:	48 89 9a a0 00 00 00 	mov    %rbx,0xa0(%rdx)
+ 4be86b5:	49 8d 3c d8          	lea    (%r8,%rbx,8),%rdi
+ 4be86b9:	48 8d 7f f8          	lea    -0x8(%rdi),%rdi
+ 4be86bd:	83 3d 9c 32 29 03 00 	cmpl   $0x0,0x329329c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be86c4:	75 0a                	jne    4be86d0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x490>
+ 4be86c6:	49 89 44 d8 f8       	mov    %rax,-0x8(%r8,%rbx,8)
+ 4be86cb:	e9 f2 fe ff ff       	jmp    4be85c2 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x382>
+ 4be86d0:	e8 2b df 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be86d5:	e9 e8 fe ff ff       	jmp    4be85c2 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x382>
+ 4be86da:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be86e1:	00 
+ 4be86e2:	e9 db fe ff ff       	jmp    4be85c2 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x382>
+ 4be86e7:	48 8b 94 24 80 05 00 	mov    0x580(%rsp),%rdx
+ 4be86ee:	00 
+ 4be86ef:	4c 8b 84 24 88 05 00 	mov    0x588(%rsp),%r8
+ 4be86f6:	00 
+ 4be86f7:	4c 89 84 24 60 02 00 	mov    %r8,0x260(%rsp)
+ 4be86fe:	00 
+ 4be86ff:	31 c0                	xor    %eax,%eax
+ 4be8701:	eb 25                	jmp    4be8728 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x4e8>
+ 4be8703:	4c 8b 8c 24 a0 02 00 	mov    0x2a0(%rsp),%r9
+ 4be870a:	00 
+ 4be870b:	49 81 c1 28 02 00 00 	add    $0x228,%r9
+ 4be8712:	48 8b 84 24 58 02 00 	mov    0x258(%rsp),%rax
+ 4be8719:	00 
+ 4be871a:	48 ff c0             	inc    %rax
+ 4be871d:	4c 8b 84 24 60 02 00 	mov    0x260(%rsp),%r8
+ 4be8724:	00 
+ 4be8725:	4c 89 ca             	mov    %r9,%rdx
+ 4be8728:	4c 39 c0             	cmp    %r8,%rax
+ 4be872b:	0f 8d 4a 03 00 00    	jge    4be8a7b <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x83b>
+ 4be8731:	48 89 84 24 58 02 00 	mov    %rax,0x258(%rsp)
+ 4be8738:	00 
+ 4be8739:	48 89 94 24 a0 02 00 	mov    %rdx,0x2a0(%rsp)
+ 4be8740:	00 
+ 4be8741:	48 8b 0a             	mov    (%rdx),%rcx
+ 4be8744:	48 89 8c 24 e8 02 00 	mov    %rcx,0x2e8(%rsp)
+ 4be874b:	00 
+ 4be874c:	48 8d 72 08          	lea    0x8(%rdx),%rsi
+ 4be8750:	48 8d bc 24 f0 02 00 	lea    0x2f0(%rsp),%rdi
+ 4be8757:	00 
+ 4be8758:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 4be875f:	00 
+ 4be8760:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4be8765:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4be876a:	e8 35 e8 36 fd       	call   1f56fa4 <runtime.duffcopy@@Base+0x1a4>
+ 4be876f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4be8773:	44 0f 11 bc 24 b8 02 	movups %xmm15,0x2b8(%rsp)
+ 4be877a:	00 00 
+ 4be877c:	48 8b 84 24 28 05 00 	mov    0x528(%rsp),%rax
+ 4be8783:	00 
+ 4be8784:	48 8b 9c 24 30 05 00 	mov    0x530(%rsp),%rbx
+ 4be878b:	00 
+ 4be878c:	e8 cf 55 30 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4be8791:	48 8d 0d 08 5f bc 00 	lea    0xbc5f08(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4be8798:	48 89 8c 24 b8 02 00 	mov    %rcx,0x2b8(%rsp)
+ 4be879f:	00 
+ 4be87a0:	48 89 84 24 c0 02 00 	mov    %rax,0x2c0(%rsp)
+ 4be87a7:	00 
+ 4be87a8:	48 8d 05 b3 a8 04 00 	lea    0x4a8b3(%rip),%rax        # 4c33062 <_IO_stdin_used@@Base+0x62>
+ 4be87af:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4be87b4:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4be87b9:	48 89 fe             	mov    %rdi,%rsi
+ 4be87bc:	48 8d 8c 24 b8 02 00 	lea    0x2b8(%rsp),%rcx
+ 4be87c3:	00 
+ 4be87c4:	e8 37 c1 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4be87c9:	48 89 84 24 98 02 00 	mov    %rax,0x298(%rsp)
+ 4be87d0:	00 
+ 4be87d1:	48 89 9c 24 50 02 00 	mov    %rbx,0x250(%rsp)
+ 4be87d8:	00 
+ 4be87d9:	44 0f 11 bc 24 c8 02 	movups %xmm15,0x2c8(%rsp)
+ 4be87e0:	00 00 
+ 4be87e2:	44 0f 11 bc 24 d8 02 	movups %xmm15,0x2d8(%rsp)
+ 4be87e9:	00 00 
+ 4be87eb:	48 8b 8c 24 28 05 00 	mov    0x528(%rsp),%rcx
+ 4be87f2:	00 
+ 4be87f3:	48 8b 94 24 30 05 00 	mov    0x530(%rsp),%rdx
+ 4be87fa:	00 
+ 4be87fb:	48 89 c8             	mov    %rcx,%rax
+ 4be87fe:	48 89 d3             	mov    %rdx,%rbx
+ 4be8801:	e8 5a 55 30 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4be8806:	48 8d 0d 93 5e bc 00 	lea    0xbc5e93(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4be880d:	48 89 8c 24 c8 02 00 	mov    %rcx,0x2c8(%rsp)
+ 4be8814:	00 
+ 4be8815:	48 89 84 24 d0 02 00 	mov    %rax,0x2d0(%rsp)
+ 4be881c:	00 
+ 4be881d:	0f b6 94 24 f9 02 00 	movzbl 0x2f9(%rsp),%edx
+ 4be8824:	00 
+ 4be8825:	4c 8d 05 34 61 bc 00 	lea    0xbc6134(%rip),%r8        # 57ae960 <type:uint8@@Base>
+ 4be882c:	4c 89 84 24 d8 02 00 	mov    %r8,0x2d8(%rsp)
+ 4be8833:	00 
+ 4be8834:	4c 8d 0d e5 38 08 03 	lea    0x30838e5(%rip),%r9        # 7c6c120 <runtime.staticuint64s@@Base>
+ 4be883b:	49 8d 14 d1          	lea    (%r9,%rdx,8),%rdx
+ 4be883f:	48 89 94 24 e0 02 00 	mov    %rdx,0x2e0(%rsp)
+ 4be8846:	00 
+ 4be8847:	48 8d 05 7e e1 04 00 	lea    0x4e17e(%rip),%rax        # 4c369cc <_IO_stdin_used@@Base+0x39cc>
+ 4be884e:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 4be8853:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4be8858:	48 89 fe             	mov    %rdi,%rsi
+ 4be885b:	48 8d 8c 24 c8 02 00 	lea    0x2c8(%rsp),%rcx
+ 4be8862:	00 
+ 4be8863:	e8 98 c0 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4be8868:	48 89 84 24 90 02 00 	mov    %rax,0x290(%rsp)
+ 4be886f:	00 
+ 4be8870:	48 89 9c 24 48 02 00 	mov    %rbx,0x248(%rsp)
+ 4be8877:	00 
+ 4be8878:	48 8d 05 21 d8 0f 01 	lea    0x10fd821(%rip),%rax        # 5ce60a0 <type:mprUXbfj@@Base>
+ 4be887f:	90                   	nop
+ 4be8880:	e8 5b 7c 30 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4be8885:	48 8b 8c 24 50 02 00 	mov    0x250(%rsp),%rcx
+ 4be888c:	00 
+ 4be888d:	48 89 48 20          	mov    %rcx,0x20(%rax)
+ 4be8891:	83 3d c8 30 29 03 00 	cmpl   $0x0,0x32930c8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8898:	75 0e                	jne    4be88a8 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x668>
+ 4be889a:	48 8b 94 24 98 02 00 	mov    0x298(%rsp),%rdx
+ 4be88a1:	00 
+ 4be88a2:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4be88a6:	eb 11                	jmp    4be88b9 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x679>
+ 4be88a8:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 4be88ac:	48 8b 94 24 98 02 00 	mov    0x298(%rsp),%rdx
+ 4be88b3:	00 
+ 4be88b4:	e8 67 de 36 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4be88b9:	48 c7 40 10 02 00 00 	movq   $0x2,0x10(%rax)
+ 4be88c0:	00 
+ 4be88c1:	48 8b 15 58 90 da 02 	mov    0x2da9058(%rip),%rdx        # 7991920 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.OriginType@@Base+0x20>
+ 4be88c8:	4c 8b 05 59 90 da 02 	mov    0x2da9059(%rip),%r8        # 7991928 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.OriginType@@Base+0x28>
+ 4be88cf:	4c 89 40 08          	mov    %r8,0x8(%rax)
+ 4be88d3:	83 3d 86 30 29 03 00 	cmpl   $0x0,0x3293086(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be88da:	75 06                	jne    4be88e2 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x6a2>
+ 4be88dc:	48 89 10             	mov    %rdx,(%rax)
+ 4be88df:	90                   	nop
+ 4be88e0:	eb 08                	jmp    4be88ea <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x6aa>
+ 4be88e2:	48 89 c7             	mov    %rax,%rdi
+ 4be88e5:	e8 36 de 36 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4be88ea:	48 8b 94 24 48 05 00 	mov    0x548(%rsp),%rdx
+ 4be88f1:	00 
+ 4be88f2:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 4be88f6:	48 8b 94 24 38 05 00 	mov    0x538(%rsp),%rdx
+ 4be88fd:	00 
+ 4be88fe:	4c 8b 84 24 40 05 00 	mov    0x540(%rsp),%r8
+ 4be8905:	00 
+ 4be8906:	4c 89 40 38          	mov    %r8,0x38(%rax)
+ 4be890a:	83 3d 4f 30 29 03 00 	cmpl   $0x0,0x329304f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8911:	75 06                	jne    4be8919 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x6d9>
+ 4be8913:	48 89 50 30          	mov    %rdx,0x30(%rax)
+ 4be8917:	eb 0c                	jmp    4be8925 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x6e5>
+ 4be8919:	48 8d 78 30          	lea    0x30(%rax),%rdi
+ 4be891d:	0f 1f 00             	nopl   (%rax)
+ 4be8920:	e8 fb dd 36 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4be8925:	48 8b 94 24 48 02 00 	mov    0x248(%rsp),%rdx
+ 4be892c:	00 
+ 4be892d:	48 89 50 48          	mov    %rdx,0x48(%rax)
+ 4be8931:	83 3d 28 30 29 03 00 	cmpl   $0x0,0x3293028(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8938:	75 0e                	jne    4be8948 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x708>
+ 4be893a:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4be8941:	00 
+ 4be8942:	48 89 50 40          	mov    %rdx,0x40(%rax)
+ 4be8946:	eb 11                	jmp    4be8959 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x719>
+ 4be8948:	48 8d 78 40          	lea    0x40(%rax),%rdi
+ 4be894c:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4be8953:	00 
+ 4be8954:	e8 c7 dd 36 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4be8959:	c6 84 24 21 03 00 00 	movb   $0x1,0x321(%rsp)
+ 4be8960:	01 
+ 4be8961:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be8968:	00 
+ 4be8969:	4c 8b 42 78          	mov    0x78(%rdx),%r8
+ 4be896d:	4d 8b 48 18          	mov    0x18(%r8),%r9
+ 4be8971:	4d 8b 40 20          	mov    0x20(%r8),%r8
+ 4be8975:	4c 89 8c 24 60 03 00 	mov    %r9,0x360(%rsp)
+ 4be897c:	00 
+ 4be897d:	4c 89 84 24 68 03 00 	mov    %r8,0x368(%rsp)
+ 4be8984:	00 
+ 4be8985:	4c 8b 05 b4 37 24 03 	mov    0x32437b4(%rip),%r8        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 4be898c:	4c 8b 8c 24 e8 02 00 	mov    0x2e8(%rsp),%r9
+ 4be8993:	00 
+ 4be8994:	4c 89 0c 24          	mov    %r9,(%rsp)
+ 4be8998:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 4be899d:	48 8d b4 24 f0 02 00 	lea    0x2f0(%rsp),%rsi
+ 4be89a4:	00 
+ 4be89a5:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4be89aa:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4be89af:	e8 f0 e5 36 fd       	call   1f56fa4 <runtime.duffcopy@@Base+0x1a4>
+ 4be89b4:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4be89b8:	48 8d 1d e9 7f 35 01 	lea    0x1357fe9(%rip),%rbx        # 5f409a8 <go:itab.*github.com/lasselj/timebeat/beater/clocksync/taas.TaasOrigin,github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.Origin@@Base>
+ 4be89bf:	48 89 c1             	mov    %rax,%rcx
+ 4be89c2:	4c 89 c0             	mov    %r8,%rax
+ 4be89c5:	e8 76 17 a0 ff       	call   45ea140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).StartTaasSource@@Base>
+ 4be89ca:	48 8b 94 24 78 02 00 	mov    0x278(%rsp),%rdx
+ 4be89d1:	00 
+ 4be89d2:	4c 8b 82 b0 00 00 00 	mov    0xb0(%rdx),%r8
+ 4be89d9:	48 8b 8a c0 00 00 00 	mov    0xc0(%rdx),%rcx
+ 4be89e0:	48 8b 9a b8 00 00 00 	mov    0xb8(%rdx),%rbx
+ 4be89e7:	48 ff c3             	inc    %rbx
+ 4be89ea:	48 39 d9             	cmp    %rbx,%rcx
+ 4be89ed:	73 60                	jae    4be8a4f <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x80f>
+ 4be89ef:	48 89 84 24 70 02 00 	mov    %rax,0x270(%rsp)
+ 4be89f6:	00 
+ 4be89f7:	4c 89 c0             	mov    %r8,%rax
+ 4be89fa:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4be89ff:	48 8d 35 da 8c b7 00 	lea    0xb78cda(%rip),%rsi        # 57616e0 <type:cts+1nkb@@Base>
+ 4be8a06:	e8 b5 da 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4be8a0b:	48 8b bc 24 78 02 00 	mov    0x278(%rsp),%rdi
+ 4be8a12:	00 
+ 4be8a13:	48 89 8f c0 00 00 00 	mov    %rcx,0xc0(%rdi)
+ 4be8a1a:	83 3d 3f 2f 29 03 00 	cmpl   $0x0,0x3292f3f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8a21:	75 09                	jne    4be8a2c <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x7ec>
+ 4be8a23:	48 89 87 b0 00 00 00 	mov    %rax,0xb0(%rdi)
+ 4be8a2a:	eb 15                	jmp    4be8a41 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x801>
+ 4be8a2c:	48 8d 97 b0 00 00 00 	lea    0xb0(%rdi),%rdx
+ 4be8a33:	48 89 f9             	mov    %rdi,%rcx
+ 4be8a36:	48 89 d7             	mov    %rdx,%rdi
+ 4be8a39:	e8 c2 db 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be8a3e:	48 89 cf             	mov    %rcx,%rdi
+ 4be8a41:	48 89 fa             	mov    %rdi,%rdx
+ 4be8a44:	49 89 c0             	mov    %rax,%r8
+ 4be8a47:	48 8b 84 24 70 02 00 	mov    0x270(%rsp),%rax
+ 4be8a4e:	00 
+ 4be8a4f:	48 89 9a b8 00 00 00 	mov    %rbx,0xb8(%rdx)
+ 4be8a56:	49 8d 3c d8          	lea    (%r8,%rbx,8),%rdi
+ 4be8a5a:	48 8d 7f f8          	lea    -0x8(%rdi),%rdi
+ 4be8a5e:	83 3d fb 2e 29 03 00 	cmpl   $0x0,0x3292efb(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8a65:	75 0a                	jne    4be8a71 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x831>
+ 4be8a67:	49 89 44 d8 f8       	mov    %rax,-0x8(%r8,%rbx,8)
+ 4be8a6c:	e9 92 fc ff ff       	jmp    4be8703 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x4c3>
+ 4be8a71:	e8 8a db 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be8a76:	e9 88 fc ff ff       	jmp    4be8703 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x4c3>
+ 4be8a7b:	48 8b 94 24 98 05 00 	mov    0x598(%rsp),%rdx
+ 4be8a82:	00 
+ 4be8a83:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 4be8a87:	48 8b 8c 24 28 05 00 	mov    0x528(%rsp),%rcx
+ 4be8a8e:	00 
+ 4be8a8f:	48 8b bc 24 30 05 00 	mov    0x530(%rsp),%rdi
+ 4be8a96:	00 
+ 4be8a97:	48 8d 05 42 fb d5 00 	lea    0xd5fb42(%rip),%rax        # 59485e0 <type:5V3SFz1U@@Base>
+ 4be8a9e:	66 90                	xchg   %ax,%ax
+ 4be8aa0:	e8 3b d7 30 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4be8aa5:	84 00                	test   %al,(%rax)
+ 4be8aa7:	83 3d b2 2e 29 03 00 	cmpl   $0x0,0x3292eb2(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4be8aae:	75 0d                	jne    4be8abd <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x87d>
+ 4be8ab0:	48 8b 8c 24 78 02 00 	mov    0x278(%rsp),%rcx
+ 4be8ab7:	00 
+ 4be8ab8:	48 89 08             	mov    %rcx,(%rax)
+ 4be8abb:	eb 10                	jmp    4be8acd <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base+0x88d>
+ 4be8abd:	48 89 c7             	mov    %rax,%rdi
+ 4be8ac0:	48 8b 84 24 78 02 00 	mov    0x278(%rsp),%rax
+ 4be8ac7:	00 
+ 4be8ac8:	e8 33 db 36 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4be8acd:	c6 84 24 47 02 00 00 	movb   $0x0,0x247(%rsp)
+ 4be8ad4:	00 
+ 4be8ad5:	48 8b 94 24 10 05 00 	mov    0x510(%rsp),%rdx
+ 4be8adc:	00 
+ 4be8add:	48 8b 02             	mov    (%rdx),%rax
+ 4be8ae0:	ff d0                	call   *%rax
+ 4be8ae2:	48 8b ac 24 18 05 00 	mov    0x518(%rsp),%rbp
+ 4be8ae9:	00 
+ 4be8aea:	48 81 c4 20 05 00 00 	add    $0x520,%rsp
+ 4be8af1:	c3                   	ret
+ 4be8af2:	e8 69 34 33 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4be8af7:	48 8b ac 24 18 05 00 	mov    0x518(%rsp),%rbp
+ 4be8afe:	00 
+ 4be8aff:	48 81 c4 20 05 00 00 	add    $0x520,%rsp
+ 4be8b06:	c3                   	ret
+ 4be8b07:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4be8b0c:	e8 4f b9 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4be8b11:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 4be8b16:	e9 25 f7 ff ff       	jmp    4be8240 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).startClient@@Base>
+ 4be8b1b:	cc                   	int3
+ 4be8b1c:	cc                   	int3
+ 4be8b1d:	cc                   	int3
+ 4be8b1e:	cc                   	int3
+ 4be8b1f:	cc                   	int3

@@ -1,0 +1,130 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock
+# addr 0x45a6da0 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a6da0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base>:
+ 45a6da0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a6da4:	0f 86 47 01 00 00    	jbe    45a6ef1 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x151>
+ 45a6daa:	48 83 ec 48          	sub    $0x48,%rsp
+ 45a6dae:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 45a6db3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 45a6db8:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 45a6dbf:	00 
+ 45a6dc0:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45a6dc5:	48 8b 49 40          	mov    0x40(%rcx),%rcx
+ 45a6dc9:	80 b9 da 00 00 00 00 	cmpb   $0x0,0xda(%rcx)
+ 45a6dd0:	75 75                	jne    45a6e47 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0xa7>
+ 45a6dd2:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 45a6dd7:	48 83 7c 24 68 06    	cmpq   $0x6,0x68(%rsp)
+ 45a6ddd:	75 10                	jne    45a6def <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x4f>
+ 45a6ddf:	81 3a 73 79 73 74    	cmpl   $0x74737973,(%rdx)
+ 45a6de5:	75 08                	jne    45a6def <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x4f>
+ 45a6de7:	66 81 7a 04 65 6d    	cmpw   $0x6d65,0x4(%rdx)
+ 45a6ded:	74 58                	je     45a6e47 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0xa7>
+ 45a6def:	48 89 c8             	mov    %rcx,%rax
+ 45a6df2:	e8 49 0e fe ff       	call   4587c40 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnableHWTSTAMP@@Base>
+ 45a6df7:	48 85 c0             	test   %rax,%rax
+ 45a6dfa:	74 43                	je     45a6e3f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x9f>
+ 45a6dfc:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45a6e00:	48 89 d8             	mov    %rbx,%rax
+ 45a6e03:	ff d1                	call   *%rcx
+ 45a6e05:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 45a6e0c:	00 
+ 45a6e0d:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 45a6e11:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 45a6e16:	48 89 c7             	mov    %rax,%rdi
+ 45a6e19:	48 89 de             	mov    %rbx,%rsi
+ 45a6e1c:	31 c0                	xor    %eax,%eax
+ 45a6e1e:	48 8d 1d ce c3 81 00 	lea    0x81c3ce(%rip),%rbx        # 4dc31f3 <_IO_stdin_used@@Base+0x1901f3>
+ 45a6e25:	b9 13 00 00 00       	mov    $0x13,%ecx
+ 45a6e2a:	e8 f1 34 99 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45a6e2f:	48 89 d9             	mov    %rbx,%rcx
+ 45a6e32:	48 89 c3             	mov    %rax,%rbx
+ 45a6e35:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45a6e3a:	e8 21 02 e6 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45a6e3f:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+ 45a6e46:	00 
+ 45a6e47:	48 8b 48 30          	mov    0x30(%rax),%rcx
+ 45a6e4b:	48 89 c8             	mov    %rcx,%rax
+ 45a6e4e:	e8 cd da fe ff       	call   4594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>
+ 45a6e53:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45a6e57:	48 85 c0             	test   %rax,%rax
+ 45a6e5a:	75 06                	jne    45a6e62 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0xc2>
+ 45a6e5c:	31 db                	xor    %ebx,%ebx
+ 45a6e5e:	31 c0                	xor    %eax,%eax
+ 45a6e60:	eb 05                	jmp    45a6e67 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0xc7>
+ 45a6e62:	e8 d9 07 fe ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 45a6e67:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 45a6e6c:	48 8b 52 40          	mov    0x40(%rdx),%rdx
+ 45a6e70:	48 85 d2             	test   %rdx,%rdx
+ 45a6e73:	75 06                	jne    45a6e7b <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0xdb>
+ 45a6e75:	31 c9                	xor    %ecx,%ecx
+ 45a6e77:	31 d2                	xor    %edx,%edx
+ 45a6e79:	eb 25                	jmp    45a6ea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x100>
+ 45a6e7b:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 45a6e80:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45a6e85:	48 89 d0             	mov    %rdx,%rax
+ 45a6e88:	e8 b3 07 fe ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 45a6e8d:	48 89 d9             	mov    %rbx,%rcx
+ 45a6e90:	48 89 c2             	mov    %rax,%rdx
+ 45a6e93:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45a6e98:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45a6e9d:	0f 1f 00             	nopl   (%rax)
+ 45a6ea0:	48 39 d9             	cmp    %rbx,%rcx
+ 45a6ea3:	74 07                	je     45a6eac <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x10c>
+ 45a6ea5:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45a6eaa:	eb 0e                	jmp    45a6eba <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x11a>
+ 45a6eac:	48 89 d9             	mov    %rbx,%rcx
+ 45a6eaf:	48 89 d3             	mov    %rdx,%rbx
+ 45a6eb2:	e8 69 cc 93 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45a6eb7:	83 f0 01             	xor    $0x1,%eax
+ 45a6eba:	84 c0                	test   %al,%al
+ 45a6ebc:	75 09                	jne    45a6ec7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x127>
+ 45a6ebe:	80 3d 8c de 89 03 00 	cmpb   $0x0,0x389de8c(%rip)        # 7e44d51 <github.com/lasselj/timebeat/config.appConfig@@Base+0x171>
+ 45a6ec5:	74 20                	je     45a6ee7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base+0x147>
+ 45a6ec7:	b8 00 ca 9a 3b       	mov    $0x3b9aca00,%eax
+ 45a6ecc:	e8 0f c3 9a fd       	call   1f531e0 <time.Sleep@@Base>
+ 45a6ed1:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 45a6ed8:	00 
+ 45a6ed9:	48 8b 41 30          	mov    0x30(%rcx),%rax
+ 45a6edd:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 45a6ee2:	e8 19 dd fe ff       	call   4594c00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base>
+ 45a6ee7:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 45a6eec:	48 83 c4 48          	add    $0x48,%rsp
+ 45a6ef0:	c3                   	ret
+ 45a6ef1:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45a6ef6:	e8 65 d5 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a6efb:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 45a6f00:	e9 9b fe ff ff       	jmp    45a6da0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ChangeMasterClock@@Base>
+ 45a6f05:	cc                   	int3
+ 45a6f06:	cc                   	int3
+ 45a6f07:	cc                   	int3
+ 45a6f08:	cc                   	int3
+ 45a6f09:	cc                   	int3
+ 45a6f0a:	cc                   	int3
+ 45a6f0b:	cc                   	int3
+ 45a6f0c:	cc                   	int3
+ 45a6f0d:	cc                   	int3
+ 45a6f0e:	cc                   	int3
+ 45a6f0f:	cc                   	int3
+ 45a6f10:	cc                   	int3
+ 45a6f11:	cc                   	int3
+ 45a6f12:	cc                   	int3
+ 45a6f13:	cc                   	int3
+ 45a6f14:	cc                   	int3
+ 45a6f15:	cc                   	int3
+ 45a6f16:	cc                   	int3
+ 45a6f17:	cc                   	int3
+ 45a6f18:	cc                   	int3
+ 45a6f19:	cc                   	int3
+ 45a6f1a:	cc                   	int3
+ 45a6f1b:	cc                   	int3
+ 45a6f1c:	cc                   	int3
+ 45a6f1d:	cc                   	int3
+ 45a6f1e:	cc                   	int3
+ 45a6f1f:	cc                   	int3

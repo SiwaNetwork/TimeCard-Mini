@@ -1,0 +1,97 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage
+# addr 0x45e26c0 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e26c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage@@Base>:
+ 45e26c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e26c4:	0f 86 fd 00 00 00    	jbe    45e27c7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage@@Base+0x107>
+ 45e26ca:	48 83 ec 40          	sub    $0x40,%rsp
+ 45e26ce:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45e26d3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45e26d8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45e26df:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 45e26e4:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45e26e9:	66 89 5c 24 50       	mov    %bx,0x50(%rsp)
+ 45e26ee:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 45e26f3:	c6 44 24 16 00       	movb   $0x0,0x16(%rsp)
+ 45e26f8:	48 89 c1             	mov    %rax,%rcx
+ 45e26fb:	31 c0                	xor    %eax,%eax
+ 45e26fd:	ba 01 00 00 00       	mov    $0x1,%edx
+ 45e2702:	f0 0f b1 51 20       	lock cmpxchg %edx,0x20(%rcx)
+ 45e2707:	0f 94 c2             	sete   %dl
+ 45e270a:	48 8d 41 20          	lea    0x20(%rcx),%rax
+ 45e270e:	84 d2                	test   %dl,%dl
+ 45e2710:	75 14                	jne    45e2726 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage@@Base+0x66>
+ 45e2712:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45e2717:	e8 24 5e 99 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45e271c:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 45e2721:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45e2726:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 45e272c:	48 8d 15 cd 00 00 00 	lea    0xcd(%rip),%rdx        # 45e2800 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage.func1@@Base>
+ 45e2733:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45e2738:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45e273d:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 45e2742:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45e2747:	c6 44 24 17 01       	movb   $0x1,0x17(%rsp)
+ 45e274c:	48 0f be 41 29       	movsbq 0x29(%rcx),%rax
+ 45e2751:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 45e2754:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+ 45e2758:	f2 0f 10 05 e0 bd ef 	movsd  0xefbde0(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 45e275f:	00 
+ 45e2760:	e8 bb 70 98 fd       	call   1f69820 <math.pow@@Base>
+ 45e2765:	0f b7 44 24 50       	movzwl 0x50(%rsp),%eax
+ 45e276a:	0f b7 c0             	movzwl %ax,%eax
+ 45e276d:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45e2772:	0f b7 09             	movzwl (%rcx),%ecx
+ 45e2775:	f2 0f 10 15 1b bd ef 	movsd  0xefbd1b(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 45e277c:	00 
+ 45e277d:	f2 0f 5e d0          	divsd  %xmm0,%xmm2
+ 45e2781:	f2 48 0f 2c d2       	cvttsd2si %xmm2,%rdx
+ 45e2786:	48 29 d1             	sub    %rdx,%rcx
+ 45e2789:	48 83 c1 fe          	add    $0xfffffffffffffffe,%rcx
+ 45e278d:	48 39 c8             	cmp    %rcx,%rax
+ 45e2790:	0f 9d 44 24 16       	setge  0x16(%rsp)
+ 45e2795:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 45e279a:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45e279f:	48 8b 02             	mov    (%rdx),%rax
+ 45e27a2:	ff d0                	call   *%rax
+ 45e27a4:	0f b6 44 24 16       	movzbl 0x16(%rsp),%eax
+ 45e27a9:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45e27ae:	48 83 c4 40          	add    $0x40,%rsp
+ 45e27b2:	c3                   	ret
+ 45e27b3:	e8 a8 97 93 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45e27b8:	0f b6 44 24 16       	movzbl 0x16(%rsp),%eax
+ 45e27bd:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45e27c2:	48 83 c4 40          	add    $0x40,%rsp
+ 45e27c6:	c3                   	ret
+ 45e27c7:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e27cc:	66 89 5c 24 10       	mov    %bx,0x10(%rsp)
+ 45e27d1:	88 4c 24 12          	mov    %cl,0x12(%rsp)
+ 45e27d5:	e8 86 1c 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e27da:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e27df:	0f b7 5c 24 10       	movzwl 0x10(%rsp),%ebx
+ 45e27e4:	0f b6 4c 24 12       	movzbl 0x12(%rsp),%ecx
+ 45e27e9:	e9 d2 fe ff ff       	jmp    45e26c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).isSequenceNumberValidForFollowUpMessage@@Base>
+ 45e27ee:	cc                   	int3
+ 45e27ef:	cc                   	int3
+ 45e27f0:	cc                   	int3
+ 45e27f1:	cc                   	int3
+ 45e27f2:	cc                   	int3
+ 45e27f3:	cc                   	int3
+ 45e27f4:	cc                   	int3
+ 45e27f5:	cc                   	int3
+ 45e27f6:	cc                   	int3
+ 45e27f7:	cc                   	int3
+ 45e27f8:	cc                   	int3
+ 45e27f9:	cc                   	int3
+ 45e27fa:	cc                   	int3
+ 45e27fb:	cc                   	int3
+ 45e27fc:	cc                   	int3
+ 45e27fd:	cc                   	int3
+ 45e27fe:	cc                   	int3
+ 45e27ff:	cc                   	int3

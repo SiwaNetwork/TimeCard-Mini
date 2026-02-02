@@ -1,0 +1,97 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy
+# addr 0x459fea0 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459fea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base>:
+ 459fea0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459fea4:	0f 86 08 01 00 00    	jbe    459ffb2 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0x112>
+ 459feaa:	48 83 ec 40          	sub    $0x40,%rsp
+ 459feae:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 459feb3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 459feb8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459febf:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 459fec4:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 459fec9:	48 89 c1             	mov    %rax,%rcx
+ 459fecc:	31 c0                	xor    %eax,%eax
+ 459fece:	be 01 00 00 00       	mov    $0x1,%esi
+ 459fed3:	f0 0f b1 71 10       	lock cmpxchg %esi,0x10(%rcx)
+ 459fed8:	40 0f 94 c6          	sete   %sil
+ 459fedc:	48 8d 41 10          	lea    0x10(%rcx),%rax
+ 459fee0:	40 84 f6             	test   %sil,%sil
+ 459fee3:	75 23                	jne    459ff08 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0x68>
+ 459fee5:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459feea:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 459feef:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 459fef4:	e8 47 86 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 459fef9:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 459fefe:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459ff03:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 459ff08:	48 89 de             	mov    %rbx,%rsi
+ 459ff0b:	48 f7 db             	neg    %rbx
+ 459ff0e:	48 85 f6             	test   %rsi,%rsi
+ 459ff11:	48 0f 4c f3          	cmovl  %rbx,%rsi
+ 459ff15:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 459ff1b:	48 8d 1d be 00 00 00 	lea    0xbe(%rip),%rbx        # 459ffe0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy.func1@@Base>
+ 459ff22:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 459ff27:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 459ff2c:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 459ff31:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459ff36:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 459ff3b:	80 79 18 00          	cmpb   $0x0,0x18(%rcx)
+ 459ff3f:	90                   	nop
+ 459ff40:	74 04                	je     459ff46 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xa6>
+ 459ff42:	31 c0                	xor    %eax,%eax
+ 459ff44:	eb 0b                	jmp    459ff51 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xb1>
+ 459ff46:	b8 03 00 00 00       	mov    $0x3,%eax
+ 459ff4b:	eb 04                	jmp    459ff51 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xb1>
+ 459ff4d:	48 8d 47 01          	lea    0x1(%rdi),%rax
+ 459ff51:	48 8b 1d 98 3a 3e 03 	mov    0x33e3a98(%rip),%rbx        # 79839f0 <github.com/lasselj/timebeat/beater/clocksync/definitions.CA_LOOKUP_TABLE@@Base>
+ 459ff58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 459ff5f:	00 
+ 459ff60:	48 39 05 91 3a 3e 03 	cmp    %rax,0x33e3a91(%rip)        # 79839f8 <github.com/lasselj/timebeat/beater/clocksync/definitions.CA_LOOKUP_TABLE@@Base+0x8>
+ 459ff67:	7e 19                	jle    459ff82 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xe2>
+ 459ff69:	48 89 c7             	mov    %rax,%rdi
+ 459ff6c:	48 c1 e0 04          	shl    $0x4,%rax
+ 459ff70:	4c 8b 04 03          	mov    (%rbx,%rax,1),%r8
+ 459ff74:	49 39 f0             	cmp    %rsi,%r8
+ 459ff77:	76 d4                	jbe    459ff4d <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xad>
+ 459ff79:	0f b6 44 03 08       	movzbl 0x8(%rbx,%rax,1),%eax
+ 459ff7e:	66 90                	xchg   %ax,%ax
+ 459ff80:	eb 05                	jmp    459ff87 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base+0xe7>
+ 459ff82:	b8 31 00 00 00       	mov    $0x31,%eax
+ 459ff87:	88 41 01             	mov    %al,0x1(%rcx)
+ 459ff8a:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 459ff8f:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459ff94:	48 8b 02             	mov    (%rdx),%rax
+ 459ff97:	ff d0                	call   *%rax
+ 459ff99:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459ff9e:	48 83 c4 40          	add    $0x40,%rsp
+ 459ffa2:	c3                   	ret
+ 459ffa3:	e8 b8 bf 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 459ffa8:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 459ffad:	48 83 c4 40          	add    $0x40,%rsp
+ 459ffb1:	c3                   	ret
+ 459ffb2:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459ffb7:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459ffbc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459ffc0:	e8 9b 44 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459ffc5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459ffca:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459ffcf:	e9 cc fe ff ff       	jmp    459fea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setClockAccuracy@@Base>
+ 459ffd4:	cc                   	int3
+ 459ffd5:	cc                   	int3
+ 459ffd6:	cc                   	int3
+ 459ffd7:	cc                   	int3
+ 459ffd8:	cc                   	int3
+ 459ffd9:	cc                   	int3
+ 459ffda:	cc                   	int3
+ 459ffdb:	cc                   	int3
+ 459ffdc:	cc                   	int3
+ 459ffdd:	cc                   	int3
+ 459ffde:	cc                   	int3
+ 459ffdf:	cc                   	int3

@@ -1,0 +1,47 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).getPHCDeviceForIf
+# addr 0x4589a80 size 160 (0xa0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004589a80 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).getPHCDeviceForIf@@Base>:
+ 4589a80:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4589a84:	76 71                	jbe    4589af7 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).getPHCDeviceForIf@@Base+0x77>
+ 4589a86:	48 83 ec 28          	sub    $0x28,%rsp
+ 4589a8a:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 4589a8f:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 4589a94:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4589a99:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4589a9e:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4589aa3:	31 db                	xor    %ebx,%ebx
+ 4589aa5:	e8 d6 fe ff ff       	call   4589980 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).rtnl_open@@Base>
+ 4589aaa:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4589aaf:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4589ab4:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4589ab9:	e8 22 01 00 00       	call   4589be0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).queryLink@@Base>
+ 4589abe:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4589ac3:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4589ac8:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4589acd:	e8 6e 08 00 00       	call   458a340 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).getLinkStatus@@Base>
+ 4589ad2:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4589ad7:	90                   	nop
+ 4589ad8:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4589add:	48 8b 09             	mov    (%rcx),%rcx
+ 4589ae0:	48 89 c8             	mov    %rcx,%rax
+ 4589ae3:	e8 18 1e db fd       	call   233b900 <golang.org/x/sys/unix.Close@@Base>
+ 4589ae8:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4589aed:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 4589af2:	48 83 c4 28          	add    $0x28,%rsp
+ 4589af6:	c3                   	ret
+ 4589af7:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4589afc:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4589b01:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4589b06:	e8 55 a9 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4589b0b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4589b10:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4589b15:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4589b1a:	e9 61 ff ff ff       	jmp    4589a80 <github.com/lasselj/timebeat/beater/clocksync/phc.(*NL).getPHCDeviceForIf@@Base>
+ 4589b1f:	cc                   	int3

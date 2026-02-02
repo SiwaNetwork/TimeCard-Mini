@@ -1,0 +1,94 @@
+# Timebeat — конфиг в формате Timebeat/shiwatime (shiwatime_ru.yml).
+# Секция timebeat совместима с shiwatime; лишние ключи игнорируются.
+# Ниже — структура как в shiwatime_ru.yml (подмножество, которое понимает наш timebeat).
+
+timebeat:
+  # Опционально (игнорируются, если не нужны):
+  # license.keyfile: '/etc/shiwatime/timebeat.lic'
+  # config.peerids: '/etc/shiwatime/peerids.json'
+
+  device:
+    port: /dev/ttyS0
+    baud: 9600
+  timepulse:
+    pulse_width_ms: 5
+    tp_idx: 0
+    ant_cable_delay_ns: 0
+    align_to_tow: true
+  servo:
+    algorithm: pid
+    kp: 0.1
+    ki: 0.01
+    kd: 0.001
+    interval: 1s
+
+  clock_sync:
+    adjust_clock: true
+    # step_limit: 15m   # опционально, как в shiwatime
+
+    primary_clocks:
+      # PTP (поддерживается как источник; расширенные опции принимаются, но не используются)
+      # - protocol: ptp
+      #   domain: 0
+      #   interface: eth0
+      #   serve_unicast: true
+      #   serve_multicast: true
+      #   server_only: true
+      #   announce_interval: 1
+      #   sync_interval: 0
+      #   delayrequest_interval: 0
+      #   disable: false
+      #   monitor_only: false
+
+      # PPS
+      # - protocol: pps
+      #   interface: eth0
+      #   pin: 0
+      #   index: 0
+      #   cable_delay: 0
+      #   edge_mode: rising
+      #   linked_device: '/dev/ttyS0'
+      #   monitor_only: false
+
+      # Timecard Mini (GNSS) — основной источник
+      - protocol: timebeat_opentimecard_mini
+        device: '/dev/ttyS0'
+        baud: 115200
+        # card_config: ['gnss1:signal:gps+glonass']  # принимается, не используется
+        # offset: 225000000
+        # atomic: false
+        disable: false
+        monitor_only: false
+
+    secondary_clocks:
+      # NTP
+      - protocol: ntp
+        ip: pool.ntp.org
+        pollinterval: 4s
+        disable: false
+        monitor_only: false
+
+      # Timecard Mini как резерв
+      - protocol: timebeat_opentimecard_mini
+        device: '/dev/ttyS0'
+        baud: 115200
+        disable: false
+        monitor_only: false
+
+# ========== Общие настройки libbeat (как в shiwatime_ru.yml) ==========
+# name: TESTER
+# setup.dashboards.enabled: false
+
+# output.elasticsearch:
+#   hosts: ['90.156.231.174:9200']
+# output.file:
+#   enabled: false
+#   path: "/tmp/shiwatime"
+#   filename: timebeat
+
+# setup.ilm.enabled: true
+# setup.ilm.rollover_alias: "timebeat"
+# logging.to_files: true
+# logging.files.path: /var/log/timebeat
+# logging.files.name: timebeat
+# seccomp.enabled: false

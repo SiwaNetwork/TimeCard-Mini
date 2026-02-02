@@ -1,0 +1,197 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner
+# addr 0x457ee40 size 736 (0x2e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457ee40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base>:
+ 457ee40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457ee44:	0f 86 72 02 00 00    	jbe    457f0bc <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x27c>
+ 457ee4a:	48 83 ec 58          	sub    $0x58,%rsp
+ 457ee4e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 457ee53:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 457ee58:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 457ee5d:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 457ee62:	44 88 84 24 88 00 00 	mov    %r8b,0x88(%rsp)
+ 457ee69:	00 
+ 457ee6a:	48 89 b4 24 80 00 00 	mov    %rsi,0x80(%rsp)
+ 457ee71:	00 
+ 457ee72:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 457ee77:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+ 457ee7c:	48 89 c2             	mov    %rax,%rdx
+ 457ee7f:	31 c0                	xor    %eax,%eax
+ 457ee81:	49 89 d9             	mov    %rbx,%r9
+ 457ee84:	48 8d 1d 15 b2 76 00 	lea    0x76b215(%rip),%rbx        # 4cea0a0 <_IO_stdin_used@@Base+0xb70a0>
+ 457ee8b:	b9 10 00 00 00       	mov    $0x10,%ecx
+ 457ee90:	48 89 d7             	mov    %rdx,%rdi
+ 457ee93:	4c 89 ce             	mov    %r9,%rsi
+ 457ee96:	e8 85 b4 9b fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 457ee9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457eea0:	e8 fb 7e e8 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 457eea5:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 457eeaa:	bb 07 00 00 00       	mov    $0x7,%ebx
+ 457eeaf:	48 89 d9             	mov    %rbx,%rcx
+ 457eeb2:	48 8d 05 47 46 59 01 	lea    0x1594647(%rip),%rax        # 5b13500 <type:vMqycTjW@@Base>
+ 457eeb9:	e8 22 75 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 457eebe:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 457eec3:	48 8d 05 b6 01 7c 01 	lea    0x17c01b6(%rip),%rax        # 5d3f080 <type:9dDCkTMO@@Base>
+ 457eeca:	e8 11 16 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457eecf:	48 c7 00 07 00 00 00 	movq   $0x7,(%rax)
+ 457eed6:	48 c7 40 10 07 00 00 	movq   $0x7,0x10(%rax)
+ 457eedd:	00 
+ 457eede:	48 c7 40 18 07 00 00 	movq   $0x7,0x18(%rax)
+ 457eee5:	00 
+ 457eee6:	83 3d 73 ca 8f 03 00 	cmpl   $0x0,0x38fca73(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457eeed:	75 0b                	jne    457eefa <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0xba>
+ 457eeef:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 457eef4:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 457eef8:	eb 0e                	jmp    457ef08 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0xc8>
+ 457eefa:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 457eefe:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 457ef03:	e8 f8 77 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457ef08:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 457ef0d:	c6 40 78 00          	movb   $0x0,0x78(%rax)
+ 457ef11:	90                   	nop
+ 457ef12:	48 b9 ff ff ff ff ff 	movabs $0x7fffffffffffffff,%rcx
+ 457ef19:	ff ff 7f 
+ 457ef1c:	48 89 48 50          	mov    %rcx,0x50(%rax)
+ 457ef20:	48 b9 00 00 00 00 00 	movabs $0x8000000000000000,%rcx
+ 457ef27:	00 00 80 
+ 457ef2a:	48 89 48 68          	mov    %rcx,0x68(%rax)
+ 457ef2e:	48 c7 40 58 ff ff ff 	movq   $0xffffffffffffffff,0x58(%rax)
+ 457ef35:	ff 
+ 457ef36:	48 c7 40 70 ff ff ff 	movq   $0xffffffffffffffff,0x70(%rax)
+ 457ef3d:	ff 
+ 457ef3e:	48 8d 05 fb 5c 8c 01 	lea    0x18c5cfb(%rip),%rax        # 5e44c40 <type:s5MRo0oV@@Base>
+ 457ef45:	e8 96 15 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457ef4a:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 457ef4f:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 457ef53:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457ef56:	f2 48 0f 2a c1       	cvtsi2sd %rcx,%xmm0
+ 457ef5b:	f2 0f 11 40 18       	movsd  %xmm0,0x18(%rax)
+ 457ef60:	83 3d f9 c9 8f 03 00 	cmpl   $0x0,0x38fc9f9(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457ef67:	75 0b                	jne    457ef74 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x134>
+ 457ef69:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 457ef6e:	48 89 48 30          	mov    %rcx,0x30(%rax)
+ 457ef72:	eb 11                	jmp    457ef85 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x145>
+ 457ef74:	48 8d 78 30          	lea    0x30(%rax),%rdi
+ 457ef78:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 457ef7d:	0f 1f 00             	nopl   (%rax)
+ 457ef80:	e8 7b 77 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457ef85:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 457ef8a:	48 89 48 48          	mov    %rcx,0x48(%rax)
+ 457ef8e:	83 3d cb c9 8f 03 00 	cmpl   $0x0,0x38fc9cb(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457ef95:	75 0b                	jne    457efa2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x162>
+ 457ef97:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 457ef9c:	48 89 48 40          	mov    %rcx,0x40(%rax)
+ 457efa0:	eb 0e                	jmp    457efb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x170>
+ 457efa2:	48 8d 78 40          	lea    0x40(%rax),%rdi
+ 457efa6:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 457efab:	e8 50 77 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457efb0:	0f b6 0d 09 5d 8c 03 	movzbl 0x38c5d09(%rip),%ecx        # 7e44cc0 <github.com/lasselj/timebeat/config.appConfig@@Base+0xe0>
+ 457efb7:	88 48 38             	mov    %cl,0x38(%rax)
+ 457efba:	83 3d 9f c9 8f 03 00 	cmpl   $0x0,0x38fc99f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457efc1:	75 0b                	jne    457efce <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x18e>
+ 457efc3:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 457efc8:	48 89 48 28          	mov    %rcx,0x28(%rax)
+ 457efcc:	eb 0e                	jmp    457efdc <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x19c>
+ 457efce:	48 8d 78 28          	lea    0x28(%rax),%rdi
+ 457efd2:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 457efd7:	e8 24 77 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457efdc:	48 c7 40 68 00 e1 f5 	movq   $0x5f5e100,0x68(%rax)
+ 457efe3:	05 
+ 457efe4:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 457efeb:	00 
+ 457efec:	48 89 88 80 00 00 00 	mov    %rcx,0x80(%rax)
+ 457eff3:	c6 40 60 00          	movb   $0x0,0x60(%rax)
+ 457eff7:	c6 80 88 00 00 00 00 	movb   $0x0,0x88(%rax)
+ 457effe:	0f b6 8c 24 88 00 00 	movzbl 0x88(%rsp),%ecx
+ 457f005:	00 
+ 457f006:	88 88 89 00 00 00    	mov    %cl,0x89(%rax)
+ 457f00c:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 457f011:	48 85 c9             	test   %rcx,%rcx
+ 457f014:	74 04                	je     457f01a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x1da>
+ 457f016:	48 89 48 58          	mov    %rcx,0x58(%rax)
+ 457f01a:	80 b8 88 00 00 00 00 	cmpb   $0x0,0x88(%rax)
+ 457f021:	74 08                	je     457f02b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x1eb>
+ 457f023:	48 8b 48 28          	mov    0x28(%rax),%rcx
+ 457f027:	c6 41 78 01          	movb   $0x1,0x78(%rcx)
+ 457f02b:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 457f030:	0f b6 58 60          	movzbl 0x60(%rax),%ebx
+ 457f034:	e8 27 01 00 00       	call   457f160 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).UpdatePPS@@Base>
+ 457f039:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 457f03e:	80 b8 89 00 00 00 00 	cmpb   $0x0,0x89(%rax)
+ 457f045:	74 6b                	je     457f0b2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x272>
+ 457f047:	48 8b 48 20          	mov    0x20(%rax),%rcx
+ 457f04b:	f2 0f 10 11          	movsd  (%rcx),%xmm2
+ 457f04f:	f2 0f 10 59 08       	movsd  0x8(%rcx),%xmm3
+ 457f054:	f2 0f 10 61 10       	movsd  0x10(%rcx),%xmm4
+ 457f059:	f2 0f 10 05 ff f1 f5 	movsd  0xf5f1ff(%rip),%xmm0        # 54de260 <_IO_stdin_used@@Base+0x8ab260>
+ 457f060:	00 
+ 457f061:	f2 0f 10 0d 0f f2 f5 	movsd  0xf5f20f(%rip),%xmm1        # 54de278 <_IO_stdin_used@@Base+0x8ab278>
+ 457f068:	00 
+ 457f069:	b8 14 00 00 00       	mov    $0x14,%eax
+ 457f06e:	e8 0d bf ff ff       	call   457af80 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.NewOnlinePIDTuner@@Base>
+ 457f073:	83 3d e6 c8 8f 03 00 	cmpl   $0x0,0x38fc8e6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457f07a:	75 0e                	jne    457f08a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x24a>
+ 457f07c:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 457f081:	48 89 81 90 00 00 00 	mov    %rax,0x90(%rcx)
+ 457f088:	eb 1e                	jmp    457f0a8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base+0x268>
+ 457f08a:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 457f08f:	48 8d 8f 90 00 00 00 	lea    0x90(%rdi),%rcx
+ 457f096:	48 89 fa             	mov    %rdi,%rdx
+ 457f099:	48 89 cf             	mov    %rcx,%rdi
+ 457f09c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457f0a0:	e8 5b 75 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 457f0a5:	48 89 d1             	mov    %rdx,%rcx
+ 457f0a8:	0f b6 51 60          	movzbl 0x60(%rcx),%edx
+ 457f0ac:	88 50 78             	mov    %dl,0x78(%rax)
+ 457f0af:	48 89 c8             	mov    %rcx,%rax
+ 457f0b2:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 457f0b7:	48 83 c4 58          	add    $0x58,%rsp
+ 457f0bb:	c3                   	ret
+ 457f0bc:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457f0c1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457f0c6:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 457f0cb:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 457f0d0:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 457f0d5:	44 88 44 24 30       	mov    %r8b,0x30(%rsp)
+ 457f0da:	e8 81 53 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457f0df:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457f0e4:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457f0e9:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457f0ee:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 457f0f3:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 457f0f8:	44 0f b6 44 24 30    	movzbl 0x30(%rsp),%r8d
+ 457f0fe:	66 90                	xchg   %ax,%ax
+ 457f100:	e9 3b fd ff ff       	jmp    457ee40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewAlgoPIDWithTuner@@Base>
+ 457f105:	cc                   	int3
+ 457f106:	cc                   	int3
+ 457f107:	cc                   	int3
+ 457f108:	cc                   	int3
+ 457f109:	cc                   	int3
+ 457f10a:	cc                   	int3
+ 457f10b:	cc                   	int3
+ 457f10c:	cc                   	int3
+ 457f10d:	cc                   	int3
+ 457f10e:	cc                   	int3
+ 457f10f:	cc                   	int3
+ 457f110:	cc                   	int3
+ 457f111:	cc                   	int3
+ 457f112:	cc                   	int3
+ 457f113:	cc                   	int3
+ 457f114:	cc                   	int3
+ 457f115:	cc                   	int3
+ 457f116:	cc                   	int3
+ 457f117:	cc                   	int3
+ 457f118:	cc                   	int3
+ 457f119:	cc                   	int3
+ 457f11a:	cc                   	int3
+ 457f11b:	cc                   	int3
+ 457f11c:	cc                   	int3
+ 457f11d:	cc                   	int3
+ 457f11e:	cc                   	int3
+ 457f11f:	cc                   	int3

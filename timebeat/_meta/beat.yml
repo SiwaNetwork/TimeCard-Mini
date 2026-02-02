@@ -1,0 +1,20 @@
+# Default config for timebeat (used by make update)
+timebeat:
+  device:
+    port: /dev/ttyS0
+    baud: 9600
+  timepulse:
+    pulse_width_ms: 5
+    tp_idx: 0
+    ant_cable_delay_ns: 0
+    align_to_tow: true
+  servo:
+    algorithm: pid
+    kp: 0.1
+    ki: 0.01
+    kd: 0.001
+    interval: 1s
+  clock_sync:
+    adjust_clock: true
+    primary_clocks: []
+    secondary_clocks: []

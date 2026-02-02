@@ -1,0 +1,91 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendUbxNavTimelsMessage
+# addr 0x45b1a60 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045b1a60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendUbxNavTimelsMessage@@Base>:
+ 45b1a60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45b1a64:	0f 86 c5 00 00 00    	jbe    45b1b2f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendUbxNavTimelsMessage@@Base+0xcf>
+ 45b1a6a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45b1a6e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45b1a73:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45b1a78:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45b1a7d:	90                   	nop
+ 45b1a7e:	48 8d 05 3b 0f 56 01 	lea    0x1560f3b(%rip),%rax        # 5b129c0 <type:KRegBVMg@@Base>
+ 45b1a85:	e8 56 ea 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45b1a8a:	0f b7 0d b9 56 66 03 	movzwl 0x36656b9(%rip),%ecx        # 7c1714a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UBX_HEADER@@Base>
+ 45b1a91:	66 89 08             	mov    %cx,(%rax)
+ 45b1a94:	66 c7 40 02 01 26    	movw   $0x2601,0x2(%rax)
+ 45b1a9a:	e8 e1 00 e5 ff       	call   4401b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.(*UBXGenericMessage).ToBytes@@Base>
+ 45b1a9f:	90                   	nop
+ 45b1aa0:	48 85 ff             	test   %rdi,%rdi
+ 45b1aa3:	74 6d                	je     45b1b12 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendUbxNavTimelsMessage@@Base+0xb2>
+ 45b1aa5:	48 8b 4f 18          	mov    0x18(%rdi),%rcx
+ 45b1aa9:	48 89 f0             	mov    %rsi,%rax
+ 45b1aac:	ff d1                	call   *%rcx
+ 45b1aae:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 45b1ab4:	e8 a7 c2 93 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45b1ab9:	48 8d 0d e0 cb 1f 01 	lea    0x11fcbe0(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45b1ac0:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45b1ac5:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45b1aca:	48 8d 05 e2 bd 88 00 	lea    0x88bde2(%rip),%rax        # 4e3d8b3 <_IO_stdin_used@@Base+0x20a8b3>
+ 45b1ad1:	bb 31 00 00 00       	mov    $0x31,%ebx
+ 45b1ad6:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 45b1adb:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45b1ae0:	48 89 fe             	mov    %rdi,%rsi
+ 45b1ae3:	e8 18 2e a4 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45b1ae8:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45b1aed:	48 8b 89 00 01 00 00 	mov    0x100(%rcx),%rcx
+ 45b1af4:	48 89 c2             	mov    %rax,%rdx
+ 45b1af7:	48 89 c8             	mov    %rcx,%rax
+ 45b1afa:	48 89 de             	mov    %rbx,%rsi
+ 45b1afd:	48 89 d3             	mov    %rdx,%rbx
+ 45b1b00:	48 89 f1             	mov    %rsi,%rcx
+ 45b1b03:	e8 58 55 e5 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45b1b08:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45b1b0d:	48 83 c4 40          	add    $0x40,%rsp
+ 45b1b11:	c3                   	ret
+ 45b1b12:	48 89 cf             	mov    %rcx,%rdi
+ 45b1b15:	48 89 d9             	mov    %rbx,%rcx
+ 45b1b18:	48 89 c3             	mov    %rax,%rbx
+ 45b1b1b:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45b1b20:	e8 9b 05 00 00       	call   45b20c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).writeBytesToSerialPort@@Base>
+ 45b1b25:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45b1b2a:	48 83 c4 40          	add    $0x40,%rsp
+ 45b1b2e:	c3                   	ret
+ 45b1b2f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45b1b34:	e8 27 29 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45b1b39:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45b1b3e:	66 90                	xchg   %ax,%ax
+ 45b1b40:	e9 1b ff ff ff       	jmp    45b1a60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).sendUbxNavTimelsMessage@@Base>
+ 45b1b45:	cc                   	int3
+ 45b1b46:	cc                   	int3
+ 45b1b47:	cc                   	int3
+ 45b1b48:	cc                   	int3
+ 45b1b49:	cc                   	int3
+ 45b1b4a:	cc                   	int3
+ 45b1b4b:	cc                   	int3
+ 45b1b4c:	cc                   	int3
+ 45b1b4d:	cc                   	int3
+ 45b1b4e:	cc                   	int3
+ 45b1b4f:	cc                   	int3
+ 45b1b50:	cc                   	int3
+ 45b1b51:	cc                   	int3
+ 45b1b52:	cc                   	int3
+ 45b1b53:	cc                   	int3
+ 45b1b54:	cc                   	int3
+ 45b1b55:	cc                   	int3
+ 45b1b56:	cc                   	int3
+ 45b1b57:	cc                   	int3
+ 45b1b58:	cc                   	int3
+ 45b1b59:	cc                   	int3
+ 45b1b5a:	cc                   	int3
+ 45b1b5b:	cc                   	int3
+ 45b1b5c:	cc                   	int3
+ 45b1b5d:	cc                   	int3
+ 45b1b5e:	cc                   	int3
+ 45b1b5f:	cc                   	int3

@@ -1,0 +1,650 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics
+# addr 0x45e5d00 size 2592 (0xa20)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e5d00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base>:
+ 45e5d00:	4c 8d a4 24 c8 fd ff 	lea    -0x238(%rsp),%r12
+ 45e5d07:	ff 
+ 45e5d08:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45e5d0c:	0f 86 ed 09 00 00    	jbe    45e66ff <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x9ff>
+ 45e5d12:	48 81 ec b8 02 00 00 	sub    $0x2b8,%rsp
+ 45e5d19:	48 89 ac 24 b0 02 00 	mov    %rbp,0x2b0(%rsp)
+ 45e5d20:	00 
+ 45e5d21:	48 8d ac 24 b0 02 00 	lea    0x2b0(%rsp),%rbp
+ 45e5d28:	00 
+ 45e5d29:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45e5d30:	4c 89 ac 24 a8 02 00 	mov    %r13,0x2a8(%rsp)
+ 45e5d37:	00 
+ 45e5d38:	c6 84 24 a7 00 00 00 	movb   $0x0,0xa7(%rsp)
+ 45e5d3f:	00 
+ 45e5d40:	44 0f 11 bc 24 88 01 	movups %xmm15,0x188(%rsp)
+ 45e5d47:	00 00 
+ 45e5d49:	48 8b 15 f0 63 84 03 	mov    0x38463f0(%rip),%rdx        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 45e5d50:	31 c0                	xor    %eax,%eax
+ 45e5d52:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45e5d58:	f0 44 0f b1 82 a8 00 	lock cmpxchg %r8d,0xa8(%rdx)
+ 45e5d5f:	00 00 
+ 45e5d61:	41 0f 94 c0          	sete   %r8b
+ 45e5d65:	45 84 c0             	test   %r8b,%r8b
+ 45e5d68:	75 0c                	jne    45e5d76 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x76>
+ 45e5d6a:	48 8d 82 a8 00 00 00 	lea    0xa8(%rdx),%rax
+ 45e5d71:	e8 ca 27 99 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45e5d76:	48 8b 15 c3 63 84 03 	mov    0x38463c3(%rip),%rdx        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 45e5d7d:	84 02                	test   %al,(%rdx)
+ 45e5d7f:	44 0f 11 bc 24 98 01 	movups %xmm15,0x198(%rsp)
+ 45e5d86:	00 00 
+ 45e5d88:	4c 8d 05 91 09 00 00 	lea    0x991(%rip),%r8        # 45e6720 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics.func1@@Base>
+ 45e5d8f:	4c 89 84 24 98 01 00 	mov    %r8,0x198(%rsp)
+ 45e5d96:	00 
+ 45e5d97:	48 81 c2 a8 00 00 00 	add    $0xa8,%rdx
+ 45e5d9e:	48 89 94 24 a0 01 00 	mov    %rdx,0x1a0(%rsp)
+ 45e5da5:	00 
+ 45e5da6:	48 8d 94 24 98 01 00 	lea    0x198(%rsp),%rdx
+ 45e5dad:	00 
+ 45e5dae:	48 89 94 24 a8 02 00 	mov    %rdx,0x2a8(%rsp)
+ 45e5db5:	00 
+ 45e5db6:	c6 84 24 a7 00 00 00 	movb   $0x1,0xa7(%rsp)
+ 45e5dbd:	01 
+ 45e5dbe:	48 8b 15 7b 63 84 03 	mov    0x384637b(%rip),%rdx        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 45e5dc5:	48 89 94 24 50 01 00 	mov    %rdx,0x150(%rsp)
+ 45e5dcc:	00 
+ 45e5dcd:	48 8b 9c 24 88 01 00 	mov    0x188(%rsp),%rbx
+ 45e5dd4:	00 
+ 45e5dd5:	48 8b 8c 24 90 01 00 	mov    0x190(%rsp),%rcx
+ 45e5ddc:	00 
+ 45e5ddd:	31 c0                	xor    %eax,%eax
+ 45e5ddf:	48 8d 3d f0 d4 64 00 	lea    0x64d4f0(%rip),%rdi        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 45e5de6:	be 02 00 00 00       	mov    $0x2,%esi
+ 45e5deb:	e8 30 45 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e5df0:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e5df7:	00 
+ 45e5df8:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e5dff:	00 
+ 45e5e00:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 45e5e07:	00 
+ 45e5e08:	80 ba 9a 00 00 00 00 	cmpb   $0x0,0x9a(%rdx)
+ 45e5e0f:	74 2b                	je     45e5e3c <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x13c>
+ 45e5e11:	48 89 d9             	mov    %rbx,%rcx
+ 45e5e14:	48 8d 3d 21 1a 80 00 	lea    0x801a21(%rip),%rdi        # 4de783c <_IO_stdin_used@@Base+0x1b483c>
+ 45e5e1b:	be 1c 00 00 00       	mov    $0x1c,%esi
+ 45e5e20:	48 89 c3             	mov    %rax,%rbx
+ 45e5e23:	31 c0                	xor    %eax,%eax
+ 45e5e25:	e8 f6 44 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e5e2a:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e5e31:	00 
+ 45e5e32:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e5e39:	00 
+ 45e5e3a:	eb 29                	jmp    45e5e65 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x165>
+ 45e5e3c:	48 89 d9             	mov    %rbx,%rcx
+ 45e5e3f:	48 8d 3d 39 5c 80 00 	lea    0x805c39(%rip),%rdi        # 4deba7f <_IO_stdin_used@@Base+0x1b8a7f>
+ 45e5e46:	be 1d 00 00 00       	mov    $0x1d,%esi
+ 45e5e4b:	48 89 c3             	mov    %rax,%rbx
+ 45e5e4e:	31 c0                	xor    %eax,%eax
+ 45e5e50:	e8 cb 44 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e5e55:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e5e5c:	00 
+ 45e5e5d:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e5e64:	00 
+ 45e5e65:	48 8b 9c 24 88 01 00 	mov    0x188(%rsp),%rbx
+ 45e5e6c:	00 
+ 45e5e6d:	48 8b 8c 24 90 01 00 	mov    0x190(%rsp),%rcx
+ 45e5e74:	00 
+ 45e5e75:	31 c0                	xor    %eax,%eax
+ 45e5e77:	48 8d 3d 58 d4 64 00 	lea    0x64d458(%rip),%rdi        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 45e5e7e:	be 02 00 00 00       	mov    $0x2,%esi
+ 45e5e83:	e8 98 44 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e5e88:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e5e8f:	00 
+ 45e5e90:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e5e97:	00 
+ 45e5e98:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 45e5e9f:	00 
+ 45e5ea0:	4c 8b 82 a0 00 00 00 	mov    0xa0(%rdx),%r8
+ 45e5ea7:	4d 85 c0             	test   %r8,%r8
+ 45e5eaa:	74 05                	je     45e5eb1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x1b1>
+ 45e5eac:	49 8b 30             	mov    (%r8),%rsi
+ 45e5eaf:	eb 02                	jmp    45e5eb3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x1b3>
+ 45e5eb1:	31 f6                	xor    %esi,%esi
+ 45e5eb3:	48 89 b4 24 c0 00 00 	mov    %rsi,0xc0(%rsp)
+ 45e5eba:	00 
+ 45e5ebb:	48 8d 05 de 87 1c 01 	lea    0x11c87de(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 45e5ec2:	31 db                	xor    %ebx,%ebx
+ 45e5ec4:	48 89 f1             	mov    %rsi,%rcx
+ 45e5ec7:	e8 14 05 95 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45e5ecc:	48 89 84 24 80 01 00 	mov    %rax,0x180(%rsp)
+ 45e5ed3:	00 
+ 45e5ed4:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 45e5edb:	00 
+ 45e5edc:	48 8b 9a a0 00 00 00 	mov    0xa0(%rdx),%rbx
+ 45e5ee3:	48 8d bc 24 48 02 00 	lea    0x248(%rsp),%rdi
+ 45e5eea:	00 
+ 45e5eeb:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45e5eef:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e5ef6:	00 00 
+ 45e5ef8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45e5eff:	00 
+ 45e5f00:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45e5f05:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45e5f0a:	e8 bc 0e 97 fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45e5f0f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45e5f13:	48 8d 8c 24 48 02 00 	lea    0x248(%rsp),%rcx
+ 45e5f1a:	00 
+ 45e5f1b:	48 8d 05 5e 23 36 01 	lea    0x136235e(%rip),%rax        # 5948280 <type:MhjCoGsw@@Base>
+ 45e5f22:	e8 99 c7 90 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45e5f27:	48 8b 84 24 80 01 00 	mov    0x180(%rsp),%rax
+ 45e5f2e:	00 
+ 45e5f2f:	31 c9                	xor    %ecx,%ecx
+ 45e5f31:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 45e5f38:	00 
+ 45e5f39:	eb 25                	jmp    45e5f60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x260>
+ 45e5f3b:	48 8d 84 24 48 02 00 	lea    0x248(%rsp),%rax
+ 45e5f42:	00 
+ 45e5f43:	e8 f8 c9 90 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45e5f48:	48 8b 84 24 70 01 00 	mov    0x170(%rsp),%rax
+ 45e5f4f:	00 
+ 45e5f50:	48 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%rcx
+ 45e5f57:	00 
+ 45e5f58:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 45e5f5f:	00 
+ 45e5f60:	4c 8b 84 24 48 02 00 	mov    0x248(%rsp),%r8
+ 45e5f67:	00 
+ 45e5f68:	4d 85 c0             	test   %r8,%r8
+ 45e5f6b:	0f 84 94 00 00 00    	je     45e6005 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x305>
+ 45e5f71:	4d 8b 08             	mov    (%r8),%r9
+ 45e5f74:	4d 8b 40 08          	mov    0x8(%r8),%r8
+ 45e5f78:	48 8d 59 01          	lea    0x1(%rcx),%rbx
+ 45e5f7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e5f80:	48 39 da             	cmp    %rbx,%rdx
+ 45e5f83:	73 37                	jae    45e5fbc <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x2bc>
+ 45e5f85:	4c 89 84 24 a8 00 00 	mov    %r8,0xa8(%rsp)
+ 45e5f8c:	00 
+ 45e5f8d:	4c 89 8c 24 60 01 00 	mov    %r9,0x160(%rsp)
+ 45e5f94:	00 
+ 45e5f95:	48 89 d1             	mov    %rdx,%rcx
+ 45e5f98:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45e5f9d:	48 8d 35 fc 86 1c 01 	lea    0x11c86fc(%rip),%rsi        # 57ae6a0 <type:string@@Base>
+ 45e5fa4:	e8 17 05 95 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 45e5fa9:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 45e5fb0:	00 
+ 45e5fb1:	4c 8b 8c 24 60 01 00 	mov    0x160(%rsp),%r9
+ 45e5fb8:	00 
+ 45e5fb9:	48 89 ca             	mov    %rcx,%rdx
+ 45e5fbc:	48 89 84 24 70 01 00 	mov    %rax,0x170(%rsp)
+ 45e5fc3:	00 
+ 45e5fc4:	48 89 9c 24 b8 00 00 	mov    %rbx,0xb8(%rsp)
+ 45e5fcb:	00 
+ 45e5fcc:	48 89 94 24 c0 00 00 	mov    %rdx,0xc0(%rsp)
+ 45e5fd3:	00 
+ 45e5fd4:	48 8d 4b ff          	lea    -0x1(%rbx),%rcx
+ 45e5fd8:	48 c1 e1 04          	shl    $0x4,%rcx
+ 45e5fdc:	4c 89 44 08 08       	mov    %r8,0x8(%rax,%rcx,1)
+ 45e5fe1:	48 8d 3c 08          	lea    (%rax,%rcx,1),%rdi
+ 45e5fe5:	83 3d 74 59 89 03 00 	cmpl   $0x0,0x3895974(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45e5fec:	75 09                	jne    45e5ff7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x2f7>
+ 45e5fee:	4c 89 0c 08          	mov    %r9,(%rax,%rcx,1)
+ 45e5ff2:	e9 44 ff ff ff       	jmp    45e5f3b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x23b>
+ 45e5ff7:	e8 a4 07 97 fd       	call   1f567a0 <runtime.gcWriteBarrierR9@@Base>
+ 45e5ffc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e6000:	e9 36 ff ff ff       	jmp    45e5f3b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x23b>
+ 45e6005:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 45e600c:	00 
+ 45e600d:	48 89 84 24 78 01 00 	mov    %rax,0x178(%rsp)
+ 45e6014:	00 
+ 45e6015:	48 89 cb             	mov    %rcx,%rbx
+ 45e6018:	48 89 d1             	mov    %rdx,%rcx
+ 45e601b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e6020:	e8 db 7d 90 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 45e6025:	48 89 c3             	mov    %rax,%rbx
+ 45e6028:	48 8d 05 c1 15 95 01 	lea    0x19515c1(%rip),%rax        # 5f375f0 <go:itab.sort.StringSlice,sort.Interface@@Base>
+ 45e602f:	e8 ac d1 97 fd       	call   1f631e0 <sort.Sort@@Base>
+ 45e6034:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 45e603b:	00 
+ 45e603c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e6040:	48 85 d2             	test   %rdx,%rdx
+ 45e6043:	75 06                	jne    45e604b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x34b>
+ 45e6045:	31 c0                	xor    %eax,%eax
+ 45e6047:	31 f6                	xor    %esi,%esi
+ 45e6049:	eb 3f                	jmp    45e608a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x38a>
+ 45e604b:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 45e6052:	00 
+ 45e6053:	48 8b 9a a0 00 00 00 	mov    0xa0(%rdx),%rbx
+ 45e605a:	48 8b b4 24 78 01 00 	mov    0x178(%rsp),%rsi
+ 45e6061:	00 
+ 45e6062:	48 8b 0e             	mov    (%rsi),%rcx
+ 45e6065:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+ 45e6069:	48 8d 05 10 22 36 01 	lea    0x1362210(%rip),%rax        # 5948280 <type:MhjCoGsw@@Base>
+ 45e6070:	e8 4b f9 90 fd       	call   1ef59c0 <runtime.mapaccess1_faststr@@Base>
+ 45e6075:	48 8b 10             	mov    (%rax),%rdx
+ 45e6078:	48 8b 32             	mov    (%rdx),%rsi
+ 45e607b:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 45e607f:	48 89 d0             	mov    %rdx,%rax
+ 45e6082:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 45e6089:	00 
+ 45e608a:	4c 8b 84 24 78 01 00 	mov    0x178(%rsp),%r8
+ 45e6091:	00 
+ 45e6092:	31 c9                	xor    %ecx,%ecx
+ 45e6094:	eb 2a                	jmp    45e60c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x3c0>
+ 45e6096:	4c 8b 84 24 80 01 00 	mov    0x180(%rsp),%r8
+ 45e609d:	00 
+ 45e609e:	49 83 c0 10          	add    $0x10,%r8
+ 45e60a2:	4c 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%r9
+ 45e60a9:	00 
+ 45e60aa:	49 ff c1             	inc    %r9
+ 45e60ad:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 45e60b4:	00 
+ 45e60b5:	48 89 ce             	mov    %rcx,%rsi
+ 45e60b8:	4c 89 c9             	mov    %r9,%rcx
+ 45e60bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e60c0:	48 39 d1             	cmp    %rdx,%rcx
+ 45e60c3:	0f 8d dc 05 00 00    	jge    45e66a5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x9a5>
+ 45e60c9:	48 89 8c 24 c8 00 00 	mov    %rcx,0xc8(%rsp)
+ 45e60d0:	00 
+ 45e60d1:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 45e60d8:	00 
+ 45e60d9:	48 89 b4 24 68 01 00 	mov    %rsi,0x168(%rsp)
+ 45e60e0:	00 
+ 45e60e1:	4c 89 84 24 80 01 00 	mov    %r8,0x180(%rsp)
+ 45e60e8:	00 
+ 45e60e9:	49 8b 08             	mov    (%r8),%rcx
+ 45e60ec:	49 8b 78 08          	mov    0x8(%r8),%rdi
+ 45e60f0:	48 8b 94 24 50 01 00 	mov    0x150(%rsp),%rdx
+ 45e60f7:	00 
+ 45e60f8:	48 8b 9a a0 00 00 00 	mov    0xa0(%rdx),%rbx
+ 45e60ff:	48 8d 05 7a 21 36 01 	lea    0x136217a(%rip),%rax        # 5948280 <type:MhjCoGsw@@Base>
+ 45e6106:	e8 b5 fc 90 fd       	call   1ef5dc0 <runtime.mapaccess2_faststr@@Base>
+ 45e610b:	48 8b 10             	mov    (%rax),%rdx
+ 45e610e:	84 db                	test   %bl,%bl
+ 45e6110:	75 15                	jne    45e6127 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x427>
+ 45e6112:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 45e6119:	00 
+ 45e611a:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 45e6121:	00 
+ 45e6122:	e9 6f ff ff ff       	jmp    45e6096 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x396>
+ 45e6127:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 45e612e:	00 
+ 45e612f:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 45e6133:	48 8b 02             	mov    (%rdx),%rax
+ 45e6136:	48 8b b4 24 b0 00 00 	mov    0xb0(%rsp),%rsi
+ 45e613d:	00 
+ 45e613e:	66 90                	xchg   %ax,%ax
+ 45e6140:	48 39 ce             	cmp    %rcx,%rsi
+ 45e6143:	75 2e                	jne    45e6173 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x473>
+ 45e6145:	48 8b 9c 24 68 01 00 	mov    0x168(%rsp),%rbx
+ 45e614c:	00 
+ 45e614d:	e8 ce d9 8f fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e6152:	84 c0                	test   %al,%al
+ 45e6154:	74 15                	je     45e616b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x46b>
+ 45e6156:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 45e615d:	00 
+ 45e615e:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 45e6165:	00 
+ 45e6166:	e9 e9 00 00 00       	jmp    45e6254 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x554>
+ 45e616b:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e6172:	00 
+ 45e6173:	48 8b 32             	mov    (%rdx),%rsi
+ 45e6176:	48 89 b4 24 68 01 00 	mov    %rsi,0x168(%rsp)
+ 45e617d:	00 
+ 45e617e:	48 8b 7a 08          	mov    0x8(%rdx),%rdi
+ 45e6182:	48 89 bc 24 b0 00 00 	mov    %rdi,0xb0(%rsp)
+ 45e6189:	00 
+ 45e618a:	48 8d 05 5f 0d ef 00 	lea    0xef0d5f(%rip),%rax        # 54d6ef0 <_IO_stdin_used@@Base+0x8a3ef0>
+ 45e6191:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45e6196:	b9 4f 00 00 00       	mov    $0x4f,%ecx
+ 45e619b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e61a0:	e8 3b 20 a2 fd       	call   20081e0 <strings.Repeat@@Base>
+ 45e61a5:	44 0f 11 bc 24 a8 01 	movups %xmm15,0x1a8(%rsp)
+ 45e61ac:	00 00 
+ 45e61ae:	e8 ad 7b 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e61b3:	48 8d 15 e6 84 1c 01 	lea    0x11c84e6(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 45e61ba:	48 89 94 24 a8 01 00 	mov    %rdx,0x1a8(%rsp)
+ 45e61c1:	00 
+ 45e61c2:	48 89 84 24 b0 01 00 	mov    %rax,0x1b0(%rsp)
+ 45e61c9:	00 
+ 45e61ca:	48 8d 05 f8 d3 64 00 	lea    0x64d3f8(%rip),%rax        # 4c335c9 <_IO_stdin_used@@Base+0x5c9>
+ 45e61d1:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 45e61d6:	48 8d 8c 24 a8 01 00 	lea    0x1a8(%rsp),%rcx
+ 45e61dd:	00 
+ 45e61de:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45e61e3:	48 89 fe             	mov    %rdi,%rsi
+ 45e61e6:	e8 15 e7 a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45e61eb:	48 8b 94 24 88 01 00 	mov    0x188(%rsp),%rdx
+ 45e61f2:	00 
+ 45e61f3:	48 8b 8c 24 90 01 00 	mov    0x190(%rsp),%rcx
+ 45e61fa:	00 
+ 45e61fb:	48 89 c7             	mov    %rax,%rdi
+ 45e61fe:	48 89 de             	mov    %rbx,%rsi
+ 45e6201:	31 c0                	xor    %eax,%eax
+ 45e6203:	48 89 d3             	mov    %rdx,%rbx
+ 45e6206:	e8 15 41 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e620b:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e6212:	00 
+ 45e6213:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e621a:	00 
+ 45e621b:	48 89 d9             	mov    %rbx,%rcx
+ 45e621e:	48 8d 3d b1 d0 64 00 	lea    0x64d0b1(%rip),%rdi        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 45e6225:	be 02 00 00 00       	mov    $0x2,%esi
+ 45e622a:	48 89 c3             	mov    %rax,%rbx
+ 45e622d:	31 c0                	xor    %eax,%eax
+ 45e622f:	e8 ec 40 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e6234:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e623b:	00 
+ 45e623c:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e6243:	00 
+ 45e6244:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 45e624b:	00 
+ 45e624c:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 45e6253:	00 
+ 45e6254:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 45e625b:	00 
+ 45e625c:	48 89 8c 24 68 01 00 	mov    %rcx,0x168(%rsp)
+ 45e6263:	00 
+ 45e6264:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e626b:	00 
+ 45e626c:	48 83 7a 18 00       	cmpq   $0x0,0x18(%rdx)
+ 45e6271:	0f 84 4e 01 00 00    	je     45e63c5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x6c5>
+ 45e6277:	48 8d bc 24 f8 01 00 	lea    0x1f8(%rsp),%rdi
+ 45e627e:	00 
+ 45e627f:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 45e6283:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45e6288:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45e628d:	e8 3e 0b 97 fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 45e6292:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45e6296:	48 8b 02             	mov    (%rdx),%rax
+ 45e6299:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 45e629d:	0f 1f 00             	nopl   (%rax)
+ 45e62a0:	e8 bb 7a 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e62a5:	48 8d 0d f4 83 1c 01 	lea    0x11c83f4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e62ac:	48 89 8c 24 f8 01 00 	mov    %rcx,0x1f8(%rsp)
+ 45e62b3:	00 
+ 45e62b4:	48 89 84 24 00 02 00 	mov    %rax,0x200(%rsp)
+ 45e62bb:	00 
+ 45e62bc:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e62c3:	00 
+ 45e62c4:	0f b6 72 20          	movzbl 0x20(%rdx),%esi
+ 45e62c8:	4c 8d 05 91 86 1c 01 	lea    0x11c8691(%rip),%r8        # 57ae960 <type:uint8@@Base>
+ 45e62cf:	4c 89 84 24 08 02 00 	mov    %r8,0x208(%rsp)
+ 45e62d6:	00 
+ 45e62d7:	4c 8d 0d 42 5e 68 03 	lea    0x3685e42(%rip),%r9        # 7c6c120 <runtime.staticuint64s@@Base>
+ 45e62de:	49 8d 34 f1          	lea    (%r9,%rsi,8),%rsi
+ 45e62e2:	48 89 b4 24 10 02 00 	mov    %rsi,0x210(%rsp)
+ 45e62e9:	00 
+ 45e62ea:	48 8b 42 28          	mov    0x28(%rdx),%rax
+ 45e62ee:	48 8b 5a 30          	mov    0x30(%rdx),%rbx
+ 45e62f2:	e8 69 7a 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e62f7:	48 8d 0d a2 83 1c 01 	lea    0x11c83a2(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e62fe:	48 89 8c 24 18 02 00 	mov    %rcx,0x218(%rsp)
+ 45e6305:	00 
+ 45e6306:	48 89 84 24 20 02 00 	mov    %rax,0x220(%rsp)
+ 45e630d:	00 
+ 45e630e:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e6315:	00 
+ 45e6316:	48 8b 42 38          	mov    0x38(%rdx),%rax
+ 45e631a:	48 8b 5a 40          	mov    0x40(%rdx),%rbx
+ 45e631e:	66 90                	xchg   %ax,%ax
+ 45e6320:	e8 3b 7a 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e6325:	48 8d 0d 74 83 1c 01 	lea    0x11c8374(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e632c:	48 89 8c 24 28 02 00 	mov    %rcx,0x228(%rsp)
+ 45e6333:	00 
+ 45e6334:	48 89 84 24 30 02 00 	mov    %rax,0x230(%rsp)
+ 45e633b:	00 
+ 45e633c:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e6343:	00 
+ 45e6344:	48 8b 42 10          	mov    0x10(%rdx),%rax
+ 45e6348:	48 8b 5a 18          	mov    0x18(%rdx),%rbx
+ 45e634c:	e8 0f 7a 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e6351:	48 8d 0d 48 83 1c 01 	lea    0x11c8348(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e6358:	48 89 8c 24 38 02 00 	mov    %rcx,0x238(%rsp)
+ 45e635f:	00 
+ 45e6360:	48 89 84 24 40 02 00 	mov    %rax,0x240(%rsp)
+ 45e6367:	00 
+ 45e6368:	48 8d 05 70 32 89 00 	lea    0x893270(%rip),%rax        # 4e795df <_IO_stdin_used@@Base+0x2465df>
+ 45e636f:	bb 4d 00 00 00       	mov    $0x4d,%ebx
+ 45e6374:	bf 05 00 00 00       	mov    $0x5,%edi
+ 45e6379:	48 89 fe             	mov    %rdi,%rsi
+ 45e637c:	48 8d 8c 24 f8 01 00 	lea    0x1f8(%rsp),%rcx
+ 45e6383:	00 
+ 45e6384:	e8 77 e5 a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45e6389:	48 8b 8c 24 88 01 00 	mov    0x188(%rsp),%rcx
+ 45e6390:	00 
+ 45e6391:	48 8b 94 24 90 01 00 	mov    0x190(%rsp),%rdx
+ 45e6398:	00 
+ 45e6399:	48 89 c7             	mov    %rax,%rdi
+ 45e639c:	48 89 de             	mov    %rbx,%rsi
+ 45e639f:	31 c0                	xor    %eax,%eax
+ 45e63a1:	48 89 cb             	mov    %rcx,%rbx
+ 45e63a4:	48 89 d1             	mov    %rdx,%rcx
+ 45e63a7:	e8 74 3f 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e63ac:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e63b3:	00 
+ 45e63b4:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e63bb:	00 
+ 45e63bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45e63c0:	e9 19 01 00 00       	jmp    45e64de <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x7de>
+ 45e63c5:	44 0f 11 bc 24 b8 01 	movups %xmm15,0x1b8(%rsp)
+ 45e63cc:	00 00 
+ 45e63ce:	44 0f 11 bc 24 c8 01 	movups %xmm15,0x1c8(%rsp)
+ 45e63d5:	00 00 
+ 45e63d7:	44 0f 11 bc 24 d8 01 	movups %xmm15,0x1d8(%rsp)
+ 45e63de:	00 00 
+ 45e63e0:	44 0f 11 bc 24 e8 01 	movups %xmm15,0x1e8(%rsp)
+ 45e63e7:	00 00 
+ 45e63e9:	48 8b 02             	mov    (%rdx),%rax
+ 45e63ec:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 45e63f0:	e8 6b 79 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e63f5:	48 8d 0d a4 82 1c 01 	lea    0x11c82a4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e63fc:	48 89 8c 24 b8 01 00 	mov    %rcx,0x1b8(%rsp)
+ 45e6403:	00 
+ 45e6404:	48 89 84 24 c0 01 00 	mov    %rax,0x1c0(%rsp)
+ 45e640b:	00 
+ 45e640c:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e6413:	00 
+ 45e6414:	0f b6 72 20          	movzbl 0x20(%rdx),%esi
+ 45e6418:	48 8d 3d 41 85 1c 01 	lea    0x11c8541(%rip),%rdi        # 57ae960 <type:uint8@@Base>
+ 45e641f:	48 89 bc 24 c8 01 00 	mov    %rdi,0x1c8(%rsp)
+ 45e6426:	00 
+ 45e6427:	4c 8d 05 f2 5c 68 03 	lea    0x3685cf2(%rip),%r8        # 7c6c120 <runtime.staticuint64s@@Base>
+ 45e642e:	49 8d 34 f0          	lea    (%r8,%rsi,8),%rsi
+ 45e6432:	48 89 b4 24 d0 01 00 	mov    %rsi,0x1d0(%rsp)
+ 45e6439:	00 
+ 45e643a:	48 8b 42 28          	mov    0x28(%rdx),%rax
+ 45e643e:	48 8b 5a 30          	mov    0x30(%rdx),%rbx
+ 45e6442:	e8 19 79 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e6447:	48 8d 0d 52 82 1c 01 	lea    0x11c8252(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e644e:	48 89 8c 24 d8 01 00 	mov    %rcx,0x1d8(%rsp)
+ 45e6455:	00 
+ 45e6456:	48 89 84 24 e0 01 00 	mov    %rax,0x1e0(%rsp)
+ 45e645d:	00 
+ 45e645e:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e6465:	00 
+ 45e6466:	48 8b 42 38          	mov    0x38(%rdx),%rax
+ 45e646a:	48 8b 5a 40          	mov    0x40(%rdx),%rbx
+ 45e646e:	e8 ed 78 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e6473:	48 8d 0d 26 82 1c 01 	lea    0x11c8226(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e647a:	48 89 8c 24 e8 01 00 	mov    %rcx,0x1e8(%rsp)
+ 45e6481:	00 
+ 45e6482:	48 89 84 24 f0 01 00 	mov    %rax,0x1f0(%rsp)
+ 45e6489:	00 
+ 45e648a:	48 8d 05 52 28 87 00 	lea    0x872852(%rip),%rax        # 4e58ce3 <_IO_stdin_used@@Base+0x225ce3>
+ 45e6491:	bb 3a 00 00 00       	mov    $0x3a,%ebx
+ 45e6496:	bf 04 00 00 00       	mov    $0x4,%edi
+ 45e649b:	48 89 fe             	mov    %rdi,%rsi
+ 45e649e:	48 8d 8c 24 b8 01 00 	lea    0x1b8(%rsp),%rcx
+ 45e64a5:	00 
+ 45e64a6:	e8 55 e4 a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45e64ab:	48 8b 8c 24 88 01 00 	mov    0x188(%rsp),%rcx
+ 45e64b2:	00 
+ 45e64b3:	48 8b 94 24 90 01 00 	mov    0x190(%rsp),%rdx
+ 45e64ba:	00 
+ 45e64bb:	48 89 c7             	mov    %rax,%rdi
+ 45e64be:	48 89 de             	mov    %rbx,%rsi
+ 45e64c1:	31 c0                	xor    %eax,%eax
+ 45e64c3:	48 89 cb             	mov    %rcx,%rbx
+ 45e64c6:	48 89 d1             	mov    %rdx,%rcx
+ 45e64c9:	e8 52 3e 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e64ce:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e64d5:	00 
+ 45e64d6:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e64dd:	00 
+ 45e64de:	48 8b b4 24 58 01 00 	mov    0x158(%rsp),%rsi
+ 45e64e5:	00 
+ 45e64e6:	48 8d 56 60          	lea    0x60(%rsi),%rdx
+ 45e64ea:	48 8d bc 24 d0 00 00 	lea    0xd0(%rsp),%rdi
+ 45e64f1:	00 
+ 45e64f2:	48 89 d6             	mov    %rdx,%rsi
+ 45e64f5:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45e64fc:	00 00 
+ 45e64fe:	66 90                	xchg   %ax,%ax
+ 45e6500:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45e6505:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45e650a:	e8 01 0c 97 fd       	call   1f57110 <runtime.duffcopy@@Base+0x310>
+ 45e650f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45e6513:	48 89 e7             	mov    %rsp,%rdi
+ 45e6516:	48 8d b4 24 d0 00 00 	lea    0xd0(%rsp),%rsi
+ 45e651d:	00 
+ 45e651e:	66 90                	xchg   %ax,%ax
+ 45e6520:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45e6525:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45e652a:	e8 e1 0b 97 fd       	call   1f57110 <runtime.duffcopy@@Base+0x310>
+ 45e652f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45e6533:	bb 06 00 00 00       	mov    $0x6,%ebx
+ 45e6538:	48 8d 0d ff e6 67 00 	lea    0x67e6ff(%rip),%rcx        # 4c64c3e <_IO_stdin_used@@Base+0x31c3e>
+ 45e653f:	bf 09 00 00 00       	mov    $0x9,%edi
+ 45e6544:	48 8d 05 3a 72 67 00 	lea    0x67723a(%rip),%rax        # 4c5d785 <_IO_stdin_used@@Base+0x2a785>
+ 45e654b:	e8 90 73 fb ff       	call   459d8e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.FormatPacketStats@@Base>
+ 45e6550:	48 8b 94 24 88 01 00 	mov    0x188(%rsp),%rdx
+ 45e6557:	00 
+ 45e6558:	48 8b 8c 24 90 01 00 	mov    0x190(%rsp),%rcx
+ 45e655f:	00 
+ 45e6560:	48 89 c7             	mov    %rax,%rdi
+ 45e6563:	48 89 de             	mov    %rbx,%rsi
+ 45e6566:	31 c0                	xor    %eax,%eax
+ 45e6568:	48 89 d3             	mov    %rdx,%rbx
+ 45e656b:	e8 b0 3d 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e6570:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e6577:	00 
+ 45e6578:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e657f:	00 
+ 45e6580:	e8 9b 57 9e fd       	call   1fcbd20 <time.Now@@Base>
+ 45e6585:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 45e658c:	00 
+ 45e658d:	48 8b 7a 48          	mov    0x48(%rdx),%rdi
+ 45e6591:	48 8b 72 50          	mov    0x50(%rdx),%rsi
+ 45e6595:	4c 8b 42 58          	mov    0x58(%rdx),%r8
+ 45e6599:	e8 22 50 9e fd       	call   1fcb5c0 <time.Time.Sub@@Base>
+ 45e659e:	48 89 c1             	mov    %rax,%rcx
+ 45e65a1:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 45e65a8:	2f b8 44 
+ 45e65ab:	48 f7 e9             	imul   %rcx
+ 45e65ae:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 45e65b2:	48 89 c8             	mov    %rcx,%rax
+ 45e65b5:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 45e65b9:	48 29 ca             	sub    %rcx,%rdx
+ 45e65bc:	48 69 d2 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%rdx
+ 45e65c3:	49 89 c0             	mov    %rax,%r8
+ 45e65c6:	48 29 d0             	sub    %rdx,%rax
+ 45e65c9:	49 29 c0             	sub    %rax,%r8
+ 45e65cc:	49 83 f8 05          	cmp    $0x5,%r8
+ 45e65d0:	0f 8e 82 00 00 00    	jle    45e6658 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x958>
+ 45e65d6:	4c 89 c0             	mov    %r8,%rax
+ 45e65d9:	e8 22 47 9e fd       	call   1fcad00 <time.Duration.String@@Base>
+ 45e65de:	44 0f 11 bc 24 a8 01 	movups %xmm15,0x1a8(%rsp)
+ 45e65e5:	00 00 
+ 45e65e7:	e8 74 77 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45e65ec:	48 8d 0d ad 80 1c 01 	lea    0x11c80ad(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45e65f3:	48 89 8c 24 a8 01 00 	mov    %rcx,0x1a8(%rsp)
+ 45e65fa:	00 
+ 45e65fb:	48 89 84 24 b0 01 00 	mov    %rax,0x1b0(%rsp)
+ 45e6602:	00 
+ 45e6603:	48 8d 05 0e 8e 82 00 	lea    0x828e0e(%rip),%rax        # 4e0f418 <_IO_stdin_used@@Base+0x1dc418>
+ 45e660a:	bb 26 00 00 00       	mov    $0x26,%ebx
+ 45e660f:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45e6614:	48 89 fe             	mov    %rdi,%rsi
+ 45e6617:	48 8d 8c 24 a8 01 00 	lea    0x1a8(%rsp),%rcx
+ 45e661e:	00 
+ 45e661f:	90                   	nop
+ 45e6620:	e8 db e2 a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45e6625:	48 8b 8c 24 88 01 00 	mov    0x188(%rsp),%rcx
+ 45e662c:	00 
+ 45e662d:	48 8b 94 24 90 01 00 	mov    0x190(%rsp),%rdx
+ 45e6634:	00 
+ 45e6635:	48 89 c7             	mov    %rax,%rdi
+ 45e6638:	48 89 de             	mov    %rbx,%rsi
+ 45e663b:	31 c0                	xor    %eax,%eax
+ 45e663d:	48 89 cb             	mov    %rcx,%rbx
+ 45e6640:	48 89 d1             	mov    %rdx,%rcx
+ 45e6643:	e8 d8 3c 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e6648:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e664f:	00 
+ 45e6650:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e6657:	00 
+ 45e6658:	48 8b 9c 24 88 01 00 	mov    0x188(%rsp),%rbx
+ 45e665f:	00 
+ 45e6660:	48 8b 8c 24 90 01 00 	mov    0x190(%rsp),%rcx
+ 45e6667:	00 
+ 45e6668:	31 c0                	xor    %eax,%eax
+ 45e666a:	48 8d 3d 65 cc 64 00 	lea    0x64cc65(%rip),%rdi        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 45e6671:	be 02 00 00 00       	mov    $0x2,%esi
+ 45e6676:	e8 a5 3c 95 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45e667b:	48 89 84 24 88 01 00 	mov    %rax,0x188(%rsp)
+ 45e6682:	00 
+ 45e6683:	48 89 9c 24 90 01 00 	mov    %rbx,0x190(%rsp)
+ 45e668a:	00 
+ 45e668b:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 45e6692:	00 
+ 45e6693:	48 8b 8c 24 68 01 00 	mov    0x168(%rsp),%rcx
+ 45e669a:	00 
+ 45e669b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45e66a0:	e9 f1 f9 ff ff       	jmp    45e6096 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base+0x396>
+ 45e66a5:	c6 84 24 a7 00 00 00 	movb   $0x0,0xa7(%rsp)
+ 45e66ac:	00 
+ 45e66ad:	48 8b 94 24 a8 02 00 	mov    0x2a8(%rsp),%rdx
+ 45e66b4:	00 
+ 45e66b5:	48 8b 02             	mov    (%rdx),%rax
+ 45e66b8:	ff d0                	call   *%rax
+ 45e66ba:	48 8b 84 24 88 01 00 	mov    0x188(%rsp),%rax
+ 45e66c1:	00 
+ 45e66c2:	48 8b 9c 24 90 01 00 	mov    0x190(%rsp),%rbx
+ 45e66c9:	00 
+ 45e66ca:	48 8b ac 24 b0 02 00 	mov    0x2b0(%rsp),%rbp
+ 45e66d1:	00 
+ 45e66d2:	48 81 c4 b8 02 00 00 	add    $0x2b8,%rsp
+ 45e66d9:	c3                   	ret
+ 45e66da:	e8 81 58 93 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45e66df:	48 8b 84 24 88 01 00 	mov    0x188(%rsp),%rax
+ 45e66e6:	00 
+ 45e66e7:	48 8b 9c 24 90 01 00 	mov    0x190(%rsp),%rbx
+ 45e66ee:	00 
+ 45e66ef:	48 8b ac 24 b0 02 00 	mov    0x2b0(%rsp),%rbp
+ 45e66f6:	00 
+ 45e66f7:	48 81 c4 b8 02 00 00 	add    $0x2b8,%rsp
+ 45e66fe:	c3                   	ret
+ 45e66ff:	90                   	nop
+ 45e6700:	e8 5b dd 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e6705:	e9 f6 f5 ff ff       	jmp    45e5d00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.GetDispatchStatistics@@Base>
+ 45e670a:	cc                   	int3
+ 45e670b:	cc                   	int3
+ 45e670c:	cc                   	int3
+ 45e670d:	cc                   	int3
+ 45e670e:	cc                   	int3
+ 45e670f:	cc                   	int3
+ 45e6710:	cc                   	int3
+ 45e6711:	cc                   	int3
+ 45e6712:	cc                   	int3
+ 45e6713:	cc                   	int3
+ 45e6714:	cc                   	int3
+ 45e6715:	cc                   	int3
+ 45e6716:	cc                   	int3
+ 45e6717:	cc                   	int3
+ 45e6718:	cc                   	int3
+ 45e6719:	cc                   	int3
+ 45e671a:	cc                   	int3
+ 45e671b:	cc                   	int3
+ 45e671c:	cc                   	int3
+ 45e671d:	cc                   	int3
+ 45e671e:	cc                   	int3
+ 45e671f:	cc                   	int3

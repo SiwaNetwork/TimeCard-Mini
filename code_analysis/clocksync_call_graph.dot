@@ -1,0 +1,33 @@
+digraph CallGraph {
+  rankdir=LR;
+  node [shape=box];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.PerformGranularityMeasurement@@Base" [label="PerformGranularityMeasurement@@Base", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).GetTimeNow@@Base" [label="GetTimeNow@@Base", style=filled, fillcolor=lightgray];
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetAllClockOffsets@@Base" [label="GetAllClockOffsets@@Base", style=filled, fillcolor=lightgray];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0xcc" [label="StepClockUsingSetTimeSyscall@@Base+0xcc", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" [label="StepClockUsingSetTimeSyscall@@Base", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base" [label="GetClockUsingGetTimeSyscall@@Base", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x48" [label="StepClockUsingSetTimeSyscall@@Base+0x48", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x15c" [label="StepClockUsingSetTimeSyscall@@Base+0x15c", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x170" [label="StepClockUsingSetTimeSyscall@@Base+0x170", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0xe0" [label="GetClockUsingGetTimeSyscall@@Base+0xe0", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x10c" [label="GetClockUsingGetTimeSyscall@@Base+0x10c", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x88" [label="GetClockUsingGetTimeSyscall@@Base+0x88", style=filled, fillcolor=lightcoral];
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).StepClock@@Base" [label="StepClock@@Base", style=filled, fillcolor=lightgray];
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base" [label="SlewClockPossiblyAsync@@Base", style=filled, fillcolor=lightgray];
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0xcc";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x48";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x15c";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base+0x170";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0xe0";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x10c";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x88";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.PerformGranularityMeasurement@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetAllClockOffsets@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).StepClock@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepClockUsingSetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).StepClock@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).SlewClockPossiblyAsync@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+  "github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).GetTimeNow@@Base" -> "github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base";
+}

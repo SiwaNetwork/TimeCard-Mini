@@ -1,0 +1,93 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync
+# addr 0x45e2040 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e2040 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base>:
+ 45e2040:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e2044:	0f 86 9c 00 00 00    	jbe    45e20e6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0xa6>
+ 45e204a:	48 83 ec 18          	sub    $0x18,%rsp
+ 45e204e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45e2053:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45e2058:	38 58 29             	cmp    %bl,0x29(%rax)
+ 45e205b:	74 18                	je     45e2075 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x35>
+ 45e205d:	88 5c 24 28          	mov    %bl,0x28(%rsp)
+ 45e2061:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45e2066:	e8 f5 07 00 00       	call   45e2860 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).actualSyncPacketsPerSecondChanged@@Base>
+ 45e206b:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45e2070:	0f b6 5c 24 28       	movzbl 0x28(%rsp),%ebx
+ 45e2075:	38 58 28             	cmp    %bl,0x28(%rax)
+ 45e2078:	7e 56                	jle    45e20d0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x90>
+ 45e207a:	48 8b 48 48          	mov    0x48(%rax),%rcx
+ 45e207e:	48 8b 50 30          	mov    0x30(%rax),%rdx
+ 45e2082:	48 85 d2             	test   %rdx,%rdx
+ 45e2085:	74 58                	je     45e20df <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x9f>
+ 45e2087:	48 89 c3             	mov    %rax,%rbx
+ 45e208a:	48 89 c8             	mov    %rcx,%rax
+ 45e208d:	48 89 d6             	mov    %rdx,%rsi
+ 45e2090:	48 83 fe ff          	cmp    $0xffffffffffffffff,%rsi
+ 45e2094:	74 07                	je     45e209d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x5d>
+ 45e2096:	48 99                	cqto
+ 45e2098:	48 f7 fe             	idiv   %rsi
+ 45e209b:	eb 05                	jmp    45e20a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x62>
+ 45e209d:	48 f7 d8             	neg    %rax
+ 45e20a0:	31 d2                	xor    %edx,%edx
+ 45e20a2:	48 85 d2             	test   %rdx,%rdx
+ 45e20a5:	75 16                	jne    45e20bd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base+0x7d>
+ 45e20a7:	48 ff c1             	inc    %rcx
+ 45e20aa:	48 89 4b 48          	mov    %rcx,0x48(%rbx)
+ 45e20ae:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e20b3:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e20b8:	48 83 c4 18          	add    $0x18,%rsp
+ 45e20bc:	c3                   	ret
+ 45e20bd:	48 ff c1             	inc    %rcx
+ 45e20c0:	48 89 4b 48          	mov    %rcx,0x48(%rbx)
+ 45e20c4:	31 c0                	xor    %eax,%eax
+ 45e20c6:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e20cb:	48 83 c4 18          	add    $0x18,%rsp
+ 45e20cf:	c3                   	ret
+ 45e20d0:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e20d5:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e20da:	48 83 c4 18          	add    $0x18,%rsp
+ 45e20de:	c3                   	ret
+ 45e20df:	90                   	nop
+ 45e20e0:	e8 9b 96 93 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 45e20e5:	90                   	nop
+ 45e20e6:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e20eb:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 45e20ef:	e8 6c 23 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e20f4:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e20f9:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 45e20fe:	66 90                	xchg   %ax,%ax
+ 45e2100:	e9 3b ff ff ff       	jmp    45e2040 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Validation).ShouldProcessSync@@Base>
+ 45e2105:	cc                   	int3
+ 45e2106:	cc                   	int3
+ 45e2107:	cc                   	int3
+ 45e2108:	cc                   	int3
+ 45e2109:	cc                   	int3
+ 45e210a:	cc                   	int3
+ 45e210b:	cc                   	int3
+ 45e210c:	cc                   	int3
+ 45e210d:	cc                   	int3
+ 45e210e:	cc                   	int3
+ 45e210f:	cc                   	int3
+ 45e2110:	cc                   	int3
+ 45e2111:	cc                   	int3
+ 45e2112:	cc                   	int3
+ 45e2113:	cc                   	int3
+ 45e2114:	cc                   	int3
+ 45e2115:	cc                   	int3
+ 45e2116:	cc                   	int3
+ 45e2117:	cc                   	int3
+ 45e2118:	cc                   	int3
+ 45e2119:	cc                   	int3
+ 45e211a:	cc                   	int3
+ 45e211b:	cc                   	int3
+ 45e211c:	cc                   	int3
+ 45e211d:	cc                   	int3
+ 45e211e:	cc                   	int3
+ 45e211f:	cc                   	int3

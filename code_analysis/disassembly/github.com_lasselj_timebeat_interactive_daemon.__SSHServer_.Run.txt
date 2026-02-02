@@ -1,0 +1,175 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run
+# addr 0x4c28320 size 640 (0x280)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c28320 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base>:
+ 4c28320:	4c 8d 64 24 f0       	lea    -0x10(%rsp),%r12
+ 4c28325:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4c28329:	0f 86 36 02 00 00    	jbe    4c28565 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x245>
+ 4c2832f:	48 81 ec 90 00 00 00 	sub    $0x90,%rsp
+ 4c28336:	48 89 ac 24 88 00 00 	mov    %rbp,0x88(%rsp)
+ 4c2833d:	00 
+ 4c2833e:	48 8d ac 24 88 00 00 	lea    0x88(%rsp),%rbp
+ 4c28345:	00 
+ 4c28346:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4c2834d:	00 
+ 4c2834e:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4c28354:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 4c2835a:	48 8b 0d 9f cb 21 03 	mov    0x321cb9f(%rip),%rcx        # 7e44f00 <github.com/lasselj/timebeat/config.appConfig@@Base+0x320>
+ 4c28361:	48 8b 1d a0 cb 21 03 	mov    0x321cba0(%rip),%rbx        # 7e44f08 <github.com/lasselj/timebeat/config.appConfig@@Base+0x328>
+ 4c28368:	48 89 c8             	mov    %rcx,%rax
+ 4c2836b:	e8 f0 59 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c28370:	48 8d 0d 29 63 b8 00 	lea    0xb86329(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c28377:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4c2837c:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4c28381:	0f b7 05 72 cb 21 03 	movzwl 0x321cb72(%rip),%eax        # 7e44efa <github.com/lasselj/timebeat/config.appConfig@@Base+0x31a>
+ 4c28388:	e8 53 58 2c fd       	call   1eedbe0 <runtime.convT16@@Base>
+ 4c2838d:	48 8d 0d 0c 65 b8 00 	lea    0xb8650c(%rip),%rcx        # 57ae8a0 <type:uint16@@Base>
+ 4c28394:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 4c28399:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4c283a0:	00 
+ 4c283a1:	48 8d 05 24 e6 00 00 	lea    0xe624(%rip),%rax        # 4c369cc <_IO_stdin_used@@Base+0x39cc>
+ 4c283a8:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 4c283ad:	48 8d 4c 24 68       	lea    0x68(%rsp),%rcx
+ 4c283b2:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4c283b7:	48 89 fe             	mov    %rdi,%rsi
+ 4c283ba:	e8 41 c5 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c283bf:	48 89 c1             	mov    %rax,%rcx
+ 4c283c2:	48 89 df             	mov    %rbx,%rdi
+ 4c283c5:	48 8d 05 6f bb 00 00 	lea    0xbb6f(%rip),%rax        # 4c33f3b <_IO_stdin_used@@Base+0xf3b>
+ 4c283cc:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 4c283d1:	e8 ea a8 40 fd       	call   2032cc0 <net.Listen@@Base>
+ 4c283d6:	48 85 c9             	test   %rcx,%rcx
+ 4c283d9:	75 0c                	jne    4c283e7 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0xc7>
+ 4c283db:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4c283e0:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4c283e5:	eb 6c                	jmp    4c28453 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x133>
+ 4c283e7:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4c283ed:	74 04                	je     4c283f3 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0xd3>
+ 4c283ef:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4c283f3:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4c283f8:	48 89 7c 24 60       	mov    %rdi,0x60(%rsp)
+ 4c283fd:	48 8d 05 15 d4 1d 00 	lea    0x1dd415(%rip),%rax        # 4e05819 <_IO_stdin_used@@Base+0x1d2819>
+ 4c28404:	bb 23 00 00 00       	mov    $0x23,%ebx
+ 4c28409:	48 8d 4c 24 58       	lea    0x58(%rsp),%rcx
+ 4c2840e:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c28413:	48 89 fe             	mov    %rdi,%rsi
+ 4c28416:	e8 e5 c4 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c2841b:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4c28422:	00 
+ 4c28423:	48 8b 12             	mov    (%rdx),%rdx
+ 4c28426:	48 89 d9             	mov    %rbx,%rcx
+ 4c28429:	48 89 c3             	mov    %rax,%rbx
+ 4c2842c:	48 89 d0             	mov    %rdx,%rax
+ 4c2842f:	e8 2c ec 7d ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4c28434:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 4c2843b:	00 
+ 4c2843c:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 4c28443:	c3                   	ret
+ 4c28444:	e8 17 07 30 fd       	call   1f28b60 <runtime.newproc@@Base>
+ 4c28449:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4c2844e:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4c28453:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4c28457:	48 89 d8             	mov    %rbx,%rax
+ 4c2845a:	ff d1                	call   *%rcx
+ 4c2845c:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4c28461:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4c28466:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4c2846b:	48 89 7c 24 48       	mov    %rdi,0x48(%rsp)
+ 4c28470:	48 85 c9             	test   %rcx,%rcx
+ 4c28473:	74 52                	je     4c284c7 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x1a7>
+ 4c28475:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4c2847b:	74 06                	je     4c28483 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x163>
+ 4c2847d:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4c28481:	eb 03                	jmp    4c28486 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x166>
+ 4c28483:	48 89 ca             	mov    %rcx,%rdx
+ 4c28486:	48 89 54 24 58       	mov    %rdx,0x58(%rsp)
+ 4c2848b:	48 89 7c 24 60       	mov    %rdi,0x60(%rsp)
+ 4c28490:	48 8d 05 63 fc 1e 00 	lea    0x1efc63(%rip),%rax        # 4e180fa <_IO_stdin_used@@Base+0x1e50fa>
+ 4c28497:	bb 28 00 00 00       	mov    $0x28,%ebx
+ 4c2849c:	48 8d 4c 24 58       	lea    0x58(%rsp),%rcx
+ 4c284a1:	be 01 00 00 00       	mov    $0x1,%esi
+ 4c284a6:	48 89 f7             	mov    %rsi,%rdi
+ 4c284a9:	e8 52 c4 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c284ae:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4c284b5:	00 
+ 4c284b6:	4c 8b 02             	mov    (%rdx),%r8
+ 4c284b9:	48 89 d9             	mov    %rbx,%rcx
+ 4c284bc:	48 89 c3             	mov    %rax,%rbx
+ 4c284bf:	4c 89 c0             	mov    %r8,%rax
+ 4c284c2:	e8 99 eb 7d ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4c284c7:	48 8d 05 32 ec fc 00 	lea    0xfcec32(%rip),%rax        # 5bf7100 <type:tybHnG6G@@Base>
+ 4c284ce:	e8 0d 80 2c fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4c284d3:	48 8d 0d c6 00 00 00 	lea    0xc6(%rip),%rcx        # 4c285a0 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run.func1@@Base>
+ 4c284da:	48 89 08             	mov    %rcx,(%rax)
+ 4c284dd:	83 3d 7c 34 25 03 00 	cmpl   $0x0,0x325347c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4c284e4:	75 0e                	jne    4c284f4 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x1d4>
+ 4c284e6:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4c284ed:	00 
+ 4c284ee:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4c284f2:	eb 11                	jmp    4c28505 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x1e5>
+ 4c284f4:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4c284f8:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4c284ff:	00 
+ 4c28500:	e8 1b e2 32 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4c28505:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4c2850a:	48 89 58 10          	mov    %rbx,0x10(%rax)
+ 4c2850e:	83 3d 4b 34 25 03 00 	cmpl   $0x0,0x325344b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4c28515:	75 0b                	jne    4c28522 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x202>
+ 4c28517:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4c2851c:	48 89 58 18          	mov    %rbx,0x18(%rax)
+ 4c28520:	eb 0e                	jmp    4c28530 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x210>
+ 4c28522:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 4c28526:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4c2852b:	e8 10 e2 32 fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 4c28530:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4c28535:	48 89 58 20          	mov    %rbx,0x20(%rax)
+ 4c28539:	83 3d 20 34 25 03 00 	cmpl   $0x0,0x3253420(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4c28540:	75 0e                	jne    4c28550 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x230>
+ 4c28542:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4c28547:	48 89 58 28          	mov    %rbx,0x28(%rax)
+ 4c2854b:	e9 f4 fe ff ff       	jmp    4c28444 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x124>
+ 4c28550:	48 8d 78 28          	lea    0x28(%rax),%rdi
+ 4c28554:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4c28559:	e8 e2 e1 32 fd       	call   1f56740 <runtime.gcWriteBarrierBX@@Base>
+ 4c2855e:	66 90                	xchg   %ax,%ax
+ 4c28560:	e9 df fe ff ff       	jmp    4c28444 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base+0x124>
+ 4c28565:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4c2856a:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4c2856f:	e8 ec be 32 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4c28574:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4c28579:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4c2857e:	66 90                	xchg   %ax,%ax
+ 4c28580:	e9 9b fd ff ff       	jmp    4c28320 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).Run@@Base>
+ 4c28585:	cc                   	int3
+ 4c28586:	cc                   	int3
+ 4c28587:	cc                   	int3
+ 4c28588:	cc                   	int3
+ 4c28589:	cc                   	int3
+ 4c2858a:	cc                   	int3
+ 4c2858b:	cc                   	int3
+ 4c2858c:	cc                   	int3
+ 4c2858d:	cc                   	int3
+ 4c2858e:	cc                   	int3
+ 4c2858f:	cc                   	int3
+ 4c28590:	cc                   	int3
+ 4c28591:	cc                   	int3
+ 4c28592:	cc                   	int3
+ 4c28593:	cc                   	int3
+ 4c28594:	cc                   	int3
+ 4c28595:	cc                   	int3
+ 4c28596:	cc                   	int3
+ 4c28597:	cc                   	int3
+ 4c28598:	cc                   	int3
+ 4c28599:	cc                   	int3
+ 4c2859a:	cc                   	int3
+ 4c2859b:	cc                   	int3
+ 4c2859c:	cc                   	int3
+ 4c2859d:	cc                   	int3
+ 4c2859e:	cc                   	int3
+ 4c2859f:	cc                   	int3

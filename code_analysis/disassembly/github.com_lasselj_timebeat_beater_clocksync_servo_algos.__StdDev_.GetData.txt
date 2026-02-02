@@ -1,0 +1,29 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetData
+# addr 0x4580680 size 64 (0x40)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004580680 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetData@@Base>:
+ 4580680:	48 83 ec 18          	sub    $0x18,%rsp
+ 4580684:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4580689:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 458068e:	48 8b 70 20          	mov    0x20(%rax),%rsi
+ 4580692:	48 8b 08             	mov    (%rax),%rcx
+ 4580695:	48 39 f1             	cmp    %rsi,%rcx
+ 4580698:	48 0f 4f ce          	cmovg  %rsi,%rcx
+ 458069c:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45806a0:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 45806a4:	48 39 ca             	cmp    %rcx,%rdx
+ 45806a7:	72 10                	jb     45806b9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetData@@Base+0x39>
+ 45806a9:	48 89 cb             	mov    %rcx,%rbx
+ 45806ac:	48 89 d1             	mov    %rdx,%rcx
+ 45806af:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45806b4:	48 83 c4 18          	add    $0x18,%rsp
+ 45806b8:	c3                   	ret
+ 45806b9:	e8 62 64 9d fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 45806be:	90                   	nop
+ 45806bf:	cc                   	int3

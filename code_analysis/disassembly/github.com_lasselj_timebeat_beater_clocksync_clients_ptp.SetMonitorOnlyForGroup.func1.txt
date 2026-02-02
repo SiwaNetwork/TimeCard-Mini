@@ -1,0 +1,80 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1
+# addr 0x45e7460 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e7460 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base>:
+ 45e7460:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e7464:	0f 86 b4 00 00 00    	jbe    45e751e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0xbe>
+ 45e746a:	48 83 ec 30          	sub    $0x30,%rsp
+ 45e746e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 45e7473:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 45e7478:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45e747d:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 45e7482:	48 8b 72 20          	mov    0x20(%rdx),%rsi
+ 45e7486:	44 0f b6 42 18       	movzbl 0x18(%rdx),%r8d
+ 45e748b:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 45e748f:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 45e7493:	4c 8d 0d 66 c7 8d 01 	lea    0x18dc766(%rip),%r9        # 5ec3c00 <type:97XPxJCH@@Base>
+ 45e749a:	4c 39 c9             	cmp    %r9,%rcx
+ 45e749d:	75 6c                	jne    45e750b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0xab>
+ 45e749f:	48 8b 8f e8 03 00 00 	mov    0x3e8(%rdi),%rcx
+ 45e74a6:	48 8b 87 e0 03 00 00 	mov    0x3e0(%rdi),%rax
+ 45e74ad:	48 39 d1             	cmp    %rdx,%rcx
+ 45e74b0:	75 47                	jne    45e74f9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0x99>
+ 45e74b2:	44 88 44 24 1f       	mov    %r8b,0x1f(%rsp)
+ 45e74b7:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 45e74bc:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 45e74c1:	e8 5a c6 8f fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45e74c6:	84 c0                	test   %al,%al
+ 45e74c8:	74 2a                	je     45e74f4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0x94>
+ 45e74ca:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45e74cf:	80 b9 71 03 00 00 00 	cmpb   $0x0,0x371(%rcx)
+ 45e74d6:	75 15                	jne    45e74ed <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0x8d>
+ 45e74d8:	0f b6 54 24 1f       	movzbl 0x1f(%rsp),%edx
+ 45e74dd:	88 91 f1 00 00 00    	mov    %dl,0xf1(%rcx)
+ 45e74e3:	48 8b 89 30 04 00 00 	mov    0x430(%rcx),%rcx
+ 45e74ea:	88 51 28             	mov    %dl,0x28(%rcx)
+ 45e74ed:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 45e74f2:	eb 05                	jmp    45e74f9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base+0x99>
+ 45e74f4:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 45e74f9:	48 ff 06             	incq   (%rsi)
+ 45e74fc:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45e7501:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 45e7506:	48 83 c4 30          	add    $0x30,%rsp
+ 45e750a:	c3                   	ret
+ 45e750b:	48 89 c8             	mov    %rcx,%rax
+ 45e750e:	4c 89 cb             	mov    %r9,%rbx
+ 45e7511:	48 8d 0d 28 ce 2c 01 	lea    0x12cce28(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 45e7518:	e8 83 63 90 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 45e751d:	90                   	nop
+ 45e751e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e7523:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e7528:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45e752d:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45e7532:	e8 89 ce 96 fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 45e7537:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e753c:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e7541:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45e7546:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45e754b:	e9 10 ff ff ff       	jmp    45e7460 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup.func1@@Base>
+ 45e7550:	cc                   	int3
+ 45e7551:	cc                   	int3
+ 45e7552:	cc                   	int3
+ 45e7553:	cc                   	int3
+ 45e7554:	cc                   	int3
+ 45e7555:	cc                   	int3
+ 45e7556:	cc                   	int3
+ 45e7557:	cc                   	int3
+ 45e7558:	cc                   	int3
+ 45e7559:	cc                   	int3
+ 45e755a:	cc                   	int3
+ 45e755b:	cc                   	int3
+ 45e755c:	cc                   	int3
+ 45e755d:	cc                   	int3
+ 45e755e:	cc                   	int3
+ 45e755f:	cc                   	int3

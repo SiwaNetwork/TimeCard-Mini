@@ -1,0 +1,121 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices
+# addr 0x4b8d460 size 512 (0x200)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b8d460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base>:
+ 4b8d460:	4c 8d 64 24 e0       	lea    -0x20(%rsp),%r12
+ 4b8d465:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b8d469:	0f 86 df 01 00 00    	jbe    4b8d64e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x1ee>
+ 4b8d46f:	48 81 ec a0 00 00 00 	sub    $0xa0,%rsp
+ 4b8d476:	48 89 ac 24 98 00 00 	mov    %rbp,0x98(%rsp)
+ 4b8d47d:	00 
+ 4b8d47e:	48 8d ac 24 98 00 00 	lea    0x98(%rsp),%rbp
+ 4b8d485:	00 
+ 4b8d486:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 4b8d48d:	00 00 
+ 4b8d48f:	48 8d 15 0a 12 c2 00 	lea    0xc2120a(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4b8d496:	48 89 94 24 88 00 00 	mov    %rdx,0x88(%rsp)
+ 4b8d49d:	00 
+ 4b8d49e:	4c 8d 05 b3 5c 36 01 	lea    0x1365cb3(%rip),%r8        # 5ef3158 <time..dict.leadingInt[string]@@Base+0x2ec8>
+ 4b8d4a5:	4c 89 84 24 90 00 00 	mov    %r8,0x90(%rsp)
+ 4b8d4ac:	00 
+ 4b8d4ad:	48 8b 1d 8c 1d 2a 03 	mov    0x32a1d8c(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b8d4b4:	48 8d 05 65 7d 37 01 	lea    0x1377d65(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b8d4bb:	48 8d 8c 24 88 00 00 	lea    0x88(%rsp),%rcx
+ 4b8d4c2:	00 
+ 4b8d4c3:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b8d4c8:	48 89 fe             	mov    %rdi,%rsi
+ 4b8d4cb:	e8 90 76 46 fd       	call   1ff4b60 <fmt.Fprint@@Base>
+ 4b8d4d0:	e8 4b a1 fe ff       	call   4b77620 <periph.io/x/conn/v3/i2c/i2creg.All@@Base>
+ 4b8d4d5:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b8d4da:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4b8d4df:	31 c9                	xor    %ecx,%ecx
+ 4b8d4e1:	eb 12                	jmp    4b8d4f5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x95>
+ 4b8d4e3:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4b8d4e8:	48 ff c1             	inc    %rcx
+ 4b8d4eb:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4b8d4f0:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4b8d4f5:	48 39 cb             	cmp    %rcx,%rbx
+ 4b8d4f8:	0f 8e 40 01 00 00    	jle    4b8d63e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x1de>
+ 4b8d4fe:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4b8d503:	48 8b 14 c8          	mov    (%rax,%rcx,8),%rdx
+ 4b8d507:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 4b8d50c:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 4b8d512:	48 8b 32             	mov    (%rdx),%rsi
+ 4b8d515:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 4b8d519:	48 89 f0             	mov    %rsi,%rax
+ 4b8d51c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b8d520:	e8 3b 08 36 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b8d525:	48 8d 0d 74 11 c2 00 	lea    0xc21174(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b8d52c:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 4b8d531:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4b8d538:	00 
+ 4b8d539:	48 8b 1d 00 1d 2a 03 	mov    0x32a1d00(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b8d540:	48 8d 05 d9 7c 37 01 	lea    0x1377cd9(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b8d547:	bf 05 00 00 00       	mov    $0x5,%edi
+ 4b8d54c:	48 8d 74 24 78       	lea    0x78(%rsp),%rsi
+ 4b8d551:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b8d557:	4d 89 c1             	mov    %r8,%r9
+ 4b8d55a:	48 8d 0d 47 95 0a 00 	lea    0xa9547(%rip),%rcx        # 4c36aa8 <_IO_stdin_used@@Base+0x3aa8>
+ 4b8d561:	e8 7a 72 46 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4b8d566:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4b8d56b:	48 83 79 28 ff       	cmpq   $0xffffffffffffffff,0x28(%rcx)
+ 4b8d570:	74 58                	je     4b8d5ca <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x16a>
+ 4b8d572:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4b8d578:	48 8b 41 28          	mov    0x28(%rcx),%rax
+ 4b8d57c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b8d580:	e8 5b 07 36 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b8d585:	48 8d 0d d4 d0 c1 00 	lea    0xc1d0d4(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4b8d58c:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4b8d591:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b8d596:	48 8b 1d a3 1c 2a 03 	mov    0x32a1ca3(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b8d59d:	48 8d 05 7c 7c 37 01 	lea    0x1377c7c(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b8d5a4:	bf 04 00 00 00       	mov    $0x4,%edi
+ 4b8d5a9:	48 8d 74 24 68       	lea    0x68(%rsp),%rsi
+ 4b8d5ae:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b8d5b4:	4d 89 c1             	mov    %r8,%r9
+ 4b8d5b7:	48 8d 0d 52 6b 0a 00 	lea    0xa6b52(%rip),%rcx        # 4c34110 <_IO_stdin_used@@Base+0x1110>
+ 4b8d5be:	66 90                	xchg   %ax,%ax
+ 4b8d5c0:	e8 1b 72 46 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4b8d5c5:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4b8d5ca:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 4b8d5ce:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4b8d5d2:	48 8b 49 20          	mov    0x20(%rcx),%rcx
+ 4b8d5d6:	48 85 db             	test   %rbx,%rbx
+ 4b8d5d9:	0f 84 04 ff ff ff    	je     4b8d4e3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x83>
+ 4b8d5df:	48 8d 3d 52 45 95 00 	lea    0x954552(%rip),%rdi        # 54e1b38 <go:link.pkghashbytes.vendor/golang.org/x/text/unicode/norm@@Base+0xb8>
+ 4b8d5e6:	be 01 00 00 00       	mov    $0x1,%esi
+ 4b8d5eb:	e8 30 a0 47 fd       	call   2007620 <strings.Join@@Base>
+ 4b8d5f0:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4b8d5f6:	e8 65 07 36 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b8d5fb:	48 8d 15 9e 10 c2 00 	lea    0xc2109e(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4b8d602:	48 89 54 24 58       	mov    %rdx,0x58(%rsp)
+ 4b8d607:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4b8d60c:	48 8b 1d 2d 1c 2a 03 	mov    0x32a1c2d(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b8d613:	48 8d 05 06 7c 37 01 	lea    0x1377c06(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b8d61a:	48 8d 0d f3 6a 0a 00 	lea    0xa6af3(%rip),%rcx        # 4c34114 <_IO_stdin_used@@Base+0x1114>
+ 4b8d621:	bf 04 00 00 00       	mov    $0x4,%edi
+ 4b8d626:	48 8d 74 24 58       	lea    0x58(%rsp),%rsi
+ 4b8d62b:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b8d631:	4d 89 c1             	mov    %r8,%r9
+ 4b8d634:	e8 a7 71 46 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4b8d639:	e9 a5 fe ff ff       	jmp    4b8d4e3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base+0x83>
+ 4b8d63e:	48 8b ac 24 98 00 00 	mov    0x98(%rsp),%rbp
+ 4b8d645:	00 
+ 4b8d646:	48 81 c4 a0 00 00 00 	add    $0xa0,%rsp
+ 4b8d64d:	c3                   	ret
+ 4b8d64e:	e8 0d 6e 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8d653:	e9 08 fe ff ff       	jmp    4b8d460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.OutputI2CDevices@@Base>
+ 4b8d658:	cc                   	int3
+ 4b8d659:	cc                   	int3
+ 4b8d65a:	cc                   	int3
+ 4b8d65b:	cc                   	int3
+ 4b8d65c:	cc                   	int3
+ 4b8d65d:	cc                   	int3
+ 4b8d65e:	cc                   	int3
+ 4b8d65f:	cc                   	int3

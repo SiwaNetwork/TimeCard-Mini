@@ -1,0 +1,95 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock
+# addr 0x45988e0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045988e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base>:
+ 45988e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45988e4:	0f 86 3f 01 00 00    	jbe    4598a29 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x149>
+ 45988ea:	48 83 ec 48          	sub    $0x48,%rsp
+ 45988ee:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 45988f3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 45988f8:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45988fd:	48 8d 05 fc c0 8a 01 	lea    0x18ac0fc(%rip),%rax        # 5e44a00 <type:lpabEvYg@@Base>
+ 4598904:	e8 d7 7b 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4598909:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 459890e:	c7 40 08 ff ff ff ff 	movl   $0xffffffff,0x8(%rax)
+ 4598915:	c7 40 64 00 00 00 00 	movl   $0x0,0x64(%rax)
+ 459891c:	48 8d 05 bd 40 23 01 	lea    0x12340bd(%rip),%rax        # 57cc9e0 <type:[1]string@@Base>
+ 4598923:	e8 b8 7b 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4598928:	48 c7 40 08 06 00 00 	movq   $0x6,0x8(%rax)
+ 459892f:	00 
+ 4598930:	48 8d 1d a6 65 6c 00 	lea    0x6c65a6(%rip),%rbx        # 4c5eedd <_IO_stdin_used@@Base+0x2bedd>
+ 4598937:	48 89 18             	mov    %rbx,(%rax)
+ 459893a:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 459893f:	48 c7 47 38 01 00 00 	movq   $0x1,0x38(%rdi)
+ 4598946:	00 
+ 4598947:	48 c7 47 40 01 00 00 	movq   $0x1,0x40(%rdi)
+ 459894e:	00 
+ 459894f:	83 3d 0a 30 8e 03 00 	cmpl   $0x0,0x38e300a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4598956:	75 06                	jne    459895e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x7e>
+ 4598958:	48 89 47 30          	mov    %rax,0x30(%rdi)
+ 459895c:	eb 12                	jmp    4598970 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x90>
+ 459895e:	48 8d 57 30          	lea    0x30(%rdi),%rdx
+ 4598962:	48 89 f9             	mov    %rdi,%rcx
+ 4598965:	48 89 d7             	mov    %rdx,%rdi
+ 4598968:	e8 93 dc 9b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 459896d:	48 89 cf             	mov    %rcx,%rdi
+ 4598970:	48 8b 15 e1 c3 8a 03 	mov    0x38ac3e1(%rip),%rdx        # 7e44d58 <github.com/lasselj/timebeat/config.appConfig@@Base+0x178>
+ 4598977:	48 8b 35 e2 c3 8a 03 	mov    0x38ac3e2(%rip),%rsi        # 7e44d60 <github.com/lasselj/timebeat/config.appConfig@@Base+0x180>
+ 459897e:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 4598983:	31 c0                	xor    %eax,%eax
+ 4598985:	eb 07                	jmp    459898e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0xae>
+ 4598987:	48 83 c2 10          	add    $0x10,%rdx
+ 459898b:	48 ff c0             	inc    %rax
+ 459898e:	48 39 f0             	cmp    %rsi,%rax
+ 4598991:	7d 54                	jge    45989e7 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x107>
+ 4598993:	4c 8b 02             	mov    (%rdx),%r8
+ 4598996:	48 83 7a 08 06       	cmpq   $0x6,0x8(%rdx)
+ 459899b:	75 ea                	jne    4598987 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0xa7>
+ 459899d:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45989a2:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45989a7:	4c 89 c0             	mov    %r8,%rax
+ 45989aa:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 45989af:	e8 6c b1 94 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45989b4:	84 c0                	test   %al,%al
+ 45989b6:	75 1d                	jne    45989d5 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0xf5>
+ 45989b8:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 45989bd:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45989c2:	48 8d 1d 14 65 6c 00 	lea    0x6c6514(%rip),%rbx        # 4c5eedd <_IO_stdin_used@@Base+0x2bedd>
+ 45989c9:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 45989ce:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45989d3:	eb b2                	jmp    4598987 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0xa7>
+ 45989d5:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45989da:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 45989df:	48 39 d1             	cmp    %rdx,%rcx
+ 45989e2:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45989e7:	0f 9d c3             	setge  %bl
+ 45989ea:	48 89 f8             	mov    %rdi,%rax
+ 45989ed:	e8 ee 8f ff ff       	call   45919e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewHostClock@@Base>
+ 45989f2:	84 00                	test   %al,(%rax)
+ 45989f4:	83 3d 65 2f 8e 03 00 	cmpl   $0x0,0x38e2f65(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45989fb:	75 0a                	jne    4598a07 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x127>
+ 45989fd:	48 c7 40 60 00 00 00 	movq   $0x0,0x60(%rax)
+ 4598a04:	00 
+ 4598a05:	eb 0b                	jmp    4598a12 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base+0x132>
+ 4598a07:	48 8d 78 60          	lea    0x60(%rax),%rdi
+ 4598a0b:	31 c9                	xor    %ecx,%ecx
+ 4598a0d:	e8 ee dc 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4598a12:	48 89 c3             	mov    %rax,%rbx
+ 4598a15:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4598a1a:	e8 41 c0 ff ff       	call   4594a60 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).AddSlaveHostClock@@Base>
+ 4598a1f:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4598a24:	48 83 c4 48          	add    $0x48,%rsp
+ 4598a28:	c3                   	ret
+ 4598a29:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4598a2e:	e8 2d ba 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4598a33:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4598a38:	e9 a3 fe ff ff       	jmp    45988e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).createSystemClock@@Base>
+ 4598a3d:	cc                   	int3
+ 4598a3e:	cc                   	int3
+ 4598a3f:	cc                   	int3

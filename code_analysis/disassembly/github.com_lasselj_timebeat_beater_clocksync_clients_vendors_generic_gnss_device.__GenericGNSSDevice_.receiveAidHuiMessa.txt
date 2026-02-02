@@ -1,0 +1,103 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage
+# addr 0x45b1780 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045b1780 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base>:
+ 45b1780:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45b1784:	0f 86 22 01 00 00    	jbe    45b18ac <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0x12c>
+ 45b178a:	48 83 ec 70          	sub    $0x70,%rsp
+ 45b178e:	48 89 6c 24 68       	mov    %rbp,0x68(%rsp)
+ 45b1793:	48 8d 6c 24 68       	lea    0x68(%rsp),%rbp
+ 45b1798:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 45b179d:	48 8b 53 08          	mov    0x8(%rbx),%rdx
+ 45b17a1:	48 8b 73 10          	mov    0x10(%rbx),%rsi
+ 45b17a5:	48 8b 4b 18          	mov    0x18(%rbx),%rcx
+ 45b17a9:	48 89 f3             	mov    %rsi,%rbx
+ 45b17ac:	48 89 d0             	mov    %rdx,%rax
+ 45b17af:	e8 cc eb e4 ff       	call   4400380 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.DecodeUBXAidHuiPayLoad@@Base>
+ 45b17b4:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45b17b9:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45b17be:	80 ba b0 00 00 00 00 	cmpb   $0x0,0xb0(%rdx)
+ 45b17c5:	74 4e                	je     45b1815 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0x95>
+ 45b17c7:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45b17cd:	48 8d 15 ac bb 12 01 	lea    0x112bbac(%rip),%rdx        # 56dd380 <type:PLR++/7O@@Base>
+ 45b17d4:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45b17d9:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45b17de:	48 8b 1d 5b da 87 03 	mov    0x387da5b(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45b17e5:	48 8d 0d de a0 81 00 	lea    0x81a0de(%rip),%rcx        # 4dcb8ca <_IO_stdin_used@@Base+0x1988ca>
+ 45b17ec:	bf 15 00 00 00       	mov    $0x15,%edi
+ 45b17f1:	48 8d 74 24 40       	lea    0x40(%rsp),%rsi
+ 45b17f6:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45b17fc:	4d 89 c1             	mov    %r8,%r9
+ 45b17ff:	48 8d 05 1a 3a 95 01 	lea    0x1953a1a(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45b1806:	e8 d5 2f a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45b180b:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45b1810:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45b1815:	48 85 c0             	test   %rax,%rax
+ 45b1818:	0f 84 84 00 00 00    	je     45b18a2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0x122>
+ 45b181e:	0f b7 48 1e          	movzwl 0x1e(%rax),%ecx
+ 45b1822:	66 39 8a d0 00 00 00 	cmp    %cx,0xd0(%rdx)
+ 45b1829:	74 6d                	je     45b1898 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0x118>
+ 45b182b:	48 8b 32             	mov    (%rdx),%rsi
+ 45b182e:	48 8b 7a 08          	mov    0x8(%rdx),%rdi
+ 45b1832:	48 8b 42 78          	mov    0x78(%rdx),%rax
+ 45b1836:	48 89 74 24 50       	mov    %rsi,0x50(%rsp)
+ 45b183b:	48 89 7c 24 58       	mov    %rdi,0x58(%rsp)
+ 45b1840:	83 c1 13             	add    $0x13,%ecx
+ 45b1843:	48 0f bf c9          	movswq %cx,%rcx
+ 45b1847:	48 69 c9 00 ca 9a 3b 	imul   $0x3b9aca00,%rcx,%rcx
+ 45b184e:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 45b1853:	48 8d 5c 24 50       	lea    0x50(%rsp),%rbx
+ 45b1858:	e8 a3 79 93 fd       	call   1ee9200 <runtime.selectnbsend@@Base>
+ 45b185d:	0f 1f 00             	nopl   (%rax)
+ 45b1860:	84 c0                	test   %al,%al
+ 45b1862:	74 17                	je     45b187b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0xfb>
+ 45b1864:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45b1869:	0f b7 40 1e          	movzwl 0x1e(%rax),%eax
+ 45b186d:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45b1872:	66 89 81 d0 00 00 00 	mov    %ax,0xd0(%rcx)
+ 45b1879:	eb 1d                	jmp    45b1898 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base+0x118>
+ 45b187b:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 45b1880:	48 8b 82 00 01 00 00 	mov    0x100(%rdx),%rax
+ 45b1887:	48 8d 1d aa c2 87 00 	lea    0x87c2aa(%rip),%rbx        # 4e2db38 <_IO_stdin_used@@Base+0x1fab38>
+ 45b188e:	b9 2d 00 00 00       	mov    $0x2d,%ecx
+ 45b1893:	e8 08 59 e5 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45b1898:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 45b189d:	48 83 c4 70          	add    $0x70,%rsp
+ 45b18a1:	c3                   	ret
+ 45b18a2:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 45b18a7:	48 83 c4 70          	add    $0x70,%rsp
+ 45b18ab:	c3                   	ret
+ 45b18ac:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45b18b1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45b18b6:	e8 a5 2b 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45b18bb:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45b18c0:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45b18c5:	e9 b6 fe ff ff       	jmp    45b1780 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).receiveAidHuiMessage@@Base>
+ 45b18ca:	cc                   	int3
+ 45b18cb:	cc                   	int3
+ 45b18cc:	cc                   	int3
+ 45b18cd:	cc                   	int3
+ 45b18ce:	cc                   	int3
+ 45b18cf:	cc                   	int3
+ 45b18d0:	cc                   	int3
+ 45b18d1:	cc                   	int3
+ 45b18d2:	cc                   	int3
+ 45b18d3:	cc                   	int3
+ 45b18d4:	cc                   	int3
+ 45b18d5:	cc                   	int3
+ 45b18d6:	cc                   	int3
+ 45b18d7:	cc                   	int3
+ 45b18d8:	cc                   	int3
+ 45b18d9:	cc                   	int3
+ 45b18da:	cc                   	int3
+ 45b18db:	cc                   	int3
+ 45b18dc:	cc                   	int3
+ 45b18dd:	cc                   	int3
+ 45b18de:	cc                   	int3
+ 45b18df:	cc                   	int3

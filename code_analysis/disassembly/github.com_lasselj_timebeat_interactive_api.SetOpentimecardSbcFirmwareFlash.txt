@@ -1,0 +1,42 @@
+# github.com/lasselj/timebeat/interactive/api.SetOpentimecardSbcFirmwareFlash
+# addr 0x4bed620 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004bed620 <github.com/lasselj/timebeat/interactive/api.SetOpentimecardSbcFirmwareFlash@@Base>:
+ 4bed620:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4bed624:	76 4a                	jbe    4bed670 <github.com/lasselj/timebeat/interactive/api.SetOpentimecardSbcFirmwareFlash@@Base+0x50>
+ 4bed626:	48 83 ec 20          	sub    $0x20,%rsp
+ 4bed62a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4bed62f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4bed634:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4bed639:	48 85 db             	test   %rbx,%rbx
+ 4bed63c:	75 16                	jne    4bed654 <github.com/lasselj/timebeat/interactive/api.SetOpentimecardSbcFirmwareFlash@@Base+0x34>
+ 4bed63e:	48 8d 05 5b 05 28 00 	lea    0x28055b(%rip),%rax        # 4e6dba0 <_IO_stdin_used@@Base+0x23aba0>
+ 4bed645:	bb 43 00 00 00       	mov    $0x43,%ebx
+ 4bed64a:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4bed64f:	48 83 c4 20          	add    $0x20,%rsp
+ 4bed653:	c3                   	ret
+ 4bed654:	48 8b 10             	mov    (%rax),%rdx
+ 4bed657:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4bed65b:	48 89 d0             	mov    %rdx,%rax
+ 4bed65e:	48 89 f9             	mov    %rdi,%rcx
+ 4bed661:	e8 7a 70 fb ff       	call   4ba46e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1.FlashEEProm@@Base>
+ 4bed666:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4bed66b:	48 83 c4 20          	add    $0x20,%rsp
+ 4bed66f:	c3                   	ret
+ 4bed670:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4bed675:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4bed67a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4bed67f:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4bed684:	e8 d7 6d 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4bed689:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4bed68e:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4bed693:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4bed698:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4bed69d:	eb 81                	jmp    4bed620 <github.com/lasselj/timebeat/interactive/api.SetOpentimecardSbcFirmwareFlash@@Base>
+ 4bed69f:	cc                   	int3

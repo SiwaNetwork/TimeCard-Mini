@@ -1,0 +1,259 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic
+# addr 0x458b900 size 992 (0x3e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000458b900 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base>:
+ 458b900:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 458b904:	0f 86 9e 03 00 00    	jbe    458bca8 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x3a8>
+ 458b90a:	48 83 ec 38          	sub    $0x38,%rsp
+ 458b90e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 458b913:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 458b918:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 458b91d:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 458b922:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 458b927:	48 89 cb             	mov    %rcx,%rbx
+ 458b92a:	e8 91 0c 00 00       	call   458c5c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesBasic@@Base>
+ 458b92f:	48 85 c0             	test   %rax,%rax
+ 458b932:	74 08                	je     458b93c <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x3c>
+ 458b934:	31 c9                	xor    %ecx,%ecx
+ 458b936:	31 d2                	xor    %edx,%edx
+ 458b938:	31 db                	xor    %ebx,%ebx
+ 458b93a:	eb 1c                	jmp    458b958 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x58>
+ 458b93c:	31 c0                	xor    %eax,%eax
+ 458b93e:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 458b943:	48 83 c4 38          	add    $0x38,%rsp
+ 458b947:	c3                   	ret
+ 458b948:	48 8d 77 01          	lea    0x1(%rdi),%rsi
+ 458b94c:	48 89 c8             	mov    %rcx,%rax
+ 458b94f:	48 89 f1             	mov    %rsi,%rcx
+ 458b952:	48 89 d3             	mov    %rdx,%rbx
+ 458b955:	4c 89 da             	mov    %r11,%rdx
+ 458b958:	8b 30                	mov    (%rax),%esi
+ 458b95a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 458b960:	48 39 f1             	cmp    %rsi,%rcx
+ 458b963:	0f 8d f4 02 00 00    	jge    458bc5d <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x35d>
+ 458b969:	48 89 ce             	mov    %rcx,%rsi
+ 458b96c:	48 d1 e1             	shl    $1,%rcx
+ 458b96f:	48 83 f9 33          	cmp    $0x33,%rcx
+ 458b973:	0f 83 21 03 00 00    	jae    458bc9a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x39a>
+ 458b979:	48 89 f7             	mov    %rsi,%rdi
+ 458b97c:	48 c1 e6 05          	shl    $0x5,%rsi
+ 458b980:	4c 8b 44 06 10       	mov    0x10(%rsi,%rax,1),%r8
+ 458b985:	8b 74 06 18          	mov    0x18(%rsi,%rax,1),%esi
+ 458b989:	48 81 fe 00 ca 9a 3b 	cmp    $0x3b9aca00,%rsi
+ 458b990:	72 3b                	jb     458b9cd <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0xcd>
+ 458b992:	48 89 c1             	mov    %rax,%rcx
+ 458b995:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 458b99c:	2f b8 44 
+ 458b99f:	49 89 d1             	mov    %rdx,%r9
+ 458b9a2:	48 f7 ee             	imul   %rsi
+ 458b9a5:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 458b9a9:	4d 8d 14 10          	lea    (%r8,%rdx,1),%r10
+ 458b9ad:	4c 69 da 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r11
+ 458b9b4:	4c 29 de             	sub    %r11,%rsi
+ 458b9b7:	48 85 f6             	test   %rsi,%rsi
+ 458b9ba:	7d 1a                	jge    458b9d6 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0xd6>
+ 458b9bc:	48 81 c6 00 ca 9a 3b 	add    $0x3b9aca00,%rsi
+ 458b9c3:	4d 8d 14 10          	lea    (%r8,%rdx,1),%r10
+ 458b9c7:	4d 8d 52 ff          	lea    -0x1(%r10),%r10
+ 458b9cb:	eb 09                	jmp    458b9d6 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0xd6>
+ 458b9cd:	48 89 c1             	mov    %rax,%rcx
+ 458b9d0:	49 89 d1             	mov    %rdx,%r9
+ 458b9d3:	4d 89 c2             	mov    %r8,%r10
+ 458b9d6:	48 8d 04 3f          	lea    (%rdi,%rdi,1),%rax
+ 458b9da:	48 8d 40 01          	lea    0x1(%rax),%rax
+ 458b9de:	66 90                	xchg   %ax,%ax
+ 458b9e0:	48 83 f8 33          	cmp    $0x33,%rax
+ 458b9e4:	0f 83 a6 02 00 00    	jae    458bc90 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x390>
+ 458b9ea:	48 c1 e0 04          	shl    $0x4,%rax
+ 458b9ee:	48 8b 54 08 10       	mov    0x10(%rax,%rcx,1),%rdx
+ 458b9f3:	44 8b 44 08 18       	mov    0x18(%rax,%rcx,1),%r8d
+ 458b9f8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 458b9ff:	00 
+ 458ba00:	49 81 f8 00 ca 9a 3b 	cmp    $0x3b9aca00,%r8
+ 458ba07:	72 39                	jb     458ba42 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x142>
+ 458ba09:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 458ba10:	2f b8 44 
+ 458ba13:	49 89 d3             	mov    %rdx,%r11
+ 458ba16:	49 f7 e8             	imul   %r8
+ 458ba19:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 458ba1d:	4d 8d 24 13          	lea    (%r11,%rdx,1),%r12
+ 458ba21:	4c 69 ea 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r13
+ 458ba28:	4d 29 e8             	sub    %r13,%r8
+ 458ba2b:	4d 85 c0             	test   %r8,%r8
+ 458ba2e:	7d 15                	jge    458ba45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x145>
+ 458ba30:	49 81 c0 00 ca 9a 3b 	add    $0x3b9aca00,%r8
+ 458ba37:	4d 8d 24 13          	lea    (%r11,%rdx,1),%r12
+ 458ba3b:	4d 8d 64 24 ff       	lea    -0x1(%r12),%r12
+ 458ba40:	eb 03                	jmp    458ba45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x145>
+ 458ba42:	49 89 d4             	mov    %rdx,%r12
+ 458ba45:	48 8d 04 3f          	lea    (%rdi,%rdi,1),%rax
+ 458ba49:	48 8d 40 02          	lea    0x2(%rax),%rax
+ 458ba4d:	48 83 f8 33          	cmp    $0x33,%rax
+ 458ba51:	0f 83 2f 02 00 00    	jae    458bc86 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x386>
+ 458ba57:	48 c1 e0 04          	shl    $0x4,%rax
+ 458ba5b:	48 8b 54 08 10       	mov    0x10(%rax,%rcx,1),%rdx
+ 458ba60:	44 8b 5c 08 18       	mov    0x18(%rax,%rcx,1),%r11d
+ 458ba65:	49 81 fb 00 ca 9a 3b 	cmp    $0x3b9aca00,%r11
+ 458ba6c:	72 3d                	jb     458baab <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x1ab>
+ 458ba6e:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 458ba75:	2f b8 44 
+ 458ba78:	49 89 d5             	mov    %rdx,%r13
+ 458ba7b:	49 f7 eb             	imul   %r11
+ 458ba7e:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 458ba82:	4d 8d 7c 15 00       	lea    0x0(%r13,%rdx,1),%r15
+ 458ba87:	48 89 d8             	mov    %rbx,%rax
+ 458ba8a:	48 69 da 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%rbx
+ 458ba91:	49 29 db             	sub    %rbx,%r11
+ 458ba94:	4d 85 db             	test   %r11,%r11
+ 458ba97:	7d 18                	jge    458bab1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x1b1>
+ 458ba99:	49 81 c3 00 ca 9a 3b 	add    $0x3b9aca00,%r11
+ 458baa0:	4d 8d 7c 15 00       	lea    0x0(%r13,%rdx,1),%r15
+ 458baa5:	4d 8d 7f ff          	lea    -0x1(%r15),%r15
+ 458baa9:	eb 06                	jmp    458bab1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x1b1>
+ 458baab:	48 89 d8             	mov    %rbx,%rax
+ 458baae:	49 89 d7             	mov    %rdx,%r15
+ 458bab1:	48 63 d6             	movslq %esi,%rdx
+ 458bab4:	48 bb 00 f7 91 77 0e 	movabs $0xe7791f700,%rbx
+ 458babb:	00 00 00 
+ 458babe:	4a 8d 34 13          	lea    (%rbx,%r10,1),%rsi
+ 458bac2:	48 0f ba e2 3f       	bt     $0x3f,%rdx
+ 458bac7:	73 19                	jae    458bae2 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x1e2>
+ 458bac9:	49 89 d2             	mov    %rdx,%r10
+ 458bacc:	48 d1 e2             	shl    $1,%rdx
+ 458bacf:	48 c1 ea 1f          	shr    $0x1f,%rdx
+ 458bad3:	49 bd 80 7f b1 d7 0d 	movabs $0xdd7b17f80,%r13
+ 458bada:	00 00 00 
+ 458badd:	4c 01 ea             	add    %r13,%rdx
+ 458bae0:	eb 10                	jmp    458baf2 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x1f2>
+ 458bae2:	49 89 d2             	mov    %rdx,%r10
+ 458bae5:	49 bd 80 7f b1 d7 0d 	movabs $0xdd7b17f80,%r13
+ 458baec:	00 00 00 
+ 458baef:	48 89 f2             	mov    %rsi,%rdx
+ 458baf2:	4c 89 54 24 28       	mov    %r10,0x28(%rsp)
+ 458baf7:	48 69 d2 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%rdx
+ 458bafe:	41 81 e2 ff ff ff 3f 	and    $0x3fffffff,%r10d
+ 458bb05:	4d 63 d2             	movslq %r10d,%r10
+ 458bb08:	4c 01 d2             	add    %r10,%rdx
+ 458bb0b:	4d 63 db             	movslq %r11d,%r11
+ 458bb0e:	4c 89 5c 24 10       	mov    %r11,0x10(%rsp)
+ 458bb13:	49 01 df             	add    %rbx,%r15
+ 458bb16:	4c 89 7c 24 18       	mov    %r15,0x18(%rsp)
+ 458bb1b:	49 0f ba e3 3f       	bt     $0x3f,%r11
+ 458bb20:	73 12                	jae    458bb34 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x234>
+ 458bb22:	49 d1 e3             	shl    $1,%r11
+ 458bb25:	49 c1 eb 1f          	shr    $0x1f,%r11
+ 458bb29:	4d 01 eb             	add    %r13,%r11
+ 458bb2c:	4d 89 df             	mov    %r11,%r15
+ 458bb2f:	4c 8b 5c 24 10       	mov    0x10(%rsp),%r11
+ 458bb34:	4d 69 ff 00 ca 9a 3b 	imul   $0x3b9aca00,%r15,%r15
+ 458bb3b:	41 81 e3 ff ff ff 3f 	and    $0x3fffffff,%r11d
+ 458bb42:	4d 63 db             	movslq %r11d,%r11
+ 458bb45:	4d 01 df             	add    %r11,%r15
+ 458bb48:	4d 63 c0             	movslq %r8d,%r8
+ 458bb4b:	49 0f ba e0 3f       	bt     $0x3f,%r8
+ 458bb50:	73 10                	jae    458bb62 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x262>
+ 458bb52:	4d 89 c4             	mov    %r8,%r12
+ 458bb55:	49 d1 e0             	shl    $1,%r8
+ 458bb58:	49 c1 e8 1f          	shr    $0x1f,%r8
+ 458bb5c:	4d 01 e8             	add    %r13,%r8
+ 458bb5f:	90                   	nop
+ 458bb60:	eb 16                	jmp    458bb78 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x278>
+ 458bb62:	49 01 dc             	add    %rbx,%r12
+ 458bb65:	4c 89 e3             	mov    %r12,%rbx
+ 458bb68:	4d 89 c4             	mov    %r8,%r12
+ 458bb6b:	49 89 d8             	mov    %rbx,%r8
+ 458bb6e:	48 bb 00 f7 91 77 0e 	movabs $0xe7791f700,%rbx
+ 458bb75:	00 00 00 
+ 458bb78:	4c 89 4c 24 20       	mov    %r9,0x20(%rsp)
+ 458bb7d:	48 bb 00 00 1a 3d eb 	movabs $0xa1b203eb3d1a0000,%rbx
+ 458bb84:	03 b2 a1 
+ 458bb87:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 458bb8b:	49 c1 e9 3f          	shr    $0x3f,%r9
+ 458bb8f:	4c 01 ca             	add    %r9,%rdx
+ 458bb92:	48 01 da             	add    %rbx,%rdx
+ 458bb95:	48 d1 fa             	sar    $1,%rdx
+ 458bb98:	4d 8d 0c 1f          	lea    (%r15,%rbx,1),%r9
+ 458bb9c:	49 c1 e9 3f          	shr    $0x3f,%r9
+ 458bba0:	4d 01 f9             	add    %r15,%r9
+ 458bba3:	49 01 d9             	add    %rbx,%r9
+ 458bba6:	49 d1 f9             	sar    $1,%r9
+ 458bba9:	4c 01 ca             	add    %r9,%rdx
+ 458bbac:	4d 69 c0 00 ca 9a 3b 	imul   $0x3b9aca00,%r8,%r8
+ 458bbb3:	41 81 e4 ff ff ff 3f 	and    $0x3fffffff,%r12d
+ 458bbba:	4d 63 cc             	movslq %r12d,%r9
+ 458bbbd:	4d 01 c8             	add    %r9,%r8
+ 458bbc0:	4c 29 c2             	sub    %r8,%rdx
+ 458bbc3:	4c 8b 44 24 50       	mov    0x50(%rsp),%r8
+ 458bbc8:	49 39 f8             	cmp    %rdi,%r8
+ 458bbcb:	0f 86 aa 00 00 00    	jbe    458bc7b <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x37b>
+ 458bbd1:	49 b9 00 00 e6 c2 14 	movabs $0x5e4dfc14c2e60000,%r9
+ 458bbd8:	fc 4d 5e 
+ 458bbdb:	4c 01 ca             	add    %r9,%rdx
+ 458bbde:	4c 8b 64 24 48       	mov    0x48(%rsp),%r12
+ 458bbe3:	49 89 14 fc          	mov    %rdx,(%r12,%rdi,8)
+ 458bbe7:	4c 8b 7c 24 10       	mov    0x10(%rsp),%r15
+ 458bbec:	49 0f ba e7 3f       	bt     $0x3f,%r15
+ 458bbf1:	73 0c                	jae    458bbff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x2ff>
+ 458bbf3:	49 d1 e7             	shl    $1,%r15
+ 458bbf6:	49 c1 ef 1f          	shr    $0x1f,%r15
+ 458bbfa:	4d 01 ef             	add    %r13,%r15
+ 458bbfd:	eb 05                	jmp    458bc04 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x304>
+ 458bbff:	4c 8b 7c 24 18       	mov    0x18(%rsp),%r15
+ 458bc04:	4d 69 ff 00 ca 9a 3b 	imul   $0x3b9aca00,%r15,%r15
+ 458bc0b:	4d 01 fb             	add    %r15,%r11
+ 458bc0e:	90                   	nop
+ 458bc0f:	4c 8b 7c 24 28       	mov    0x28(%rsp),%r15
+ 458bc14:	49 0f ba e7 3f       	bt     $0x3f,%r15
+ 458bc19:	73 0c                	jae    458bc27 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x327>
+ 458bc1b:	49 d1 e7             	shl    $1,%r15
+ 458bc1e:	49 c1 ef 1f          	shr    $0x1f,%r15
+ 458bc22:	4b 8d 74 3d 00       	lea    0x0(%r13,%r15,1),%rsi
+ 458bc27:	48 69 f6 00 ca 9a 3b 	imul   $0x3b9aca00,%rsi,%rsi
+ 458bc2e:	4c 01 d6             	add    %r10,%rsi
+ 458bc31:	49 29 f3             	sub    %rsi,%r11
+ 458bc34:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 458bc39:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 458bc40:	4c 39 de             	cmp    %r11,%rsi
+ 458bc43:	0f 8f ff fc ff ff    	jg     458b948 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x48>
+ 458bc49:	48 85 ff             	test   %rdi,%rdi
+ 458bc4c:	0f 84 f6 fc ff ff    	je     458b948 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x48>
+ 458bc52:	49 89 f3             	mov    %rsi,%r11
+ 458bc55:	48 89 c2             	mov    %rax,%rdx
+ 458bc58:	e9 eb fc ff ff       	jmp    458b948 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base+0x48>
+ 458bc5d:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 458bc62:	48 8b 89 f0 00 00 00 	mov    0xf0(%rcx),%rcx
+ 458bc69:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 458bc6d:	48 8d 04 19          	lea    (%rcx,%rbx,1),%rax
+ 458bc71:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 458bc76:	48 83 c4 38          	add    $0x38,%rsp
+ 458bc7a:	c3                   	ret
+ 458bc7b:	48 89 f8             	mov    %rdi,%rax
+ 458bc7e:	4c 89 c1             	mov    %r8,%rcx
+ 458bc81:	e8 1a ae 9c fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458bc86:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 458bc8b:	e8 10 ae 9c fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458bc90:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 458bc95:	e8 06 ae 9c fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458bc9a:	48 89 c8             	mov    %rcx,%rax
+ 458bc9d:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 458bca2:	e8 f9 ad 9c fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458bca7:	90                   	nop
+ 458bca8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458bcad:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 458bcb2:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 458bcb7:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 458bcbc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 458bcc0:	e8 9b 87 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 458bcc5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 458bcca:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 458bccf:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 458bcd4:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 458bcd9:	e9 22 fc ff ff       	jmp    458b900 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DeterminePTPOffsetBasic@@Base>
+ 458bcde:	cc                   	int3
+ 458bcdf:	cc                   	int3

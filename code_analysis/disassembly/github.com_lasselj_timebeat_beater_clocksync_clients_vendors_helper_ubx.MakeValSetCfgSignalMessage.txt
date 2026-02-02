@@ -1,0 +1,97 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage
+# addr 0x4400e80 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004400e80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base>:
+ 4400e80:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4400e84:	0f 86 fe 00 00 00    	jbe    4400f88 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0x108>
+ 4400e8a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4400e8e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4400e93:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4400e98:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4400e9d:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4400ea2:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4400ea7:	48 8d 05 b2 da 3a 01 	lea    0x13adab2(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4400eae:	31 db                	xor    %ebx,%ebx
+ 4400eb0:	48 89 d9             	mov    %rbx,%rcx
+ 4400eb3:	e8 28 55 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4400eb8:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4400ebd:	48 8d 05 9c 1b 71 01 	lea    0x1711b9c(%rip),%rax        # 5b12a60 <type:4arSz+aB@@Base>
+ 4400ec4:	e8 17 f6 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4400ec9:	0f b7 15 7a 62 81 03 	movzwl 0x381627a(%rip),%edx        # 7c1714a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UBX_HEADER@@Base>
+ 4400ed0:	66 89 10             	mov    %dx,(%rax)
+ 4400ed3:	66 c7 40 02 06 8a    	movw   $0x8a06,0x2(%rax)
+ 4400ed9:	c6 40 08 00          	movb   $0x0,0x8(%rax)
+ 4400edd:	44 0f 11 78 18       	movups %xmm15,0x18(%rax)
+ 4400ee2:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4400ee6:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4400eeb:	83 3d 6e aa a7 03 00 	cmpl   $0x0,0x3a7aa6e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4400ef2:	75 0b                	jne    4400eff <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0x7f>
+ 4400ef4:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4400ef9:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4400efd:	eb 0a                	jmp    4400f09 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0x89>
+ 4400eff:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4400f04:	e8 17 58 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4400f09:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4400f0e:	c6 40 09 07          	movb   $0x7,0x9(%rax)
+ 4400f12:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4400f17:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4400f1c:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 4400f21:	e8 ba d8 ff ff       	call   43fe7e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx/conf.MakeCfgSignal@@Base>
+ 4400f26:	48 85 db             	test   %rbx,%rbx
+ 4400f29:	75 4a                	jne    4400f75 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0xf5>
+ 4400f2b:	48 8b 10             	mov    (%rax),%rdx
+ 4400f2e:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4400f32:	4c 8b 40 10          	mov    0x10(%rax),%r8
+ 4400f36:	4c 8b 4c 24 18       	mov    0x18(%rsp),%r9
+ 4400f3b:	49 89 71 18          	mov    %rsi,0x18(%r9)
+ 4400f3f:	4d 89 41 20          	mov    %r8,0x20(%r9)
+ 4400f43:	83 3d 16 aa a7 03 00 	cmpl   $0x0,0x3a7aa16(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4400f4a:	75 06                	jne    4400f52 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0xd2>
+ 4400f4c:	49 89 51 10          	mov    %rdx,0x10(%r9)
+ 4400f50:	eb 0a                	jmp    4400f5c <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base+0xdc>
+ 4400f52:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4400f57:	e8 c4 57 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4400f5c:	48 8b 58 18          	mov    0x18(%rax),%rbx
+ 4400f60:	48 8b 48 20          	mov    0x20(%rax),%rcx
+ 4400f64:	48 8b 78 28          	mov    0x28(%rax),%rdi
+ 4400f68:	4c 89 c8             	mov    %r9,%rax
+ 4400f6b:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4400f70:	48 83 c4 38          	add    $0x38,%rsp
+ 4400f74:	c3                   	ret
+ 4400f75:	31 c0                	xor    %eax,%eax
+ 4400f77:	31 db                	xor    %ebx,%ebx
+ 4400f79:	31 c9                	xor    %ecx,%ecx
+ 4400f7b:	48 89 cf             	mov    %rcx,%rdi
+ 4400f7e:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4400f83:	48 83 c4 38          	add    $0x38,%rsp
+ 4400f87:	c3                   	ret
+ 4400f88:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4400f8d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4400f92:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4400f97:	e8 c4 34 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4400f9c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4400fa1:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4400fa6:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4400fab:	e9 d0 fe ff ff       	jmp    4400e80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgSignalMessage@@Base>
+ 4400fb0:	cc                   	int3
+ 4400fb1:	cc                   	int3
+ 4400fb2:	cc                   	int3
+ 4400fb3:	cc                   	int3
+ 4400fb4:	cc                   	int3
+ 4400fb5:	cc                   	int3
+ 4400fb6:	cc                   	int3
+ 4400fb7:	cc                   	int3
+ 4400fb8:	cc                   	int3
+ 4400fb9:	cc                   	int3
+ 4400fba:	cc                   	int3
+ 4400fbb:	cc                   	int3
+ 4400fbc:	cc                   	int3
+ 4400fbd:	cc                   	int3
+ 4400fbe:	cc                   	int3
+ 4400fbf:	cc                   	int3

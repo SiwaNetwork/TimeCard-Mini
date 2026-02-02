@@ -1,0 +1,42 @@
+# github.com/lasselj/timebeat/interactive/api.ShowOpentimecardSbcPowerSensor
+# addr 0x4bede20 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004bede20 <github.com/lasselj/timebeat/interactive/api.ShowOpentimecardSbcPowerSensor@@Base>:
+ 4bede20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4bede24:	76 49                	jbe    4bede6f <github.com/lasselj/timebeat/interactive/api.ShowOpentimecardSbcPowerSensor@@Base+0x4f>
+ 4bede26:	48 83 ec 10          	sub    $0x10,%rsp
+ 4bede2a:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 4bede2f:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 4bede34:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4bede39:	48 83 fb 01          	cmp    $0x1,%rbx
+ 4bede3d:	7e 16                	jle    4bede55 <github.com/lasselj/timebeat/interactive/api.ShowOpentimecardSbcPowerSensor@@Base+0x35>
+ 4bede3f:	48 8d 05 6a ff 22 00 	lea    0x22ff6a(%rip),%rax        # 4e1ddb0 <_IO_stdin_used@@Base+0x1eadb0>
+ 4bede46:	bb 29 00 00 00       	mov    $0x29,%ebx
+ 4bede4b:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4bede50:	48 83 c4 10          	add    $0x10,%rsp
+ 4bede54:	c3                   	ret
+ 4bede55:	e8 66 67 fb ff       	call   4ba45c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1.GetClientInstance@@Base>
+ 4bede5a:	48 8b 40 18          	mov    0x18(%rax),%rax
+ 4bede5e:	66 90                	xchg   %ax,%ax
+ 4bede60:	e8 db 07 fb ff       	call   4b9e640 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/power_sensor/power_sensor_INA230.(*PowerSensorINA230).DisplayStatus@@Base>
+ 4bede65:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4bede6a:	48 83 c4 10          	add    $0x10,%rsp
+ 4bede6e:	c3                   	ret
+ 4bede6f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4bede74:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4bede79:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4bede7e:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4bede83:	e8 d8 65 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4bede88:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4bede8d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4bede92:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4bede97:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4bede9c:	eb 82                	jmp    4bede20 <github.com/lasselj/timebeat/interactive/api.ShowOpentimecardSbcPowerSensor@@Base>
+ 4bede9e:	cc                   	int3
+ 4bede9f:	cc                   	int3

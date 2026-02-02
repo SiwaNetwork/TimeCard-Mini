@@ -1,0 +1,161 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp
+# addr 0x459ae00 size 544 (0x220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459ae00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base>:
+ 459ae00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459ae04:	0f 86 e6 01 00 00    	jbe    459aff0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x1f0>
+ 459ae0a:	48 83 ec 38          	sub    $0x38,%rsp
+ 459ae0e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 459ae13:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 459ae18:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 459ae1f:	00 
+ 459ae20:	48 39 d8             	cmp    %rbx,%rax
+ 459ae23:	0f 84 bb 01 00 00    	je     459afe4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x1e4>
+ 459ae29:	48 85 c0             	test   %rax,%rax
+ 459ae2c:	74 1b                	je     459ae49 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x49>
+ 459ae2e:	48 85 db             	test   %rbx,%rbx
+ 459ae31:	74 07                	je     459ae3a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x3a>
+ 459ae33:	48 85 c0             	test   %rax,%rax
+ 459ae36:	75 1a                	jne    459ae52 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x52>
+ 459ae38:	eb 0f                	jmp    459ae49 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x49>
+ 459ae3a:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459ae3f:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459ae44:	48 83 c4 38          	add    $0x38,%rsp
+ 459ae48:	c3                   	ret
+ 459ae49:	48 85 db             	test   %rbx,%rbx
+ 459ae4c:	0f 85 81 01 00 00    	jne    459afd3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x1d3>
+ 459ae52:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 459ae57:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 459ae5c:	84 00                	test   %al,(%rax)
+ 459ae5e:	84 03                	test   %al,(%rbx)
+ 459ae60:	b9 08 00 00 00       	mov    $0x8,%ecx
+ 459ae65:	48 89 df             	mov    %rbx,%rdi
+ 459ae68:	48 89 ce             	mov    %rcx,%rsi
+ 459ae6b:	49 89 c8             	mov    %rcx,%r8
+ 459ae6e:	48 89 cb             	mov    %rcx,%rbx
+ 459ae71:	e8 2a 89 94 fd       	call   1ee37a0 <internal/bytealg.Compare@@Base>
+ 459ae76:	48 85 c0             	test   %rax,%rax
+ 459ae79:	0f 84 3b 01 00 00    	je     459afba <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x1ba>
+ 459ae7f:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 459ae84:	0f b6 51 08          	movzbl 0x8(%rcx),%edx
+ 459ae88:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 459ae8d:	0f b6 73 08          	movzbl 0x8(%rbx),%esi
+ 459ae91:	40 38 d6             	cmp    %dl,%sil
+ 459ae94:	0f 87 11 01 00 00    	ja     459afab <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x1ab>
+ 459ae9a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 459aea0:	0f 82 f4 00 00 00    	jb     459af9a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x19a>
+ 459aea6:	0f b6 51 0a          	movzbl 0xa(%rcx),%edx
+ 459aeaa:	0f b6 73 0a          	movzbl 0xa(%rbx),%esi
+ 459aeae:	40 38 d6             	cmp    %dl,%sil
+ 459aeb1:	0f 87 d4 00 00 00    	ja     459af8b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x18b>
+ 459aeb7:	0f 82 bd 00 00 00    	jb     459af7a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x17a>
+ 459aebd:	0f b6 51 0b          	movzbl 0xb(%rcx),%edx
+ 459aec1:	0f b6 73 0b          	movzbl 0xb(%rbx),%esi
+ 459aec5:	40 38 d6             	cmp    %dl,%sil
+ 459aec8:	0f 87 9d 00 00 00    	ja     459af6b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x16b>
+ 459aece:	0f 82 86 00 00 00    	jb     459af5a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x15a>
+ 459aed4:	0f b7 51 0c          	movzwl 0xc(%rcx),%edx
+ 459aed8:	0f b7 73 0c          	movzwl 0xc(%rbx),%esi
+ 459aedc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459aee0:	66 39 d6             	cmp    %dx,%si
+ 459aee3:	77 66                	ja     459af4b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x14b>
+ 459aee5:	72 53                	jb     459af3a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x13a>
+ 459aee7:	0f b6 49 09          	movzbl 0x9(%rcx),%ecx
+ 459aeeb:	0f b6 53 09          	movzbl 0x9(%rbx),%edx
+ 459aeef:	38 ca                	cmp    %cl,%dl
+ 459aef1:	77 38                	ja     459af2b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x12b>
+ 459aef3:	72 25                	jb     459af1a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x11a>
+ 459aef5:	48 85 c0             	test   %rax,%rax
+ 459aef8:	7d 0f                	jge    459af09 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base+0x109>
+ 459aefa:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459aeff:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af04:	48 83 c4 38          	add    $0x38,%rsp
+ 459af08:	c3                   	ret
+ 459af09:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459af10:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af15:	48 83 c4 38          	add    $0x38,%rsp
+ 459af19:	c3                   	ret
+ 459af1a:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459af21:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af26:	48 83 c4 38          	add    $0x38,%rsp
+ 459af2a:	c3                   	ret
+ 459af2b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459af30:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af35:	48 83 c4 38          	add    $0x38,%rsp
+ 459af39:	c3                   	ret
+ 459af3a:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459af41:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af46:	48 83 c4 38          	add    $0x38,%rsp
+ 459af4a:	c3                   	ret
+ 459af4b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459af50:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af55:	48 83 c4 38          	add    $0x38,%rsp
+ 459af59:	c3                   	ret
+ 459af5a:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459af61:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af66:	48 83 c4 38          	add    $0x38,%rsp
+ 459af6a:	c3                   	ret
+ 459af6b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459af70:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af75:	48 83 c4 38          	add    $0x38,%rsp
+ 459af79:	c3                   	ret
+ 459af7a:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459af81:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af86:	48 83 c4 38          	add    $0x38,%rsp
+ 459af8a:	c3                   	ret
+ 459af8b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459af90:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459af95:	48 83 c4 38          	add    $0x38,%rsp
+ 459af99:	c3                   	ret
+ 459af9a:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459afa1:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459afa6:	48 83 c4 38          	add    $0x38,%rsp
+ 459afaa:	c3                   	ret
+ 459afab:	b8 01 00 00 00       	mov    $0x1,%eax
+ 459afb0:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459afb5:	48 83 c4 38          	add    $0x38,%rsp
+ 459afb9:	c3                   	ret
+ 459afba:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 459afbf:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 459afc4:	e8 57 00 00 00       	call   459b020 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp2@@Base>
+ 459afc9:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459afce:	48 83 c4 38          	add    $0x38,%rsp
+ 459afd2:	c3                   	ret
+ 459afd3:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459afda:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459afdf:	48 83 c4 38          	add    $0x38,%rsp
+ 459afe3:	c3                   	ret
+ 459afe4:	31 c0                	xor    %eax,%eax
+ 459afe6:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 459afeb:	48 83 c4 38          	add    $0x38,%rsp
+ 459afef:	c3                   	ret
+ 459aff0:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459aff5:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459affa:	e8 61 94 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459afff:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459b004:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459b009:	e9 f2 fd ff ff       	jmp    459ae00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.BMCSetCmp@@Base>
+ 459b00e:	cc                   	int3
+ 459b00f:	cc                   	int3
+ 459b010:	cc                   	int3
+ 459b011:	cc                   	int3
+ 459b012:	cc                   	int3
+ 459b013:	cc                   	int3
+ 459b014:	cc                   	int3
+ 459b015:	cc                   	int3
+ 459b016:	cc                   	int3
+ 459b017:	cc                   	int3
+ 459b018:	cc                   	int3
+ 459b019:	cc                   	int3
+ 459b01a:	cc                   	int3
+ 459b01b:	cc                   	int3
+ 459b01c:	cc                   	int3
+ 459b01d:	cc                   	int3
+ 459b01e:	cc                   	int3
+ 459b01f:	cc                   	int3

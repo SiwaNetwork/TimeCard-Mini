@@ -1,0 +1,61 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset
+# addr 0x45be0a0 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045be0a0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base>:
+ 45be0a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45be0a4:	0f 86 9c 00 00 00    	jbe    45be146 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base+0xa6>
+ 45be0aa:	48 83 ec 28          	sub    $0x28,%rsp
+ 45be0ae:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 45be0b3:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 45be0b8:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45be0bd:	0f 1f 00             	nopl   (%rax)
+ 45be0c0:	e8 bb 26 fe ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 45be0c5:	e8 16 a0 fe ff       	call   45a80e0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetSecondarySourcesOffset@@Base>
+ 45be0ca:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45be0cf:	e8 ec 67 fd ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45be0d4:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45be0d9:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 45be0dd:	48 8b 49 10          	mov    0x10(%rcx),%rcx
+ 45be0e1:	e8 da 82 fd ff       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45be0e6:	48 85 c0             	test   %rax,%rax
+ 45be0e9:	74 4c                	je     45be137 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base+0x97>
+ 45be0eb:	80 b8 91 00 00 00 00 	cmpb   $0x0,0x91(%rax)
+ 45be0f2:	75 10                	jne    45be104 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base+0x64>
+ 45be0f4:	48 8b 08             	mov    (%rax),%rcx
+ 45be0f7:	48 8b 09             	mov    (%rcx),%rcx
+ 45be0fa:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 45be0ff:	48 29 ca             	sub    %rcx,%rdx
+ 45be102:	eb 26                	jmp    45be12a <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base+0x8a>
+ 45be104:	e8 b7 67 fd ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45be109:	48 8d 1d cd 0d 6a 00 	lea    0x6a0dcd(%rip),%rbx        # 4c5eedd <_IO_stdin_used@@Base+0x2bedd>
+ 45be110:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 45be115:	e8 a6 82 fd ff       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45be11a:	48 8b 08             	mov    (%rax),%rcx
+ 45be11d:	84 00                	test   %al,(%rax)
+ 45be11f:	48 8b 01             	mov    (%rcx),%rax
+ 45be122:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 45be127:	48 29 c2             	sub    %rax,%rdx
+ 45be12a:	48 89 d0             	mov    %rdx,%rax
+ 45be12d:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 45be132:	48 83 c4 28          	add    $0x28,%rsp
+ 45be136:	c3                   	ret
+ 45be137:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 45be13c:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 45be141:	48 83 c4 28          	add    $0x28,%rsp
+ 45be145:	c3                   	ret
+ 45be146:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45be14b:	e8 10 63 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45be150:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45be155:	e9 46 ff ff ff       	jmp    45be0a0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).getSecondaryOffset@@Base>
+ 45be15a:	cc                   	int3
+ 45be15b:	cc                   	int3
+ 45be15c:	cc                   	int3
+ 45be15d:	cc                   	int3
+ 45be15e:	cc                   	int3
+ 45be15f:	cc                   	int3

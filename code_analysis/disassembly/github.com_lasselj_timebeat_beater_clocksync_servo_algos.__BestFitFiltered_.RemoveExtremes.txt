@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes
+# addr 0x457c080 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457c080 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base>:
+ 457c080:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457c084:	0f 86 f0 00 00 00    	jbe    457c17a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xfa>
+ 457c08a:	48 83 ec 28          	sub    $0x28,%rsp
+ 457c08e:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 457c093:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 457c098:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 457c09c:	48 8b 08             	mov    (%rax),%rcx
+ 457c09f:	90                   	nop
+ 457c0a0:	48 85 c9             	test   %rcx,%rcx
+ 457c0a3:	0f 84 cb 00 00 00    	je     457c174 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xf4>
+ 457c0a9:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 457c0ae:	48 89 d0             	mov    %rdx,%rax
+ 457c0b1:	48 83 f9 ff          	cmp    $0xffffffffffffffff,%rcx
+ 457c0b5:	74 07                	je     457c0be <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0x3e>
+ 457c0b7:	48 99                	cqto
+ 457c0b9:	48 f7 f9             	idiv   %rcx
+ 457c0bc:	eb 05                	jmp    457c0c3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0x43>
+ 457c0be:	48 f7 d8             	neg    %rax
+ 457c0c1:	31 d2                	xor    %edx,%edx
+ 457c0c3:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+ 457c0c8:	48 8d 05 31 74 59 01 	lea    0x1597431(%rip),%rax        # 5b13500 <type:vMqycTjW@@Base>
+ 457c0cf:	48 89 cb             	mov    %rcx,%rbx
+ 457c0d2:	e8 09 a3 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 457c0d7:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 457c0dc:	48 8b 0a             	mov    (%rdx),%rcx
+ 457c0df:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 457c0e4:	31 db                	xor    %ebx,%ebx
+ 457c0e6:	31 ff                	xor    %edi,%edi
+ 457c0e8:	eb 1d                	jmp    457c107 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0x87>
+ 457c0ea:	49 89 f8             	mov    %rdi,%r8
+ 457c0ed:	48 c1 e7 04          	shl    $0x4,%rdi
+ 457c0f1:	4d 89 1c 3a          	mov    %r11,(%r10,%rdi,1)
+ 457c0f5:	49 89 54 3a 08       	mov    %rdx,0x8(%r10,%rdi,1)
+ 457c0fa:	48 ff c3             	inc    %rbx
+ 457c0fd:	49 8d 78 01          	lea    0x1(%r8),%rdi
+ 457c101:	4c 89 d0             	mov    %r10,%rax
+ 457c104:	4c 89 ca             	mov    %r9,%rdx
+ 457c107:	4c 8b 02             	mov    (%rdx),%r8
+ 457c10a:	4c 39 c3             	cmp    %r8,%rbx
+ 457c10d:	7d 44                	jge    457c153 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xd3>
+ 457c10f:	4c 8d 0c 33          	lea    (%rbx,%rsi,1),%r9
+ 457c113:	4d 8d 49 01          	lea    0x1(%r9),%r9
+ 457c117:	49 89 c2             	mov    %rax,%r10
+ 457c11a:	4c 89 c8             	mov    %r9,%rax
+ 457c11d:	49 89 d1             	mov    %rdx,%r9
+ 457c120:	49 83 f8 ff          	cmp    $0xffffffffffffffff,%r8
+ 457c124:	74 07                	je     457c12d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xad>
+ 457c126:	48 99                	cqto
+ 457c128:	49 f7 f8             	idiv   %r8
+ 457c12b:	eb 05                	jmp    457c132 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xb2>
+ 457c12d:	48 f7 d8             	neg    %rax
+ 457c130:	31 d2                	xor    %edx,%edx
+ 457c132:	4d 8b 41 08          	mov    0x8(%r9),%r8
+ 457c136:	4d 8b 59 10          	mov    0x10(%r9),%r11
+ 457c13a:	4c 39 da             	cmp    %r11,%rdx
+ 457c13d:	73 2a                	jae    457c169 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xe9>
+ 457c13f:	48 c1 e2 04          	shl    $0x4,%rdx
+ 457c143:	4d 8b 1c 10          	mov    (%r8,%rdx,1),%r11
+ 457c147:	49 8b 54 10 08       	mov    0x8(%r8,%rdx,1),%rdx
+ 457c14c:	48 39 cf             	cmp    %rcx,%rdi
+ 457c14f:	72 99                	jb     457c0ea <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0x6a>
+ 457c151:	eb 0e                	jmp    457c161 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base+0xe1>
+ 457c153:	48 89 cb             	mov    %rcx,%rbx
+ 457c156:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 457c15b:	48 83 c4 28          	add    $0x28,%rsp
+ 457c15f:	90                   	nop
+ 457c160:	c3                   	ret
+ 457c161:	48 89 f8             	mov    %rdi,%rax
+ 457c164:	e8 37 a9 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457c169:	48 89 d0             	mov    %rdx,%rax
+ 457c16c:	4c 89 d9             	mov    %r11,%rcx
+ 457c16f:	e8 2c a9 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457c174:	e8 07 f6 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457c179:	90                   	nop
+ 457c17a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457c17f:	90                   	nop
+ 457c180:	e8 db 82 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457c185:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457c18a:	e9 f1 fe ff ff       	jmp    457c080 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).RemoveExtremes@@Base>
+ 457c18f:	cc                   	int3
+ 457c190:	cc                   	int3
+ 457c191:	cc                   	int3
+ 457c192:	cc                   	int3
+ 457c193:	cc                   	int3
+ 457c194:	cc                   	int3
+ 457c195:	cc                   	int3
+ 457c196:	cc                   	int3
+ 457c197:	cc                   	int3
+ 457c198:	cc                   	int3
+ 457c199:	cc                   	int3
+ 457c19a:	cc                   	int3
+ 457c19b:	cc                   	int3
+ 457c19c:	cc                   	int3
+ 457c19d:	cc                   	int3
+ 457c19e:	cc                   	int3
+ 457c19f:	cc                   	int3

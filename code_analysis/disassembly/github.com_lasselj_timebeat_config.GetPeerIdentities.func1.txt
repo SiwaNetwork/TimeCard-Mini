@@ -1,0 +1,672 @@
+# github.com/lasselj/timebeat/config.GetPeerIdentities.func1
+# addr 0x44044a0 size 2304 (0x900)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044044a0 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base>:
+ 44044a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44044a4:	0f 86 ad 00 00 00    	jbe    4404557 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base+0xb7>
+ 44044aa:	48 83 ec 20          	sub    $0x20,%rsp
+ 44044ae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 44044b3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 44044b8:	e8 83 cd ae fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 44044bd:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 44044c2:	48 8d 05 77 f6 70 01 	lea    0x170f677(%rip),%rax        # 5b13b40 <type:JoCqfO0l@@Base>
+ 44044c9:	e8 12 c0 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 44044ce:	83 3d 8b 74 a7 03 00 	cmpl   $0x0,0x3a7748b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44044d5:	75 11                	jne    44044e8 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base+0x48>
+ 44044d7:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 44044dc:	48 89 08             	mov    %rcx,(%rax)
+ 44044df:	48 89 05 ea 7d a2 03 	mov    %rax,0x3a27dea(%rip)        # 7e2c2d0 <github.com/lasselj/timebeat/config.peerIdentities@@Base>
+ 44044e6:	eb 1d                	jmp    4404505 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base+0x65>
+ 44044e8:	48 89 c7             	mov    %rax,%rdi
+ 44044eb:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 44044f0:	e8 0b 22 b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 44044f5:	48 8d 3d d4 7d a2 03 	lea    0x3a27dd4(%rip),%rdi        # 7e2c2d0 <github.com/lasselj/timebeat/config.peerIdentities@@Base>
+ 44044fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404500:	e8 fb 20 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4404505:	48 89 c1             	mov    %rax,%rcx
+ 4404508:	31 c0                	xor    %eax,%eax
+ 440450a:	ba 01 00 00 00       	mov    $0x1,%edx
+ 440450f:	f0 0f b1 51 08       	lock cmpxchg %edx,0x8(%rcx)
+ 4404514:	0f 94 c2             	sete   %dl
+ 4404517:	84 d2                	test   %dl,%dl
+ 4404519:	75 0a                	jne    4404525 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base+0x85>
+ 440451b:	48 8d 41 08          	lea    0x8(%rcx),%rax
+ 440451f:	90                   	nop
+ 4404520:	e8 1b 40 b7 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4404525:	e8 96 fd ff ff       	call   44042c0 <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base>
+ 440452a:	48 8b 05 9f 7d a2 03 	mov    0x3a27d9f(%rip),%rax        # 7e2c2d0 <github.com/lasselj/timebeat/config.peerIdentities@@Base>
+ 4404531:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4404536:	f0 0f c1 58 08       	lock xadd %ebx,0x8(%rax)
+ 440453b:	ff cb                	dec    %ebx
+ 440453d:	0f 1f 00             	nopl   (%rax)
+ 4404540:	85 db                	test   %ebx,%ebx
+ 4404542:	74 09                	je     440454d <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base+0xad>
+ 4404544:	48 83 c0 08          	add    $0x8,%rax
+ 4404548:	e8 f3 42 b7 fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 440454d:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4404552:	48 83 c4 20          	add    $0x20,%rsp
+ 4404556:	c3                   	ret
+ 4404557:	e8 04 ff b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440455c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404560:	e9 3b ff ff ff       	jmp    44044a0 <github.com/lasselj/timebeat/config.GetPeerIdentities.func1@@Base>
+ 4404565:	cc                   	int3
+ 4404566:	cc                   	int3
+ 4404567:	cc                   	int3
+ 4404568:	cc                   	int3
+ 4404569:	cc                   	int3
+ 440456a:	cc                   	int3
+ 440456b:	cc                   	int3
+ 440456c:	cc                   	int3
+ 440456d:	cc                   	int3
+ 440456e:	cc                   	int3
+ 440456f:	cc                   	int3
+ 4404570:	cc                   	int3
+ 4404571:	cc                   	int3
+ 4404572:	cc                   	int3
+ 4404573:	cc                   	int3
+ 4404574:	cc                   	int3
+ 4404575:	cc                   	int3
+ 4404576:	cc                   	int3
+ 4404577:	cc                   	int3
+ 4404578:	cc                   	int3
+ 4404579:	cc                   	int3
+ 440457a:	cc                   	int3
+ 440457b:	cc                   	int3
+ 440457c:	cc                   	int3
+ 440457d:	cc                   	int3
+ 440457e:	cc                   	int3
+ 440457f:	cc                   	int3
+
+0000000004404580 <type:.OXw8IE9L@@Base>:
+ 4404580:	f2 0f 10 03          	movsd  (%rbx),%xmm0
+ 4404584:	f2 0f 10 08          	movsd  (%rax),%xmm1
+ 4404588:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 440458c:	75 3f                	jne    44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 440458e:	7a 3d                	jp     44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 4404590:	f2 0f 10 40 08       	movsd  0x8(%rax),%xmm0
+ 4404595:	f2 0f 10 4b 08       	movsd  0x8(%rbx),%xmm1
+ 440459a:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 440459e:	66 90                	xchg   %ax,%ax
+ 44045a0:	75 2b                	jne    44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 44045a2:	7a 29                	jp     44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 44045a4:	f2 0f 10 40 10       	movsd  0x10(%rax),%xmm0
+ 44045a9:	f2 0f 10 4b 10       	movsd  0x10(%rbx),%xmm1
+ 44045ae:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 44045b2:	75 19                	jne    44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 44045b4:	7a 17                	jp     44045cd <type:.OXw8IE9L@@Base+0x4d>
+ 44045b6:	f2 0f 10 40 18       	movsd  0x18(%rax),%xmm0
+ 44045bb:	f2 0f 10 4b 18       	movsd  0x18(%rbx),%xmm1
+ 44045c0:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 44045c4:	0f 94 c0             	sete   %al
+ 44045c7:	0f 9b c1             	setnp  %cl
+ 44045ca:	21 c8                	and    %ecx,%eax
+ 44045cc:	c3                   	ret
+ 44045cd:	31 c0                	xor    %eax,%eax
+ 44045cf:	c3                   	ret
+ 44045d0:	cc                   	int3
+ 44045d1:	cc                   	int3
+ 44045d2:	cc                   	int3
+ 44045d3:	cc                   	int3
+ 44045d4:	cc                   	int3
+ 44045d5:	cc                   	int3
+ 44045d6:	cc                   	int3
+ 44045d7:	cc                   	int3
+ 44045d8:	cc                   	int3
+ 44045d9:	cc                   	int3
+ 44045da:	cc                   	int3
+ 44045db:	cc                   	int3
+ 44045dc:	cc                   	int3
+ 44045dd:	cc                   	int3
+ 44045de:	cc                   	int3
+ 44045df:	cc                   	int3
+
+00000000044045e0 <type:.xNw2DeFj@@Base>:
+ 44045e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44045e4:	0f 86 92 00 00 00    	jbe    440467c <type:.xNw2DeFj@@Base+0x9c>
+ 44045ea:	48 83 ec 20          	sub    $0x20,%rsp
+ 44045ee:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 44045f3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 44045f8:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 44045fc:	48 8b 13             	mov    (%rbx),%rdx
+ 44045ff:	48 8b 30             	mov    (%rax),%rsi
+ 4404602:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 4404606:	75 68                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 4404608:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 440460c:	48 39 7b 10          	cmp    %rdi,0x10(%rbx)
+ 4404610:	75 5e                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 4404612:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 4404616:	48 39 7b 18          	cmp    %rdi,0x18(%rbx)
+ 440461a:	75 54                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 440461c:	48 8b 78 20          	mov    0x20(%rax),%rdi
+ 4404620:	48 39 7b 20          	cmp    %rdi,0x20(%rbx)
+ 4404624:	75 4a                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 4404626:	48 8b 78 30          	mov    0x30(%rax),%rdi
+ 440462a:	48 39 7b 30          	cmp    %rdi,0x30(%rbx)
+ 440462e:	75 40                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 4404630:	0f b6 78 38          	movzbl 0x38(%rax),%edi
+ 4404634:	40 38 7b 38          	cmp    %dil,0x38(%rbx)
+ 4404638:	75 36                	jne    4404670 <type:.xNw2DeFj@@Base+0x90>
+ 440463a:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 440463f:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4404644:	48 89 f0             	mov    %rsi,%rax
+ 4404647:	48 89 d3             	mov    %rdx,%rbx
+ 440464a:	e8 d1 f4 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 440464f:	84 c0                	test   %al,%al
+ 4404651:	74 1d                	je     4404670 <type:.xNw2DeFj@@Base+0x90>
+ 4404653:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404658:	48 8b 5a 28          	mov    0x28(%rdx),%rbx
+ 440465c:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4404661:	48 8b 42 28          	mov    0x28(%rdx),%rax
+ 4404665:	48 8b 4a 30          	mov    0x30(%rdx),%rcx
+ 4404669:	e8 b2 f4 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 440466e:	eb 02                	jmp    4404672 <type:.xNw2DeFj@@Base+0x92>
+ 4404670:	31 c0                	xor    %eax,%eax
+ 4404672:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4404677:	48 83 c4 20          	add    $0x20,%rsp
+ 440467b:	c3                   	ret
+ 440467c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404681:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4404686:	e8 d5 fd b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440468b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4404690:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4404695:	e9 46 ff ff ff       	jmp    44045e0 <type:.xNw2DeFj@@Base>
+ 440469a:	cc                   	int3
+ 440469b:	cc                   	int3
+ 440469c:	cc                   	int3
+ 440469d:	cc                   	int3
+ 440469e:	cc                   	int3
+ 440469f:	cc                   	int3
+
+00000000044046a0 <type:.m+zgU+BU@@Base>:
+ 44046a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44046a4:	0f 86 d2 01 00 00    	jbe    440487c <type:.m+zgU+BU@@Base+0x1dc>
+ 44046aa:	48 83 ec 20          	sub    $0x20,%rsp
+ 44046ae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 44046b3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 44046b8:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 44046bc:	48 8b 13             	mov    (%rbx),%rdx
+ 44046bf:	48 8b 30             	mov    (%rax),%rsi
+ 44046c2:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 44046c6:	0f 85 a4 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44046cc:	48 8b 7b 18          	mov    0x18(%rbx),%rdi
+ 44046d0:	48 39 78 18          	cmp    %rdi,0x18(%rax)
+ 44046d4:	0f 85 96 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44046da:	0f b7 78 20          	movzwl 0x20(%rax),%edi
+ 44046de:	66 90                	xchg   %ax,%ax
+ 44046e0:	66 39 7b 20          	cmp    %di,0x20(%rbx)
+ 44046e4:	0f 85 86 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44046ea:	48 8b 7b 30          	mov    0x30(%rbx),%rdi
+ 44046ee:	48 39 78 30          	cmp    %rdi,0x30(%rax)
+ 44046f2:	0f 85 78 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44046f8:	48 8b 7b 40          	mov    0x40(%rbx),%rdi
+ 44046fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404700:	48 39 78 40          	cmp    %rdi,0x40(%rax)
+ 4404704:	0f 85 66 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440470a:	48 8b 7b 50          	mov    0x50(%rbx),%rdi
+ 440470e:	48 39 78 50          	cmp    %rdi,0x50(%rax)
+ 4404712:	0f 85 58 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 4404718:	48 8b 78 60          	mov    0x60(%rax),%rdi
+ 440471c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404720:	48 39 7b 60          	cmp    %rdi,0x60(%rbx)
+ 4404724:	0f 85 46 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440472a:	48 8b 7b 70          	mov    0x70(%rbx),%rdi
+ 440472e:	48 39 78 70          	cmp    %rdi,0x70(%rax)
+ 4404732:	0f 85 38 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 4404738:	48 8b 78 78          	mov    0x78(%rax),%rdi
+ 440473c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404740:	48 39 7b 78          	cmp    %rdi,0x78(%rbx)
+ 4404744:	0f 85 26 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440474a:	48 8b bb 88 00 00 00 	mov    0x88(%rbx),%rdi
+ 4404751:	48 39 b8 88 00 00 00 	cmp    %rdi,0x88(%rax)
+ 4404758:	0f 85 12 01 00 00    	jne    4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440475e:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4404763:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4404768:	48 89 f0             	mov    %rsi,%rax
+ 440476b:	48 89 d3             	mov    %rdx,%rbx
+ 440476e:	e8 ad f3 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404773:	84 c0                	test   %al,%al
+ 4404775:	0f 84 f5 00 00 00    	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440477b:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404780:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 4404784:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404789:	48 8b 46 10          	mov    0x10(%rsi),%rax
+ 440478d:	48 8b 4e 18          	mov    0x18(%rsi),%rcx
+ 4404791:	e8 8a f3 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404796:	84 c0                	test   %al,%al
+ 4404798:	0f 84 d2 00 00 00    	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440479e:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 44047a3:	48 8b 5a 28          	mov    0x28(%rdx),%rbx
+ 44047a7:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 44047ac:	48 8b 46 28          	mov    0x28(%rsi),%rax
+ 44047b0:	48 8b 4e 30          	mov    0x30(%rsi),%rcx
+ 44047b4:	e8 67 f3 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 44047b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 44047c0:	84 c0                	test   %al,%al
+ 44047c2:	0f 84 a8 00 00 00    	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44047c8:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 44047cd:	48 8b 5a 38          	mov    0x38(%rdx),%rbx
+ 44047d1:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 44047d6:	48 8b 46 38          	mov    0x38(%rsi),%rax
+ 44047da:	48 8b 4e 40          	mov    0x40(%rsi),%rcx
+ 44047de:	66 90                	xchg   %ax,%ax
+ 44047e0:	e8 3b f3 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 44047e5:	84 c0                	test   %al,%al
+ 44047e7:	0f 84 83 00 00 00    	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 44047ed:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 44047f2:	48 8b 5a 48          	mov    0x48(%rdx),%rbx
+ 44047f6:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 44047fb:	48 8b 46 48          	mov    0x48(%rsi),%rax
+ 44047ff:	48 8b 4e 50          	mov    0x50(%rsi),%rcx
+ 4404803:	e8 18 f3 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404808:	84 c0                	test   %al,%al
+ 440480a:	74 64                	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440480c:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404811:	48 8b 5a 58          	mov    0x58(%rdx),%rbx
+ 4404815:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 440481a:	48 8b 46 58          	mov    0x58(%rsi),%rax
+ 440481e:	48 8b 4e 60          	mov    0x60(%rsi),%rcx
+ 4404822:	e8 f9 f2 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404827:	84 c0                	test   %al,%al
+ 4404829:	74 45                	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440482b:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404830:	48 8b 5a 68          	mov    0x68(%rdx),%rbx
+ 4404834:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404839:	48 8b 46 68          	mov    0x68(%rsi),%rax
+ 440483d:	48 8b 4e 70          	mov    0x70(%rsi),%rcx
+ 4404841:	e8 da f2 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404846:	84 c0                	test   %al,%al
+ 4404848:	74 26                	je     4404870 <type:.m+zgU+BU@@Base+0x1d0>
+ 440484a:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 440484f:	48 8b 9a 80 00 00 00 	mov    0x80(%rdx),%rbx
+ 4404856:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 440485b:	48 8b 82 80 00 00 00 	mov    0x80(%rdx),%rax
+ 4404862:	48 8b 8a 88 00 00 00 	mov    0x88(%rdx),%rcx
+ 4404869:	e8 b2 f2 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 440486e:	eb 02                	jmp    4404872 <type:.m+zgU+BU@@Base+0x1d2>
+ 4404870:	31 c0                	xor    %eax,%eax
+ 4404872:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4404877:	48 83 c4 20          	add    $0x20,%rsp
+ 440487b:	c3                   	ret
+ 440487c:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404881:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4404886:	e8 d5 fb b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440488b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4404890:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4404895:	e9 06 fe ff ff       	jmp    44046a0 <type:.m+zgU+BU@@Base>
+ 440489a:	cc                   	int3
+ 440489b:	cc                   	int3
+ 440489c:	cc                   	int3
+ 440489d:	cc                   	int3
+ 440489e:	cc                   	int3
+ 440489f:	cc                   	int3
+
+00000000044048a0 <type:.TN04HuF0@@Base>:
+ 44048a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44048a4:	76 6d                	jbe    4404913 <type:.TN04HuF0@@Base+0x73>
+ 44048a6:	48 83 ec 20          	sub    $0x20,%rsp
+ 44048aa:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 44048af:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 44048b4:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 44048b8:	48 8b 13             	mov    (%rbx),%rdx
+ 44048bb:	48 8b 30             	mov    (%rax),%rsi
+ 44048be:	66 90                	xchg   %ax,%ax
+ 44048c0:	48 39 4b 08          	cmp    %rcx,0x8(%rbx)
+ 44048c4:	75 41                	jne    4404907 <type:.TN04HuF0@@Base+0x67>
+ 44048c6:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 44048ca:	48 39 7b 18          	cmp    %rdi,0x18(%rbx)
+ 44048ce:	75 37                	jne    4404907 <type:.TN04HuF0@@Base+0x67>
+ 44048d0:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 44048d5:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 44048da:	48 89 f0             	mov    %rsi,%rax
+ 44048dd:	48 89 d3             	mov    %rdx,%rbx
+ 44048e0:	e8 3b f2 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 44048e5:	84 c0                	test   %al,%al
+ 44048e7:	74 1e                	je     4404907 <type:.TN04HuF0@@Base+0x67>
+ 44048e9:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 44048ee:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 44048f2:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 44048f7:	48 8b 42 10          	mov    0x10(%rdx),%rax
+ 44048fb:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+ 44048ff:	90                   	nop
+ 4404900:	e8 1b f2 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404905:	eb 02                	jmp    4404909 <type:.TN04HuF0@@Base+0x69>
+ 4404907:	31 c0                	xor    %eax,%eax
+ 4404909:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 440490e:	48 83 c4 20          	add    $0x20,%rsp
+ 4404912:	c3                   	ret
+ 4404913:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404918:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 440491d:	0f 1f 00             	nopl   (%rax)
+ 4404920:	e8 3b fb b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4404925:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 440492a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 440492f:	e9 6c ff ff ff       	jmp    44048a0 <type:.TN04HuF0@@Base>
+ 4404934:	cc                   	int3
+ 4404935:	cc                   	int3
+ 4404936:	cc                   	int3
+ 4404937:	cc                   	int3
+ 4404938:	cc                   	int3
+ 4404939:	cc                   	int3
+ 440493a:	cc                   	int3
+ 440493b:	cc                   	int3
+ 440493c:	cc                   	int3
+ 440493d:	cc                   	int3
+ 440493e:	cc                   	int3
+ 440493f:	cc                   	int3
+
+0000000004404940 <type:.t0ePGS56@@Base>:
+ 4404940:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4404944:	0f 86 2c 02 00 00    	jbe    4404b76 <type:.t0ePGS56@@Base+0x236>
+ 440494a:	48 83 ec 20          	sub    $0x20,%rsp
+ 440494e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4404953:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4404958:	48 8b 10             	mov    (%rax),%rdx
+ 440495b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4404960:	48 39 13             	cmp    %rdx,(%rbx)
+ 4404963:	0f 85 01 02 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404969:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 440496d:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 4404971:	0f 85 f3 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404977:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 440497b:	48 8b 53 10          	mov    0x10(%rbx),%rdx
+ 440497f:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 4404983:	48 39 4b 18          	cmp    %rcx,0x18(%rbx)
+ 4404987:	0f 85 dd 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 440498d:	48 8b 7b 28          	mov    0x28(%rbx),%rdi
+ 4404991:	48 39 78 28          	cmp    %rdi,0x28(%rax)
+ 4404995:	0f 85 cf 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 440499b:	48 8b 7b 38          	mov    0x38(%rbx),%rdi
+ 440499f:	90                   	nop
+ 44049a0:	48 39 78 38          	cmp    %rdi,0x38(%rax)
+ 44049a4:	0f 85 c0 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049aa:	48 8b 78 40          	mov    0x40(%rax),%rdi
+ 44049ae:	48 39 7b 40          	cmp    %rdi,0x40(%rbx)
+ 44049b2:	0f 85 b2 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049b8:	48 8b 78 48          	mov    0x48(%rax),%rdi
+ 44049bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44049c0:	48 39 7b 48          	cmp    %rdi,0x48(%rbx)
+ 44049c4:	0f 85 a0 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049ca:	48 8b 78 50          	mov    0x50(%rax),%rdi
+ 44049ce:	48 39 7b 50          	cmp    %rdi,0x50(%rbx)
+ 44049d2:	0f 85 92 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049d8:	0f b6 78 58          	movzbl 0x58(%rax),%edi
+ 44049dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44049e0:	40 38 7b 58          	cmp    %dil,0x58(%rbx)
+ 44049e4:	0f 85 80 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049ea:	48 8b 78 60          	mov    0x60(%rax),%rdi
+ 44049ee:	48 39 7b 60          	cmp    %rdi,0x60(%rbx)
+ 44049f2:	0f 85 72 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 44049f8:	48 8b 7b 70          	mov    0x70(%rbx),%rdi
+ 44049fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404a00:	48 39 78 70          	cmp    %rdi,0x70(%rax)
+ 4404a04:	0f 85 60 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a0a:	48 8b b8 a0 00 00 00 	mov    0xa0(%rax),%rdi
+ 4404a11:	48 39 bb a0 00 00 00 	cmp    %rdi,0xa0(%rbx)
+ 4404a18:	0f 85 4c 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a1e:	48 8b b8 b0 00 00 00 	mov    0xb0(%rax),%rdi
+ 4404a25:	48 39 bb b0 00 00 00 	cmp    %rdi,0xb0(%rbx)
+ 4404a2c:	0f 85 38 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a32:	48 8b b8 b8 00 00 00 	mov    0xb8(%rax),%rdi
+ 4404a39:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4404a40:	48 39 bb b8 00 00 00 	cmp    %rdi,0xb8(%rbx)
+ 4404a47:	0f 85 1d 01 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a4d:	48 8b bb c8 00 00 00 	mov    0xc8(%rbx),%rdi
+ 4404a54:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4404a5b:	00 00 
+ 4404a5d:	0f 1f 00             	nopl   (%rax)
+ 4404a60:	48 39 b8 c8 00 00 00 	cmp    %rdi,0xc8(%rax)
+ 4404a67:	0f 85 fd 00 00 00    	jne    4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a6d:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4404a72:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4404a77:	48 89 f0             	mov    %rsi,%rax
+ 4404a7a:	48 89 d3             	mov    %rdx,%rbx
+ 4404a7d:	0f 1f 00             	nopl   (%rax)
+ 4404a80:	e8 9b f0 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404a85:	84 c0                	test   %al,%al
+ 4404a87:	0f 84 dd 00 00 00    	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404a8d:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404a92:	48 8b 5a 20          	mov    0x20(%rdx),%rbx
+ 4404a96:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404a9b:	48 8b 46 20          	mov    0x20(%rsi),%rax
+ 4404a9f:	48 8b 4e 28          	mov    0x28(%rsi),%rcx
+ 4404aa3:	e8 78 f0 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404aa8:	84 c0                	test   %al,%al
+ 4404aaa:	0f 84 ba 00 00 00    	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404ab0:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404ab5:	48 8b 5a 30          	mov    0x30(%rdx),%rbx
+ 4404ab9:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404abe:	48 8b 46 30          	mov    0x30(%rsi),%rax
+ 4404ac2:	48 8b 4e 38          	mov    0x38(%rsi),%rcx
+ 4404ac6:	e8 55 f0 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404acb:	84 c0                	test   %al,%al
+ 4404acd:	0f 84 97 00 00 00    	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404ad3:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404ad8:	48 8b 5a 68          	mov    0x68(%rdx),%rbx
+ 4404adc:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404ae1:	48 8b 46 68          	mov    0x68(%rsi),%rax
+ 4404ae5:	48 8b 4e 70          	mov    0x70(%rsi),%rcx
+ 4404ae9:	e8 32 f0 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404aee:	84 c0                	test   %al,%al
+ 4404af0:	74 78                	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404af2:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4404af7:	48 8d 50 78          	lea    0x78(%rax),%rdx
+ 4404afb:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4404b00:	48 8d 73 78          	lea    0x78(%rbx),%rsi
+ 4404b04:	b9 23 00 00 00       	mov    $0x23,%ecx
+ 4404b09:	48 89 d0             	mov    %rdx,%rax
+ 4404b0c:	48 89 f3             	mov    %rsi,%rbx
+ 4404b0f:	e8 0c f0 ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404b14:	84 c0                	test   %al,%al
+ 4404b16:	74 52                	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404b18:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404b1d:	48 8b 9a a8 00 00 00 	mov    0xa8(%rdx),%rbx
+ 4404b24:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4404b29:	48 8b 86 a8 00 00 00 	mov    0xa8(%rsi),%rax
+ 4404b30:	48 8b 8e b0 00 00 00 	mov    0xb0(%rsi),%rcx
+ 4404b37:	e8 e4 ef ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404b3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4404b40:	84 c0                	test   %al,%al
+ 4404b42:	74 26                	je     4404b6a <type:.t0ePGS56@@Base+0x22a>
+ 4404b44:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4404b49:	48 8b 9a c0 00 00 00 	mov    0xc0(%rdx),%rbx
+ 4404b50:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4404b55:	48 8b 82 c0 00 00 00 	mov    0xc0(%rdx),%rax
+ 4404b5c:	48 8b 8a c8 00 00 00 	mov    0xc8(%rdx),%rcx
+ 4404b63:	e8 b8 ef ad fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4404b68:	eb 02                	jmp    4404b6c <type:.t0ePGS56@@Base+0x22c>
+ 4404b6a:	31 c0                	xor    %eax,%eax
+ 4404b6c:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4404b71:	48 83 c4 20          	add    $0x20,%rsp
+ 4404b75:	c3                   	ret
+ 4404b76:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404b7b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4404b80:	e8 db f8 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4404b85:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4404b8a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4404b8f:	e9 ac fd ff ff       	jmp    4404940 <type:.t0ePGS56@@Base>
+ 4404b94:	cc                   	int3
+ 4404b95:	cc                   	int3
+ 4404b96:	cc                   	int3
+ 4404b97:	cc                   	int3
+ 4404b98:	cc                   	int3
+ 4404b99:	cc                   	int3
+ 4404b9a:	cc                   	int3
+ 4404b9b:	cc                   	int3
+ 4404b9c:	cc                   	int3
+ 4404b9d:	cc                   	int3
+ 4404b9e:	cc                   	int3
+ 4404b9f:	cc                   	int3
+
+0000000004404ba0 <github.com/lasselj/timebeat/beater/utility.TrimLeadingZeroAndTrailingNulls@@Base>:
+ 4404ba0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4404ba4:	76 3f                	jbe    4404be5 <github.com/lasselj/timebeat/beater/utility.TrimLeadingZeroAndTrailingNulls@@Base+0x45>
+ 4404ba6:	48 83 ec 28          	sub    $0x28,%rsp
+ 4404baa:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 4404baf:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 4404bb4:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4404bb9:	48 8d 0d 80 23 0d 01 	lea    0x10d2380(%rip),%rcx        # 54d6f40 <_IO_stdin_used@@Base+0x8a3f40>
+ 4404bc0:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4404bc5:	e8 f6 4c c0 fd       	call   20098c0 <strings.TrimLeft@@Base>
+ 4404bca:	48 8d 0d 17 a1 0d 01 	lea    0x10da117(%rip),%rcx        # 54dece8 <_IO_stdin_used@@Base+0x8abce8>
+ 4404bd1:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4404bd6:	e8 45 4f c0 fd       	call   2009b20 <strings.TrimRight@@Base>
+ 4404bdb:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 4404be0:	48 83 c4 28          	add    $0x28,%rsp
+ 4404be4:	c3                   	ret
+ 4404be5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404bea:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4404bef:	e8 6c f8 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4404bf4:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4404bf9:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4404bfe:	66 90                	xchg   %ax,%ax
+ 4404c00:	eb 9e                	jmp    4404ba0 <github.com/lasselj/timebeat/beater/utility.TrimLeadingZeroAndTrailingNulls@@Base>
+ 4404c02:	cc                   	int3
+ 4404c03:	cc                   	int3
+ 4404c04:	cc                   	int3
+ 4404c05:	cc                   	int3
+ 4404c06:	cc                   	int3
+ 4404c07:	cc                   	int3
+ 4404c08:	cc                   	int3
+ 4404c09:	cc                   	int3
+ 4404c0a:	cc                   	int3
+ 4404c0b:	cc                   	int3
+ 4404c0c:	cc                   	int3
+ 4404c0d:	cc                   	int3
+ 4404c0e:	cc                   	int3
+ 4404c0f:	cc                   	int3
+ 4404c10:	cc                   	int3
+ 4404c11:	cc                   	int3
+ 4404c12:	cc                   	int3
+ 4404c13:	cc                   	int3
+ 4404c14:	cc                   	int3
+ 4404c15:	cc                   	int3
+ 4404c16:	cc                   	int3
+ 4404c17:	cc                   	int3
+ 4404c18:	cc                   	int3
+ 4404c19:	cc                   	int3
+ 4404c1a:	cc                   	int3
+ 4404c1b:	cc                   	int3
+ 4404c1c:	cc                   	int3
+ 4404c1d:	cc                   	int3
+ 4404c1e:	cc                   	int3
+ 4404c1f:	cc                   	int3
+
+0000000004404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>:
+ 4404c20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4404c24:	0f 86 3b 01 00 00    	jbe    4404d65 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x145>
+ 4404c2a:	48 83 ec 68          	sub    $0x68,%rsp
+ 4404c2e:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 4404c33:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 4404c38:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4404c3d:	0f 1f 00             	nopl   (%rax)
+ 4404c40:	48 85 db             	test   %rbx,%rbx
+ 4404c43:	0f 84 e7 00 00 00    	je     4404d30 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x110>
+ 4404c49:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4404c4e:	48 89 5c 24 78       	mov    %rbx,0x78(%rsp)
+ 4404c53:	0f b6 4c 03 ff       	movzbl -0x1(%rbx,%rax,1),%ecx
+ 4404c58:	80 f9 64             	cmp    $0x64,%cl
+ 4404c5b:	75 49                	jne    4404ca6 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x86>
+ 4404c5d:	48 8d 4b ff          	lea    -0x1(%rbx),%rcx
+ 4404c61:	48 89 cb             	mov    %rcx,%rbx
+ 4404c64:	e8 97 a4 b6 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4404c69:	48 85 db             	test   %rbx,%rbx
+ 4404c6c:	75 10                	jne    4404c7e <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x5e>
+ 4404c6e:	48 ba 00 00 4f 91 94 	movabs $0x4e94914f0000,%rdx
+ 4404c75:	4e 00 00 
+ 4404c78:	48 0f af d0          	imul   %rax,%rdx
+ 4404c7c:	eb 22                	jmp    4404ca0 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x80>
+ 4404c7e:	48 8d 44 24 38       	lea    0x38(%rsp),%rax
+ 4404c83:	48 8d 1d 70 d6 9d 00 	lea    0x9dd670(%rip),%rbx        # 4de22fa <_IO_stdin_used@@Base+0x1af2fa>
+ 4404c8a:	b9 1a 00 00 00       	mov    $0x1a,%ecx
+ 4404c8f:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 4404c94:	48 8b 74 24 78       	mov    0x78(%rsp),%rsi
+ 4404c99:	e8 82 56 b3 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4404c9e:	31 d2                	xor    %edx,%edx
+ 4404ca0:	31 db                	xor    %ebx,%ebx
+ 4404ca2:	31 c9                	xor    %ecx,%ecx
+ 4404ca4:	eb 7d                	jmp    4404d23 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x103>
+ 4404ca6:	e8 d5 33 bc fd       	call   1fc8080 <time.ParseDuration@@Base>
+ 4404cab:	48 85 c0             	test   %rax,%rax
+ 4404cae:	75 70                	jne    4404d20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0x100>
+ 4404cb0:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4404cb5:	31 c0                	xor    %eax,%eax
+ 4404cb7:	48 8d 1d 3c d6 9d 00 	lea    0x9dd63c(%rip),%rbx        # 4de22fa <_IO_stdin_used@@Base+0x1af2fa>
+ 4404cbe:	b9 1a 00 00 00       	mov    $0x1a,%ecx
+ 4404cc3:	48 8b 7c 24 70       	mov    0x70(%rsp),%rdi
+ 4404cc8:	48 8b 74 24 78       	mov    0x78(%rsp),%rsi
+ 4404ccd:	e8 4e 56 b3 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4404cd2:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4404cd7:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4404cdc:	48 8d 05 1d f6 66 01 	lea    0x166f61d(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 4404ce3:	e8 f8 b7 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4404ce8:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4404ced:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4404cf1:	83 3d 68 6c a7 03 00 	cmpl   $0x0,0x3a76c68(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4404cf8:	75 0a                	jne    4404d04 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0xe4>
+ 4404cfa:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 4404cff:	48 89 10             	mov    %rdx,(%rax)
+ 4404d02:	eb 0d                	jmp    4404d11 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base+0xf1>
+ 4404d04:	48 89 c7             	mov    %rax,%rdi
+ 4404d07:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 4404d0c:	e8 0f 1a b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4404d11:	48 8d 1d a8 91 af 01 	lea    0x1af91a8(%rip),%rbx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 4404d18:	48 89 c1             	mov    %rax,%rcx
+ 4404d1b:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4404d20:	48 89 c2             	mov    %rax,%rdx
+ 4404d23:	48 89 d0             	mov    %rdx,%rax
+ 4404d26:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4404d2b:	48 83 c4 68          	add    $0x68,%rsp
+ 4404d2f:	c3                   	ret
+ 4404d30:	90                   	nop
+ 4404d31:	48 8d 05 c8 f5 66 01 	lea    0x166f5c8(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 4404d38:	e8 a3 b7 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4404d3d:	48 c7 40 08 14 00 00 	movq   $0x14,0x8(%rax)
+ 4404d44:	00 
+ 4404d45:	48 8d 0d 6d 59 9c 00 	lea    0x9c596d(%rip),%rcx        # 4dca6b9 <_IO_stdin_used@@Base+0x1976b9>
+ 4404d4c:	48 89 08             	mov    %rcx,(%rax)
+ 4404d4f:	48 8d 1d 6a 91 af 01 	lea    0x1af916a(%rip),%rbx        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 4404d56:	48 89 c1             	mov    %rax,%rcx
+ 4404d59:	31 c0                	xor    %eax,%eax
+ 4404d5b:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4404d60:	48 83 c4 68          	add    $0x68,%rsp
+ 4404d64:	c3                   	ret
+ 4404d65:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4404d6a:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4404d6f:	e8 ec f6 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4404d74:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4404d79:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4404d7e:	66 90                	xchg   %ax,%ax
+ 4404d80:	e9 9b fe ff ff       	jmp    4404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>
+ 4404d85:	cc                   	int3
+ 4404d86:	cc                   	int3
+ 4404d87:	cc                   	int3
+ 4404d88:	cc                   	int3
+ 4404d89:	cc                   	int3
+ 4404d8a:	cc                   	int3
+ 4404d8b:	cc                   	int3
+ 4404d8c:	cc                   	int3
+ 4404d8d:	cc                   	int3
+ 4404d8e:	cc                   	int3
+ 4404d8f:	cc                   	int3
+ 4404d90:	cc                   	int3
+ 4404d91:	cc                   	int3
+ 4404d92:	cc                   	int3
+ 4404d93:	cc                   	int3
+ 4404d94:	cc                   	int3
+ 4404d95:	cc                   	int3
+ 4404d96:	cc                   	int3
+ 4404d97:	cc                   	int3
+ 4404d98:	cc                   	int3
+ 4404d99:	cc                   	int3
+ 4404d9a:	cc                   	int3
+ 4404d9b:	cc                   	int3
+ 4404d9c:	cc                   	int3
+ 4404d9d:	cc                   	int3
+ 4404d9e:	cc                   	int3
+ 4404d9f:	cc                   	int3

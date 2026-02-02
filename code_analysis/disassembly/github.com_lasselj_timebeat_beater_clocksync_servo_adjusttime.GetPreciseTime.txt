@@ -1,0 +1,48 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime
+# addr 0x4419720 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004419720 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base>:
+ 4419720:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4419724:	76 6d                	jbe    4419793 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base+0x73>
+ 4419726:	48 83 ec 20          	sub    $0x20,%rsp
+ 441972a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 441972f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4419734:	e8 e7 25 bb fd       	call   1fcbd20 <time.Now@@Base>
+ 4419739:	48 89 04 24          	mov    %rax,(%rsp)
+ 441973d:	48 89 5c 24 08       	mov    %rbx,0x8(%rsp)
+ 4419742:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 4419747:	90                   	nop
+ 4419748:	90                   	nop
+ 4419749:	48 8b 04 24          	mov    (%rsp),%rax
+ 441974d:	48 0f ba e0 3f       	bt     $0x3f,%rax
+ 4419752:	73 21                	jae    4419775 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base+0x55>
+ 4419754:	48 d1 e0             	shl    $1,%rax
+ 4419757:	48 c1 e8 1f          	shr    $0x1f,%rax
+ 441975b:	48 ba 80 7f b1 d7 0d 	movabs $0xdd7b17f80,%rdx
+ 4419762:	00 00 00 
+ 4419765:	48 01 c2             	add    %rax,%rdx
+ 4419768:	48 89 54 24 08       	mov    %rdx,0x8(%rsp)
+ 441976d:	48 81 24 24 ff ff ff 	andq   $0x3fffffff,(%rsp)
+ 4419774:	3f 
+ 4419775:	48 c7 44 24 10 00 00 	movq   $0x0,0x10(%rsp)
+ 441977c:	00 00 
+ 441977e:	48 8b 04 24          	mov    (%rsp),%rax
+ 4419782:	48 8b 5c 24 08       	mov    0x8(%rsp),%rbx
+ 4419787:	31 c9                	xor    %ecx,%ecx
+ 4419789:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 441978e:	48 83 c4 20          	add    $0x20,%rsp
+ 4419792:	c3                   	ret
+ 4419793:	e8 c8 ac b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4419798:	eb 86                	jmp    4419720 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base>
+ 441979a:	cc                   	int3
+ 441979b:	cc                   	int3
+ 441979c:	cc                   	int3
+ 441979d:	cc                   	int3
+ 441979e:	cc                   	int3
+ 441979f:	cc                   	int3

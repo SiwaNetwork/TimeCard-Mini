@@ -1,0 +1,298 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample
+# addr 0x457df60 size 1056 (0x420)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457df60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base>:
+ 457df60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457df64:	0f 86 dc 03 00 00    	jbe    457e346 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3e6>
+ 457df6a:	48 83 ec 78          	sub    $0x78,%rsp
+ 457df6e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 457df73:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 457df78:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 457df7f:	00 
+ 457df80:	80 78 48 00          	cmpb   $0x0,0x48(%rax)
+ 457df84:	74 64                	je     457dfea <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x8a>
+ 457df86:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 457df8d:	00 
+ 457df8e:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 457df94:	48 89 d8             	mov    %rbx,%rax
+ 457df97:	e8 44 fd 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457df9c:	48 8d 0d 7d c7 22 01 	lea    0x122c77d(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457dfa3:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 457dfa8:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 457dfad:	48 8b 1d 8c 12 8b 03 	mov    0x38b128c(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457dfb4:	48 8d 05 65 72 98 01 	lea    0x1987265(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457dfbb:	bf 0e 00 00 00       	mov    $0xe,%edi
+ 457dfc0:	48 8d 74 24 40       	lea    0x40(%rsp),%rsi
+ 457dfc5:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 457dfcb:	4d 89 c1             	mov    %r8,%r9
+ 457dfce:	48 8d 0d 5d 02 70 00 	lea    0x70025d(%rip),%rcx        # 4c7e232 <_IO_stdin_used@@Base+0x4b232>
+ 457dfd5:	e8 06 68 a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457dfda:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 457dfe1:	00 
+ 457dfe2:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 457dfe9:	00 
+ 457dfea:	48 8b 48 38          	mov    0x38(%rax),%rcx
+ 457dfee:	48 8b 50 30          	mov    0x30(%rax),%rdx
+ 457dff2:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 457dff6:	48 39 f1             	cmp    %rsi,%rcx
+ 457dff9:	0f 86 3c 03 00 00    	jbe    457e33b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3db>
+ 457dfff:	48 89 1c f2          	mov    %rbx,(%rdx,%rsi,8)
+ 457e003:	48 8b 10             	mov    (%rax),%rdx
+ 457e006:	48 39 50 08          	cmp    %rdx,0x8(%rax)
+ 457e00a:	7e 08                	jle    457e014 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xb4>
+ 457e00c:	48 ff c2             	inc    %rdx
+ 457e00f:	48 89 10             	mov    %rdx,(%rax)
+ 457e012:	eb 64                	jmp    457e078 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x118>
+ 457e014:	31 c9                	xor    %ecx,%ecx
+ 457e016:	eb 08                	jmp    457e020 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xc0>
+ 457e018:	48 ff c1             	inc    %rcx
+ 457e01b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457e020:	48 39 d1             	cmp    %rdx,%rcx
+ 457e023:	7d 2a                	jge    457e04f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xef>
+ 457e025:	48 8b 58 20          	mov    0x20(%rax),%rbx
+ 457e029:	48 8b 70 18          	mov    0x18(%rax),%rsi
+ 457e02d:	48 39 d9             	cmp    %rbx,%rcx
+ 457e030:	0f 83 fa 02 00 00    	jae    457e330 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3d0>
+ 457e036:	48 8b 1c ce          	mov    (%rsi,%rcx,8),%rbx
+ 457e03a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 457e040:	48 39 58 10          	cmp    %rbx,0x10(%rax)
+ 457e044:	75 d2                	jne    457e018 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xb8>
+ 457e046:	eb 07                	jmp    457e04f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xef>
+ 457e048:	48 89 3c ce          	mov    %rdi,(%rsi,%rcx,8)
+ 457e04c:	48 89 d1             	mov    %rdx,%rcx
+ 457e04f:	48 8d 51 01          	lea    0x1(%rcx),%rdx
+ 457e053:	48 39 10             	cmp    %rdx,(%rax)
+ 457e056:	7e 20                	jle    457e078 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x118>
+ 457e058:	48 8b 58 20          	mov    0x20(%rax),%rbx
+ 457e05c:	48 8b 70 18          	mov    0x18(%rax),%rsi
+ 457e060:	48 39 d3             	cmp    %rdx,%rbx
+ 457e063:	0f 86 bc 02 00 00    	jbe    457e325 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3c5>
+ 457e069:	48 8b 7c ce 08       	mov    0x8(%rsi,%rcx,8),%rdi
+ 457e06e:	48 39 d9             	cmp    %rbx,%rcx
+ 457e071:	72 d5                	jb     457e048 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0xe8>
+ 457e073:	e9 a0 02 00 00       	jmp    457e318 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3b8>
+ 457e078:	48 8b 10             	mov    (%rax),%rdx
+ 457e07b:	48 ff ca             	dec    %rdx
+ 457e07e:	66 90                	xchg   %ax,%ax
+ 457e080:	eb 07                	jmp    457e089 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x129>
+ 457e082:	4c 89 0c d7          	mov    %r9,(%rdi,%rdx,8)
+ 457e086:	4c 89 c2             	mov    %r8,%rdx
+ 457e089:	48 85 d2             	test   %rdx,%rdx
+ 457e08c:	7e 6a                	jle    457e0f8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x198>
+ 457e08e:	48 8b 48 38          	mov    0x38(%rax),%rcx
+ 457e092:	48 8b 58 30          	mov    0x30(%rax),%rbx
+ 457e096:	48 8b 70 20          	mov    0x20(%rax),%rsi
+ 457e09a:	48 8b 78 18          	mov    0x18(%rax),%rdi
+ 457e09e:	4c 8d 42 ff          	lea    -0x1(%rdx),%r8
+ 457e0a2:	4c 39 c6             	cmp    %r8,%rsi
+ 457e0a5:	0f 86 62 02 00 00    	jbe    457e30d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3ad>
+ 457e0ab:	4c 8b 4c d7 f8       	mov    -0x8(%rdi,%rdx,8),%r9
+ 457e0b0:	4c 39 c9             	cmp    %r9,%rcx
+ 457e0b3:	0f 86 4c 02 00 00    	jbe    457e305 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x3a5>
+ 457e0b9:	4e 8b 14 cb          	mov    (%rbx,%r9,8),%r10
+ 457e0bd:	4c 8b 58 10          	mov    0x10(%rax),%r11
+ 457e0c1:	4c 39 d9             	cmp    %r11,%rcx
+ 457e0c4:	0f 86 33 02 00 00    	jbe    457e2fd <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x39d>
+ 457e0ca:	4a 8b 1c db          	mov    (%rbx,%r11,8),%rbx
+ 457e0ce:	4c 39 d3             	cmp    %r10,%rbx
+ 457e0d1:	75 04                	jne    457e0d7 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x177>
+ 457e0d3:	31 c9                	xor    %ecx,%ecx
+ 457e0d5:	eb 12                	jmp    457e0e9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x189>
+ 457e0d7:	7d 09                	jge    457e0e2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x182>
+ 457e0d9:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 457e0de:	66 90                	xchg   %ax,%ax
+ 457e0e0:	eb 07                	jmp    457e0e9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x189>
+ 457e0e2:	48 c7 c1 ff ff ff ff 	mov    $0xffffffffffffffff,%rcx
+ 457e0e9:	48 85 c9             	test   %rcx,%rcx
+ 457e0ec:	7e 0a                	jle    457e0f8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x198>
+ 457e0ee:	48 39 f2             	cmp    %rsi,%rdx
+ 457e0f1:	72 8f                	jb     457e082 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x122>
+ 457e0f3:	e9 fa 01 00 00       	jmp    457e2f2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x392>
+ 457e0f8:	48 8b 48 20          	mov    0x20(%rax),%rcx
+ 457e0fc:	48 8b 58 18          	mov    0x18(%rax),%rbx
+ 457e100:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 457e104:	48 39 ca             	cmp    %rcx,%rdx
+ 457e107:	0f 83 dd 01 00 00    	jae    457e2ea <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x38a>
+ 457e10d:	48 89 34 d3          	mov    %rsi,(%rbx,%rdx,8)
+ 457e111:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 457e115:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 457e119:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 457e120:	48 85 db             	test   %rbx,%rbx
+ 457e123:	0f 84 bc 01 00 00    	je     457e2e5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x385>
+ 457e129:	48 ff c2             	inc    %rdx
+ 457e12c:	48 89 c1             	mov    %rax,%rcx
+ 457e12f:	48 89 d0             	mov    %rdx,%rax
+ 457e132:	48 83 fb ff          	cmp    $0xffffffffffffffff,%rbx
+ 457e136:	74 07                	je     457e13f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x1df>
+ 457e138:	48 99                	cqto
+ 457e13a:	48 f7 fb             	idiv   %rbx
+ 457e13d:	eb 05                	jmp    457e144 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x1e4>
+ 457e13f:	48 f7 d8             	neg    %rax
+ 457e142:	31 d2                	xor    %edx,%edx
+ 457e144:	48 89 51 10          	mov    %rdx,0x10(%rcx)
+ 457e148:	48 8b 11             	mov    (%rcx),%rdx
+ 457e14b:	0f ba e2 00          	bt     $0x0,%edx
+ 457e14f:	73 3e                	jae    457e18f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x22f>
+ 457e151:	48 8b 59 38          	mov    0x38(%rcx),%rbx
+ 457e155:	48 8b 71 30          	mov    0x30(%rcx),%rsi
+ 457e159:	48 8b 79 20          	mov    0x20(%rcx),%rdi
+ 457e15d:	4c 8b 41 18          	mov    0x18(%rcx),%r8
+ 457e161:	49 89 d1             	mov    %rdx,%r9
+ 457e164:	48 c1 ea 3f          	shr    $0x3f,%rdx
+ 457e168:	49 8d 04 11          	lea    (%r9,%rdx,1),%rax
+ 457e16c:	48 d1 f8             	sar    $1,%rax
+ 457e16f:	48 39 c7             	cmp    %rax,%rdi
+ 457e172:	0f 86 60 01 00 00    	jbe    457e2d8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x378>
+ 457e178:	49 8b 04 c0          	mov    (%r8,%rax,8),%rax
+ 457e17c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457e180:	48 39 c3             	cmp    %rax,%rbx
+ 457e183:	0f 86 47 01 00 00    	jbe    457e2d0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x370>
+ 457e189:	48 8b 14 c6          	mov    (%rsi,%rax,8),%rdx
+ 457e18d:	eb 6b                	jmp    457e1fa <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x29a>
+ 457e18f:	48 8b 59 38          	mov    0x38(%rcx),%rbx
+ 457e193:	48 8b 71 30          	mov    0x30(%rcx),%rsi
+ 457e197:	48 8b 79 20          	mov    0x20(%rcx),%rdi
+ 457e19b:	4c 8b 41 18          	mov    0x18(%rcx),%r8
+ 457e19f:	49 89 d1             	mov    %rdx,%r9
+ 457e1a2:	48 c1 ea 3f          	shr    $0x3f,%rdx
+ 457e1a6:	49 8d 04 11          	lea    (%r9,%rdx,1),%rax
+ 457e1aa:	48 d1 f8             	sar    $1,%rax
+ 457e1ad:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
+ 457e1b1:	48 39 d7             	cmp    %rdx,%rdi
+ 457e1b4:	0f 86 0b 01 00 00    	jbe    457e2c5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x365>
+ 457e1ba:	49 8b 54 c0 f8       	mov    -0x8(%r8,%rax,8),%rdx
+ 457e1bf:	90                   	nop
+ 457e1c0:	48 39 d3             	cmp    %rdx,%rbx
+ 457e1c3:	0f 86 ef 00 00 00    	jbe    457e2b8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x358>
+ 457e1c9:	48 8b 14 d6          	mov    (%rsi,%rdx,8),%rdx
+ 457e1cd:	48 39 c7             	cmp    %rax,%rdi
+ 457e1d0:	0f 86 da 00 00 00    	jbe    457e2b0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x350>
+ 457e1d6:	49 8b 04 c0          	mov    (%r8,%rax,8),%rax
+ 457e1da:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 457e1e0:	48 39 d8             	cmp    %rbx,%rax
+ 457e1e3:	0f 83 bf 00 00 00    	jae    457e2a8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x348>
+ 457e1e9:	48 03 14 c6          	add    (%rsi,%rax,8),%rdx
+ 457e1ed:	48 89 d3             	mov    %rdx,%rbx
+ 457e1f0:	48 c1 ea 3f          	shr    $0x3f,%rdx
+ 457e1f4:	48 01 da             	add    %rbx,%rdx
+ 457e1f7:	48 d1 fa             	sar    $1,%rdx
+ 457e1fa:	80 79 48 00          	cmpb   $0x0,0x48(%rcx)
+ 457e1fe:	66 90                	xchg   %ax,%ax
+ 457e200:	0f 84 91 00 00 00    	je     457e297 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base+0x337>
+ 457e206:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 457e20b:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 457e211:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 457e217:	48 89 d0             	mov    %rdx,%rax
+ 457e21a:	e8 c1 fa 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457e21f:	48 8d 0d fa c4 22 01 	lea    0x122c4fa(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457e226:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 457e22b:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 457e230:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 457e237:	00 
+ 457e238:	48 8b 41 30          	mov    0x30(%rcx),%rax
+ 457e23c:	48 8b 59 38          	mov    0x38(%rcx),%rbx
+ 457e240:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 457e244:	48 89 d1             	mov    %rdx,%rcx
+ 457e247:	e8 b4 fb 96 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 457e24c:	48 8d 0d cd 5e 1b 01 	lea    0x11b5ecd(%rip),%rcx        # 5734120 <type:[]int64@@Base>
+ 457e253:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 457e258:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 457e25d:	48 8b 1d dc 0f 8b 03 	mov    0x38b0fdc(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457e264:	48 8d 05 b5 6f 98 01 	lea    0x1986fb5(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457e26b:	48 8d 0d 4b 89 84 00 	lea    0x84894b(%rip),%rcx        # 4dc6bbd <_IO_stdin_used@@Base+0x193bbd>
+ 457e272:	bf 14 00 00 00       	mov    $0x14,%edi
+ 457e277:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 457e27c:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 457e282:	4d 89 c1             	mov    %r8,%r9
+ 457e285:	e8 56 65 a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457e28a:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 457e291:	00 
+ 457e292:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 457e297:	48 89 51 50          	mov    %rdx,0x50(%rcx)
+ 457e29b:	48 89 d0             	mov    %rdx,%rax
+ 457e29e:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 457e2a3:	48 83 c4 78          	add    $0x78,%rsp
+ 457e2a7:	c3                   	ret
+ 457e2a8:	48 89 d9             	mov    %rbx,%rcx
+ 457e2ab:	e8 f0 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2b0:	48 89 f9             	mov    %rdi,%rcx
+ 457e2b3:	e8 e8 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2b8:	48 89 d0             	mov    %rdx,%rax
+ 457e2bb:	48 89 d9             	mov    %rbx,%rcx
+ 457e2be:	66 90                	xchg   %ax,%ax
+ 457e2c0:	e8 db 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2c5:	48 89 d0             	mov    %rdx,%rax
+ 457e2c8:	48 89 f9             	mov    %rdi,%rcx
+ 457e2cb:	e8 d0 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2d0:	48 89 d9             	mov    %rbx,%rcx
+ 457e2d3:	e8 c8 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2d8:	48 89 f9             	mov    %rdi,%rcx
+ 457e2db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457e2e0:	e8 bb 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2e5:	e8 96 d4 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457e2ea:	48 89 d0             	mov    %rdx,%rax
+ 457e2ed:	e8 ae 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2f2:	48 89 d0             	mov    %rdx,%rax
+ 457e2f5:	48 89 f1             	mov    %rsi,%rcx
+ 457e2f8:	e8 a3 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e2fd:	4c 89 d8             	mov    %r11,%rax
+ 457e300:	e8 9b 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e305:	4c 89 c8             	mov    %r9,%rax
+ 457e308:	e8 93 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e30d:	4c 89 c0             	mov    %r8,%rax
+ 457e310:	48 89 f1             	mov    %rsi,%rcx
+ 457e313:	e8 88 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e318:	48 89 c8             	mov    %rcx,%rax
+ 457e31b:	48 89 d9             	mov    %rbx,%rcx
+ 457e31e:	66 90                	xchg   %ax,%ax
+ 457e320:	e8 7b 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e325:	48 89 d0             	mov    %rdx,%rax
+ 457e328:	48 89 d9             	mov    %rbx,%rcx
+ 457e32b:	e8 70 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e330:	48 89 c8             	mov    %rcx,%rax
+ 457e333:	48 89 d9             	mov    %rbx,%rcx
+ 457e336:	e8 65 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e33b:	48 89 f0             	mov    %rsi,%rax
+ 457e33e:	66 90                	xchg   %ax,%ax
+ 457e340:	e8 5b 87 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e345:	90                   	nop
+ 457e346:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457e34b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457e350:	e8 0b 61 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457e355:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457e35a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457e35f:	90                   	nop
+ 457e360:	e9 fb fb ff ff       	jmp    457df60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base>
+ 457e365:	cc                   	int3
+ 457e366:	cc                   	int3
+ 457e367:	cc                   	int3
+ 457e368:	cc                   	int3
+ 457e369:	cc                   	int3
+ 457e36a:	cc                   	int3
+ 457e36b:	cc                   	int3
+ 457e36c:	cc                   	int3
+ 457e36d:	cc                   	int3
+ 457e36e:	cc                   	int3
+ 457e36f:	cc                   	int3
+ 457e370:	cc                   	int3
+ 457e371:	cc                   	int3
+ 457e372:	cc                   	int3
+ 457e373:	cc                   	int3
+ 457e374:	cc                   	int3
+ 457e375:	cc                   	int3
+ 457e376:	cc                   	int3
+ 457e377:	cc                   	int3
+ 457e378:	cc                   	int3
+ 457e379:	cc                   	int3
+ 457e37a:	cc                   	int3
+ 457e37b:	cc                   	int3
+ 457e37c:	cc                   	int3
+ 457e37d:	cc                   	int3
+ 457e37e:	cc                   	int3
+ 457e37f:	cc                   	int3

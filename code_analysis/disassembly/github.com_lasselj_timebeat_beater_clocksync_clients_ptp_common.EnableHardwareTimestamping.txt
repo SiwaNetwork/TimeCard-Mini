@@ -1,0 +1,155 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping
+# addr 0x459c840 size 576 (0x240)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459c840 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base>:
+ 459c840:	4c 8d 64 24 f0       	lea    -0x10(%rsp),%r12
+ 459c845:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 459c849:	0f 86 02 02 00 00    	jbe    459ca51 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x211>
+ 459c84f:	48 81 ec 90 00 00 00 	sub    $0x90,%rsp
+ 459c856:	48 89 ac 24 88 00 00 	mov    %rbp,0x88(%rsp)
+ 459c85d:	00 
+ 459c85e:	48 8d ac 24 88 00 00 	lea    0x88(%rsp),%rbp
+ 459c865:	00 
+ 459c866:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 459c86b:	c7 44 24 2c 45 20 00 	movl   $0x2045,0x2c(%rsp)
+ 459c872:	00 
+ 459c873:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 459c878:	b9 25 00 00 00       	mov    $0x25,%ecx
+ 459c87d:	48 8d 7c 24 2c       	lea    0x2c(%rsp),%rdi
+ 459c882:	be 04 00 00 00       	mov    $0x4,%esi
+ 459c887:	e8 d4 1f a2 fd       	call   1fbe860 <syscall.setsockopt@@Base>
+ 459c88c:	48 85 c0             	test   %rax,%rax
+ 459c88f:	0f 85 80 01 00 00    	jne    459ca15 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x1d5>
+ 459c895:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 459c89a:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 459c89f:	b9 25 00 00 00       	mov    $0x25,%ecx
+ 459c8a4:	e8 d7 dc a1 fd       	call   1fba580 <syscall.GetsockoptInt@@Base>
+ 459c8a9:	48 85 db             	test   %rbx,%rbx
+ 459c8ac:	74 09                	je     459c8b7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x77>
+ 459c8ae:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 459c8b5:	eb 09                	jmp    459c8c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x80>
+ 459c8b7:	31 db                	xor    %ebx,%ebx
+ 459c8b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 459c8c0:	48 85 db             	test   %rbx,%rbx
+ 459c8c3:	0f 85 14 01 00 00    	jne    459c9dd <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x19d>
+ 459c8c9:	48 3d 45 20 00 00    	cmp    $0x2045,%rax
+ 459c8cf:	0f 84 f4 00 00 00    	je     459c9c9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x189>
+ 459c8d5:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459c8da:	b8 45 20 00 00       	mov    $0x2045,%eax
+ 459c8df:	90                   	nop
+ 459c8e0:	e8 fb 8a fe ff       	call   45853e0 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base>
+ 459c8e5:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 459c8ea:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 459c8ef:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 459c8f4:	e8 e7 8a fe ff       	call   45853e0 <github.com/lasselj/timebeat/beater/clocksync/phc.TranslateTSOptions@@Base>
+ 459c8f9:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459c8fe:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 459c903:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 459c909:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 459c90f:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 459c914:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 459c919:	e8 42 14 95 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 459c91e:	48 8d 0d 7b 1d 21 01 	lea    0x1211d7b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 459c925:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 459c92a:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 459c92f:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 459c934:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 459c939:	e8 22 14 95 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 459c93e:	48 8d 0d 5b 1d 21 01 	lea    0x1211d5b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 459c945:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 459c94a:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 459c951:	00 
+ 459c952:	48 8d 05 a1 1c 8d 00 	lea    0x8d1ca1(%rip),%rax        # 4e6e5fa <_IO_stdin_used@@Base+0x23b5fa>
+ 459c959:	bb 44 00 00 00       	mov    $0x44,%ebx
+ 459c95e:	48 8d 4c 24 68       	lea    0x68(%rsp),%rcx
+ 459c963:	bf 02 00 00 00       	mov    $0x2,%edi
+ 459c968:	48 89 fe             	mov    %rdi,%rsi
+ 459c96b:	e8 90 7f a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459c970:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 459c975:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 459c97a:	48 8d 05 7f 79 4d 01 	lea    0x14d797f(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459c981:	e8 5a 3b 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459c986:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 459c98b:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 459c98f:	83 3d ca ef 8d 03 00 	cmpl   $0x0,0x38defca(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459c996:	75 0a                	jne    459c9a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x162>
+ 459c998:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459c99d:	48 89 08             	mov    %rcx,(%rax)
+ 459c9a0:	eb 0d                	jmp    459c9af <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base+0x16f>
+ 459c9a2:	48 89 c7             	mov    %rax,%rdi
+ 459c9a5:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459c9aa:	e8 51 9d 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459c9af:	48 89 c3             	mov    %rax,%rbx
+ 459c9b2:	48 8d 05 07 15 96 01 	lea    0x1961507(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459c9b9:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 459c9c0:	00 
+ 459c9c1:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 459c9c8:	c3                   	ret
+ 459c9c9:	31 c0                	xor    %eax,%eax
+ 459c9cb:	31 db                	xor    %ebx,%ebx
+ 459c9cd:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 459c9d4:	00 
+ 459c9d5:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 459c9dc:	c3                   	ret
+ 459c9dd:	48 8d 05 1c 79 4d 01 	lea    0x14d791c(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459c9e4:	e8 f7 3a 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459c9e9:	48 c7 40 08 2d 00 00 	movq   $0x2d,0x8(%rax)
+ 459c9f0:	00 
+ 459c9f1:	48 8d 0d 21 12 89 00 	lea    0x891221(%rip),%rcx        # 4e2dc19 <_IO_stdin_used@@Base+0x1fac19>
+ 459c9f8:	48 89 08             	mov    %rcx,(%rax)
+ 459c9fb:	48 89 c3             	mov    %rax,%rbx
+ 459c9fe:	48 8d 05 bb 14 96 01 	lea    0x19614bb(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459ca05:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 459ca0c:	00 
+ 459ca0d:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 459ca14:	c3                   	ret
+ 459ca15:	48 8d 05 e4 78 4d 01 	lea    0x14d78e4(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459ca1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459ca20:	e8 bb 3a 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459ca25:	48 c7 40 08 2d 00 00 	movq   $0x2d,0x8(%rax)
+ 459ca2c:	00 
+ 459ca2d:	48 8d 0d e5 11 89 00 	lea    0x8911e5(%rip),%rcx        # 4e2dc19 <_IO_stdin_used@@Base+0x1fac19>
+ 459ca34:	48 89 08             	mov    %rcx,(%rax)
+ 459ca37:	48 89 c3             	mov    %rax,%rbx
+ 459ca3a:	48 8d 05 7f 14 96 01 	lea    0x196147f(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459ca41:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 459ca48:	00 
+ 459ca49:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 459ca50:	c3                   	ret
+ 459ca51:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459ca56:	e8 05 7a 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459ca5b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459ca60:	e9 db fd ff ff       	jmp    459c840 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.EnableHardwareTimestamping@@Base>
+ 459ca65:	cc                   	int3
+ 459ca66:	cc                   	int3
+ 459ca67:	cc                   	int3
+ 459ca68:	cc                   	int3
+ 459ca69:	cc                   	int3
+ 459ca6a:	cc                   	int3
+ 459ca6b:	cc                   	int3
+ 459ca6c:	cc                   	int3
+ 459ca6d:	cc                   	int3
+ 459ca6e:	cc                   	int3
+ 459ca6f:	cc                   	int3
+ 459ca70:	cc                   	int3
+ 459ca71:	cc                   	int3
+ 459ca72:	cc                   	int3
+ 459ca73:	cc                   	int3
+ 459ca74:	cc                   	int3
+ 459ca75:	cc                   	int3
+ 459ca76:	cc                   	int3
+ 459ca77:	cc                   	int3
+ 459ca78:	cc                   	int3
+ 459ca79:	cc                   	int3
+ 459ca7a:	cc                   	int3
+ 459ca7b:	cc                   	int3
+ 459ca7c:	cc                   	int3
+ 459ca7d:	cc                   	int3
+ 459ca7e:	cc                   	int3
+ 459ca7f:	cc                   	int3

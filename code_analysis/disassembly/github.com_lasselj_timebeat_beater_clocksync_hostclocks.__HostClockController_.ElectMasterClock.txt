@@ -1,0 +1,100 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock
+# addr 0x4594c00 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004594c00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base>:
+ 4594c00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4594c04:	0f 86 de 00 00 00    	jbe    4594ce8 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0xe8>
+ 4594c0a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4594c0e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4594c13:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4594c18:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4594c1d:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4594c22:	48 89 c1             	mov    %rax,%rcx
+ 4594c25:	31 c0                	xor    %eax,%eax
+ 4594c27:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4594c2c:	f0 0f b1 51 38       	lock cmpxchg %edx,0x38(%rcx)
+ 4594c31:	0f 94 c2             	sete   %dl
+ 4594c34:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 4594c38:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 4594c3d:	0f 1f 00             	nopl   (%rax)
+ 4594c40:	84 d2                	test   %dl,%dl
+ 4594c42:	75 14                	jne    4594c58 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0x58>
+ 4594c44:	e8 f7 38 9e fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4594c49:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4594c4e:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4594c53:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4594c58:	48 8b 11             	mov    (%rcx),%rdx
+ 4594c5b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4594c60:	48 85 d2             	test   %rdx,%rdx
+ 4594c63:	74 2c                	je     4594c91 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0x91>
+ 4594c65:	48 39 d3             	cmp    %rdx,%rbx
+ 4594c68:	74 34                	je     4594c9e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0x9e>
+ 4594c6a:	48 89 c8             	mov    %rcx,%rax
+ 4594c6d:	e8 ae 00 00 00       	call   4594d20 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).demoteCurrentMaster@@Base>
+ 4594c72:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4594c77:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4594c7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4594c80:	e8 fb 01 00 00       	call   4594e80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).promoteToMaster@@Base>
+ 4594c85:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4594c8a:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4594c8f:	eb 0d                	jmp    4594c9e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0x9e>
+ 4594c91:	48 89 c8             	mov    %rcx,%rax
+ 4594c94:	e8 e7 01 00 00       	call   4594e80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).promoteToMaster@@Base>
+ 4594c99:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4594c9e:	48 89 c8             	mov    %rcx,%rax
+ 4594ca1:	e8 3a 06 00 00       	call   45952e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).updateRelevantSlaveClocks@@Base>
+ 4594ca6:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4594cab:	e8 70 03 00 00       	call   4595020 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).updateAlgoCoefficients@@Base>
+ 4594cb0:	90                   	nop
+ 4594cb1:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4594cb6:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4594cbb:	f0 0f c1 58 38       	lock xadd %ebx,0x38(%rax)
+ 4594cc0:	ff cb                	dec    %ebx
+ 4594cc2:	85 db                	test   %ebx,%ebx
+ 4594cc4:	74 0f                	je     4594cd5 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base+0xd5>
+ 4594cc6:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4594ccb:	e8 70 3b 9e fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4594cd0:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4594cd5:	0f b6 58 68          	movzbl 0x68(%rax),%ebx
+ 4594cd9:	e8 22 18 00 00       	call   4596500 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).UpdatePPS@@Base>
+ 4594cde:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4594ce3:	48 83 c4 20          	add    $0x20,%rsp
+ 4594ce7:	c3                   	ret
+ 4594ce8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4594ced:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4594cf2:	e8 69 f7 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4594cf7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4594cfc:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4594d01:	e9 fa fe ff ff       	jmp    4594c00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).ElectMasterClock@@Base>
+ 4594d06:	cc                   	int3
+ 4594d07:	cc                   	int3
+ 4594d08:	cc                   	int3
+ 4594d09:	cc                   	int3
+ 4594d0a:	cc                   	int3
+ 4594d0b:	cc                   	int3
+ 4594d0c:	cc                   	int3
+ 4594d0d:	cc                   	int3
+ 4594d0e:	cc                   	int3
+ 4594d0f:	cc                   	int3
+ 4594d10:	cc                   	int3
+ 4594d11:	cc                   	int3
+ 4594d12:	cc                   	int3
+ 4594d13:	cc                   	int3
+ 4594d14:	cc                   	int3
+ 4594d15:	cc                   	int3
+ 4594d16:	cc                   	int3
+ 4594d17:	cc                   	int3
+ 4594d18:	cc                   	int3
+ 4594d19:	cc                   	int3
+ 4594d1a:	cc                   	int3
+ 4594d1b:	cc                   	int3
+ 4594d1c:	cc                   	int3
+ 4594d1d:	cc                   	int3
+ 4594d1e:	cc                   	int3
+ 4594d1f:	cc                   	int3

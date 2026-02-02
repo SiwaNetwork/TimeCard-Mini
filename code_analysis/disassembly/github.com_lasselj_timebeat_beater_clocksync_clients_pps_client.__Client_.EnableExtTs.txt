@@ -1,0 +1,44 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs
+# addr 0x45bd740 size 160 (0xa0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045bd740 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base>:
+ 45bd740:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45bd744:	0f 86 81 00 00 00    	jbe    45bd7cb <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base+0x8b>
+ 45bd74a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45bd74e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45bd753:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45bd758:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45bd75d:	0f 1f 00             	nopl   (%rax)
+ 45bd760:	e8 1b 4c fc ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 45bd765:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45bd76a:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 45bd76e:	48 8b 51 10          	mov    0x10(%rcx),%rdx
+ 45bd772:	48 89 d1             	mov    %rdx,%rcx
+ 45bd775:	e8 c6 50 fc ff       	call   4582840 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GetDeviceWithName@@Base>
+ 45bd77a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45bd77f:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45bd784:	48 8b 99 40 01 00 00 	mov    0x140(%rcx),%rbx
+ 45bd78b:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45bd78f:	48 8b b1 50 01 00 00 	mov    0x150(%rcx),%rsi
+ 45bd796:	4c 8b 81 58 01 00 00 	mov    0x158(%rcx),%r8
+ 45bd79d:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45bd7a2:	48 89 d1             	mov    %rdx,%rcx
+ 45bd7a5:	e8 76 11 fd ff       	call   458e920 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnableExtts@@Base>
+ 45bd7aa:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45bd7af:	0f b6 89 d9 00 00 00 	movzbl 0xd9(%rcx),%ecx
+ 45bd7b6:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45bd7bb:	88 8a 10 03 00 00    	mov    %cl,0x310(%rdx)
+ 45bd7c1:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45bd7c6:	48 83 c4 40          	add    $0x40,%rsp
+ 45bd7ca:	c3                   	ret
+ 45bd7cb:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45bd7d0:	e8 8b 6c 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45bd7d5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45bd7da:	e9 61 ff ff ff       	jmp    45bd740 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base>
+ 45bd7df:	cc                   	int3

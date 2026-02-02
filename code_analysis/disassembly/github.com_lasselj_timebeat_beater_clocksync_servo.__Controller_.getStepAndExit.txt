@@ -1,0 +1,74 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).getStepAndExit
+# addr 0x45a8780 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a8780 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).getStepAndExit@@Base>:
+ 45a8780:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a8784:	0f 86 ad 00 00 00    	jbe    45a8837 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).getStepAndExit@@Base+0xb7>
+ 45a878a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45a878e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45a8793:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45a8798:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45a879d:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45a87a1:	0f b6 15 21 c7 89 03 	movzbl 0x389c721(%rip),%edx        # 7e44ec9 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2e9>
+ 45a87a8:	88 51 08             	mov    %dl,0x8(%rcx)
+ 45a87ab:	48 8b 0d 1e c7 89 03 	mov    0x389c71e(%rip),%rcx        # 7e44ed0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2f0>
+ 45a87b2:	48 8b 1d 1f c7 89 03 	mov    0x389c71f(%rip),%rbx        # 7e44ed8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2f8>
+ 45a87b9:	48 89 c8             	mov    %rcx,%rax
+ 45a87bc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a87c0:	e8 5b c4 e5 ff       	call   4404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>
+ 45a87c5:	48 85 db             	test   %rbx,%rbx
+ 45a87c8:	74 56                	je     45a8820 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).getStepAndExit@@Base+0xa0>
+ 45a87ca:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45a87cf:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 45a87d3:	48 89 c8             	mov    %rcx,%rax
+ 45a87d6:	ff d2                	call   *%rdx
+ 45a87d8:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45a87dd:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 45a87e1:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45a87e6:	48 89 c7             	mov    %rax,%rdi
+ 45a87e9:	48 89 de             	mov    %rbx,%rsi
+ 45a87ec:	31 c0                	xor    %eax,%eax
+ 45a87ee:	48 8d 1d ad 9a 87 00 	lea    0x879aad(%rip),%rbx        # 4e222a2 <_IO_stdin_used@@Base+0x1ef2a2>
+ 45a87f5:	b9 2b 00 00 00       	mov    $0x2b,%ecx
+ 45a87fa:	e8 21 1b 99 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 45a87ff:	48 89 d9             	mov    %rbx,%rcx
+ 45a8802:	48 89 c3             	mov    %rax,%rbx
+ 45a8805:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45a880a:	e8 71 e6 e5 ff       	call   4406e80 <github.com/lasselj/timebeat/beater/logging.(*Logger).Critical@@Base>
+ 45a880f:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 45a8816:	e8 a5 54 a4 fd       	call   1fedcc0 <os.Exit@@Base>
+ 45a881b:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45a8820:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45a8825:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 45a8829:	48 89 41 10          	mov    %rax,0x10(%rcx)
+ 45a882d:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45a8832:	48 83 c4 40          	add    $0x40,%rsp
+ 45a8836:	c3                   	ret
+ 45a8837:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a883c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a8840:	e8 1b bc 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a8845:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a884a:	e9 31 ff ff ff       	jmp    45a8780 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).getStepAndExit@@Base>
+ 45a884f:	cc                   	int3
+ 45a8850:	cc                   	int3
+ 45a8851:	cc                   	int3
+ 45a8852:	cc                   	int3
+ 45a8853:	cc                   	int3
+ 45a8854:	cc                   	int3
+ 45a8855:	cc                   	int3
+ 45a8856:	cc                   	int3
+ 45a8857:	cc                   	int3
+ 45a8858:	cc                   	int3
+ 45a8859:	cc                   	int3
+ 45a885a:	cc                   	int3
+ 45a885b:	cc                   	int3
+ 45a885c:	cc                   	int3
+ 45a885d:	cc                   	int3
+ 45a885e:	cc                   	int3
+ 45a885f:	cc                   	int3

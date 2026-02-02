@@ -1,0 +1,115 @@
+# github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin
+# addr 0x4bebcc0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004bebcc0 <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base>:
+ 4bebcc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4bebcc4:	0f 86 04 01 00 00    	jbe    4bebdce <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base+0x10e>
+ 4bebcca:	48 83 ec 38          	sub    $0x38,%rsp
+ 4bebcce:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4bebcd3:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4bebcd8:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4bebcdd:	0f 1f 00             	nopl   (%rax)
+ 4bebce0:	48 83 fb 02          	cmp    $0x2,%rbx
+ 4bebce4:	0f 85 ce 00 00 00    	jne    4bebdb8 <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base+0xf8>
+ 4bebcea:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4bebcef:	e8 8c 66 99 ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 4bebcf4:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4bebcf9:	48 8b 19             	mov    (%rcx),%rbx
+ 4bebcfc:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4bebd00:	48 89 d1             	mov    %rdx,%rcx
+ 4bebd03:	e8 38 6b 99 ff       	call   4582840 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GetDeviceWithName@@Base>
+ 4bebd08:	48 85 c0             	test   %rax,%rax
+ 4bebd0b:	0f 84 7e 00 00 00    	je     4bebd8f <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base+0xcf>
+ 4bebd11:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4bebd16:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4bebd1b:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4bebd1f:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 4bebd23:	e8 d8 33 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4bebd28:	48 85 db             	test   %rbx,%rbx
+ 4bebd2b:	75 35                	jne    4bebd62 <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base+0xa2>
+ 4bebd2d:	48 89 c3             	mov    %rax,%rbx
+ 4bebd30:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4bebd35:	e8 86 26 9a ff       	call   458e3c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPinFunction@@Base>
+ 4bebd3a:	48 85 c0             	test   %rax,%rax
+ 4bebd3d:	74 10                	je     4bebd4f <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base+0x8f>
+ 4bebd3f:	90                   	nop
+ 4bebd40:	e8 5b 60 99 ff       	call   4581da0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PTPPinDesc).ToString@@Base>
+ 4bebd45:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebd4a:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebd4e:	c3                   	ret
+ 4bebd4f:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4bebd53:	48 89 c8             	mov    %rcx,%rax
+ 4bebd56:	ff d2                	call   *%rdx
+ 4bebd58:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebd5d:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebd61:	c3                   	ret
+ 4bebd62:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4bebd67:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4bebd6b:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4bebd6f:	31 c0                	xor    %eax,%eax
+ 4bebd71:	48 8d 1d 7e 03 09 00 	lea    0x9037e(%rip),%rbx        # 4c7c0f6 <_IO_stdin_used@@Base+0x490f6>
+ 4bebd78:	b9 0d 00 00 00       	mov    $0xd,%ecx
+ 4bebd7d:	0f 1f 00             	nopl   (%rax)
+ 4bebd80:	e8 9b e5 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4bebd85:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebd8a:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebd8e:	c3                   	ret
+ 4bebd8f:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4bebd94:	48 8b 3a             	mov    (%rdx),%rdi
+ 4bebd97:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 4bebd9b:	31 c0                	xor    %eax,%eax
+ 4bebd9d:	48 8d 1d 2b 7e 20 00 	lea    0x207e2b(%rip),%rbx        # 4df3bcf <_IO_stdin_used@@Base+0x1c0bcf>
+ 4bebda4:	b9 1f 00 00 00       	mov    $0x1f,%ecx
+ 4bebda9:	e8 72 e5 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4bebdae:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebdb3:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebdb7:	c3                   	ret
+ 4bebdb8:	48 8d 05 10 ad 23 00 	lea    0x23ad10(%rip),%rax        # 4e26acf <_IO_stdin_used@@Base+0x1f3acf>
+ 4bebdbf:	bb 2c 00 00 00       	mov    $0x2c,%ebx
+ 4bebdc4:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebdc9:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebdcd:	c3                   	ret
+ 4bebdce:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4bebdd3:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4bebdd8:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4bebddd:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4bebde2:	e8 79 86 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4bebde7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4bebdec:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4bebdf1:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4bebdf6:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4bebdfb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4bebe00:	e9 bb fe ff ff       	jmp    4bebcc0 <github.com/lasselj/timebeat/interactive/api.GetPHCDevicePin@@Base>
+ 4bebe05:	cc                   	int3
+ 4bebe06:	cc                   	int3
+ 4bebe07:	cc                   	int3
+ 4bebe08:	cc                   	int3
+ 4bebe09:	cc                   	int3
+ 4bebe0a:	cc                   	int3
+ 4bebe0b:	cc                   	int3
+ 4bebe0c:	cc                   	int3
+ 4bebe0d:	cc                   	int3
+ 4bebe0e:	cc                   	int3
+ 4bebe0f:	cc                   	int3
+ 4bebe10:	cc                   	int3
+ 4bebe11:	cc                   	int3
+ 4bebe12:	cc                   	int3
+ 4bebe13:	cc                   	int3
+ 4bebe14:	cc                   	int3
+ 4bebe15:	cc                   	int3
+ 4bebe16:	cc                   	int3
+ 4bebe17:	cc                   	int3
+ 4bebe18:	cc                   	int3
+ 4bebe19:	cc                   	int3
+ 4bebe1a:	cc                   	int3
+ 4bebe1b:	cc                   	int3
+ 4bebe1c:	cc                   	int3
+ 4bebe1d:	cc                   	int3
+ 4bebe1e:	cc                   	int3
+ 4bebe1f:	cc                   	int3

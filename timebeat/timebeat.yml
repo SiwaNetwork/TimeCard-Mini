@@ -1,0 +1,38 @@
+# Timebeat — синхронизация времени на базе Elastic Beats v7 (как Timebeat).
+# Использует tc-sync: GNSS (UBX/Timecard Mini), NTP, PTP, PPS, servo (PID/PI).
+
+timebeat:
+  # Устройство для configure time pulse (опционально)
+  device:
+    port: /dev/ttyS0
+    baud: 9600
+  timepulse:
+    pulse_width_ms: 5
+    tp_idx: 0
+    ant_cable_delay_ns: 0
+    align_to_tow: true
+  servo:
+    algorithm: pid
+    kp: 0.1
+    ki: 0.01
+    kd: 0.001
+    interval: 1s
+  # Основной режим: выбор источника времени и коррекция часов
+  clock_sync:
+    adjust_clock: true
+    primary_clocks:
+      - protocol: timebeat_opentimecard_mini
+        device: /dev/ttyS0
+        baud: 115200
+        disable: false
+        monitor_only: false
+    secondary_clocks:
+      - protocol: ntp
+        ip: pool.ntp.org
+        pollinterval: 4s
+        disable: false
+
+# Стандартные настройки libbeat (output, logging и т.д.)
+# output.elasticsearch:
+#   hosts: ["localhost:9200"]
+# logging.level: info

@@ -1,0 +1,79 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval
+# addr 0x45802c0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045802c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base>:
+ 45802c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45802c4:	0f 86 9e 00 00 00    	jbe    4580368 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base+0xa8>
+ 45802ca:	48 83 ec 18          	sub    $0x18,%rsp
+ 45802ce:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45802d3:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45802d8:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45802dd:	f2 0f 11 44 24 28    	movsd  %xmm0,0x28(%rsp)
+ 45802e3:	f2 0f 10 88 98 00 00 	movsd  0x98(%rax),%xmm1
+ 45802ea:	00 
+ 45802eb:	e8 30 95 9e fd       	call   1f69820 <math.pow@@Base>
+ 45802f0:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45802f5:	f2 0f 59 80 90 00 00 	mulsd  0x90(%rax),%xmm0
+ 45802fc:	00 
+ 45802fd:	f2 0f 11 40 60       	movsd  %xmm0,0x60(%rax)
+ 4580302:	f2 0f 10 90 a0 00 00 	movsd  0xa0(%rax),%xmm2
+ 4580309:	00 
+ 458030a:	f2 0f 10 5c 24 28    	movsd  0x28(%rsp),%xmm3
+ 4580310:	f2 0f 5e d3          	divsd  %xmm3,%xmm2
+ 4580314:	66 0f 2e c2          	ucomisd %xmm2,%xmm0
+ 4580318:	76 05                	jbe    458031f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base+0x5f>
+ 458031a:	f2 0f 11 50 60       	movsd  %xmm2,0x60(%rax)
+ 458031f:	f2 0f 10 88 b0 00 00 	movsd  0xb0(%rax),%xmm1
+ 4580326:	00 
+ 4580327:	0f 10 c3             	movups %xmm3,%xmm0
+ 458032a:	e8 f1 94 9e fd       	call   1f69820 <math.pow@@Base>
+ 458032f:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4580334:	f2 0f 59 80 a8 00 00 	mulsd  0xa8(%rax),%xmm0
+ 458033b:	00 
+ 458033c:	f2 0f 11 40 68       	movsd  %xmm0,0x68(%rax)
+ 4580341:	f2 0f 10 90 b8 00 00 	movsd  0xb8(%rax),%xmm2
+ 4580348:	00 
+ 4580349:	f2 0f 10 5c 24 28    	movsd  0x28(%rsp),%xmm3
+ 458034f:	f2 0f 5e d3          	divsd  %xmm3,%xmm2
+ 4580353:	66 0f 2e c2          	ucomisd %xmm2,%xmm0
+ 4580357:	76 05                	jbe    458035e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base+0x9e>
+ 4580359:	f2 0f 11 50 68       	movsd  %xmm2,0x68(%rax)
+ 458035e:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4580363:	48 83 c4 18          	add    $0x18,%rsp
+ 4580367:	c3                   	ret
+ 4580368:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458036d:	f2 0f 11 44 24 10    	movsd  %xmm0,0x10(%rsp)
+ 4580373:	e8 e8 40 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4580378:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 458037d:	f2 0f 10 44 24 10    	movsd  0x10(%rsp),%xmm0
+ 4580383:	e9 38 ff ff ff       	jmp    45802c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base>
+ 4580388:	cc                   	int3
+ 4580389:	cc                   	int3
+ 458038a:	cc                   	int3
+ 458038b:	cc                   	int3
+ 458038c:	cc                   	int3
+ 458038d:	cc                   	int3
+ 458038e:	cc                   	int3
+ 458038f:	cc                   	int3
+ 4580390:	cc                   	int3
+ 4580391:	cc                   	int3
+ 4580392:	cc                   	int3
+ 4580393:	cc                   	int3
+ 4580394:	cc                   	int3
+ 4580395:	cc                   	int3
+ 4580396:	cc                   	int3
+ 4580397:	cc                   	int3
+ 4580398:	cc                   	int3
+ 4580399:	cc                   	int3
+ 458039a:	cc                   	int3
+ 458039b:	cc                   	int3
+ 458039c:	cc                   	int3
+ 458039d:	cc                   	int3
+ 458039e:	cc                   	int3
+ 458039f:	cc                   	int3

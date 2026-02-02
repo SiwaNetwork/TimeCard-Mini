@@ -1,0 +1,145 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand
+# addr 0x4c29200 size 448 (0x1c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c29200 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base>:
+ 4c29200:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4c29204:	0f 86 74 01 00 00    	jbe    4c2937e <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x17e>
+ 4c2920a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4c2920e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4c29213:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4c29218:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4c2921d:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4c29222:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 4c29226:	48 85 d2             	test   %rdx,%rdx
+ 4c29229:	0f 85 f7 00 00 00    	jne    4c29326 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x126>
+ 4c2922f:	48 83 f9 06          	cmp    $0x6,%rcx
+ 4c29233:	7f 43                	jg     4c29278 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x78>
+ 4c29235:	48 83 f9 04          	cmp    $0x4,%rcx
+ 4c29239:	75 0d                	jne    4c29248 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x48>
+ 4c2923b:	81 3b 65 78 69 74    	cmpl   $0x74697865,(%rbx)
+ 4c29241:	74 27                	je     4c2926a <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x6a>
+ 4c29243:	e9 b4 00 00 00       	jmp    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c29248:	48 83 f9 06          	cmp    $0x6,%rcx
+ 4c2924c:	0f 85 aa 00 00 00    	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c29252:	81 3b 6c 6f 67 6f    	cmpl   $0x6f676f6c,(%rbx)
+ 4c29258:	0f 85 9e 00 00 00    	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c2925e:	66 81 7b 04 75 74    	cmpw   $0x7475,0x4(%rbx)
+ 4c29264:	0f 85 92 00 00 00    	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c2926a:	31 db                	xor    %ebx,%ebx
+ 4c2926c:	b8 01 00 00 00       	mov    $0x1,%eax
+ 4c29271:	31 c9                	xor    %ecx,%ecx
+ 4c29273:	e9 f5 00 00 00       	jmp    4c2936d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x16d>
+ 4c29278:	48 83 f9 09          	cmp    $0x9,%rcx
+ 4c2927c:	75 47                	jne    4c292c5 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xc5>
+ 4c2927e:	48 ba 63 6f 6e 66 69 	movabs $0x72756769666e6f63,%rdx
+ 4c29285:	67 75 72 
+ 4c29288:	48 39 13             	cmp    %rdx,(%rbx)
+ 4c2928b:	75 6f                	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c2928d:	80 7b 08 65          	cmpb   $0x65,0x8(%rbx)
+ 4c29291:	75 69                	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c29293:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4c29297:	48 8d 1d cf af 19 00 	lea    0x19afcf(%rip),%rbx        # 4dc426d <_IO_stdin_used@@Base+0x19126d>
+ 4c2929e:	b9 13 00 00 00       	mov    $0x13,%ecx
+ 4c292a3:	48 89 d0             	mov    %rdx,%rax
+ 4c292a6:	e8 35 27 50 ff       	call   412b9e0 <golang.org/x/term.(*Terminal).SetPrompt@@Base>
+ 4c292ab:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4c292b0:	48 c7 42 10 01 00 00 	movq   $0x1,0x10(%rdx)
+ 4c292b7:	00 
+ 4c292b8:	31 db                	xor    %ebx,%ebx
+ 4c292ba:	31 c0                	xor    %eax,%eax
+ 4c292bc:	31 c9                	xor    %ecx,%ecx
+ 4c292be:	66 90                	xchg   %ax,%ax
+ 4c292c0:	e9 a8 00 00 00       	jmp    4c2936d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x16d>
+ 4c292c5:	48 83 f9 13          	cmp    $0x13,%rcx
+ 4c292c9:	75 31                	jne    4c292fc <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0xfc>
+ 4c292cb:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4c292d0:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4c292d5:	48 89 d8             	mov    %rbx,%rax
+ 4c292d8:	48 8d 1d 5a cc 19 00 	lea    0x19cc5a(%rip),%rbx        # 4dc5f39 <_IO_stdin_used@@Base+0x192f39>
+ 4c292df:	b9 13 00 00 00       	mov    $0x13,%ecx
+ 4c292e4:	e8 37 a8 2b fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4c292e9:	84 c0                	test   %al,%al
+ 4c292eb:	75 28                	jne    4c29315 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x115>
+ 4c292ed:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4c292f2:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4c292f7:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4c292fc:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 4c29300:	48 89 d8             	mov    %rbx,%rax
+ 4c29303:	48 89 cb             	mov    %rcx,%rbx
+ 4c29306:	48 89 d1             	mov    %rdx,%rcx
+ 4c29309:	e8 d2 20 00 00       	call   4c2b3e0 <github.com/lasselj/timebeat/interactive/daemon.processCmd@@Base>
+ 4c2930e:	48 89 c1             	mov    %rax,%rcx
+ 4c29311:	31 c0                	xor    %eax,%eax
+ 4c29313:	eb 58                	jmp    4c2936d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x16d>
+ 4c29315:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4c2931a:	e8 a1 00 00 00       	call   4c293c0 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).generateStartupConfig@@Base>
+ 4c2931f:	48 89 c1             	mov    %rax,%rcx
+ 4c29322:	31 c0                	xor    %eax,%eax
+ 4c29324:	eb 47                	jmp    4c2936d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x16d>
+ 4c29326:	48 83 fa 01          	cmp    $0x1,%rdx
+ 4c2932a:	75 3b                	jne    4c29367 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x167>
+ 4c2932c:	48 83 f9 04          	cmp    $0x4,%rcx
+ 4c29330:	75 2d                	jne    4c2935f <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x15f>
+ 4c29332:	81 3b 65 78 69 74    	cmpl   $0x74697865,(%rbx)
+ 4c29338:	75 25                	jne    4c2935f <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x15f>
+ 4c2933a:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4c2933e:	48 8d 1d 1a f0 03 00 	lea    0x3f01a(%rip),%rbx        # 4c6835f <_IO_stdin_used@@Base+0x3535f>
+ 4c29345:	b9 0a 00 00 00       	mov    $0xa,%ecx
+ 4c2934a:	48 89 d0             	mov    %rdx,%rax
+ 4c2934d:	e8 8e 26 50 ff       	call   412b9e0 <golang.org/x/term.(*Terminal).SetPrompt@@Base>
+ 4c29352:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4c29357:	48 c7 42 10 00 00 00 	movq   $0x0,0x10(%rdx)
+ 4c2935e:	00 
+ 4c2935f:	31 db                	xor    %ebx,%ebx
+ 4c29361:	31 c0                	xor    %eax,%eax
+ 4c29363:	31 c9                	xor    %ecx,%ecx
+ 4c29365:	eb 06                	jmp    4c2936d <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base+0x16d>
+ 4c29367:	31 db                	xor    %ebx,%ebx
+ 4c29369:	31 c0                	xor    %eax,%eax
+ 4c2936b:	31 c9                	xor    %ecx,%ecx
+ 4c2936d:	89 c2                	mov    %eax,%edx
+ 4c2936f:	48 89 c8             	mov    %rcx,%rax
+ 4c29372:	89 d1                	mov    %edx,%ecx
+ 4c29374:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4c29379:	48 83 c4 20          	add    $0x20,%rsp
+ 4c2937d:	c3                   	ret
+ 4c2937e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4c29383:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4c29388:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4c2938d:	e8 ce b0 32 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4c29392:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4c29397:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4c2939c:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4c293a1:	e9 5a fe ff ff       	jmp    4c29200 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base>
+ 4c293a6:	cc                   	int3
+ 4c293a7:	cc                   	int3
+ 4c293a8:	cc                   	int3
+ 4c293a9:	cc                   	int3
+ 4c293aa:	cc                   	int3
+ 4c293ab:	cc                   	int3
+ 4c293ac:	cc                   	int3
+ 4c293ad:	cc                   	int3
+ 4c293ae:	cc                   	int3
+ 4c293af:	cc                   	int3
+ 4c293b0:	cc                   	int3
+ 4c293b1:	cc                   	int3
+ 4c293b2:	cc                   	int3
+ 4c293b3:	cc                   	int3
+ 4c293b4:	cc                   	int3
+ 4c293b5:	cc                   	int3
+ 4c293b6:	cc                   	int3
+ 4c293b7:	cc                   	int3
+ 4c293b8:	cc                   	int3
+ 4c293b9:	cc                   	int3
+ 4c293ba:	cc                   	int3
+ 4c293bb:	cc                   	int3
+ 4c293bc:	cc                   	int3
+ 4c293bd:	cc                   	int3
+ 4c293be:	cc                   	int3
+ 4c293bf:	cc                   	int3

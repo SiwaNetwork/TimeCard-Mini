@@ -1,0 +1,138 @@
+# github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan
+# addr 0x4be97c0 size 512 (0x200)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004be97c0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base>:
+ 4be97c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4be97c4:	0f 86 b7 01 00 00    	jbe    4be9981 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x1c1>
+ 4be97ca:	48 83 ec 70          	sub    $0x70,%rsp
+ 4be97ce:	48 89 6c 24 68       	mov    %rbp,0x68(%rsp)
+ 4be97d3:	48 8d 6c 24 68       	lea    0x68(%rsp),%rbp
+ 4be97d8:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4be97dd:	48 89 7c 24 40       	mov    %rdi,0x40(%rsp)
+ 4be97e2:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 4be97e9:	00 
+ 4be97ea:	48 89 9c 24 80 00 00 	mov    %rbx,0x80(%rsp)
+ 4be97f1:	00 
+ 4be97f2:	48 89 d8             	mov    %rbx,%rax
+ 4be97f5:	48 89 cb             	mov    %rcx,%rbx
+ 4be97f8:	e8 c3 11 00 00       	call   4bea9c0 <github.com/lasselj/timebeat/beater/clocksync/taas.parseIPAddr@@Base>
+ 4be97fd:	0f 1f 00             	nopl   (%rax)
+ 4be9800:	48 85 db             	test   %rbx,%rbx
+ 4be9803:	0f 84 9e 00 00 00    	je     4be98a7 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0xe7>
+ 4be9809:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4be980e:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4be9813:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 4be9819:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4be981f:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 4be9826:	00 
+ 4be9827:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4be982e:	00 
+ 4be982f:	e8 2c 45 30 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4be9834:	48 8d 0d 65 4e bc 00 	lea    0xbc4e65(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4be983b:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 4be9840:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4be9845:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4be984a:	48 85 c9             	test   %rcx,%rcx
+ 4be984d:	74 06                	je     4be9855 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x95>
+ 4be984f:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 4be9853:	eb 03                	jmp    4be9858 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x98>
+ 4be9855:	48 89 cb             	mov    %rcx,%rbx
+ 4be9858:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 4be985d:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4be9862:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 4be9867:	48 8d 05 66 55 24 00 	lea    0x245566(%rip),%rax        # 4e2edd4 <_IO_stdin_used@@Base+0x1fbdd4>
+ 4be986e:	bb 2e 00 00 00       	mov    $0x2e,%ebx
+ 4be9873:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 4be9878:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4be987d:	48 89 fe             	mov    %rdi,%rsi
+ 4be9880:	e8 7b b0 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4be9885:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 4be988a:	48 8b 12             	mov    (%rdx),%rdx
+ 4be988d:	48 89 d9             	mov    %rbx,%rcx
+ 4be9890:	48 89 c3             	mov    %rax,%rbx
+ 4be9893:	48 89 d0             	mov    %rdx,%rax
+ 4be9896:	e8 c5 d7 81 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4be989b:	31 c0                	xor    %eax,%eax
+ 4be989d:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 4be98a2:	48 83 c4 70          	add    $0x70,%rsp
+ 4be98a6:	c3                   	ret
+ 4be98a7:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4be98ac:	48 8b 15 3d 51 d9 02 	mov    0x2d9513d(%rip),%rdx        # 797e9f0 <github.com/vishvananda/netlink.pkgHandle@@Base>
+ 4be98b3:	48 8d 1d ee 71 33 01 	lea    0x13371ee(%rip),%rbx        # 5f20aa8 <go:itab.*github.com/vishvananda/netlink.Vlan,github.com/vishvananda/netlink.Link@@Base>
+ 4be98ba:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4be98bf:	48 89 c7             	mov    %rax,%rdi
+ 4be98c2:	48 89 d0             	mov    %rdx,%rax
+ 4be98c5:	e8 96 cc fd ff       	call   4bc6560 <github.com/vishvananda/netlink.(*Handle).AddrAdd@@Base>
+ 4be98ca:	48 85 c0             	test   %rax,%rax
+ 4be98cd:	0f 84 9e 00 00 00    	je     4be9971 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x1b1>
+ 4be98d3:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4be98d8:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4be98dd:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 4be98e3:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4be98e9:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 4be98f0:	00 
+ 4be98f1:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4be98f8:	00 
+ 4be98f9:	e8 62 44 30 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4be98fe:	48 8d 0d 9b 4d bc 00 	lea    0xbc4d9b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4be9905:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 4be990a:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4be990f:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4be9914:	48 85 c9             	test   %rcx,%rcx
+ 4be9917:	74 06                	je     4be991f <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x15f>
+ 4be9919:	48 8b 41 08          	mov    0x8(%rcx),%rax
+ 4be991d:	eb 03                	jmp    4be9922 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base+0x162>
+ 4be991f:	48 89 c8             	mov    %rcx,%rax
+ 4be9922:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4be9927:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4be992c:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 4be9931:	48 8d 05 3b d6 23 00 	lea    0x23d63b(%rip),%rax        # 4e26f73 <_IO_stdin_used@@Base+0x1f3f73>
+ 4be9938:	bb 2c 00 00 00       	mov    $0x2c,%ebx
+ 4be993d:	48 8d 4c 24 48       	lea    0x48(%rsp),%rcx
+ 4be9942:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4be9947:	48 89 fe             	mov    %rdi,%rsi
+ 4be994a:	e8 b1 af 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4be994f:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 4be9954:	48 8b 12             	mov    (%rdx),%rdx
+ 4be9957:	48 89 d9             	mov    %rbx,%rcx
+ 4be995a:	48 89 c3             	mov    %rax,%rbx
+ 4be995d:	48 89 d0             	mov    %rdx,%rax
+ 4be9960:	e8 fb d6 81 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4be9965:	31 c0                	xor    %eax,%eax
+ 4be9967:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 4be996c:	48 83 c4 70          	add    $0x70,%rsp
+ 4be9970:	c3                   	ret
+ 4be9971:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4be9976:	48 8b 6c 24 68       	mov    0x68(%rsp),%rbp
+ 4be997b:	48 83 c4 70          	add    $0x70,%rsp
+ 4be997f:	90                   	nop
+ 4be9980:	c3                   	ret
+ 4be9981:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4be9986:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4be998b:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4be9990:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4be9995:	e8 c6 aa 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4be999a:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4be999f:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4be99a4:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4be99a9:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4be99ae:	e9 0d fe ff ff       	jmp    4be97c0 <github.com/lasselj/timebeat/beater/clocksync/taas.(*Controller).addIPToVlan@@Base>
+ 4be99b3:	cc                   	int3
+ 4be99b4:	cc                   	int3
+ 4be99b5:	cc                   	int3
+ 4be99b6:	cc                   	int3
+ 4be99b7:	cc                   	int3
+ 4be99b8:	cc                   	int3
+ 4be99b9:	cc                   	int3
+ 4be99ba:	cc                   	int3
+ 4be99bb:	cc                   	int3
+ 4be99bc:	cc                   	int3
+ 4be99bd:	cc                   	int3
+ 4be99be:	cc                   	int3
+ 4be99bf:	cc                   	int3

@@ -1,0 +1,65 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit
+# addr 0x45de1a0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045de1a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit@@Base>:
+ 45de1a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45de1a4:	0f 86 b4 00 00 00    	jbe    45de25e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit@@Base+0xbe>
+ 45de1aa:	48 83 ec 40          	sub    $0x40,%rsp
+ 45de1ae:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45de1b3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45de1b8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45de1bf:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 45de1c4:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45de1c9:	48 89 c1             	mov    %rax,%rcx
+ 45de1cc:	31 c0                	xor    %eax,%eax
+ 45de1ce:	be 01 00 00 00       	mov    $0x1,%esi
+ 45de1d3:	f0 0f b1 71 0c       	lock cmpxchg %esi,0xc(%rcx)
+ 45de1d8:	40 0f 94 c6          	sete   %sil
+ 45de1dc:	48 8d 41 0c          	lea    0xc(%rcx),%rax
+ 45de1e0:	40 84 f6             	test   %sil,%sil
+ 45de1e3:	75 22                	jne    45de207 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit@@Base+0x67>
+ 45de1e5:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45de1ea:	88 5c 24 50          	mov    %bl,0x50(%rsp)
+ 45de1ee:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 45de1f3:	e8 48 a3 99 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45de1f8:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 45de1fd:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45de202:	0f b6 5c 24 50       	movzbl 0x50(%rsp),%ebx
+ 45de207:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 45de20d:	48 8d 35 6c 00 00 00 	lea    0x6c(%rip),%rsi        # 45de280 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit.func1@@Base>
+ 45de214:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 45de219:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45de21e:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 45de223:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45de228:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 45de22d:	0f b6 41 08          	movzbl 0x8(%rcx),%eax
+ 45de231:	09 d8                	or     %ebx,%eax
+ 45de233:	88 41 08             	mov    %al,0x8(%rcx)
+ 45de236:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45de23b:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45de240:	48 8b 02             	mov    (%rdx),%rax
+ 45de243:	ff d0                	call   *%rax
+ 45de245:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45de24a:	48 83 c4 40          	add    $0x40,%rsp
+ 45de24e:	c3                   	ret
+ 45de24f:	e8 0c dd 93 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45de254:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45de259:	48 83 c4 40          	add    $0x40,%rsp
+ 45de25d:	c3                   	ret
+ 45de25e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45de263:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 45de267:	e8 f4 61 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45de26c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45de271:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 45de276:	e9 25 ff ff ff       	jmp    45de1a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*State).setUnicastRequestedBit@@Base>
+ 45de27b:	cc                   	int3
+ 45de27c:	cc                   	int3
+ 45de27d:	cc                   	int3
+ 45de27e:	cc                   	int3
+ 45de27f:	cc                   	int3

@@ -1,0 +1,460 @@
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457f500 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base>:
+ 457f500:	4c 8d a4 24 68 fe ff 	lea    -0x198(%rsp),%r12
+ 457f507:	ff 
+ 457f508:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 457f50c:	0f 86 1e 07 00 00    	jbe    457fc30 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x730>
+ 457f512:	48 81 ec 18 02 00 00 	sub    $0x218,%rsp
+ 457f519:	48 89 ac 24 10 02 00 	mov    %rbp,0x210(%rsp)
+ 457f520:	00 
+ 457f521:	48 8d ac 24 10 02 00 	lea    0x210(%rsp),%rbp
+ 457f528:	00 
+ 457f529:	48 89 b4 24 40 02 00 	mov    %rsi,0x240(%rsp)
+ 457f530:	00 
+ 457f531:	48 89 b4 24 a0 00 00 	mov    %rsi,0xa0(%rsp)
+ 457f538:	00 
+ 457f539:	48 89 bc 24 98 00 00 	mov    %rdi,0x98(%rsp)
+ 457f540:	00 
+ 457f541:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 457f548:	00 
+ 457f549:	48 89 84 24 20 02 00 	mov    %rax,0x220(%rsp)
+ 457f550:	00 
+ 457f551:	44 0f 11 bc 24 00 01 	movups %xmm15,0x100(%rsp)
+ 457f558:	00 00 
+ 457f55a:	48 89 fa             	mov    %rdi,%rdx
+ 457f55d:	48 8d bc 24 08 01 00 	lea    0x108(%rsp),%rdi
+ 457f564:	00 
+ 457f565:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 457f569:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457f56e:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457f573:	e8 58 78 9d fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 457f578:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457f57c:	80 b8 89 00 00 00 00 	cmpb   $0x0,0x89(%rax)
+ 457f583:	74 71                	je     457f5f6 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0xf6>
+ 457f585:	48 89 9c 24 28 02 00 	mov    %rbx,0x228(%rsp)
+ 457f58c:	00 
+ 457f58d:	48 8b 88 90 00 00 00 	mov    0x90(%rax),%rcx
+ 457f594:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457f597:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 457f59c:	48 89 c8             	mov    %rcx,%rax
+ 457f59f:	90                   	nop
+ 457f5a0:	e8 7b be ff ff       	call   457b420 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Update@@Base>
+ 457f5a5:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f5ac:	00 
+ 457f5ad:	48 8b 81 90 00 00 00 	mov    0x90(%rcx),%rax
+ 457f5b4:	e8 67 c1 ff ff       	call   457b720 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*OnlinePIDTuner).Predict@@Base>
+ 457f5b9:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f5c0:	00 
+ 457f5c1:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 457f5c5:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 457f5c9:	f2 0f 11 4a 08       	movsd  %xmm1,0x8(%rdx)
+ 457f5ce:	f2 0f 11 52 10       	movsd  %xmm2,0x10(%rdx)
+ 457f5d3:	48 89 c8             	mov    %rcx,%rax
+ 457f5d6:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+ 457f5dd:	00 
+ 457f5de:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 457f5e5:	00 
+ 457f5e6:	48 8b 9c 24 28 02 00 	mov    0x228(%rsp),%rbx
+ 457f5ed:	00 
+ 457f5ee:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 457f5f5:	00 
+ 457f5f6:	80 78 70 00          	cmpb   $0x0,0x70(%rax)
+ 457f5fa:	74 2f                	je     457f62b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x12b>
+ 457f5fc:	48 8b 48 78          	mov    0x78(%rax),%rcx
+ 457f600:	48 89 c8             	mov    %rcx,%rax
+ 457f603:	e8 58 e9 ff ff       	call   457df60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMedian).Sample@@Base>
+ 457f608:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+ 457f60f:	00 
+ 457f610:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 457f617:	00 
+ 457f618:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+ 457f61f:	00 
+ 457f620:	48 89 c3             	mov    %rax,%rbx
+ 457f623:	48 8b 84 24 20 02 00 	mov    0x220(%rsp),%rax
+ 457f62a:	00 
+ 457f62b:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 457f632:	00 
+ 457f633:	48 89 94 24 b0 00 00 	mov    %rdx,0xb0(%rsp)
+ 457f63a:	00 
+ 457f63b:	48 89 b4 24 b8 00 00 	mov    %rsi,0xb8(%rsp)
+ 457f642:	00 
+ 457f643:	48 8b b4 24 a8 00 00 	mov    0xa8(%rsp),%rsi
+ 457f64a:	00 
+ 457f64b:	48 0f ba e6 3f       	bt     $0x3f,%rsi
+ 457f650:	73 1a                	jae    457f66c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x16c>
+ 457f652:	48 89 f2             	mov    %rsi,%rdx
+ 457f655:	48 d1 e6             	shl    $1,%rsi
+ 457f658:	48 c1 ee 1f          	shr    $0x1f,%rsi
+ 457f65c:	49 b8 80 7f b1 d7 0d 	movabs $0xdd7b17f80,%r8
+ 457f663:	00 00 00 
+ 457f666:	4a 8d 3c 06          	lea    (%rsi,%r8,1),%rdi
+ 457f66a:	eb 0b                	jmp    457f677 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x177>
+ 457f66c:	48 89 f2             	mov    %rsi,%rdx
+ 457f66f:	48 8b bc 24 98 00 00 	mov    0x98(%rsp),%rdi
+ 457f676:	00 
+ 457f677:	48 8b 70 28          	mov    0x28(%rax),%rsi
+ 457f67b:	48 69 ff 00 ca 9a 3b 	imul   $0x3b9aca00,%rdi,%rdi
+ 457f682:	81 e2 ff ff ff 3f    	and    $0x3fffffff,%edx
+ 457f688:	48 63 d2             	movslq %edx,%rdx
+ 457f68b:	48 01 fa             	add    %rdi,%rdx
+ 457f68e:	48 8b 7e 20          	mov    0x20(%rsi),%rdi
+ 457f692:	4c 8b 06             	mov    (%rsi),%r8
+ 457f695:	4d 85 c0             	test   %r8,%r8
+ 457f698:	0f 84 8c 05 00 00    	je     457fc2a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x72a>
+ 457f69e:	48 89 c1             	mov    %rax,%rcx
+ 457f6a1:	48 89 f8             	mov    %rdi,%rax
+ 457f6a4:	48 89 d7             	mov    %rdx,%rdi
+ 457f6a7:	49 83 f8 ff          	cmp    $0xffffffffffffffff,%r8
+ 457f6ab:	74 07                	je     457f6b4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x1b4>
+ 457f6ad:	48 99                	cqto
+ 457f6af:	49 f7 f8             	idiv   %r8
+ 457f6b2:	eb 05                	jmp    457f6b9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x1b9>
+ 457f6b4:	48 f7 d8             	neg    %rax
+ 457f6b7:	31 d2                	xor    %edx,%edx
+ 457f6b9:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+ 457f6bd:	4c 8b 4e 10          	mov    0x10(%rsi),%r9
+ 457f6c1:	4c 39 ca             	cmp    %r9,%rdx
+ 457f6c4:	0f 83 55 05 00 00    	jae    457fc1f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x71f>
+ 457f6ca:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 457f6cf:	49 b9 00 00 1a 3d eb 	movabs $0xa1b203eb3d1a0000,%r9
+ 457f6d6:	03 b2 a1 
+ 457f6d9:	4c 01 cf             	add    %r9,%rdi
+ 457f6dc:	48 c1 e2 04          	shl    $0x4,%rdx
+ 457f6e0:	49 89 3c 10          	mov    %rdi,(%r8,%rdx,1)
+ 457f6e4:	49 89 5c 10 08       	mov    %rbx,0x8(%r8,%rdx,1)
+ 457f6e9:	48 ff 46 20          	incq   0x20(%rsi)
+ 457f6ed:	48 8b 41 28          	mov    0x28(%rcx),%rax
+ 457f6f1:	e8 aa c5 ff ff       	call   457bca0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*BestFitFiltered).GetLeastSquaresGradientFiltered@@Base>
+ 457f6f6:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f6fd:	00 
+ 457f6fe:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 457f702:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 457f706:	f2 0f 10 4a 08       	movsd  0x8(%rdx),%xmm1
+ 457f70b:	f2 0f 11 8c 24 88 00 	movsd  %xmm1,0x88(%rsp)
+ 457f712:	00 00 
+ 457f714:	f2 0f 10 12          	movsd  (%rdx),%xmm2
+ 457f718:	f2 0f 11 94 24 80 00 	movsd  %xmm2,0x80(%rsp)
+ 457f71f:	00 00 
+ 457f721:	f2 0f 10 59 18       	movsd  0x18(%rcx),%xmm3
+ 457f726:	f2 0f 11 5c 24 78    	movsd  %xmm3,0x78(%rsp)
+ 457f72c:	f2 0f 59 42 10       	mulsd  0x10(%rdx),%xmm0
+ 457f731:	f2 0f 11 44 24 68    	movsd  %xmm0,0x68(%rsp)
+ 457f737:	f2 0f 10 63 28       	movsd  0x28(%rbx),%xmm4
+ 457f73c:	90                   	nop
+ 457f73d:	66 48 0f 7e e2       	movq   %xmm4,%rdx
+ 457f742:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 457f747:	48 89 14 24          	mov    %rdx,(%rsp)
+ 457f74b:	e8 50 b4 9e fd       	call   1f6aba0 <math.archLog.abi0@@Base>
+ 457f750:	45 0f 57 ff          	xorps  %xmm15,%xmm15
+ 457f754:	4c 8b 35 55 e8 3f 03 	mov    0x33fe855(%rip),%r14        # 797dfb0 <runtime.tlsg@@Base+0x797dfb0>
+ 457f75b:	64 4d 8b 36          	mov    %fs:(%r14),%r14
+ 457f75f:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 457f764:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457f767:	f2 48 0f 2a c1       	cvtsi2sd %rcx,%xmm0
+ 457f76c:	f2 0f 10 8c 24 88 00 	movsd  0x88(%rsp),%xmm1
+ 457f773:	00 00 
+ 457f775:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+ 457f779:	f2 0f 10 94 24 80 00 	movsd  0x80(%rsp),%xmm2
+ 457f780:	00 00 
+ 457f782:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 457f786:	f2 0f 10 44 24 78    	movsd  0x78(%rsp),%xmm0
+ 457f78c:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 457f790:	f2 0f 10 1d 18 ec f5 	movsd  0xf5ec18(%rip),%xmm3        # 54de3b0 <_IO_stdin_used@@Base+0x8ab3b0>
+ 457f797:	00 
+ 457f798:	f2 0f 59 5c 24 08    	mulsd  0x8(%rsp),%xmm3
+ 457f79e:	f2 0f 10 64 24 68    	movsd  0x68(%rsp),%xmm4
+ 457f7a4:	f2 0f 59 dc          	mulsd  %xmm4,%xmm3
+ 457f7a8:	66 0f 2e db          	ucomisd %xmm3,%xmm3
+ 457f7ac:	75 02                	jne    457f7b0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x2b0>
+ 457f7ae:	7b 03                	jnp    457f7b3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x2b3>
+ 457f7b0:	0f 57 db             	xorps  %xmm3,%xmm3
+ 457f7b3:	f2 0f 11 4c 24 58    	movsd  %xmm1,0x58(%rsp)
+ 457f7b9:	f2 0f 10 25 f7 f1 f5 	movsd  0xf5f1f7(%rip),%xmm4        # 54de9b8 <_IO_stdin_used@@Base+0x8ab9b8>
+ 457f7c0:	00 
+ 457f7c1:	66 0f 2e dc          	ucomisd %xmm4,%xmm3
+ 457f7c5:	77 0e                	ja     457f7d5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x2d5>
+ 457f7c7:	f2 0f 10 25 31 f4 f5 	movsd  0xf5f431(%rip),%xmm4        # 54dec00 <_IO_stdin_used@@Base+0x8abc00>
+ 457f7ce:	00 
+ 457f7cf:	66 0f 2e e3          	ucomisd %xmm3,%xmm4
+ 457f7d3:	76 03                	jbe    457f7d8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x2d8>
+ 457f7d5:	0f 57 db             	xorps  %xmm3,%xmm3
+ 457f7d8:	f2 0f 11 54 24 48    	movsd  %xmm2,0x48(%rsp)
+ 457f7de:	f2 0f 11 44 24 60    	movsd  %xmm0,0x60(%rsp)
+ 457f7e4:	f2 0f 11 5c 24 68    	movsd  %xmm3,0x68(%rsp)
+ 457f7ea:	f2 0f 58 c2          	addsd  %xmm2,%xmm0
+ 457f7ee:	f2 0f 58 c3          	addsd  %xmm3,%xmm0
+ 457f7f2:	f2 48 0f 2c d8       	cvttsd2si %xmm0,%rbx
+ 457f7f7:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 457f7fc:	48 8b 84 24 20 02 00 	mov    0x220(%rsp),%rax
+ 457f803:	00 
+ 457f804:	e8 b7 05 00 00       	call   457fdc0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).enforceAdjustmentLimit@@Base>
+ 457f809:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 457f80e:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f815:	00 
+ 457f816:	80 b9 88 00 00 00 00 	cmpb   $0x0,0x88(%rcx)
+ 457f81d:	0f 1f 00             	nopl   (%rax)
+ 457f820:	0f 84 3a 01 00 00    	je     457f960 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x460>
+ 457f826:	88 5c 24 3f          	mov    %bl,0x3f(%rsp)
+ 457f82a:	44 0f 11 bc 24 e0 00 	movups %xmm15,0xe0(%rsp)
+ 457f831:	00 00 
+ 457f833:	44 0f 11 bc 24 f0 00 	movups %xmm15,0xf0(%rsp)
+ 457f83a:	00 00 
+ 457f83c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457f840:	e8 9b e4 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457f845:	48 8d 0d d4 ae 22 01 	lea    0x122aed4(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457f84c:	48 89 8c 24 e0 00 00 	mov    %rcx,0xe0(%rsp)
+ 457f853:	00 
+ 457f854:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 457f85b:	00 
+ 457f85c:	48 8d 15 7d ee 1d 01 	lea    0x11dee7d(%rip),%rdx        # 575e6e0 <type:bool@@Base>
+ 457f863:	48 89 94 24 f0 00 00 	mov    %rdx,0xf0(%rsp)
+ 457f86a:	00 
+ 457f86b:	0f b6 54 24 3f       	movzbl 0x3f(%rsp),%edx
+ 457f870:	0f b6 da             	movzbl %dl,%ebx
+ 457f873:	48 8d 35 a6 c8 6e 03 	lea    0x36ec8a6(%rip),%rsi        # 7c6c120 <runtime.staticuint64s@@Base>
+ 457f87a:	48 8d 1c de          	lea    (%rsi,%rbx,8),%rbx
+ 457f87e:	48 89 9c 24 f8 00 00 	mov    %rbx,0xf8(%rsp)
+ 457f885:	00 
+ 457f886:	48 8b 1d b3 f9 8a 03 	mov    0x38af9b3(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457f88d:	48 8d 05 8c 59 98 01 	lea    0x198598c(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457f894:	bf 16 00 00 00       	mov    $0x16,%edi
+ 457f899:	48 8d b4 24 e0 00 00 	lea    0xe0(%rsp),%rsi
+ 457f8a0:	00 
+ 457f8a1:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 457f8a7:	4d 89 c1             	mov    %r8,%r9
+ 457f8aa:	48 8d 0d 02 04 85 00 	lea    0x850402(%rip),%rcx        # 4dcfcb3 <_IO_stdin_used@@Base+0x19ccb3>
+ 457f8b1:	e8 2a 4f a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457f8b6:	44 0f 11 bc 24 c0 00 	movups %xmm15,0xc0(%rsp)
+ 457f8bd:	00 00 
+ 457f8bf:	44 0f 11 bc 24 d0 00 	movups %xmm15,0xd0(%rsp)
+ 457f8c6:	00 00 
+ 457f8c8:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f8cf:	00 
+ 457f8d0:	f2 0f 10 41 18       	movsd  0x18(%rcx),%xmm0
+ 457f8d5:	66 48 0f 7e c0       	movq   %xmm0,%rax
+ 457f8da:	e8 01 e4 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457f8df:	48 8d 0d 7a 2c 1e 01 	lea    0x11e2c7a(%rip),%rcx        # 5762560 <type:float64@@Base>
+ 457f8e6:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 457f8ed:	00 
+ 457f8ee:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 457f8f5:	00 
+ 457f8f6:	f2 0f 10 44 24 58    	movsd  0x58(%rsp),%xmm0
+ 457f8fc:	66 48 0f 7e c0       	movq   %xmm0,%rax
+ 457f901:	e8 da e3 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457f906:	48 8d 0d 53 2c 1e 01 	lea    0x11e2c53(%rip),%rcx        # 5762560 <type:float64@@Base>
+ 457f90d:	48 89 8c 24 d0 00 00 	mov    %rcx,0xd0(%rsp)
+ 457f914:	00 
+ 457f915:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 457f91c:	00 
+ 457f91d:	48 8b 1d 1c f9 8a 03 	mov    0x38af91c(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457f924:	48 8d 05 f5 58 98 01 	lea    0x19858f5(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457f92b:	bf 1e 00 00 00       	mov    $0x1e,%edi
+ 457f930:	48 8d b4 24 c0 00 00 	lea    0xc0(%rsp),%rsi
+ 457f937:	00 
+ 457f938:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 457f93e:	4d 89 c1             	mov    %r8,%r9
+ 457f941:	48 8d 0d cd 0a 87 00 	lea    0x870acd(%rip),%rcx        # 4df0415 <_IO_stdin_used@@Base+0x1bd415>
+ 457f948:	e8 93 4e a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457f94d:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 457f952:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457f959:	00 
+ 457f95a:	0f b6 5c 24 3f       	movzbl 0x3f(%rsp),%ebx
+ 457f95f:	90                   	nop
+ 457f960:	84 db                	test   %bl,%bl
+ 457f962:	75 14                	jne    457f978 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x478>
+ 457f964:	f2 0f 10 41 18       	movsd  0x18(%rcx),%xmm0
+ 457f969:	f2 0f 10 5c 24 58    	movsd  0x58(%rsp),%xmm3
+ 457f96f:	f2 0f 58 c3          	addsd  %xmm3,%xmm0
+ 457f973:	f2 0f 11 41 18       	movsd  %xmm0,0x18(%rcx)
+ 457f978:	48 89 41 08          	mov    %rax,0x8(%rcx)
+ 457f97c:	80 b9 88 00 00 00 00 	cmpb   $0x0,0x88(%rcx)
+ 457f983:	0f 84 40 01 00 00    	je     457fac9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base+0x5c9>
+ 457f989:	48 8d bc 24 b0 01 00 	lea    0x1b0(%rsp),%rdi
+ 457f990:	00 
+ 457f991:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 457f995:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 457f99c:	00 00 
+ 457f99e:	66 90                	xchg   %ax,%ax
+ 457f9a0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457f9a5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457f9aa:	e8 1c 74 9d fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 457f9af:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457f9b3:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 457f9b8:	e8 23 e3 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457f9bd:	48 8d 0d 5c ad 22 01 	lea    0x122ad5c(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457f9c4:	48 89 8c 24 b0 01 00 	mov    %rcx,0x1b0(%rsp)
+ 457f9cb:	00 
+ 457f9cc:	48 89 84 24 b8 01 00 	mov    %rax,0x1b8(%rsp)
+ 457f9d3:	00 
+ 457f9d4:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457f9da:	66 48 0f 7e c0       	movq   %xmm0,%rax
+ 457f9df:	90                   	nop
+ 457f9e0:	e8 fb e2 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457f9e5:	48 8d 0d 74 2b 1e 01 	lea    0x11e2b74(%rip),%rcx        # 5762560 <type:float64@@Base>
+ 457f9ec:	48 89 8c 24 c0 01 00 	mov    %rcx,0x1c0(%rsp)
+ 457f9f3:	00 
+ 457f9f4:	48 89 84 24 c8 01 00 	mov    %rax,0x1c8(%rsp)
+ 457f9fb:	00 
+ 457f9fc:	f2 0f 10 44 24 60    	movsd  0x60(%rsp),%xmm0
+ 457fa02:	66 48 0f 7e c0       	movq   %xmm0,%rax
+ 457fa07:	e8 d4 e2 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457fa0c:	48 8d 0d 4d 2b 1e 01 	lea    0x11e2b4d(%rip),%rcx        # 5762560 <type:float64@@Base>
+ 457fa13:	48 89 8c 24 d0 01 00 	mov    %rcx,0x1d0(%rsp)
+ 457fa1a:	00 
+ 457fa1b:	48 89 84 24 d8 01 00 	mov    %rax,0x1d8(%rsp)
+ 457fa22:	00 
+ 457fa23:	f2 0f 10 44 24 68    	movsd  0x68(%rsp),%xmm0
+ 457fa29:	66 48 0f 7e c0       	movq   %xmm0,%rax
+ 457fa2e:	e8 ad e2 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457fa33:	48 8d 0d 26 2b 1e 01 	lea    0x11e2b26(%rip),%rcx        # 5762560 <type:float64@@Base>
+ 457fa3a:	48 89 8c 24 e0 01 00 	mov    %rcx,0x1e0(%rsp)
+ 457fa41:	00 
+ 457fa42:	48 89 84 24 e8 01 00 	mov    %rax,0x1e8(%rsp)
+ 457fa49:	00 
+ 457fa4a:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 457fa4f:	e8 8c e2 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457fa54:	48 8d 0d c5 ac 22 01 	lea    0x122acc5(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457fa5b:	48 89 8c 24 f0 01 00 	mov    %rcx,0x1f0(%rsp)
+ 457fa62:	00 
+ 457fa63:	48 89 84 24 f8 01 00 	mov    %rax,0x1f8(%rsp)
+ 457fa6a:	00 
+ 457fa6b:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 457fa70:	e8 6b e2 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457fa75:	48 8d 0d a4 ac 22 01 	lea    0x122aca4(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457fa7c:	48 89 8c 24 00 02 00 	mov    %rcx,0x200(%rsp)
+ 457fa83:	00 
+ 457fa84:	48 89 84 24 08 02 00 	mov    %rax,0x208(%rsp)
+ 457fa8b:	00 
+ 457fa8c:	48 8b 1d ad f7 8a 03 	mov    0x38af7ad(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457fa93:	48 8d 05 86 57 98 01 	lea    0x1985786(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457fa9a:	48 8d 0d af 2c 8b 00 	lea    0x8b2caf(%rip),%rcx        # 4e32750 <_IO_stdin_used@@Base+0x1ff750>
+ 457faa1:	bf 2f 00 00 00       	mov    $0x2f,%edi
+ 457faa6:	48 8d b4 24 b0 01 00 	lea    0x1b0(%rsp),%rsi
+ 457faad:	00 
+ 457faae:	41 b8 06 00 00 00    	mov    $0x6,%r8d
+ 457fab4:	4d 89 c1             	mov    %r8,%r9
+ 457fab7:	e8 24 4d a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457fabc:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 457fac1:	48 8b 8c 24 20 02 00 	mov    0x220(%rsp),%rcx
+ 457fac8:	00 
+ 457fac9:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 457face:	48 89 11             	mov    %rdx,(%rcx)
+ 457fad1:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 457fad8:	00 00 
+ 457fada:	48 8d bc 24 60 01 00 	lea    0x160(%rsp),%rdi
+ 457fae1:	00 
+ 457fae2:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 457fae6:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457faeb:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457faf0:	e8 db 72 9d fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 457faf5:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457faf9:	48 8b 51 40          	mov    0x40(%rcx),%rdx
+ 457fafd:	4c 8b 59 48          	mov    0x48(%rcx),%r11
+ 457fb01:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 457fb08:	00 
+ 457fb09:	4c 89 9c 24 60 01 00 	mov    %r11,0x160(%rsp)
+ 457fb10:	00 
+ 457fb11:	48 89 84 24 68 01 00 	mov    %rax,0x168(%rsp)
+ 457fb18:	00 
+ 457fb19:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457fb1f:	f2 48 0f 2c d0       	cvttsd2si %xmm0,%rdx
+ 457fb24:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457fb27:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 457fb2c:	f2 0f 11 84 24 70 01 	movsd  %xmm0,0x170(%rsp)
+ 457fb33:	00 00 
+ 457fb35:	f2 0f 10 44 24 60    	movsd  0x60(%rsp),%xmm0
+ 457fb3b:	f2 48 0f 2c d0       	cvttsd2si %xmm0,%rdx
+ 457fb40:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457fb43:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 457fb48:	f2 0f 11 84 24 78 01 	movsd  %xmm0,0x178(%rsp)
+ 457fb4f:	00 00 
+ 457fb51:	f2 0f 10 44 24 68    	movsd  0x68(%rsp),%xmm0
+ 457fb57:	f2 48 0f 2c d0       	cvttsd2si %xmm0,%rdx
+ 457fb5c:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457fb5f:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 457fb64:	f2 0f 11 84 24 80 01 	movsd  %xmm0,0x180(%rsp)
+ 457fb6b:	00 00 
+ 457fb6d:	0f b6 51 38          	movzbl 0x38(%rcx),%edx
+ 457fb71:	88 94 24 a0 01 00 00 	mov    %dl,0x1a0(%rsp)
+ 457fb78:	48 89 84 24 a8 01 00 	mov    %rax,0x1a8(%rsp)
+ 457fb7f:	00 
+ 457fb80:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 457fb87:	00 
+ 457fb88:	48 89 94 24 00 01 00 	mov    %rdx,0x100(%rsp)
+ 457fb8f:	00 
+ 457fb90:	48 8d bc 24 08 01 00 	lea    0x108(%rsp),%rdi
+ 457fb97:	00 
+ 457fb98:	48 8d b4 24 60 01 00 	lea    0x160(%rsp),%rsi
+ 457fb9f:	00 
+ 457fba0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457fba5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457fbaa:	e8 8b 75 9d fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 457fbaf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457fbb3:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+ 457fbba:	00 
+ 457fbbb:	48 8b 9c 24 08 01 00 	mov    0x108(%rsp),%rbx
+ 457fbc2:	00 
+ 457fbc3:	48 8b 8c 24 10 01 00 	mov    0x110(%rsp),%rcx
+ 457fbca:	00 
+ 457fbcb:	f2 0f 10 84 24 18 01 	movsd  0x118(%rsp),%xmm0
+ 457fbd2:	00 00 
+ 457fbd4:	f2 0f 10 8c 24 20 01 	movsd  0x120(%rsp),%xmm1
+ 457fbdb:	00 00 
+ 457fbdd:	f2 0f 10 94 24 28 01 	movsd  0x128(%rsp),%xmm2
+ 457fbe4:	00 00 
+ 457fbe6:	48 8b bc 24 30 01 00 	mov    0x130(%rsp),%rdi
+ 457fbed:	00 
+ 457fbee:	48 8b b4 24 38 01 00 	mov    0x138(%rsp),%rsi
+ 457fbf5:	00 
+ 457fbf6:	4c 8b 84 24 40 01 00 	mov    0x140(%rsp),%r8
+ 457fbfd:	00 
+ 457fbfe:	44 0f b6 8c 24 48 01 	movzbl 0x148(%rsp),%r9d
+ 457fc05:	00 00 
+ 457fc07:	4c 8b 94 24 50 01 00 	mov    0x150(%rsp),%r10
+ 457fc0e:	00 
+ 457fc0f:	48 8b ac 24 10 02 00 	mov    0x210(%rsp),%rbp
+ 457fc16:	00 
+ 457fc17:	48 81 c4 18 02 00 00 	add    $0x218,%rsp
+ 457fc1e:	c3                   	ret
+ 457fc1f:	48 89 d0             	mov    %rdx,%rax
+ 457fc22:	4c 89 c9             	mov    %r9,%rcx
+ 457fc25:	e8 76 6e 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457fc2a:	e8 51 bb 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457fc2f:	90                   	nop
+ 457fc30:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457fc35:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457fc3a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 457fc3f:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 457fc44:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 457fc49:	e8 12 48 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457fc4e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457fc53:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457fc58:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457fc5d:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 457fc62:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 457fc67:	e9 94 f8 ff ff       	jmp    457f500 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base>
+ 457fc6c:	cc                   	int3
+ 457fc6d:	cc                   	int3
+ 457fc6e:	cc                   	int3
+ 457fc6f:	cc                   	int3
+ 457fc70:	cc                   	int3
+ 457fc71:	cc                   	int3
+ 457fc72:	cc                   	int3
+ 457fc73:	cc                   	int3
+ 457fc74:	cc                   	int3
+ 457fc75:	cc                   	int3
+ 457fc76:	cc                   	int3
+ 457fc77:	cc                   	int3
+ 457fc78:	cc                   	int3
+ 457fc79:	cc                   	int3
+ 457fc7a:	cc                   	int3
+ 457fc7b:	cc                   	int3
+ 457fc7c:	cc                   	int3
+ 457fc7d:	cc                   	int3
+ 457fc7e:	cc                   	int3
+ 457fc7f:	cc                   	int3

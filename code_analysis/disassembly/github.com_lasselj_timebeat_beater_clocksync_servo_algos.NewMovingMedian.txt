@@ -1,0 +1,71 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian
+# addr 0x457de60 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457de60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base>:
+ 457de60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457de64:	0f 86 e0 00 00 00    	jbe    457df4a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0xea>
+ 457de6a:	48 83 ec 30          	sub    $0x30,%rsp
+ 457de6e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 457de73:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 457de78:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 457de7f:	00 
+ 457de80:	48 83 f8 01          	cmp    $0x1,%rax
+ 457de84:	0f 8c b4 00 00 00    	jl     457df3e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0xde>
+ 457de8a:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 457de8f:	48 89 c3             	mov    %rax,%rbx
+ 457de92:	48 89 d9             	mov    %rbx,%rcx
+ 457de95:	48 8d 05 c4 c7 22 01 	lea    0x122c7c4(%rip),%rax        # 57aa660 <type:int@@Base>
+ 457de9c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457dea0:	e8 3b 85 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 457dea5:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 457deaa:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 457deaf:	48 89 d9             	mov    %rbx,%rcx
+ 457deb2:	48 8d 05 67 c8 22 01 	lea    0x122c867(%rip),%rax        # 57aa720 <type:int64@@Base>
+ 457deb9:	e8 22 85 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 457debe:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 457dec3:	48 8d 05 76 1f 7a 01 	lea    0x17a1f76(%rip),%rax        # 5d1fe40 <type:gjT4F/3i@@Base>
+ 457deca:	e8 11 26 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457decf:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 457ded4:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 457ded8:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 457dedc:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 457dee0:	83 3d 79 da 8f 03 00 	cmpl   $0x0,0x38fda79(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457dee7:	75 0b                	jne    457def4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0x94>
+ 457dee9:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457deee:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 457def2:	eb 11                	jmp    457df05 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0xa5>
+ 457def4:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 457def8:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457defd:	0f 1f 00             	nopl   (%rax)
+ 457df00:	e8 fb 87 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457df05:	48 89 50 38          	mov    %rdx,0x38(%rax)
+ 457df09:	48 89 50 40          	mov    %rdx,0x40(%rax)
+ 457df0d:	83 3d 4c da 8f 03 00 	cmpl   $0x0,0x38fda4c(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457df14:	75 0c                	jne    457df22 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0xc2>
+ 457df16:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457df1b:	48 89 48 30          	mov    %rcx,0x30(%rax)
+ 457df1f:	90                   	nop
+ 457df20:	eb 0e                	jmp    457df30 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base+0xd0>
+ 457df22:	48 8d 78 30          	lea    0x30(%rax),%rdi
+ 457df26:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457df2b:	e8 d0 87 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457df30:	c6 40 48 00          	movb   $0x0,0x48(%rax)
+ 457df34:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 457df39:	48 83 c4 30          	add    $0x30,%rsp
+ 457df3d:	c3                   	ret
+ 457df3e:	31 c0                	xor    %eax,%eax
+ 457df40:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 457df45:	48 83 c4 30          	add    $0x30,%rsp
+ 457df49:	c3                   	ret
+ 457df4a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457df4f:	e8 0c 65 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457df54:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457df59:	e9 02 ff ff ff       	jmp    457de60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base>
+ 457df5e:	cc                   	int3
+ 457df5f:	cc                   	int3

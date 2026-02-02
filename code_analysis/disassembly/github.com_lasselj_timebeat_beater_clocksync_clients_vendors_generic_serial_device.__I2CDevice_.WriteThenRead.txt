@@ -1,0 +1,80 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).WriteThenRead
+# addr 0x4b8d660 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b8d660 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).WriteThenRead@@Base>:
+ 4b8d660:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8d664:	0f 86 d7 00 00 00    	jbe    4b8d741 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).WriteThenRead@@Base+0xe1>
+ 4b8d66a:	48 83 ec 58          	sub    $0x58,%rsp
+ 4b8d66e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 4b8d673:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 4b8d678:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+ 4b8d67d:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4b8d682:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4b8d687:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4b8d68c:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 4b8d691:	48 8d 05 c8 12 c2 00 	lea    0xc212c8(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4b8d698:	48 89 f3             	mov    %rsi,%rbx
+ 4b8d69b:	48 89 d9             	mov    %rbx,%rcx
+ 4b8d69e:	66 90                	xchg   %ax,%ax
+ 4b8d6a0:	e8 3b 8d 3a fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b8d6a5:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4b8d6aa:	b8 40 4b 4c 00       	mov    $0x4c4b40,%eax
+ 4b8d6af:	e8 2c 5b 3c fd       	call   1f531e0 <time.Sleep@@Base>
+ 4b8d6b4:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4b8d6b9:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4b8d6be:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4b8d6c3:	48 8b 7c 24 78       	mov    0x78(%rsp),%rdi
+ 4b8d6c8:	e8 b3 00 00 00       	call   4b8d780 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Write@@Base>
+ 4b8d6cd:	48 85 c0             	test   %rax,%rax
+ 4b8d6d0:	74 1d                	je     4b8d6ef <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).WriteThenRead@@Base+0x8f>
+ 4b8d6d2:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b8d6d7:	48 89 c7             	mov    %rax,%rdi
+ 4b8d6da:	48 89 de             	mov    %rbx,%rsi
+ 4b8d6dd:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b8d6e2:	48 89 cb             	mov    %rcx,%rbx
+ 4b8d6e5:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4b8d6ea:	48 83 c4 58          	add    $0x58,%rsp
+ 4b8d6ee:	c3                   	ret
+ 4b8d6ef:	b8 40 4b 4c 00       	mov    $0x4c4b40,%eax
+ 4b8d6f4:	e8 e7 5a 3c fd       	call   1f531e0 <time.Sleep@@Base>
+ 4b8d6f9:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 4b8d6fe:	48 8b 51 10          	mov    0x10(%rcx),%rdx
+ 4b8d702:	48 8b 41 18          	mov    0x18(%rcx),%rax
+ 4b8d706:	48 8b 52 28          	mov    0x28(%rdx),%rdx
+ 4b8d70a:	0f b7 59 20          	movzwl 0x20(%rcx),%ebx
+ 4b8d70e:	31 c9                	xor    %ecx,%ecx
+ 4b8d710:	31 ff                	xor    %edi,%edi
+ 4b8d712:	48 89 fe             	mov    %rdi,%rsi
+ 4b8d715:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 4b8d71a:	4c 8b 4c 24 40       	mov    0x40(%rsp),%r9
+ 4b8d71f:	4d 89 ca             	mov    %r9,%r10
+ 4b8d722:	ff d2                	call   *%rdx
+ 4b8d724:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b8d729:	48 89 c7             	mov    %rax,%rdi
+ 4b8d72c:	48 89 de             	mov    %rbx,%rsi
+ 4b8d72f:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b8d734:	48 89 cb             	mov    %rcx,%rbx
+ 4b8d737:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4b8d73c:	48 83 c4 58          	add    $0x58,%rsp
+ 4b8d740:	c3                   	ret
+ 4b8d741:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8d746:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b8d74b:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4b8d750:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4b8d755:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 4b8d75a:	e8 01 6d 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8d75f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8d764:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b8d769:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4b8d76e:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4b8d773:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4b8d778:	e9 e3 fe ff ff       	jmp    4b8d660 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).WriteThenRead@@Base>
+ 4b8d77d:	cc                   	int3
+ 4b8d77e:	cc                   	int3
+ 4b8d77f:	cc                   	int3

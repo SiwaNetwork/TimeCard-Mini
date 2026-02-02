@@ -1,0 +1,75 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality
+# addr 0x459f540 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459f540 <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base>:
+ 459f540:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459f544:	0f 86 bb 00 00 00    	jbe    459f605 <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0xc5>
+ 459f54a:	48 83 ec 30          	sub    $0x30,%rsp
+ 459f54e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 459f553:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 459f558:	48 8d 05 a1 55 7c 00 	lea    0x7c55a1(%rip),%rax        # 4d64b00 <_IO_stdin_used@@Base+0x131b00>
+ 459f55f:	bb 12 00 00 00       	mov    $0x12,%ebx
+ 459f564:	e8 37 78 e6 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 459f569:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 459f56e:	e8 cd 1c 95 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 459f573:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 459f578:	48 8d 05 21 17 82 01 	lea    0x1821721(%rip),%rax        # 5dc0ca0 <type:+ozPU6U4@@Base>
+ 459f57f:	90                   	nop
+ 459f580:	e8 5b 0f 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459f585:	48 8b 0d 04 59 8a 03 	mov    0x38a5904(%rip),%rcx        # 7e44e90 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2b0>
+ 459f58c:	48 83 3d 04 59 8a 03 	cmpq   $0x9,0x38a5904(%rip)        # 7e44e98 <github.com/lasselj/timebeat/config.appConfig@@Base+0x2b8>
+ 459f593:	09 
+ 459f594:	75 18                	jne    459f5ae <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0x6e>
+ 459f596:	48 ba 31 35 38 38 2d 	movabs $0x3130322d38383531,%rdx
+ 459f59d:	32 30 31 
+ 459f5a0:	48 39 11             	cmp    %rdx,(%rcx)
+ 459f5a3:	75 09                	jne    459f5ae <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0x6e>
+ 459f5a5:	80 79 08 39          	cmpb   $0x39,0x8(%rcx)
+ 459f5a9:	0f 94 c1             	sete   %cl
+ 459f5ac:	eb 02                	jmp    459f5b0 <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0x70>
+ 459f5ae:	31 c9                	xor    %ecx,%ecx
+ 459f5b0:	88 48 18             	mov    %cl,0x18(%rax)
+ 459f5b3:	83 3d a6 c3 8d 03 00 	cmpl   $0x0,0x38dc3a6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459f5ba:	75 14                	jne    459f5d0 <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0x90>
+ 459f5bc:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 459f5c1:	48 89 48 28          	mov    %rcx,0x28(%rax)
+ 459f5c5:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459f5ca:	48 89 48 20          	mov    %rcx,0x20(%rax)
+ 459f5ce:	eb 1c                	jmp    459f5ec <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base+0xac>
+ 459f5d0:	48 8d 78 28          	lea    0x28(%rax),%rdi
+ 459f5d4:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 459f5d9:	e8 22 71 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459f5de:	48 8d 78 20          	lea    0x20(%rax),%rdi
+ 459f5e2:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459f5e7:	e8 14 71 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459f5ec:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 459f5f1:	e8 0a 06 00 00       	call   459fc00 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).setDefaultValues@@Base>
+ 459f5f6:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 459f5fb:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 459f600:	48 83 c4 30          	add    $0x30,%rsp
+ 459f604:	c3                   	ret
+ 459f605:	e8 56 4e 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459f60a:	e9 31 ff ff ff       	jmp    459f540 <github.com/lasselj/timebeat/beater/clocksync/servo.NewClockQuality@@Base>
+ 459f60f:	cc                   	int3
+ 459f610:	cc                   	int3
+ 459f611:	cc                   	int3
+ 459f612:	cc                   	int3
+ 459f613:	cc                   	int3
+ 459f614:	cc                   	int3
+ 459f615:	cc                   	int3
+ 459f616:	cc                   	int3
+ 459f617:	cc                   	int3
+ 459f618:	cc                   	int3
+ 459f619:	cc                   	int3
+ 459f61a:	cc                   	int3
+ 459f61b:	cc                   	int3
+ 459f61c:	cc                   	int3
+ 459f61d:	cc                   	int3
+ 459f61e:	cc                   	int3
+ 459f61f:	cc                   	int3

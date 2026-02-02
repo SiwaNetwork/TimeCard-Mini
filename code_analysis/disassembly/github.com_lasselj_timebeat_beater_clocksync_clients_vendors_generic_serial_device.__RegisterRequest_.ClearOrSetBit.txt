@@ -1,0 +1,338 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit
+# addr 0x4b8e8e0 size 1120 (0x460)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b8e8e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base>:
+ 4b8e8e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8e8e4:	0f 86 ca 02 00 00    	jbe    4b8ebb4 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x2d4>
+ 4b8e8ea:	48 83 ec 78          	sub    $0x78,%rsp
+ 4b8e8ee:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 4b8e8f3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 4b8e8f8:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4b8e8ff:	00 
+ 4b8e900:	0f b7 50 20          	movzwl 0x20(%rax),%edx
+ 4b8e904:	c1 e2 03             	shl    $0x3,%edx
+ 4b8e907:	0f b7 d2             	movzwl %dx,%edx
+ 4b8e90a:	48 39 d3             	cmp    %rdx,%rbx
+ 4b8e90d:	0f 83 0e 02 00 00    	jae    4b8eb21 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x241>
+ 4b8e913:	88 8c 24 90 00 00 00 	mov    %cl,0x90(%rsp)
+ 4b8e91a:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4b8e921:	00 
+ 4b8e922:	e8 39 fb ff ff       	call   4b8e460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).Execute@@Base>
+ 4b8e927:	48 85 c0             	test   %rax,%rax
+ 4b8e92a:	0f 85 e6 01 00 00    	jne    4b8eb16 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x236>
+ 4b8e930:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 4b8e937:	00 
+ 4b8e938:	48 8b 4a 30          	mov    0x30(%rdx),%rcx
+ 4b8e93c:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 4b8e941:	48 8d 05 18 00 c2 00 	lea    0xc20018(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4b8e948:	48 89 cb             	mov    %rcx,%rbx
+ 4b8e94b:	e8 90 7a 3a fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b8e950:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4b8e955:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 4b8e95c:	00 
+ 4b8e95d:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+ 4b8e961:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b8e966:	48 39 ce             	cmp    %rcx,%rsi
+ 4b8e969:	48 89 cb             	mov    %rcx,%rbx
+ 4b8e96c:	48 0f 4c ce          	cmovl  %rsi,%rcx
+ 4b8e970:	48 8b 72 28          	mov    0x28(%rdx),%rsi
+ 4b8e974:	48 39 f0             	cmp    %rsi,%rax
+ 4b8e977:	74 1e                	je     4b8e997 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0xb7>
+ 4b8e979:	48 89 f3             	mov    %rsi,%rbx
+ 4b8e97c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b8e980:	e8 1b 8b 3c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b8e985:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b8e98a:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 4b8e991:	00 
+ 4b8e992:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b8e997:	44 0f b6 84 24 90 00 	movzbl 0x90(%rsp),%r8d
+ 4b8e99e:	00 00 
+ 4b8e9a0:	45 84 c0             	test   %r8b,%r8b
+ 4b8e9a3:	74 55                	je     4b8e9fa <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x11a>
+ 4b8e9a5:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4b8e9ac:	00 
+ 4b8e9ad:	48 83 f9 40          	cmp    $0x40,%rcx
+ 4b8e9b1:	4d 19 c0             	sbb    %r8,%r8
+ 4b8e9b4:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 4b8e9ba:	49 d3 e1             	shl    %cl,%r9
+ 4b8e9bd:	4d 21 c1             	and    %r8,%r9
+ 4b8e9c0:	4d 89 c8             	mov    %r9,%r8
+ 4b8e9c3:	49 c1 f9 3f          	sar    $0x3f,%r9
+ 4b8e9c7:	49 c1 e9 3d          	shr    $0x3d,%r9
+ 4b8e9cb:	4d 01 c1             	add    %r8,%r9
+ 4b8e9ce:	49 83 e1 f8          	and    $0xfffffffffffffff8,%r9
+ 4b8e9d2:	4d 29 c8             	sub    %r9,%r8
+ 4b8e9d5:	48 c1 e9 03          	shr    $0x3,%rcx
+ 4b8e9d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4b8e9e0:	48 39 cb             	cmp    %rcx,%rbx
+ 4b8e9e3:	0f 86 bf 01 00 00    	jbe    4b8eba8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x2c8>
+ 4b8e9e9:	49 f7 d0             	not    %r8
+ 4b8e9ec:	44 0f b6 0c 08       	movzbl (%rax,%rcx,1),%r9d
+ 4b8e9f1:	45 21 c8             	and    %r9d,%r8d
+ 4b8e9f4:	44 88 04 08          	mov    %r8b,(%rax,%rcx,1)
+ 4b8e9f8:	eb 3d                	jmp    4b8ea37 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x157>
+ 4b8e9fa:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4b8ea01:	00 
+ 4b8ea02:	49 89 c8             	mov    %rcx,%r8
+ 4b8ea05:	48 c1 e9 03          	shr    $0x3,%rcx
+ 4b8ea09:	48 39 cb             	cmp    %rcx,%rbx
+ 4b8ea0c:	0f 86 8b 01 00 00    	jbe    4b8eb9d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x2bd>
+ 4b8ea12:	49 83 f8 20          	cmp    $0x20,%r8
+ 4b8ea16:	45 19 c9             	sbb    %r9d,%r9d
+ 4b8ea19:	44 0f b6 14 08       	movzbl (%rax,%rcx,1),%r10d
+ 4b8ea1e:	48 89 ce             	mov    %rcx,%rsi
+ 4b8ea21:	4c 89 c1             	mov    %r8,%rcx
+ 4b8ea24:	41 bb 01 00 00 00    	mov    $0x1,%r11d
+ 4b8ea2a:	41 d3 e3             	shl    %cl,%r11d
+ 4b8ea2d:	45 21 cb             	and    %r9d,%r11d
+ 4b8ea30:	45 09 da             	or     %r11d,%r10d
+ 4b8ea33:	44 88 14 30          	mov    %r10b,(%rax,%rsi,1)
+ 4b8ea37:	90                   	nop
+ 4b8ea38:	4c 8b 42 18          	mov    0x18(%rdx),%r8
+ 4b8ea3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b8ea40:	49 83 f8 02          	cmp    $0x2,%r8
+ 4b8ea44:	0f 82 46 01 00 00    	jb     4b8eb90 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x2b0>
+ 4b8ea4a:	48 c7 42 10 02 00 00 	movq   $0x2,0x10(%rdx)
+ 4b8ea51:	00 
+ 4b8ea52:	90                   	nop
+ 4b8ea53:	4c 8d 43 02          	lea    0x2(%rbx),%r8
+ 4b8ea57:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+ 4b8ea5b:	4c 8b 4a 08          	mov    0x8(%rdx),%r9
+ 4b8ea5f:	90                   	nop
+ 4b8ea60:	4c 39 c1             	cmp    %r8,%rcx
+ 4b8ea63:	73 25                	jae    4b8ea8a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x1aa>
+ 4b8ea65:	4c 89 c8             	mov    %r9,%rax
+ 4b8ea68:	48 89 df             	mov    %rbx,%rdi
+ 4b8ea6b:	48 8d 35 ee fe c1 00 	lea    0xc1feee(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b8ea72:	4c 89 c3             	mov    %r8,%rbx
+ 4b8ea75:	e8 46 7a 3a fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b8ea7a:	49 89 c1             	mov    %rax,%r9
+ 4b8ea7d:	49 89 d8             	mov    %rbx,%r8
+ 4b8ea80:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b8ea85:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4b8ea8a:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4b8ea8f:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 4b8ea94:	4c 89 4c 24 40       	mov    %r9,0x40(%rsp)
+ 4b8ea99:	49 8d 51 02          	lea    0x2(%r9),%rdx
+ 4b8ea9d:	48 89 c6             	mov    %rax,%rsi
+ 4b8eaa0:	48 89 d0             	mov    %rdx,%rax
+ 4b8eaa3:	48 89 df             	mov    %rbx,%rdi
+ 4b8eaa6:	48 89 f3             	mov    %rsi,%rbx
+ 4b8eaa9:	48 89 f9             	mov    %rdi,%rcx
+ 4b8eaac:	e8 ef 89 3c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b8eab1:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 4b8eab6:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 4b8eabd:	00 
+ 4b8eabe:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b8eac2:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4b8eac7:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4b8eacb:	83 3d 8e ce 2e 03 00 	cmpl   $0x0,0x32ece8e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b8ead2:	75 0b                	jne    4b8eadf <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x1ff>
+ 4b8ead4:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b8ead9:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b8eadd:	eb 0e                	jmp    4b8eaed <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x20d>
+ 4b8eadf:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b8eae3:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b8eae8:	e8 13 7c 3c fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b8eaed:	90                   	nop
+ 4b8eaee:	66 c7 40 20 00 00    	movw   $0x0,0x20(%rax)
+ 4b8eaf4:	e8 67 f9 ff ff       	call   4b8e460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).Execute@@Base>
+ 4b8eaf9:	48 85 c0             	test   %rax,%rax
+ 4b8eafc:	74 0a                	je     4b8eb08 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base+0x228>
+ 4b8eafe:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b8eb03:	48 83 c4 78          	add    $0x78,%rsp
+ 4b8eb07:	c3                   	ret
+ 4b8eb08:	31 c0                	xor    %eax,%eax
+ 4b8eb0a:	31 db                	xor    %ebx,%ebx
+ 4b8eb0c:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b8eb11:	48 83 c4 78          	add    $0x78,%rsp
+ 4b8eb15:	c3                   	ret
+ 4b8eb16:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b8eb1b:	48 83 c4 78          	add    $0x78,%rsp
+ 4b8eb1f:	90                   	nop
+ 4b8eb20:	c3                   	ret
+ 4b8eb21:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4b8eb27:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 4b8eb2d:	0f b7 40 20          	movzwl 0x20(%rax),%eax
+ 4b8eb31:	c1 e0 03             	shl    $0x3,%eax
+ 4b8eb34:	e8 a7 f0 35 fd       	call   1eedbe0 <runtime.convT16@@Base>
+ 4b8eb39:	48 8d 0d 60 fd c1 00 	lea    0xc1fd60(%rip),%rcx        # 57ae8a0 <type:uint16@@Base>
+ 4b8eb40:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4b8eb45:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b8eb4a:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4b8eb51:	00 
+ 4b8eb52:	e8 89 f1 35 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b8eb57:	48 8d 0d 02 fd c1 00 	lea    0xc1fd02(%rip),%rcx        # 57ae860 <type:uint@@Base>
+ 4b8eb5e:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4b8eb63:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4b8eb68:	48 8d 05 3d 3c 29 00 	lea    0x293c3d(%rip),%rax        # 4e227ac <_IO_stdin_used@@Base+0x1ef7ac>
+ 4b8eb6f:	bb 2b 00 00 00       	mov    $0x2b,%ebx
+ 4b8eb74:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4b8eb79:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b8eb7e:	48 89 fe             	mov    %rdi,%rsi
+ 4b8eb81:	e8 da 26 46 fd       	call   1ff1260 <fmt.Errorf@@Base>
+ 4b8eb86:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b8eb8b:	48 83 c4 78          	add    $0x78,%rsp
+ 4b8eb8f:	c3                   	ret
+ 4b8eb90:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 4b8eb95:	4c 89 c2             	mov    %r8,%rdx
+ 4b8eb98:	e8 83 7f 3c fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 4b8eb9d:	48 89 c8             	mov    %rcx,%rax
+ 4b8eba0:	48 89 d9             	mov    %rbx,%rcx
+ 4b8eba3:	e8 18 7f 3c fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 4b8eba8:	48 89 c8             	mov    %rcx,%rax
+ 4b8ebab:	48 89 d9             	mov    %rbx,%rcx
+ 4b8ebae:	e8 0d 7f 3c fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 4b8ebb3:	90                   	nop
+ 4b8ebb4:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8ebb9:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b8ebbe:	88 4c 24 18          	mov    %cl,0x18(%rsp)
+ 4b8ebc2:	e8 99 58 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8ebc7:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8ebcc:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b8ebd1:	0f b6 4c 24 18       	movzbl 0x18(%rsp),%ecx
+ 4b8ebd6:	e9 05 fd ff ff       	jmp    4b8e8e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*RegisterRequest).ClearOrSetBit@@Base>
+ 4b8ebdb:	cc                   	int3
+ 4b8ebdc:	cc                   	int3
+ 4b8ebdd:	cc                   	int3
+ 4b8ebde:	cc                   	int3
+ 4b8ebdf:	cc                   	int3
+
+0000000004b8ebe0 <type:.KvvfMF/J@@Base>:
+ 4b8ebe0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8ebe4:	76 4d                	jbe    4b8ec33 <type:.KvvfMF/J@@Base+0x53>
+ 4b8ebe6:	48 83 ec 20          	sub    $0x20,%rsp
+ 4b8ebea:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4b8ebef:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4b8ebf4:	48 8b 10             	mov    (%rax),%rdx
+ 4b8ebf7:	48 39 13             	cmp    %rdx,(%rbx)
+ 4b8ebfa:	75 2b                	jne    4b8ec27 <type:.KvvfMF/J@@Base+0x47>
+ 4b8ebfc:	48 8b 48 10          	mov    0x10(%rax),%rcx
+ 4b8ec00:	48 8b 53 08          	mov    0x8(%rbx),%rdx
+ 4b8ec04:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4b8ec08:	48 39 4b 10          	cmp    %rcx,0x10(%rbx)
+ 4b8ec0c:	75 19                	jne    4b8ec27 <type:.KvvfMF/J@@Base+0x47>
+ 4b8ec0e:	0f b6 78 18          	movzbl 0x18(%rax),%edi
+ 4b8ec12:	40 38 7b 18          	cmp    %dil,0x18(%rbx)
+ 4b8ec16:	75 0f                	jne    4b8ec27 <type:.KvvfMF/J@@Base+0x47>
+ 4b8ec18:	48 89 f0             	mov    %rsi,%rax
+ 4b8ec1b:	48 89 d3             	mov    %rdx,%rbx
+ 4b8ec1e:	66 90                	xchg   %ax,%ax
+ 4b8ec20:	e8 fb 4e 35 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b8ec25:	eb 02                	jmp    4b8ec29 <type:.KvvfMF/J@@Base+0x49>
+ 4b8ec27:	31 c0                	xor    %eax,%eax
+ 4b8ec29:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4b8ec2e:	48 83 c4 20          	add    $0x20,%rsp
+ 4b8ec32:	c3                   	ret
+ 4b8ec33:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8ec38:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b8ec3d:	0f 1f 00             	nopl   (%rax)
+ 4b8ec40:	e8 1b 58 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8ec45:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8ec4a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b8ec4f:	eb 8f                	jmp    4b8ebe0 <type:.KvvfMF/J@@Base>
+ 4b8ec51:	cc                   	int3
+ 4b8ec52:	cc                   	int3
+ 4b8ec53:	cc                   	int3
+ 4b8ec54:	cc                   	int3
+ 4b8ec55:	cc                   	int3
+ 4b8ec56:	cc                   	int3
+ 4b8ec57:	cc                   	int3
+ 4b8ec58:	cc                   	int3
+ 4b8ec59:	cc                   	int3
+ 4b8ec5a:	cc                   	int3
+ 4b8ec5b:	cc                   	int3
+ 4b8ec5c:	cc                   	int3
+ 4b8ec5d:	cc                   	int3
+ 4b8ec5e:	cc                   	int3
+ 4b8ec5f:	cc                   	int3
+
+0000000004b8ec60 <type:.la13yc4k@@Base>:
+ 4b8ec60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8ec64:	0f 86 98 00 00 00    	jbe    4b8ed02 <type:.la13yc4k@@Base+0xa2>
+ 4b8ec6a:	48 83 ec 20          	sub    $0x20,%rsp
+ 4b8ec6e:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4b8ec73:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4b8ec78:	48 8b 10             	mov    (%rax),%rdx
+ 4b8ec7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b8ec80:	48 39 13             	cmp    %rdx,(%rbx)
+ 4b8ec83:	75 6f                	jne    4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8ec85:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4b8ec89:	48 39 53 08          	cmp    %rdx,0x8(%rbx)
+ 4b8ec8d:	75 65                	jne    4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8ec8f:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 4b8ec93:	48 8b 70 18          	mov    0x18(%rax),%rsi
+ 4b8ec97:	48 8b 4b 18          	mov    0x18(%rbx),%rcx
+ 4b8ec9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b8eca0:	48 39 53 10          	cmp    %rdx,0x10(%rbx)
+ 4b8eca4:	75 4e                	jne    4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8eca6:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4b8ecab:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4b8ecb0:	48 89 d0             	mov    %rdx,%rax
+ 4b8ecb3:	48 89 f3             	mov    %rsi,%rbx
+ 4b8ecb6:	e8 25 62 35 fd       	call   1ee4ee0 <runtime.ifaceeq@@Base>
+ 4b8ecbb:	84 c0                	test   %al,%al
+ 4b8ecbd:	74 35                	je     4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8ecbf:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b8ecc4:	0f b7 51 20          	movzwl 0x20(%rcx),%edx
+ 4b8ecc8:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b8eccd:	66 39 53 20          	cmp    %dx,0x20(%rbx)
+ 4b8ecd1:	75 21                	jne    4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8ecd3:	0f b6 51 28          	movzbl 0x28(%rcx),%edx
+ 4b8ecd7:	38 53 28             	cmp    %dl,0x28(%rbx)
+ 4b8ecda:	75 18                	jne    4b8ecf4 <type:.la13yc4k@@Base+0x94>
+ 4b8ecdc:	8b 51 2c             	mov    0x2c(%rcx),%edx
+ 4b8ecdf:	90                   	nop
+ 4b8ece0:	39 53 2c             	cmp    %edx,0x2c(%rbx)
+ 4b8ece3:	75 0b                	jne    4b8ecf0 <type:.la13yc4k@@Base+0x90>
+ 4b8ece5:	8b 49 30             	mov    0x30(%rcx),%ecx
+ 4b8ece8:	39 4b 30             	cmp    %ecx,0x30(%rbx)
+ 4b8eceb:	0f 94 c1             	sete   %cl
+ 4b8ecee:	eb 06                	jmp    4b8ecf6 <type:.la13yc4k@@Base+0x96>
+ 4b8ecf0:	31 c9                	xor    %ecx,%ecx
+ 4b8ecf2:	eb 02                	jmp    4b8ecf6 <type:.la13yc4k@@Base+0x96>
+ 4b8ecf4:	31 c9                	xor    %ecx,%ecx
+ 4b8ecf6:	89 c8                	mov    %ecx,%eax
+ 4b8ecf8:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4b8ecfd:	48 83 c4 20          	add    $0x20,%rsp
+ 4b8ed01:	c3                   	ret
+ 4b8ed02:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8ed07:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b8ed0c:	e8 4f 57 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8ed11:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8ed16:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b8ed1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b8ed20:	e9 3b ff ff ff       	jmp    4b8ec60 <type:.la13yc4k@@Base>
+ 4b8ed25:	cc                   	int3
+ 4b8ed26:	cc                   	int3
+ 4b8ed27:	cc                   	int3
+ 4b8ed28:	cc                   	int3
+ 4b8ed29:	cc                   	int3
+ 4b8ed2a:	cc                   	int3
+ 4b8ed2b:	cc                   	int3
+ 4b8ed2c:	cc                   	int3
+ 4b8ed2d:	cc                   	int3
+ 4b8ed2e:	cc                   	int3
+ 4b8ed2f:	cc                   	int3
+ 4b8ed30:	cc                   	int3
+ 4b8ed31:	cc                   	int3
+ 4b8ed32:	cc                   	int3
+ 4b8ed33:	cc                   	int3
+ 4b8ed34:	cc                   	int3
+ 4b8ed35:	cc                   	int3
+ 4b8ed36:	cc                   	int3
+ 4b8ed37:	cc                   	int3
+ 4b8ed38:	cc                   	int3
+ 4b8ed39:	cc                   	int3
+ 4b8ed3a:	cc                   	int3
+ 4b8ed3b:	cc                   	int3
+ 4b8ed3c:	cc                   	int3
+ 4b8ed3d:	cc                   	int3
+ 4b8ed3e:	cc                   	int3
+ 4b8ed3f:	cc                   	int3

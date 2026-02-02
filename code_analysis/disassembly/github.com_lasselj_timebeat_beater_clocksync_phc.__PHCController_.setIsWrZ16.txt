@@ -1,0 +1,81 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16
+# addr 0x4583040 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004583040 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base>:
+ 4583040:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4583044:	0f 86 8d 00 00 00    	jbe    45830d7 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x97>
+ 458304a:	48 83 ec 60          	sub    $0x60,%rsp
+ 458304e:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 4583053:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 4583058:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 458305d:	31 d2                	xor    %edx,%edx
+ 458305f:	31 f6                	xor    %esi,%esi
+ 4583061:	eb 07                	jmp    458306a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x2a>
+ 4583063:	48 83 c3 40          	add    $0x40,%rbx
+ 4583067:	48 ff c2             	inc    %rdx
+ 458306a:	48 39 d1             	cmp    %rdx,%rcx
+ 458306d:	7e 3c                	jle    45830ab <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x6b>
+ 458306f:	0f 10 03             	movups (%rbx),%xmm0
+ 4583072:	0f 11 44 24 18       	movups %xmm0,0x18(%rsp)
+ 4583077:	0f 10 43 10          	movups 0x10(%rbx),%xmm0
+ 458307b:	0f 11 44 24 28       	movups %xmm0,0x28(%rsp)
+ 4583080:	0f 10 43 20          	movups 0x20(%rbx),%xmm0
+ 4583084:	0f 11 44 24 38       	movups %xmm0,0x38(%rsp)
+ 4583089:	0f 10 43 30          	movups 0x30(%rbx),%xmm0
+ 458308d:	0f 11 44 24 48       	movups %xmm0,0x48(%rsp)
+ 4583092:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 4583097:	48 83 7c 24 30 02    	cmpq   $0x2,0x30(%rsp)
+ 458309d:	7c c4                	jl     4583063 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x23>
+ 458309f:	66 81 3f 77 72       	cmpw   $0x7277,(%rdi)
+ 45830a4:	75 bd                	jne    4583063 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x23>
+ 45830a6:	48 ff c6             	inc    %rsi
+ 45830a9:	eb b8                	jmp    4583063 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x23>
+ 45830ab:	48 83 fe 10          	cmp    $0x10,%rsi
+ 45830af:	75 1c                	jne    45830cd <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base+0x8d>
+ 45830b1:	c6 80 88 00 00 00 01 	movb   $0x1,0x88(%rax)
+ 45830b8:	48 8b 40 50          	mov    0x50(%rax),%rax
+ 45830bc:	48 8d 1d 99 98 84 00 	lea    0x849899(%rip),%rbx        # 4dcc95c <_IO_stdin_used@@Base+0x19995c>
+ 45830c3:	b9 15 00 00 00       	mov    $0x15,%ecx
+ 45830c8:	e8 13 42 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45830cd:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45830d2:	48 83 c4 60          	add    $0x60,%rsp
+ 45830d6:	c3                   	ret
+ 45830d7:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45830dc:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45830e1:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45830e6:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45830eb:	e8 70 13 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45830f0:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45830f5:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45830fa:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45830ff:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4583104:	e9 37 ff ff ff       	jmp    4583040 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).setIsWrZ16@@Base>
+ 4583109:	cc                   	int3
+ 458310a:	cc                   	int3
+ 458310b:	cc                   	int3
+ 458310c:	cc                   	int3
+ 458310d:	cc                   	int3
+ 458310e:	cc                   	int3
+ 458310f:	cc                   	int3
+ 4583110:	cc                   	int3
+ 4583111:	cc                   	int3
+ 4583112:	cc                   	int3
+ 4583113:	cc                   	int3
+ 4583114:	cc                   	int3
+ 4583115:	cc                   	int3
+ 4583116:	cc                   	int3
+ 4583117:	cc                   	int3
+ 4583118:	cc                   	int3
+ 4583119:	cc                   	int3
+ 458311a:	cc                   	int3
+ 458311b:	cc                   	int3
+ 458311c:	cc                   	int3
+ 458311d:	cc                   	int3
+ 458311e:	cc                   	int3
+ 458311f:	cc                   	int3

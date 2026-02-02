@@ -1,0 +1,119 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath
+# addr 0x4b68880 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b68880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base>:
+ 4b68880:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b68884:	0f 86 5f 01 00 00    	jbe    4b689e9 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base+0x169>
+ 4b6888a:	48 83 ec 78          	sub    $0x78,%rsp
+ 4b6888e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 4b68893:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 4b68898:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4b6889f:	00 
+ 4b688a0:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 4b688a6:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4b688ac:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 4b688b2:	48 8d 0d e7 5d c4 00 	lea    0xc45de7(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b688b9:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4b688be:	48 8d 15 a3 a8 38 01 	lea    0x138a8a3(%rip),%rdx        # 5ef3168 <time..dict.leadingInt[string]@@Base+0x2ed8>
+ 4b688c5:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 4b688ca:	e8 11 54 38 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b688cf:	48 8d 0d 8a 1d c4 00 	lea    0xc41d8a(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4b688d6:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4b688db:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b688e0:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4b688e7:	00 
+ 4b688e8:	48 83 f8 04          	cmp    $0x4,%rax
+ 4b688ec:	0f 83 ec 00 00 00    	jae    4b689de <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base+0x15e>
+ 4b688f2:	48 c1 e0 04          	shl    $0x4,%rax
+ 4b688f6:	48 8d 0d 43 90 e2 02 	lea    0x2e29043(%rip),%rcx        # 7991940 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.SerialDeviceNames@@Base>
+ 4b688fd:	48 8b 14 01          	mov    (%rcx,%rax,1),%rdx
+ 4b68901:	48 8b 5c 01 08       	mov    0x8(%rcx,%rax,1),%rbx
+ 4b68906:	48 89 d0             	mov    %rdx,%rax
+ 4b68909:	e8 52 54 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6890e:	48 8d 0d 8b 5d c4 00 	lea    0xc45d8b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b68915:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4b6891a:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4b6891f:	48 8d 05 ad 1a 10 00 	lea    0x101aad(%rip),%rax        # 4c6a3d3 <_IO_stdin_used@@Base+0x373d3>
+ 4b68926:	bb 0b 00 00 00       	mov    $0xb,%ebx
+ 4b6892b:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4b68930:	48 89 fe             	mov    %rdi,%rsi
+ 4b68933:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 4b68938:	e8 c3 bf 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6893d:	0f 1f 00             	nopl   (%rax)
+ 4b68940:	e8 9b 46 5c fd       	call   212cfe0 <path/filepath.EvalSymlinks@@Base>
+ 4b68945:	48 85 c9             	test   %rcx,%rcx
+ 4b68948:	75 20                	jne    4b6896a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base+0xea>
+ 4b6894a:	90                   	nop
+ 4b6894b:	48 8d 0d ce e5 96 00 	lea    0x96e5ce(%rip),%rcx        # 54d6f20 <_IO_stdin_used@@Base+0x8a3f20>
+ 4b68952:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b68957:	31 f6                	xor    %esi,%esi
+ 4b68959:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 4b68960:	e8 1b e5 49 fd       	call   2006e80 <strings.genSplit@@Base>
+ 4b68965:	48 85 db             	test   %rbx,%rbx
+ 4b68968:	75 17                	jne    4b68981 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base+0x101>
+ 4b6896a:	48 8d 05 ab bd 0f 00 	lea    0xfbdab(%rip),%rax        # 4c6471c <_IO_stdin_used@@Base+0x3171c>
+ 4b68971:	bb 09 00 00 00       	mov    $0x9,%ebx
+ 4b68976:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b6897b:	48 83 c4 78          	add    $0x78,%rsp
+ 4b6897f:	90                   	nop
+ 4b68980:	c3                   	ret
+ 4b68981:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 4b68987:	48 8d 4b ff          	lea    -0x1(%rbx),%rcx
+ 4b6898b:	48 c1 e1 04          	shl    $0x4,%rcx
+ 4b6898f:	48 8b 14 08          	mov    (%rax,%rcx,1),%rdx
+ 4b68993:	48 8b 5c 08 08       	mov    0x8(%rax,%rcx,1),%rbx
+ 4b68998:	48 89 d0             	mov    %rdx,%rax
+ 4b6899b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b689a0:	e8 bb 53 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b689a5:	48 8d 0d f4 5c c4 00 	lea    0xc45cf4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b689ac:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4b689b1:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4b689b6:	48 8d 05 12 6b 0f 00 	lea    0xf6b12(%rip),%rax        # 4c5f4cf <_IO_stdin_used@@Base+0x2c4cf>
+ 4b689bd:	bb 07 00 00 00       	mov    $0x7,%ebx
+ 4b689c2:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 4b689c7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b689cc:	48 89 fe             	mov    %rdi,%rsi
+ 4b689cf:	e8 2c bf 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b689d4:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4b689d9:	48 83 c4 78          	add    $0x78,%rsp
+ 4b689dd:	c3                   	ret
+ 4b689de:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 4b689e3:	e8 b8 e0 3e fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4b689e8:	90                   	nop
+ 4b689e9:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b689ee:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b689f3:	e8 68 ba 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b689f8:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b689fd:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b68a02:	e9 79 fe ff ff       	jmp    4b68880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/utility.GetDevicePath@@Base>
+ 4b68a07:	cc                   	int3
+ 4b68a08:	cc                   	int3
+ 4b68a09:	cc                   	int3
+ 4b68a0a:	cc                   	int3
+ 4b68a0b:	cc                   	int3
+ 4b68a0c:	cc                   	int3
+ 4b68a0d:	cc                   	int3
+ 4b68a0e:	cc                   	int3
+ 4b68a0f:	cc                   	int3
+ 4b68a10:	cc                   	int3
+ 4b68a11:	cc                   	int3
+ 4b68a12:	cc                   	int3
+ 4b68a13:	cc                   	int3
+ 4b68a14:	cc                   	int3
+ 4b68a15:	cc                   	int3
+ 4b68a16:	cc                   	int3
+ 4b68a17:	cc                   	int3
+ 4b68a18:	cc                   	int3
+ 4b68a19:	cc                   	int3
+ 4b68a1a:	cc                   	int3
+ 4b68a1b:	cc                   	int3
+ 4b68a1c:	cc                   	int3
+ 4b68a1d:	cc                   	int3
+ 4b68a1e:	cc                   	int3
+ 4b68a1f:	cc                   	int3

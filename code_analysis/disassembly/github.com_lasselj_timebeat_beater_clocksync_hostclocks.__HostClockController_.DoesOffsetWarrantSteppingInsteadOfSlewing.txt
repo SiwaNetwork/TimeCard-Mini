@@ -1,0 +1,60 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).DoesOffsetWarrantSteppingInsteadOfSlewing
+# addr 0x4596820 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004596820 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).DoesOffsetWarrantSteppingInsteadOfSlewing@@Base>:
+ 4596820:	48 85 db             	test   %rbx,%rbx
+ 4596823:	7e 32                	jle    4596857 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).DoesOffsetWarrantSteppingInsteadOfSlewing@@Base+0x37>
+ 4596825:	48 8b 48 60          	mov    0x60(%rax),%rcx
+ 4596829:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 459682c:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 4596831:	48 8b 11             	mov    (%rcx),%rdx
+ 4596834:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4596837:	f2 48 0f 2a ca       	cvtsi2sd %rdx,%xmm1
+ 459683c:	66 48 0f 7e c2       	movq   %xmm0,%rdx
+ 4596841:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 4596846:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 459684b:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 459684f:	0f 97 c3             	seta   %bl
+ 4596852:	48 8b 41 08          	mov    0x8(%rcx),%rax
+ 4596856:	c3                   	ret
+ 4596857:	48 8b 48 60          	mov    0x60(%rax),%rcx
+ 459685b:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 459685e:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 4596863:	48 8b 51 10          	mov    0x10(%rcx),%rdx
+ 4596867:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 459686a:	f2 48 0f 2a ca       	cvtsi2sd %rdx,%xmm1
+ 459686f:	66 48 0f 7e c2       	movq   %xmm0,%rdx
+ 4596874:	48 0f ba f2 3f       	btr    $0x3f,%rdx
+ 4596879:	66 48 0f 6e c2       	movq   %rdx,%xmm0
+ 459687e:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4596882:	0f 97 c3             	seta   %bl
+ 4596885:	48 8b 41 18          	mov    0x18(%rcx),%rax
+ 4596889:	c3                   	ret
+ 459688a:	cc                   	int3
+ 459688b:	cc                   	int3
+ 459688c:	cc                   	int3
+ 459688d:	cc                   	int3
+ 459688e:	cc                   	int3
+ 459688f:	cc                   	int3
+ 4596890:	cc                   	int3
+ 4596891:	cc                   	int3
+ 4596892:	cc                   	int3
+ 4596893:	cc                   	int3
+ 4596894:	cc                   	int3
+ 4596895:	cc                   	int3
+ 4596896:	cc                   	int3
+ 4596897:	cc                   	int3
+ 4596898:	cc                   	int3
+ 4596899:	cc                   	int3
+ 459689a:	cc                   	int3
+ 459689b:	cc                   	int3
+ 459689c:	cc                   	int3
+ 459689d:	cc                   	int3
+ 459689e:	cc                   	int3
+ 459689f:	cc                   	int3

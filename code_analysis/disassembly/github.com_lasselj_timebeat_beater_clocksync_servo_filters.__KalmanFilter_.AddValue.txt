@@ -1,0 +1,98 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue
+# addr 0x4579da0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004579da0 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base>:
+ 4579da0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4579da4:	0f 86 d3 00 00 00    	jbe    4579e7d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base+0xdd>
+ 4579daa:	48 83 ec 30          	sub    $0x30,%rsp
+ 4579dae:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4579db3:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4579db8:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4579dbd:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4579dc2:	48 8d 05 17 fc 24 01 	lea    0x124fc17(%rip),%rax        # 57c99e0 <type:j6tpxGLR@@Base>
+ 4579dc9:	e8 12 67 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579dce:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4579dd3:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4579dd6:	f2 48 0f 2a c1       	cvtsi2sd %rcx,%xmm0
+ 4579ddb:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4579ddf:	90                   	nop
+ 4579de0:	48 85 c0             	test   %rax,%rax
+ 4579de3:	75 14                	jne    4579df9 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base+0x59>
+ 4579de5:	48 8d 05 74 87 1e 01 	lea    0x11e8774(%rip),%rax        # 5762560 <type:float64@@Base>
+ 4579dec:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4579df1:	48 89 d9             	mov    %rbx,%rcx
+ 4579df4:	e8 e7 c5 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4579df9:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4579dfe:	48 8d 05 7b 49 5d 01 	lea    0x15d497b(%rip),%rax        # 5b4e780 <type:ysCNyuTO@@Base>
+ 4579e05:	e8 d6 66 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4579e0a:	48 c7 00 01 00 00 00 	movq   $0x1,(%rax)
+ 4579e11:	48 c7 40 20 01 00 00 	movq   $0x1,0x20(%rax)
+ 4579e18:	00 
+ 4579e19:	48 c7 40 10 01 00 00 	movq   $0x1,0x10(%rax)
+ 4579e20:	00 
+ 4579e21:	48 c7 40 18 01 00 00 	movq   $0x1,0x18(%rax)
+ 4579e28:	00 
+ 4579e29:	83 3d 30 1b 90 03 00 	cmpl   $0x0,0x3901b30(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4579e30:	75 0b                	jne    4579e3d <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base+0x9d>
+ 4579e32:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 4579e37:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4579e3b:	eb 0e                	jmp    4579e4b <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base+0xab>
+ 4579e3d:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4579e41:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 4579e46:	e8 d5 c8 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4579e4b:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4579e50:	48 8b 53 10          	mov    0x10(%rbx),%rdx
+ 4579e54:	48 8b 73 18          	mov    0x18(%rbx),%rsi
+ 4579e58:	48 8b 52 18          	mov    0x18(%rdx),%rdx
+ 4579e5c:	48 8b 7b 20          	mov    0x20(%rbx),%rdi
+ 4579e60:	48 89 c1             	mov    %rax,%rcx
+ 4579e63:	48 89 f0             	mov    %rsi,%rax
+ 4579e66:	ff d2                	call   *%rdx
+ 4579e68:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 4579e6c:	48 89 d8             	mov    %rbx,%rax
+ 4579e6f:	31 db                	xor    %ebx,%ebx
+ 4579e71:	ff d2                	call   *%rdx
+ 4579e73:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 4579e78:	48 83 c4 30          	add    $0x30,%rsp
+ 4579e7c:	c3                   	ret
+ 4579e7d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4579e82:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4579e87:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4579e8c:	e8 cf a5 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4579e91:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4579e96:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4579e9b:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4579ea0:	e9 fb fe ff ff       	jmp    4579da0 <github.com/lasselj/timebeat/beater/clocksync/servo/filters.(*KalmanFilter).AddValue@@Base>
+ 4579ea5:	cc                   	int3
+ 4579ea6:	cc                   	int3
+ 4579ea7:	cc                   	int3
+ 4579ea8:	cc                   	int3
+ 4579ea9:	cc                   	int3
+ 4579eaa:	cc                   	int3
+ 4579eab:	cc                   	int3
+ 4579eac:	cc                   	int3
+ 4579ead:	cc                   	int3
+ 4579eae:	cc                   	int3
+ 4579eaf:	cc                   	int3
+ 4579eb0:	cc                   	int3
+ 4579eb1:	cc                   	int3
+ 4579eb2:	cc                   	int3
+ 4579eb3:	cc                   	int3
+ 4579eb4:	cc                   	int3
+ 4579eb5:	cc                   	int3
+ 4579eb6:	cc                   	int3
+ 4579eb7:	cc                   	int3
+ 4579eb8:	cc                   	int3
+ 4579eb9:	cc                   	int3
+ 4579eba:	cc                   	int3
+ 4579ebb:	cc                   	int3
+ 4579ebc:	cc                   	int3
+ 4579ebd:	cc                   	int3
+ 4579ebe:	cc                   	int3
+ 4579ebf:	cc                   	int3

@@ -1,0 +1,85 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics
+# addr 0x45ba1e0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ba1e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics@@Base>:
+ 45ba1e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ba1e4:	0f 86 de 00 00 00    	jbe    45ba2c8 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics@@Base+0xe8>
+ 45ba1ea:	48 83 ec 60          	sub    $0x60,%rsp
+ 45ba1ee:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 45ba1f3:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 45ba1f8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45ba1ff:	4c 89 6c 24 50       	mov    %r13,0x50(%rsp)
+ 45ba204:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45ba209:	48 89 c2             	mov    %rax,%rdx
+ 45ba20c:	31 c0                	xor    %eax,%eax
+ 45ba20e:	be 01 00 00 00       	mov    $0x1,%esi
+ 45ba213:	f0 0f b1 72 20       	lock cmpxchg %esi,0x20(%rdx)
+ 45ba218:	40 0f 94 c6          	sete   %sil
+ 45ba21c:	48 8d 42 20          	lea    0x20(%rdx),%rax
+ 45ba220:	40 84 f6             	test   %sil,%sil
+ 45ba223:	75 2d                	jne    45ba252 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics@@Base+0x72>
+ 45ba225:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 45ba22a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45ba22f:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 45ba234:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 45ba239:	e8 02 e3 9b fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45ba23e:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45ba243:	48 8b 4c 24 78       	mov    0x78(%rsp),%rcx
+ 45ba248:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45ba24d:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 45ba252:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45ba258:	48 8d 35 a1 00 00 00 	lea    0xa1(%rip),%rsi        # 45ba300 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics.func1@@Base>
+ 45ba25f:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 45ba264:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45ba269:	48 8d 74 24 40       	lea    0x40(%rsp),%rsi
+ 45ba26e:	48 89 74 24 50       	mov    %rsi,0x50(%rsp)
+ 45ba273:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 45ba278:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 45ba27e:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 45ba283:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45ba288:	48 8b 5a 08          	mov    0x8(%rdx),%rbx
+ 45ba28c:	48 8d 05 4d 4d 38 01 	lea    0x1384d4d(%rip),%rax        # 593efe0 <type:ZUwLhS3d@@Base>
+ 45ba293:	48 8d 4c 24 20       	lea    0x20(%rsp),%rcx
+ 45ba298:	e8 c3 7a 93 fd       	call   1ef1d60 <runtime.mapassign@@Base>
+ 45ba29d:	48 ff 00             	incq   (%rax)
+ 45ba2a0:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45ba2a5:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 45ba2aa:	48 8b 32             	mov    (%rdx),%rsi
+ 45ba2ad:	ff d6                	call   *%rsi
+ 45ba2af:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45ba2b4:	48 83 c4 60          	add    $0x60,%rsp
+ 45ba2b8:	c3                   	ret
+ 45ba2b9:	e8 a2 1c 96 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45ba2be:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 45ba2c3:	48 83 c4 60          	add    $0x60,%rsp
+ 45ba2c7:	c3                   	ret
+ 45ba2c8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ba2cd:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45ba2d2:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45ba2d7:	e8 84 a1 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ba2dc:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ba2e1:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45ba2e6:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45ba2eb:	e9 f0 fe ff ff       	jmp    45ba1e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/udp_socket.(*SocketStatistics).addTimeSourceStatistics@@Base>
+ 45ba2f0:	cc                   	int3
+ 45ba2f1:	cc                   	int3
+ 45ba2f2:	cc                   	int3
+ 45ba2f3:	cc                   	int3
+ 45ba2f4:	cc                   	int3
+ 45ba2f5:	cc                   	int3
+ 45ba2f6:	cc                   	int3
+ 45ba2f7:	cc                   	int3
+ 45ba2f8:	cc                   	int3
+ 45ba2f9:	cc                   	int3
+ 45ba2fa:	cc                   	int3
+ 45ba2fb:	cc                   	int3
+ 45ba2fc:	cc                   	int3
+ 45ba2fd:	cc                   	int3
+ 45ba2fe:	cc                   	int3
+ 45ba2ff:	cc                   	int3

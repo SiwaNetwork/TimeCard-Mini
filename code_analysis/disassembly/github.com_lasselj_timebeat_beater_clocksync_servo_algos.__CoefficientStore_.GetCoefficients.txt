@@ -1,0 +1,221 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients
+# addr 0x457c740 size 928 (0x3a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457c740 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base>:
+ 457c740:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457c744:	0f 86 3e 03 00 00    	jbe    457ca88 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x348>
+ 457c74a:	48 83 ec 30          	sub    $0x30,%rsp
+ 457c74e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 457c753:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 457c758:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 457c75d:	f2 0f 11 54 24 58    	movsd  %xmm2,0x58(%rsp)
+ 457c763:	f2 0f 11 4c 24 50    	movsd  %xmm1,0x50(%rsp)
+ 457c769:	f2 0f 11 44 24 48    	movsd  %xmm0,0x48(%rsp)
+ 457c76f:	0f 57 e4             	xorps  %xmm4,%xmm4
+ 457c772:	66 0f 2e dc          	ucomisd %xmm4,%xmm3
+ 457c776:	75 42                	jne    457c7ba <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x7a>
+ 457c778:	7a 40                	jp     457c7ba <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x7a>
+ 457c77a:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 457c77f:	48 8b 10             	mov    (%rax),%rdx
+ 457c782:	48 8d 1d af 4d 8f 00 	lea    0x8f4daf(%rip),%rbx        # 4e71538 <_IO_stdin_used@@Base+0x23e538>
+ 457c789:	b9 46 00 00 00       	mov    $0x46,%ecx
+ 457c78e:	48 89 d0             	mov    %rdx,%rax
+ 457c791:	e8 ea a6 e8 ff       	call   4406e80 <github.com/lasselj/timebeat/beater/logging.(*Logger).Critical@@Base>
+ 457c796:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c79b:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 457c7a0:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457c7a6:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c7ac:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c7b2:	f2 0f 10 1d be 1a f6 	movsd  0xf61abe(%rip),%xmm3        # 54de278 <_IO_stdin_used@@Base+0x8ab278>
+ 457c7b9:	00 
+ 457c7ba:	f2 0f 11 5c 24 18    	movsd  %xmm3,0x18(%rsp)
+ 457c7c0:	48 83 fb 01          	cmp    $0x1,%rbx
+ 457c7c4:	0f 84 53 01 00 00    	je     457c91d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x1dd>
+ 457c7ca:	48 85 db             	test   %rbx,%rbx
+ 457c7cd:	0f 84 e1 00 00 00    	je     457c8b4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x174>
+ 457c7d3:	48 83 fb 02          	cmp    $0x2,%rbx
+ 457c7d7:	74 74                	je     457c84d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x10d>
+ 457c7d9:	48 83 fb 03          	cmp    $0x3,%rbx
+ 457c7dd:	74 07                	je     457c7e6 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0xa6>
+ 457c7df:	31 c9                	xor    %ecx,%ecx
+ 457c7e1:	e9 99 01 00 00       	jmp    457c97f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x23f>
+ 457c7e6:	48 8d 05 73 f5 72 01 	lea    0x172f573(%rip),%rax        # 5cabd60 <type:24RbfKOo@@Base>
+ 457c7ed:	e8 ee 3c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457c7f2:	f2 0f 10 05 e6 1a f6 	movsd  0xf61ae6(%rip),%xmm0        # 54de2e0 <_IO_stdin_used@@Base+0x8ab2e0>
+ 457c7f9:	00 
+ 457c7fa:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457c7fe:	f2 0f 10 05 5a 1a f6 	movsd  0xf61a5a(%rip),%xmm0        # 54de260 <_IO_stdin_used@@Base+0x8ab260>
+ 457c805:	00 
+ 457c806:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457c80b:	f2 0f 10 05 85 1c f6 	movsd  0xf61c85(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457c812:	00 
+ 457c813:	f2 0f 11 40 10       	movsd  %xmm0,0x10(%rax)
+ 457c818:	48 c7 40 18 08 00 00 	movq   $0x8,0x18(%rax)
+ 457c81f:	00 
+ 457c820:	48 c7 40 20 20 e9 ef 	movq   $0x1efe920,0x20(%rax)
+ 457c827:	01 
+ 457c828:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457c82e:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c834:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c83a:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457c840:	48 89 c1             	mov    %rax,%rcx
+ 457c843:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c848:	e9 32 01 00 00       	jmp    457c97f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x23f>
+ 457c84d:	48 8d 05 0c f5 72 01 	lea    0x172f50c(%rip),%rax        # 5cabd60 <type:24RbfKOo@@Base>
+ 457c854:	e8 87 3c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457c859:	f2 0f 10 05 af 1b f6 	movsd  0xf61baf(%rip),%xmm0        # 54de410 <_IO_stdin_used@@Base+0x8ab410>
+ 457c860:	00 
+ 457c861:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457c865:	f2 0f 10 05 fb 1a f6 	movsd  0xf61afb(%rip),%xmm0        # 54de368 <_IO_stdin_used@@Base+0x8ab368>
+ 457c86c:	00 
+ 457c86d:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457c872:	f2 0f 10 05 1e 1c f6 	movsd  0xf61c1e(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457c879:	00 
+ 457c87a:	f2 0f 11 40 10       	movsd  %xmm0,0x10(%rax)
+ 457c87f:	48 c7 40 18 08 00 00 	movq   $0x8,0x18(%rax)
+ 457c886:	00 
+ 457c887:	48 c7 40 20 20 e9 ef 	movq   $0x1efe920,0x20(%rax)
+ 457c88e:	01 
+ 457c88f:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457c895:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c89b:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c8a1:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457c8a7:	48 89 c1             	mov    %rax,%rcx
+ 457c8aa:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c8af:	e9 cb 00 00 00       	jmp    457c97f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x23f>
+ 457c8b4:	48 8d 05 a5 f4 72 01 	lea    0x172f4a5(%rip),%rax        # 5cabd60 <type:24RbfKOo@@Base>
+ 457c8bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 457c8c0:	e8 1b 3c 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457c8c5:	f2 0f 10 05 cb 1b f6 	movsd  0xf61bcb(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457c8cc:	00 
+ 457c8cd:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457c8d1:	f2 0f 10 05 3f 19 f6 	movsd  0xf6193f(%rip),%xmm0        # 54de218 <_IO_stdin_used@@Base+0x8ab218>
+ 457c8d8:	00 
+ 457c8d9:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457c8de:	f2 0f 10 05 7a 1d f6 	movsd  0xf61d7a(%rip),%xmm0        # 54de660 <_IO_stdin_used@@Base+0x8ab660>
+ 457c8e5:	00 
+ 457c8e6:	f2 0f 11 40 10       	movsd  %xmm0,0x10(%rax)
+ 457c8eb:	48 c7 40 18 08 00 00 	movq   $0x8,0x18(%rax)
+ 457c8f2:	00 
+ 457c8f3:	48 c7 40 20 20 e9 ef 	movq   $0x1efe920,0x20(%rax)
+ 457c8fa:	01 
+ 457c8fb:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457c901:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c907:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c90d:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457c913:	48 89 c1             	mov    %rax,%rcx
+ 457c916:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c91b:	eb 62                	jmp    457c97f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x23f>
+ 457c91d:	48 8d 05 3c f4 72 01 	lea    0x172f43c(%rip),%rax        # 5cabd60 <type:24RbfKOo@@Base>
+ 457c924:	e8 b7 3b 97 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 457c929:	f2 0f 10 05 67 1b f6 	movsd  0xf61b67(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457c930:	00 
+ 457c931:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 457c935:	f2 0f 10 05 db 18 f6 	movsd  0xf618db(%rip),%xmm0        # 54de218 <_IO_stdin_used@@Base+0x8ab218>
+ 457c93c:	00 
+ 457c93d:	f2 0f 11 40 08       	movsd  %xmm0,0x8(%rax)
+ 457c942:	f2 0f 10 05 16 1d f6 	movsd  0xf61d16(%rip),%xmm0        # 54de660 <_IO_stdin_used@@Base+0x8ab660>
+ 457c949:	00 
+ 457c94a:	f2 0f 11 40 10       	movsd  %xmm0,0x10(%rax)
+ 457c94f:	48 c7 40 18 08 00 00 	movq   $0x8,0x18(%rax)
+ 457c956:	00 
+ 457c957:	48 c7 40 20 20 e9 ef 	movq   $0x1efe920,0x20(%rax)
+ 457c95e:	01 
+ 457c95f:	f2 0f 10 44 24 48    	movsd  0x48(%rsp),%xmm0
+ 457c965:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c96b:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c971:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457c977:	48 89 c1             	mov    %rax,%rcx
+ 457c97a:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c97f:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 457c984:	f2 0f 10 25 3c 21 f6 	movsd  0xf6213c(%rip),%xmm4        # 54deac8 <_IO_stdin_used@@Base+0x8abac8>
+ 457c98b:	00 
+ 457c98c:	66 0f 2e e0          	ucomisd %xmm0,%xmm4
+ 457c990:	75 02                	jne    457c994 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x254>
+ 457c992:	7b 3f                	jnp    457c9d3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x293>
+ 457c994:	f2 0f 11 01          	movsd  %xmm0,(%rcx)
+ 457c998:	48 8b 10             	mov    (%rax),%rdx
+ 457c99b:	48 8d 1d 3a 37 89 00 	lea    0x89373a(%rip),%rbx        # 4e100dc <_IO_stdin_used@@Base+0x1dd0dc>
+ 457c9a2:	48 89 d0             	mov    %rdx,%rax
+ 457c9a5:	b9 26 00 00 00       	mov    $0x26,%ecx
+ 457c9aa:	e8 31 a9 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457c9af:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c9b4:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457c9b9:	f2 0f 10 4c 24 50    	movsd  0x50(%rsp),%xmm1
+ 457c9bf:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457c9c5:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457c9cb:	f2 0f 10 25 f5 20 f6 	movsd  0xf620f5(%rip),%xmm4        # 54deac8 <_IO_stdin_used@@Base+0x8abac8>
+ 457c9d2:	00 
+ 457c9d3:	66 0f 2e e1          	ucomisd %xmm1,%xmm4
+ 457c9d7:	75 02                	jne    457c9db <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x29b>
+ 457c9d9:	7b 3a                	jnp    457ca15 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x2d5>
+ 457c9db:	f2 0f 11 49 08       	movsd  %xmm1,0x8(%rcx)
+ 457c9e0:	48 8b 10             	mov    (%rax),%rdx
+ 457c9e3:	48 8d 1d cc 36 89 00 	lea    0x8936cc(%rip),%rbx        # 4e100b6 <_IO_stdin_used@@Base+0x1dd0b6>
+ 457c9ea:	48 89 d0             	mov    %rdx,%rax
+ 457c9ed:	b9 26 00 00 00       	mov    $0x26,%ecx
+ 457c9f2:	e8 e9 a8 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457c9f7:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457c9fc:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457ca01:	f2 0f 10 54 24 58    	movsd  0x58(%rsp),%xmm2
+ 457ca07:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457ca0d:	f2 0f 10 25 b3 20 f6 	movsd  0xf620b3(%rip),%xmm4        # 54deac8 <_IO_stdin_used@@Base+0x8abac8>
+ 457ca14:	00 
+ 457ca15:	66 0f 2e e2          	ucomisd %xmm2,%xmm4
+ 457ca19:	75 02                	jne    457ca1d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x2dd>
+ 457ca1b:	7b 34                	jnp    457ca51 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x311>
+ 457ca1d:	f2 0f 11 51 10       	movsd  %xmm2,0x10(%rcx)
+ 457ca22:	48 8b 10             	mov    (%rax),%rdx
+ 457ca25:	48 8d 1d 64 36 89 00 	lea    0x893664(%rip),%rbx        # 4e10090 <_IO_stdin_used@@Base+0x1dd090>
+ 457ca2c:	48 89 d0             	mov    %rdx,%rax
+ 457ca2f:	b9 26 00 00 00       	mov    $0x26,%ecx
+ 457ca34:	e8 a7 a8 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457ca39:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 457ca3e:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457ca43:	f2 0f 10 5c 24 18    	movsd  0x18(%rsp),%xmm3
+ 457ca49:	f2 0f 10 25 77 20 f6 	movsd  0xf62077(%rip),%xmm4        # 54deac8 <_IO_stdin_used@@Base+0x8abac8>
+ 457ca50:	00 
+ 457ca51:	66 0f 2e dc          	ucomisd %xmm4,%xmm3
+ 457ca55:	75 02                	jne    457ca59 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x319>
+ 457ca57:	7b 22                	jnp    457ca7b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base+0x33b>
+ 457ca59:	f2 48 0f 2c d3       	cvttsd2si %xmm3,%rdx
+ 457ca5e:	48 89 51 18          	mov    %rdx,0x18(%rcx)
+ 457ca62:	48 8b 00             	mov    (%rax),%rax
+ 457ca65:	48 8d 1d 2f bc 88 00 	lea    0x88bc2f(%rip),%rbx        # 4e0869b <_IO_stdin_used@@Base+0x1d569b>
+ 457ca6c:	b9 24 00 00 00       	mov    $0x24,%ecx
+ 457ca71:	e8 6a a8 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457ca76:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457ca7b:	48 89 c8             	mov    %rcx,%rax
+ 457ca7e:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 457ca83:	48 83 c4 30          	add    $0x30,%rsp
+ 457ca87:	c3                   	ret
+ 457ca88:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457ca8d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457ca92:	f2 0f 11 44 24 18    	movsd  %xmm0,0x18(%rsp)
+ 457ca98:	f2 0f 11 4c 24 20    	movsd  %xmm1,0x20(%rsp)
+ 457ca9e:	f2 0f 11 54 24 28    	movsd  %xmm2,0x28(%rsp)
+ 457caa4:	f2 0f 11 5c 24 30    	movsd  %xmm3,0x30(%rsp)
+ 457caaa:	e8 b1 79 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457caaf:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457cab4:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457cab9:	f2 0f 10 44 24 18    	movsd  0x18(%rsp),%xmm0
+ 457cabf:	f2 0f 10 4c 24 20    	movsd  0x20(%rsp),%xmm1
+ 457cac5:	f2 0f 10 54 24 28    	movsd  0x28(%rsp),%xmm2
+ 457cacb:	f2 0f 10 5c 24 30    	movsd  0x30(%rsp),%xmm3
+ 457cad1:	e9 6a fc ff ff       	jmp    457c740 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).GetCoefficients@@Base>
+ 457cad6:	cc                   	int3
+ 457cad7:	cc                   	int3
+ 457cad8:	cc                   	int3
+ 457cad9:	cc                   	int3
+ 457cada:	cc                   	int3
+ 457cadb:	cc                   	int3
+ 457cadc:	cc                   	int3
+ 457cadd:	cc                   	int3
+ 457cade:	cc                   	int3
+ 457cadf:	cc                   	int3

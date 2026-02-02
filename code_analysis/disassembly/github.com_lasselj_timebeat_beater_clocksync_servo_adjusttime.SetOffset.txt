@@ -1,0 +1,159 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset
+# addr 0x4418e40 size 608 (0x260)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004418e40 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base>:
+ 4418e40:	4c 8d a4 24 18 ff ff 	lea    -0xe8(%rsp),%r12
+ 4418e47:	ff 
+ 4418e48:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4418e4c:	0f 86 23 02 00 00    	jbe    4419075 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x235>
+ 4418e52:	48 81 ec 68 01 00 00 	sub    $0x168,%rsp
+ 4418e59:	48 89 ac 24 60 01 00 	mov    %rbp,0x160(%rsp)
+ 4418e60:	00 
+ 4418e61:	48 8d ac 24 60 01 00 	lea    0x160(%rsp),%rbp
+ 4418e68:	00 
+ 4418e69:	48 8d 7c 24 60       	lea    0x60(%rsp),%rdi
+ 4418e6e:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 4418e72:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4418e79:	00 00 
+ 4418e7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4418e80:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4418e85:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4418e8a:	e8 13 df b3 fd       	call   1f56da2 <runtime.duffzero@@Base+0x122>
+ 4418e8f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4418e93:	c7 44 24 60 00 21 00 	movl   $0x2100,0x60(%rsp)
+ 4418e9a:	00 
+ 4418e9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4418ea0:	48 85 c0             	test   %rax,%rax
+ 4418ea3:	0f 85 c1 00 00 00    	jne    4418f6a <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x12a>
+ 4418ea9:	48 85 db             	test   %rbx,%rbx
+ 4418eac:	7d 1d                	jge    4418ecb <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x8b>
+ 4418eae:	48 c7 84 24 a8 00 00 	movq   $0xffffffffffffffff,0xa8(%rsp)
+ 4418eb5:	00 ff ff ff ff 
+ 4418eba:	48 8d 8b 00 ca 9a 3b 	lea    0x3b9aca00(%rbx),%rcx
+ 4418ec1:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4418ec8:	00 
+ 4418ec9:	eb 08                	jmp    4418ed3 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x93>
+ 4418ecb:	48 89 9c 24 b0 00 00 	mov    %rbx,0xb0(%rsp)
+ 4418ed2:	00 
+ 4418ed3:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+ 4418ed8:	e8 43 33 ba fd       	call   1fbc220 <syscall.Adjtimex@@Base>
+ 4418edd:	0f 1f 00             	nopl   (%rax)
+ 4418ee0:	48 85 db             	test   %rbx,%rbx
+ 4418ee3:	0f 84 7c 01 00 00    	je     4419065 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x225>
+ 4418ee9:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4418eee:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4418ef2:	48 89 c8             	mov    %rcx,%rax
+ 4418ef5:	ff d2                	call   *%rdx
+ 4418ef7:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4418efe:	00 
+ 4418eff:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 4418f04:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4418f09:	bb 0a 00 00 00       	mov    $0xa,%ebx
+ 4418f0e:	e8 cd ab b5 fd       	call   1f73ae0 <strconv.FormatInt@@Base>
+ 4418f13:	b9 2c 00 00 00       	mov    $0x2c,%ecx
+ 4418f18:	48 8b bc 24 30 01 00 	mov    0x130(%rsp),%rdi
+ 4418f1f:	00 
+ 4418f20:	48 8b 74 24 58       	mov    0x58(%rsp),%rsi
+ 4418f25:	4c 8d 05 91 8d 84 00 	lea    0x848d91(%rip),%r8        # 4c61cbd <_IO_stdin_used@@Base+0x2ecbd>
+ 4418f2c:	41 b9 08 00 00 00    	mov    $0x8,%r9d
+ 4418f32:	49 89 c2             	mov    %rax,%r10
+ 4418f35:	49 89 db             	mov    %rbx,%r11
+ 4418f38:	31 c0                	xor    %eax,%eax
+ 4418f3a:	48 8d 1d fe d3 a0 00 	lea    0xa0d3fe(%rip),%rbx        # 4e2633f <_IO_stdin_used@@Base+0x1f333f>
+ 4418f41:	e8 5a 15 b2 fd       	call   1f3a4a0 <runtime.concatstring4@@Base>
+ 4418f46:	48 8b 0d 33 33 a1 03 	mov    0x3a13333(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 4418f4d:	48 89 c2             	mov    %rax,%rdx
+ 4418f50:	48 89 c8             	mov    %rcx,%rax
+ 4418f53:	48 89 de             	mov    %rbx,%rsi
+ 4418f56:	48 89 d3             	mov    %rdx,%rbx
+ 4418f59:	48 89 f1             	mov    %rsi,%rcx
+ 4418f5c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4418f60:	e8 fb e0 fe ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4418f65:	e9 fb 00 00 00       	jmp    4419065 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x225>
+ 4418f6a:	48 85 db             	test   %rbx,%rbx
+ 4418f6d:	7d 1d                	jge    4418f8c <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x14c>
+ 4418f6f:	48 c7 84 24 a8 00 00 	movq   $0xffffffffffffffff,0xa8(%rsp)
+ 4418f76:	00 ff ff ff ff 
+ 4418f7b:	48 8d 93 00 ca 9a 3b 	lea    0x3b9aca00(%rbx),%rdx
+ 4418f82:	48 89 94 24 b0 00 00 	mov    %rdx,0xb0(%rsp)
+ 4418f89:	00 
+ 4418f8a:	eb 08                	jmp    4418f94 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x154>
+ 4418f8c:	48 89 9c 24 b0 00 00 	mov    %rbx,0xb0(%rsp)
+ 4418f93:	00 
+ 4418f94:	48 89 84 24 70 01 00 	mov    %rax,0x170(%rsp)
+ 4418f9b:	00 
+ 4418f9c:	48 8d 4c 24 60       	lea    0x60(%rsp),%rcx
+ 4418fa1:	48 89 8c 24 38 01 00 	mov    %rcx,0x138(%rsp)
+ 4418fa8:	00 
+ 4418fa9:	48 89 c3             	mov    %rax,%rbx
+ 4418fac:	31 ff                	xor    %edi,%edi
+ 4418fae:	b8 31 01 00 00       	mov    $0x131,%eax
+ 4418fb3:	e8 48 63 ba fd       	call   1fbf300 <syscall.Syscall@@Base>
+ 4418fb8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 4418fbf:	00 
+ 4418fc0:	48 85 c9             	test   %rcx,%rcx
+ 4418fc3:	0f 84 9c 00 00 00    	je     4419065 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base+0x225>
+ 4418fc9:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4418fce:	44 0f 11 bc 24 40 01 	movups %xmm15,0x140(%rsp)
+ 4418fd5:	00 00 
+ 4418fd7:	44 0f 11 bc 24 50 01 	movups %xmm15,0x150(%rsp)
+ 4418fde:	00 00 
+ 4418fe0:	48 8b 84 24 70 01 00 	mov    0x170(%rsp),%rax
+ 4418fe7:	00 
+ 4418fe8:	e8 f3 4c ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4418fed:	48 8d 0d 6c 16 39 01 	lea    0x139166c(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4418ff4:	48 89 8c 24 40 01 00 	mov    %rcx,0x140(%rsp)
+ 4418ffb:	00 
+ 4418ffc:	48 89 84 24 48 01 00 	mov    %rax,0x148(%rsp)
+ 4419003:	00 
+ 4419004:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4419009:	e8 d2 4c ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 441900e:	48 8d 0d 4b 16 39 01 	lea    0x139164b(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4419015:	48 89 8c 24 50 01 00 	mov    %rcx,0x150(%rsp)
+ 441901c:	00 
+ 441901d:	48 89 84 24 58 01 00 	mov    %rax,0x158(%rsp)
+ 4419024:	00 
+ 4419025:	48 8d 05 6d 14 a5 00 	lea    0xa5146d(%rip),%rax        # 4e6a499 <_IO_stdin_used@@Base+0x237499>
+ 441902c:	bb 42 00 00 00       	mov    $0x42,%ebx
+ 4419031:	48 8d 8c 24 40 01 00 	lea    0x140(%rsp),%rcx
+ 4419038:	00 
+ 4419039:	bf 02 00 00 00       	mov    $0x2,%edi
+ 441903e:	48 89 fe             	mov    %rdi,%rsi
+ 4419041:	e8 ba b8 bd fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4419046:	48 8b 0d 33 32 a1 03 	mov    0x3a13233(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 441904d:	48 89 c2             	mov    %rax,%rdx
+ 4419050:	48 89 c8             	mov    %rcx,%rax
+ 4419053:	48 89 de             	mov    %rbx,%rsi
+ 4419056:	48 89 d3             	mov    %rdx,%rbx
+ 4419059:	48 89 f1             	mov    %rsi,%rcx
+ 441905c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4419060:	e8 fb df fe ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4419065:	48 8b ac 24 60 01 00 	mov    0x160(%rsp),%rbp
+ 441906c:	00 
+ 441906d:	48 81 c4 68 01 00 00 	add    $0x168,%rsp
+ 4419074:	c3                   	ret
+ 4419075:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 441907a:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 441907f:	90                   	nop
+ 4419080:	e8 db b3 b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4419085:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 441908a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441908f:	e9 ac fd ff ff       	jmp    4418e40 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetOffset@@Base>
+ 4419094:	cc                   	int3
+ 4419095:	cc                   	int3
+ 4419096:	cc                   	int3
+ 4419097:	cc                   	int3
+ 4419098:	cc                   	int3
+ 4419099:	cc                   	int3
+ 441909a:	cc                   	int3
+ 441909b:	cc                   	int3
+ 441909c:	cc                   	int3
+ 441909d:	cc                   	int3
+ 441909e:	cc                   	int3
+ 441909f:	cc                   	int3

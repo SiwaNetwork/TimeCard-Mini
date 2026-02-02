@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start
+# addr 0x45bd4a0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045bd4a0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base>:
+ 45bd4a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45bd4a4:	0f 86 2f 01 00 00    	jbe    45bd5d9 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x139>
+ 45bd4aa:	48 83 ec 20          	sub    $0x20,%rsp
+ 45bd4ae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45bd4b3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45bd4b8:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45bd4bd:	48 8d 05 9c 52 4f 01 	lea    0x14f529c(%rip),%rax        # 5ab2760 <type:NXydxmeP@@Base>
+ 45bd4c4:	e8 17 30 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45bd4c9:	48 8d 0d 30 0d 00 00 	lea    0xd30(%rip),%rcx        # 45be200 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).PPSWatchDogTimerExpired-fm@@Base>
+ 45bd4d0:	48 89 08             	mov    %rcx,(%rax)
+ 45bd4d3:	83 3d 86 e4 8b 03 00 	cmpl   $0x0,0x38be486(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45bd4da:	75 0b                	jne    45bd4e7 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x47>
+ 45bd4dc:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd4e1:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45bd4e5:	eb 0e                	jmp    45bd4f5 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x55>
+ 45bd4e7:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45bd4eb:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd4f0:	e8 0b 92 99 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45bd4f5:	48 89 c3             	mov    %rax,%rbx
+ 45bd4f8:	48 b8 00 e4 0b 54 02 	movabs $0x2540be400,%rax
+ 45bd4ff:	00 00 00 
+ 45bd502:	e8 b9 c0 a0 fd       	call   1fc95c0 <time.AfterFunc@@Base>
+ 45bd507:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 45bd50c:	84 07                	test   %al,(%rdi)
+ 45bd50e:	83 3d 4b e4 8b 03 00 	cmpl   $0x0,0x38be44b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45bd515:	75 0b                	jne    45bd522 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x82>
+ 45bd517:	48 89 87 88 00 00 00 	mov    %rax,0x88(%rdi)
+ 45bd51e:	66 90                	xchg   %ax,%ax
+ 45bd520:	eb 15                	jmp    45bd537 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x97>
+ 45bd522:	48 8d 8f 88 00 00 00 	lea    0x88(%rdi),%rcx
+ 45bd529:	48 89 fa             	mov    %rdi,%rdx
+ 45bd52c:	48 89 cf             	mov    %rcx,%rdi
+ 45bd52f:	e8 cc 90 99 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45bd534:	48 89 d7             	mov    %rdx,%rdi
+ 45bd537:	48 89 f8             	mov    %rdi,%rax
+ 45bd53a:	e8 01 02 00 00       	call   45bd740 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).EnableExtTs@@Base>
+ 45bd53f:	90                   	nop
+ 45bd540:	48 85 db             	test   %rbx,%rbx
+ 45bd543:	74 18                	je     45bd55d <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0xbd>
+ 45bd545:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45bd54a:	48 8b 32             	mov    (%rdx),%rsi
+ 45bd54d:	48 89 d9             	mov    %rbx,%rcx
+ 45bd550:	48 89 c3             	mov    %rax,%rbx
+ 45bd553:	48 89 f0             	mov    %rsi,%rax
+ 45bd556:	e8 45 9c e4 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45bd55b:	eb 19                	jmp    45bd576 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0xd6>
+ 45bd55d:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45bd562:	48 8b 02             	mov    (%rdx),%rax
+ 45bd565:	48 8d 1d 24 76 7a 00 	lea    0x7a7624(%rip),%rbx        # 4d64b90 <_IO_stdin_used@@Base+0x131b90>
+ 45bd56c:	b9 12 00 00 00       	mov    $0x12,%ecx
+ 45bd571:	e8 6a 9d e4 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45bd576:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd57b:	48 83 b9 28 03 00 00 	cmpq   $0x0,0x328(%rcx)
+ 45bd582:	00 
+ 45bd583:	74 4a                	je     45bd5cf <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x12f>
+ 45bd585:	48 8d 05 54 f3 4f 01 	lea    0x14ff354(%rip),%rax        # 5abc8e0 <type:zwfwMFUJ@@Base>
+ 45bd58c:	e8 4f 2f 93 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45bd591:	48 8d 0d 68 00 00 00 	lea    0x68(%rip),%rcx        # 45bd600 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start.func1@@Base>
+ 45bd598:	48 89 08             	mov    %rcx,(%rax)
+ 45bd59b:	83 3d be e3 8b 03 00 	cmpl   $0x0,0x38be3be(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45bd5a2:	75 0b                	jne    45bd5af <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x10f>
+ 45bd5a4:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd5a9:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45bd5ad:	eb 0e                	jmp    45bd5bd <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base+0x11d>
+ 45bd5af:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45bd5b3:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45bd5b8:	e8 43 91 99 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45bd5bd:	48 8b 89 28 03 00 00 	mov    0x328(%rcx),%rcx
+ 45bd5c4:	48 89 c3             	mov    %rax,%rbx
+ 45bd5c7:	48 89 c8             	mov    %rcx,%rax
+ 45bd5ca:	e8 f1 bf a0 fd       	call   1fc95c0 <time.AfterFunc@@Base>
+ 45bd5cf:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45bd5d4:	48 83 c4 20          	add    $0x20,%rsp
+ 45bd5d8:	c3                   	ret
+ 45bd5d9:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45bd5de:	66 90                	xchg   %ax,%ax
+ 45bd5e0:	e8 7b 6e 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45bd5e5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45bd5ea:	e9 b1 fe ff ff       	jmp    45bd4a0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps/client.(*Client).Start@@Base>
+ 45bd5ef:	cc                   	int3
+ 45bd5f0:	cc                   	int3
+ 45bd5f1:	cc                   	int3
+ 45bd5f2:	cc                   	int3
+ 45bd5f3:	cc                   	int3
+ 45bd5f4:	cc                   	int3
+ 45bd5f5:	cc                   	int3
+ 45bd5f6:	cc                   	int3
+ 45bd5f7:	cc                   	int3
+ 45bd5f8:	cc                   	int3
+ 45bd5f9:	cc                   	int3
+ 45bd5fa:	cc                   	int3
+ 45bd5fb:	cc                   	int3
+ 45bd5fc:	cc                   	int3
+ 45bd5fd:	cc                   	int3
+ 45bd5fe:	cc                   	int3
+ 45bd5ff:	cc                   	int3

@@ -1,0 +1,99 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets
+# addr 0x45aa580 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045aa580 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base>:
+ 45aa580:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45aa584:	0f 86 e5 00 00 00    	jbe    45aa66f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0xef>
+ 45aa58a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45aa58e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45aa593:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45aa598:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45aa59f:	4c 89 6c 24 30       	mov    %r13,0x30(%rsp)
+ 45aa5a4:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45aa5a9:	48 89 c1             	mov    %rax,%rcx
+ 45aa5ac:	31 c0                	xor    %eax,%eax
+ 45aa5ae:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45aa5b3:	f0 0f b1 59 30       	lock cmpxchg %ebx,0x30(%rcx)
+ 45aa5b8:	0f 94 c3             	sete   %bl
+ 45aa5bb:	48 8d 41 30          	lea    0x30(%rcx),%rax
+ 45aa5bf:	90                   	nop
+ 45aa5c0:	84 db                	test   %bl,%bl
+ 45aa5c2:	75 19                	jne    45aa5dd <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0x5d>
+ 45aa5c4:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45aa5c9:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 45aa5ce:	e8 6d df 9c fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45aa5d3:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 45aa5d8:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45aa5dd:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 45aa5e3:	48 8d 1d b6 00 00 00 	lea    0xb6(%rip),%rbx        # 45aa6a0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets.func1@@Base>
+ 45aa5ea:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 45aa5ef:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45aa5f4:	48 8d 44 24 20       	lea    0x20(%rsp),%rax
+ 45aa5f9:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45aa5fe:	44 0f 11 79 08       	movups %xmm15,0x8(%rcx)
+ 45aa603:	83 3d 56 13 8d 03 00 	cmpl   $0x0,0x38d1356(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45aa60a:	75 0c                	jne    45aa618 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0x98>
+ 45aa60c:	48 8d 05 5d 0a 8d 03 	lea    0x38d0a5d(%rip),%rax        # 7e7b070 <runtime.zerobase@@Base>
+ 45aa613:	48 89 01             	mov    %rax,(%rcx)
+ 45aa616:	eb 0f                	jmp    45aa627 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0xa7>
+ 45aa618:	48 89 cf             	mov    %rcx,%rdi
+ 45aa61b:	48 8d 05 4e 0a 8d 03 	lea    0x38d0a4e(%rip),%rax        # 7e7b070 <runtime.zerobase@@Base>
+ 45aa622:	e8 d9 bf 9a fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45aa627:	44 0f 11 79 20       	movups %xmm15,0x20(%rcx)
+ 45aa62c:	83 3d 2d 13 8d 03 00 	cmpl   $0x0,0x38d132d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45aa633:	75 06                	jne    45aa63b <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0xbb>
+ 45aa635:	48 89 41 18          	mov    %rax,0x18(%rcx)
+ 45aa639:	eb 0a                	jmp    45aa645 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base+0xc5>
+ 45aa63b:	48 8d 79 18          	lea    0x18(%rcx),%rdi
+ 45aa63f:	90                   	nop
+ 45aa640:	e8 bb bf 9a fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45aa645:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45aa64a:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45aa64f:	48 8b 02             	mov    (%rdx),%rax
+ 45aa652:	ff d0                	call   *%rax
+ 45aa654:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45aa659:	48 83 c4 40          	add    $0x40,%rsp
+ 45aa65d:	c3                   	ret
+ 45aa65e:	66 90                	xchg   %ax,%ax
+ 45aa660:	e8 fb 18 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45aa665:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45aa66a:	48 83 c4 40          	add    $0x40,%rsp
+ 45aa66e:	c3                   	ret
+ 45aa66f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45aa674:	e8 e7 9d 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45aa679:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45aa67e:	66 90                	xchg   %ax,%ax
+ 45aa680:	e9 fb fe ff ff       	jmp    45aa580 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base>
+ 45aa685:	cc                   	int3
+ 45aa686:	cc                   	int3
+ 45aa687:	cc                   	int3
+ 45aa688:	cc                   	int3
+ 45aa689:	cc                   	int3
+ 45aa68a:	cc                   	int3
+ 45aa68b:	cc                   	int3
+ 45aa68c:	cc                   	int3
+ 45aa68d:	cc                   	int3
+ 45aa68e:	cc                   	int3
+ 45aa68f:	cc                   	int3
+ 45aa690:	cc                   	int3
+ 45aa691:	cc                   	int3
+ 45aa692:	cc                   	int3
+ 45aa693:	cc                   	int3
+ 45aa694:	cc                   	int3
+ 45aa695:	cc                   	int3
+ 45aa696:	cc                   	int3
+ 45aa697:	cc                   	int3
+ 45aa698:	cc                   	int3
+ 45aa699:	cc                   	int3
+ 45aa69a:	cc                   	int3
+ 45aa69b:	cc                   	int3
+ 45aa69c:	cc                   	int3
+ 45aa69d:	cc                   	int3
+ 45aa69e:	cc                   	int3
+ 45aa69f:	cc                   	int3

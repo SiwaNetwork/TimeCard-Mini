@@ -1,0 +1,62 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start
+# addr 0x4b9bbc0 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b9bbc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base>:
+ 4b9bbc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b9bbc4:	0f 86 9c 00 00 00    	jbe    4b9bc66 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0xa6>
+ 4b9bbca:	48 83 ec 18          	sub    $0x18,%rsp
+ 4b9bbce:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4b9bbd3:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4b9bbd8:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4b9bbdd:	0f 1f 00             	nopl   (%rax)
+ 4b9bbe0:	e8 9b 06 00 00       	call   4b9c280 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).ParseConfig@@Base>
+ 4b9bbe5:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bbea:	e8 31 05 00 00       	call   4b9c120 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).VerifyConnectedToDevice@@Base>
+ 4b9bbef:	48 85 c0             	test   %rax,%rax
+ 4b9bbf2:	75 68                	jne    4b9bc5c <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0x9c>
+ 4b9bbf4:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bbf9:	e8 22 e6 ff ff       	call   4b9a220 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).RunAllErrata@@Base>
+ 4b9bbfe:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bc03:	e8 d8 ec ff ff       	call   4b9a8e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).SetSerDesMode@@Base>
+ 4b9bc08:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bc0d:	e8 4e f4 ff ff       	call   4b9b060 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).SetPTPClock@@Base>
+ 4b9bc12:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bc17:	80 78 18 00          	cmpb   $0x0,0x18(%rax)
+ 4b9bc1b:	74 0a                	je     4b9bc27 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0x67>
+ 4b9bc1d:	0f 1f 00             	nopl   (%rax)
+ 4b9bc20:	e8 7b f1 ff ff       	call   4b9ada0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).EnableTransparentClockMode@@Base>
+ 4b9bc25:	eb 05                	jmp    4b9bc2c <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0x6c>
+ 4b9bc27:	e8 d4 f2 ff ff       	call   4b9af00 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).DisableTransparentClockMode@@Base>
+ 4b9bc2c:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4b9bc31:	48 83 78 20 00       	cmpq   $0x0,0x20(%rax)
+ 4b9bc36:	74 0f                	je     4b9bc47 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0x87>
+ 4b9bc38:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4b9bc3d:	0f 1f 00             	nopl   (%rax)
+ 4b9bc40:	e8 3b 00 00 00       	call   4b9bc80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).SetupVlanSeparation@@Base>
+ 4b9bc45:	eb 07                	jmp    4b9bc4e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base+0x8e>
+ 4b9bc47:	31 db                	xor    %ebx,%ebx
+ 4b9bc49:	e8 32 00 00 00       	call   4b9bc80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).SetupVlanSeparation@@Base>
+ 4b9bc4e:	31 c0                	xor    %eax,%eax
+ 4b9bc50:	31 db                	xor    %ebx,%ebx
+ 4b9bc52:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4b9bc57:	48 83 c4 18          	add    $0x18,%rsp
+ 4b9bc5b:	c3                   	ret
+ 4b9bc5c:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4b9bc61:	48 83 c4 18          	add    $0x18,%rsp
+ 4b9bc65:	c3                   	ret
+ 4b9bc66:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b9bc6b:	e8 f0 87 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b9bc70:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b9bc75:	e9 46 ff ff ff       	jmp    4b9bbc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/eth_sw/eth_sw_KSZ9567S.(*EthSwKSZ9567S).Start@@Base>
+ 4b9bc7a:	cc                   	int3
+ 4b9bc7b:	cc                   	int3
+ 4b9bc7c:	cc                   	int3
+ 4b9bc7d:	cc                   	int3
+ 4b9bc7e:	cc                   	int3
+ 4b9bc7f:	cc                   	int3

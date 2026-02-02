@@ -1,0 +1,161 @@
+# github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator
+# addr 0x4bec8a0 size 544 (0x220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004bec8a0 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base>:
+ 4bec8a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4bec8a4:	0f 86 c6 01 00 00    	jbe    4beca70 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x1d0>
+ 4bec8aa:	48 83 ec 40          	sub    $0x40,%rsp
+ 4bec8ae:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4bec8b3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4bec8b8:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4bec8bd:	48 83 3d 7b f8 23 03 	cmpq   $0x0,0x323f87b(%rip)        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 4bec8c4:	00 
+ 4bec8c5:	0f 84 8f 01 00 00    	je     4beca5a <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x1ba>
+ 4bec8cb:	48 83 fb 04          	cmp    $0x4,%rbx
+ 4bec8cf:	0f 8c 6f 01 00 00    	jl     4beca44 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x1a4>
+ 4bec8d5:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4bec8da:	48 8b 08             	mov    (%rax),%rcx
+ 4bec8dd:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4bec8e1:	48 89 c8             	mov    %rcx,%rax
+ 4bec8e4:	e8 17 28 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4bec8e9:	48 85 db             	test   %rbx,%rbx
+ 4bec8ec:	0f 85 29 01 00 00    	jne    4beca1b <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x17b>
+ 4bec8f2:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4bec8f7:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4bec8fc:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4bec900:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 4bec904:	e8 f7 27 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4bec909:	48 85 db             	test   %rbx,%rbx
+ 4bec90c:	0f 85 df 00 00 00    	jne    4bec9f1 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x151>
+ 4bec912:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4bec917:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4bec91c:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4bec920:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 4bec924:	e8 d7 27 38 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4bec929:	48 85 db             	test   %rbx,%rbx
+ 4bec92c:	0f 85 95 00 00 00    	jne    4bec9c7 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x127>
+ 4bec932:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4bec937:	48 8b 72 38          	mov    0x38(%rdx),%rsi
+ 4bec93b:	48 8b 52 30          	mov    0x30(%rdx),%rdx
+ 4bec93f:	90                   	nop
+ 4bec940:	48 83 fe 06          	cmp    $0x6,%rsi
+ 4bec944:	75 10                	jne    4bec956 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xb6>
+ 4bec946:	81 3a 65 6e 61 62    	cmpl   $0x62616e65,(%rdx)
+ 4bec94c:	75 08                	jne    4bec956 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xb6>
+ 4bec94e:	66 81 7a 04 6c 65    	cmpw   $0x656c,0x4(%rdx)
+ 4bec954:	74 38                	je     4bec98e <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xee>
+ 4bec956:	48 83 fe 07          	cmp    $0x7,%rsi
+ 4bec95a:	75 16                	jne    4bec972 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xd2>
+ 4bec95c:	81 3a 64 69 73 61    	cmpl   $0x61736964,(%rdx)
+ 4bec962:	75 0e                	jne    4bec972 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xd2>
+ 4bec964:	66 81 7a 04 62 6c    	cmpw   $0x6c62,0x4(%rdx)
+ 4bec96a:	75 06                	jne    4bec972 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xd2>
+ 4bec96c:	80 7a 06 65          	cmpb   $0x65,0x6(%rdx)
+ 4bec970:	74 16                	je     4bec988 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xe8>
+ 4bec972:	48 8d 05 a8 fe 29 00 	lea    0x29fea8(%rip),%rax        # 4e8c821 <_IO_stdin_used@@Base+0x259821>
+ 4bec979:	bb 76 00 00 00       	mov    $0x76,%ebx
+ 4bec97e:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4bec983:	48 83 c4 40          	add    $0x40,%rsp
+ 4bec987:	c3                   	ret
+ 4bec988:	48 83 fe 06          	cmp    $0x6,%rsi
+ 4bec98c:	eb 04                	jmp    4bec992 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0xf2>
+ 4bec98e:	48 83 fe 06          	cmp    $0x6,%rsi
+ 4bec992:	75 13                	jne    4bec9a7 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x107>
+ 4bec994:	81 3a 65 6e 61 62    	cmpl   $0x62616e65,(%rdx)
+ 4bec99a:	75 0b                	jne    4bec9a7 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x107>
+ 4bec99c:	66 81 7a 04 6c 65    	cmpw   $0x656c,0x4(%rdx)
+ 4bec9a2:	0f 94 c2             	sete   %dl
+ 4bec9a5:	eb 02                	jmp    4bec9a9 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base+0x109>
+ 4bec9a7:	31 d2                	xor    %edx,%edx
+ 4bec9a9:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4bec9ae:	48 89 c1             	mov    %rax,%rcx
+ 4bec9b1:	89 d7                	mov    %edx,%edi
+ 4bec9b3:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4bec9b8:	e8 03 8f 9f ff       	call   45e58c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetPTPClientSimulator@@Base>
+ 4bec9bd:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4bec9c2:	48 83 c4 40          	add    $0x40,%rsp
+ 4bec9c6:	c3                   	ret
+ 4bec9c7:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4bec9cc:	48 8b 7a 20          	mov    0x20(%rdx),%rdi
+ 4bec9d0:	48 8b 72 28          	mov    0x28(%rdx),%rsi
+ 4bec9d4:	31 c0                	xor    %eax,%eax
+ 4bec9d6:	48 8d 1d 07 0f 25 00 	lea    0x250f07(%rip),%rbx        # 4e3d8e4 <_IO_stdin_used@@Base+0x20a8e4>
+ 4bec9dd:	b9 31 00 00 00       	mov    $0x31,%ecx
+ 4bec9e2:	e8 39 d9 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4bec9e7:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4bec9ec:	48 83 c4 40          	add    $0x40,%rsp
+ 4bec9f0:	c3                   	ret
+ 4bec9f1:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4bec9f6:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4bec9fa:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4bec9fe:	31 c0                	xor    %eax,%eax
+ 4beca00:	48 8d 1d 59 dd 1f 00 	lea    0x1fdd59(%rip),%rbx        # 4dea760 <_IO_stdin_used@@Base+0x1b7760>
+ 4beca07:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 4beca0c:	e8 0f d9 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beca11:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4beca16:	48 83 c4 40          	add    $0x40,%rsp
+ 4beca1a:	c3                   	ret
+ 4beca1b:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4beca20:	48 8b 3a             	mov    (%rdx),%rdi
+ 4beca23:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 4beca27:	31 c0                	xor    %eax,%eax
+ 4beca29:	48 8d 1d 95 5c 20 00 	lea    0x205c95(%rip),%rbx        # 4df26c5 <_IO_stdin_used@@Base+0x1bf6c5>
+ 4beca30:	b9 1e 00 00 00       	mov    $0x1e,%ecx
+ 4beca35:	e8 e6 d8 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4beca3a:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4beca3f:	48 83 c4 40          	add    $0x40,%rsp
+ 4beca43:	c3                   	ret
+ 4beca44:	48 8d 05 7b 93 29 00 	lea    0x29937b(%rip),%rax        # 4e85dc6 <_IO_stdin_used@@Base+0x252dc6>
+ 4beca4b:	bb 61 00 00 00       	mov    $0x61,%ebx
+ 4beca50:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4beca55:	48 83 c4 40          	add    $0x40,%rsp
+ 4beca59:	c3                   	ret
+ 4beca5a:	48 8d 05 67 b4 0e 00 	lea    0xeb467(%rip),%rax        # 4cd7ec8 <_IO_stdin_used@@Base+0xa4ec8>
+ 4beca61:	bb 0f 00 00 00       	mov    $0xf,%ebx
+ 4beca66:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4beca6b:	48 83 c4 40          	add    $0x40,%rsp
+ 4beca6f:	c3                   	ret
+ 4beca70:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4beca75:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4beca7a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4beca7f:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4beca84:	e8 d7 79 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4beca89:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4beca8e:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4beca93:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4beca98:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4beca9d:	0f 1f 00             	nopl   (%rax)
+ 4becaa0:	e9 fb fd ff ff       	jmp    4bec8a0 <github.com/lasselj/timebeat/interactive/api.SetPTPClientSimulator@@Base>
+ 4becaa5:	cc                   	int3
+ 4becaa6:	cc                   	int3
+ 4becaa7:	cc                   	int3
+ 4becaa8:	cc                   	int3
+ 4becaa9:	cc                   	int3
+ 4becaaa:	cc                   	int3
+ 4becaab:	cc                   	int3
+ 4becaac:	cc                   	int3
+ 4becaad:	cc                   	int3
+ 4becaae:	cc                   	int3
+ 4becaaf:	cc                   	int3
+ 4becab0:	cc                   	int3
+ 4becab1:	cc                   	int3
+ 4becab2:	cc                   	int3
+ 4becab3:	cc                   	int3
+ 4becab4:	cc                   	int3
+ 4becab5:	cc                   	int3
+ 4becab6:	cc                   	int3
+ 4becab7:	cc                   	int3
+ 4becab8:	cc                   	int3
+ 4becab9:	cc                   	int3
+ 4becaba:	cc                   	int3
+ 4becabb:	cc                   	int3
+ 4becabc:	cc                   	int3
+ 4becabd:	cc                   	int3
+ 4becabe:	cc                   	int3
+ 4becabf:	cc                   	int3

@@ -1,0 +1,44 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).UpdatePPS
+# addr 0x457e9c0 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457e9c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).UpdatePPS@@Base>:
+ 457e9c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457e9c4:	76 5d                	jbe    457ea23 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).UpdatePPS@@Base+0x63>
+ 457e9c6:	48 83 ec 18          	sub    $0x18,%rsp
+ 457e9ca:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 457e9cf:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 457e9d4:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 457e9d9:	88 58 18             	mov    %bl,0x18(%rax)
+ 457e9dc:	48 0f be cb          	movsbq %bl,%rcx
+ 457e9e0:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457e9e3:	f2 0f 2a c9          	cvtsi2sd %ecx,%xmm1
+ 457e9e7:	f2 0f 10 05 51 fb f5 	movsd  0xf5fb51(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 457e9ee:	00 
+ 457e9ef:	e8 2c ae 9e fd       	call   1f69820 <math.pow@@Base>
+ 457e9f4:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 457e9f9:	48 8b 00             	mov    (%rax),%rax
+ 457e9fc:	f2 0f 10 15 94 fa f5 	movsd  0xf5fa94(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457ea03:	00 
+ 457ea04:	f2 0f 5e d0          	divsd  %xmm0,%xmm2
+ 457ea08:	f2 0f 10 05 88 fa f5 	movsd  0xf5fa88(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457ea0f:	00 
+ 457ea10:	f2 0f 5e c2          	divsd  %xmm2,%xmm0
+ 457ea14:	e8 a7 18 00 00       	call   45802c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base>
+ 457ea19:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 457ea1e:	48 83 c4 18          	add    $0x18,%rsp
+ 457ea22:	c3                   	ret
+ 457ea23:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457ea28:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 457ea2c:	e8 2f 5a 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457ea31:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457ea36:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 457ea3b:	eb 83                	jmp    457e9c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).UpdatePPS@@Base>
+ 457ea3d:	cc                   	int3
+ 457ea3e:	cc                   	int3
+ 457ea3f:	cc                   	int3

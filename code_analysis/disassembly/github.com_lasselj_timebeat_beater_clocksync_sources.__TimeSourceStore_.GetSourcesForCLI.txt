@@ -1,0 +1,115 @@
+# github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI
+# addr 0x44122e0 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044122e0 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base>:
+ 44122e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44122e4:	0f 86 75 01 00 00    	jbe    441245f <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0x17f>
+ 44122ea:	48 83 ec 60          	sub    $0x60,%rsp
+ 44122ee:	48 89 6c 24 58       	mov    %rbp,0x58(%rsp)
+ 44122f3:	48 8d 6c 24 58       	lea    0x58(%rsp),%rbp
+ 44122f8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 44122ff:	4c 89 6c 24 50       	mov    %r13,0x50(%rsp)
+ 4412304:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4412309:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 441230e:	44 0f 11 7c 24 20    	movups %xmm15,0x20(%rsp)
+ 4412314:	48 89 c1             	mov    %rax,%rcx
+ 4412317:	31 c0                	xor    %eax,%eax
+ 4412319:	ba 01 00 00 00       	mov    $0x1,%edx
+ 441231e:	f0 0f b1 91 98 00 00 	lock cmpxchg %edx,0x98(%rcx)
+ 4412325:	00 
+ 4412326:	0f 94 c2             	sete   %dl
+ 4412329:	48 8d 81 98 00 00 00 	lea    0x98(%rcx),%rax
+ 4412330:	84 d2                	test   %dl,%dl
+ 4412332:	75 14                	jne    4412348 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0x68>
+ 4412334:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4412339:	e8 02 62 b6 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 441233e:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4412343:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4412348:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 441234e:	48 8d 15 2b 01 00 00 	lea    0x12b(%rip),%rdx        # 4412480 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI.func1@@Base>
+ 4412355:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 441235a:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 441235f:	48 8d 54 24 40       	lea    0x40(%rsp),%rdx
+ 4412364:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 4412369:	c6 44 24 17 01       	movb   $0x1,0x17(%rsp)
+ 441236e:	90                   	nop
+ 441236f:	83 3d ea 95 a6 03 00 	cmpl   $0x0,0x3a695ea(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4412376:	75 0d                	jne    4412385 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0xa5>
+ 4412378:	48 c7 81 a0 00 00 00 	movq   $0x0,0xa0(%rcx)
+ 441237f:	00 00 00 00 
+ 4412383:	eb 0e                	jmp    4412393 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0xb3>
+ 4412385:	48 8d b9 a0 00 00 00 	lea    0xa0(%rcx),%rdi
+ 441238c:	31 d2                	xor    %edx,%edx
+ 441238e:	e8 8d 43 b4 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4412393:	44 0f 11 b9 b0 00 00 	movups %xmm15,0xb0(%rcx)
+ 441239a:	00 
+ 441239b:	83 3d be 95 a6 03 00 	cmpl   $0x0,0x3a695be(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44123a2:	75 0d                	jne    44123b1 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0xd1>
+ 44123a4:	48 c7 81 a8 00 00 00 	movq   $0x0,0xa8(%rcx)
+ 44123ab:	00 00 00 00 
+ 44123af:	eb 0e                	jmp    44123bf <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0xdf>
+ 44123b1:	48 8d b9 a8 00 00 00 	lea    0xa8(%rcx),%rdi
+ 44123b8:	31 d2                	xor    %edx,%edx
+ 44123ba:	e8 61 43 b4 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 44123bf:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 44123c5:	48 8d 15 b4 63 00 00 	lea    0x63b4(%rip),%rdx        # 4418780 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).parseSourceForCLI-fm@@Base>
+ 44123cc:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 44123d1:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 44123d6:	48 8d 41 08          	lea    0x8(%rcx),%rax
+ 44123da:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+ 44123df:	90                   	nop
+ 44123e0:	e8 7b 5b b6 fd       	call   1f77f60 <sync.(*Map).Range@@Base>
+ 44123e5:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 44123ea:	48 8b 91 a8 00 00 00 	mov    0xa8(%rcx),%rdx
+ 44123f1:	48 89 d6             	mov    %rdx,%rsi
+ 44123f4:	48 f7 da             	neg    %rdx
+ 44123f7:	48 8b 89 b0 00 00 00 	mov    0xb0(%rcx),%rcx
+ 44123fe:	66 90                	xchg   %ax,%ax
+ 4412400:	48 39 d1             	cmp    %rdx,%rcx
+ 4412403:	77 2d                	ja     4412432 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0x152>
+ 4412405:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 441240a:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 441240f:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 4412414:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4412419:	48 8b 02             	mov    (%rdx),%rax
+ 441241c:	ff d0                	call   *%rax
+ 441241e:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4412423:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4412428:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 441242d:	48 83 c4 60          	add    $0x60,%rsp
+ 4412431:	c3                   	ret
+ 4412432:	48 85 f6             	test   %rsi,%rsi
+ 4412435:	74 09                	je     4412440 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base+0x160>
+ 4412437:	e8 e4 87 b3 fd       	call   1f4ac20 <runtime.panicunsafestringlen@@Base>
+ 441243c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4412440:	e8 1b 88 b3 fd       	call   1f4ac60 <runtime.panicunsafestringnilptr@@Base>
+ 4412445:	90                   	nop
+ 4412446:	e8 15 9b b0 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 441244b:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4412450:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4412455:	48 8b 6c 24 58       	mov    0x58(%rsp),%rbp
+ 441245a:	48 83 c4 60          	add    $0x60,%rsp
+ 441245e:	c3                   	ret
+ 441245f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4412464:	e8 f7 1f b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4412469:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 441246e:	e9 6d fe ff ff       	jmp    44122e0 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).GetSourcesForCLI@@Base>
+ 4412473:	cc                   	int3
+ 4412474:	cc                   	int3
+ 4412475:	cc                   	int3
+ 4412476:	cc                   	int3
+ 4412477:	cc                   	int3
+ 4412478:	cc                   	int3
+ 4412479:	cc                   	int3
+ 441247a:	cc                   	int3
+ 441247b:	cc                   	int3
+ 441247c:	cc                   	int3
+ 441247d:	cc                   	int3
+ 441247e:	cc                   	int3
+ 441247f:	cc                   	int3

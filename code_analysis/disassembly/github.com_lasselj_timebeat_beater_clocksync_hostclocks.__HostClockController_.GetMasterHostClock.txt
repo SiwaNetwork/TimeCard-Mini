@@ -1,0 +1,66 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock
+# addr 0x4594920 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>:
+ 4594920:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4594924:	0f 86 bb 00 00 00    	jbe    45949e5 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base+0xc5>
+ 459492a:	48 83 ec 48          	sub    $0x48,%rsp
+ 459492e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4594933:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4594938:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459493f:	4c 89 6c 24 38       	mov    %r13,0x38(%rsp)
+ 4594944:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 4594949:	48 c7 44 24 10 00 00 	movq   $0x0,0x10(%rsp)
+ 4594950:	00 00 
+ 4594952:	48 89 c1             	mov    %rax,%rcx
+ 4594955:	31 c0                	xor    %eax,%eax
+ 4594957:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 459495c:	f0 0f b1 59 38       	lock cmpxchg %ebx,0x38(%rcx)
+ 4594961:	0f 94 c3             	sete   %bl
+ 4594964:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 4594968:	84 db                	test   %bl,%bl
+ 459496a:	75 19                	jne    4594985 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base+0x65>
+ 459496c:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 4594971:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4594976:	e8 c5 3b 9e fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 459497b:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4594980:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4594985:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 459498b:	48 8d 1d 6e 00 00 00 	lea    0x6e(%rip),%rbx        # 4594a00 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock.func1@@Base>
+ 4594992:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4594997:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 459499c:	48 8d 44 24 28       	lea    0x28(%rsp),%rax
+ 45949a1:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45949a6:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 45949ab:	48 8b 01             	mov    (%rcx),%rax
+ 45949ae:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 45949b3:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 45949b8:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 45949bd:	48 8b 02             	mov    (%rdx),%rax
+ 45949c0:	ff d0                	call   *%rax
+ 45949c2:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 45949c7:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 45949cc:	48 83 c4 48          	add    $0x48,%rsp
+ 45949d0:	c3                   	ret
+ 45949d1:	e8 8a 75 98 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45949d6:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 45949db:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 45949e0:	48 83 c4 48          	add    $0x48,%rsp
+ 45949e4:	c3                   	ret
+ 45949e5:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45949ea:	e8 71 fa 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45949ef:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45949f4:	e9 27 ff ff ff       	jmp    4594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>
+ 45949f9:	cc                   	int3
+ 45949fa:	cc                   	int3
+ 45949fb:	cc                   	int3
+ 45949fc:	cc                   	int3
+ 45949fd:	cc                   	int3
+ 45949fe:	cc                   	int3
+ 45949ff:	cc                   	int3

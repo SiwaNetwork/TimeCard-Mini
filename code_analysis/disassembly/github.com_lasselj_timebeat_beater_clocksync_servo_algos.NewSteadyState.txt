@@ -1,0 +1,188 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState
+# addr 0x4580820 size 736 (0x2e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004580820 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base>:
+ 4580820:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4580824:	0f 86 6f 02 00 00    	jbe    4580a99 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x279>
+ 458082a:	48 83 ec 78          	sub    $0x78,%rsp
+ 458082e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 4580833:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 4580838:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 458083f:	00 
+ 4580840:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4580847:	00 
+ 4580848:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 458084f:	00 
+ 4580850:	48 89 bc 24 98 00 00 	mov    %rdi,0x98(%rsp)
+ 4580857:	00 
+ 4580858:	48 89 b4 24 a0 00 00 	mov    %rsi,0xa0(%rsp)
+ 458085f:	00 
+ 4580860:	4c 89 84 24 a8 00 00 	mov    %r8,0xa8(%rsp)
+ 4580867:	00 
+ 4580868:	4c 89 8c 24 b0 00 00 	mov    %r9,0xb0(%rsp)
+ 458086f:	00 
+ 4580870:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4580877:	00 
+ 4580878:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 458087f:	00 
+ 4580880:	48 85 c9             	test   %rcx,%rcx
+ 4580883:	0f 8e fc 01 00 00    	jle    4580a85 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x265>
+ 4580889:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 458088e:	48 8d 05 8b 9e 22 01 	lea    0x1229e8b(%rip),%rax        # 57aa720 <type:int64@@Base>
+ 4580895:	48 89 cb             	mov    %rcx,%rbx
+ 4580898:	e8 43 5b 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 458089d:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45808a2:	48 8d 05 f7 53 76 01 	lea    0x17653f7(%rip),%rax        # 5ce5ca0 <type:12mvDR9z@@Base>
+ 45808a9:	e8 32 fc 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45808ae:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45808b3:	48 89 10             	mov    %rdx,(%rax)
+ 45808b6:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 45808ba:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 45808be:	83 3d 9b b0 8f 03 00 	cmpl   $0x0,0x38fb09b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45808c5:	75 0b                	jne    45808d2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0xb2>
+ 45808c7:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45808cc:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 45808d0:	eb 13                	jmp    45808e5 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0xc5>
+ 45808d2:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 45808d6:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45808db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45808e0:	e8 3b 5e 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45808e5:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 45808ec:	00 
+ 45808ed:	48 85 c9             	test   %rcx,%rcx
+ 45808f0:	0f 8e 7b 01 00 00    	jle    4580a71 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x251>
+ 45808f6:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45808fb:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 4580900:	48 8d 05 19 9e 22 01 	lea    0x1229e19(%rip),%rax        # 57aa720 <type:int64@@Base>
+ 4580907:	48 89 cb             	mov    %rcx,%rbx
+ 458090a:	e8 d1 5a 9b fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 458090f:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4580914:	48 8d 05 85 53 76 01 	lea    0x1765385(%rip),%rax        # 5ce5ca0 <type:12mvDR9z@@Base>
+ 458091b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4580920:	e8 bb fb 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4580925:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 458092a:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 458092f:	48 89 10             	mov    %rdx,(%rax)
+ 4580932:	48 89 50 20          	mov    %rdx,0x20(%rax)
+ 4580936:	48 89 50 28          	mov    %rdx,0x28(%rax)
+ 458093a:	83 3d 1f b0 8f 03 00 	cmpl   $0x0,0x38fb01f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4580941:	75 0b                	jne    458094e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x12e>
+ 4580943:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4580948:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 458094c:	eb 0e                	jmp    458095c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x13c>
+ 458094e:	48 8d 78 18          	lea    0x18(%rax),%rdi
+ 4580952:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4580957:	e8 a4 5d 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 458095c:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 4580962:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+ 4580969:	00 
+ 458096a:	48 8b 9c 24 b0 00 00 	mov    0xb0(%rsp),%rbx
+ 4580971:	00 
+ 4580972:	e8 e9 d3 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4580977:	48 8d 0d 22 dd 22 01 	lea    0x122dd22(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458097e:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4580983:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4580988:	48 8d 05 ab d6 6f 00 	lea    0x6fd6ab(%rip),%rax        # 4c7e03a <_IO_stdin_used@@Base+0x4b03a>
+ 458098f:	bb 0e 00 00 00       	mov    $0xe,%ebx
+ 4580994:	48 8d 4c 24 60       	lea    0x60(%rsp),%rcx
+ 4580999:	bf 01 00 00 00       	mov    $0x1,%edi
+ 458099e:	48 89 fe             	mov    %rdi,%rsi
+ 45809a1:	e8 5a 3f a7 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45809a6:	e8 f5 63 e8 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 45809ab:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45809b0:	48 8d 05 a9 f5 79 01 	lea    0x179f5a9(%rip),%rax        # 5d1ff60 <type:iw3GnQma@@Base>
+ 45809b7:	e8 24 fb 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45809bc:	83 3d 9d af 8f 03 00 	cmpl   $0x0,0x38faf9d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45809c3:	75 4c                	jne    4580a11 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x1f1>
+ 45809c5:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45809ca:	48 89 08             	mov    %rcx,(%rax)
+ 45809cd:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 45809d2:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45809d6:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 45809dd:	00 
+ 45809de:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 45809e2:	0f 10 84 24 88 00 00 	movups 0x88(%rsp),%xmm0
+ 45809e9:	00 
+ 45809ea:	0f 11 40 20          	movups %xmm0,0x20(%rax)
+ 45809ee:	0f 10 84 24 98 00 00 	movups 0x98(%rsp),%xmm0
+ 45809f5:	00 
+ 45809f6:	0f 11 40 30          	movups %xmm0,0x30(%rax)
+ 45809fa:	0f 10 84 24 a8 00 00 	movups 0xa8(%rsp),%xmm0
+ 4580a01:	00 
+ 4580a02:	0f 11 40 40          	movups %xmm0,0x40(%rax)
+ 4580a06:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4580a0b:	48 89 48 58          	mov    %rcx,0x58(%rax)
+ 4580a0f:	eb 56                	jmp    4580a67 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base+0x247>
+ 4580a11:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4580a16:	48 89 c7             	mov    %rax,%rdi
+ 4580a19:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4580a1e:	66 90                	xchg   %ax,%ax
+ 4580a20:	e8 fb 5c 9d fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4580a25:	48 8d 50 08          	lea    0x8(%rax),%rdx
+ 4580a29:	48 89 d7             	mov    %rdx,%rdi
+ 4580a2c:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 4580a31:	e8 2a 5d 9d fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 4580a36:	48 8d 58 18          	lea    0x18(%rax),%rbx
+ 4580a3a:	48 8d 8c 24 80 00 00 	lea    0x80(%rsp),%rcx
+ 4580a41:	00 
+ 4580a42:	48 8d 05 57 46 6c 01 	lea    0x16c4657(%rip),%rax        # 5c450a0 <type:MJ7ja03S@@Base>
+ 4580a49:	e8 f2 63 97 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4580a4e:	48 8b 7c 24 48       	mov    0x48(%rsp),%rdi
+ 4580a53:	48 8d 57 58          	lea    0x58(%rdi),%rdx
+ 4580a57:	48 89 f8             	mov    %rdi,%rax
+ 4580a5a:	48 89 d7             	mov    %rdx,%rdi
+ 4580a5d:	48 8b 74 24 50       	mov    0x50(%rsp),%rsi
+ 4580a62:	e8 f9 5c 9d fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 4580a67:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4580a6c:	48 83 c4 78          	add    $0x78,%rsp
+ 4580a70:	c3                   	ret
+ 4580a71:	48 8d 05 28 dc 22 01 	lea    0x122dc28(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580a78:	48 8d 1d 89 27 97 01 	lea    0x1972789(%rip),%rbx        # 5ef3208 <time..dict.leadingInt[string]@@Base+0x2f78>
+ 4580a7f:	90                   	nop
+ 4580a80:	e8 bb c2 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580a85:	48 8d 05 14 dc 22 01 	lea    0x122dc14(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4580a8c:	48 8d 1d 75 27 97 01 	lea    0x1972775(%rip),%rbx        # 5ef3208 <time..dict.leadingInt[string]@@Base+0x2f78>
+ 4580a93:	e8 a8 c2 99 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4580a98:	90                   	nop
+ 4580a99:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4580a9e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4580aa3:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4580aa8:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4580aad:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 4580ab2:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 4580ab7:	4c 89 4c 24 38       	mov    %r9,0x38(%rsp)
+ 4580abc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4580ac0:	e8 9b 39 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4580ac5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4580aca:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4580acf:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4580ad4:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4580ad9:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4580ade:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 4580ae3:	4c 8b 4c 24 38       	mov    0x38(%rsp),%r9
+ 4580ae8:	e9 33 fd ff ff       	jmp    4580820 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewSteadyState@@Base>
+ 4580aed:	cc                   	int3
+ 4580aee:	cc                   	int3
+ 4580aef:	cc                   	int3
+ 4580af0:	cc                   	int3
+ 4580af1:	cc                   	int3
+ 4580af2:	cc                   	int3
+ 4580af3:	cc                   	int3
+ 4580af4:	cc                   	int3
+ 4580af5:	cc                   	int3
+ 4580af6:	cc                   	int3
+ 4580af7:	cc                   	int3
+ 4580af8:	cc                   	int3
+ 4580af9:	cc                   	int3
+ 4580afa:	cc                   	int3
+ 4580afb:	cc                   	int3
+ 4580afc:	cc                   	int3
+ 4580afd:	cc                   	int3
+ 4580afe:	cc                   	int3
+ 4580aff:	cc                   	int3

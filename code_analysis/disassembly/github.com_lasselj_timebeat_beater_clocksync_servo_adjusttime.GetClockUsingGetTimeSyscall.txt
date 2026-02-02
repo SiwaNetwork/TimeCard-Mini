@@ -1,0 +1,108 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall
+# addr 0x44195a0 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044195a0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base>:
+ 44195a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44195a4:	0f 86 52 01 00 00    	jbe    44196fc <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x15c>
+ 44195aa:	48 83 ec 78          	sub    $0x78,%rsp
+ 44195ae:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 44195b3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 44195b8:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 44195bd:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 44195c3:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 44195c8:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 44195cd:	48 89 c3             	mov    %rax,%rbx
+ 44195d0:	31 ff                	xor    %edi,%edi
+ 44195d2:	b8 e4 00 00 00       	mov    $0xe4,%eax
+ 44195d7:	e8 24 5d ba fd       	call   1fbf300 <syscall.Syscall@@Base>
+ 44195dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44195e0:	48 85 c9             	test   %rcx,%rcx
+ 44195e3:	0f 84 86 00 00 00    	je     441966f <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0xcf>
+ 44195e9:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 44195ee:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 44195f4:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 44195fa:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 44195ff:	90                   	nop
+ 4419600:	e8 db 46 ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4419605:	48 8d 0d 54 10 39 01 	lea    0x1391054(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 441960c:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4419611:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4419616:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 441961b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4419620:	e8 bb 46 ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4419625:	48 8d 0d 34 10 39 01 	lea    0x1391034(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 441962c:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4419631:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4419636:	48 8d 05 2e cd a0 00 	lea    0xa0cd2e(%rip),%rax        # 4e2636b <_IO_stdin_used@@Base+0x1f336b>
+ 441963d:	bb 2c 00 00 00       	mov    $0x2c,%ebx
+ 4419642:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4419647:	bf 02 00 00 00       	mov    $0x2,%edi
+ 441964c:	48 89 fe             	mov    %rdi,%rsi
+ 441964f:	e8 ac b2 bd fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4419654:	48 8b 0d 25 2c a1 03 	mov    0x3a12c25(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 441965b:	48 89 c2             	mov    %rax,%rdx
+ 441965e:	48 89 c8             	mov    %rcx,%rax
+ 4419661:	48 89 de             	mov    %rbx,%rsi
+ 4419664:	48 89 d3             	mov    %rdx,%rbx
+ 4419667:	48 89 f1             	mov    %rsi,%rcx
+ 441966a:	e8 f1 d9 fe ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 441966f:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4419674:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+ 4419679:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4419680:	48 81 fe 00 ca 9a 3b 	cmp    $0x3b9aca00,%rsi
+ 4419687:	72 4b                	jb     44196d4 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x134>
+ 4419689:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 4419690:	2f b8 44 
+ 4419693:	48 89 d1             	mov    %rdx,%rcx
+ 4419696:	48 f7 ee             	imul   %rsi
+ 4419699:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 441969d:	48 89 f7             	mov    %rsi,%rdi
+ 44196a0:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 44196a4:	48 29 f2             	sub    %rsi,%rdx
+ 44196a7:	4c 8d 04 11          	lea    (%rcx,%rdx,1),%r8
+ 44196ab:	4c 69 ca 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r9
+ 44196b2:	4c 29 cf             	sub    %r9,%rdi
+ 44196b5:	4c 8d 0c 0a          	lea    (%rdx,%rcx,1),%r9
+ 44196b9:	4d 8d 49 ff          	lea    -0x1(%r9),%r9
+ 44196bd:	48 85 ff             	test   %rdi,%rdi
+ 44196c0:	4d 0f 4c c1          	cmovl  %r9,%r8
+ 44196c4:	4c 8d 8f 00 ca 9a 3b 	lea    0x3b9aca00(%rdi),%r9
+ 44196cb:	48 85 ff             	test   %rdi,%rdi
+ 44196ce:	49 0f 4c f9          	cmovl  %r9,%rdi
+ 44196d2:	eb 06                	jmp    44196da <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base+0x13a>
+ 44196d4:	49 89 d0             	mov    %rdx,%r8
+ 44196d7:	48 89 f7             	mov    %rsi,%rdi
+ 44196da:	48 63 c7             	movslq %edi,%rax
+ 44196dd:	48 ba 00 f7 91 77 0e 	movabs $0xe7791f700,%rdx
+ 44196e4:	00 00 00 
+ 44196e7:	4a 8d 1c 02          	lea    (%rdx,%r8,1),%rbx
+ 44196eb:	48 8b 0d 06 58 56 03 	mov    0x3565806(%rip),%rcx        # 797eef8 <time.Local@@Base>
+ 44196f2:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 44196f7:	48 83 c4 78          	add    $0x78,%rsp
+ 44196fb:	c3                   	ret
+ 44196fc:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4419701:	e8 5a ad b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4419706:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 441970b:	e9 90 fe ff ff       	jmp    44195a0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetClockUsingGetTimeSyscall@@Base>
+ 4419710:	cc                   	int3
+ 4419711:	cc                   	int3
+ 4419712:	cc                   	int3
+ 4419713:	cc                   	int3
+ 4419714:	cc                   	int3
+ 4419715:	cc                   	int3
+ 4419716:	cc                   	int3
+ 4419717:	cc                   	int3
+ 4419718:	cc                   	int3
+ 4419719:	cc                   	int3
+ 441971a:	cc                   	int3
+ 441971b:	cc                   	int3
+ 441971c:	cc                   	int3
+ 441971d:	cc                   	int3
+ 441971e:	cc                   	int3
+ 441971f:	cc                   	int3

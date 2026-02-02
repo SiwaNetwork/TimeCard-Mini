@@ -1,0 +1,90 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals
+# addr 0x45cacc0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045cacc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals@@Base>:
+ 45cacc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45cacc4:	0f 86 e5 00 00 00    	jbe    45cadaf <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals@@Base+0xef>
+ 45cacca:	48 83 ec 40          	sub    $0x40,%rsp
+ 45cacce:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45cacd3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45cacd8:	0f b6 90 7a 03 00 00 	movzbl 0x37a(%rax),%edx
+ 45cacdf:	88 90 40 02 00 00    	mov    %dl,0x240(%rax)
+ 45cace5:	0f b6 90 7b 03 00 00 	movzbl 0x37b(%rax),%edx
+ 45cacec:	88 90 80 01 00 00    	mov    %dl,0x180(%rax)
+ 45cacf2:	0f b6 90 7b 03 00 00 	movzbl 0x37b(%rax),%edx
+ 45cacf9:	83 c2 05             	add    $0x5,%edx
+ 45cacfc:	0f b6 b0 7c 03 00 00 	movzbl 0x37c(%rax),%esi
+ 45cad03:	40 38 d6             	cmp    %dl,%sil
+ 45cad06:	7f 0c                	jg     45cad14 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals@@Base+0x54>
+ 45cad08:	40 88 b0 00 02 00 00 	mov    %sil,0x200(%rax)
+ 45cad0f:	e9 91 00 00 00       	jmp    45cada5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals@@Base+0xe5>
+ 45cad14:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45cad19:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 45cad1d:	48 8d 1d 51 7f 8b 00 	lea    0x8b7f51(%rip),%rbx        # 4e82c75 <_IO_stdin_used@@Base+0x24fc75>
+ 45cad24:	b9 5a 00 00 00       	mov    $0x5a,%ecx
+ 45cad29:	48 89 d0             	mov    %rdx,%rax
+ 45cad2c:	e8 6f c4 e3 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45cad31:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45cad36:	0f b6 b2 7b 03 00 00 	movzbl 0x37b(%rdx),%esi
+ 45cad3d:	83 c6 05             	add    $0x5,%esi
+ 45cad40:	40 88 b2 00 02 00 00 	mov    %sil,0x200(%rdx)
+ 45cad47:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 45cad4d:	0f b6 b2 00 02 00 00 	movzbl 0x200(%rdx),%esi
+ 45cad54:	48 8d 3d 05 fa 1d 01 	lea    0x11dfa05(%rip),%rdi        # 57aa760 <type:int8@@Base>
+ 45cad5b:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+ 45cad60:	48 8d 3d b9 13 6a 03 	lea    0x36a13b9(%rip),%rdi        # 7c6c120 <runtime.staticuint64s@@Base>
+ 45cad67:	48 8d 34 f7          	lea    (%rdi,%rsi,8),%rsi
+ 45cad6b:	48 89 74 24 30       	mov    %rsi,0x30(%rsp)
+ 45cad70:	48 8d 05 f3 52 84 00 	lea    0x8452f3(%rip),%rax        # 4e1006a <_IO_stdin_used@@Base+0x1dd06a>
+ 45cad77:	bb 26 00 00 00       	mov    $0x26,%ebx
+ 45cad7c:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 45cad81:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45cad86:	48 89 fe             	mov    %rdi,%rsi
+ 45cad89:	e8 72 9b a2 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45cad8e:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45cad93:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 45cad97:	48 89 d9             	mov    %rbx,%rcx
+ 45cad9a:	48 89 c3             	mov    %rax,%rbx
+ 45cad9d:	48 89 d0             	mov    %rdx,%rax
+ 45cada0:	e8 fb c3 e3 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45cada5:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45cadaa:	48 83 c4 40          	add    $0x40,%rsp
+ 45cadae:	c3                   	ret
+ 45cadaf:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45cadb4:	e8 a7 96 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45cadb9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45cadbe:	66 90                	xchg   %ax,%ax
+ 45cadc0:	e9 fb fe ff ff       	jmp    45cacc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/server.(*Server).setIntervals@@Base>
+ 45cadc5:	cc                   	int3
+ 45cadc6:	cc                   	int3
+ 45cadc7:	cc                   	int3
+ 45cadc8:	cc                   	int3
+ 45cadc9:	cc                   	int3
+ 45cadca:	cc                   	int3
+ 45cadcb:	cc                   	int3
+ 45cadcc:	cc                   	int3
+ 45cadcd:	cc                   	int3
+ 45cadce:	cc                   	int3
+ 45cadcf:	cc                   	int3
+ 45cadd0:	cc                   	int3
+ 45cadd1:	cc                   	int3
+ 45cadd2:	cc                   	int3
+ 45cadd3:	cc                   	int3
+ 45cadd4:	cc                   	int3
+ 45cadd5:	cc                   	int3
+ 45cadd6:	cc                   	int3
+ 45cadd7:	cc                   	int3
+ 45cadd8:	cc                   	int3
+ 45cadd9:	cc                   	int3
+ 45cadda:	cc                   	int3
+ 45caddb:	cc                   	int3
+ 45caddc:	cc                   	int3
+ 45caddd:	cc                   	int3
+ 45cadde:	cc                   	int3
+ 45caddf:	cc                   	int3

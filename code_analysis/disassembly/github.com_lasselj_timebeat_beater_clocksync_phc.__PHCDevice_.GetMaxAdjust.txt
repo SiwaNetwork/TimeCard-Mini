@@ -1,0 +1,66 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust
+# addr 0x4586b60 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004586b60 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base>:
+ 4586b60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4586b64:	0f 86 95 00 00 00    	jbe    4586bff <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base+0x9f>
+ 4586b6a:	48 83 ec 10          	sub    $0x10,%rsp
+ 4586b6e:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 4586b73:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 4586b78:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4586b7d:	0f 1f 00             	nopl   (%rax)
+ 4586b80:	e8 bb 0a 00 00       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4586b85:	48 83 fb 06          	cmp    $0x6,%rbx
+ 4586b89:	75 24                	jne    4586baf <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base+0x4f>
+ 4586b8b:	81 38 73 79 73 74    	cmpl   $0x74737973,(%rax)
+ 4586b91:	75 1c                	jne    4586baf <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base+0x4f>
+ 4586b93:	66 81 78 04 65 6d    	cmpw   $0x6d65,0x4(%rax)
+ 4586b99:	75 14                	jne    4586baf <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base+0x4f>
+ 4586b9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4586ba0:	e8 9b 1e e9 ff       	call   4418a40 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetSystemClockMaxFrequency@@Base>
+ 4586ba5:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4586baa:	48 83 c4 10          	add    $0x10,%rsp
+ 4586bae:	c3                   	ret
+ 4586baf:	e8 cc b7 ff ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 4586bb4:	80 b8 88 00 00 00 00 	cmpb   $0x0,0x88(%rax)
+ 4586bbb:	74 2f                	je     4586bec <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base+0x8c>
+ 4586bbd:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4586bc2:	48 63 49 70          	movslq 0x70(%rcx),%rcx
+ 4586bc6:	48 b8 cd cc cc cc cc 	movabs $0xcccccccccccccccd,%rax
+ 4586bcd:	cc cc cc 
+ 4586bd0:	48 f7 e9             	imul   %rcx
+ 4586bd3:	48 8d 04 0a          	lea    (%rdx,%rcx,1),%rax
+ 4586bd7:	48 c1 f8 04          	sar    $0x4,%rax
+ 4586bdb:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 4586bdf:	48 29 c8             	sub    %rcx,%rax
+ 4586be2:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4586be7:	48 83 c4 10          	add    $0x10,%rsp
+ 4586beb:	c3                   	ret
+ 4586bec:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4586bf1:	48 63 41 70          	movslq 0x70(%rcx),%rax
+ 4586bf5:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4586bfa:	48 83 c4 10          	add    $0x10,%rsp
+ 4586bfe:	c3                   	ret
+ 4586bff:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4586c04:	e8 57 d8 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4586c09:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4586c0e:	e9 4d ff ff ff       	jmp    4586b60 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetMaxAdjust@@Base>
+ 4586c13:	cc                   	int3
+ 4586c14:	cc                   	int3
+ 4586c15:	cc                   	int3
+ 4586c16:	cc                   	int3
+ 4586c17:	cc                   	int3
+ 4586c18:	cc                   	int3
+ 4586c19:	cc                   	int3
+ 4586c1a:	cc                   	int3
+ 4586c1b:	cc                   	int3
+ 4586c1c:	cc                   	int3
+ 4586c1d:	cc                   	int3
+ 4586c1e:	cc                   	int3
+ 4586c1f:	cc                   	int3

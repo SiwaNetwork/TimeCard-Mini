@@ -1,0 +1,72 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption
+# addr 0x459ccc0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459ccc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base>:
+ 459ccc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459ccc4:	0f 86 b9 00 00 00    	jbe    459cd83 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base+0xc3>
+ 459ccca:	48 83 ec 48          	sub    $0x48,%rsp
+ 459ccce:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 459ccd3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 459ccd8:	48 8b 15 59 81 8a 03 	mov    0x38a8159(%rip),%rdx        # 7e44e38 <github.com/lasselj/timebeat/config.appConfig@@Base+0x258>
+ 459ccdf:	90                   	nop
+ 459cce0:	48 83 fa 01          	cmp    $0x1,%rdx
+ 459cce4:	74 24                	je     459cd0a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base+0x4a>
+ 459cce6:	90                   	nop
+ 459cce7:	89 54 24 2c          	mov    %edx,0x2c(%rsp)
+ 459cceb:	31 db                	xor    %ebx,%ebx
+ 459cced:	b9 21 00 00 00       	mov    $0x21,%ecx
+ 459ccf2:	48 8d 7c 24 2c       	lea    0x2c(%rsp),%rdi
+ 459ccf7:	be 04 00 00 00       	mov    $0x4,%esi
+ 459ccfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459cd00:	e8 5b 1b a2 fd       	call   1fbe860 <syscall.setsockopt@@Base>
+ 459cd05:	48 85 c0             	test   %rax,%rax
+ 459cd08:	75 0e                	jne    459cd18 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base+0x58>
+ 459cd0a:	31 c0                	xor    %eax,%eax
+ 459cd0c:	31 db                	xor    %ebx,%ebx
+ 459cd0e:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459cd13:	48 83 c4 48          	add    $0x48,%rsp
+ 459cd17:	c3                   	ret
+ 459cd18:	48 8d 05 2a b7 85 00 	lea    0x85b72a(%rip),%rax        # 4df8449 <_IO_stdin_used@@Base+0x1c5449>
+ 459cd1f:	bb 20 00 00 00       	mov    $0x20,%ebx
+ 459cd24:	31 c9                	xor    %ecx,%ecx
+ 459cd26:	31 ff                	xor    %edi,%edi
+ 459cd28:	48 89 fe             	mov    %rdi,%rsi
+ 459cd2b:	e8 d0 7b a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459cd30:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 459cd35:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 459cd3a:	48 8d 05 bf 75 4d 01 	lea    0x14d75bf(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459cd41:	e8 9a 37 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459cd46:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459cd4b:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 459cd4f:	83 3d 0a ec 8d 03 00 	cmpl   $0x0,0x38dec0a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459cd56:	75 0a                	jne    459cd62 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base+0xa2>
+ 459cd58:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 459cd5d:	48 89 08             	mov    %rcx,(%rax)
+ 459cd60:	eb 0d                	jmp    459cd6f <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base+0xaf>
+ 459cd62:	48 89 c7             	mov    %rax,%rdi
+ 459cd65:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 459cd6a:	e8 91 99 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459cd6f:	48 89 c3             	mov    %rax,%rbx
+ 459cd72:	48 8d 05 47 11 96 01 	lea    0x1961147(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459cd79:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459cd7e:	48 83 c4 48          	add    $0x48,%rsp
+ 459cd82:	c3                   	ret
+ 459cd83:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459cd88:	e8 d3 76 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459cd8d:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459cd92:	e9 29 ff ff ff       	jmp    459ccc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetMulticastTTLOption@@Base>
+ 459cd97:	cc                   	int3
+ 459cd98:	cc                   	int3
+ 459cd99:	cc                   	int3
+ 459cd9a:	cc                   	int3
+ 459cd9b:	cc                   	int3
+ 459cd9c:	cc                   	int3
+ 459cd9d:	cc                   	int3
+ 459cd9e:	cc                   	int3
+ 459cd9f:	cc                   	int3

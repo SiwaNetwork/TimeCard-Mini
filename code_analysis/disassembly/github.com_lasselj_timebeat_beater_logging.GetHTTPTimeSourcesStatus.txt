@@ -1,0 +1,65 @@
+# github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus
+# addr 0x440a560 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000440a560 <github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus@@Base>:
+ 440a560:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 440a564:	0f 86 eb 00 00 00    	jbe    440a655 <github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus@@Base+0xf5>
+ 440a56a:	48 83 ec 48          	sub    $0x48,%rsp
+ 440a56e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 440a573:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 440a578:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 440a57f:	4c 89 6c 24 38       	mov    %r13,0x38(%rsp)
+ 440a584:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a589:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 440a590:	00 00 
+ 440a592:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 440a598:	90                   	nop
+ 440a599:	31 c0                	xor    %eax,%eax
+ 440a59b:	48 8d 0d de 06 a7 03 	lea    0x3a706de(%rip),%rcx        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a5a2:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 440a5a7:	f0 0f b1 19          	lock cmpxchg %ebx,(%rcx)
+ 440a5ab:	0f 94 c1             	sete   %cl
+ 440a5ae:	84 c9                	test   %cl,%cl
+ 440a5b0:	75 0c                	jne    440a5be <github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus@@Base+0x5e>
+ 440a5b2:	48 8d 05 c7 06 a7 03 	lea    0x3a706c7(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a5b9:	e8 82 df b6 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 440a5be:	44 0f 11 7c 24 10    	movups %xmm15,0x10(%rsp)
+ 440a5c4:	48 8d 05 95 00 00 00 	lea    0x95(%rip),%rax        # 440a660 <github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus.func1@@Base>
+ 440a5cb:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 440a5d0:	48 8d 05 a9 06 a7 03 	lea    0x3a706a9(%rip),%rax        # 7e7ac80 <github.com/lasselj/timebeat/beater/logging.httpLock@@Base>
+ 440a5d7:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 440a5dc:	48 8d 44 24 10       	lea    0x10(%rsp),%rax
+ 440a5e1:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 440a5e6:	c6 44 24 0f 01       	movb   $0x1,0xf(%rsp)
+ 440a5eb:	48 8b 05 0e bf a2 03 	mov    0x3a2bf0e(%rip),%rax        # 7e36500 <github.com/lasselj/timebeat/beater/logging.timeSourcesStatus@@Base>
+ 440a5f2:	48 8b 0d 0f bf a2 03 	mov    0x3a2bf0f(%rip),%rcx        # 7e36508 <github.com/lasselj/timebeat/beater/logging.timeSourcesStatus@@Base+0x8>
+ 440a5f9:	48 8b 1d 10 bf a2 03 	mov    0x3a2bf10(%rip),%rbx        # 7e36510 <github.com/lasselj/timebeat/beater/logging.timeSourcesStatus@@Base+0x10>
+ 440a600:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 440a605:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 440a60a:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 440a60f:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 440a614:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 440a619:	48 8b 02             	mov    (%rdx),%rax
+ 440a61c:	ff d0                	call   *%rax
+ 440a61e:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 440a623:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 440a628:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 440a62d:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a632:	48 83 c4 48          	add    $0x48,%rsp
+ 440a636:	c3                   	ret
+ 440a637:	e8 24 19 b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 440a63c:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 440a641:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 440a646:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 440a64b:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 440a650:	48 83 c4 48          	add    $0x48,%rsp
+ 440a654:	c3                   	ret
+ 440a655:	e8 06 9e b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440a65a:	e9 01 ff ff ff       	jmp    440a560 <github.com/lasselj/timebeat/beater/logging.GetHTTPTimeSourcesStatus@@Base>
+ 440a65f:	cc                   	int3

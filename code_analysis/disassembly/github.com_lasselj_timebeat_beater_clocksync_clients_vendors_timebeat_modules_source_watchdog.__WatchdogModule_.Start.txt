@@ -1,0 +1,63 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start
+# addr 0x4b6fca0 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b6fca0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base>:
+ 4b6fca0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b6fca4:	0f 86 97 00 00 00    	jbe    4b6fd41 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base+0xa1>
+ 4b6fcaa:	48 83 ec 20          	sub    $0x20,%rsp
+ 4b6fcae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4b6fcb3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4b6fcb8:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4b6fcbd:	48 b8 00 58 47 f8 0d 	movabs $0xdf8475800,%rax
+ 4b6fcc4:	00 00 00 
+ 4b6fcc7:	e8 14 35 3e fd       	call   1f531e0 <time.Sleep@@Base>
+ 4b6fccc:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6fcd1:	48 83 39 00          	cmpq   $0x0,(%rcx)
+ 4b6fcd5:	74 4a                	je     4b6fd21 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base+0x81>
+ 4b6fcd7:	48 8d 05 02 de f4 00 	lea    0xf4de02(%rip),%rax        # 5abdae0 <type:6v+8fSoy@@Base>
+ 4b6fcde:	66 90                	xchg   %ax,%ax
+ 4b6fce0:	e8 fb 07 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b6fce5:	48 8d 0d 74 00 00 00 	lea    0x74(%rip),%rcx        # 4b6fd60 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start.func1@@Base>
+ 4b6fcec:	48 89 08             	mov    %rcx,(%rax)
+ 4b6fcef:	83 3d 6a bc 30 03 00 	cmpl   $0x0,0x330bc6a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b6fcf6:	75 0b                	jne    4b6fd03 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base+0x63>
+ 4b6fcf8:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6fcfd:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b6fd01:	eb 0e                	jmp    4b6fd11 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base+0x71>
+ 4b6fd03:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b6fd07:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6fd0c:	e8 ef 69 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b6fd11:	e8 4a 8e 3b fd       	call   1f28b60 <runtime.newproc@@Base>
+ 4b6fd16:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4b6fd1b:	48 83 c4 20          	add    $0x20,%rsp
+ 4b6fd1f:	90                   	nop
+ 4b6fd20:	c3                   	ret
+ 4b6fd21:	48 8b 41 18          	mov    0x18(%rcx),%rax
+ 4b6fd25:	48 8d 1d f6 2f 2d 00 	lea    0x2d2ff6(%rip),%rbx        # 4e42d22 <_IO_stdin_used@@Base+0x20fd22>
+ 4b6fd2c:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 4b6fd31:	e8 6a 74 89 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 4b6fd36:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4b6fd3b:	48 83 c4 20          	add    $0x20,%rsp
+ 4b6fd3f:	90                   	nop
+ 4b6fd40:	c3                   	ret
+ 4b6fd41:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6fd46:	e8 15 47 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6fd4b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b6fd50:	e9 4b ff ff ff       	jmp    4b6fca0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/modules/source_watchdog.(*WatchdogModule).Start@@Base>
+ 4b6fd55:	cc                   	int3
+ 4b6fd56:	cc                   	int3
+ 4b6fd57:	cc                   	int3
+ 4b6fd58:	cc                   	int3
+ 4b6fd59:	cc                   	int3
+ 4b6fd5a:	cc                   	int3
+ 4b6fd5b:	cc                   	int3
+ 4b6fd5c:	cc                   	int3
+ 4b6fd5d:	cc                   	int3
+ 4b6fd5e:	cc                   	int3
+ 4b6fd5f:	cc                   	int3

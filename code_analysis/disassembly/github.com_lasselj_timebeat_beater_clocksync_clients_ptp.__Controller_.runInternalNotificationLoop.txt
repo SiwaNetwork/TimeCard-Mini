@@ -1,0 +1,88 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop
+# addr 0x45ea620 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ea620 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base>:
+ 45ea620:	4c 8d 64 24 e8       	lea    -0x18(%rsp),%r12
+ 45ea625:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45ea629:	0f 86 15 01 00 00    	jbe    45ea744 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0x124>
+ 45ea62f:	48 81 ec 98 00 00 00 	sub    $0x98,%rsp
+ 45ea636:	48 89 ac 24 90 00 00 	mov    %rbp,0x90(%rsp)
+ 45ea63d:	00 
+ 45ea63e:	48 8d ac 24 90 00 00 	lea    0x90(%rsp),%rbp
+ 45ea645:	00 
+ 45ea646:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+ 45ea64d:	00 
+ 45ea64e:	e8 2d 61 fb ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 45ea653:	48 8b 40 20          	mov    0x20(%rax),%rax
+ 45ea657:	48 8d 1d 66 77 6e 00 	lea    0x6e7766(%rip),%rbx        # 4cd1dc4 <_IO_stdin_used@@Base+0x9edc4>
+ 45ea65e:	b9 0e 00 00 00       	mov    $0xe,%ecx
+ 45ea663:	e8 b8 51 fb ff       	call   459f820 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Subscribe@@Base>
+ 45ea668:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45ea66d:	e8 4e a2 fa ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45ea672:	48 8b 80 98 00 00 00 	mov    0x98(%rax),%rax
+ 45ea679:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45ea67e:	66 90                	xchg   %ax,%ax
+ 45ea680:	eb 05                	jmp    45ea687 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0x67>
+ 45ea682:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45ea687:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 45ea68e:	00 
+ 45ea68f:	4c 8b 0a             	mov    (%rdx),%r9
+ 45ea692:	48 c7 44 24 58 00 00 	movq   $0x0,0x58(%rsp)
+ 45ea699:	00 00 
+ 45ea69b:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 45ea6a1:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 45ea6a7:	44 0f 11 bc 24 80 00 	movups %xmm15,0x80(%rsp)
+ 45ea6ae:	00 00 
+ 45ea6b0:	4c 89 8c 24 80 00 00 	mov    %r9,0x80(%rsp)
+ 45ea6b7:	00 
+ 45ea6b8:	4c 8b 4c 24 50       	mov    0x50(%rsp),%r9
+ 45ea6bd:	4c 89 4c 24 70       	mov    %r9,0x70(%rsp)
+ 45ea6c2:	4c 8d 54 24 58       	lea    0x58(%rsp),%r10
+ 45ea6c7:	4c 89 54 24 78       	mov    %r10,0x78(%rsp)
+ 45ea6cc:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45ea6d1:	4c 8d 54 24 30       	lea    0x30(%rsp),%r10
+ 45ea6d6:	4c 89 54 24 68       	mov    %r10,0x68(%rsp)
+ 45ea6db:	48 8d 5c 24 3c       	lea    0x3c(%rsp),%rbx
+ 45ea6e0:	31 c9                	xor    %ecx,%ecx
+ 45ea6e2:	31 ff                	xor    %edi,%edi
+ 45ea6e4:	be 03 00 00 00       	mov    $0x3,%esi
+ 45ea6e9:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45ea6ef:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+ 45ea6f4:	e8 c7 64 94 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45ea6f9:	48 85 c0             	test   %rax,%rax
+ 45ea6fc:	74 1f                	je     45ea71d <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0xfd>
+ 45ea6fe:	66 90                	xchg   %ax,%ax
+ 45ea700:	48 83 f8 01          	cmp    $0x1,%rax
+ 45ea704:	75 2e                	jne    45ea734 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0x114>
+ 45ea706:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 45ea70b:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+ 45ea712:	00 
+ 45ea713:	e8 48 00 00 00       	call   45ea760 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).ProcessClockQualityUpdate@@Base>
+ 45ea718:	e9 65 ff ff ff       	jmp    45ea682 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0x62>
+ 45ea71d:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45ea722:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+ 45ea729:	00 
+ 45ea72a:	e8 51 01 00 00       	call   45ea880 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).ProcessTAINotificationUpdate@@Base>
+ 45ea72f:	e9 4e ff ff ff       	jmp    45ea682 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base+0x62>
+ 45ea734:	48 8b ac 24 90 00 00 	mov    0x90(%rsp),%rbp
+ 45ea73b:	00 
+ 45ea73c:	48 81 c4 98 00 00 00 	add    $0x98,%rsp
+ 45ea743:	c3                   	ret
+ 45ea744:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ea749:	e8 12 9d 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ea74e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ea753:	e9 c8 fe ff ff       	jmp    45ea620 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.(*Controller).runInternalNotificationLoop@@Base>
+ 45ea758:	cc                   	int3
+ 45ea759:	cc                   	int3
+ 45ea75a:	cc                   	int3
+ 45ea75b:	cc                   	int3
+ 45ea75c:	cc                   	int3
+ 45ea75d:	cc                   	int3
+ 45ea75e:	cc                   	int3
+ 45ea75f:	cc                   	int3

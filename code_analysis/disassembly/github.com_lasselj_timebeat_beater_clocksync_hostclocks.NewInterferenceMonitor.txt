@@ -1,0 +1,95 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor
+# addr 0x4596c20 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004596c20 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base>:
+ 4596c20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4596c24:	0f 86 ce 00 00 00    	jbe    4596cf8 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0xd8>
+ 4596c2a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4596c2e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4596c33:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4596c38:	88 44 24 40          	mov    %al,0x40(%rsp)
+ 4596c3c:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4596c41:	48 89 7c 24 58       	mov    %rdi,0x58(%rsp)
+ 4596c46:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4596c4b:	48 89 fe             	mov    %rdi,%rsi
+ 4596c4e:	48 89 cf             	mov    %rcx,%rdi
+ 4596c51:	b9 15 00 00 00       	mov    $0x15,%ecx
+ 4596c56:	31 c0                	xor    %eax,%eax
+ 4596c58:	48 8d 1d 5c 55 83 00 	lea    0x83555c(%rip),%rbx        # 4dcc1bb <_IO_stdin_used@@Base+0x1991bb>
+ 4596c5f:	90                   	nop
+ 4596c60:	e8 bb 36 9a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4596c65:	e8 36 01 e7 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 4596c6a:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4596c6f:	48 8d 05 2a 85 7c 01 	lea    0x17c852a(%rip),%rax        # 5d5f1a0 <type:kUfzj4qA@@Base>
+ 4596c76:	e8 65 98 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4596c7b:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4596c80:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4596c84:	c6 00 01             	movb   $0x1,(%rax)
+ 4596c87:	83 3d d2 4c 8e 03 00 	cmpl   $0x0,0x38e4cd2(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4596c8e:	75 0b                	jne    4596c9b <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0x7b>
+ 4596c90:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4596c95:	48 89 48 30          	mov    %rcx,0x30(%rax)
+ 4596c99:	eb 0e                	jmp    4596ca9 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0x89>
+ 4596c9b:	48 8d 78 30          	lea    0x30(%rax),%rdi
+ 4596c9f:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4596ca4:	e8 57 fa 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4596ca9:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4596cae:	48 89 48 40          	mov    %rcx,0x40(%rax)
+ 4596cb2:	83 3d a7 4c 8e 03 00 	cmpl   $0x0,0x38e4ca7(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4596cb9:	75 0b                	jne    4596cc6 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0xa6>
+ 4596cbb:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4596cc0:	48 89 48 38          	mov    %rcx,0x38(%rax)
+ 4596cc4:	eb 0e                	jmp    4596cd4 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0xb4>
+ 4596cc6:	48 8d 78 38          	lea    0x38(%rax),%rdi
+ 4596cca:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4596ccf:	e8 2c fa 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4596cd4:	c6 40 48 00          	movb   $0x0,0x48(%rax)
+ 4596cd8:	0f b6 4c 24 40       	movzbl 0x40(%rsp),%ecx
+ 4596cdd:	0f 1f 00             	nopl   (%rax)
+ 4596ce0:	84 c9                	test   %cl,%cl
+ 4596ce2:	74 06                	je     4596cea <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0xca>
+ 4596ce4:	c6 40 10 00          	movb   $0x0,0x10(%rax)
+ 4596ce8:	eb 04                	jmp    4596cee <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base+0xce>
+ 4596cea:	c6 40 10 01          	movb   $0x1,0x10(%rax)
+ 4596cee:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4596cf3:	48 83 c4 38          	add    $0x38,%rsp
+ 4596cf7:	c3                   	ret
+ 4596cf8:	88 44 24 08          	mov    %al,0x8(%rsp)
+ 4596cfc:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4596d01:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4596d06:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4596d0b:	e8 50 d7 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4596d10:	0f b6 44 24 08       	movzbl 0x8(%rsp),%eax
+ 4596d15:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4596d1a:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4596d1f:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4596d24:	e9 f7 fe ff ff       	jmp    4596c20 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.NewInterferenceMonitor@@Base>
+ 4596d29:	cc                   	int3
+ 4596d2a:	cc                   	int3
+ 4596d2b:	cc                   	int3
+ 4596d2c:	cc                   	int3
+ 4596d2d:	cc                   	int3
+ 4596d2e:	cc                   	int3
+ 4596d2f:	cc                   	int3
+ 4596d30:	cc                   	int3
+ 4596d31:	cc                   	int3
+ 4596d32:	cc                   	int3
+ 4596d33:	cc                   	int3
+ 4596d34:	cc                   	int3
+ 4596d35:	cc                   	int3
+ 4596d36:	cc                   	int3
+ 4596d37:	cc                   	int3
+ 4596d38:	cc                   	int3
+ 4596d39:	cc                   	int3
+ 4596d3a:	cc                   	int3
+ 4596d3b:	cc                   	int3
+ 4596d3c:	cc                   	int3
+ 4596d3d:	cc                   	int3
+ 4596d3e:	cc                   	int3
+ 4596d3f:	cc                   	int3

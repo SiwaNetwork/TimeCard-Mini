@@ -1,0 +1,188 @@
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004418b80 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base>:
+ 4418b80:	4c 8d a4 24 08 ff ff 	lea    -0xf8(%rsp),%r12
+ 4418b87:	ff 
+ 4418b88:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4418b8c:	0f 86 77 02 00 00    	jbe    4418e09 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base+0x289>
+ 4418b92:	48 81 ec 78 01 00 00 	sub    $0x178,%rsp
+ 4418b99:	48 89 ac 24 70 01 00 	mov    %rbp,0x170(%rsp)
+ 4418ba0:	00 
+ 4418ba1:	48 8d ac 24 70 01 00 	lea    0x170(%rsp),%rbp
+ 4418ba8:	00 
+ 4418ba9:	48 8d 7c 24 40       	lea    0x40(%rsp),%rdi
+ 4418bae:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 4418bb2:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4418bb9:	00 00 
+ 4418bbb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4418bc0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4418bc5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4418bca:	e8 d3 e1 b3 fd       	call   1f56da2 <runtime.duffzero@@Base+0x122>
+ 4418bcf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4418bd3:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4418bd6:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 4418bdb:	f2 0f 10 0d b5 5a 0c 	movsd  0x10c5ab5(%rip),%xmm1        # 54de698 <_IO_stdin_used@@Base+0x8ab698>
+ 4418be2:	01 
+ 4418be3:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+ 4418be7:	f2 48 0f 2c d1       	cvttsd2si %xmm1,%rdx
+ 4418bec:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 4418bf1:	48 85 c0             	test   %rax,%rax
+ 4418bf4:	0f 85 30 01 00 00    	jne    4418d2a <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base+0x1aa>
+ 4418bfa:	48 b8 bd 42 7a e5 d5 	movabs $0xd6bf94d5e57a42bd,%rax
+ 4418c01:	94 bf d6 
+ 4418c04:	48 89 d1             	mov    %rdx,%rcx
+ 4418c07:	48 f7 ea             	imul   %rdx
+ 4418c0a:	48 01 ca             	add    %rcx,%rdx
+ 4418c0d:	48 c1 fa 17          	sar    $0x17,%rdx
+ 4418c11:	48 c1 f9 3f          	sar    $0x3f,%rcx
+ 4418c15:	48 29 d1             	sub    %rdx,%rcx
+ 4418c18:	48 81 c1 f0 d8 ff ff 	add    $0xffffffffffffd8f0,%rcx
+ 4418c1f:	48 f7 d9             	neg    %rcx
+ 4418c22:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 4418c29:	00 
+ 4418c2a:	c7 44 24 40 02 40 00 	movl   $0x4002,0x40(%rsp)
+ 4418c31:	00 
+ 4418c32:	48 8d 44 24 40       	lea    0x40(%rsp),%rax
+ 4418c37:	e8 e4 35 ba fd       	call   1fbc220 <syscall.Adjtimex@@Base>
+ 4418c3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4418c40:	48 85 db             	test   %rbx,%rbx
+ 4418c43:	0f 84 b0 01 00 00    	je     4418df9 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base+0x279>
+ 4418c49:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4418c4e:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4418c52:	48 89 c8             	mov    %rcx,%rax
+ 4418c55:	ff d2                	call   *%rdx
+ 4418c57:	48 89 84 24 10 01 00 	mov    %rax,0x110(%rsp)
+ 4418c5e:	00 
+ 4418c5f:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4418c64:	44 0f 11 bc 24 40 01 	movups %xmm15,0x140(%rsp)
+ 4418c6b:	00 00 
+ 4418c6d:	44 0f 11 bc 24 50 01 	movups %xmm15,0x150(%rsp)
+ 4418c74:	00 00 
+ 4418c76:	44 0f 11 bc 24 60 01 	movups %xmm15,0x160(%rsp)
+ 4418c7d:	00 00 
+ 4418c7f:	31 c0                	xor    %eax,%eax
+ 4418c81:	e8 5a 50 ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4418c86:	48 8d 0d d3 19 39 01 	lea    0x13919d3(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4418c8d:	48 89 8c 24 40 01 00 	mov    %rcx,0x140(%rsp)
+ 4418c94:	00 
+ 4418c95:	48 89 84 24 48 01 00 	mov    %rax,0x148(%rsp)
+ 4418c9c:	00 
+ 4418c9d:	48 8b 84 24 10 01 00 	mov    0x110(%rsp),%rax
+ 4418ca4:	00 
+ 4418ca5:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4418caa:	e8 b1 50 ad fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4418caf:	48 8d 0d ea 59 39 01 	lea    0x13959ea(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4418cb6:	48 89 8c 24 50 01 00 	mov    %rcx,0x150(%rsp)
+ 4418cbd:	00 
+ 4418cbe:	48 89 84 24 58 01 00 	mov    %rax,0x158(%rsp)
+ 4418cc5:	00 
+ 4418cc6:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4418ccb:	e8 10 50 ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4418cd0:	48 8d 0d 89 19 39 01 	lea    0x1391989(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4418cd7:	48 89 8c 24 60 01 00 	mov    %rcx,0x160(%rsp)
+ 4418cde:	00 
+ 4418cdf:	48 89 84 24 68 01 00 	mov    %rax,0x168(%rsp)
+ 4418ce6:	00 
+ 4418ce7:	48 8d 05 44 9c a5 00 	lea    0xa59c44(%rip),%rax        # 4e72932 <_IO_stdin_used@@Base+0x23f932>
+ 4418cee:	bb 47 00 00 00       	mov    $0x47,%ebx
+ 4418cf3:	48 8d 8c 24 40 01 00 	lea    0x140(%rsp),%rcx
+ 4418cfa:	00 
+ 4418cfb:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4418d00:	48 89 fe             	mov    %rdi,%rsi
+ 4418d03:	e8 f8 bb bd fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4418d08:	48 8b 0d 71 35 a1 03 	mov    0x3a13571(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 4418d0f:	48 89 c2             	mov    %rax,%rdx
+ 4418d12:	48 89 c8             	mov    %rcx,%rax
+ 4418d15:	48 89 de             	mov    %rbx,%rsi
+ 4418d18:	48 89 d3             	mov    %rdx,%rbx
+ 4418d1b:	48 89 f1             	mov    %rsi,%rcx
+ 4418d1e:	66 90                	xchg   %ax,%ax
+ 4418d20:	e8 3b e3 fe ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4418d25:	e9 cf 00 00 00       	jmp    4418df9 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base+0x279>
+ 4418d2a:	48 89 84 24 80 01 00 	mov    %rax,0x180(%rsp)
+ 4418d31:	00 
+ 4418d32:	c7 44 24 40 02 00 00 	movl   $0x2,0x40(%rsp)
+ 4418d39:	00 
+ 4418d3a:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 4418d3f:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4418d46:	00 
+ 4418d47:	48 89 c3             	mov    %rax,%rbx
+ 4418d4a:	31 ff                	xor    %edi,%edi
+ 4418d4c:	b8 31 01 00 00       	mov    $0x131,%eax
+ 4418d51:	e8 aa 65 ba fd       	call   1fbf300 <syscall.Syscall@@Base>
+ 4418d56:	48 85 c9             	test   %rcx,%rcx
+ 4418d59:	0f 84 9a 00 00 00    	je     4418df9 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base+0x279>
+ 4418d5f:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4418d64:	44 0f 11 bc 24 20 01 	movups %xmm15,0x120(%rsp)
+ 4418d6b:	00 00 
+ 4418d6d:	44 0f 11 bc 24 30 01 	movups %xmm15,0x130(%rsp)
+ 4418d74:	00 00 
+ 4418d76:	48 8b 84 24 80 01 00 	mov    0x180(%rsp),%rax
+ 4418d7d:	00 
+ 4418d7e:	66 90                	xchg   %ax,%ax
+ 4418d80:	e8 5b 4f ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4418d85:	48 8d 0d d4 18 39 01 	lea    0x13918d4(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4418d8c:	48 89 8c 24 20 01 00 	mov    %rcx,0x120(%rsp)
+ 4418d93:	00 
+ 4418d94:	48 89 84 24 28 01 00 	mov    %rax,0x128(%rsp)
+ 4418d9b:	00 
+ 4418d9c:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4418da1:	e8 3a 4f ad fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4418da6:	48 8d 0d b3 18 39 01 	lea    0x13918b3(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4418dad:	48 89 8c 24 30 01 00 	mov    %rcx,0x130(%rsp)
+ 4418db4:	00 
+ 4418db5:	48 89 84 24 38 01 00 	mov    %rax,0x138(%rsp)
+ 4418dbc:	00 
+ 4418dbd:	48 8d 05 93 16 a5 00 	lea    0xa51693(%rip),%rax        # 4e6a457 <_IO_stdin_used@@Base+0x237457>
+ 4418dc4:	bb 42 00 00 00       	mov    $0x42,%ebx
+ 4418dc9:	48 8d 8c 24 20 01 00 	lea    0x120(%rsp),%rcx
+ 4418dd0:	00 
+ 4418dd1:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4418dd6:	48 89 fe             	mov    %rdi,%rsi
+ 4418dd9:	e8 22 bb bd fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4418dde:	48 8b 0d 9b 34 a1 03 	mov    0x3a1349b(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 4418de5:	48 89 c2             	mov    %rax,%rdx
+ 4418de8:	48 89 c8             	mov    %rcx,%rax
+ 4418deb:	48 89 de             	mov    %rbx,%rsi
+ 4418dee:	48 89 d3             	mov    %rdx,%rbx
+ 4418df1:	48 89 f1             	mov    %rsi,%rcx
+ 4418df4:	e8 67 e2 fe ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4418df9:	48 8b ac 24 70 01 00 	mov    0x170(%rsp),%rbp
+ 4418e00:	00 
+ 4418e01:	48 81 c4 78 01 00 00 	add    $0x178,%rsp
+ 4418e08:	c3                   	ret
+ 4418e09:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4418e0e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4418e13:	e8 48 b6 b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4418e18:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4418e1d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4418e22:	e9 59 fd ff ff       	jmp    4418b80 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.SetFrequency@@Base>
+ 4418e27:	cc                   	int3
+ 4418e28:	cc                   	int3
+ 4418e29:	cc                   	int3
+ 4418e2a:	cc                   	int3
+ 4418e2b:	cc                   	int3
+ 4418e2c:	cc                   	int3
+ 4418e2d:	cc                   	int3
+ 4418e2e:	cc                   	int3
+ 4418e2f:	cc                   	int3
+ 4418e30:	cc                   	int3
+ 4418e31:	cc                   	int3
+ 4418e32:	cc                   	int3
+ 4418e33:	cc                   	int3
+ 4418e34:	cc                   	int3
+ 4418e35:	cc                   	int3
+ 4418e36:	cc                   	int3
+ 4418e37:	cc                   	int3
+ 4418e38:	cc                   	int3
+ 4418e39:	cc                   	int3
+ 4418e3a:	cc                   	int3
+ 4418e3b:	cc                   	int3
+ 4418e3c:	cc                   	int3
+ 4418e3d:	cc                   	int3
+ 4418e3e:	cc                   	int3
+ 4418e3f:	cc                   	int3

@@ -1,0 +1,72 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).runTimer
+# addr 0x4597360 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004597360 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).runTimer@@Base>:
+ 4597360:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4597364:	0f 86 b5 00 00 00    	jbe    459741f <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).runTimer@@Base+0xbf>
+ 459736a:	48 83 ec 50          	sub    $0x50,%rsp
+ 459736e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4597373:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4597378:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459737d:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 4597381:	48 89 c8             	mov    %rcx,%rax
+ 4597384:	e8 37 20 a3 fd       	call   1fc93c0 <time.NewTimer@@Base>
+ 4597389:	48 8b 00             	mov    (%rax),%rax
+ 459738c:	31 db                	xor    %ebx,%ebx
+ 459738e:	e8 8d 14 95 fd       	call   1ee8820 <runtime.chanrecv1@@Base>
+ 4597393:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4597398:	c6 00 01             	movb   $0x1,(%rax)
+ 459739b:	31 db                	xor    %ebx,%ebx
+ 459739d:	0f 1f 00             	nopl   (%rax)
+ 45973a0:	e8 9b f9 ff ff       	call   4596d40 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).setState@@Base>
+ 45973a5:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 45973aa:	e8 d1 fa ff ff       	call   4596e80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).getState@@Base>
+ 45973af:	48 0f be c0          	movsbq %al,%rax
+ 45973b3:	48 83 f8 04          	cmp    $0x4,%rax
+ 45973b7:	73 5b                	jae    4597414 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).runTimer@@Base+0xb4>
+ 45973b9:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 45973be:	48 8b 7a 38          	mov    0x38(%rdx),%rdi
+ 45973c2:	48 8b 72 40          	mov    0x40(%rdx),%rsi
+ 45973c6:	48 c1 e0 04          	shl    $0x4,%rax
+ 45973ca:	4c 8d 25 ef a5 3f 03 	lea    0x33fa5ef(%rip),%r12        # 79919c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.StateNames@@Base>
+ 45973d1:	4d 8b 14 04          	mov    (%r12,%rax,1),%r10
+ 45973d5:	4d 8b 5c 04 08       	mov    0x8(%r12,%rax,1),%r11
+ 45973da:	31 c0                	xor    %eax,%eax
+ 45973dc:	48 8d 1d e7 f5 89 00 	lea    0x89f5e7(%rip),%rbx        # 4e369ca <_IO_stdin_used@@Base+0x2039ca>
+ 45973e3:	b9 30 00 00 00       	mov    $0x30,%ecx
+ 45973e8:	4c 8d 05 56 67 6c 00 	lea    0x6c6756(%rip),%r8        # 4c5db45 <_IO_stdin_used@@Base+0x2ab45>
+ 45973ef:	41 b9 06 00 00 00    	mov    $0x6,%r9d
+ 45973f5:	e8 a6 30 9a fd       	call   1f3a4a0 <runtime.concatstring4@@Base>
+ 45973fa:	48 89 d9             	mov    %rbx,%rcx
+ 45973fd:	48 89 c3             	mov    %rax,%rbx
+ 4597400:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4597405:	e8 b6 00 00 00       	call   45974c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).logInterferenceStateChange@@Base>
+ 459740a:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459740f:	48 83 c4 50          	add    $0x50,%rsp
+ 4597413:	c3                   	ret
+ 4597414:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 4597419:	e8 82 f6 9b fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 459741e:	90                   	nop
+ 459741f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4597424:	e8 37 d0 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4597429:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459742e:	e9 2d ff ff ff       	jmp    4597360 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*InterferenceMonitor).runTimer@@Base>
+ 4597433:	cc                   	int3
+ 4597434:	cc                   	int3
+ 4597435:	cc                   	int3
+ 4597436:	cc                   	int3
+ 4597437:	cc                   	int3
+ 4597438:	cc                   	int3
+ 4597439:	cc                   	int3
+ 459743a:	cc                   	int3
+ 459743b:	cc                   	int3
+ 459743c:	cc                   	int3
+ 459743d:	cc                   	int3
+ 459743e:	cc                   	int3
+ 459743f:	cc                   	int3

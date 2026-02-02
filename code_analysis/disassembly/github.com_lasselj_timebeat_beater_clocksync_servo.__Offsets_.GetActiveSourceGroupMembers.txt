@@ -1,0 +1,208 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers
+# addr 0x45a60c0 size 768 (0x300)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a60c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base>:
+ 45a60c0:	4c 8d 64 24 b0       	lea    -0x50(%rsp),%r12
+ 45a60c5:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a60c9:	0f 86 a9 02 00 00    	jbe    45a6378 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x2b8>
+ 45a60cf:	48 81 ec d0 00 00 00 	sub    $0xd0,%rsp
+ 45a60d6:	48 89 ac 24 c8 00 00 	mov    %rbp,0xc8(%rsp)
+ 45a60dd:	00 
+ 45a60de:	48 8d ac 24 c8 00 00 	lea    0xc8(%rsp),%rbp
+ 45a60e5:	00 
+ 45a60e6:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45a60ed:	4c 89 ac 24 c0 00 00 	mov    %r13,0xc0(%rsp)
+ 45a60f4:	00 
+ 45a60f5:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 45a60fc:	00 
+ 45a60fd:	48 89 8c 24 e8 00 00 	mov    %rcx,0xe8(%rsp)
+ 45a6104:	00 
+ 45a6105:	48 89 9c 24 e0 00 00 	mov    %rbx,0xe0(%rsp)
+ 45a610c:	00 
+ 45a610d:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45a6112:	48 c7 44 24 30 00 00 	movq   $0x0,0x30(%rsp)
+ 45a6119:	00 00 
+ 45a611b:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 45a6122:	00 00 
+ 45a6124:	48 c7 44 24 28 00 00 	movq   $0x0,0x28(%rsp)
+ 45a612b:	00 00 
+ 45a612d:	48 89 c2             	mov    %rax,%rdx
+ 45a6130:	31 c0                	xor    %eax,%eax
+ 45a6132:	be 01 00 00 00       	mov    $0x1,%esi
+ 45a6137:	f0 0f b1 72 20       	lock cmpxchg %esi,0x20(%rdx)
+ 45a613c:	40 0f 94 c6          	sete   %sil
+ 45a6140:	48 8d 42 20          	lea    0x20(%rdx),%rax
+ 45a6144:	40 84 f6             	test   %sil,%sil
+ 45a6147:	75 17                	jne    45a6160 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0xa0>
+ 45a6149:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45a614e:	e8 ed 23 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45a6153:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45a6158:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 45a615f:	00 
+ 45a6160:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45a6166:	48 8d 35 53 02 00 00 	lea    0x253(%rip),%rsi        # 45a63c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers.func1@@Base>
+ 45a616d:	48 89 74 24 50       	mov    %rsi,0x50(%rsp)
+ 45a6172:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45a6177:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 45a617c:	48 89 b4 24 c0 00 00 	mov    %rsi,0xc0(%rsp)
+ 45a6183:	00 
+ 45a6184:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 45a6189:	48 be ff ff ff ff ff 	movabs $0x7fffffffffffffff,%rsi
+ 45a6190:	ff ff 7f 
+ 45a6193:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 45a6198:	48 be 00 00 00 00 00 	movabs $0x8000000000000000,%rsi
+ 45a619f:	00 00 80 
+ 45a61a2:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 45a61a7:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 45a61ab:	48 8d 7c 24 60       	lea    0x60(%rsp),%rdi
+ 45a61b0:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45a61b4:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a61bb:	00 00 
+ 45a61bd:	0f 1f 00             	nopl   (%rax)
+ 45a61c0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a61c5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a61ca:	e8 fc 0b 9b fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45a61cf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a61d3:	48 8d 05 86 ce 47 01 	lea    0x147ce86(%rip),%rax        # 5a23060 <type:Sl5uD34s@@Base>
+ 45a61da:	48 8d 4c 24 60       	lea    0x60(%rsp),%rcx
+ 45a61df:	90                   	nop
+ 45a61e0:	e8 db c4 94 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45a61e5:	eb 0a                	jmp    45a61f1 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x131>
+ 45a61e7:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+ 45a61ec:	e8 4f c7 94 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45a61f1:	48 83 7c 24 60 00    	cmpq   $0x0,0x60(%rsp)
+ 45a61f7:	74 6a                	je     45a6263 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x1a3>
+ 45a61f9:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 45a61fe:	48 8b 12             	mov    (%rdx),%rdx
+ 45a6201:	48 8b 8a e8 00 00 00 	mov    0xe8(%rdx),%rcx
+ 45a6208:	48 8b 82 e0 00 00 00 	mov    0xe0(%rdx),%rax
+ 45a620f:	48 8b b4 24 e8 00 00 	mov    0xe8(%rsp),%rsi
+ 45a6216:	00 
+ 45a6217:	48 39 ce             	cmp    %rcx,%rsi
+ 45a621a:	75 cb                	jne    45a61e7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x127>
+ 45a621c:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 45a6221:	48 8b 9c 24 e0 00 00 	mov    0xe0(%rsp),%rbx
+ 45a6228:	00 
+ 45a6229:	e8 f2 d8 93 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45a622e:	84 c0                	test   %al,%al
+ 45a6230:	74 b5                	je     45a61e7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x127>
+ 45a6232:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45a6237:	48 8b 51 28          	mov    0x28(%rcx),%rdx
+ 45a623b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a6240:	48 39 54 24 20       	cmp    %rdx,0x20(%rsp)
+ 45a6245:	7e 05                	jle    45a624c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x18c>
+ 45a6247:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45a624c:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 45a6250:	48 39 4c 24 28       	cmp    %rcx,0x28(%rsp)
+ 45a6255:	7d 05                	jge    45a625c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x19c>
+ 45a6257:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45a625c:	48 ff 44 24 30       	incq   0x30(%rsp)
+ 45a6261:	eb 84                	jmp    45a61e7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x127>
+ 45a6263:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 45a626a:	00 
+ 45a626b:	48 8b 5a 18          	mov    0x18(%rdx),%rbx
+ 45a626f:	48 8d 7c 24 60       	lea    0x60(%rsp),%rdi
+ 45a6274:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45a6278:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45a627f:	00 
+ 45a6280:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a6285:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a628a:	e8 3c 0b 9b fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45a628f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a6293:	48 8d 05 c6 cd 47 01 	lea    0x147cdc6(%rip),%rax        # 5a23060 <type:Sl5uD34s@@Base>
+ 45a629a:	48 8d 4c 24 60       	lea    0x60(%rsp),%rcx
+ 45a629f:	90                   	nop
+ 45a62a0:	e8 1b c4 94 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45a62a5:	eb 0a                	jmp    45a62b1 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x1f1>
+ 45a62a7:	48 8d 44 24 60       	lea    0x60(%rsp),%rax
+ 45a62ac:	e8 8f c6 94 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45a62b1:	48 83 7c 24 60 00    	cmpq   $0x0,0x60(%rsp)
+ 45a62b7:	74 6a                	je     45a6323 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x263>
+ 45a62b9:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 45a62be:	48 8b 12             	mov    (%rdx),%rdx
+ 45a62c1:	48 8b 8a e8 00 00 00 	mov    0xe8(%rdx),%rcx
+ 45a62c8:	48 8b 82 e0 00 00 00 	mov    0xe0(%rdx),%rax
+ 45a62cf:	48 8b b4 24 e8 00 00 	mov    0xe8(%rsp),%rsi
+ 45a62d6:	00 
+ 45a62d7:	48 39 ce             	cmp    %rcx,%rsi
+ 45a62da:	75 cb                	jne    45a62a7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x1e7>
+ 45a62dc:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 45a62e1:	48 8b 9c 24 e0 00 00 	mov    0xe0(%rsp),%rbx
+ 45a62e8:	00 
+ 45a62e9:	e8 32 d8 93 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45a62ee:	84 c0                	test   %al,%al
+ 45a62f0:	74 b5                	je     45a62a7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x1e7>
+ 45a62f2:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 45a62f7:	48 8b 51 28          	mov    0x28(%rcx),%rdx
+ 45a62fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a6300:	48 39 54 24 20       	cmp    %rdx,0x20(%rsp)
+ 45a6305:	7e 05                	jle    45a630c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x24c>
+ 45a6307:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45a630c:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 45a6310:	48 39 4c 24 28       	cmp    %rcx,0x28(%rsp)
+ 45a6315:	7d 05                	jge    45a631c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x25c>
+ 45a6317:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45a631c:	48 ff 44 24 30       	incq   0x30(%rsp)
+ 45a6321:	eb 84                	jmp    45a62a7 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base+0x1e7>
+ 45a6323:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45a6328:	48 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%rdx
+ 45a632f:	00 
+ 45a6330:	48 8b 02             	mov    (%rdx),%rax
+ 45a6333:	ff d0                	call   *%rax
+ 45a6335:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 45a633a:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45a633f:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45a6344:	48 8b ac 24 c8 00 00 	mov    0xc8(%rsp),%rbp
+ 45a634b:	00 
+ 45a634c:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+ 45a6353:	c3                   	ret
+ 45a6354:	e8 07 5c 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45a6359:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45a635e:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 45a6363:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45a6368:	48 8b ac 24 c8 00 00 	mov    0xc8(%rsp),%rbp
+ 45a636f:	00 
+ 45a6370:	48 81 c4 d0 00 00 00 	add    $0xd0,%rsp
+ 45a6377:	c3                   	ret
+ 45a6378:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a637d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45a6382:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45a6387:	e8 d4 e0 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a638c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a6391:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45a6396:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a639b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a63a0:	e9 1b fd ff ff       	jmp    45a60c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base>
+ 45a63a5:	cc                   	int3
+ 45a63a6:	cc                   	int3
+ 45a63a7:	cc                   	int3
+ 45a63a8:	cc                   	int3
+ 45a63a9:	cc                   	int3
+ 45a63aa:	cc                   	int3
+ 45a63ab:	cc                   	int3
+ 45a63ac:	cc                   	int3
+ 45a63ad:	cc                   	int3
+ 45a63ae:	cc                   	int3
+ 45a63af:	cc                   	int3
+ 45a63b0:	cc                   	int3
+ 45a63b1:	cc                   	int3
+ 45a63b2:	cc                   	int3
+ 45a63b3:	cc                   	int3
+ 45a63b4:	cc                   	int3
+ 45a63b5:	cc                   	int3
+ 45a63b6:	cc                   	int3
+ 45a63b7:	cc                   	int3
+ 45a63b8:	cc                   	int3
+ 45a63b9:	cc                   	int3
+ 45a63ba:	cc                   	int3
+ 45a63bb:	cc                   	int3
+ 45a63bc:	cc                   	int3
+ 45a63bd:	cc                   	int3
+ 45a63be:	cc                   	int3
+ 45a63bf:	cc                   	int3

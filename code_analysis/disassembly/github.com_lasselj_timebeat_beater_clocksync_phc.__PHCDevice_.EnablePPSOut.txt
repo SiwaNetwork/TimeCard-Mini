@@ -1,0 +1,388 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut
+# addr 0x458db00 size 1504 (0x5e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>:
+ 458db00:	4c 8d a4 24 50 ff ff 	lea    -0xb0(%rsp),%r12
+ 458db07:	ff 
+ 458db08:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 458db0c:	0f 86 9a 05 00 00    	jbe    458e0ac <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x5ac>
+ 458db12:	48 81 ec 30 01 00 00 	sub    $0x130,%rsp
+ 458db19:	48 89 ac 24 28 01 00 	mov    %rbp,0x128(%rsp)
+ 458db20:	00 
+ 458db21:	48 8d ac 24 28 01 00 	lea    0x128(%rsp),%rbp
+ 458db28:	00 
+ 458db29:	48 89 8c 24 48 01 00 	mov    %rcx,0x148(%rsp)
+ 458db30:	00 
+ 458db31:	48 89 9c 24 40 01 00 	mov    %rbx,0x140(%rsp)
+ 458db38:	00 
+ 458db39:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+ 458db40:	00 
+ 458db41:	44 0f 11 bc 24 08 01 	movups %xmm15,0x108(%rsp)
+ 458db48:	00 00 
+ 458db4a:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 458db51:	00 00 
+ 458db53:	40 84 ff             	test   %dil,%dil
+ 458db56:	0f 84 79 02 00 00    	je     458ddd5 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x2d5>
+ 458db5c:	31 ff                	xor    %edi,%edi
+ 458db5e:	66 90                	xchg   %ax,%ax
+ 458db60:	e8 9b ff ff ff       	call   458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>
+ 458db65:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 458db6c:	00 
+ 458db6d:	48 8b 9c 24 40 01 00 	mov    0x140(%rsp),%rbx
+ 458db74:	00 
+ 458db75:	48 8b 8c 24 48 01 00 	mov    0x148(%rsp),%rcx
+ 458db7c:	00 
+ 458db7d:	bf 02 00 00 00       	mov    $0x2,%edi
+ 458db82:	e8 39 06 00 00       	call   458e1c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).SetPinFunction@@Base>
+ 458db87:	48 85 c0             	test   %rax,%rax
+ 458db8a:	0f 84 0b 01 00 00    	je     458dc9b <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x19b>
+ 458db90:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 458db94:	48 89 d8             	mov    %rbx,%rax
+ 458db97:	ff d1                	call   *%rcx
+ 458db99:	48 89 d9             	mov    %rbx,%rcx
+ 458db9c:	48 8d 3d 37 57 6a 00 	lea    0x6a5737(%rip),%rdi        # 4c332da <_IO_stdin_used@@Base+0x2da>
+ 458dba3:	be 02 00 00 00       	mov    $0x2,%esi
+ 458dba8:	48 89 c3             	mov    %rax,%rbx
+ 458dbab:	48 8d 84 24 b8 00 00 	lea    0xb8(%rsp),%rax
+ 458dbb2:	00 
+ 458dbb3:	e8 68 c7 9a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 458dbb8:	90                   	nop
+ 458dbb9:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 458dbc0:	00 
+ 458dbc1:	48 85 c9             	test   %rcx,%rcx
+ 458dbc4:	74 12                	je     458dbd8 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0xd8>
+ 458dbc6:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458dbcd:	00 
+ 458dbce:	48 39 d1             	cmp    %rdx,%rcx
+ 458dbd1:	74 15                	je     458dbe8 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0xe8>
+ 458dbd3:	e9 c0 04 00 00       	jmp    458e098 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x598>
+ 458dbd8:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458dbdf:	00 
+ 458dbe0:	48 89 94 24 08 01 00 	mov    %rdx,0x108(%rsp)
+ 458dbe7:	00 
+ 458dbe8:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 458dbef:	00 
+ 458dbf0:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 458dbf4:	48 8b 8c 24 20 01 00 	mov    0x120(%rsp),%rcx
+ 458dbfb:	00 
+ 458dbfc:	4c 8b 8c 24 10 01 00 	mov    0x110(%rsp),%r9
+ 458dc03:	00 
+ 458dc04:	4c 39 c1             	cmp    %r8,%rcx
+ 458dc07:	73 3f                	jae    458dc48 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x148>
+ 458dc09:	48 89 84 24 f0 00 00 	mov    %rax,0xf0(%rsp)
+ 458dc10:	00 
+ 458dc11:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 458dc16:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 458dc1b:	4c 89 c8             	mov    %r9,%rax
+ 458dc1e:	48 89 df             	mov    %rbx,%rdi
+ 458dc21:	48 8d 35 38 0d 22 01 	lea    0x1220d38(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 458dc28:	4c 89 c3             	mov    %r8,%rbx
+ 458dc2b:	e8 90 88 9a fd       	call   1f364c0 <runtime.growslice@@Base>
+ 458dc30:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458dc35:	49 89 c1             	mov    %rax,%r9
+ 458dc38:	49 89 d8             	mov    %rbx,%r8
+ 458dc3b:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+ 458dc42:	00 
+ 458dc43:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 458dc48:	4c 89 44 24 50       	mov    %r8,0x50(%rsp)
+ 458dc4d:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 458dc52:	4c 89 8c 24 00 01 00 	mov    %r9,0x100(%rsp)
+ 458dc59:	00 
+ 458dc5a:	4c 01 ca             	add    %r9,%rdx
+ 458dc5d:	48 89 c6             	mov    %rax,%rsi
+ 458dc60:	48 89 d0             	mov    %rdx,%rax
+ 458dc63:	48 89 df             	mov    %rbx,%rdi
+ 458dc66:	48 89 f3             	mov    %rsi,%rbx
+ 458dc69:	48 89 f9             	mov    %rdi,%rcx
+ 458dc6c:	e8 2f 98 9c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 458dc71:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458dc76:	48 89 94 24 18 01 00 	mov    %rdx,0x118(%rsp)
+ 458dc7d:	00 
+ 458dc7e:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 458dc83:	48 89 94 24 20 01 00 	mov    %rdx,0x120(%rsp)
+ 458dc8a:	00 
+ 458dc8b:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 458dc92:	00 
+ 458dc93:	48 89 94 24 10 01 00 	mov    %rdx,0x110(%rsp)
+ 458dc9a:	00 
+ 458dc9b:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 458dca2:	00 
+ 458dca3:	48 8b 9c 24 48 01 00 	mov    0x148(%rsp),%rbx
+ 458dcaa:	00 
+ 458dcab:	b9 00 ca 9a 3b       	mov    $0x3b9aca00,%ecx
+ 458dcb0:	e8 eb 05 00 00       	call   458e2a0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).SetPerOut@@Base>
+ 458dcb5:	48 85 c0             	test   %rax,%rax
+ 458dcb8:	0f 84 63 03 00 00    	je     458e021 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x521>
+ 458dcbe:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 458dcc2:	48 89 d8             	mov    %rbx,%rax
+ 458dcc5:	ff d1                	call   *%rcx
+ 458dcc7:	48 89 d9             	mov    %rbx,%rcx
+ 458dcca:	48 8d 3d 09 56 6a 00 	lea    0x6a5609(%rip),%rdi        # 4c332da <_IO_stdin_used@@Base+0x2da>
+ 458dcd1:	be 02 00 00 00       	mov    $0x2,%esi
+ 458dcd6:	48 89 c3             	mov    %rax,%rbx
+ 458dcd9:	48 8d 84 24 98 00 00 	lea    0x98(%rsp),%rax
+ 458dce0:	00 
+ 458dce1:	e8 3a c6 9a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 458dce6:	90                   	nop
+ 458dce7:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 458dcee:	00 
+ 458dcef:	48 85 c9             	test   %rcx,%rcx
+ 458dcf2:	74 16                	je     458dd0a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x20a>
+ 458dcf4:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458dcfb:	00 
+ 458dcfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 458dd00:	48 39 d1             	cmp    %rdx,%rcx
+ 458dd03:	74 15                	je     458dd1a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x21a>
+ 458dd05:	e9 7b 03 00 00       	jmp    458e085 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x585>
+ 458dd0a:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458dd11:	00 
+ 458dd12:	48 89 94 24 08 01 00 	mov    %rdx,0x108(%rsp)
+ 458dd19:	00 
+ 458dd1a:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 458dd21:	00 
+ 458dd22:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 458dd26:	48 8b 8c 24 20 01 00 	mov    0x120(%rsp),%rcx
+ 458dd2d:	00 
+ 458dd2e:	4c 8b 8c 24 10 01 00 	mov    0x110(%rsp),%r9
+ 458dd35:	00 
+ 458dd36:	4c 39 c1             	cmp    %r8,%rcx
+ 458dd39:	73 42                	jae    458dd7d <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x27d>
+ 458dd3b:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 458dd40:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 458dd47:	00 
+ 458dd48:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 458dd4d:	4c 89 c8             	mov    %r9,%rax
+ 458dd50:	48 89 df             	mov    %rbx,%rdi
+ 458dd53:	48 8d 35 06 0c 22 01 	lea    0x1220c06(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 458dd5a:	4c 89 c3             	mov    %r8,%rbx
+ 458dd5d:	0f 1f 00             	nopl   (%rax)
+ 458dd60:	e8 5b 87 9a fd       	call   1f364c0 <runtime.growslice@@Base>
+ 458dd65:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458dd6a:	49 89 c1             	mov    %rax,%r9
+ 458dd6d:	49 89 d8             	mov    %rbx,%r8
+ 458dd70:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 458dd77:	00 
+ 458dd78:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 458dd7d:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 458dd82:	4c 89 44 24 48       	mov    %r8,0x48(%rsp)
+ 458dd87:	4c 89 8c 24 00 01 00 	mov    %r9,0x100(%rsp)
+ 458dd8e:	00 
+ 458dd8f:	4c 01 ca             	add    %r9,%rdx
+ 458dd92:	48 89 c6             	mov    %rax,%rsi
+ 458dd95:	48 89 d0             	mov    %rdx,%rax
+ 458dd98:	48 89 df             	mov    %rbx,%rdi
+ 458dd9b:	48 89 f3             	mov    %rsi,%rbx
+ 458dd9e:	48 89 f9             	mov    %rdi,%rcx
+ 458dda1:	e8 fa 96 9c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 458dda6:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 458ddab:	48 89 94 24 18 01 00 	mov    %rdx,0x118(%rsp)
+ 458ddb2:	00 
+ 458ddb3:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458ddb8:	48 89 94 24 20 01 00 	mov    %rdx,0x120(%rsp)
+ 458ddbf:	00 
+ 458ddc0:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 458ddc7:	00 
+ 458ddc8:	48 89 94 24 10 01 00 	mov    %rdx,0x110(%rsp)
+ 458ddcf:	00 
+ 458ddd0:	e9 4c 02 00 00       	jmp    458e021 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x521>
+ 458ddd5:	48 89 cb             	mov    %rcx,%rbx
+ 458ddd8:	31 c9                	xor    %ecx,%ecx
+ 458ddda:	e8 c1 04 00 00       	call   458e2a0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).SetPerOut@@Base>
+ 458dddf:	90                   	nop
+ 458dde0:	48 85 c0             	test   %rax,%rax
+ 458dde3:	0f 84 08 01 00 00    	je     458def1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x3f1>
+ 458dde9:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 458dded:	48 89 d8             	mov    %rbx,%rax
+ 458ddf0:	ff d1                	call   *%rcx
+ 458ddf2:	48 89 d9             	mov    %rbx,%rcx
+ 458ddf5:	48 8d 3d de 54 6a 00 	lea    0x6a54de(%rip),%rdi        # 4c332da <_IO_stdin_used@@Base+0x2da>
+ 458ddfc:	be 02 00 00 00       	mov    $0x2,%esi
+ 458de01:	48 89 c3             	mov    %rax,%rbx
+ 458de04:	48 8d 44 24 78       	lea    0x78(%rsp),%rax
+ 458de09:	e8 12 c5 9a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 458de0e:	90                   	nop
+ 458de0f:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 458de16:	00 
+ 458de17:	48 85 c9             	test   %rcx,%rcx
+ 458de1a:	74 12                	je     458de2e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x32e>
+ 458de1c:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458de23:	00 
+ 458de24:	48 39 d1             	cmp    %rdx,%rcx
+ 458de27:	74 15                	je     458de3e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x33e>
+ 458de29:	e9 43 02 00 00       	jmp    458e071 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x571>
+ 458de2e:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458de35:	00 
+ 458de36:	48 89 94 24 08 01 00 	mov    %rdx,0x108(%rsp)
+ 458de3d:	00 
+ 458de3e:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 458de45:	00 
+ 458de46:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 458de4a:	48 8b 8c 24 20 01 00 	mov    0x120(%rsp),%rcx
+ 458de51:	00 
+ 458de52:	4c 8b 8c 24 10 01 00 	mov    0x110(%rsp),%r9
+ 458de59:	00 
+ 458de5a:	4c 39 c1             	cmp    %r8,%rcx
+ 458de5d:	73 3f                	jae    458de9e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x39e>
+ 458de5f:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 458de64:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 458de6b:	00 
+ 458de6c:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 458de71:	4c 89 c8             	mov    %r9,%rax
+ 458de74:	48 89 df             	mov    %rbx,%rdi
+ 458de77:	48 8d 35 e2 0a 22 01 	lea    0x1220ae2(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 458de7e:	4c 89 c3             	mov    %r8,%rbx
+ 458de81:	e8 3a 86 9a fd       	call   1f364c0 <runtime.growslice@@Base>
+ 458de86:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458de8b:	49 89 c1             	mov    %rax,%r9
+ 458de8e:	49 89 d8             	mov    %rbx,%r8
+ 458de91:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 458de98:	00 
+ 458de99:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 458de9e:	4c 89 8c 24 00 01 00 	mov    %r9,0x100(%rsp)
+ 458dea5:	00 
+ 458dea6:	4c 89 44 24 50       	mov    %r8,0x50(%rsp)
+ 458deab:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 458deb0:	4c 01 ca             	add    %r9,%rdx
+ 458deb3:	48 89 c6             	mov    %rax,%rsi
+ 458deb6:	48 89 d0             	mov    %rdx,%rax
+ 458deb9:	48 89 df             	mov    %rbx,%rdi
+ 458debc:	48 89 f3             	mov    %rsi,%rbx
+ 458debf:	48 89 f9             	mov    %rdi,%rcx
+ 458dec2:	e8 d9 95 9c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 458dec7:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458decc:	48 89 94 24 18 01 00 	mov    %rdx,0x118(%rsp)
+ 458ded3:	00 
+ 458ded4:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 458ded9:	48 89 94 24 20 01 00 	mov    %rdx,0x120(%rsp)
+ 458dee0:	00 
+ 458dee1:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 458dee8:	00 
+ 458dee9:	48 89 94 24 10 01 00 	mov    %rdx,0x110(%rsp)
+ 458def0:	00 
+ 458def1:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 458def8:	00 
+ 458def9:	48 8b 9c 24 40 01 00 	mov    0x140(%rsp),%rbx
+ 458df00:	00 
+ 458df01:	48 8b 8c 24 48 01 00 	mov    0x148(%rsp),%rcx
+ 458df08:	00 
+ 458df09:	31 ff                	xor    %edi,%edi
+ 458df0b:	e8 b0 02 00 00       	call   458e1c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).SetPinFunction@@Base>
+ 458df10:	48 85 c0             	test   %rax,%rax
+ 458df13:	0f 84 08 01 00 00    	je     458e021 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x521>
+ 458df19:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 458df1d:	48 89 d8             	mov    %rbx,%rax
+ 458df20:	ff d1                	call   *%rcx
+ 458df22:	48 89 d9             	mov    %rbx,%rcx
+ 458df25:	48 8d 3d ae 53 6a 00 	lea    0x6a53ae(%rip),%rdi        # 4c332da <_IO_stdin_used@@Base+0x2da>
+ 458df2c:	be 02 00 00 00       	mov    $0x2,%esi
+ 458df31:	48 89 c3             	mov    %rax,%rbx
+ 458df34:	48 8d 44 24 58       	lea    0x58(%rsp),%rax
+ 458df39:	e8 e2 c3 9a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 458df3e:	90                   	nop
+ 458df3f:	48 8b 8c 24 08 01 00 	mov    0x108(%rsp),%rcx
+ 458df46:	00 
+ 458df47:	48 85 c9             	test   %rcx,%rcx
+ 458df4a:	74 12                	je     458df5e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x45e>
+ 458df4c:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458df53:	00 
+ 458df54:	48 39 d1             	cmp    %rdx,%rcx
+ 458df57:	74 15                	je     458df6e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x46e>
+ 458df59:	e9 00 01 00 00       	jmp    458e05e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x55e>
+ 458df5e:	48 8d 94 24 08 01 00 	lea    0x108(%rsp),%rdx
+ 458df65:	00 
+ 458df66:	48 89 94 24 08 01 00 	mov    %rdx,0x108(%rsp)
+ 458df6d:	00 
+ 458df6e:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 458df75:	00 
+ 458df76:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 458df7a:	48 8b 8c 24 20 01 00 	mov    0x120(%rsp),%rcx
+ 458df81:	00 
+ 458df82:	4c 8b 8c 24 10 01 00 	mov    0x110(%rsp),%r9
+ 458df89:	00 
+ 458df8a:	4c 39 c1             	cmp    %r8,%rcx
+ 458df8d:	73 3f                	jae    458dfce <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x4ce>
+ 458df8f:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 458df94:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 458df99:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 458dfa0:	00 
+ 458dfa1:	4c 89 c8             	mov    %r9,%rax
+ 458dfa4:	48 89 df             	mov    %rbx,%rdi
+ 458dfa7:	48 8d 35 b2 09 22 01 	lea    0x12209b2(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 458dfae:	4c 89 c3             	mov    %r8,%rbx
+ 458dfb1:	e8 0a 85 9a fd       	call   1f364c0 <runtime.growslice@@Base>
+ 458dfb6:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458dfbb:	49 89 c1             	mov    %rax,%r9
+ 458dfbe:	49 89 d8             	mov    %rbx,%r8
+ 458dfc1:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 458dfc8:	00 
+ 458dfc9:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 458dfce:	4c 89 44 24 50       	mov    %r8,0x50(%rsp)
+ 458dfd3:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 458dfd8:	4c 89 8c 24 00 01 00 	mov    %r9,0x100(%rsp)
+ 458dfdf:	00 
+ 458dfe0:	4c 01 ca             	add    %r9,%rdx
+ 458dfe3:	48 89 c6             	mov    %rax,%rsi
+ 458dfe6:	48 89 d0             	mov    %rdx,%rax
+ 458dfe9:	48 89 df             	mov    %rbx,%rdi
+ 458dfec:	48 89 f3             	mov    %rsi,%rbx
+ 458dfef:	48 89 f9             	mov    %rdi,%rcx
+ 458dff2:	e8 a9 94 9c fd       	call   1f574a0 <runtime.memmove@@Base>
+ 458dff7:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 458dffc:	48 89 94 24 18 01 00 	mov    %rdx,0x118(%rsp)
+ 458e003:	00 
+ 458e004:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 458e009:	48 89 94 24 20 01 00 	mov    %rdx,0x120(%rsp)
+ 458e010:	00 
+ 458e011:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 458e018:	00 
+ 458e019:	48 89 94 24 10 01 00 	mov    %rdx,0x110(%rsp)
+ 458e020:	00 
+ 458e021:	48 8b 84 24 10 01 00 	mov    0x110(%rsp),%rax
+ 458e028:	00 
+ 458e029:	48 89 c1             	mov    %rax,%rcx
+ 458e02c:	48 f7 d8             	neg    %rax
+ 458e02f:	48 8b 9c 24 18 01 00 	mov    0x118(%rsp),%rbx
+ 458e036:	00 
+ 458e037:	48 39 c3             	cmp    %rax,%rbx
+ 458e03a:	77 13                	ja     458e04f <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x54f>
+ 458e03c:	48 89 c8             	mov    %rcx,%rax
+ 458e03f:	48 8b ac 24 28 01 00 	mov    0x128(%rsp),%rbp
+ 458e046:	00 
+ 458e047:	48 81 c4 30 01 00 00 	add    $0x130,%rsp
+ 458e04e:	c3                   	ret
+ 458e04f:	48 85 c9             	test   %rcx,%rcx
+ 458e052:	74 05                	je     458e059 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base+0x559>
+ 458e054:	e8 c7 cb 9b fd       	call   1f4ac20 <runtime.panicunsafestringlen@@Base>
+ 458e059:	e8 02 cc 9b fd       	call   1f4ac60 <runtime.panicunsafestringnilptr@@Base>
+ 458e05e:	48 8d 05 3b 06 22 01 	lea    0x122063b(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 458e065:	48 8d 1d 94 ee 96 01 	lea    0x196ee94(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 458e06c:	e8 cf ec 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 458e071:	48 8d 05 28 06 22 01 	lea    0x1220628(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 458e078:	48 8d 1d 81 ee 96 01 	lea    0x196ee81(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 458e07f:	90                   	nop
+ 458e080:	e8 bb ec 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 458e085:	48 8d 05 14 06 22 01 	lea    0x1220614(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 458e08c:	48 8d 1d 6d ee 96 01 	lea    0x196ee6d(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 458e093:	e8 a8 ec 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 458e098:	48 8d 05 01 06 22 01 	lea    0x1220601(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 458e09f:	48 8d 1d 5a ee 96 01 	lea    0x196ee5a(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 458e0a6:	e8 95 ec 98 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 458e0ab:	90                   	nop
+ 458e0ac:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458e0b1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 458e0b6:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 458e0bb:	40 88 7c 24 20       	mov    %dil,0x20(%rsp)
+ 458e0c0:	e8 9b 63 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 458e0c5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 458e0ca:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 458e0cf:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 458e0d4:	0f b6 7c 24 20       	movzbl 0x20(%rsp),%edi
+ 458e0d9:	e9 22 fa ff ff       	jmp    458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>
+ 458e0de:	cc                   	int3
+ 458e0df:	cc                   	int3

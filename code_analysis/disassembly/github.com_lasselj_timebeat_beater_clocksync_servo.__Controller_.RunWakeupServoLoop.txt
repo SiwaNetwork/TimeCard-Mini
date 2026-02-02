@@ -1,0 +1,269 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop
+# addr 0x45a0ea0 size 1120 (0x460)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a0ea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base>:
+ 45a0ea0:	4c 8d 64 24 a0       	lea    -0x60(%rsp),%r12
+ 45a0ea5:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a0ea9:	0f 86 33 04 00 00    	jbe    45a12e2 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x442>
+ 45a0eaf:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+ 45a0eb6:	48 89 ac 24 d8 00 00 	mov    %rbp,0xd8(%rsp)
+ 45a0ebd:	00 
+ 45a0ebe:	48 8d ac 24 d8 00 00 	lea    0xd8(%rsp),%rbp
+ 45a0ec5:	00 
+ 45a0ec6:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 45a0ecd:	00 
+ 45a0ece:	48 8b 1d 3b 3d 8a 03 	mov    0x38a3d3b(%rip),%rbx        # 7e44c10 <github.com/lasselj/timebeat/config.appConfig@@Base+0x30>
+ 45a0ed5:	48 8b 0d 2c 3d 8a 03 	mov    0x38a3d2c(%rip),%rcx        # 7e44c08 <github.com/lasselj/timebeat/config.appConfig@@Base+0x28>
+ 45a0edc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a0ee0:	48 85 db             	test   %rbx,%rbx
+ 45a0ee3:	0f 84 0c 01 00 00    	je     45a0ff5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x155>
+ 45a0ee9:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 45a0eee:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 45a0ef3:	48 89 c8             	mov    %rcx,%rax
+ 45a0ef6:	e8 25 3d e6 ff       	call   4404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>
+ 45a0efb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a0f00:	48 85 db             	test   %rbx,%rbx
+ 45a0f03:	74 72                	je     45a0f77 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0xd7>
+ 45a0f05:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 45a0f0c:	00 00 
+ 45a0f0e:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 45a0f13:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45a0f18:	e8 43 ce 94 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45a0f1d:	48 8d 0d 7c d7 20 01 	lea    0x120d77c(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45a0f24:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 45a0f2b:	00 
+ 45a0f2c:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 45a0f33:	00 
+ 45a0f34:	48 8d 05 d3 1c 87 00 	lea    0x871cd3(%rip),%rax        # 4e12c0e <_IO_stdin_used@@Base+0x1dfc0e>
+ 45a0f3b:	bb 26 00 00 00       	mov    $0x26,%ebx
+ 45a0f40:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a0f45:	48 89 fe             	mov    %rdi,%rsi
+ 45a0f48:	48 8d 8c 24 88 00 00 	lea    0x88(%rsp),%rcx
+ 45a0f4f:	00 
+ 45a0f50:	e8 ab 39 a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45a0f55:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 45a0f5c:	00 
+ 45a0f5d:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 45a0f61:	48 89 c6             	mov    %rax,%rsi
+ 45a0f64:	48 89 d0             	mov    %rdx,%rax
+ 45a0f67:	48 89 df             	mov    %rbx,%rdi
+ 45a0f6a:	48 89 f3             	mov    %rsi,%rbx
+ 45a0f6d:	48 89 f9             	mov    %rdi,%rcx
+ 45a0f70:	e8 2b 62 e6 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45a0f75:	eb 7e                	jmp    45a0ff5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x155>
+ 45a0f77:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a0f7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a0f80:	e8 7b 9d a2 fd       	call   1fcad00 <time.Duration.String@@Base>
+ 45a0f85:	44 0f 11 bc 24 88 00 	movups %xmm15,0x88(%rsp)
+ 45a0f8c:	00 00 
+ 45a0f8e:	e8 cd cd 94 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45a0f93:	48 8d 0d 06 d7 20 01 	lea    0x120d706(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45a0f9a:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 45a0fa1:	00 
+ 45a0fa2:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 45a0fa9:	00 
+ 45a0faa:	48 8d 05 9b 79 84 00 	lea    0x84799b(%rip),%rax        # 4de894c <_IO_stdin_used@@Base+0x1b594c>
+ 45a0fb1:	bb 1c 00 00 00       	mov    $0x1c,%ebx
+ 45a0fb6:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45a0fbb:	48 89 fe             	mov    %rdi,%rsi
+ 45a0fbe:	48 8d 8c 24 88 00 00 	lea    0x88(%rsp),%rcx
+ 45a0fc5:	00 
+ 45a0fc6:	e8 35 39 a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45a0fcb:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 45a0fd2:	00 
+ 45a0fd3:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 45a0fd7:	48 89 c6             	mov    %rax,%rsi
+ 45a0fda:	48 89 d0             	mov    %rdx,%rax
+ 45a0fdd:	48 89 df             	mov    %rbx,%rdi
+ 45a0fe0:	48 89 f3             	mov    %rsi,%rbx
+ 45a0fe3:	48 89 f9             	mov    %rdi,%rcx
+ 45a0fe6:	e8 f5 62 e6 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45a0feb:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45a0ff0:	e8 eb 21 9b fd       	call   1f531e0 <time.Sleep@@Base>
+ 45a0ff5:	48 8d 05 64 d5 51 01 	lea    0x151d564(%rip),%rax        # 5abe560 <type:sYVKFiwZ@@Base>
+ 45a0ffc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a1000:	e8 db f4 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45a1005:	48 8d 0d f4 02 00 00 	lea    0x2f4(%rip),%rcx        # 45a1300 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop.func1@@Base>
+ 45a100c:	48 89 08             	mov    %rcx,(%rax)
+ 45a100f:	83 3d 4a a9 8d 03 00 	cmpl   $0x0,0x38da94a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45a1016:	75 0e                	jne    45a1026 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x186>
+ 45a1018:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 45a101f:	00 
+ 45a1020:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45a1024:	eb 11                	jmp    45a1037 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x197>
+ 45a1026:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45a102a:	48 8b 8c 24 e8 00 00 	mov    0xe8(%rsp),%rcx
+ 45a1031:	00 
+ 45a1032:	e8 c9 56 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45a1037:	e8 24 7b 98 fd       	call   1f28b60 <runtime.newproc@@Base>
+ 45a103c:	48 8b 94 24 e8 00 00 	mov    0xe8(%rsp),%rdx
+ 45a1043:	00 
+ 45a1044:	4c 8b 4a 18          	mov    0x18(%rdx),%r9
+ 45a1048:	4c 8b 12             	mov    (%rdx),%r10
+ 45a104b:	4d 8b 89 b0 00 00 00 	mov    0xb0(%r9),%r9
+ 45a1052:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 45a1059:	00 00 
+ 45a105b:	44 0f 11 bc 24 c8 00 	movups %xmm15,0xc8(%rsp)
+ 45a1062:	00 00 
+ 45a1064:	4c 89 94 24 c8 00 00 	mov    %r10,0xc8(%rsp)
+ 45a106b:	00 
+ 45a106c:	4c 89 8c 24 b8 00 00 	mov    %r9,0xb8(%rsp)
+ 45a1073:	00 
+ 45a1074:	4c 8d 4c 24 58       	lea    0x58(%rsp),%r9
+ 45a1079:	4c 89 8c 24 c0 00 00 	mov    %r9,0xc0(%rsp)
+ 45a1080:	00 
+ 45a1081:	48 8d 84 24 b8 00 00 	lea    0xb8(%rsp),%rax
+ 45a1088:	00 
+ 45a1089:	48 8d 5c 24 50       	lea    0x50(%rsp),%rbx
+ 45a108e:	31 c9                	xor    %ecx,%ecx
+ 45a1090:	31 ff                	xor    %edi,%edi
+ 45a1092:	be 02 00 00 00       	mov    $0x2,%esi
+ 45a1097:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a109d:	0f 1f 00             	nopl   (%rax)
+ 45a10a0:	e8 1b fb 98 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45a10a5:	48 85 c0             	test   %rax,%rax
+ 45a10a8:	0f 85 24 02 00 00    	jne    45a12d2 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x432>
+ 45a10ae:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a10b5:	00 
+ 45a10b6:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45a10ba:	4c 8b 4c 24 58       	mov    0x58(%rsp),%r9
+ 45a10bf:	80 ba a8 00 00 00 00 	cmpb   $0x0,0xa8(%rdx)
+ 45a10c6:	0f 84 e9 01 00 00    	je     45a12b5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x415>
+ 45a10cc:	4c 89 4c 24 48       	mov    %r9,0x48(%rsp)
+ 45a10d1:	49 83 f9 01          	cmp    $0x1,%r9
+ 45a10d5:	74 04                	je     45a10db <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x23b>
+ 45a10d7:	31 c9                	xor    %ecx,%ecx
+ 45a10d9:	eb 19                	jmp    45a10f4 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x254>
+ 45a10db:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45a10e0:	e8 7b 02 00 00       	call   45a1360 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).DoWeRun@@Base>
+ 45a10e5:	4c 8b 4c 24 48       	mov    0x48(%rsp),%r9
+ 45a10ea:	89 c1                	mov    %eax,%ecx
+ 45a10ec:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a10f3:	00 
+ 45a10f4:	84 c9                	test   %cl,%cl
+ 45a10f6:	0f 85 43 01 00 00    	jne    45a123f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x39f>
+ 45a10fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a1100:	49 83 f9 02          	cmp    $0x2,%r9
+ 45a1104:	74 04                	je     45a110a <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x26a>
+ 45a1106:	31 c9                	xor    %ecx,%ecx
+ 45a1108:	eb 19                	jmp    45a1123 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x283>
+ 45a110a:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 45a110f:	e8 4c 02 00 00       	call   45a1360 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).DoWeRun@@Base>
+ 45a1114:	4c 8b 4c 24 48       	mov    0x48(%rsp),%r9
+ 45a1119:	89 c1                	mov    %eax,%ecx
+ 45a111b:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a1122:	00 
+ 45a1123:	84 c9                	test   %cl,%cl
+ 45a1125:	0f 85 a0 00 00 00    	jne    45a11cb <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x32b>
+ 45a112b:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45a112f:	0f 84 07 ff ff ff    	je     45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a1135:	e8 e6 ab a2 fd       	call   1fcbd20 <time.Now@@Base>
+ 45a113a:	e8 a1 03 a2 fd       	call   1fc14e0 <time.Time.String@@Base>
+ 45a113f:	44 0f 11 bc 24 98 00 	movups %xmm15,0x98(%rsp)
+ 45a1146:	00 00 
+ 45a1148:	44 0f 11 bc 24 a8 00 	movups %xmm15,0xa8(%rsp)
+ 45a114f:	00 00 
+ 45a1151:	e8 0a cc 94 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45a1156:	48 8d 0d 43 d5 20 01 	lea    0x120d543(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45a115d:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 45a1164:	00 
+ 45a1165:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+ 45a116c:	00 
+ 45a116d:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45a1172:	e8 69 cb 94 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45a1177:	48 8d 0d e2 94 20 01 	lea    0x12094e2(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 45a117e:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 45a1185:	00 
+ 45a1186:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 45a118d:	00 
+ 45a118e:	48 8b 1d ab e0 88 03 	mov    0x388e0ab(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45a1195:	48 8d 05 84 40 96 01 	lea    0x1964084(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45a119c:	bf 1c 00 00 00       	mov    $0x1c,%edi
+ 45a11a1:	48 8d b4 24 98 00 00 	lea    0x98(%rsp),%rsi
+ 45a11a8:	00 
+ 45a11a9:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 45a11af:	4d 89 c1             	mov    %r8,%r9
+ 45a11b2:	48 8d 0d 7b 68 84 00 	lea    0x84687b(%rip),%rcx        # 4de7a34 <_IO_stdin_used@@Base+0x1b4a34>
+ 45a11b9:	e8 22 36 a5 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45a11be:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a11c5:	00 
+ 45a11c6:	e9 71 fe ff ff       	jmp    45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a11cb:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45a11cf:	74 5c                	je     45a122d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x38d>
+ 45a11d1:	e8 4a ab a2 fd       	call   1fcbd20 <time.Now@@Base>
+ 45a11d6:	e8 05 03 a2 fd       	call   1fc14e0 <time.Time.String@@Base>
+ 45a11db:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 45a11e1:	e8 7a cb 94 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45a11e6:	48 8d 0d b3 d4 20 01 	lea    0x120d4b3(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45a11ed:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 45a11f2:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 45a11f7:	48 8b 1d 42 e0 88 03 	mov    0x388e042(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45a11fe:	48 8d 05 1b 40 96 01 	lea    0x196401b(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45a1205:	bf 18 00 00 00       	mov    $0x18,%edi
+ 45a120a:	48 8d 74 24 68       	lea    0x68(%rsp),%rsi
+ 45a120f:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a1215:	4d 89 c1             	mov    %r8,%r9
+ 45a1218:	48 8d 0d d8 6c 83 00 	lea    0x836cd8(%rip),%rcx        # 4dd7ef7 <_IO_stdin_used@@Base+0x1a4ef7>
+ 45a121f:	90                   	nop
+ 45a1220:	e8 bb 35 a5 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45a1225:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a122c:	00 
+ 45a122d:	e8 2e 03 00 00       	call   45a1560 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doPeriodicTasks@@Base>
+ 45a1232:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a1239:	00 
+ 45a123a:	e9 fd fd ff ff       	jmp    45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a123f:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45a1243:	74 5e                	je     45a12a3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x403>
+ 45a1245:	e8 d6 aa a2 fd       	call   1fcbd20 <time.Now@@Base>
+ 45a124a:	e8 91 02 a2 fd       	call   1fc14e0 <time.Time.String@@Base>
+ 45a124f:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 45a1255:	e8 06 cb 94 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45a125a:	48 8d 0d 3f d4 20 01 	lea    0x120d43f(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45a1261:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 45a1266:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45a126d:	00 
+ 45a126e:	48 8b 1d cb df 88 03 	mov    0x388dfcb(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45a1275:	48 8d 05 a4 3f 96 01 	lea    0x1963fa4(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45a127c:	bf 13 00 00 00       	mov    $0x13,%edi
+ 45a1281:	48 8d 74 24 78       	lea    0x78(%rsp),%rsi
+ 45a1286:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a128c:	4d 89 c1             	mov    %r8,%r9
+ 45a128f:	48 8d 0d 31 26 82 00 	lea    0x822631(%rip),%rcx        # 4dc38c7 <_IO_stdin_used@@Base+0x1908c7>
+ 45a1296:	e8 45 35 a5 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45a129b:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a12a2:	00 
+ 45a12a3:	e8 b8 02 00 00       	call   45a1560 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doPeriodicTasks@@Base>
+ 45a12a8:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a12af:	00 
+ 45a12b0:	e9 87 fd ff ff       	jmp    45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a12b5:	49 83 f9 01          	cmp    $0x1,%r9
+ 45a12b9:	0f 85 7d fd ff ff    	jne    45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a12bf:	90                   	nop
+ 45a12c0:	e8 9b 02 00 00       	call   45a1560 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doPeriodicTasks@@Base>
+ 45a12c5:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 45a12cc:	00 
+ 45a12cd:	e9 6a fd ff ff       	jmp    45a103c <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base+0x19c>
+ 45a12d2:	48 8b ac 24 d8 00 00 	mov    0xd8(%rsp),%rbp
+ 45a12d9:	00 
+ 45a12da:	48 81 c4 e0 00 00 00 	add    $0xe0,%rsp
+ 45a12e1:	c3                   	ret
+ 45a12e2:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a12e7:	e8 74 31 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a12ec:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a12f1:	e9 aa fb ff ff       	jmp    45a0ea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunWakeupServoLoop@@Base>
+ 45a12f6:	cc                   	int3
+ 45a12f7:	cc                   	int3
+ 45a12f8:	cc                   	int3
+ 45a12f9:	cc                   	int3
+ 45a12fa:	cc                   	int3
+ 45a12fb:	cc                   	int3
+ 45a12fc:	cc                   	int3
+ 45a12fd:	cc                   	int3
+ 45a12fe:	cc                   	int3
+ 45a12ff:	cc                   	int3

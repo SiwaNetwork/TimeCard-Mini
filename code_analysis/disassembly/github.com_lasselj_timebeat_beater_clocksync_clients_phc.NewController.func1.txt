@@ -1,0 +1,68 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1
+# addr 0x45eed80 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045eed80 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1@@Base>:
+ 45eed80:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45eed84:	0f 86 bf 00 00 00    	jbe    45eee49 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1@@Base+0xc9>
+ 45eed8a:	48 83 ec 30          	sub    $0x30,%rsp
+ 45eed8e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 45eed93:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 45eed98:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 45eed9c:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 45eeda1:	48 8d 05 ab d8 7d 00 	lea    0x7dd8ab(%rip),%rax        # 4dcc653 <_IO_stdin_used@@Base+0x199653>
+ 45eeda8:	bb 15 00 00 00       	mov    $0x15,%ebx
+ 45eedad:	e8 ee 7f e1 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 45eedb2:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45eedb7:	48 8d 05 a2 cb 66 01 	lea    0x166cba2(%rip),%rax        # 5c5b960 <type:sync.Map@@Base>
+ 45eedbe:	66 90                	xchg   %ax,%ax
+ 45eedc0:	e8 1b 17 90 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45eedc5:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45eedca:	48 8d 05 cf 40 5b 01 	lea    0x15b40cf(%rip),%rax        # 5ba2ea0 <type:JRTT3Fg8@@Base>
+ 45eedd1:	e8 0a 17 90 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45eedd6:	83 3d 83 cb 88 03 00 	cmpl   $0x0,0x388cb83(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45eeddd:	75 23                	jne    45eee02 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1@@Base+0x82>
+ 45eeddf:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 45eede4:	48 89 08             	mov    %rcx,(%rax)
+ 45eede7:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 45eedec:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45eedf0:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45eedf5:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 45eedf9:	48 89 05 30 d3 83 03 	mov    %rax,0x383d330(%rip)        # 7e2c130 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.controller@@Base>
+ 45eee00:	eb 3d                	jmp    45eee3f <github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1@@Base+0xbf>
+ 45eee02:	48 89 c7             	mov    %rax,%rdi
+ 45eee05:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 45eee0a:	e8 f1 78 96 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45eee0f:	48 8d 48 08          	lea    0x8(%rax),%rcx
+ 45eee13:	48 89 cf             	mov    %rcx,%rdi
+ 45eee16:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 45eee1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45eee20:	e8 fb 78 96 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 45eee25:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 45eee29:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45eee2e:	e8 cd 78 96 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45eee33:	48 8d 3d f6 d2 83 03 	lea    0x383d2f6(%rip),%rdi        # 7e2c130 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.controller@@Base>
+ 45eee3a:	e8 c1 77 96 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 45eee3f:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 45eee44:	48 83 c4 30          	add    $0x30,%rsp
+ 45eee48:	c3                   	ret
+ 45eee49:	e8 72 55 96 fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 45eee4e:	e9 2d ff ff ff       	jmp    45eed80 <github.com/lasselj/timebeat/beater/clocksync/clients/phc.NewController.func1@@Base>
+ 45eee53:	cc                   	int3
+ 45eee54:	cc                   	int3
+ 45eee55:	cc                   	int3
+ 45eee56:	cc                   	int3
+ 45eee57:	cc                   	int3
+ 45eee58:	cc                   	int3
+ 45eee59:	cc                   	int3
+ 45eee5a:	cc                   	int3
+ 45eee5b:	cc                   	int3
+ 45eee5c:	cc                   	int3
+ 45eee5d:	cc                   	int3
+ 45eee5e:	cc                   	int3
+ 45eee5f:	cc                   	int3

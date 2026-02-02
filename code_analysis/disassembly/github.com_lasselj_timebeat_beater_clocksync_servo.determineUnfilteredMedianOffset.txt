@@ -1,0 +1,146 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset
+# addr 0x45a8b20 size 544 (0x220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a8b20 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base>:
+ 45a8b20:	4c 8d 64 24 c8       	lea    -0x38(%rsp),%r12
+ 45a8b25:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a8b29:	0f 86 f7 01 00 00    	jbe    45a8d26 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x206>
+ 45a8b2f:	48 81 ec b8 00 00 00 	sub    $0xb8,%rsp
+ 45a8b36:	48 89 ac 24 b0 00 00 	mov    %rbp,0xb0(%rsp)
+ 45a8b3d:	00 
+ 45a8b3e:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+ 45a8b45:	00 
+ 45a8b46:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 45a8b4d:	00 
+ 45a8b4e:	48 85 c0             	test   %rax,%rax
+ 45a8b51:	74 05                	je     45a8b58 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x38>
+ 45a8b53:	48 8b 10             	mov    (%rax),%rdx
+ 45a8b56:	eb 02                	jmp    45a8b5a <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x3a>
+ 45a8b58:	31 d2                	xor    %edx,%edx
+ 45a8b5a:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+ 45a8b5f:	48 8d 05 ba 1b 20 01 	lea    0x1201bba(%rip),%rax        # 57aa720 <type:int64@@Base>
+ 45a8b66:	48 89 d3             	mov    %rdx,%rbx
+ 45a8b69:	48 89 d9             	mov    %rbx,%rcx
+ 45a8b6c:	e8 6f d8 98 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 45a8b71:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45a8b76:	48 8d 7c 24 50       	lea    0x50(%rsp),%rdi
+ 45a8b7b:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45a8b7f:	90                   	nop
+ 45a8b80:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a8b85:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a8b8a:	e8 3c e2 9a fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45a8b8f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a8b93:	48 8b 9c 24 c0 00 00 	mov    0xc0(%rsp),%rbx
+ 45a8b9a:	00 
+ 45a8b9b:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 45a8ba0:	48 8d 05 79 f9 39 01 	lea    0x139f979(%rip),%rax        # 5948520 <type:UCSwdOcC@@Base>
+ 45a8ba7:	e8 14 9b 94 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45a8bac:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45a8bb1:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a8bb6:	31 c0                	xor    %eax,%eax
+ 45a8bb8:	eb 2d                	jmp    45a8be7 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0xc7>
+ 45a8bba:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45a8bbf:	48 89 1c c2          	mov    %rbx,(%rdx,%rax,8)
+ 45a8bc3:	48 8d 44 24 50       	lea    0x50(%rsp),%rax
+ 45a8bc8:	e8 73 9d 94 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45a8bcd:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 45a8bd2:	48 ff c0             	inc    %rax
+ 45a8bd5:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45a8bda:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 45a8bdf:	48 89 d1             	mov    %rdx,%rcx
+ 45a8be2:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45a8be7:	48 83 7c 24 50 00    	cmpq   $0x0,0x50(%rsp)
+ 45a8bed:	74 1b                	je     45a8c0a <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0xea>
+ 45a8bef:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 45a8bf4:	48 8b 1b             	mov    (%rbx),%rbx
+ 45a8bf7:	48 8b 5b 18          	mov    0x18(%rbx),%rbx
+ 45a8bfb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a8c00:	48 39 c8             	cmp    %rcx,%rax
+ 45a8c03:	72 b5                	jb     45a8bba <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x9a>
+ 45a8c05:	e9 16 01 00 00       	jmp    45a8d20 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x200>
+ 45a8c0a:	48 89 d0             	mov    %rdx,%rax
+ 45a8c0d:	48 89 cb             	mov    %rcx,%rbx
+ 45a8c10:	e8 eb 51 94 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 45a8c15:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 45a8c1b:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45a8c21:	48 8d 15 18 01 00 00 	lea    0x118(%rip),%rdx        # 45a8d40 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset.func1@@Base>
+ 45a8c28:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45a8c2d:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45a8c32:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 45a8c37:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 45a8c3c:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 45a8c41:	48 89 74 24 48       	mov    %rsi,0x48(%rsp)
+ 45a8c46:	48 89 c3             	mov    %rax,%rbx
+ 45a8c49:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 45a8c4e:	48 8d 05 cb b4 18 01 	lea    0x118b4cb(%rip),%rax        # 5734120 <type:[]int64@@Base>
+ 45a8c55:	e8 26 a3 9b fd       	call   1f62f80 <sort.Slice@@Base>
+ 45a8c5a:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a8c5f:	0f ba e1 00          	bt     $0x0,%ecx
+ 45a8c63:	72 46                	jb     45a8cab <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x18b>
+ 45a8c65:	48 89 ca             	mov    %rcx,%rdx
+ 45a8c68:	48 c1 e9 3f          	shr    $0x3f,%rcx
+ 45a8c6c:	48 8d 04 0a          	lea    (%rdx,%rcx,1),%rax
+ 45a8c70:	48 d1 f8             	sar    $1,%rax
+ 45a8c73:	48 8d 58 ff          	lea    -0x1(%rax),%rbx
+ 45a8c77:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 45a8c7e:	00 00 
+ 45a8c80:	48 39 da             	cmp    %rbx,%rdx
+ 45a8c83:	0f 86 87 00 00 00    	jbe    45a8d10 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1f0>
+ 45a8c89:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45a8c8e:	48 8b 74 c3 f8       	mov    -0x8(%rbx,%rax,8),%rsi
+ 45a8c93:	48 39 c2             	cmp    %rax,%rdx
+ 45a8c96:	76 70                	jbe    45a8d08 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1e8>
+ 45a8c98:	48 03 34 c3          	add    (%rbx,%rax,8),%rsi
+ 45a8c9c:	48 89 f1             	mov    %rsi,%rcx
+ 45a8c9f:	48 c1 ee 3f          	shr    $0x3f,%rsi
+ 45a8ca3:	48 01 f1             	add    %rsi,%rcx
+ 45a8ca6:	48 d1 f9             	sar    $1,%rcx
+ 45a8ca9:	eb 45                	jmp    45a8cf0 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1d0>
+ 45a8cab:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 45a8cae:	f2 48 0f 2a c1       	cvtsi2sd %rcx,%xmm0
+ 45a8cb3:	f2 0f 10 0d 05 57 f3 	movsd  0xf35705(%rip),%xmm1        # 54de3c0 <_IO_stdin_used@@Base+0x8ab3c0>
+ 45a8cba:	00 
+ 45a8cbb:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+ 45a8cbf:	48 0f b6 15 b7 1c 8d 	movzbq 0x38d1cb7(%rip),%rdx        # 7e7a97e <runtime.x86HasSSE41@@Base>
+ 45a8cc6:	03 
+ 45a8cc7:	85 d2                	test   %edx,%edx
+ 45a8cc9:	74 08                	je     45a8cd3 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1b3>
+ 45a8ccb:	66 0f 3a 0b c0 01    	roundsd $0x1,%xmm0,%xmm0
+ 45a8cd1:	eb 0a                	jmp    45a8cdd <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1bd>
+ 45a8cd3:	e8 48 f9 9b fd       	call   1f68620 <math.Floor@@Base>
+ 45a8cd8:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a8cdd:	f2 48 0f 2c c0       	cvttsd2si %xmm0,%rax
+ 45a8ce2:	48 39 c1             	cmp    %rax,%rcx
+ 45a8ce5:	76 1c                	jbe    45a8d03 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base+0x1e3>
+ 45a8ce7:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45a8cec:	48 8b 0c c2          	mov    (%rdx,%rax,8),%rcx
+ 45a8cf0:	48 89 c8             	mov    %rcx,%rax
+ 45a8cf3:	48 8b ac 24 b0 00 00 	mov    0xb0(%rsp),%rbp
+ 45a8cfa:	00 
+ 45a8cfb:	48 81 c4 b8 00 00 00 	add    $0xb8,%rsp
+ 45a8d02:	c3                   	ret
+ 45a8d03:	e8 98 dd 9a fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45a8d08:	48 89 d1             	mov    %rdx,%rcx
+ 45a8d0b:	e8 90 dd 9a fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45a8d10:	48 89 d8             	mov    %rbx,%rax
+ 45a8d13:	48 89 d1             	mov    %rdx,%rcx
+ 45a8d16:	e8 85 dd 9a fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45a8d1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a8d20:	e8 7b dd 9a fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45a8d25:	90                   	nop
+ 45a8d26:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a8d2b:	e8 30 b7 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a8d30:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a8d35:	e9 e6 fd ff ff       	jmp    45a8b20 <github.com/lasselj/timebeat/beater/clocksync/servo.determineUnfilteredMedianOffset@@Base>
+ 45a8d3a:	cc                   	int3
+ 45a8d3b:	cc                   	int3
+ 45a8d3c:	cc                   	int3
+ 45a8d3d:	cc                   	int3
+ 45a8d3e:	cc                   	int3
+ 45a8d3f:	cc                   	int3

@@ -1,0 +1,1234 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice
+# addr 0x4b69880 size 4928 (0x1340)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b69880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base>:
+ 4b69880:	4c 8d a4 24 10 ff ff 	lea    -0xf0(%rsp),%r12
+ 4b69887:	ff 
+ 4b69888:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b6988c:	0f 86 07 13 00 00    	jbe    4b6ab99 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1319>
+ 4b69892:	48 81 ec 70 01 00 00 	sub    $0x170,%rsp
+ 4b69899:	48 89 ac 24 68 01 00 	mov    %rbp,0x168(%rsp)
+ 4b698a0:	00 
+ 4b698a1:	48 8d ac 24 68 01 00 	lea    0x168(%rsp),%rbp
+ 4b698a8:	00 
+ 4b698a9:	48 89 9c 24 80 01 00 	mov    %rbx,0x180(%rsp)
+ 4b698b0:	00 
+ 4b698b1:	48 89 84 24 78 01 00 	mov    %rax,0x178(%rsp)
+ 4b698b8:	00 
+ 4b698b9:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b698c0:	00 00 
+ 4b698c2:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 4b698c9:	00 00 
+ 4b698cb:	48 8d 0d ce 4d c4 00 	lea    0xc44dce(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b698d2:	48 89 8c 24 48 01 00 	mov    %rcx,0x148(%rsp)
+ 4b698d9:	00 
+ 4b698da:	48 8d 15 87 98 38 01 	lea    0x1389887(%rip),%rdx        # 5ef3168 <time..dict.leadingInt[string]@@Base+0x2ed8>
+ 4b698e1:	48 89 94 24 50 01 00 	mov    %rdx,0x150(%rsp)
+ 4b698e8:	00 
+ 4b698e9:	e8 72 44 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b698ee:	48 8d 0d ab 4d c4 00 	lea    0xc44dab(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b698f5:	48 89 8c 24 58 01 00 	mov    %rcx,0x158(%rsp)
+ 4b698fc:	00 
+ 4b698fd:	48 89 84 24 60 01 00 	mov    %rax,0x160(%rsp)
+ 4b69904:	00 
+ 4b69905:	48 8d 05 bb d0 0c 00 	lea    0xcd0bb(%rip),%rax        # 4c369c7 <_IO_stdin_used@@Base+0x39c7>
+ 4b6990c:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 4b69911:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b69916:	48 89 fe             	mov    %rdi,%rsi
+ 4b69919:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b69920:	00 
+ 4b69921:	e8 da af 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b69926:	e8 95 cf 47 fd       	call   1fe68c0 <os.ReadDir@@Base>
+ 4b6992b:	48 85 ff             	test   %rdi,%rdi
+ 4b6992e:	0f 85 3d 08 00 00    	jne    4b6a171 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x8f1>
+ 4b69934:	44 0f 11 bc 24 28 01 	movups %xmm15,0x128(%rsp)
+ 4b6993b:	00 00 
+ 4b6993d:	44 0f 11 bc 24 38 01 	movups %xmm15,0x138(%rsp)
+ 4b69944:	00 00 
+ 4b69946:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6994d:	00 
+ 4b6994e:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b69955:	00 
+ 4b69956:	e8 65 1a 00 00       	call   4b6b3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetClockSource@@Base>
+ 4b6995b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b69960:	48 85 c9             	test   %rcx,%rcx
+ 4b69963:	0f 85 46 01 00 00    	jne    4b69aaf <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x22f>
+ 4b69969:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b69970:	00 00 
+ 4b69972:	e8 e9 43 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b69977:	48 8d 0d 22 4d c4 00 	lea    0xc44d22(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6997e:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b69985:	00 
+ 4b69986:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6998d:	00 
+ 4b6998e:	48 8d 05 69 a4 1f 00 	lea    0x1fa469(%rip),%rax        # 4d63dfe <_IO_stdin_used@@Base+0x130dfe>
+ 4b69995:	bb 12 00 00 00       	mov    $0x12,%ebx
+ 4b6999a:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6999f:	48 89 fe             	mov    %rdi,%rsi
+ 4b699a2:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b699a9:	00 
+ 4b699aa:	e8 51 af 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b699af:	90                   	nop
+ 4b699b0:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b699b7:	00 
+ 4b699b8:	48 85 c9             	test   %rcx,%rcx
+ 4b699bb:	74 12                	je     4b699cf <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x14f>
+ 4b699bd:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b699c4:	00 
+ 4b699c5:	48 39 d1             	cmp    %rdx,%rcx
+ 4b699c8:	74 15                	je     4b699df <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x15f>
+ 4b699ca:	e9 b6 11 00 00       	jmp    4b6ab85 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1305>
+ 4b699cf:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b699d6:	00 
+ 4b699d7:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b699de:	00 
+ 4b699df:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b699e6:	00 
+ 4b699e7:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 4b699eb:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b699f2:	00 
+ 4b699f3:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b699fa:	00 
+ 4b699fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b69a00:	4c 39 c1             	cmp    %r8,%rcx
+ 4b69a03:	73 4b                	jae    4b69a50 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1d0>
+ 4b69a05:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b69a0c:	00 
+ 4b69a0d:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 4b69a14:	00 
+ 4b69a15:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 4b69a1c:	00 
+ 4b69a1d:	4c 89 c8             	mov    %r9,%rax
+ 4b69a20:	48 89 df             	mov    %rbx,%rdi
+ 4b69a23:	48 8d 35 36 4f c4 00 	lea    0xc44f36(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b69a2a:	4c 89 c3             	mov    %r8,%rbx
+ 4b69a2d:	e8 8e ca 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b69a32:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69a39:	00 
+ 4b69a3a:	49 89 c1             	mov    %rax,%r9
+ 4b69a3d:	49 89 d8             	mov    %rbx,%r8
+ 4b69a40:	48 8b 84 24 08 01 00 	mov    0x108(%rsp),%rax
+ 4b69a47:	00 
+ 4b69a48:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b69a4f:	00 
+ 4b69a50:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b69a57:	00 
+ 4b69a58:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b69a5f:	00 
+ 4b69a60:	4c 89 84 24 98 00 00 	mov    %r8,0x98(%rsp)
+ 4b69a67:	00 
+ 4b69a68:	4c 01 ca             	add    %r9,%rdx
+ 4b69a6b:	48 89 c6             	mov    %rax,%rsi
+ 4b69a6e:	48 89 d0             	mov    %rdx,%rax
+ 4b69a71:	48 89 df             	mov    %rbx,%rdi
+ 4b69a74:	48 89 f3             	mov    %rsi,%rbx
+ 4b69a77:	48 89 f9             	mov    %rdi,%rcx
+ 4b69a7a:	e8 21 da 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b69a7f:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b69a86:	00 
+ 4b69a87:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b69a8e:	00 
+ 4b69a8f:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69a96:	00 
+ 4b69a97:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b69a9e:	00 
+ 4b69a9f:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b69aa6:	00 
+ 4b69aa7:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b69aae:	00 
+ 4b69aaf:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b69ab6:	00 
+ 4b69ab7:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b69abe:	00 
+ 4b69abf:	90                   	nop
+ 4b69ac0:	e8 fb 19 00 00       	call   4b6b4c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetGNSSSync@@Base>
+ 4b69ac5:	48 85 c9             	test   %rcx,%rcx
+ 4b69ac8:	0f 85 47 01 00 00    	jne    4b69c15 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x395>
+ 4b69ace:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b69ad5:	00 00 
+ 4b69ad7:	e8 84 42 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b69adc:	48 8d 0d bd 4b c4 00 	lea    0xc44bbd(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b69ae3:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b69aea:	00 
+ 4b69aeb:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b69af2:	00 
+ 4b69af3:	48 8d 05 6e 4c 1a 00 	lea    0x1a4c6e(%rip),%rax        # 4d0e768 <_IO_stdin_used@@Base+0xdb768>
+ 4b69afa:	bb 11 00 00 00       	mov    $0x11,%ebx
+ 4b69aff:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b69b04:	48 89 fe             	mov    %rdi,%rsi
+ 4b69b07:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b69b0e:	00 
+ 4b69b0f:	e8 ec ad 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b69b14:	90                   	nop
+ 4b69b15:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b69b1c:	00 
+ 4b69b1d:	0f 1f 00             	nopl   (%rax)
+ 4b69b20:	48 85 c9             	test   %rcx,%rcx
+ 4b69b23:	74 12                	je     4b69b37 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x2b7>
+ 4b69b25:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69b2c:	00 
+ 4b69b2d:	48 39 d1             	cmp    %rdx,%rcx
+ 4b69b30:	74 15                	je     4b69b47 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x2c7>
+ 4b69b32:	e9 3a 10 00 00       	jmp    4b6ab71 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x12f1>
+ 4b69b37:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69b3e:	00 
+ 4b69b3f:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b69b46:	00 
+ 4b69b47:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b69b4e:	00 
+ 4b69b4f:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 4b69b53:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b69b5a:	00 
+ 4b69b5b:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b69b62:	00 
+ 4b69b63:	4c 39 c1             	cmp    %r8,%rcx
+ 4b69b66:	73 4b                	jae    4b69bb3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x333>
+ 4b69b68:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b69b6f:	00 
+ 4b69b70:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4b69b77:	00 
+ 4b69b78:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4b69b7f:	00 
+ 4b69b80:	4c 89 c8             	mov    %r9,%rax
+ 4b69b83:	48 89 df             	mov    %rbx,%rdi
+ 4b69b86:	48 8d 35 d3 4d c4 00 	lea    0xc44dd3(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b69b8d:	4c 89 c3             	mov    %r8,%rbx
+ 4b69b90:	e8 2b c9 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b69b95:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69b9c:	00 
+ 4b69b9d:	49 89 c1             	mov    %rax,%r9
+ 4b69ba0:	49 89 d8             	mov    %rbx,%r8
+ 4b69ba3:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+ 4b69baa:	00 
+ 4b69bab:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b69bb2:	00 
+ 4b69bb3:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b69bba:	00 
+ 4b69bbb:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 4b69bc2:	00 
+ 4b69bc3:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b69bca:	00 
+ 4b69bcb:	4c 01 ca             	add    %r9,%rdx
+ 4b69bce:	48 89 c6             	mov    %rax,%rsi
+ 4b69bd1:	48 89 d0             	mov    %rdx,%rax
+ 4b69bd4:	48 89 df             	mov    %rbx,%rdi
+ 4b69bd7:	48 89 f3             	mov    %rsi,%rbx
+ 4b69bda:	48 89 f9             	mov    %rdi,%rcx
+ 4b69bdd:	0f 1f 00             	nopl   (%rax)
+ 4b69be0:	e8 bb d8 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b69be5:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69bec:	00 
+ 4b69bed:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b69bf4:	00 
+ 4b69bf5:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b69bfc:	00 
+ 4b69bfd:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b69c04:	00 
+ 4b69c05:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b69c0c:	00 
+ 4b69c0d:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b69c14:	00 
+ 4b69c15:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b69c1c:	00 
+ 4b69c1d:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b69c24:	00 
+ 4b69c25:	e8 b6 22 00 00       	call   4b6bee0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetTTYDevices@@Base>
+ 4b69c2a:	48 85 c9             	test   %rcx,%rcx
+ 4b69c2d:	0f 85 45 01 00 00    	jne    4b69d78 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x4f8>
+ 4b69c33:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b69c3a:	00 00 
+ 4b69c3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b69c40:	e8 1b 41 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b69c45:	48 8d 0d 54 4a c4 00 	lea    0xc44a54(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b69c4c:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b69c53:	00 
+ 4b69c54:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b69c5b:	00 
+ 4b69c5c:	48 8d 05 93 56 1a 00 	lea    0x1a5693(%rip),%rax        # 4d0f2f6 <_IO_stdin_used@@Base+0xdc2f6>
+ 4b69c63:	bb 11 00 00 00       	mov    $0x11,%ebx
+ 4b69c68:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b69c6d:	48 89 fe             	mov    %rdi,%rsi
+ 4b69c70:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b69c77:	00 
+ 4b69c78:	e8 83 ac 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b69c7d:	90                   	nop
+ 4b69c7e:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b69c85:	00 
+ 4b69c86:	48 85 c9             	test   %rcx,%rcx
+ 4b69c89:	74 12                	je     4b69c9d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x41d>
+ 4b69c8b:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69c92:	00 
+ 4b69c93:	48 39 d1             	cmp    %rdx,%rcx
+ 4b69c96:	74 15                	je     4b69cad <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x42d>
+ 4b69c98:	e9 c1 0e 00 00       	jmp    4b6ab5e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x12de>
+ 4b69c9d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69ca4:	00 
+ 4b69ca5:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b69cac:	00 
+ 4b69cad:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b69cb4:	00 
+ 4b69cb5:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 4b69cb9:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b69cc0:	00 
+ 4b69cc1:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b69cc8:	00 
+ 4b69cc9:	4c 39 c1             	cmp    %r8,%rcx
+ 4b69ccc:	73 4b                	jae    4b69d19 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x499>
+ 4b69cce:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+ 4b69cd5:	00 
+ 4b69cd6:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b69cdd:	00 
+ 4b69cde:	48 89 9c 24 80 00 00 	mov    %rbx,0x80(%rsp)
+ 4b69ce5:	00 
+ 4b69ce6:	4c 89 c8             	mov    %r9,%rax
+ 4b69ce9:	48 89 df             	mov    %rbx,%rdi
+ 4b69cec:	48 8d 35 6d 4c c4 00 	lea    0xc44c6d(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b69cf3:	4c 89 c3             	mov    %r8,%rbx
+ 4b69cf6:	e8 c5 c7 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b69cfb:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69d02:	00 
+ 4b69d03:	49 89 c1             	mov    %rax,%r9
+ 4b69d06:	49 89 d8             	mov    %rbx,%r8
+ 4b69d09:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 4b69d10:	00 
+ 4b69d11:	48 8b 9c 24 80 00 00 	mov    0x80(%rsp),%rbx
+ 4b69d18:	00 
+ 4b69d19:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b69d20:	00 
+ 4b69d21:	4c 89 84 24 98 00 00 	mov    %r8,0x98(%rsp)
+ 4b69d28:	00 
+ 4b69d29:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b69d30:	00 
+ 4b69d31:	4c 01 ca             	add    %r9,%rdx
+ 4b69d34:	48 89 c6             	mov    %rax,%rsi
+ 4b69d37:	48 89 d0             	mov    %rdx,%rax
+ 4b69d3a:	48 89 df             	mov    %rbx,%rdi
+ 4b69d3d:	48 89 f3             	mov    %rsi,%rbx
+ 4b69d40:	48 89 f9             	mov    %rdi,%rcx
+ 4b69d43:	e8 58 d7 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b69d48:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b69d4f:	00 
+ 4b69d50:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b69d57:	00 
+ 4b69d58:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69d5f:	00 
+ 4b69d60:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b69d67:	00 
+ 4b69d68:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b69d6f:	00 
+ 4b69d70:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b69d77:	00 
+ 4b69d78:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b69d7f:	00 
+ 4b69d80:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b69d87:	00 
+ 4b69d88:	48 8d 0d e9 a0 0c 00 	lea    0xca0e9(%rip),%rcx        # 4c33e78 <_IO_stdin_used@@Base+0xe78>
+ 4b69d8f:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4b69d94:	e8 c7 26 00 00       	call   4b6c460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetFileLink@@Base>
+ 4b69d99:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ 4b69da0:	48 85 c9             	test   %rcx,%rcx
+ 4b69da3:	0f 85 40 01 00 00    	jne    4b69ee9 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x669>
+ 4b69da9:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b69db0:	00 00 
+ 4b69db2:	e8 a9 3f 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b69db7:	48 8d 0d e2 48 c4 00 	lea    0xc448e2(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b69dbe:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b69dc5:	00 
+ 4b69dc6:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b69dcd:	00 
+ 4b69dce:	48 8d 05 c5 7f 16 00 	lea    0x167fc5(%rip),%rax        # 4cd1d9a <_IO_stdin_used@@Base+0x9ed9a>
+ 4b69dd5:	bb 0e 00 00 00       	mov    $0xe,%ebx
+ 4b69dda:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b69ddf:	48 89 fe             	mov    %rdi,%rsi
+ 4b69de2:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b69de9:	00 
+ 4b69dea:	e8 11 ab 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b69def:	90                   	nop
+ 4b69df0:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b69df7:	00 
+ 4b69df8:	48 85 c9             	test   %rcx,%rcx
+ 4b69dfb:	74 12                	je     4b69e0f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x58f>
+ 4b69dfd:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69e04:	00 
+ 4b69e05:	48 39 d1             	cmp    %rdx,%rcx
+ 4b69e08:	74 15                	je     4b69e1f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x59f>
+ 4b69e0a:	e9 3c 0d 00 00       	jmp    4b6ab4b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x12cb>
+ 4b69e0f:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69e16:	00 
+ 4b69e17:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b69e1e:	00 
+ 4b69e1f:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b69e26:	00 
+ 4b69e27:	4c 8d 04 1a          	lea    (%rdx,%rbx,1),%r8
+ 4b69e2b:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b69e32:	00 
+ 4b69e33:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b69e3a:	00 
+ 4b69e3b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b69e40:	4c 39 c1             	cmp    %r8,%rcx
+ 4b69e43:	73 45                	jae    4b69e8a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x60a>
+ 4b69e45:	48 89 5c 24 78       	mov    %rbx,0x78(%rsp)
+ 4b69e4a:	48 89 84 24 f0 00 00 	mov    %rax,0xf0(%rsp)
+ 4b69e51:	00 
+ 4b69e52:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b69e59:	00 
+ 4b69e5a:	4c 89 c8             	mov    %r9,%rax
+ 4b69e5d:	48 89 df             	mov    %rbx,%rdi
+ 4b69e60:	48 8d 35 f9 4a c4 00 	lea    0xc44af9(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b69e67:	4c 89 c3             	mov    %r8,%rbx
+ 4b69e6a:	e8 51 c6 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b69e6f:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69e76:	00 
+ 4b69e77:	49 89 c1             	mov    %rax,%r9
+ 4b69e7a:	49 89 d8             	mov    %rbx,%r8
+ 4b69e7d:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+ 4b69e84:	00 
+ 4b69e85:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 4b69e8a:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b69e91:	00 
+ 4b69e92:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b69e99:	00 
+ 4b69e9a:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 4b69ea1:	00 
+ 4b69ea2:	4c 01 ca             	add    %r9,%rdx
+ 4b69ea5:	48 89 c6             	mov    %rax,%rsi
+ 4b69ea8:	48 89 d0             	mov    %rdx,%rax
+ 4b69eab:	48 89 df             	mov    %rbx,%rdi
+ 4b69eae:	48 89 f3             	mov    %rsi,%rbx
+ 4b69eb1:	48 89 f9             	mov    %rdi,%rcx
+ 4b69eb4:	e8 e7 d5 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b69eb9:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69ec0:	00 
+ 4b69ec1:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b69ec8:	00 
+ 4b69ec9:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b69ed0:	00 
+ 4b69ed1:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b69ed8:	00 
+ 4b69ed9:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b69ee0:	00 
+ 4b69ee1:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b69ee8:	00 
+ 4b69ee9:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b69ef0:	00 
+ 4b69ef1:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b69ef8:	00 
+ 4b69ef9:	48 8d 0d 8a 9f 0c 00 	lea    0xc9f8a(%rip),%rcx        # 4c33e8a <_IO_stdin_used@@Base+0xe8a>
+ 4b69f00:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4b69f05:	e8 56 25 00 00       	call   4b6c460 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetFileLink@@Base>
+ 4b69f0a:	48 85 c9             	test   %rcx,%rcx
+ 4b69f0d:	0f 85 42 01 00 00    	jne    4b6a055 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x7d5>
+ 4b69f13:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b69f1a:	00 00 
+ 4b69f1c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b69f20:	e8 3b 3e 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b69f25:	48 8d 0d 74 47 c4 00 	lea    0xc44774(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b69f2c:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b69f33:	00 
+ 4b69f34:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b69f3b:	00 
+ 4b69f3c:	48 8d 05 76 df 16 00 	lea    0x16df76(%rip),%rax        # 4cd7eb9 <_IO_stdin_used@@Base+0xa4eb9>
+ 4b69f43:	bb 0f 00 00 00       	mov    $0xf,%ebx
+ 4b69f48:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b69f4d:	48 89 fe             	mov    %rdi,%rsi
+ 4b69f50:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b69f57:	00 
+ 4b69f58:	e8 a3 a9 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b69f5d:	90                   	nop
+ 4b69f5e:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b69f65:	00 
+ 4b69f66:	48 85 c9             	test   %rcx,%rcx
+ 4b69f69:	74 12                	je     4b69f7d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x6fd>
+ 4b69f6b:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69f72:	00 
+ 4b69f73:	48 39 d1             	cmp    %rdx,%rcx
+ 4b69f76:	74 15                	je     4b69f8d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x70d>
+ 4b69f78:	e9 bb 0b 00 00       	jmp    4b6ab38 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x12b8>
+ 4b69f7d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b69f84:	00 
+ 4b69f85:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b69f8c:	00 
+ 4b69f8d:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b69f94:	00 
+ 4b69f95:	4c 8d 04 1a          	lea    (%rdx,%rbx,1),%r8
+ 4b69f99:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b69fa0:	00 
+ 4b69fa1:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b69fa8:	00 
+ 4b69fa9:	4c 39 c1             	cmp    %r8,%rcx
+ 4b69fac:	73 45                	jae    4b69ff3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x773>
+ 4b69fae:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 4b69fb3:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 4b69fba:	00 
+ 4b69fbb:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b69fc2:	00 
+ 4b69fc3:	4c 89 c8             	mov    %r9,%rax
+ 4b69fc6:	48 89 df             	mov    %rbx,%rdi
+ 4b69fc9:	48 8d 35 90 49 c4 00 	lea    0xc44990(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b69fd0:	4c 89 c3             	mov    %r8,%rbx
+ 4b69fd3:	e8 e8 c4 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b69fd8:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b69fdf:	00 
+ 4b69fe0:	49 89 c1             	mov    %rax,%r9
+ 4b69fe3:	49 89 d8             	mov    %rbx,%r8
+ 4b69fe6:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b69fed:	00 
+ 4b69fee:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4b69ff3:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b69ffa:	00 
+ 4b69ffb:	4c 89 84 24 98 00 00 	mov    %r8,0x98(%rsp)
+ 4b6a002:	00 
+ 4b6a003:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b6a00a:	00 
+ 4b6a00b:	4c 01 ca             	add    %r9,%rdx
+ 4b6a00e:	48 89 c6             	mov    %rax,%rsi
+ 4b6a011:	48 89 d0             	mov    %rdx,%rax
+ 4b6a014:	48 89 df             	mov    %rbx,%rdi
+ 4b6a017:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a01a:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a01d:	0f 1f 00             	nopl   (%rax)
+ 4b6a020:	e8 7b d4 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a025:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a02c:	00 
+ 4b6a02d:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a034:	00 
+ 4b6a035:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a03c:	00 
+ 4b6a03d:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a044:	00 
+ 4b6a045:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a04c:	00 
+ 4b6a04d:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a054:	00 
+ 4b6a055:	48 8d 05 4d e4 25 00 	lea    0x25e44d(%rip),%rax        # 4dc84a9 <_IO_stdin_used@@Base+0x1954a9>
+ 4b6a05c:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 4b6a061:	31 c9                	xor    %ecx,%ecx
+ 4b6a063:	31 ff                	xor    %edi,%edi
+ 4b6a065:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a068:	e8 93 a8 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a06d:	90                   	nop
+ 4b6a06e:	48 8b 94 24 28 01 00 	mov    0x128(%rsp),%rdx
+ 4b6a075:	00 
+ 4b6a076:	48 85 d2             	test   %rdx,%rdx
+ 4b6a079:	74 12                	je     4b6a08d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x80d>
+ 4b6a07b:	4c 8d 84 24 28 01 00 	lea    0x128(%rsp),%r8
+ 4b6a082:	00 
+ 4b6a083:	4c 39 c2             	cmp    %r8,%rdx
+ 4b6a086:	74 1d                	je     4b6a0a5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x825>
+ 4b6a088:	e9 98 0a 00 00       	jmp    4b6ab25 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x12a5>
+ 4b6a08d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a094:	00 
+ 4b6a095:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a09c:	00 
+ 4b6a09d:	4c 8d 84 24 28 01 00 	lea    0x128(%rsp),%r8
+ 4b6a0a4:	00 
+ 4b6a0a5:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b6a0ac:	00 
+ 4b6a0ad:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b6a0b1:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a0b8:	00 
+ 4b6a0b9:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a0c0:	00 
+ 4b6a0c1:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a0c4:	73 45                	jae    4b6a10b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x88b>
+ 4b6a0c6:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4b6a0cb:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 4b6a0d2:	00 
+ 4b6a0d3:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b6a0da:	00 
+ 4b6a0db:	4c 89 d0             	mov    %r10,%rax
+ 4b6a0de:	48 89 df             	mov    %rbx,%rdi
+ 4b6a0e1:	48 8d 35 78 48 c4 00 	lea    0xc44878(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a0e8:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a0eb:	e8 d0 c3 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a0f0:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a0f7:	00 
+ 4b6a0f8:	49 89 c2             	mov    %rax,%r10
+ 4b6a0fb:	49 89 d9             	mov    %rbx,%r9
+ 4b6a0fe:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4b6a105:	00 
+ 4b6a106:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4b6a10b:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a112:	00 
+ 4b6a113:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a11a:	00 
+ 4b6a11b:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a122:	00 
+ 4b6a123:	4c 01 d2             	add    %r10,%rdx
+ 4b6a126:	48 89 c6             	mov    %rax,%rsi
+ 4b6a129:	48 89 d0             	mov    %rdx,%rax
+ 4b6a12c:	48 89 df             	mov    %rbx,%rdi
+ 4b6a12f:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a132:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a135:	e8 66 d3 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a13a:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a141:	00 
+ 4b6a142:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a149:	00 
+ 4b6a14a:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a151:	00 
+ 4b6a152:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a159:	00 
+ 4b6a15a:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a161:	00 
+ 4b6a162:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a169:	00 
+ 4b6a16a:	b8 01 00 00 00       	mov    $0x1,%eax
+ 4b6a16f:	eb 6f                	jmp    4b6a1e0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x960>
+ 4b6a171:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a178:	00 00 
+ 4b6a17a:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a181:	00 
+ 4b6a182:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a189:	00 
+ 4b6a18a:	e8 d1 3b 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a18f:	48 8d 0d 0a 45 c4 00 	lea    0xc4450a(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a196:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a19d:	00 
+ 4b6a19e:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a1a5:	00 
+ 4b6a1a6:	48 8d 05 9e 63 26 00 	lea    0x26639e(%rip),%rax        # 4dd054b <_IO_stdin_used@@Base+0x19d54b>
+ 4b6a1ad:	bb 16 00 00 00       	mov    $0x16,%ebx
+ 4b6a1b2:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a1b9:	00 
+ 4b6a1ba:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a1bf:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a1c2:	e8 39 a7 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a1c7:	48 8b ac 24 68 01 00 	mov    0x168(%rsp),%rbp
+ 4b6a1ce:	00 
+ 4b6a1cf:	48 81 c4 70 01 00 00 	add    $0x170,%rsp
+ 4b6a1d6:	c3                   	ret
+ 4b6a1d7:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4b6a1dc:	48 ff c0             	inc    %rax
+ 4b6a1df:	90                   	nop
+ 4b6a1e0:	48 83 f8 05          	cmp    $0x5,%rax
+ 4b6a1e4:	0f 8d a8 01 00 00    	jge    4b6a392 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xb12>
+ 4b6a1ea:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4b6a1ef:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a1f6:	00 
+ 4b6a1f7:	48 89 c1             	mov    %rax,%rcx
+ 4b6a1fa:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a201:	00 
+ 4b6a202:	e8 b9 1b 00 00       	call   4b6bdc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig@@Base>
+ 4b6a207:	48 85 c9             	test   %rcx,%rcx
+ 4b6a20a:	75 cb                	jne    4b6a1d7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x957>
+ 4b6a20c:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4b6a213:	00 
+ 4b6a214:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4b6a219:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b6a220:	00 00 
+ 4b6a222:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 4b6a229:	00 00 
+ 4b6a22b:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4b6a230:	e8 ab 3a 38 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b6a235:	48 8d 0d 24 04 c4 00 	lea    0xc40424(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4b6a23c:	48 89 8c 24 48 01 00 	mov    %rcx,0x148(%rsp)
+ 4b6a243:	00 
+ 4b6a244:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b6a24b:	00 
+ 4b6a24c:	48 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%rax
+ 4b6a253:	00 
+ 4b6a254:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b6a259:	e8 02 3b 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a25e:	48 8d 0d 3b 44 c4 00 	lea    0xc4443b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a265:	48 89 8c 24 58 01 00 	mov    %rcx,0x158(%rsp)
+ 4b6a26c:	00 
+ 4b6a26d:	48 89 84 24 60 01 00 	mov    %rax,0x160(%rsp)
+ 4b6a274:	00 
+ 4b6a275:	48 8d 05 38 4e 1a 00 	lea    0x1a4e38(%rip),%rax        # 4d0f0b4 <_IO_stdin_used@@Base+0xdc0b4>
+ 4b6a27c:	bb 11 00 00 00       	mov    $0x11,%ebx
+ 4b6a281:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b6a286:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a289:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b6a290:	00 
+ 4b6a291:	e8 6a a6 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a296:	90                   	nop
+ 4b6a297:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a29e:	00 
+ 4b6a29f:	90                   	nop
+ 4b6a2a0:	48 85 c9             	test   %rcx,%rcx
+ 4b6a2a3:	74 12                	je     4b6a2b7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xa37>
+ 4b6a2a5:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a2ac:	00 
+ 4b6a2ad:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a2b0:	74 15                	je     4b6a2c7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xa47>
+ 4b6a2b2:	e9 5a 08 00 00       	jmp    4b6ab11 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1291>
+ 4b6a2b7:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a2be:	00 
+ 4b6a2bf:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a2c6:	00 
+ 4b6a2c7:	4c 8b 84 24 38 01 00 	mov    0x138(%rsp),%r8
+ 4b6a2ce:	00 
+ 4b6a2cf:	4e 8d 0c 03          	lea    (%rbx,%r8,1),%r9
+ 4b6a2d3:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a2da:	00 
+ 4b6a2db:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a2e2:	00 
+ 4b6a2e3:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a2e6:	73 45                	jae    4b6a32d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xaad>
+ 4b6a2e8:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b6a2ef:	00 
+ 4b6a2f0:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 4b6a2f5:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 4b6a2fc:	00 
+ 4b6a2fd:	4c 89 d0             	mov    %r10,%rax
+ 4b6a300:	48 89 df             	mov    %rbx,%rdi
+ 4b6a303:	48 8d 35 56 46 c4 00 	lea    0xc44656(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a30a:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a30d:	e8 ae c1 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a312:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4b6a319:	00 
+ 4b6a31a:	49 89 c2             	mov    %rax,%r10
+ 4b6a31d:	49 89 d9             	mov    %rbx,%r9
+ 4b6a320:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 4b6a327:	00 
+ 4b6a328:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 4b6a32d:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a334:	00 
+ 4b6a335:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a33c:	00 
+ 4b6a33d:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a344:	00 
+ 4b6a345:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b6a349:	48 89 c6             	mov    %rax,%rsi
+ 4b6a34c:	48 89 d0             	mov    %rdx,%rax
+ 4b6a34f:	48 89 df             	mov    %rbx,%rdi
+ 4b6a352:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a355:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a358:	e8 43 d1 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a35d:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a364:	00 
+ 4b6a365:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a36c:	00 
+ 4b6a36d:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a374:	00 
+ 4b6a375:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a37c:	00 
+ 4b6a37d:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a384:	00 
+ 4b6a385:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a38c:	00 
+ 4b6a38d:	e9 45 fe ff ff       	jmp    4b6a1d7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x957>
+ 4b6a392:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a399:	00 
+ 4b6a39a:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a3a1:	00 
+ 4b6a3a2:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 4b6a3a7:	e8 d4 0e 00 00       	call   4b6b280 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetAvailableSMAOptions@@Base>
+ 4b6a3ac:	48 85 c9             	test   %rcx,%rcx
+ 4b6a3af:	0f 85 40 01 00 00    	jne    4b6a4f5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xc75>
+ 4b6a3b5:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a3bc:	00 00 
+ 4b6a3be:	66 90                	xchg   %ax,%ax
+ 4b6a3c0:	e8 9b 39 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a3c5:	48 8d 0d d4 42 c4 00 	lea    0xc442d4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a3cc:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a3d3:	00 
+ 4b6a3d4:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a3db:	00 
+ 4b6a3dc:	48 8d 05 d5 4d 27 00 	lea    0x274dd5(%rip),%rax        # 4ddf1b8 <_IO_stdin_used@@Base+0x1ac1b8>
+ 4b6a3e3:	bb 1a 00 00 00       	mov    $0x1a,%ebx
+ 4b6a3e8:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a3ed:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a3f0:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a3f7:	00 
+ 4b6a3f8:	e8 03 a5 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a3fd:	90                   	nop
+ 4b6a3fe:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a405:	00 
+ 4b6a406:	48 85 c9             	test   %rcx,%rcx
+ 4b6a409:	74 12                	je     4b6a41d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xb9d>
+ 4b6a40b:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a412:	00 
+ 4b6a413:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a416:	74 15                	je     4b6a42d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xbad>
+ 4b6a418:	e9 e1 06 00 00       	jmp    4b6aafe <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x127e>
+ 4b6a41d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a424:	00 
+ 4b6a425:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a42c:	00 
+ 4b6a42d:	4c 8b 84 24 38 01 00 	mov    0x138(%rsp),%r8
+ 4b6a434:	00 
+ 4b6a435:	4e 8d 0c 03          	lea    (%rbx,%r8,1),%r9
+ 4b6a439:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a440:	00 
+ 4b6a441:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a448:	00 
+ 4b6a449:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a44c:	73 45                	jae    4b6a493 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xc13>
+ 4b6a44e:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b6a455:	00 
+ 4b6a456:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+ 4b6a45d:	00 
+ 4b6a45e:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 4b6a463:	4c 89 d0             	mov    %r10,%rax
+ 4b6a466:	48 89 df             	mov    %rbx,%rdi
+ 4b6a469:	48 8d 35 f0 44 c4 00 	lea    0xc444f0(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a470:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a473:	e8 48 c0 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a478:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4b6a47f:	00 
+ 4b6a480:	49 89 c2             	mov    %rax,%r10
+ 4b6a483:	49 89 d9             	mov    %rbx,%r9
+ 4b6a486:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4b6a48d:	00 
+ 4b6a48e:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 4b6a493:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a49a:	00 
+ 4b6a49b:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a4a2:	00 
+ 4b6a4a3:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a4aa:	00 
+ 4b6a4ab:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b6a4af:	48 89 c6             	mov    %rax,%rsi
+ 4b6a4b2:	48 89 d0             	mov    %rdx,%rax
+ 4b6a4b5:	48 89 df             	mov    %rbx,%rdi
+ 4b6a4b8:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a4bb:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a4be:	66 90                	xchg   %ax,%ax
+ 4b6a4c0:	e8 db cf 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a4c5:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a4cc:	00 
+ 4b6a4cd:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a4d4:	00 
+ 4b6a4d5:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a4dc:	00 
+ 4b6a4dd:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a4e4:	00 
+ 4b6a4e5:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a4ec:	00 
+ 4b6a4ed:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a4f4:	00 
+ 4b6a4f5:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a4fc:	00 
+ 4b6a4fd:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a504:	00 
+ 4b6a505:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b6a50a:	e8 71 0d 00 00       	call   4b6b280 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetAvailableSMAOptions@@Base>
+ 4b6a50f:	48 85 c9             	test   %rcx,%rcx
+ 4b6a512:	0f 85 3d 01 00 00    	jne    4b6a655 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xdd5>
+ 4b6a518:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a51f:	00 00 
+ 4b6a521:	e8 3a 38 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a526:	48 8d 0d 73 41 c4 00 	lea    0xc44173(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a52d:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a534:	00 
+ 4b6a535:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a53c:	00 
+ 4b6a53d:	48 8d 05 a7 0c 27 00 	lea    0x270ca7(%rip),%rax        # 4ddb1eb <_IO_stdin_used@@Base+0x1a81eb>
+ 4b6a544:	bb 19 00 00 00       	mov    $0x19,%ebx
+ 4b6a549:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a54e:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a551:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a558:	00 
+ 4b6a559:	e8 a2 a3 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a55e:	90                   	nop
+ 4b6a55f:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a566:	00 
+ 4b6a567:	48 85 c9             	test   %rcx,%rcx
+ 4b6a56a:	74 12                	je     4b6a57e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xcfe>
+ 4b6a56c:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a573:	00 
+ 4b6a574:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a577:	74 15                	je     4b6a58e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xd0e>
+ 4b6a579:	e9 6d 05 00 00       	jmp    4b6aaeb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x126b>
+ 4b6a57e:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a585:	00 
+ 4b6a586:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a58d:	00 
+ 4b6a58e:	4c 8b 84 24 38 01 00 	mov    0x138(%rsp),%r8
+ 4b6a595:	00 
+ 4b6a596:	4e 8d 0c 03          	lea    (%rbx,%r8,1),%r9
+ 4b6a59a:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a5a1:	00 
+ 4b6a5a2:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a5a9:	00 
+ 4b6a5aa:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a5ad:	73 45                	jae    4b6a5f4 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xd74>
+ 4b6a5af:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b6a5b6:	00 
+ 4b6a5b7:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 4b6a5be:	00 
+ 4b6a5bf:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4b6a5c4:	4c 89 d0             	mov    %r10,%rax
+ 4b6a5c7:	48 89 df             	mov    %rbx,%rdi
+ 4b6a5ca:	48 8d 35 8f 43 c4 00 	lea    0xc4438f(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a5d1:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a5d4:	e8 e7 be 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a5d9:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4b6a5e0:	00 
+ 4b6a5e1:	49 89 c2             	mov    %rax,%r10
+ 4b6a5e4:	49 89 d9             	mov    %rbx,%r9
+ 4b6a5e7:	48 8b 84 24 c8 00 00 	mov    0xc8(%rsp),%rax
+ 4b6a5ee:	00 
+ 4b6a5ef:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4b6a5f4:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a5fb:	00 
+ 4b6a5fc:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a603:	00 
+ 4b6a604:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a60b:	00 
+ 4b6a60c:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b6a610:	48 89 c6             	mov    %rax,%rsi
+ 4b6a613:	48 89 d0             	mov    %rdx,%rax
+ 4b6a616:	48 89 df             	mov    %rbx,%rdi
+ 4b6a619:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a61c:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a61f:	90                   	nop
+ 4b6a620:	e8 7b ce 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a625:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a62c:	00 
+ 4b6a62d:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a634:	00 
+ 4b6a635:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a63c:	00 
+ 4b6a63d:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a644:	00 
+ 4b6a645:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a64c:	00 
+ 4b6a64d:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a654:	00 
+ 4b6a655:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a65c:	00 
+ 4b6a65d:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a664:	00 
+ 4b6a665:	e8 56 0f 00 00       	call   4b6b5c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetUTCTaiOffset@@Base>
+ 4b6a66a:	48 85 c9             	test   %rcx,%rcx
+ 4b6a66d:	0f 85 42 01 00 00    	jne    4b6a7b5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xf35>
+ 4b6a673:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a67a:	00 00 
+ 4b6a67c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b6a680:	e8 db 36 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a685:	48 8d 0d 14 40 c4 00 	lea    0xc44014(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a68c:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a693:	00 
+ 4b6a694:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a69b:	00 
+ 4b6a69c:	48 8d 05 e2 e3 25 00 	lea    0x25e3e2(%rip),%rax        # 4dc8a85 <_IO_stdin_used@@Base+0x195a85>
+ 4b6a6a3:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 4b6a6a8:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a6ad:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a6b0:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a6b7:	00 
+ 4b6a6b8:	e8 43 a2 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a6bd:	90                   	nop
+ 4b6a6be:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a6c5:	00 
+ 4b6a6c6:	48 85 c9             	test   %rcx,%rcx
+ 4b6a6c9:	74 12                	je     4b6a6dd <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xe5d>
+ 4b6a6cb:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a6d2:	00 
+ 4b6a6d3:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a6d6:	74 15                	je     4b6a6ed <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xe6d>
+ 4b6a6d8:	e9 fb 03 00 00       	jmp    4b6aad8 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1258>
+ 4b6a6dd:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a6e4:	00 
+ 4b6a6e5:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a6ec:	00 
+ 4b6a6ed:	4c 8b 84 24 38 01 00 	mov    0x138(%rsp),%r8
+ 4b6a6f4:	00 
+ 4b6a6f5:	4e 8d 0c 03          	lea    (%rbx,%r8,1),%r9
+ 4b6a6f9:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a700:	00 
+ 4b6a701:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a708:	00 
+ 4b6a709:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a70c:	73 45                	jae    4b6a753 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xed3>
+ 4b6a70e:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b6a715:	00 
+ 4b6a716:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4b6a71b:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4b6a722:	00 
+ 4b6a723:	4c 89 d0             	mov    %r10,%rax
+ 4b6a726:	48 89 df             	mov    %rbx,%rdi
+ 4b6a729:	48 8d 35 30 42 c4 00 	lea    0xc44230(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a730:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a733:	e8 88 bd 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a738:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4b6a73f:	00 
+ 4b6a740:	49 89 c2             	mov    %rax,%r10
+ 4b6a743:	49 89 d9             	mov    %rbx,%r9
+ 4b6a746:	48 8b 84 24 c0 00 00 	mov    0xc0(%rsp),%rax
+ 4b6a74d:	00 
+ 4b6a74e:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4b6a753:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a75a:	00 
+ 4b6a75b:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a762:	00 
+ 4b6a763:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a76a:	00 
+ 4b6a76b:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b6a76f:	48 89 c6             	mov    %rax,%rsi
+ 4b6a772:	48 89 d0             	mov    %rdx,%rax
+ 4b6a775:	48 89 df             	mov    %rbx,%rdi
+ 4b6a778:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a77b:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a77e:	66 90                	xchg   %ax,%ax
+ 4b6a780:	e8 1b cd 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a785:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a78c:	00 
+ 4b6a78d:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a794:	00 
+ 4b6a795:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a79c:	00 
+ 4b6a79d:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a7a4:	00 
+ 4b6a7a5:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a7ac:	00 
+ 4b6a7ad:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a7b4:	00 
+ 4b6a7b5:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a7bc:	00 
+ 4b6a7bd:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a7c4:	00 
+ 4b6a7c5:	e8 f6 0e 00 00       	call   4b6b6c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetTsWindowAdjust@@Base>
+ 4b6a7ca:	48 85 c9             	test   %rcx,%rcx
+ 4b6a7cd:	0f 85 42 01 00 00    	jne    4b6a915 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1095>
+ 4b6a7d3:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a7da:	00 00 
+ 4b6a7dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b6a7e0:	e8 7b 35 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a7e5:	48 8d 0d b4 3e c4 00 	lea    0xc43eb4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a7ec:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a7f3:	00 
+ 4b6a7f4:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a7fb:	00 
+ 4b6a7fc:	48 8d 05 e4 23 26 00 	lea    0x2623e4(%rip),%rax        # 4dccbe7 <_IO_stdin_used@@Base+0x199be7>
+ 4b6a803:	bb 15 00 00 00       	mov    $0x15,%ebx
+ 4b6a808:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a80d:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a810:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a817:	00 
+ 4b6a818:	e8 e3 a0 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a81d:	90                   	nop
+ 4b6a81e:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a825:	00 
+ 4b6a826:	48 85 c9             	test   %rcx,%rcx
+ 4b6a829:	74 12                	je     4b6a83d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xfbd>
+ 4b6a82b:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a832:	00 
+ 4b6a833:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a836:	74 15                	je     4b6a84d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0xfcd>
+ 4b6a838:	e9 88 02 00 00       	jmp    4b6aac5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1245>
+ 4b6a83d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a844:	00 
+ 4b6a845:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a84c:	00 
+ 4b6a84d:	4c 8b 84 24 38 01 00 	mov    0x138(%rsp),%r8
+ 4b6a854:	00 
+ 4b6a855:	4d 8d 0c 18          	lea    (%r8,%rbx,1),%r9
+ 4b6a859:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a860:	00 
+ 4b6a861:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+ 4b6a868:	00 
+ 4b6a869:	4c 39 c9             	cmp    %r9,%rcx
+ 4b6a86c:	73 45                	jae    4b6a8b3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1033>
+ 4b6a86e:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4b6a873:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 4b6a87a:	00 
+ 4b6a87b:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b6a882:	00 
+ 4b6a883:	4c 89 d0             	mov    %r10,%rax
+ 4b6a886:	48 89 df             	mov    %rbx,%rdi
+ 4b6a889:	48 8d 35 d0 40 c4 00 	lea    0xc440d0(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a890:	4c 89 cb             	mov    %r9,%rbx
+ 4b6a893:	e8 28 bc 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a898:	4c 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%r8
+ 4b6a89f:	00 
+ 4b6a8a0:	49 89 c2             	mov    %rax,%r10
+ 4b6a8a3:	49 89 d9             	mov    %rbx,%r9
+ 4b6a8a6:	48 8b 84 24 b8 00 00 	mov    0xb8(%rsp),%rax
+ 4b6a8ad:	00 
+ 4b6a8ae:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4b6a8b3:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6a8ba:	00 
+ 4b6a8bb:	4c 89 8c 24 98 00 00 	mov    %r9,0x98(%rsp)
+ 4b6a8c2:	00 
+ 4b6a8c3:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+ 4b6a8ca:	00 
+ 4b6a8cb:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b6a8cf:	48 89 c6             	mov    %rax,%rsi
+ 4b6a8d2:	48 89 d0             	mov    %rdx,%rax
+ 4b6a8d5:	48 89 df             	mov    %rbx,%rdi
+ 4b6a8d8:	48 89 f3             	mov    %rsi,%rbx
+ 4b6a8db:	48 89 f9             	mov    %rdi,%rcx
+ 4b6a8de:	66 90                	xchg   %ax,%ax
+ 4b6a8e0:	e8 bb cb 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6a8e5:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6a8ec:	00 
+ 4b6a8ed:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6a8f4:	00 
+ 4b6a8f5:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a8fc:	00 
+ 4b6a8fd:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6a904:	00 
+ 4b6a905:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6a90c:	00 
+ 4b6a90d:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6a914:	00 
+ 4b6a915:	48 8b 84 24 78 01 00 	mov    0x178(%rsp),%rax
+ 4b6a91c:	00 
+ 4b6a91d:	48 8b 9c 24 80 01 00 	mov    0x180(%rsp),%rbx
+ 4b6a924:	00 
+ 4b6a925:	e8 96 0e 00 00       	call   4b6b7c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetIRIGBMode@@Base>
+ 4b6a92a:	48 85 c9             	test   %rcx,%rcx
+ 4b6a92d:	0f 85 42 01 00 00    	jne    4b6aa75 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x11f5>
+ 4b6a933:	44 0f 11 bc 24 18 01 	movups %xmm15,0x118(%rsp)
+ 4b6a93a:	00 00 
+ 4b6a93c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b6a940:	e8 1b 34 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6a945:	48 8d 0d 54 3d c4 00 	lea    0xc43d54(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6a94c:	48 89 8c 24 18 01 00 	mov    %rcx,0x118(%rsp)
+ 4b6a953:	00 
+ 4b6a954:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6a95b:	00 
+ 4b6a95c:	48 8d 05 d1 3e 1a 00 	lea    0x1a3ed1(%rip),%rax        # 4d0e834 <_IO_stdin_used@@Base+0xdb834>
+ 4b6a963:	bb 11 00 00 00       	mov    $0x11,%ebx
+ 4b6a968:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b6a96d:	48 89 fe             	mov    %rdi,%rsi
+ 4b6a970:	48 8d 8c 24 18 01 00 	lea    0x118(%rsp),%rcx
+ 4b6a977:	00 
+ 4b6a978:	e8 83 9f 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6a97d:	90                   	nop
+ 4b6a97e:	48 8b 8c 24 28 01 00 	mov    0x128(%rsp),%rcx
+ 4b6a985:	00 
+ 4b6a986:	48 85 c9             	test   %rcx,%rcx
+ 4b6a989:	74 12                	je     4b6a99d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x111d>
+ 4b6a98b:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a992:	00 
+ 4b6a993:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6a996:	74 15                	je     4b6a9ad <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x112d>
+ 4b6a998:	e9 15 01 00 00       	jmp    4b6aab2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1232>
+ 4b6a99d:	48 8d 94 24 28 01 00 	lea    0x128(%rsp),%rdx
+ 4b6a9a4:	00 
+ 4b6a9a5:	48 89 94 24 28 01 00 	mov    %rdx,0x128(%rsp)
+ 4b6a9ac:	00 
+ 4b6a9ad:	48 8b 94 24 38 01 00 	mov    0x138(%rsp),%rdx
+ 4b6a9b4:	00 
+ 4b6a9b5:	4c 8d 04 1a          	lea    (%rdx,%rbx,1),%r8
+ 4b6a9b9:	48 8b 8c 24 40 01 00 	mov    0x140(%rsp),%rcx
+ 4b6a9c0:	00 
+ 4b6a9c1:	4c 8b 8c 24 30 01 00 	mov    0x130(%rsp),%r9
+ 4b6a9c8:	00 
+ 4b6a9c9:	4c 39 c1             	cmp    %r8,%rcx
+ 4b6a9cc:	73 45                	jae    4b6aa13 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1193>
+ 4b6a9ce:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4b6a9d3:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4b6a9da:	00 
+ 4b6a9db:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4b6a9e2:	00 
+ 4b6a9e3:	4c 89 c8             	mov    %r9,%rax
+ 4b6a9e6:	48 89 df             	mov    %rbx,%rdi
+ 4b6a9e9:	48 8d 35 70 3f c4 00 	lea    0xc43f70(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b6a9f0:	4c 89 c3             	mov    %r8,%rbx
+ 4b6a9f3:	e8 c8 ba 3c fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b6a9f8:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6a9ff:	00 
+ 4b6aa00:	49 89 c1             	mov    %rax,%r9
+ 4b6aa03:	49 89 d8             	mov    %rbx,%r8
+ 4b6aa06:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 4b6aa0d:	00 
+ 4b6aa0e:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4b6aa13:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b6aa1a:	00 
+ 4b6aa1b:	4c 89 84 24 98 00 00 	mov    %r8,0x98(%rsp)
+ 4b6aa22:	00 
+ 4b6aa23:	4c 89 8c 24 10 01 00 	mov    %r9,0x110(%rsp)
+ 4b6aa2a:	00 
+ 4b6aa2b:	4c 01 ca             	add    %r9,%rdx
+ 4b6aa2e:	48 89 c6             	mov    %rax,%rsi
+ 4b6aa31:	48 89 d0             	mov    %rdx,%rax
+ 4b6aa34:	48 89 df             	mov    %rbx,%rdi
+ 4b6aa37:	48 89 f3             	mov    %rsi,%rbx
+ 4b6aa3a:	48 89 f9             	mov    %rdi,%rcx
+ 4b6aa3d:	0f 1f 00             	nopl   (%rax)
+ 4b6aa40:	e8 5b ca 3e fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b6aa45:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b6aa4c:	00 
+ 4b6aa4d:	48 89 94 24 38 01 00 	mov    %rdx,0x138(%rsp)
+ 4b6aa54:	00 
+ 4b6aa55:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b6aa5c:	00 
+ 4b6aa5d:	48 89 94 24 40 01 00 	mov    %rdx,0x140(%rsp)
+ 4b6aa64:	00 
+ 4b6aa65:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b6aa6c:	00 
+ 4b6aa6d:	48 89 94 24 30 01 00 	mov    %rdx,0x130(%rsp)
+ 4b6aa74:	00 
+ 4b6aa75:	48 8b 84 24 30 01 00 	mov    0x130(%rsp),%rax
+ 4b6aa7c:	00 
+ 4b6aa7d:	48 89 c1             	mov    %rax,%rcx
+ 4b6aa80:	48 f7 d8             	neg    %rax
+ 4b6aa83:	48 8b 9c 24 38 01 00 	mov    0x138(%rsp),%rbx
+ 4b6aa8a:	00 
+ 4b6aa8b:	48 39 c3             	cmp    %rax,%rbx
+ 4b6aa8e:	77 13                	ja     4b6aaa3 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x1223>
+ 4b6aa90:	48 89 c8             	mov    %rcx,%rax
+ 4b6aa93:	48 8b ac 24 68 01 00 	mov    0x168(%rsp),%rbp
+ 4b6aa9a:	00 
+ 4b6aa9b:	48 81 c4 70 01 00 00 	add    $0x170,%rsp
+ 4b6aaa2:	c3                   	ret
+ 4b6aaa3:	48 85 c9             	test   %rcx,%rcx
+ 4b6aaa6:	74 05                	je     4b6aaad <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base+0x122d>
+ 4b6aaa8:	e8 73 01 3e fd       	call   1f4ac20 <runtime.panicunsafestringlen@@Base>
+ 4b6aaad:	e8 ae 01 3e fd       	call   1f4ac60 <runtime.panicunsafestringnilptr@@Base>
+ 4b6aab2:	48 8d 05 e7 3b c4 00 	lea    0xc43be7(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6aab9:	48 8d 1d 40 24 39 01 	lea    0x1392440(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6aac0:	e8 7b 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6aac5:	48 8d 05 d4 3b c4 00 	lea    0xc43bd4(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6aacc:	48 8d 1d 2d 24 39 01 	lea    0x139242d(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6aad3:	e8 68 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6aad8:	48 8d 05 c1 3b c4 00 	lea    0xc43bc1(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6aadf:	48 8d 1d 1a 24 39 01 	lea    0x139241a(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6aae6:	e8 55 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6aaeb:	48 8d 05 ae 3b c4 00 	lea    0xc43bae(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6aaf2:	48 8d 1d 07 24 39 01 	lea    0x1392407(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6aaf9:	e8 42 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6aafe:	48 8d 05 9b 3b c4 00 	lea    0xc43b9b(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab05:	48 8d 1d f4 23 39 01 	lea    0x13923f4(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab0c:	e8 2f 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab11:	48 8d 05 88 3b c4 00 	lea    0xc43b88(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab18:	48 8d 1d e1 23 39 01 	lea    0x13923e1(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab1f:	90                   	nop
+ 4b6ab20:	e8 1b 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab25:	48 8d 05 74 3b c4 00 	lea    0xc43b74(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab2c:	48 8d 1d cd 23 39 01 	lea    0x13923cd(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab33:	e8 08 22 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab38:	48 8d 05 61 3b c4 00 	lea    0xc43b61(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab3f:	48 8d 1d ba 23 39 01 	lea    0x13923ba(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab46:	e8 f5 21 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab4b:	48 8d 05 4e 3b c4 00 	lea    0xc43b4e(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab52:	48 8d 1d a7 23 39 01 	lea    0x13923a7(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab59:	e8 e2 21 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab5e:	48 8d 05 3b 3b c4 00 	lea    0xc43b3b(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab65:	48 8d 1d 94 23 39 01 	lea    0x1392394(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab6c:	e8 cf 21 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab71:	48 8d 05 28 3b c4 00 	lea    0xc43b28(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab78:	48 8d 1d 81 23 39 01 	lea    0x1392381(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab7f:	90                   	nop
+ 4b6ab80:	e8 bb 21 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab85:	48 8d 05 14 3b c4 00 	lea    0xc43b14(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b6ab8c:	48 8d 1d 6d 23 39 01 	lea    0x139236d(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b6ab93:	e8 a8 21 3b fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b6ab98:	90                   	nop
+ 4b6ab99:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6ab9e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b6aba3:	e8 b8 98 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6aba8:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b6abad:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b6abb2:	e9 c9 ec ff ff       	jmp    4b69880 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.ShowOCPTAPDevice@@Base>
+ 4b6abb7:	cc                   	int3
+ 4b6abb8:	cc                   	int3
+ 4b6abb9:	cc                   	int3
+ 4b6abba:	cc                   	int3
+ 4b6abbb:	cc                   	int3
+ 4b6abbc:	cc                   	int3
+ 4b6abbd:	cc                   	int3
+ 4b6abbe:	cc                   	int3
+ 4b6abbf:	cc                   	int3

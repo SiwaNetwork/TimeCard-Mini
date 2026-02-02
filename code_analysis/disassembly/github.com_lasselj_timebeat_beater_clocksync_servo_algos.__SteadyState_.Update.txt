@@ -1,0 +1,92 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update
+# addr 0x4580b00 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004580b00 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update@@Base>:
+ 4580b00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4580b04:	0f 86 d8 00 00 00    	jbe    4580be2 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update@@Base+0xe2>
+ 4580b0a:	48 83 ec 50          	sub    $0x50,%rsp
+ 4580b0e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 4580b13:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 4580b18:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4580b1f:	4c 89 6c 24 40       	mov    %r13,0x40(%rsp)
+ 4580b24:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4580b29:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 4580b2e:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 4580b33:	48 89 c2             	mov    %rax,%rdx
+ 4580b36:	31 c0                	xor    %eax,%eax
+ 4580b38:	be 01 00 00 00       	mov    $0x1,%esi
+ 4580b3d:	f0 0f b1 72 50       	lock cmpxchg %esi,0x50(%rdx)
+ 4580b42:	40 0f 94 c6          	sete   %sil
+ 4580b46:	48 8d 42 50          	lea    0x50(%rdx),%rax
+ 4580b4a:	40 84 f6             	test   %sil,%sil
+ 4580b4d:	75 1e                	jne    4580b6d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update@@Base+0x6d>
+ 4580b4f:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4580b54:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+ 4580b59:	e8 e2 79 9f fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4580b5e:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4580b63:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 4580b68:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+ 4580b6d:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 4580b73:	48 8d 0d a6 00 00 00 	lea    0xa6(%rip),%rcx        # 4580c20 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update.func1@@Base>
+ 4580b7a:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4580b7f:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4580b84:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 4580b89:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4580b8e:	c6 44 24 17 01       	movb   $0x1,0x17(%rsp)
+ 4580b93:	90                   	nop
+ 4580b94:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 4580b98:	e8 03 cf ff ff       	call   457daa0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CircularBuffer).Add@@Base>
+ 4580b9d:	90                   	nop
+ 4580b9e:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4580ba3:	48 8b 01             	mov    (%rcx),%rax
+ 4580ba6:	48 8b 5c 24 20       	mov    0x20(%rsp),%rbx
+ 4580bab:	e8 f0 ce ff ff       	call   457daa0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CircularBuffer).Add@@Base>
+ 4580bb0:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4580bb5:	e8 86 01 00 00       	call   4580d40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).updateStateIfRequired@@Base>
+ 4580bba:	c6 44 24 17 00       	movb   $0x0,0x17(%rsp)
+ 4580bbf:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4580bc4:	48 8b 0a             	mov    (%rdx),%rcx
+ 4580bc7:	ff d1                	call   *%rcx
+ 4580bc9:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4580bce:	48 83 c4 50          	add    $0x50,%rsp
+ 4580bd2:	c3                   	ret
+ 4580bd3:	e8 88 b3 99 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4580bd8:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 4580bdd:	48 83 c4 50          	add    $0x50,%rsp
+ 4580be1:	c3                   	ret
+ 4580be2:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4580be7:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4580bec:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4580bf1:	e8 6a 38 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4580bf6:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4580bfb:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4580c00:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4580c05:	e9 f6 fe ff ff       	jmp    4580b00 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*SteadyState).Update@@Base>
+ 4580c0a:	cc                   	int3
+ 4580c0b:	cc                   	int3
+ 4580c0c:	cc                   	int3
+ 4580c0d:	cc                   	int3
+ 4580c0e:	cc                   	int3
+ 4580c0f:	cc                   	int3
+ 4580c10:	cc                   	int3
+ 4580c11:	cc                   	int3
+ 4580c12:	cc                   	int3
+ 4580c13:	cc                   	int3
+ 4580c14:	cc                   	int3
+ 4580c15:	cc                   	int3
+ 4580c16:	cc                   	int3
+ 4580c17:	cc                   	int3
+ 4580c18:	cc                   	int3
+ 4580c19:	cc                   	int3
+ 4580c1a:	cc                   	int3
+ 4580c1b:	cc                   	int3
+ 4580c1c:	cc                   	int3
+ 4580c1d:	cc                   	int3
+ 4580c1e:	cc                   	int3
+ 4580c1f:	cc                   	int3

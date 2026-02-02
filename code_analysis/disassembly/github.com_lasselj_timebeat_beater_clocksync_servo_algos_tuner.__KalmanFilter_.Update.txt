@@ -1,0 +1,77 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update
+# addr 0x457aea0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457aea0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base>:
+ 457aea0:	f2 0f 10 48 08       	movsd  0x8(%rax),%xmm1
+ 457aea5:	f2 0f 58 48 10       	addsd  0x10(%rax),%xmm1
+ 457aeaa:	f2 0f 11 48 08       	movsd  %xmm1,0x8(%rax)
+ 457aeaf:	f2 0f 10 50 18       	movsd  0x18(%rax),%xmm2
+ 457aeb4:	f2 0f 58 d1          	addsd  %xmm1,%xmm2
+ 457aeb8:	0f 10 d9             	movups %xmm1,%xmm3
+ 457aebb:	f2 0f 5e ca          	divsd  %xmm2,%xmm1
+ 457aebf:	f2 0f 10 10          	movsd  (%rax),%xmm2
+ 457aec3:	f2 0f 5c c2          	subsd  %xmm2,%xmm0
+ 457aec7:	0f 10 e1             	movups %xmm1,%xmm4
+ 457aeca:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+ 457aece:	f2 0f 58 ca          	addsd  %xmm2,%xmm1
+ 457aed2:	f2 0f 11 08          	movsd  %xmm1,(%rax)
+ 457aed6:	f2 0f 10 0d ba 35 f6 	movsd  0xf635ba(%rip),%xmm1        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457aedd:	00 
+ 457aede:	f2 0f 5c cc          	subsd  %xmm4,%xmm1
+ 457aee2:	f2 0f 59 d9          	mulsd  %xmm1,%xmm3
+ 457aee6:	f2 0f 11 58 08       	movsd  %xmm3,0x8(%rax)
+ 457aeeb:	80 78 20 00          	cmpb   $0x0,0x20(%rax)
+ 457aeef:	74 7e                	je     457af6f <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0xcf>
+ 457aef1:	f2 0f 10 48 30       	movsd  0x30(%rax),%xmm1
+ 457aef6:	f2 0f 10 50 28       	movsd  0x28(%rax),%xmm2
+ 457aefb:	f2 0f 59 ca          	mulsd  %xmm2,%xmm1
+ 457aeff:	f2 0f 10 1d 91 35 f6 	movsd  0xf63591(%rip),%xmm3        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457af06:	00 
+ 457af07:	f2 0f 5c da          	subsd  %xmm2,%xmm3
+ 457af0b:	f2 0f 59 c0          	mulsd  %xmm0,%xmm0
+ 457af0f:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 457af13:	f2 0f 58 cb          	addsd  %xmm3,%xmm1
+ 457af17:	f2 0f 11 48 30       	movsd  %xmm1,0x30(%rax)
+ 457af1c:	f2 0f 10 50 38       	movsd  0x38(%rax),%xmm2
+ 457af21:	f2 0f 10 58 40       	movsd  0x40(%rax),%xmm3
+ 457af26:	66 0f 2e d1          	ucomisd %xmm1,%xmm2
+ 457af2a:	77 0e                	ja     457af3a <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0x9a>
+ 457af2c:	66 0f 2e cb          	ucomisd %xmm3,%xmm1
+ 457af30:	76 05                	jbe    457af37 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0x97>
+ 457af32:	0f 10 d3             	movups %xmm3,%xmm2
+ 457af35:	eb 03                	jmp    457af3a <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0x9a>
+ 457af37:	0f 10 d1             	movups %xmm1,%xmm2
+ 457af3a:	f2 0f 11 50 18       	movsd  %xmm2,0x18(%rax)
+ 457af3f:	f2 0f 10 0d 61 35 f6 	movsd  0xf63561(%rip),%xmm1        # 54de4a8 <_IO_stdin_used@@Base+0x8ab4a8>
+ 457af46:	00 
+ 457af47:	f2 0f 59 48 10       	mulsd  0x10(%rax),%xmm1
+ 457af4c:	f2 0f 10 50 48       	movsd  0x48(%rax),%xmm2
+ 457af51:	f2 0f 10 58 50       	movsd  0x50(%rax),%xmm3
+ 457af56:	66 0f 2e d1          	ucomisd %xmm1,%xmm2
+ 457af5a:	77 0e                	ja     457af6a <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0xca>
+ 457af5c:	66 0f 2e cb          	ucomisd %xmm3,%xmm1
+ 457af60:	76 05                	jbe    457af67 <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0xc7>
+ 457af62:	0f 10 d3             	movups %xmm3,%xmm2
+ 457af65:	eb 03                	jmp    457af6a <github.com/lasselj/timebeat/beater/clocksync/servo/algos/tuner.(*KalmanFilter).Update@@Base+0xca>
+ 457af67:	0f 10 d1             	movups %xmm1,%xmm2
+ 457af6a:	f2 0f 11 50 10       	movsd  %xmm2,0x10(%rax)
+ 457af6f:	f2 0f 10 00          	movsd  (%rax),%xmm0
+ 457af73:	c3                   	ret
+ 457af74:	cc                   	int3
+ 457af75:	cc                   	int3
+ 457af76:	cc                   	int3
+ 457af77:	cc                   	int3
+ 457af78:	cc                   	int3
+ 457af79:	cc                   	int3
+ 457af7a:	cc                   	int3
+ 457af7b:	cc                   	int3
+ 457af7c:	cc                   	int3
+ 457af7d:	cc                   	int3
+ 457af7e:	cc                   	int3
+ 457af7f:	cc                   	int3

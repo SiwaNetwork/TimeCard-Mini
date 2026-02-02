@@ -1,0 +1,104 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients
+# addr 0x457cae0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457cae0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base>:
+ 457cae0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457cae4:	0f 86 d0 00 00 00    	jbe    457cbba <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xda>
+ 457caea:	48 83 ec 20          	sub    $0x20,%rsp
+ 457caee:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 457caf3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 457caf8:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 457cafd:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 457cb02:	48 85 c9             	test   %rcx,%rcx
+ 457cb05:	74 33                	je     457cb3a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x5a>
+ 457cb07:	48 83 f9 01          	cmp    $0x1,%rcx
+ 457cb0b:	75 23                	jne    457cb30 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x50>
+ 457cb0d:	48 8b 10             	mov    (%rax),%rdx
+ 457cb10:	48 8d 1d 57 49 8c 00 	lea    0x8c4957(%rip),%rbx        # 4e4146e <_IO_stdin_used@@Base+0x20e46e>
+ 457cb17:	b9 33 00 00 00       	mov    $0x33,%ecx
+ 457cb1c:	48 89 d0             	mov    %rdx,%rax
+ 457cb1f:	90                   	nop
+ 457cb20:	e8 bb a7 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457cb25:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 457cb2a:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 457cb2e:	eb 2a                	jmp    457cb5a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x7a>
+ 457cb30:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 457cb35:	48 83 c4 20          	add    $0x20,%rsp
+ 457cb39:	c3                   	ret
+ 457cb3a:	48 8b 10             	mov    (%rax),%rdx
+ 457cb3d:	48 8d 1d 29 bc 8c 00 	lea    0x8cbc29(%rip),%rbx        # 4e4876d <_IO_stdin_used@@Base+0x21576d>
+ 457cb44:	b9 35 00 00 00       	mov    $0x35,%ecx
+ 457cb49:	48 89 d0             	mov    %rdx,%rax
+ 457cb4c:	e8 8f a7 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 457cb51:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 457cb56:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 457cb5a:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 457cb5f:	f2 0f 10 00          	movsd  (%rax),%xmm0
+ 457cb63:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457cb66:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 457cb6a:	75 02                	jne    457cb6e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x8e>
+ 457cb6c:	7b 04                	jnp    457cb72 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x92>
+ 457cb6e:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 457cb72:	f2 0f 10 40 08       	movsd  0x8(%rax),%xmm0
+ 457cb77:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 457cb7b:	75 02                	jne    457cb7f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0x9f>
+ 457cb7d:	7b 05                	jnp    457cb84 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xa4>
+ 457cb7f:	f2 0f 11 42 08       	movsd  %xmm0,0x8(%rdx)
+ 457cb84:	f2 0f 10 40 10       	movsd  0x10(%rax),%xmm0
+ 457cb89:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 457cb8d:	75 02                	jne    457cb91 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xb1>
+ 457cb8f:	7b 05                	jnp    457cb96 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xb6>
+ 457cb91:	f2 0f 11 42 10       	movsd  %xmm0,0x10(%rdx)
+ 457cb96:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 457cb9a:	48 85 c9             	test   %rcx,%rcx
+ 457cb9d:	74 04                	je     457cba3 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xc3>
+ 457cb9f:	48 89 4a 18          	mov    %rcx,0x18(%rdx)
+ 457cba3:	48 8b 40 20          	mov    0x20(%rax),%rax
+ 457cba7:	48 85 c0             	test   %rax,%rax
+ 457cbaa:	74 04                	je     457cbb0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base+0xd0>
+ 457cbac:	48 89 42 20          	mov    %rax,0x20(%rdx)
+ 457cbb0:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 457cbb5:	48 83 c4 20          	add    $0x20,%rsp
+ 457cbb9:	c3                   	ret
+ 457cbba:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457cbbf:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457cbc4:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 457cbc9:	e8 92 78 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457cbce:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457cbd3:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457cbd8:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457cbdd:	0f 1f 00             	nopl   (%rax)
+ 457cbe0:	e9 fb fe ff ff       	jmp    457cae0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*CoefficientStore).ChangeSteeringCoefficients@@Base>
+ 457cbe5:	cc                   	int3
+ 457cbe6:	cc                   	int3
+ 457cbe7:	cc                   	int3
+ 457cbe8:	cc                   	int3
+ 457cbe9:	cc                   	int3
+ 457cbea:	cc                   	int3
+ 457cbeb:	cc                   	int3
+ 457cbec:	cc                   	int3
+ 457cbed:	cc                   	int3
+ 457cbee:	cc                   	int3
+ 457cbef:	cc                   	int3
+ 457cbf0:	cc                   	int3
+ 457cbf1:	cc                   	int3
+ 457cbf2:	cc                   	int3
+ 457cbf3:	cc                   	int3
+ 457cbf4:	cc                   	int3
+ 457cbf5:	cc                   	int3
+ 457cbf6:	cc                   	int3
+ 457cbf7:	cc                   	int3
+ 457cbf8:	cc                   	int3
+ 457cbf9:	cc                   	int3
+ 457cbfa:	cc                   	int3
+ 457cbfb:	cc                   	int3
+ 457cbfc:	cc                   	int3
+ 457cbfd:	cc                   	int3
+ 457cbfe:	cc                   	int3
+ 457cbff:	cc                   	int3

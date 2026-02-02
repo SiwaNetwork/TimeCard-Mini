@@ -1,0 +1,47 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesPrecise
+# addr 0x458c700 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000458c700 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesPrecise@@Base>:
+ 458c700:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 458c704:	76 62                	jbe    458c768 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesPrecise@@Base+0x68>
+ 458c706:	48 83 ec 28          	sub    $0x28,%rsp
+ 458c70a:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 458c70f:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 458c714:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 458c719:	48 8d 05 40 87 6b 01 	lea    0x16b8740(%rip),%rax        # 5c44e60 <type:Ae6L0IKs@@Base>
+ 458c720:	e8 bb 3d 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 458c725:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 458c72a:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 458c72f:	48 63 49 60          	movslq 0x60(%rcx),%rcx
+ 458c733:	48 63 1d 2e e3 8e 03 	movslq 0x38ee32e(%rip),%rbx        # 7e7aa68 <github.com/lasselj/timebeat/beater/clocksync/phc.PTP_SYS_OFFSET_PRECISE@@Base>
+ 458c73a:	48 89 c2             	mov    %rax,%rdx
+ 458c73d:	48 89 c8             	mov    %rcx,%rax
+ 458c740:	48 89 d1             	mov    %rdx,%rcx
+ 458c743:	e8 d8 ca ff ff       	call   4589220 <github.com/lasselj/timebeat/beater/clocksync/phc.Ioctl@@Base>
+ 458c748:	48 85 db             	test   %rbx,%rbx
+ 458c74b:	74 0c                	je     458c759 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesPrecise@@Base+0x59>
+ 458c74d:	31 c0                	xor    %eax,%eax
+ 458c74f:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 458c754:	48 83 c4 28          	add    $0x28,%rsp
+ 458c758:	c3                   	ret
+ 458c759:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 458c75e:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 458c763:	48 83 c4 28          	add    $0x28,%rsp
+ 458c767:	c3                   	ret
+ 458c768:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458c76d:	e8 ee 7c 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 458c772:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 458c777:	eb 87                	jmp    458c700 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPHCToSysClockSamplesPrecise@@Base>
+ 458c779:	cc                   	int3
+ 458c77a:	cc                   	int3
+ 458c77b:	cc                   	int3
+ 458c77c:	cc                   	int3
+ 458c77d:	cc                   	int3
+ 458c77e:	cc                   	int3
+ 458c77f:	cc                   	int3

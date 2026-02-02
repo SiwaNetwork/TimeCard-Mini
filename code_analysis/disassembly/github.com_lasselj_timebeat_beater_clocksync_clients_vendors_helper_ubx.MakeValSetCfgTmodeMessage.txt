@@ -1,0 +1,136 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage
+# addr 0x4401160 size 512 (0x200)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004401160 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base>:
+ 4401160:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4401164:	0f 86 d8 01 00 00    	jbe    4401342 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x1e2>
+ 440116a:	48 83 ec 68          	sub    $0x68,%rsp
+ 440116e:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 4401173:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 4401178:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 440117d:	31 db                	xor    %ebx,%ebx
+ 440117f:	48 89 d9             	mov    %rbx,%rcx
+ 4401182:	48 8d 05 d7 d7 3a 01 	lea    0x13ad7d7(%rip),%rax        # 57ae960 <type:uint8@@Base>
+ 4401189:	e8 52 52 b3 fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 440118e:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4401193:	48 8d 05 c6 18 71 01 	lea    0x17118c6(%rip),%rax        # 5b12a60 <type:4arSz+aB@@Base>
+ 440119a:	e8 41 f3 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 440119f:	0f b7 15 a4 5f 81 03 	movzwl 0x3815fa4(%rip),%edx        # 7c1714a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.UBX_HEADER@@Base>
+ 44011a6:	66 89 10             	mov    %dx,(%rax)
+ 44011a9:	66 c7 40 02 06 8a    	movw   $0x8a06,0x2(%rax)
+ 44011af:	c6 40 08 00          	movb   $0x0,0x8(%rax)
+ 44011b3:	44 0f 11 78 18       	movups %xmm15,0x18(%rax)
+ 44011b8:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 44011bc:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 44011c1:	83 3d 98 a7 a7 03 00 	cmpl   $0x0,0x3a7a798(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44011c8:	75 0b                	jne    44011d5 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x75>
+ 44011ca:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 44011cf:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 44011d3:	eb 0a                	jmp    44011df <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x7f>
+ 44011d5:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 44011da:	e8 41 55 b5 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 44011df:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 44011e4:	c6 40 09 07          	movb   $0x7,0x9(%rax)
+ 44011e8:	90                   	nop
+ 44011e9:	90                   	nop
+ 44011ea:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 44011ef:	31 c9                	xor    %ecx,%ecx
+ 44011f1:	48 89 df             	mov    %rbx,%rdi
+ 44011f4:	48 8d 35 65 d7 3a 01 	lea    0x13ad765(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 44011fb:	31 c0                	xor    %eax,%eax
+ 44011fd:	0f 1f 00             	nopl   (%rax)
+ 4401200:	e8 bb 52 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401205:	c7 00 01 00 03 20    	movl   $0x20030001,(%rax)
+ 440120b:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401210:	4c 8b 02             	mov    (%rdx),%r8
+ 4401213:	48 83 f9 05          	cmp    $0x5,%rcx
+ 4401217:	73 25                	jae    440123e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0xde>
+ 4401219:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+ 440121e:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 4401223:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4401228:	48 8d 35 31 d7 3a 01 	lea    0x13ad731(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 440122f:	e8 8c 52 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401234:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4401239:	4c 8b 44 24 40       	mov    0x40(%rsp),%r8
+ 440123e:	44 88 40 04          	mov    %r8b,0x4(%rax)
+ 4401242:	48 83 7a 08 00       	cmpq   $0x0,0x8(%rdx)
+ 4401247:	74 63                	je     44012ac <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x14c>
+ 4401249:	90                   	nop
+ 440124a:	48 83 f9 09          	cmp    $0x9,%rcx
+ 440124e:	73 1b                	jae    440126b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x10b>
+ 4401250:	bb 09 00 00 00       	mov    $0x9,%ebx
+ 4401255:	bf 04 00 00 00       	mov    $0x4,%edi
+ 440125a:	48 8d 35 ff d6 3a 01 	lea    0x13ad6ff(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401261:	e8 5a 52 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401266:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 440126b:	c7 40 05 10 00 03 40 	movl   $0x40030010,0x5(%rax)
+ 4401272:	4c 8b 42 08          	mov    0x8(%rdx),%r8
+ 4401276:	48 83 f9 0d          	cmp    $0xd,%rcx
+ 440127a:	73 25                	jae    44012a1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x141>
+ 440127c:	4c 89 44 24 40       	mov    %r8,0x40(%rsp)
+ 4401281:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 4401286:	bf 04 00 00 00       	mov    $0x4,%edi
+ 440128b:	48 8d 35 ce d6 3a 01 	lea    0x13ad6ce(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401292:	e8 29 52 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401297:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 440129c:	4c 8b 44 24 40       	mov    0x40(%rsp),%r8
+ 44012a1:	44 89 40 09          	mov    %r8d,0x9(%rax)
+ 44012a5:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 44012aa:	eb 05                	jmp    44012b1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x151>
+ 44012ac:	bb 05 00 00 00       	mov    $0x5,%ebx
+ 44012b1:	48 83 7a 10 00       	cmpq   $0x0,0x10(%rdx)
+ 44012b6:	74 57                	je     440130f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x1af>
+ 44012b8:	90                   	nop
+ 44012b9:	48 83 c3 04          	add    $0x4,%rbx
+ 44012bd:	0f 1f 00             	nopl   (%rax)
+ 44012c0:	48 39 d9             	cmp    %rbx,%rcx
+ 44012c3:	73 16                	jae    44012db <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x17b>
+ 44012c5:	bf 04 00 00 00       	mov    $0x4,%edi
+ 44012ca:	48 8d 35 8f d6 3a 01 	lea    0x13ad68f(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 44012d1:	e8 ea 51 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 44012d6:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 44012db:	c7 44 03 fc 11 00 03 	movl   $0x40030011,-0x4(%rbx,%rax,1)
+ 44012e2:	40 
+ 44012e3:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 44012e7:	48 83 c3 04          	add    $0x4,%rbx
+ 44012eb:	48 39 d9             	cmp    %rbx,%rcx
+ 44012ee:	73 1b                	jae    440130b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x1ab>
+ 44012f0:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 44012f5:	bf 04 00 00 00       	mov    $0x4,%edi
+ 44012fa:	48 8d 35 5f d6 3a 01 	lea    0x13ad65f(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4401301:	e8 ba 51 b3 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4401306:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 440130b:	89 54 03 fc          	mov    %edx,-0x4(%rbx,%rax,1)
+ 440130f:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4401314:	48 89 5a 18          	mov    %rbx,0x18(%rdx)
+ 4401318:	48 89 4a 20          	mov    %rcx,0x20(%rdx)
+ 440131c:	83 3d 3d a6 a7 03 00 	cmpl   $0x0,0x3a7a63d(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4401323:	75 06                	jne    440132b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x1cb>
+ 4401325:	48 89 42 10          	mov    %rax,0x10(%rdx)
+ 4401329:	eb 0a                	jmp    4401335 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base+0x1d5>
+ 440132b:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4401330:	e8 cb 52 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4401335:	48 89 d0             	mov    %rdx,%rax
+ 4401338:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 440133d:	48 83 c4 68          	add    $0x68,%rsp
+ 4401341:	c3                   	ret
+ 4401342:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4401347:	e8 14 31 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440134c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4401351:	e9 0a fe ff ff       	jmp    4401160 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/helper/ubx.MakeValSetCfgTmodeMessage@@Base>
+ 4401356:	cc                   	int3
+ 4401357:	cc                   	int3
+ 4401358:	cc                   	int3
+ 4401359:	cc                   	int3
+ 440135a:	cc                   	int3
+ 440135b:	cc                   	int3
+ 440135c:	cc                   	int3
+ 440135d:	cc                   	int3
+ 440135e:	cc                   	int3
+ 440135f:	cc                   	int3

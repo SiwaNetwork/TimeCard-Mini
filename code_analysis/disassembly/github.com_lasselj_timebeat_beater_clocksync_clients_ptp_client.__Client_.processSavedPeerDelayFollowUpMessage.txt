@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage
+# addr 0x45d3dc0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045d3dc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base>:
+ 45d3dc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45d3dc4:	0f 86 2f 01 00 00    	jbe    45d3ef9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0x139>
+ 45d3dca:	48 83 ec 78          	sub    $0x78,%rsp
+ 45d3dce:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 45d3dd3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 45d3dd8:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45d3ddf:	00 
+ 45d3de0:	0f 10 80 28 03 00 00 	movups 0x328(%rax),%xmm0
+ 45d3de7:	0f 11 44 24 18       	movups %xmm0,0x18(%rsp)
+ 45d3dec:	0f 10 80 38 03 00 00 	movups 0x338(%rax),%xmm0
+ 45d3df3:	0f 11 44 24 28       	movups %xmm0,0x28(%rsp)
+ 45d3df8:	0f 10 80 48 03 00 00 	movups 0x348(%rax),%xmm0
+ 45d3dff:	0f 11 44 24 38       	movups %xmm0,0x38(%rsp)
+ 45d3e04:	0f 10 80 58 03 00 00 	movups 0x358(%rax),%xmm0
+ 45d3e0b:	0f 11 44 24 48       	movups %xmm0,0x48(%rsp)
+ 45d3e10:	8b 4c 24 44          	mov    0x44(%rsp),%ecx
+ 45d3e14:	8b 54 24 48          	mov    0x48(%rsp),%edx
+ 45d3e18:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45d3e1f:	00 
+ 45d3e20:	48 81 fa 00 ca 9a 3b 	cmp    $0x3b9aca00,%rdx
+ 45d3e27:	72 3b                	jb     45d3e64 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0xa4>
+ 45d3e29:	48 89 c3             	mov    %rax,%rbx
+ 45d3e2c:	48 b8 cc 52 5a 9b a0 	movabs $0x44b82fa09b5a52cc,%rax
+ 45d3e33:	2f b8 44 
+ 45d3e36:	48 89 d6             	mov    %rdx,%rsi
+ 45d3e39:	48 f7 ea             	imul   %rdx
+ 45d3e3c:	48 c1 fa 1c          	sar    $0x1c,%rdx
+ 45d3e40:	48 8d 3c 0a          	lea    (%rdx,%rcx,1),%rdi
+ 45d3e44:	4c 69 c2 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r8
+ 45d3e4b:	4c 29 c6             	sub    %r8,%rsi
+ 45d3e4e:	48 85 f6             	test   %rsi,%rsi
+ 45d3e51:	7d 17                	jge    45d3e6a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0xaa>
+ 45d3e53:	48 81 c6 00 ca 9a 3b 	add    $0x3b9aca00,%rsi
+ 45d3e5a:	48 8d 3c 0a          	lea    (%rdx,%rcx,1),%rdi
+ 45d3e5e:	48 8d 7f ff          	lea    -0x1(%rdi),%rdi
+ 45d3e62:	eb 06                	jmp    45d3e6a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0xaa>
+ 45d3e64:	48 89 cf             	mov    %rcx,%rdi
+ 45d3e67:	48 89 d6             	mov    %rdx,%rsi
+ 45d3e6a:	48 8b 05 87 b0 3a 03 	mov    0x33ab087(%rip),%rax        # 797eef8 <time.Local@@Base>
+ 45d3e71:	48 63 ce             	movslq %esi,%rcx
+ 45d3e74:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45d3e79:	48 b9 00 f7 91 77 0e 	movabs $0xe7791f700,%rcx
+ 45d3e80:	00 00 00 
+ 45d3e83:	48 01 f9             	add    %rdi,%rcx
+ 45d3e86:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 45d3e8b:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 45d3e90:	e8 2b 0a fc ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45d3e95:	e8 86 0a fc ff       	call   4594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>
+ 45d3e9a:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45d3e9e:	66 90                	xchg   %ax,%ax
+ 45d3ea0:	48 85 c0             	test   %rax,%rax
+ 45d3ea3:	75 06                	jne    45d3eab <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0xeb>
+ 45d3ea5:	31 c0                	xor    %eax,%eax
+ 45d3ea7:	31 db                	xor    %ebx,%ebx
+ 45d3ea9:	eb 05                	jmp    45d3eb0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0xf0>
+ 45d3eab:	e8 90 37 fb ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 45d3eb0:	48 83 fb 06          	cmp    $0x6,%rbx
+ 45d3eb4:	75 16                	jne    45d3ecc <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0x10c>
+ 45d3eb6:	81 38 73 79 73 74    	cmpl   $0x74737973,(%rax)
+ 45d3ebc:	75 0e                	jne    45d3ecc <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0x10c>
+ 45d3ebe:	66 81 78 04 65 6d    	cmpw   $0x6d65,0x4(%rax)
+ 45d3ec4:	75 06                	jne    45d3ecc <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base+0x10c>
+ 45d3ec6:	90                   	nop
+ 45d3ec7:	e8 f4 09 fc ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45d3ecc:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45d3ed3:	00 
+ 45d3ed4:	48 8b 82 30 04 00 00 	mov    0x430(%rdx),%rax
+ 45d3edb:	0f b7 5c 24 36       	movzwl 0x36(%rsp),%ebx
+ 45d3ee0:	b9 04 00 00 00       	mov    $0x4,%ecx
+ 45d3ee5:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 45d3eea:	e8 11 3f 00 00       	call   45d7e00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Offsets).addTimestamp@@Base>
+ 45d3eef:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45d3ef4:	48 83 c4 78          	add    $0x78,%rsp
+ 45d3ef8:	c3                   	ret
+ 45d3ef9:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45d3efe:	66 90                	xchg   %ax,%ax
+ 45d3f00:	e8 5b 05 98 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45d3f05:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45d3f0a:	e9 b1 fe ff ff       	jmp    45d3dc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).processSavedPeerDelayFollowUpMessage@@Base>
+ 45d3f0f:	cc                   	int3
+ 45d3f10:	cc                   	int3
+ 45d3f11:	cc                   	int3
+ 45d3f12:	cc                   	int3
+ 45d3f13:	cc                   	int3
+ 45d3f14:	cc                   	int3
+ 45d3f15:	cc                   	int3
+ 45d3f16:	cc                   	int3
+ 45d3f17:	cc                   	int3
+ 45d3f18:	cc                   	int3
+ 45d3f19:	cc                   	int3
+ 45d3f1a:	cc                   	int3
+ 45d3f1b:	cc                   	int3
+ 45d3f1c:	cc                   	int3
+ 45d3f1d:	cc                   	int3
+ 45d3f1e:	cc                   	int3
+ 45d3f1f:	cc                   	int3

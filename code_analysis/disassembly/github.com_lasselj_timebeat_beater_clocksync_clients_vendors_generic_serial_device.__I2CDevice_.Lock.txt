@@ -1,0 +1,49 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Lock
+# addr 0x4b8dbe0 size 96 (0x60)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b8dbe0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Lock@@Base>:
+ 4b8dbe0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8dbe4:	76 37                	jbe    4b8dc1d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Lock@@Base+0x3d>
+ 4b8dbe6:	48 83 ec 10          	sub    $0x10,%rsp
+ 4b8dbea:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 4b8dbef:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 4b8dbf4:	48 89 c1             	mov    %rax,%rcx
+ 4b8dbf7:	31 c0                	xor    %eax,%eax
+ 4b8dbf9:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4b8dbfe:	f0 0f b1 51 2c       	lock cmpxchg %edx,0x2c(%rcx)
+ 4b8dc03:	0f 94 c2             	sete   %dl
+ 4b8dc06:	84 d2                	test   %dl,%dl
+ 4b8dc08:	75 09                	jne    4b8dc13 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Lock@@Base+0x33>
+ 4b8dc0a:	48 8d 41 2c          	lea    0x2c(%rcx),%rax
+ 4b8dc0e:	e8 2d a9 3e fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4b8dc13:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 4b8dc18:	48 83 c4 10          	add    $0x10,%rsp
+ 4b8dc1c:	c3                   	ret
+ 4b8dc1d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8dc22:	e8 39 68 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8dc27:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8dc2c:	eb b2                	jmp    4b8dbe0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Lock@@Base>
+ 4b8dc2e:	cc                   	int3
+ 4b8dc2f:	cc                   	int3
+ 4b8dc30:	cc                   	int3
+ 4b8dc31:	cc                   	int3
+ 4b8dc32:	cc                   	int3
+ 4b8dc33:	cc                   	int3
+ 4b8dc34:	cc                   	int3
+ 4b8dc35:	cc                   	int3
+ 4b8dc36:	cc                   	int3
+ 4b8dc37:	cc                   	int3
+ 4b8dc38:	cc                   	int3
+ 4b8dc39:	cc                   	int3
+ 4b8dc3a:	cc                   	int3
+ 4b8dc3b:	cc                   	int3
+ 4b8dc3c:	cc                   	int3
+ 4b8dc3d:	cc                   	int3
+ 4b8dc3e:	cc                   	int3
+ 4b8dc3f:	cc                   	int3

@@ -1,0 +1,40 @@
+# sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store
+# addr 0x45e37c0 size 96 (0x60)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e37c0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base>:
+ 45e37c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e37c4:	76 29                	jbe    45e37ef <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x2f>
+ 45e37c6:	48 83 ec 18          	sub    $0x18,%rsp
+ 45e37ca:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45e37cf:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45e37d4:	4d 8b 66 20          	mov    0x20(%r14),%r12
+ 45e37d8:	4d 85 e4             	test   %r12,%r12
+ 45e37db:	75 2d                	jne    45e380a <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x4a>
+ 45e37dd:	84 00                	test   %al,(%rax)
+ 45e37df:	90                   	nop
+ 45e37e0:	e8 bb a9 96 fd       	call   1f4e1a0 <sync/atomic.StorePointer@@Base>
+ 45e37e5:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 45e37ea:	48 83 c4 18          	add    $0x18,%rsp
+ 45e37ee:	c3                   	ret
+ 45e37ef:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45e37f4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45e37f9:	e8 62 0c 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e37fe:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45e3803:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45e3808:	eb b6                	jmp    45e37c0 <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base>
+ 45e380a:	4c 8d 6c 24 20       	lea    0x20(%rsp),%r13
+ 45e380f:	4d 39 2c 24          	cmp    %r13,(%r12)
+ 45e3813:	75 c8                	jne    45e37dd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x1d>
+ 45e3815:	49 89 24 24          	mov    %rsp,(%r12)
+ 45e3819:	eb c2                	jmp    45e37dd <sync/atomic.(*Pointer[github.com/lasselj/timebeat/config.Identity]).Store@@Base+0x1d>
+ 45e381b:	cc                   	int3
+ 45e381c:	cc                   	int3
+ 45e381d:	cc                   	int3
+ 45e381e:	cc                   	int3
+ 45e381f:	cc                   	int3

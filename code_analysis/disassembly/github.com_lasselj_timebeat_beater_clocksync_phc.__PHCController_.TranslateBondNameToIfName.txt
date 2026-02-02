@@ -1,0 +1,46 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName
+# addr 0x4582440 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004582440 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName@@Base>:
+ 4582440:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4582444:	76 52                	jbe    4582498 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName@@Base+0x58>
+ 4582446:	48 83 ec 20          	sub    $0x20,%rsp
+ 458244a:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 458244f:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4582454:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4582459:	48 8b 40 60          	mov    0x60(%rax),%rax
+ 458245d:	0f 1f 00             	nopl   (%rax)
+ 4582460:	e8 9b f6 ff ff       	call   4581b00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*AggregateDevices).translateAggregateIfToIfIndex@@Base>
+ 4582465:	48 83 f8 ff          	cmp    $0xffffffffffffffff,%rax
+ 4582469:	74 0a                	je     4582475 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName@@Base+0x35>
+ 458246b:	e8 90 db ab fd       	call   2040000 <net.InterfaceByIndex@@Base>
+ 4582470:	48 85 db             	test   %rbx,%rbx
+ 4582473:	74 0e                	je     4582483 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName@@Base+0x43>
+ 4582475:	31 c0                	xor    %eax,%eax
+ 4582477:	31 db                	xor    %ebx,%ebx
+ 4582479:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 458247e:	48 83 c4 20          	add    $0x20,%rsp
+ 4582482:	c3                   	ret
+ 4582483:	48 8b 48 10          	mov    0x10(%rax),%rcx
+ 4582487:	48 8b 58 18          	mov    0x18(%rax),%rbx
+ 458248b:	48 89 c8             	mov    %rcx,%rax
+ 458248e:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4582493:	48 83 c4 20          	add    $0x20,%rsp
+ 4582497:	c3                   	ret
+ 4582498:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458249d:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45824a2:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45824a7:	e8 b4 1f 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45824ac:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45824b1:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45824b6:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45824bb:	eb 83                	jmp    4582440 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).TranslateBondNameToIfName@@Base>
+ 45824bd:	cc                   	int3
+ 45824be:	cc                   	int3
+ 45824bf:	cc                   	int3

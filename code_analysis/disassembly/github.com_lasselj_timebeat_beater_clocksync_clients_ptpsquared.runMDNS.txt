@@ -1,0 +1,87 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS
+# addr 0x4b589c0 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b589c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base>:
+ 4b589c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b589c4:	0f 86 c0 00 00 00    	jbe    4b58a8a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base+0xca>
+ 4b589ca:	48 83 ec 40          	sub    $0x40,%rsp
+ 4b589ce:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4b589d3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4b589d8:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4b589dd:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4b589e2:	48 8d 05 17 39 f3 00 	lea    0xf33917(%rip),%rax        # 5a8c300 <type:0LZ3S3xK@@Base>
+ 4b589e9:	e8 f2 7a 39 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b589ee:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4b589f3:	31 db                	xor    %ebx,%ebx
+ 4b589f5:	48 8d 05 64 7c c0 00 	lea    0xc07c64(%rip),%rax        # 5760660 <type:j1x0ZFlS@@Base>
+ 4b589fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b58a00:	e8 db ee 38 fd       	call   1ee78e0 <runtime.makechan@@Base>
+ 4b58a05:	83 3d 54 2f 32 03 00 	cmpl   $0x0,0x3322f54(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b58a0c:	75 0a                	jne    4b58a18 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base+0x58>
+ 4b58a0e:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 4b58a13:	49 89 00             	mov    %rax,(%r8)
+ 4b58a16:	eb 10                	jmp    4b58a28 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base+0x68>
+ 4b58a18:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 4b58a1d:	0f 1f 00             	nopl   (%rax)
+ 4b58a20:	e8 db db 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b58a25:	49 89 f8             	mov    %rdi,%r8
+ 4b58a28:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4b58a2d:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4b58a32:	48 8d 0d 94 b7 10 00 	lea    0x10b794(%rip),%rcx        # 4c641cd <_IO_stdin_used@@Base+0x311cd>
+ 4b58a39:	bf 08 00 00 00       	mov    $0x8,%edi
+ 4b58a3e:	48 8d 35 1b 96 3a 01 	lea    0x13a961b(%rip),%rsi        # 5f02060 <go:itab.*github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.discoveryNotifee,github.com/libp2p/go-libp2p/p2p/discovery/mdns.Notifee@@Base>
+ 4b58a45:	e8 76 77 cd ff       	call   48301c0 <github.com/libp2p/go-libp2p/p2p/discovery/mdns.NewMdnsService@@Base>
+ 4b58a4a:	e8 51 79 cd ff       	call   48303a0 <github.com/libp2p/go-libp2p/p2p/discovery/mdns.(*mdnsService).Start@@Base>
+ 4b58a4f:	48 85 c0             	test   %rax,%rax
+ 4b58a52:	74 24                	je     4b58a78 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base+0xb8>
+ 4b58a54:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4b58a58:	48 89 d8             	mov    %rbx,%rax
+ 4b58a5b:	ff d1                	call   *%rcx
+ 4b58a5d:	48 8b 0d 2c 38 2d 03 	mov    0x32d382c(%rip),%rcx        # 7e2c290 <github.com/lasselj/timebeat/beater/logging.PanicLogger@@Base>
+ 4b58a64:	48 89 c2             	mov    %rax,%rdx
+ 4b58a67:	48 89 c8             	mov    %rcx,%rax
+ 4b58a6a:	48 89 de             	mov    %rbx,%rsi
+ 4b58a6d:	48 89 d3             	mov    %rdx,%rbx
+ 4b58a70:	48 89 f1             	mov    %rsi,%rcx
+ 4b58a73:	e8 08 e4 8a ff       	call   4406e80 <github.com/lasselj/timebeat/beater/logging.(*Logger).Critical@@Base>
+ 4b58a78:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4b58a7d:	48 8b 01             	mov    (%rcx),%rax
+ 4b58a80:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4b58a85:	48 83 c4 40          	add    $0x40,%rsp
+ 4b58a89:	c3                   	ret
+ 4b58a8a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b58a8f:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b58a94:	e8 c7 b9 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b58a99:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b58a9e:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b58aa3:	e9 18 ff ff ff       	jmp    4b589c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runMDNS@@Base>
+ 4b58aa8:	cc                   	int3
+ 4b58aa9:	cc                   	int3
+ 4b58aaa:	cc                   	int3
+ 4b58aab:	cc                   	int3
+ 4b58aac:	cc                   	int3
+ 4b58aad:	cc                   	int3
+ 4b58aae:	cc                   	int3
+ 4b58aaf:	cc                   	int3
+ 4b58ab0:	cc                   	int3
+ 4b58ab1:	cc                   	int3
+ 4b58ab2:	cc                   	int3
+ 4b58ab3:	cc                   	int3
+ 4b58ab4:	cc                   	int3
+ 4b58ab5:	cc                   	int3
+ 4b58ab6:	cc                   	int3
+ 4b58ab7:	cc                   	int3
+ 4b58ab8:	cc                   	int3
+ 4b58ab9:	cc                   	int3
+ 4b58aba:	cc                   	int3
+ 4b58abb:	cc                   	int3
+ 4b58abc:	cc                   	int3
+ 4b58abd:	cc                   	int3
+ 4b58abe:	cc                   	int3
+ 4b58abf:	cc                   	int3

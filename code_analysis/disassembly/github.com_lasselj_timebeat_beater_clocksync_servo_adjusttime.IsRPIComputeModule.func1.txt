@@ -1,0 +1,3334 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1
+# addr 0x44198c0 size 12288 (0x3000)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044198c0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base>:
+ 44198c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44198c4:	0f 86 cd 00 00 00    	jbe    4419997 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base+0xd7>
+ 44198ca:	48 83 ec 78          	sub    $0x78,%rsp
+ 44198ce:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 44198d3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 44198d8:	48 8d 05 41 83 85 00 	lea    0x858341(%rip),%rax        # 4c71c20 <_IO_stdin_used@@Base+0x3ec20>
+ 44198df:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 44198e4:	e8 f7 56 bd fd       	call   1feefe0 <os.Stat@@Base>
+ 44198e9:	48 85 c9             	test   %rcx,%rcx
+ 44198ec:	0f 85 9b 00 00 00    	jne    441998d <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base+0xcd>
+ 44198f2:	48 8d 05 27 83 85 00 	lea    0x858327(%rip),%rax        # 4c71c20 <_IO_stdin_used@@Base+0x3ec20>
+ 44198f9:	bb 0d 00 00 00       	mov    $0xd,%ebx
+ 44198fe:	66 90                	xchg   %ax,%ax
+ 4419900:	e8 bb 14 bd fd       	call   1feadc0 <os.ReadFile@@Base>
+ 4419905:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 441990a:	48 89 5c 24 20       	mov    %rbx,0x20(%rsp)
+ 441990f:	48 89 d9             	mov    %rbx,%rcx
+ 4419912:	48 89 c3             	mov    %rax,%rbx
+ 4419915:	48 8d 44 24 48       	lea    0x48(%rsp),%rax
+ 441991a:	e8 a1 0d b2 fd       	call   1f3a6c0 <runtime.slicebytetostring@@Base>
+ 441991f:	48 8d 0d 8a fa 8c 00 	lea    0x8cfa8a(%rip),%rcx        # 4ce93b0 <_IO_stdin_used@@Base+0xb63b0>
+ 4419926:	bf 10 00 00 00       	mov    $0x10,%edi
+ 441992b:	e8 90 0f bf fd       	call   200a8c0 <strings.Index@@Base>
+ 4419930:	48 85 c0             	test   %rax,%rax
+ 4419933:	7c 12                	jl     4419947 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base+0x87>
+ 4419935:	c6 05 e9 0f a6 03 01 	movb   $0x1,0x3a60fe9(%rip)        # 7e7a925 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.detectedBCM54210PE@@Base>
+ 441993c:	48 c7 05 29 13 a6 03 	movq   $0x4,0x3a61329(%rip)        # 7e7ac70 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.computeModuleType@@Base>
+ 4419943:	04 00 00 00 
+ 4419947:	48 8d 44 24 28       	lea    0x28(%rsp),%rax
+ 441994c:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4419951:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4419956:	e8 65 0d b2 fd       	call   1f3a6c0 <runtime.slicebytetostring@@Base>
+ 441995b:	48 8d 0d 5e fa 8c 00 	lea    0x8cfa5e(%rip),%rcx        # 4ce93c0 <_IO_stdin_used@@Base+0xb63c0>
+ 4419962:	bf 10 00 00 00       	mov    $0x10,%edi
+ 4419967:	e8 54 0f bf fd       	call   200a8c0 <strings.Index@@Base>
+ 441996c:	48 85 c0             	test   %rax,%rax
+ 441996f:	7c 12                	jl     4419983 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base+0xc3>
+ 4419971:	c6 05 ad 0f a6 03 01 	movb   $0x1,0x3a60fad(%rip)        # 7e7a925 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.detectedBCM54210PE@@Base>
+ 4419978:	48 c7 05 ed 12 a6 03 	movq   $0x5,0x3a612ed(%rip)        # 7e7ac70 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.computeModuleType@@Base>
+ 441997f:	05 00 00 00 
+ 4419983:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4419988:	48 83 c4 78          	add    $0x78,%rsp
+ 441998c:	c3                   	ret
+ 441998d:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4419992:	48 83 c4 78          	add    $0x78,%rsp
+ 4419996:	c3                   	ret
+ 4419997:	e8 c4 aa b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 441999c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44199a0:	e9 1b ff ff ff       	jmp    44198c0 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule.func1@@Base>
+ 44199a5:	cc                   	int3
+ 44199a6:	cc                   	int3
+ 44199a7:	cc                   	int3
+ 44199a8:	cc                   	int3
+ 44199a9:	cc                   	int3
+ 44199aa:	cc                   	int3
+ 44199ab:	cc                   	int3
+ 44199ac:	cc                   	int3
+ 44199ad:	cc                   	int3
+ 44199ae:	cc                   	int3
+ 44199af:	cc                   	int3
+ 44199b0:	cc                   	int3
+ 44199b1:	cc                   	int3
+ 44199b2:	cc                   	int3
+ 44199b3:	cc                   	int3
+ 44199b4:	cc                   	int3
+ 44199b5:	cc                   	int3
+ 44199b6:	cc                   	int3
+ 44199b7:	cc                   	int3
+ 44199b8:	cc                   	int3
+ 44199b9:	cc                   	int3
+ 44199ba:	cc                   	int3
+ 44199bb:	cc                   	int3
+ 44199bc:	cc                   	int3
+ 44199bd:	cc                   	int3
+ 44199be:	cc                   	int3
+ 44199bf:	cc                   	int3
+
+00000000044199c0 <type:.a5HJlTMW@@Base>:
+ 44199c0:	31 c9                	xor    %ecx,%ecx
+ 44199c2:	eb 04                	jmp    44199c8 <type:.a5HJlTMW@@Base+0x8>
+ 44199c4:	48 83 c1 02          	add    $0x2,%rcx
+ 44199c8:	48 83 f9 04          	cmp    $0x4,%rcx
+ 44199cc:	7d 2b                	jge    44199f9 <type:.a5HJlTMW@@Base+0x39>
+ 44199ce:	f2 0f 10 04 c8       	movsd  (%rax,%rcx,8),%xmm0
+ 44199d3:	f2 0f 10 0c cb       	movsd  (%rbx,%rcx,8),%xmm1
+ 44199d8:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 44199dc:	75 18                	jne    44199f6 <type:.a5HJlTMW@@Base+0x36>
+ 44199de:	66 90                	xchg   %ax,%ax
+ 44199e0:	7a 14                	jp     44199f6 <type:.a5HJlTMW@@Base+0x36>
+ 44199e2:	f2 0f 10 44 c8 08    	movsd  0x8(%rax,%rcx,8),%xmm0
+ 44199e8:	f2 0f 10 4c cb 08    	movsd  0x8(%rbx,%rcx,8),%xmm1
+ 44199ee:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 44199f2:	75 02                	jne    44199f6 <type:.a5HJlTMW@@Base+0x36>
+ 44199f4:	7b ce                	jnp    44199c4 <type:.a5HJlTMW@@Base+0x4>
+ 44199f6:	31 c0                	xor    %eax,%eax
+ 44199f8:	c3                   	ret
+ 44199f9:	b8 01 00 00 00       	mov    $0x1,%eax
+ 44199fe:	c3                   	ret
+ 44199ff:	cc                   	int3
+
+0000000004419a00 <type:.RZfRd8+S@@Base>:
+ 4419a00:	48 8b 08             	mov    (%rax),%rcx
+ 4419a03:	48 39 0b             	cmp    %rcx,(%rbx)
+ 4419a06:	75 53                	jne    4419a5b <type:.RZfRd8+S@@Base+0x5b>
+ 4419a08:	f2 0f 10 40 08       	movsd  0x8(%rax),%xmm0
+ 4419a0d:	f2 0f 10 4b 08       	movsd  0x8(%rbx),%xmm1
+ 4419a12:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 4419a16:	75 3e                	jne    4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a18:	7a 3c                	jp     4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a1a:	f2 0f 10 40 10       	movsd  0x10(%rax),%xmm0
+ 4419a1f:	f2 0f 10 4b 10       	movsd  0x10(%rbx),%xmm1
+ 4419a24:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4419a28:	75 2c                	jne    4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a2a:	7a 2a                	jp     4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a2c:	f2 0f 10 40 18       	movsd  0x18(%rax),%xmm0
+ 4419a31:	f2 0f 10 4b 18       	movsd  0x18(%rbx),%xmm1
+ 4419a36:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+ 4419a3a:	75 1a                	jne    4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a3c:	7a 18                	jp     4419a56 <type:.RZfRd8+S@@Base+0x56>
+ 4419a3e:	f2 0f 10 40 20       	movsd  0x20(%rax),%xmm0
+ 4419a43:	f2 0f 10 4b 20       	movsd  0x20(%rbx),%xmm1
+ 4419a48:	66 0f 2e c8          	ucomisd %xmm0,%xmm1
+ 4419a4c:	0f 94 c2             	sete   %dl
+ 4419a4f:	0f 9b c1             	setnp  %cl
+ 4419a52:	21 ca                	and    %ecx,%edx
+ 4419a54:	eb 02                	jmp    4419a58 <type:.RZfRd8+S@@Base+0x58>
+ 4419a56:	31 d2                	xor    %edx,%edx
+ 4419a58:	89 d0                	mov    %edx,%eax
+ 4419a5a:	c3                   	ret
+ 4419a5b:	31 c0                	xor    %eax,%eax
+ 4419a5d:	c3                   	ret
+ 4419a5e:	cc                   	int3
+ 4419a5f:	cc                   	int3
+
+0000000004419a60 <type:.YSnxAN78@@Base>:
+ 4419a60:	31 c9                	xor    %ecx,%ecx
+ 4419a62:	eb 04                	jmp    4419a68 <type:.YSnxAN78@@Base+0x8>
+ 4419a64:	48 83 c1 02          	add    $0x2,%rcx
+ 4419a68:	48 83 f9 04          	cmp    $0x4,%rcx
+ 4419a6c:	7d 27                	jge    4419a95 <type:.YSnxAN78@@Base+0x35>
+ 4419a6e:	f3 0f 10 04 88       	movss  (%rax,%rcx,4),%xmm0
+ 4419a73:	f3 0f 10 0c 8b       	movss  (%rbx,%rcx,4),%xmm1
+ 4419a78:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 4419a7b:	75 15                	jne    4419a92 <type:.YSnxAN78@@Base+0x32>
+ 4419a7d:	7a 13                	jp     4419a92 <type:.YSnxAN78@@Base+0x32>
+ 4419a7f:	f3 0f 10 44 88 04    	movss  0x4(%rax,%rcx,4),%xmm0
+ 4419a85:	f3 0f 10 4c 8b 04    	movss  0x4(%rbx,%rcx,4),%xmm1
+ 4419a8b:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 4419a8e:	75 02                	jne    4419a92 <type:.YSnxAN78@@Base+0x32>
+ 4419a90:	7b d2                	jnp    4419a64 <type:.YSnxAN78@@Base+0x4>
+ 4419a92:	31 c0                	xor    %eax,%eax
+ 4419a94:	c3                   	ret
+ 4419a95:	b8 01 00 00 00       	mov    $0x1,%eax
+ 4419a9a:	c3                   	ret
+ 4419a9b:	cc                   	int3
+ 4419a9c:	cc                   	int3
+ 4419a9d:	cc                   	int3
+ 4419a9e:	cc                   	int3
+ 4419a9f:	cc                   	int3
+
+0000000004419aa0 <type:.nHgDigNs@@Base>:
+ 4419aa0:	48 8b 08             	mov    (%rax),%rcx
+ 4419aa3:	48 39 0b             	cmp    %rcx,(%rbx)
+ 4419aa6:	75 4f                	jne    4419af7 <type:.nHgDigNs@@Base+0x57>
+ 4419aa8:	f3 0f 10 40 08       	movss  0x8(%rax),%xmm0
+ 4419aad:	f3 0f 10 4b 08       	movss  0x8(%rbx),%xmm1
+ 4419ab2:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 4419ab5:	75 3b                	jne    4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419ab7:	7a 39                	jp     4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419ab9:	f3 0f 10 40 0c       	movss  0xc(%rax),%xmm0
+ 4419abe:	f3 0f 10 4b 0c       	movss  0xc(%rbx),%xmm1
+ 4419ac3:	0f 2e c1             	ucomiss %xmm1,%xmm0
+ 4419ac6:	75 2a                	jne    4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419ac8:	7a 28                	jp     4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419aca:	f3 0f 10 40 10       	movss  0x10(%rax),%xmm0
+ 4419acf:	f3 0f 10 4b 10       	movss  0x10(%rbx),%xmm1
+ 4419ad4:	0f 2e c1             	ucomiss %xmm1,%xmm0
+ 4419ad7:	75 19                	jne    4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419ad9:	7a 17                	jp     4419af2 <type:.nHgDigNs@@Base+0x52>
+ 4419adb:	f3 0f 10 40 14       	movss  0x14(%rax),%xmm0
+ 4419ae0:	f3 0f 10 4b 14       	movss  0x14(%rbx),%xmm1
+ 4419ae5:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 4419ae8:	0f 94 c2             	sete   %dl
+ 4419aeb:	0f 9b c1             	setnp  %cl
+ 4419aee:	21 ca                	and    %ecx,%edx
+ 4419af0:	eb 02                	jmp    4419af4 <type:.nHgDigNs@@Base+0x54>
+ 4419af2:	31 d2                	xor    %edx,%edx
+ 4419af4:	89 d0                	mov    %edx,%eax
+ 4419af6:	c3                   	ret
+ 4419af7:	31 c0                	xor    %eax,%eax
+ 4419af9:	c3                   	ret
+ 4419afa:	cc                   	int3
+ 4419afb:	cc                   	int3
+ 4419afc:	cc                   	int3
+ 4419afd:	cc                   	int3
+ 4419afe:	cc                   	int3
+ 4419aff:	cc                   	int3
+
+0000000004419b00 <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base>:
+ 4419b00:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 4419b05:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 4419b0a:	48 31 c0             	xor    %rax,%rax
+ 4419b0d:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 4419b11:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 4419b15:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 4419b19:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 4419b1d:	66 0f ef e4          	pxor   %xmm4,%xmm4
+ 4419b21:	66 0f ef ed          	pxor   %xmm5,%xmm5
+ 4419b25:	66 0f ef f6          	pxor   %xmm6,%xmm6
+ 4419b29:	66 0f ef ff          	pxor   %xmm7,%xmm7
+ 4419b2d:	48 83 f9 00          	cmp    $0x0,%rcx
+ 4419b31:	0f 84 b0 00 00 00    	je     4419be7 <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base+0xe7>
+ 4419b37:	48 89 cb             	mov    %rcx,%rbx
+ 4419b3a:	48 83 e3 07          	and    $0x7,%rbx
+ 4419b3e:	48 c1 e9 03          	shr    $0x3,%rcx
+ 4419b42:	74 7f                	je     4419bc3 <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base+0xc3>
+ 4419b44:	44 0f 10 04 c6       	movups (%rsi,%rax,8),%xmm8
+ 4419b49:	44 0f 10 4c c6 10    	movups 0x10(%rsi,%rax,8),%xmm9
+ 4419b4f:	44 0f 10 54 c6 20    	movups 0x20(%rsi,%rax,8),%xmm10
+ 4419b55:	44 0f 10 5c c6 30    	movups 0x30(%rsi,%rax,8),%xmm11
+ 4419b5b:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 4419b60:	66 41 0f 58 d1       	addpd  %xmm9,%xmm2
+ 4419b65:	66 41 0f 58 e2       	addpd  %xmm10,%xmm4
+ 4419b6a:	66 41 0f 58 f3       	addpd  %xmm11,%xmm6
+ 4419b6f:	66 41 0f 5c c8       	subpd  %xmm8,%xmm1
+ 4419b74:	66 41 0f 5c d9       	subpd  %xmm9,%xmm3
+ 4419b79:	66 41 0f 5c ea       	subpd  %xmm10,%xmm5
+ 4419b7e:	66 41 0f 5c fb       	subpd  %xmm11,%xmm7
+ 4419b83:	66 0f 5f c1          	maxpd  %xmm1,%xmm0
+ 4419b87:	66 0f 5f d3          	maxpd  %xmm3,%xmm2
+ 4419b8b:	66 0f 5f e5          	maxpd  %xmm5,%xmm4
+ 4419b8f:	66 0f 5f f7          	maxpd  %xmm7,%xmm6
+ 4419b93:	0f 28 c8             	movaps %xmm0,%xmm1
+ 4419b96:	0f 28 da             	movaps %xmm2,%xmm3
+ 4419b99:	0f 28 ec             	movaps %xmm4,%xmm5
+ 4419b9c:	0f 28 fe             	movaps %xmm6,%xmm7
+ 4419b9f:	48 83 c0 08          	add    $0x8,%rax
+ 4419ba3:	e2 9f                	loop   4419b44 <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base+0x44>
+ 4419ba5:	66 0f 58 c3          	addpd  %xmm3,%xmm0
+ 4419ba9:	66 0f 58 fd          	addpd  %xmm5,%xmm7
+ 4419bad:	66 0f 58 c7          	addpd  %xmm7,%xmm0
+ 4419bb1:	0f 28 c8             	movaps %xmm0,%xmm1
+ 4419bb4:	66 0f c6 c0 03       	shufpd $0x3,%xmm0,%xmm0
+ 4419bb9:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 4419bbd:	48 83 fb 00          	cmp    $0x0,%rbx
+ 4419bc1:	74 24                	je     4419be7 <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base+0xe7>
+ 4419bc3:	48 89 d9             	mov    %rbx,%rcx
+ 4419bc6:	45 0f 57 c0          	xorps  %xmm8,%xmm8
+ 4419bca:	f2 44 0f 10 04 c6    	movsd  (%rsi,%rax,8),%xmm8
+ 4419bd0:	f2 0f 10 c8          	movsd  %xmm0,%xmm1
+ 4419bd4:	f2 41 0f 58 c0       	addsd  %xmm8,%xmm0
+ 4419bd9:	f2 41 0f 5c c8       	subsd  %xmm8,%xmm1
+ 4419bde:	f2 0f 5f c1          	maxsd  %xmm1,%xmm0
+ 4419be2:	48 ff c0             	inc    %rax
+ 4419be5:	e2 e3                	loop   4419bca <gonum.org/v1/gonum/internal/asm/f64.L1Norm.abi0@@Base+0xca>
+ 4419be7:	f2 0f 11 44 24 20    	movsd  %xmm0,0x20(%rsp)
+ 4419bed:	c3                   	ret
+ 4419bee:	cc                   	int3
+ 4419bef:	cc                   	int3
+ 4419bf0:	cc                   	int3
+ 4419bf1:	cc                   	int3
+ 4419bf2:	cc                   	int3
+ 4419bf3:	cc                   	int3
+ 4419bf4:	cc                   	int3
+ 4419bf5:	cc                   	int3
+ 4419bf6:	cc                   	int3
+ 4419bf7:	cc                   	int3
+ 4419bf8:	cc                   	int3
+ 4419bf9:	cc                   	int3
+ 4419bfa:	cc                   	int3
+ 4419bfb:	cc                   	int3
+ 4419bfc:	cc                   	int3
+ 4419bfd:	cc                   	int3
+ 4419bfe:	cc                   	int3
+ 4419bff:	cc                   	int3
+
+0000000004419c00 <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base>:
+ 4419c00:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 4419c05:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4419c0a:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4419c0f:	48 c1 e0 03          	shl    $0x3,%rax
+ 4419c13:	48 89 c2             	mov    %rax,%rdx
+ 4419c16:	48 6b d2 03          	imul   $0x3,%rdx,%rdx
+ 4419c1a:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 4419c1e:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 4419c22:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 4419c26:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 4419c2a:	66 0f ef e4          	pxor   %xmm4,%xmm4
+ 4419c2e:	66 0f ef ed          	pxor   %xmm5,%xmm5
+ 4419c32:	66 0f ef f6          	pxor   %xmm6,%xmm6
+ 4419c36:	66 0f ef ff          	pxor   %xmm7,%xmm7
+ 4419c3a:	48 83 f9 00          	cmp    $0x0,%rcx
+ 4419c3e:	0f 84 ce 00 00 00    	je     4419d12 <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base+0x112>
+ 4419c44:	48 89 cb             	mov    %rcx,%rbx
+ 4419c47:	48 83 e3 07          	and    $0x7,%rbx
+ 4419c4b:	48 c1 e9 03          	shr    $0x3,%rcx
+ 4419c4f:	0f 84 9a 00 00 00    	je     4419cef <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base+0xef>
+ 4419c55:	f2 44 0f 10 06       	movsd  (%rsi),%xmm8
+ 4419c5a:	f2 44 0f 10 0c 06    	movsd  (%rsi,%rax,1),%xmm9
+ 4419c60:	f2 44 0f 10 14 46    	movsd  (%rsi,%rax,2),%xmm10
+ 4419c66:	f2 44 0f 10 1c 16    	movsd  (%rsi,%rdx,1),%xmm11
+ 4419c6c:	48 8d 34 86          	lea    (%rsi,%rax,4),%rsi
+ 4419c70:	66 44 0f 16 06       	movhpd (%rsi),%xmm8
+ 4419c75:	66 44 0f 16 0c 06    	movhpd (%rsi,%rax,1),%xmm9
+ 4419c7b:	66 44 0f 16 14 46    	movhpd (%rsi,%rax,2),%xmm10
+ 4419c81:	66 44 0f 16 1c 16    	movhpd (%rsi,%rdx,1),%xmm11
+ 4419c87:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 4419c8c:	66 41 0f 58 d1       	addpd  %xmm9,%xmm2
+ 4419c91:	66 41 0f 58 e2       	addpd  %xmm10,%xmm4
+ 4419c96:	66 41 0f 58 f3       	addpd  %xmm11,%xmm6
+ 4419c9b:	66 41 0f 5c c8       	subpd  %xmm8,%xmm1
+ 4419ca0:	66 41 0f 5c d9       	subpd  %xmm9,%xmm3
+ 4419ca5:	66 41 0f 5c ea       	subpd  %xmm10,%xmm5
+ 4419caa:	66 41 0f 5c fb       	subpd  %xmm11,%xmm7
+ 4419caf:	66 0f 5f c1          	maxpd  %xmm1,%xmm0
+ 4419cb3:	66 0f 5f d3          	maxpd  %xmm3,%xmm2
+ 4419cb7:	66 0f 5f e5          	maxpd  %xmm5,%xmm4
+ 4419cbb:	66 0f 5f f7          	maxpd  %xmm7,%xmm6
+ 4419cbf:	0f 28 c8             	movaps %xmm0,%xmm1
+ 4419cc2:	0f 28 da             	movaps %xmm2,%xmm3
+ 4419cc5:	0f 28 ec             	movaps %xmm4,%xmm5
+ 4419cc8:	0f 28 fe             	movaps %xmm6,%xmm7
+ 4419ccb:	48 8d 34 86          	lea    (%rsi,%rax,4),%rsi
+ 4419ccf:	e2 84                	loop   4419c55 <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base+0x55>
+ 4419cd1:	66 0f 58 c3          	addpd  %xmm3,%xmm0
+ 4419cd5:	66 0f 58 fd          	addpd  %xmm5,%xmm7
+ 4419cd9:	66 0f 58 c7          	addpd  %xmm7,%xmm0
+ 4419cdd:	0f 28 c8             	movaps %xmm0,%xmm1
+ 4419ce0:	66 0f c6 c0 03       	shufpd $0x3,%xmm0,%xmm0
+ 4419ce5:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 4419ce9:	48 83 fb 00          	cmp    $0x0,%rbx
+ 4419ced:	74 23                	je     4419d12 <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base+0x112>
+ 4419cef:	48 89 d9             	mov    %rbx,%rcx
+ 4419cf2:	45 0f 57 c0          	xorps  %xmm8,%xmm8
+ 4419cf6:	f2 44 0f 10 06       	movsd  (%rsi),%xmm8
+ 4419cfb:	f2 0f 10 c8          	movsd  %xmm0,%xmm1
+ 4419cff:	f2 41 0f 58 c0       	addsd  %xmm8,%xmm0
+ 4419d04:	f2 41 0f 5c c8       	subsd  %xmm8,%xmm1
+ 4419d09:	f2 0f 5f c1          	maxsd  %xmm1,%xmm0
+ 4419d0d:	48 01 c6             	add    %rax,%rsi
+ 4419d10:	e2 e4                	loop   4419cf6 <gonum.org/v1/gonum/internal/asm/f64.L1NormInc.abi0@@Base+0xf6>
+ 4419d12:	f2 0f 11 44 24 30    	movsd  %xmm0,0x30(%rsp)
+ 4419d18:	c3                   	ret
+ 4419d19:	cc                   	int3
+ 4419d1a:	cc                   	int3
+ 4419d1b:	cc                   	int3
+ 4419d1c:	cc                   	int3
+ 4419d1d:	cc                   	int3
+ 4419d1e:	cc                   	int3
+ 4419d1f:	cc                   	int3
+
+0000000004419d20 <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base>:
+ 4419d20:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 4419d25:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 4419d2a:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4419d2f:	48 83 f9 00          	cmp    $0x0,%rcx
+ 4419d33:	0f 84 f6 00 00 00    	je     4419e2f <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0x10f>
+ 4419d39:	4c 8b 44 24 58       	mov    0x58(%rsp),%r8
+ 4419d3e:	4c 8b 4c 24 60       	mov    0x60(%rsp),%r9
+ 4419d43:	4a 8d 34 c6          	lea    (%rsi,%r8,8),%rsi
+ 4419d47:	4a 8d 3c cf          	lea    (%rdi,%r9,8),%rdi
+ 4419d4b:	48 89 ff             	mov    %rdi,%rdi
+ 4419d4e:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 4419d53:	49 c1 e0 03          	shl    $0x3,%r8
+ 4419d57:	4c 8b 4c 24 50       	mov    0x50(%rsp),%r9
+ 4419d5c:	49 c1 e1 03          	shl    $0x3,%r9
+ 4419d60:	f2 0f 10 44 24 08    	movsd  0x8(%rsp),%xmm0
+ 4419d66:	48 89 cb             	mov    %rcx,%rbx
+ 4419d69:	48 83 e3 03          	and    $0x3,%rbx
+ 4419d6d:	48 c1 e9 02          	shr    $0x2,%rcx
+ 4419d71:	74 70                	je     4419de3 <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0xc3>
+ 4419d73:	0f 28 c8             	movaps %xmm0,%xmm1
+ 4419d76:	4f 8d 1c 40          	lea    (%r8,%r8,2),%r11
+ 4419d7a:	4f 8d 24 49          	lea    (%r9,%r9,2),%r12
+ 4419d7e:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419d82:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 4419d88:	f2 42 0f 10 24 46    	movsd  (%rsi,%r8,2),%xmm4
+ 4419d8e:	f2 42 0f 10 2c 1e    	movsd  (%rsi,%r11,1),%xmm5
+ 4419d94:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419d98:	f2 0f 59 d9          	mulsd  %xmm1,%xmm3
+ 4419d9c:	f2 0f 59 e0          	mulsd  %xmm0,%xmm4
+ 4419da0:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 4419da4:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419da8:	f2 42 0f 58 1c 0f    	addsd  (%rdi,%r9,1),%xmm3
+ 4419dae:	f2 42 0f 58 24 4f    	addsd  (%rdi,%r9,2),%xmm4
+ 4419db4:	f2 42 0f 58 2c 27    	addsd  (%rdi,%r12,1),%xmm5
+ 4419dba:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 4419dbe:	f2 42 0f 11 1c 0f    	movsd  %xmm3,(%rdi,%r9,1)
+ 4419dc4:	f2 42 0f 11 24 4f    	movsd  %xmm4,(%rdi,%r9,2)
+ 4419dca:	f2 42 0f 11 2c 27    	movsd  %xmm5,(%rdi,%r12,1)
+ 4419dd0:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 4419dd4:	4a 8d 3c 8f          	lea    (%rdi,%r9,4),%rdi
+ 4419dd8:	48 ff c9             	dec    %rcx
+ 4419ddb:	75 a1                	jne    4419d7e <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0x5e>
+ 4419ddd:	48 83 fb 00          	cmp    $0x0,%rbx
+ 4419de1:	74 4c                	je     4419e2f <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0x10f>
+ 4419de3:	48 89 d9             	mov    %rbx,%rcx
+ 4419de6:	48 d1 e9             	shr    $1,%rcx
+ 4419de9:	74 34                	je     4419e1f <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0xff>
+ 4419deb:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419def:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 4419df5:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419df9:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 4419dfd:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419e01:	f2 42 0f 58 1c 0f    	addsd  (%rdi,%r9,1),%xmm3
+ 4419e07:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 4419e0b:	f2 42 0f 11 1c 0f    	movsd  %xmm3,(%rdi,%r9,1)
+ 4419e11:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 4419e15:	4a 8d 3c 4f          	lea    (%rdi,%r9,2),%rdi
+ 4419e19:	48 83 e3 01          	and    $0x1,%rbx
+ 4419e1d:	74 10                	je     4419e2f <gonum.org/v1/gonum/internal/asm/f64.AxpyInc.abi0@@Base+0x10f>
+ 4419e1f:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419e23:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419e27:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419e2b:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 4419e2f:	c3                   	ret
+ 4419e30:	cc                   	int3
+ 4419e31:	cc                   	int3
+ 4419e32:	cc                   	int3
+ 4419e33:	cc                   	int3
+ 4419e34:	cc                   	int3
+ 4419e35:	cc                   	int3
+ 4419e36:	cc                   	int3
+ 4419e37:	cc                   	int3
+ 4419e38:	cc                   	int3
+ 4419e39:	cc                   	int3
+ 4419e3a:	cc                   	int3
+ 4419e3b:	cc                   	int3
+ 4419e3c:	cc                   	int3
+ 4419e3d:	cc                   	int3
+ 4419e3e:	cc                   	int3
+ 4419e3f:	cc                   	int3
+
+0000000004419e40 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base>:
+ 4419e40:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+ 4419e45:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 4419e4a:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4419e4f:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4419e54:	48 83 f9 00          	cmp    $0x0,%rcx
+ 4419e58:	0f 84 18 01 00 00    	je     4419f76 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0x136>
+ 4419e5e:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 4419e65:	00 
+ 4419e66:	4a 8d 34 c6          	lea    (%rsi,%r8,8),%rsi
+ 4419e6a:	4c 8b 8c 24 88 00 00 	mov    0x88(%rsp),%r9
+ 4419e71:	00 
+ 4419e72:	4a 8d 3c cf          	lea    (%rdi,%r9,8),%rdi
+ 4419e76:	4c 8b 54 24 28       	mov    0x28(%rsp),%r10
+ 4419e7b:	4a 8d 14 d2          	lea    (%rdx,%r10,8),%rdx
+ 4419e7f:	4c 8b 44 24 70       	mov    0x70(%rsp),%r8
+ 4419e84:	49 c1 e0 03          	shl    $0x3,%r8
+ 4419e88:	4c 8b 4c 24 78       	mov    0x78(%rsp),%r9
+ 4419e8d:	49 c1 e1 03          	shl    $0x3,%r9
+ 4419e91:	4c 8b 54 24 20       	mov    0x20(%rsp),%r10
+ 4419e96:	49 c1 e2 03          	shl    $0x3,%r10
+ 4419e9a:	f2 0f 10 44 24 30    	movsd  0x30(%rsp),%xmm0
+ 4419ea0:	48 89 cb             	mov    %rcx,%rbx
+ 4419ea3:	48 83 e3 03          	and    $0x3,%rbx
+ 4419ea7:	48 c1 e9 02          	shr    $0x2,%rcx
+ 4419eab:	74 79                	je     4419f26 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0xe6>
+ 4419ead:	f2 0f 10 c8          	movsd  %xmm0,%xmm1
+ 4419eb1:	4f 8d 1c 40          	lea    (%r8,%r8,2),%r11
+ 4419eb5:	4f 8d 24 49          	lea    (%r9,%r9,2),%r12
+ 4419eb9:	4f 8d 2c 52          	lea    (%r10,%r10,2),%r13
+ 4419ebd:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419ec1:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 4419ec7:	f2 42 0f 10 24 46    	movsd  (%rsi,%r8,2),%xmm4
+ 4419ecd:	f2 42 0f 10 2c 1e    	movsd  (%rsi,%r11,1),%xmm5
+ 4419ed3:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419ed7:	f2 0f 59 d9          	mulsd  %xmm1,%xmm3
+ 4419edb:	f2 0f 59 e0          	mulsd  %xmm0,%xmm4
+ 4419edf:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 4419ee3:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419ee7:	f2 42 0f 58 1c 0f    	addsd  (%rdi,%r9,1),%xmm3
+ 4419eed:	f2 42 0f 58 24 4f    	addsd  (%rdi,%r9,2),%xmm4
+ 4419ef3:	f2 42 0f 58 2c 27    	addsd  (%rdi,%r12,1),%xmm5
+ 4419ef9:	f2 0f 11 12          	movsd  %xmm2,(%rdx)
+ 4419efd:	f2 42 0f 11 1c 12    	movsd  %xmm3,(%rdx,%r10,1)
+ 4419f03:	f2 42 0f 11 24 52    	movsd  %xmm4,(%rdx,%r10,2)
+ 4419f09:	f2 42 0f 11 2c 2a    	movsd  %xmm5,(%rdx,%r13,1)
+ 4419f0f:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 4419f13:	4a 8d 3c 8f          	lea    (%rdi,%r9,4),%rdi
+ 4419f17:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 4419f1b:	48 ff c9             	dec    %rcx
+ 4419f1e:	75 9d                	jne    4419ebd <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0x7d>
+ 4419f20:	48 83 fb 00          	cmp    $0x0,%rbx
+ 4419f24:	74 50                	je     4419f76 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0x136>
+ 4419f26:	48 89 d9             	mov    %rbx,%rcx
+ 4419f29:	48 d1 e9             	shr    $1,%rcx
+ 4419f2c:	74 38                	je     4419f66 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0x126>
+ 4419f2e:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419f32:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 4419f38:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419f3c:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 4419f40:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419f44:	f2 42 0f 58 1c 0f    	addsd  (%rdi,%r9,1),%xmm3
+ 4419f4a:	f2 0f 11 12          	movsd  %xmm2,(%rdx)
+ 4419f4e:	f2 42 0f 11 1c 12    	movsd  %xmm3,(%rdx,%r10,1)
+ 4419f54:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 4419f58:	4a 8d 3c 4f          	lea    (%rdi,%r9,2),%rdi
+ 4419f5c:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 4419f60:	48 83 e3 01          	and    $0x1,%rbx
+ 4419f64:	74 10                	je     4419f76 <gonum.org/v1/gonum/internal/asm/f64.AxpyIncTo.abi0@@Base+0x136>
+ 4419f66:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419f6a:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419f6e:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419f72:	f2 0f 11 12          	movsd  %xmm2,(%rdx)
+ 4419f76:	c3                   	ret
+ 4419f77:	cc                   	int3
+ 4419f78:	cc                   	int3
+ 4419f79:	cc                   	int3
+ 4419f7a:	cc                   	int3
+ 4419f7b:	cc                   	int3
+ 4419f7c:	cc                   	int3
+ 4419f7d:	cc                   	int3
+ 4419f7e:	cc                   	int3
+ 4419f7f:	cc                   	int3
+
+0000000004419f80 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base>:
+ 4419f80:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 4419f85:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 4419f8a:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4419f8f:	48 39 4c 24 30       	cmp    %rcx,0x30(%rsp)
+ 4419f94:	48 0f 4e 4c 24 30    	cmovle 0x30(%rsp),%rcx
+ 4419f9a:	48 83 f9 00          	cmp    $0x0,%rcx
+ 4419f9e:	0f 84 da 00 00 00    	je     441a07e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xfe>
+ 4419fa4:	48 31 c0             	xor    %rax,%rax
+ 4419fa7:	f2 0f 10 44 24 08    	movsd  0x8(%rsp),%xmm0
+ 4419fad:	66 0f c6 c0 00       	shufpd $0x0,%xmm0,%xmm0
+ 4419fb2:	0f 10 c8             	movups %xmm0,%xmm1
+ 4419fb5:	48 89 fb             	mov    %rdi,%rbx
+ 4419fb8:	48 83 e3 0f          	and    $0xf,%rbx
+ 4419fbc:	74 1c                	je     4419fda <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0x5a>
+ 4419fbe:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 4419fc2:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 4419fc6:	f2 0f 58 17          	addsd  (%rdi),%xmm2
+ 4419fca:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 4419fce:	48 ff c0             	inc    %rax
+ 4419fd1:	48 ff c9             	dec    %rcx
+ 4419fd4:	0f 84 a4 00 00 00    	je     441a07e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xfe>
+ 4419fda:	48 89 cb             	mov    %rcx,%rbx
+ 4419fdd:	48 83 e3 07          	and    $0x7,%rbx
+ 4419fe1:	48 c1 e9 03          	shr    $0x3,%rcx
+ 4419fe5:	74 5c                	je     441a043 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xc3>
+ 4419fe7:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 4419feb:	0f 10 5c c6 10       	movups 0x10(%rsi,%rax,8),%xmm3
+ 4419ff0:	0f 10 64 c6 20       	movups 0x20(%rsi,%rax,8),%xmm4
+ 4419ff5:	0f 10 6c c6 30       	movups 0x30(%rsi,%rax,8),%xmm5
+ 4419ffa:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 4419ffe:	66 0f 59 d9          	mulpd  %xmm1,%xmm3
+ 441a002:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441a006:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441a00a:	66 0f 58 14 c7       	addpd  (%rdi,%rax,8),%xmm2
+ 441a00f:	66 0f 58 5c c7 10    	addpd  0x10(%rdi,%rax,8),%xmm3
+ 441a015:	66 0f 58 64 c7 20    	addpd  0x20(%rdi,%rax,8),%xmm4
+ 441a01b:	66 0f 58 6c c7 30    	addpd  0x30(%rdi,%rax,8),%xmm5
+ 441a021:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441a025:	0f 11 5c c7 10       	movups %xmm3,0x10(%rdi,%rax,8)
+ 441a02a:	0f 11 64 c7 20       	movups %xmm4,0x20(%rdi,%rax,8)
+ 441a02f:	0f 11 6c c7 30       	movups %xmm5,0x30(%rdi,%rax,8)
+ 441a034:	48 83 c0 08          	add    $0x8,%rax
+ 441a038:	48 ff c9             	dec    %rcx
+ 441a03b:	75 aa                	jne    4419fe7 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0x67>
+ 441a03d:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441a041:	74 3b                	je     441a07e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xfe>
+ 441a043:	48 89 d9             	mov    %rbx,%rcx
+ 441a046:	48 d1 e9             	shr    $1,%rcx
+ 441a049:	74 20                	je     441a06b <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xeb>
+ 441a04b:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441a04f:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441a053:	66 0f 58 14 c7       	addpd  (%rdi,%rax,8),%xmm2
+ 441a058:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441a05c:	48 83 c0 02          	add    $0x2,%rax
+ 441a060:	48 ff c9             	dec    %rcx
+ 441a063:	75 e6                	jne    441a04b <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xcb>
+ 441a065:	48 83 e3 01          	and    $0x1,%rbx
+ 441a069:	74 13                	je     441a07e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitary.abi0@@Base+0xfe>
+ 441a06b:	f2 0f 10 14 c6       	movsd  (%rsi,%rax,8),%xmm2
+ 441a070:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441a074:	f2 0f 58 14 c7       	addsd  (%rdi,%rax,8),%xmm2
+ 441a079:	f2 0f 11 14 c7       	movsd  %xmm2,(%rdi,%rax,8)
+ 441a07e:	c3                   	ret
+ 441a07f:	cc                   	int3
+
+000000000441a080 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base>:
+ 441a080:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 441a085:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 441a08a:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441a08f:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 441a094:	48 39 4c 24 48       	cmp    %rcx,0x48(%rsp)
+ 441a099:	48 0f 4e 4c 24 48    	cmovle 0x48(%rsp),%rcx
+ 441a09f:	48 39 4c 24 10       	cmp    %rcx,0x10(%rsp)
+ 441a0a4:	48 0f 4e 4c 24 10    	cmovle 0x10(%rsp),%rcx
+ 441a0aa:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441a0ae:	0f 84 da 00 00 00    	je     441a18e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x10e>
+ 441a0b4:	48 31 c0             	xor    %rax,%rax
+ 441a0b7:	f2 0f 10 44 24 20    	movsd  0x20(%rsp),%xmm0
+ 441a0bd:	66 0f c6 c0 00       	shufpd $0x0,%xmm0,%xmm0
+ 441a0c2:	48 89 d3             	mov    %rdx,%rbx
+ 441a0c5:	48 83 e3 0f          	and    $0xf,%rbx
+ 441a0c9:	74 1c                	je     441a0e7 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x67>
+ 441a0cb:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441a0cf:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441a0d3:	f2 0f 58 12          	addsd  (%rdx),%xmm2
+ 441a0d7:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 441a0db:	48 ff c0             	inc    %rax
+ 441a0de:	48 ff c9             	dec    %rcx
+ 441a0e1:	0f 84 a7 00 00 00    	je     441a18e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x10e>
+ 441a0e7:	48 89 cb             	mov    %rcx,%rbx
+ 441a0ea:	48 83 e3 07          	and    $0x7,%rbx
+ 441a0ee:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441a0f2:	74 5f                	je     441a153 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0xd3>
+ 441a0f4:	0f 10 c8             	movups %xmm0,%xmm1
+ 441a0f7:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441a0fb:	0f 10 5c c6 10       	movups 0x10(%rsi,%rax,8),%xmm3
+ 441a100:	0f 10 64 c6 20       	movups 0x20(%rsi,%rax,8),%xmm4
+ 441a105:	0f 10 6c c6 30       	movups 0x30(%rsi,%rax,8),%xmm5
+ 441a10a:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441a10e:	66 0f 59 d9          	mulpd  %xmm1,%xmm3
+ 441a112:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441a116:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441a11a:	66 0f 58 14 c2       	addpd  (%rdx,%rax,8),%xmm2
+ 441a11f:	66 0f 58 5c c2 10    	addpd  0x10(%rdx,%rax,8),%xmm3
+ 441a125:	66 0f 58 64 c2 20    	addpd  0x20(%rdx,%rax,8),%xmm4
+ 441a12b:	66 0f 58 6c c2 30    	addpd  0x30(%rdx,%rax,8),%xmm5
+ 441a131:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441a135:	0f 11 5c c7 10       	movups %xmm3,0x10(%rdi,%rax,8)
+ 441a13a:	0f 11 64 c7 20       	movups %xmm4,0x20(%rdi,%rax,8)
+ 441a13f:	0f 11 6c c7 30       	movups %xmm5,0x30(%rdi,%rax,8)
+ 441a144:	48 83 c0 08          	add    $0x8,%rax
+ 441a148:	48 ff c9             	dec    %rcx
+ 441a14b:	75 aa                	jne    441a0f7 <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x77>
+ 441a14d:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441a151:	74 3b                	je     441a18e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x10e>
+ 441a153:	48 89 d9             	mov    %rbx,%rcx
+ 441a156:	48 d1 e9             	shr    $1,%rcx
+ 441a159:	74 20                	je     441a17b <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0xfb>
+ 441a15b:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441a15f:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441a163:	66 0f 58 14 c2       	addpd  (%rdx,%rax,8),%xmm2
+ 441a168:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441a16c:	48 83 c0 02          	add    $0x2,%rax
+ 441a170:	48 ff c9             	dec    %rcx
+ 441a173:	75 e6                	jne    441a15b <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0xdb>
+ 441a175:	48 83 e3 01          	and    $0x1,%rbx
+ 441a179:	74 13                	je     441a18e <gonum.org/v1/gonum/internal/asm/f64.AxpyUnitaryTo.abi0@@Base+0x10e>
+ 441a17b:	f2 0f 10 14 c6       	movsd  (%rsi,%rax,8),%xmm2
+ 441a180:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441a184:	f2 0f 58 14 c2       	addsd  (%rdx,%rax,8),%xmm2
+ 441a189:	f2 0f 11 14 c7       	movsd  %xmm2,(%rdi,%rax,8)
+ 441a18e:	c3                   	ret
+ 441a18f:	cc                   	int3
+ 441a190:	cc                   	int3
+ 441a191:	cc                   	int3
+ 441a192:	cc                   	int3
+ 441a193:	cc                   	int3
+ 441a194:	cc                   	int3
+ 441a195:	cc                   	int3
+ 441a196:	cc                   	int3
+ 441a197:	cc                   	int3
+ 441a198:	cc                   	int3
+ 441a199:	cc                   	int3
+ 441a19a:	cc                   	int3
+ 441a19b:	cc                   	int3
+ 441a19c:	cc                   	int3
+ 441a19d:	cc                   	int3
+ 441a19e:	cc                   	int3
+ 441a19f:	cc                   	int3
+
+000000000441a1a0 <gonum.org/v1/gonum/internal/asm/f64.DotUnitary.abi0@@Base>:
+ 441a1a0:	4c 8b 44 24 08       	mov    0x8(%rsp),%r8
+ 441a1a5:	48 8b 7c 24 10       	mov    0x10(%rsp),%rdi
+ 441a1aa:	4c 8b 4c 24 20       	mov    0x20(%rsp),%r9
+ 441a1af:	0f 57 ff             	xorps  %xmm7,%xmm7
+ 441a1b2:	45 0f 57 c0          	xorps  %xmm8,%xmm8
+ 441a1b6:	48 c7 c6 00 00 00 00 	mov    $0x0,%rsi
+ 441a1bd:	48 83 ef 04          	sub    $0x4,%rdi
+ 441a1c1:	7c 35                	jl     441a1f8 <gonum.org/v1/gonum/internal/asm/f64.DotUnitary.abi0@@Base+0x58>
+ 441a1c3:	66 41 0f 10 04 f0    	movupd (%r8,%rsi,8),%xmm0
+ 441a1c9:	66 41 0f 10 0c f1    	movupd (%r9,%rsi,8),%xmm1
+ 441a1cf:	66 41 0f 10 54 f0 10 	movupd 0x10(%r8,%rsi,8),%xmm2
+ 441a1d6:	66 41 0f 10 5c f1 10 	movupd 0x10(%r9,%rsi,8),%xmm3
+ 441a1dd:	66 0f 59 c1          	mulpd  %xmm1,%xmm0
+ 441a1e1:	66 0f 59 d3          	mulpd  %xmm3,%xmm2
+ 441a1e5:	66 0f 58 f8          	addpd  %xmm0,%xmm7
+ 441a1e9:	66 44 0f 58 c2       	addpd  %xmm2,%xmm8
+ 441a1ee:	48 83 c6 04          	add    $0x4,%rsi
+ 441a1f2:	48 83 ef 04          	sub    $0x4,%rdi
+ 441a1f6:	7d cb                	jge    441a1c3 <gonum.org/v1/gonum/internal/asm/f64.DotUnitary.abi0@@Base+0x23>
+ 441a1f8:	48 83 c7 04          	add    $0x4,%rdi
+ 441a1fc:	7e 1e                	jle    441a21c <gonum.org/v1/gonum/internal/asm/f64.DotUnitary.abi0@@Base+0x7c>
+ 441a1fe:	f2 41 0f 10 04 f0    	movsd  (%r8,%rsi,8),%xmm0
+ 441a204:	f2 41 0f 10 0c f1    	movsd  (%r9,%rsi,8),%xmm1
+ 441a20a:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+ 441a20e:	f2 0f 58 f8          	addsd  %xmm0,%xmm7
+ 441a212:	48 83 c6 01          	add    $0x1,%rsi
+ 441a216:	48 83 ef 01          	sub    $0x1,%rdi
+ 441a21a:	75 e2                	jne    441a1fe <gonum.org/v1/gonum/internal/asm/f64.DotUnitary.abi0@@Base+0x5e>
+ 441a21c:	66 41 0f 58 f8       	addpd  %xmm8,%xmm7
+ 441a221:	f2 0f 10 c7          	movsd  %xmm7,%xmm0
+ 441a225:	66 0f 15 ff          	unpckhpd %xmm7,%xmm7
+ 441a229:	f2 0f 58 f8          	addsd  %xmm0,%xmm7
+ 441a22d:	f2 0f 11 7c 24 38    	movsd  %xmm7,0x38(%rsp)
+ 441a233:	c3                   	ret
+ 441a234:	cc                   	int3
+ 441a235:	cc                   	int3
+ 441a236:	cc                   	int3
+ 441a237:	cc                   	int3
+ 441a238:	cc                   	int3
+ 441a239:	cc                   	int3
+ 441a23a:	cc                   	int3
+ 441a23b:	cc                   	int3
+ 441a23c:	cc                   	int3
+ 441a23d:	cc                   	int3
+ 441a23e:	cc                   	int3
+ 441a23f:	cc                   	int3
+
+000000000441a240 <gonum.org/v1/gonum/internal/asm/f64.DotInc.abi0@@Base>:
+ 441a240:	4c 8b 44 24 08       	mov    0x8(%rsp),%r8
+ 441a245:	4c 8b 4c 24 20       	mov    0x20(%rsp),%r9
+ 441a24a:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441a24f:	4c 8b 5c 24 40       	mov    0x40(%rsp),%r11
+ 441a254:	4c 8b 64 24 48       	mov    0x48(%rsp),%r12
+ 441a259:	4c 8b 6c 24 50       	mov    0x50(%rsp),%r13
+ 441a25e:	4c 8b 74 24 58       	mov    0x58(%rsp),%r14
+ 441a263:	0f 57 ff             	xorps  %xmm7,%xmm7
+ 441a266:	4b 8d 34 e8          	lea    (%r8,%r13,8),%rsi
+ 441a26a:	4b 8d 3c f1          	lea    (%r9,%r14,8),%rdi
+ 441a26e:	49 c1 e3 03          	shl    $0x3,%r11
+ 441a272:	49 c1 e4 03          	shl    $0x3,%r12
+ 441a276:	48 83 e9 02          	sub    $0x2,%rcx
+ 441a27a:	7c 2a                	jl     441a2a6 <gonum.org/v1/gonum/internal/asm/f64.DotInc.abi0@@Base+0x66>
+ 441a27c:	66 0f 16 06          	movhpd (%rsi),%xmm0
+ 441a280:	66 0f 16 0f          	movhpd (%rdi),%xmm1
+ 441a284:	4c 01 de             	add    %r11,%rsi
+ 441a287:	4c 01 e7             	add    %r12,%rdi
+ 441a28a:	66 0f 12 06          	movlpd (%rsi),%xmm0
+ 441a28e:	66 0f 12 0f          	movlpd (%rdi),%xmm1
+ 441a292:	4c 01 de             	add    %r11,%rsi
+ 441a295:	4c 01 e7             	add    %r12,%rdi
+ 441a298:	66 0f 59 c1          	mulpd  %xmm1,%xmm0
+ 441a29c:	66 0f 58 f8          	addpd  %xmm0,%xmm7
+ 441a2a0:	48 83 e9 02          	sub    $0x2,%rcx
+ 441a2a4:	7d d6                	jge    441a27c <gonum.org/v1/gonum/internal/asm/f64.DotInc.abi0@@Base+0x3c>
+ 441a2a6:	48 83 c1 02          	add    $0x2,%rcx
+ 441a2aa:	7e 0c                	jle    441a2b8 <gonum.org/v1/gonum/internal/asm/f64.DotInc.abi0@@Base+0x78>
+ 441a2ac:	f2 0f 10 06          	movsd  (%rsi),%xmm0
+ 441a2b0:	f2 0f 59 07          	mulsd  (%rdi),%xmm0
+ 441a2b4:	f2 0f 58 f8          	addsd  %xmm0,%xmm7
+ 441a2b8:	f2 0f 10 c7          	movsd  %xmm7,%xmm0
+ 441a2bc:	66 0f 15 ff          	unpckhpd %xmm7,%xmm7
+ 441a2c0:	f2 0f 58 f8          	addsd  %xmm0,%xmm7
+ 441a2c4:	f2 0f 11 7c 24 60    	movsd  %xmm7,0x60(%rsp)
+ 441a2ca:	c3                   	ret
+ 441a2cb:	cc                   	int3
+ 441a2cc:	cc                   	int3
+ 441a2cd:	cc                   	int3
+ 441a2ce:	cc                   	int3
+ 441a2cf:	cc                   	int3
+ 441a2d0:	cc                   	int3
+ 441a2d1:	cc                   	int3
+ 441a2d2:	cc                   	int3
+ 441a2d3:	cc                   	int3
+ 441a2d4:	cc                   	int3
+ 441a2d5:	cc                   	int3
+ 441a2d6:	cc                   	int3
+ 441a2d7:	cc                   	int3
+ 441a2d8:	cc                   	int3
+ 441a2d9:	cc                   	int3
+ 441a2da:	cc                   	int3
+ 441a2db:	cc                   	int3
+ 441a2dc:	cc                   	int3
+ 441a2dd:	cc                   	int3
+ 441a2de:	cc                   	int3
+ 441a2df:	cc                   	int3
+
+000000000441a2e0 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base>:
+ 441a2e0:	48 83 ec 28          	sub    $0x28,%rsp
+ 441a2e4:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 441a2e9:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 441a2ee:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 441a2f3:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441a2f8:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441a2fc:	0f 84 11 05 00 00    	je     441a813 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x533>
+ 441a302:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441a306:	0f 84 07 05 00 00    	je     441a813 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x533>
+ 441a30c:	f2 44 0f 12 7c 24 40 	movddup 0x40(%rsp),%xmm15
+ 441a313:	f2 44 0f 12 b4 24 88 	movddup 0x88(%rsp),%xmm14
+ 441a31a:	00 00 00 
+ 441a31d:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441a322:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441a329:	00 
+ 441a32a:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 441a32f:	4c 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%r10
+ 441a336:	00 
+ 441a337:	4c 8b 64 24 60       	mov    0x60(%rsp),%r12
+ 441a33c:	49 c1 e4 03          	shl    $0x3,%r12
+ 441a340:	4f 8d 2c 64          	lea    (%r12,%r12,2),%r13
+ 441a344:	48 89 c7             	mov    %rax,%rdi
+ 441a347:	4d 31 ff             	xor    %r15,%r15
+ 441a34a:	49 89 ce             	mov    %rcx,%r14
+ 441a34d:	49 83 ee 01          	sub    $0x1,%r14
+ 441a351:	4d 0f af f2          	imul   %r10,%r14
+ 441a355:	49 f7 de             	neg    %r14
+ 441a358:	49 83 fa 00          	cmp    $0x0,%r10
+ 441a35c:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441a360:	4a 8d 14 fa          	lea    (%rdx,%r15,8),%rdx
+ 441a364:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+ 441a36b:	00 
+ 441a36c:	49 c1 e2 03          	shl    $0x3,%r10
+ 441a370:	4f 8d 1c 52          	lea    (%r10,%r10,2),%r11
+ 441a374:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a377:	66 41 0f 2f c6       	comisd %xmm14,%xmm0
+ 441a37c:	0f 85 c8 00 00 00    	jne    441a44a <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x16a>
+ 441a382:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a385:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441a388:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441a38b:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441a38e:	48 83 bc 24 a8 00 00 	cmpq   $0x1,0xa8(%rsp)
+ 441a395:	00 01 
+ 441a397:	75 57                	jne    441a3f0 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x110>
+ 441a399:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441a39d:	74 18                	je     441a3b7 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0xd7>
+ 441a39f:	0f 11 02             	movups %xmm0,(%rdx)
+ 441a3a2:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441a3a6:	0f 11 52 20          	movups %xmm2,0x20(%rdx)
+ 441a3aa:	0f 11 5a 30          	movups %xmm3,0x30(%rdx)
+ 441a3ae:	48 83 c2 40          	add    $0x40,%rdx
+ 441a3b2:	48 ff c9             	dec    %rcx
+ 441a3b5:	75 e8                	jne    441a39f <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0xbf>
+ 441a3b7:	48 f7 44 24 30 04 00 	testq  $0x4,0x30(%rsp)
+ 441a3be:	00 00 
+ 441a3c0:	74 0b                	je     441a3cd <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0xed>
+ 441a3c2:	0f 11 02             	movups %xmm0,(%rdx)
+ 441a3c5:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441a3c9:	48 83 c2 20          	add    $0x20,%rdx
+ 441a3cd:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441a3d4:	00 00 
+ 441a3d6:	74 07                	je     441a3df <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0xff>
+ 441a3d8:	0f 11 02             	movups %xmm0,(%rdx)
+ 441a3db:	48 83 c2 10          	add    $0x10,%rdx
+ 441a3df:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441a3e6:	00 00 
+ 441a3e8:	74 53                	je     441a43d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x15d>
+ 441a3ea:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441a3ee:	eb 4d                	jmp    441a43d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x15d>
+ 441a3f0:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441a3f4:	74 1f                	je     441a415 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x135>
+ 441a3f6:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441a3fa:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441a400:	f2 42 0f 11 14 52    	movsd  %xmm2,(%rdx,%r10,2)
+ 441a406:	f2 42 0f 11 1c 1a    	movsd  %xmm3,(%rdx,%r11,1)
+ 441a40c:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441a410:	48 ff c9             	dec    %rcx
+ 441a413:	75 e1                	jne    441a3f6 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x116>
+ 441a415:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441a41c:	00 00 
+ 441a41e:	74 0e                	je     441a42e <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x14e>
+ 441a420:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441a424:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441a42a:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441a42e:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441a435:	00 00 
+ 441a437:	74 04                	je     441a43d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x15d>
+ 441a439:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441a43d:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441a444:	00 
+ 441a445:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 441a44a:	48 83 bc 24 80 00 00 	cmpq   $0x1,0x80(%rsp)
+ 441a451:	00 01 
+ 441a453:	0f 85 c4 03 00 00    	jne    441a81d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x53d>
+ 441a459:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441a45d:	0f 84 d5 01 00 00    	je     441a638 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x358>
+ 441a463:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a466:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441a469:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441a46c:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441a46f:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441a474:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441a478:	0f 84 8e 00 00 00    	je     441a50c <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x22c>
+ 441a47e:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a482:	44 0f 10 6e 10       	movups 0x10(%rsi),%xmm13
+ 441a487:	0f 10 27             	movups (%rdi),%xmm4
+ 441a48a:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441a48e:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441a493:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441a499:	46 0f 10 04 67       	movups (%rdi,%r12,2),%xmm8
+ 441a49e:	46 0f 10 4c 67 10    	movups 0x10(%rdi,%r12,2),%xmm9
+ 441a4a4:	46 0f 10 14 2f       	movups (%rdi,%r13,1),%xmm10
+ 441a4a9:	46 0f 10 5c 2f 10    	movups 0x10(%rdi,%r13,1),%xmm11
+ 441a4af:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a4b4:	66 41 0f 59 ed       	mulpd  %xmm13,%xmm5
+ 441a4b9:	66 41 0f 59 f4       	mulpd  %xmm12,%xmm6
+ 441a4be:	66 41 0f 59 fd       	mulpd  %xmm13,%xmm7
+ 441a4c3:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a4c8:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441a4cd:	66 45 0f 59 d4       	mulpd  %xmm12,%xmm10
+ 441a4d2:	66 45 0f 59 dd       	mulpd  %xmm13,%xmm11
+ 441a4d7:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a4db:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441a4df:	66 0f 58 ce          	addpd  %xmm6,%xmm1
+ 441a4e3:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441a4e7:	66 41 0f 58 d0       	addpd  %xmm8,%xmm2
+ 441a4ec:	66 41 0f 58 d1       	addpd  %xmm9,%xmm2
+ 441a4f1:	66 41 0f 58 da       	addpd  %xmm10,%xmm3
+ 441a4f6:	66 41 0f 58 db       	addpd  %xmm11,%xmm3
+ 441a4fb:	48 83 c7 20          	add    $0x20,%rdi
+ 441a4ff:	48 83 c6 20          	add    $0x20,%rsi
+ 441a503:	48 ff cb             	dec    %rbx
+ 441a506:	0f 85 72 ff ff ff    	jne    441a47e <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x19e>
+ 441a50c:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441a513:	00 00 
+ 441a515:	74 42                	je     441a559 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x279>
+ 441a517:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a51b:	0f 10 27             	movups (%rdi),%xmm4
+ 441a51e:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441a523:	42 0f 10 34 67       	movups (%rdi,%r12,2),%xmm6
+ 441a528:	42 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm7
+ 441a52d:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a532:	66 41 0f 59 ec       	mulpd  %xmm12,%xmm5
+ 441a537:	66 41 0f 59 f4       	mulpd  %xmm12,%xmm6
+ 441a53c:	66 41 0f 59 fc       	mulpd  %xmm12,%xmm7
+ 441a541:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a545:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441a549:	66 0f 58 d6          	addpd  %xmm6,%xmm2
+ 441a54d:	66 0f 58 df          	addpd  %xmm7,%xmm3
+ 441a551:	48 83 c7 10          	add    $0x10,%rdi
+ 441a555:	48 83 c6 10          	add    $0x10,%rsi
+ 441a559:	66 0f 7c c1          	haddpd %xmm1,%xmm0
+ 441a55d:	66 0f 7c d3          	haddpd %xmm3,%xmm2
+ 441a561:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441a568:	00 00 
+ 441a56a:	74 35                	je     441a5a1 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x2c1>
+ 441a56c:	f2 44 0f 12 26       	movddup (%rsi),%xmm12
+ 441a571:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441a575:	66 42 0f 16 24 27    	movhpd (%rdi,%r12,1),%xmm4
+ 441a57b:	f2 42 0f 10 2c 67    	movsd  (%rdi,%r12,2),%xmm5
+ 441a581:	66 42 0f 16 2c 2f    	movhpd (%rdi,%r13,1),%xmm5
+ 441a587:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a58c:	66 41 0f 59 ec       	mulpd  %xmm12,%xmm5
+ 441a591:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a595:	66 0f 58 d5          	addpd  %xmm5,%xmm2
+ 441a599:	48 83 c7 08          	add    $0x8,%rdi
+ 441a59d:	48 83 c6 08          	add    $0x8,%rsi
+ 441a5a1:	49 83 fa 08          	cmp    $0x8,%r10
+ 441a5a5:	75 30                	jne    441a5d7 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x2f7>
+ 441a5a7:	0f 10 22             	movups (%rdx),%xmm4
+ 441a5aa:	0f 10 6a 10          	movups 0x10(%rdx),%xmm5
+ 441a5ae:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a5b3:	66 41 0f 59 d7       	mulpd  %xmm15,%xmm2
+ 441a5b8:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441a5bd:	66 41 0f 59 ee       	mulpd  %xmm14,%xmm5
+ 441a5c2:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441a5c6:	66 0f 58 ea          	addpd  %xmm2,%xmm5
+ 441a5ca:	0f 11 22             	movups %xmm4,(%rdx)
+ 441a5cd:	0f 11 6a 10          	movups %xmm5,0x10(%rdx)
+ 441a5d1:	48 83 c2 20          	add    $0x20,%rdx
+ 441a5d5:	eb 4c                	jmp    441a623 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x343>
+ 441a5d7:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441a5db:	66 42 0f 16 24 12    	movhpd (%rdx,%r10,1),%xmm4
+ 441a5e1:	f2 42 0f 10 2c 52    	movsd  (%rdx,%r10,2),%xmm5
+ 441a5e7:	66 42 0f 16 2c 1a    	movhpd (%rdx,%r11,1),%xmm5
+ 441a5ed:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a5f2:	66 41 0f 59 d7       	mulpd  %xmm15,%xmm2
+ 441a5f7:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441a5fc:	66 41 0f 59 ee       	mulpd  %xmm14,%xmm5
+ 441a601:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441a605:	66 0f 58 ea          	addpd  %xmm2,%xmm5
+ 441a609:	66 0f 13 22          	movlpd %xmm4,(%rdx)
+ 441a60d:	66 42 0f 17 24 12    	movhpd %xmm4,(%rdx,%r10,1)
+ 441a613:	66 42 0f 13 2c 52    	movlpd %xmm5,(%rdx,%r10,2)
+ 441a619:	66 42 0f 17 2c 1a    	movhpd %xmm5,(%rdx,%r11,1)
+ 441a61f:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441a623:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441a628:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441a62c:	48 89 c7             	mov    %rax,%rdi
+ 441a62f:	48 ff c9             	dec    %rcx
+ 441a632:	0f 85 2b fe ff ff    	jne    441a463 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x183>
+ 441a638:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441a63f:	00 00 
+ 441a641:	0f 84 1a 01 00 00    	je     441a761 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x481>
+ 441a647:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a64a:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441a64d:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441a652:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441a656:	74 52                	je     441a6aa <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x3ca>
+ 441a658:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a65c:	44 0f 10 6e 10       	movups 0x10(%rsi),%xmm13
+ 441a661:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441a665:	44 0f 10 4f 10       	movups 0x10(%rdi),%xmm9
+ 441a66a:	46 0f 10 14 27       	movups (%rdi,%r12,1),%xmm10
+ 441a66f:	46 0f 10 5c 27 10    	movups 0x10(%rdi,%r12,1),%xmm11
+ 441a675:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a67a:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441a67f:	66 45 0f 59 d4       	mulpd  %xmm12,%xmm10
+ 441a684:	66 45 0f 59 dd       	mulpd  %xmm13,%xmm11
+ 441a689:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441a68e:	66 41 0f 58 ca       	addpd  %xmm10,%xmm1
+ 441a693:	66 41 0f 58 c1       	addpd  %xmm9,%xmm0
+ 441a698:	66 41 0f 58 cb       	addpd  %xmm11,%xmm1
+ 441a69d:	48 83 c7 20          	add    $0x20,%rdi
+ 441a6a1:	48 83 c6 20          	add    $0x20,%rsi
+ 441a6a5:	48 ff cb             	dec    %rbx
+ 441a6a8:	75 ae                	jne    441a658 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x378>
+ 441a6aa:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441a6b1:	00 00 
+ 441a6b3:	74 29                	je     441a6de <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x3fe>
+ 441a6b5:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a6b9:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441a6bd:	46 0f 10 0c 27       	movups (%rdi,%r12,1),%xmm9
+ 441a6c2:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a6c7:	66 45 0f 59 cc       	mulpd  %xmm12,%xmm9
+ 441a6cc:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441a6d1:	66 41 0f 58 c9       	addpd  %xmm9,%xmm1
+ 441a6d6:	48 83 c7 10          	add    $0x10,%rdi
+ 441a6da:	48 83 c6 10          	add    $0x10,%rsi
+ 441a6de:	66 0f 7c c1          	haddpd %xmm1,%xmm0
+ 441a6e2:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441a6e9:	00 00 
+ 441a6eb:	74 22                	je     441a70f <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x42f>
+ 441a6ed:	f2 44 0f 12 26       	movddup (%rsi),%xmm12
+ 441a6f2:	f2 44 0f 10 07       	movsd  (%rdi),%xmm8
+ 441a6f7:	66 46 0f 16 04 27    	movhpd (%rdi,%r12,1),%xmm8
+ 441a6fd:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a702:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441a707:	48 83 c7 08          	add    $0x8,%rdi
+ 441a70b:	48 83 c6 08          	add    $0x8,%rsi
+ 441a70f:	49 83 fa 08          	cmp    $0x8,%r10
+ 441a713:	75 1a                	jne    441a72f <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x44f>
+ 441a715:	0f 10 22             	movups (%rdx),%xmm4
+ 441a718:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a71d:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441a722:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441a726:	0f 11 22             	movups %xmm4,(%rdx)
+ 441a729:	48 83 c2 10          	add    $0x10,%rdx
+ 441a72d:	eb 26                	jmp    441a755 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x475>
+ 441a72f:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441a733:	66 42 0f 16 24 12    	movhpd (%rdx,%r10,1),%xmm4
+ 441a739:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a73e:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441a743:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441a747:	f2 0f 11 22          	movsd  %xmm4,(%rdx)
+ 441a74b:	66 42 0f 17 24 12    	movhpd %xmm4,(%rdx,%r10,1)
+ 441a751:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441a755:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441a75a:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441a75e:	48 89 c7             	mov    %rax,%rdi
+ 441a761:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441a768:	00 00 
+ 441a76a:	0f 84 a3 00 00 00    	je     441a813 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x533>
+ 441a770:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a773:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441a778:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441a77c:	74 33                	je     441a7b1 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x4d1>
+ 441a77e:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a782:	44 0f 10 6e 10       	movups 0x10(%rsi),%xmm13
+ 441a787:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441a78b:	44 0f 10 4f 10       	movups 0x10(%rdi),%xmm9
+ 441a790:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a795:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441a79a:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441a79f:	66 41 0f 58 c1       	addpd  %xmm9,%xmm0
+ 441a7a4:	48 83 c7 20          	add    $0x20,%rdi
+ 441a7a8:	48 83 c6 20          	add    $0x20,%rsi
+ 441a7ac:	48 ff cb             	dec    %rbx
+ 441a7af:	75 cd                	jne    441a77e <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x49e>
+ 441a7b1:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441a7b8:	00 00 
+ 441a7ba:	74 1a                	je     441a7d6 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x4f6>
+ 441a7bc:	44 0f 10 26          	movups (%rsi),%xmm12
+ 441a7c0:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441a7c4:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a7c9:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441a7ce:	48 83 c7 10          	add    $0x10,%rdi
+ 441a7d2:	48 83 c6 10          	add    $0x10,%rsi
+ 441a7d6:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441a7dd:	00 00 
+ 441a7df:	74 18                	je     441a7f9 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x519>
+ 441a7e1:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441a7e6:	f2 44 0f 10 07       	movsd  (%rdi),%xmm8
+ 441a7eb:	f2 45 0f 59 c4       	mulsd  %xmm12,%xmm8
+ 441a7f0:	f2 41 0f 58 c0       	addsd  %xmm8,%xmm0
+ 441a7f5:	48 83 c7 08          	add    $0x8,%rdi
+ 441a7f9:	66 0f 7c c0          	haddpd %xmm0,%xmm0
+ 441a7fd:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441a801:	f2 41 0f 59 c7       	mulsd  %xmm15,%xmm0
+ 441a806:	f2 41 0f 59 e6       	mulsd  %xmm14,%xmm4
+ 441a80b:	f2 0f 58 e0          	addsd  %xmm0,%xmm4
+ 441a80f:	f2 0f 11 22          	movsd  %xmm4,(%rdx)
+ 441a813:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 441a818:	48 83 c4 28          	add    $0x28,%rsp
+ 441a81c:	c3                   	ret
+ 441a81d:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 441a824:	00 
+ 441a825:	4d 31 ff             	xor    %r15,%r15
+ 441a828:	49 89 de             	mov    %rbx,%r14
+ 441a82b:	49 83 ee 01          	sub    $0x1,%r14
+ 441a82f:	49 f7 de             	neg    %r14
+ 441a832:	4d 0f af f0          	imul   %r8,%r14
+ 441a836:	49 83 f8 00          	cmp    $0x0,%r8
+ 441a83a:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441a83e:	4a 8d 34 fe          	lea    (%rsi,%r15,8),%rsi
+ 441a842:	48 89 74 24 68       	mov    %rsi,0x68(%rsp)
+ 441a847:	49 c1 e0 03          	shl    $0x3,%r8
+ 441a84b:	4f 8d 0c 40          	lea    (%r8,%r8,2),%r9
+ 441a84f:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441a853:	0f 84 e9 01 00 00    	je     441aa42 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x762>
+ 441a859:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441a85c:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441a85f:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441a862:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441a865:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441a86a:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441a86e:	0f 84 9c 00 00 00    	je     441a910 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x630>
+ 441a874:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441a879:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441a87f:	f2 46 0f 10 2c 46    	movsd  (%rsi,%r8,2),%xmm13
+ 441a885:	66 46 0f 16 2c 0e    	movhpd (%rsi,%r9,1),%xmm13
+ 441a88b:	0f 10 27             	movups (%rdi),%xmm4
+ 441a88e:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441a892:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441a897:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441a89d:	46 0f 10 04 67       	movups (%rdi,%r12,2),%xmm8
+ 441a8a2:	46 0f 10 4c 67 10    	movups 0x10(%rdi,%r12,2),%xmm9
+ 441a8a8:	46 0f 10 14 2f       	movups (%rdi,%r13,1),%xmm10
+ 441a8ad:	46 0f 10 5c 2f 10    	movups 0x10(%rdi,%r13,1),%xmm11
+ 441a8b3:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a8b8:	66 41 0f 59 ed       	mulpd  %xmm13,%xmm5
+ 441a8bd:	66 41 0f 59 f4       	mulpd  %xmm12,%xmm6
+ 441a8c2:	66 41 0f 59 fd       	mulpd  %xmm13,%xmm7
+ 441a8c7:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441a8cc:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441a8d1:	66 45 0f 59 d4       	mulpd  %xmm12,%xmm10
+ 441a8d6:	66 45 0f 59 dd       	mulpd  %xmm13,%xmm11
+ 441a8db:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a8df:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441a8e3:	66 0f 58 ce          	addpd  %xmm6,%xmm1
+ 441a8e7:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441a8eb:	66 41 0f 58 d0       	addpd  %xmm8,%xmm2
+ 441a8f0:	66 41 0f 58 d1       	addpd  %xmm9,%xmm2
+ 441a8f5:	66 41 0f 58 da       	addpd  %xmm10,%xmm3
+ 441a8fa:	66 41 0f 58 db       	addpd  %xmm11,%xmm3
+ 441a8ff:	48 83 c7 20          	add    $0x20,%rdi
+ 441a903:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441a907:	48 ff cb             	dec    %rbx
+ 441a90a:	0f 85 64 ff ff ff    	jne    441a874 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x594>
+ 441a910:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441a917:	00 00 
+ 441a919:	74 49                	je     441a964 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x684>
+ 441a91b:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441a920:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441a926:	0f 10 27             	movups (%rdi),%xmm4
+ 441a929:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441a92e:	42 0f 10 34 67       	movups (%rdi,%r12,2),%xmm6
+ 441a933:	42 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm7
+ 441a938:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a93d:	66 41 0f 59 ec       	mulpd  %xmm12,%xmm5
+ 441a942:	66 41 0f 59 f4       	mulpd  %xmm12,%xmm6
+ 441a947:	66 41 0f 59 fc       	mulpd  %xmm12,%xmm7
+ 441a94c:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a950:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441a954:	66 0f 58 d6          	addpd  %xmm6,%xmm2
+ 441a958:	66 0f 58 df          	addpd  %xmm7,%xmm3
+ 441a95c:	48 83 c7 10          	add    $0x10,%rdi
+ 441a960:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441a964:	66 0f 7c c1          	haddpd %xmm1,%xmm0
+ 441a968:	66 0f 7c d3          	haddpd %xmm3,%xmm2
+ 441a96c:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441a973:	00 00 
+ 441a975:	74 34                	je     441a9ab <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x6cb>
+ 441a977:	f2 44 0f 12 26       	movddup (%rsi),%xmm12
+ 441a97c:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441a980:	66 42 0f 16 24 27    	movhpd (%rdi,%r12,1),%xmm4
+ 441a986:	f2 42 0f 10 2c 67    	movsd  (%rdi,%r12,2),%xmm5
+ 441a98c:	66 42 0f 16 2c 2f    	movhpd (%rdi,%r13,1),%xmm5
+ 441a992:	66 41 0f 59 e4       	mulpd  %xmm12,%xmm4
+ 441a997:	66 41 0f 59 ec       	mulpd  %xmm12,%xmm5
+ 441a99c:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441a9a0:	66 0f 58 d5          	addpd  %xmm5,%xmm2
+ 441a9a4:	48 83 c7 08          	add    $0x8,%rdi
+ 441a9a8:	4c 01 c6             	add    %r8,%rsi
+ 441a9ab:	49 83 fa 08          	cmp    $0x8,%r10
+ 441a9af:	75 30                	jne    441a9e1 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x701>
+ 441a9b1:	0f 10 22             	movups (%rdx),%xmm4
+ 441a9b4:	0f 10 6a 10          	movups 0x10(%rdx),%xmm5
+ 441a9b8:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a9bd:	66 41 0f 59 d7       	mulpd  %xmm15,%xmm2
+ 441a9c2:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441a9c7:	66 41 0f 59 ee       	mulpd  %xmm14,%xmm5
+ 441a9cc:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441a9d0:	66 0f 58 ea          	addpd  %xmm2,%xmm5
+ 441a9d4:	0f 11 22             	movups %xmm4,(%rdx)
+ 441a9d7:	0f 11 6a 10          	movups %xmm5,0x10(%rdx)
+ 441a9db:	48 83 c2 20          	add    $0x20,%rdx
+ 441a9df:	eb 4c                	jmp    441aa2d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x74d>
+ 441a9e1:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441a9e5:	66 42 0f 16 24 12    	movhpd (%rdx,%r10,1),%xmm4
+ 441a9eb:	f2 42 0f 10 2c 52    	movsd  (%rdx,%r10,2),%xmm5
+ 441a9f1:	66 42 0f 16 2c 1a    	movhpd (%rdx,%r11,1),%xmm5
+ 441a9f7:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441a9fc:	66 41 0f 59 d7       	mulpd  %xmm15,%xmm2
+ 441aa01:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441aa06:	66 41 0f 59 ee       	mulpd  %xmm14,%xmm5
+ 441aa0b:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441aa0f:	66 0f 58 ea          	addpd  %xmm2,%xmm5
+ 441aa13:	66 0f 13 22          	movlpd %xmm4,(%rdx)
+ 441aa17:	66 42 0f 17 24 12    	movhpd %xmm4,(%rdx,%r10,1)
+ 441aa1d:	66 42 0f 13 2c 52    	movlpd %xmm5,(%rdx,%r10,2)
+ 441aa23:	66 42 0f 17 2c 1a    	movhpd %xmm5,(%rdx,%r11,1)
+ 441aa29:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441aa2d:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441aa32:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441aa36:	48 89 c7             	mov    %rax,%rdi
+ 441aa39:	48 ff c9             	dec    %rcx
+ 441aa3c:	0f 85 17 fe ff ff    	jne    441a859 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x579>
+ 441aa42:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441aa49:	00 00 
+ 441aa4b:	0f 84 2e 01 00 00    	je     441ab7f <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x89f>
+ 441aa51:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441aa54:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441aa57:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441aa5c:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441aa60:	74 60                	je     441aac2 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x7e2>
+ 441aa62:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441aa67:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441aa6d:	f2 46 0f 10 2c 46    	movsd  (%rsi,%r8,2),%xmm13
+ 441aa73:	66 46 0f 16 2c 0e    	movhpd (%rsi,%r9,1),%xmm13
+ 441aa79:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441aa7d:	44 0f 10 4f 10       	movups 0x10(%rdi),%xmm9
+ 441aa82:	46 0f 10 14 27       	movups (%rdi,%r12,1),%xmm10
+ 441aa87:	46 0f 10 5c 27 10    	movups 0x10(%rdi,%r12,1),%xmm11
+ 441aa8d:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441aa92:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441aa97:	66 45 0f 59 d4       	mulpd  %xmm12,%xmm10
+ 441aa9c:	66 45 0f 59 dd       	mulpd  %xmm13,%xmm11
+ 441aaa1:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441aaa6:	66 41 0f 58 ca       	addpd  %xmm10,%xmm1
+ 441aaab:	66 41 0f 58 c1       	addpd  %xmm9,%xmm0
+ 441aab0:	66 41 0f 58 cb       	addpd  %xmm11,%xmm1
+ 441aab5:	48 83 c7 20          	add    $0x20,%rdi
+ 441aab9:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441aabd:	48 ff cb             	dec    %rbx
+ 441aac0:	75 a0                	jne    441aa62 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x782>
+ 441aac2:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441aac9:	00 00 
+ 441aacb:	74 30                	je     441aafd <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x81d>
+ 441aacd:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441aad2:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441aad8:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441aadc:	46 0f 10 0c 27       	movups (%rdi,%r12,1),%xmm9
+ 441aae1:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441aae6:	66 45 0f 59 cc       	mulpd  %xmm12,%xmm9
+ 441aaeb:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441aaf0:	66 41 0f 58 c9       	addpd  %xmm9,%xmm1
+ 441aaf5:	48 83 c7 10          	add    $0x10,%rdi
+ 441aaf9:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441aafd:	66 0f 7c c1          	haddpd %xmm1,%xmm0
+ 441ab01:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441ab08:	00 00 
+ 441ab0a:	74 21                	je     441ab2d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x84d>
+ 441ab0c:	f2 44 0f 12 26       	movddup (%rsi),%xmm12
+ 441ab11:	f2 44 0f 10 07       	movsd  (%rdi),%xmm8
+ 441ab16:	66 46 0f 16 04 27    	movhpd (%rdi,%r12,1),%xmm8
+ 441ab1c:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441ab21:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441ab26:	48 83 c7 08          	add    $0x8,%rdi
+ 441ab2a:	4c 01 c6             	add    %r8,%rsi
+ 441ab2d:	49 83 fa 08          	cmp    $0x8,%r10
+ 441ab31:	75 1a                	jne    441ab4d <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x86d>
+ 441ab33:	0f 10 22             	movups (%rdx),%xmm4
+ 441ab36:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441ab3b:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441ab40:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441ab44:	0f 11 22             	movups %xmm4,(%rdx)
+ 441ab47:	48 83 c2 10          	add    $0x10,%rdx
+ 441ab4b:	eb 26                	jmp    441ab73 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x893>
+ 441ab4d:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441ab51:	66 42 0f 16 24 12    	movhpd (%rdx,%r10,1),%xmm4
+ 441ab57:	66 41 0f 59 c7       	mulpd  %xmm15,%xmm0
+ 441ab5c:	66 41 0f 59 e6       	mulpd  %xmm14,%xmm4
+ 441ab61:	66 0f 58 e0          	addpd  %xmm0,%xmm4
+ 441ab65:	f2 0f 11 22          	movsd  %xmm4,(%rdx)
+ 441ab69:	66 42 0f 17 24 12    	movhpd %xmm4,(%rdx,%r10,1)
+ 441ab6f:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441ab73:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441ab78:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441ab7c:	48 89 c7             	mov    %rax,%rdi
+ 441ab7f:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441ab86:	00 00 
+ 441ab88:	0f 84 b8 00 00 00    	je     441ac46 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x966>
+ 441ab8e:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441ab91:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 441ab96:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441ab9a:	74 41                	je     441abdd <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x8fd>
+ 441ab9c:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441aba1:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441aba7:	f2 46 0f 10 2c 46    	movsd  (%rsi,%r8,2),%xmm13
+ 441abad:	66 46 0f 16 2c 0e    	movhpd (%rsi,%r9,1),%xmm13
+ 441abb3:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441abb7:	44 0f 10 4f 10       	movups 0x10(%rdi),%xmm9
+ 441abbc:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441abc1:	66 45 0f 59 cd       	mulpd  %xmm13,%xmm9
+ 441abc6:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441abcb:	66 41 0f 58 c1       	addpd  %xmm9,%xmm0
+ 441abd0:	48 83 c7 20          	add    $0x20,%rdi
+ 441abd4:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441abd8:	48 ff cb             	dec    %rbx
+ 441abdb:	75 bf                	jne    441ab9c <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x8bc>
+ 441abdd:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441abe4:	00 00 
+ 441abe6:	74 21                	je     441ac09 <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x929>
+ 441abe8:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441abed:	66 46 0f 16 24 06    	movhpd (%rsi,%r8,1),%xmm12
+ 441abf3:	44 0f 10 07          	movups (%rdi),%xmm8
+ 441abf7:	66 45 0f 59 c4       	mulpd  %xmm12,%xmm8
+ 441abfc:	66 41 0f 58 c0       	addpd  %xmm8,%xmm0
+ 441ac01:	48 83 c7 10          	add    $0x10,%rdi
+ 441ac05:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441ac09:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441ac10:	00 00 
+ 441ac12:	74 18                	je     441ac2c <gonum.org/v1/gonum/internal/asm/f64.GemvN.abi0@@Base+0x94c>
+ 441ac14:	f2 44 0f 10 26       	movsd  (%rsi),%xmm12
+ 441ac19:	f2 44 0f 10 07       	movsd  (%rdi),%xmm8
+ 441ac1e:	f2 45 0f 59 c4       	mulsd  %xmm12,%xmm8
+ 441ac23:	f2 41 0f 58 c0       	addsd  %xmm8,%xmm0
+ 441ac28:	48 83 c7 08          	add    $0x8,%rdi
+ 441ac2c:	66 0f 7c c0          	haddpd %xmm0,%xmm0
+ 441ac30:	f2 0f 10 22          	movsd  (%rdx),%xmm4
+ 441ac34:	f2 41 0f 59 c7       	mulsd  %xmm15,%xmm0
+ 441ac39:	f2 41 0f 59 e6       	mulsd  %xmm14,%xmm4
+ 441ac3e:	f2 0f 58 e0          	addsd  %xmm0,%xmm4
+ 441ac42:	f2 0f 11 22          	movsd  %xmm4,(%rdx)
+ 441ac46:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 441ac4b:	48 83 c4 28          	add    $0x28,%rsp
+ 441ac4f:	c3                   	ret
+ 441ac50:	cc                   	int3
+ 441ac51:	cc                   	int3
+ 441ac52:	cc                   	int3
+ 441ac53:	cc                   	int3
+ 441ac54:	cc                   	int3
+ 441ac55:	cc                   	int3
+ 441ac56:	cc                   	int3
+ 441ac57:	cc                   	int3
+ 441ac58:	cc                   	int3
+ 441ac59:	cc                   	int3
+ 441ac5a:	cc                   	int3
+ 441ac5b:	cc                   	int3
+ 441ac5c:	cc                   	int3
+ 441ac5d:	cc                   	int3
+ 441ac5e:	cc                   	int3
+ 441ac5f:	cc                   	int3
+
+000000000441ac60 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base>:
+ 441ac60:	48 83 ec 28          	sub    $0x28,%rsp
+ 441ac64:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 441ac69:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 441ac6e:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441ac73:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 441ac78:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441ac7c:	0f 84 ea 04 00 00    	je     441b16c <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x50c>
+ 441ac82:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441ac86:	0f 84 e0 04 00 00    	je     441b16c <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x50c>
+ 441ac8c:	f2 44 0f 12 7c 24 40 	movddup 0x40(%rsp),%xmm15
+ 441ac93:	48 8b 74 24 68       	mov    0x68(%rsp),%rsi
+ 441ac98:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441ac9f:	00 
+ 441aca0:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 441aca5:	4c 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%r10
+ 441acac:	00 
+ 441acad:	4c 8b 64 24 60       	mov    0x60(%rsp),%r12
+ 441acb2:	49 c1 e4 03          	shl    $0x3,%r12
+ 441acb6:	4f 8d 2c 64          	lea    (%r12,%r12,2),%r13
+ 441acba:	48 89 c7             	mov    %rax,%rdi
+ 441acbd:	4c 8b 84 24 80 00 00 	mov    0x80(%rsp),%r8
+ 441acc4:	00 
+ 441acc5:	4d 31 ff             	xor    %r15,%r15
+ 441acc8:	49 89 de             	mov    %rbx,%r14
+ 441accb:	49 83 ee 01          	sub    $0x1,%r14
+ 441accf:	49 f7 de             	neg    %r14
+ 441acd2:	4d 0f af f0          	imul   %r8,%r14
+ 441acd6:	49 83 f8 00          	cmp    $0x0,%r8
+ 441acda:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441acde:	4a 8d 34 fe          	lea    (%rsi,%r15,8),%rsi
+ 441ace2:	48 89 74 24 68       	mov    %rsi,0x68(%rsp)
+ 441ace7:	49 c1 e0 03          	shl    $0x3,%r8
+ 441aceb:	4f 8d 0c 40          	lea    (%r8,%r8,2),%r9
+ 441acef:	48 83 bc 24 a8 00 00 	cmpq   $0x1,0xa8(%rsp)
+ 441acf6:	00 01 
+ 441acf8:	0f 85 78 04 00 00    	jne    441b176 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x516>
+ 441acfe:	f2 0f 10 05 92 37 0c 	movsd  0x10c3792(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441ad05:	01 
+ 441ad06:	66 0f 2f 84 24 88 00 	comisd 0x88(%rsp),%xmm0
+ 441ad0d:	00 00 
+ 441ad0f:	0f 84 26 01 00 00    	je     441ae3b <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1db>
+ 441ad15:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441ad18:	66 0f 2f 84 24 88 00 	comisd 0x88(%rsp),%xmm0
+ 441ad1f:	00 00 
+ 441ad21:	0f 84 a6 00 00 00    	je     441adcd <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x16d>
+ 441ad27:	f2 44 0f 12 b4 24 88 	movddup 0x88(%rsp),%xmm14
+ 441ad2e:	00 00 00 
+ 441ad31:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441ad35:	74 3b                	je     441ad72 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x112>
+ 441ad37:	0f 10 02             	movups (%rdx),%xmm0
+ 441ad3a:	0f 10 4a 10          	movups 0x10(%rdx),%xmm1
+ 441ad3e:	0f 10 52 20          	movups 0x20(%rdx),%xmm2
+ 441ad42:	0f 10 5a 30          	movups 0x30(%rdx),%xmm3
+ 441ad46:	66 41 0f 59 c6       	mulpd  %xmm14,%xmm0
+ 441ad4b:	66 41 0f 59 ce       	mulpd  %xmm14,%xmm1
+ 441ad50:	66 41 0f 59 d6       	mulpd  %xmm14,%xmm2
+ 441ad55:	66 41 0f 59 de       	mulpd  %xmm14,%xmm3
+ 441ad5a:	0f 11 02             	movups %xmm0,(%rdx)
+ 441ad5d:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441ad61:	0f 11 52 20          	movups %xmm2,0x20(%rdx)
+ 441ad65:	0f 11 5a 30          	movups %xmm3,0x30(%rdx)
+ 441ad69:	48 83 c2 40          	add    $0x40,%rdx
+ 441ad6d:	48 ff c9             	dec    %rcx
+ 441ad70:	75 c5                	jne    441ad37 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0xd7>
+ 441ad72:	48 f7 44 24 38 04 00 	testq  $0x4,0x38(%rsp)
+ 441ad79:	00 00 
+ 441ad7b:	74 1c                	je     441ad99 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x139>
+ 441ad7d:	0f 10 02             	movups (%rdx),%xmm0
+ 441ad80:	0f 10 4a 10          	movups 0x10(%rdx),%xmm1
+ 441ad84:	66 41 0f 59 c6       	mulpd  %xmm14,%xmm0
+ 441ad89:	66 41 0f 59 ce       	mulpd  %xmm14,%xmm1
+ 441ad8e:	0f 11 02             	movups %xmm0,(%rdx)
+ 441ad91:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441ad95:	48 83 c2 20          	add    $0x20,%rdx
+ 441ad99:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441ada0:	00 00 
+ 441ada2:	74 0f                	je     441adb3 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x153>
+ 441ada4:	0f 10 02             	movups (%rdx),%xmm0
+ 441ada7:	66 41 0f 59 c6       	mulpd  %xmm14,%xmm0
+ 441adac:	0f 11 02             	movups %xmm0,(%rdx)
+ 441adaf:	48 83 c2 10          	add    $0x10,%rdx
+ 441adb3:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441adba:	00 00 
+ 441adbc:	74 70                	je     441ae2e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1ce>
+ 441adbe:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441adc2:	f2 41 0f 59 c6       	mulsd  %xmm14,%xmm0
+ 441adc7:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441adcb:	eb 61                	jmp    441ae2e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1ce>
+ 441adcd:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441add0:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441add3:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441add6:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441add9:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441addd:	74 18                	je     441adf7 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x197>
+ 441addf:	0f 11 02             	movups %xmm0,(%rdx)
+ 441ade2:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441ade6:	0f 11 52 20          	movups %xmm2,0x20(%rdx)
+ 441adea:	0f 11 5a 30          	movups %xmm3,0x30(%rdx)
+ 441adee:	48 83 c2 40          	add    $0x40,%rdx
+ 441adf2:	48 ff c9             	dec    %rcx
+ 441adf5:	75 e8                	jne    441addf <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x17f>
+ 441adf7:	48 f7 44 24 38 04 00 	testq  $0x4,0x38(%rsp)
+ 441adfe:	00 00 
+ 441ae00:	74 0b                	je     441ae0d <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1ad>
+ 441ae02:	0f 11 02             	movups %xmm0,(%rdx)
+ 441ae05:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441ae09:	48 83 c2 20          	add    $0x20,%rdx
+ 441ae0d:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441ae14:	00 00 
+ 441ae16:	74 07                	je     441ae1f <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1bf>
+ 441ae18:	0f 11 02             	movups %xmm0,(%rdx)
+ 441ae1b:	48 83 c2 10          	add    $0x10,%rdx
+ 441ae1f:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441ae26:	00 00 
+ 441ae28:	74 04                	je     441ae2e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1ce>
+ 441ae2a:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441ae2e:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441ae35:	00 
+ 441ae36:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441ae3b:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441ae3f:	0f 84 89 01 00 00    	je     441afce <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x36e>
+ 441ae45:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441ae4a:	f2 46 0f 12 0c 06    	movddup (%rsi,%r8,1),%xmm9
+ 441ae50:	f2 46 0f 12 14 46    	movddup (%rsi,%r8,2),%xmm10
+ 441ae56:	f2 46 0f 12 1c 0e    	movddup (%rsi,%r9,1),%xmm11
+ 441ae5c:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441ae61:	66 45 0f 59 cf       	mulpd  %xmm15,%xmm9
+ 441ae66:	66 45 0f 59 d7       	mulpd  %xmm15,%xmm10
+ 441ae6b:	66 45 0f 59 df       	mulpd  %xmm15,%xmm11
+ 441ae70:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441ae75:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441ae79:	0f 84 8f 00 00 00    	je     441af0e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x2ae>
+ 441ae7f:	0f 10 02             	movups (%rdx),%xmm0
+ 441ae82:	0f 10 4a 10          	movups 0x10(%rdx),%xmm1
+ 441ae86:	0f 10 27             	movups (%rdi),%xmm4
+ 441ae89:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441ae8d:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441ae92:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441ae98:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441ae9d:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441aea2:	66 41 0f 59 f1       	mulpd  %xmm9,%xmm6
+ 441aea7:	66 41 0f 59 f9       	mulpd  %xmm9,%xmm7
+ 441aeac:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441aeb0:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441aeb4:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441aeb8:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441aebc:	42 0f 10 24 67       	movups (%rdi,%r12,2),%xmm4
+ 441aec1:	42 0f 10 6c 67 10    	movups 0x10(%rdi,%r12,2),%xmm5
+ 441aec7:	42 0f 10 34 2f       	movups (%rdi,%r13,1),%xmm6
+ 441aecc:	42 0f 10 7c 2f 10    	movups 0x10(%rdi,%r13,1),%xmm7
+ 441aed2:	66 41 0f 59 e2       	mulpd  %xmm10,%xmm4
+ 441aed7:	66 41 0f 59 ea       	mulpd  %xmm10,%xmm5
+ 441aedc:	66 41 0f 59 f3       	mulpd  %xmm11,%xmm6
+ 441aee1:	66 41 0f 59 fb       	mulpd  %xmm11,%xmm7
+ 441aee6:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441aeea:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441aeee:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441aef2:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441aef6:	48 83 c7 20          	add    $0x20,%rdi
+ 441aefa:	0f 11 02             	movups %xmm0,(%rdx)
+ 441aefd:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441af01:	48 83 c2 20          	add    $0x20,%rdx
+ 441af05:	48 ff c9             	dec    %rcx
+ 441af08:	0f 85 71 ff ff ff    	jne    441ae7f <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x21f>
+ 441af0e:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441af15:	00 00 
+ 441af17:	74 44                	je     441af5d <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x2fd>
+ 441af19:	0f 10 02             	movups (%rdx),%xmm0
+ 441af1c:	0f 10 27             	movups (%rdi),%xmm4
+ 441af1f:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441af24:	42 0f 10 34 67       	movups (%rdi,%r12,2),%xmm6
+ 441af29:	42 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm7
+ 441af2e:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441af33:	66 41 0f 59 e9       	mulpd  %xmm9,%xmm5
+ 441af38:	66 41 0f 59 f2       	mulpd  %xmm10,%xmm6
+ 441af3d:	66 41 0f 59 fb       	mulpd  %xmm11,%xmm7
+ 441af42:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441af46:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441af4a:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441af4e:	66 0f 58 c7          	addpd  %xmm7,%xmm0
+ 441af52:	48 83 c7 10          	add    $0x10,%rdi
+ 441af56:	0f 11 02             	movups %xmm0,(%rdx)
+ 441af59:	48 83 c2 10          	add    $0x10,%rdx
+ 441af5d:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441af64:	00 00 
+ 441af66:	74 4a                	je     441afb2 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x352>
+ 441af68:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441af6c:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441af70:	f2 42 0f 10 2c 27    	movsd  (%rdi,%r12,1),%xmm5
+ 441af76:	f2 42 0f 10 34 67    	movsd  (%rdi,%r12,2),%xmm6
+ 441af7c:	f2 42 0f 10 3c 2f    	movsd  (%rdi,%r13,1),%xmm7
+ 441af82:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441af87:	f2 41 0f 59 e9       	mulsd  %xmm9,%xmm5
+ 441af8c:	f2 41 0f 59 f2       	mulsd  %xmm10,%xmm6
+ 441af91:	f2 41 0f 59 fb       	mulsd  %xmm11,%xmm7
+ 441af96:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441af9a:	f2 0f 58 c5          	addsd  %xmm5,%xmm0
+ 441af9e:	f2 0f 58 c6          	addsd  %xmm6,%xmm0
+ 441afa2:	f2 0f 58 c7          	addsd  %xmm7,%xmm0
+ 441afa6:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441afaa:	48 83 c7 08          	add    $0x8,%rdi
+ 441afae:	48 83 c2 08          	add    $0x8,%rdx
+ 441afb2:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441afb6:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441afbd:	00 
+ 441afbe:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441afc2:	48 89 c7             	mov    %rax,%rdi
+ 441afc5:	48 ff cb             	dec    %rbx
+ 441afc8:	0f 85 77 fe ff ff    	jne    441ae45 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x1e5>
+ 441afce:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441afd5:	00 00 
+ 441afd7:	0f 84 ee 00 00 00    	je     441b0cb <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x46b>
+ 441afdd:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441afe2:	f2 46 0f 12 0c 06    	movddup (%rsi,%r8,1),%xmm9
+ 441afe8:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441afed:	66 45 0f 59 cf       	mulpd  %xmm15,%xmm9
+ 441aff2:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441aff7:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441affb:	74 51                	je     441b04e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x3ee>
+ 441affd:	0f 10 02             	movups (%rdx),%xmm0
+ 441b000:	0f 10 4a 10          	movups 0x10(%rdx),%xmm1
+ 441b004:	0f 10 27             	movups (%rdi),%xmm4
+ 441b007:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441b00b:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441b010:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441b016:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b01b:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441b020:	66 41 0f 59 f1       	mulpd  %xmm9,%xmm6
+ 441b025:	66 41 0f 59 f9       	mulpd  %xmm9,%xmm7
+ 441b02a:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b02e:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b032:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441b036:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441b03a:	48 83 c7 20          	add    $0x20,%rdi
+ 441b03e:	0f 11 02             	movups %xmm0,(%rdx)
+ 441b041:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441b045:	48 83 c2 20          	add    $0x20,%rdx
+ 441b049:	48 ff c9             	dec    %rcx
+ 441b04c:	75 af                	jne    441affd <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x39d>
+ 441b04e:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b055:	00 00 
+ 441b057:	74 28                	je     441b081 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x421>
+ 441b059:	0f 10 02             	movups (%rdx),%xmm0
+ 441b05c:	0f 10 27             	movups (%rdi),%xmm4
+ 441b05f:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441b064:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b069:	66 41 0f 59 e9       	mulpd  %xmm9,%xmm5
+ 441b06e:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b072:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441b076:	48 83 c7 10          	add    $0x10,%rdi
+ 441b07a:	0f 11 02             	movups %xmm0,(%rdx)
+ 441b07d:	48 83 c2 10          	add    $0x10,%rdx
+ 441b081:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b088:	00 00 
+ 441b08a:	74 2c                	je     441b0b8 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x458>
+ 441b08c:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b090:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441b094:	f2 42 0f 10 2c 27    	movsd  (%rdi,%r12,1),%xmm5
+ 441b09a:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441b09f:	f2 41 0f 59 e9       	mulsd  %xmm9,%xmm5
+ 441b0a4:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441b0a8:	f2 0f 58 c5          	addsd  %xmm5,%xmm0
+ 441b0ac:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b0b0:	48 83 c7 08          	add    $0x8,%rdi
+ 441b0b4:	48 83 c2 08          	add    $0x8,%rdx
+ 441b0b8:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441b0bc:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441b0c3:	00 
+ 441b0c4:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441b0c8:	48 89 c7             	mov    %rax,%rdi
+ 441b0cb:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441b0d2:	00 00 
+ 441b0d4:	0f 84 92 00 00 00    	je     441b16c <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x50c>
+ 441b0da:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441b0df:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441b0e4:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441b0e9:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b0ed:	74 34                	je     441b123 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x4c3>
+ 441b0ef:	0f 10 02             	movups (%rdx),%xmm0
+ 441b0f2:	0f 10 4a 10          	movups 0x10(%rdx),%xmm1
+ 441b0f6:	0f 10 27             	movups (%rdi),%xmm4
+ 441b0f9:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441b0fd:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b102:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441b107:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b10b:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b10f:	48 83 c7 20          	add    $0x20,%rdi
+ 441b113:	0f 11 02             	movups %xmm0,(%rdx)
+ 441b116:	0f 11 4a 10          	movups %xmm1,0x10(%rdx)
+ 441b11a:	48 83 c2 20          	add    $0x20,%rdx
+ 441b11e:	48 ff c9             	dec    %rcx
+ 441b121:	75 cc                	jne    441b0ef <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x48f>
+ 441b123:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b12a:	00 00 
+ 441b12c:	74 1a                	je     441b148 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x4e8>
+ 441b12e:	0f 10 02             	movups (%rdx),%xmm0
+ 441b131:	0f 10 27             	movups (%rdi),%xmm4
+ 441b134:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b139:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b13d:	48 83 c7 10          	add    $0x10,%rdi
+ 441b141:	0f 11 02             	movups %xmm0,(%rdx)
+ 441b144:	48 83 c2 10          	add    $0x10,%rdx
+ 441b148:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b14f:	00 00 
+ 441b151:	74 19                	je     441b16c <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x50c>
+ 441b153:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b157:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441b15b:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441b160:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441b164:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b168:	48 83 c7 08          	add    $0x8,%rdi
+ 441b16c:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 441b171:	48 83 c4 28          	add    $0x28,%rsp
+ 441b175:	c3                   	ret
+ 441b176:	4d 31 ff             	xor    %r15,%r15
+ 441b179:	49 89 ce             	mov    %rcx,%r14
+ 441b17c:	49 83 ee 01          	sub    $0x1,%r14
+ 441b180:	4d 0f af f2          	imul   %r10,%r14
+ 441b184:	49 f7 de             	neg    %r14
+ 441b187:	49 83 fa 00          	cmp    $0x0,%r10
+ 441b18b:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441b18f:	4a 8d 14 fa          	lea    (%rdx,%r15,8),%rdx
+ 441b193:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+ 441b19a:	00 
+ 441b19b:	49 c1 e2 03          	shl    $0x3,%r10
+ 441b19f:	4f 8d 1c 52          	lea    (%r10,%r10,2),%r11
+ 441b1a3:	f2 0f 10 05 ed 32 0c 	movsd  0x10c32ed(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441b1aa:	01 
+ 441b1ab:	66 0f 2f 84 24 88 00 	comisd 0x88(%rsp),%xmm0
+ 441b1b2:	00 00 
+ 441b1b4:	0f 84 18 01 00 00    	je     441b2d2 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x672>
+ 441b1ba:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441b1bd:	66 0f 2f 84 24 88 00 	comisd 0x88(%rsp),%xmm0
+ 441b1c4:	00 00 
+ 441b1c6:	0f 84 a0 00 00 00    	je     441b26c <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x60c>
+ 441b1cc:	f2 44 0f 12 b4 24 88 	movddup 0x88(%rsp),%xmm14
+ 441b1d3:	00 00 00 
+ 441b1d6:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b1da:	74 49                	je     441b225 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x5c5>
+ 441b1dc:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b1e0:	f2 42 0f 10 0c 12    	movsd  (%rdx,%r10,1),%xmm1
+ 441b1e6:	f2 42 0f 10 14 52    	movsd  (%rdx,%r10,2),%xmm2
+ 441b1ec:	f2 42 0f 10 1c 1a    	movsd  (%rdx,%r11,1),%xmm3
+ 441b1f2:	f2 41 0f 59 c6       	mulsd  %xmm14,%xmm0
+ 441b1f7:	f2 41 0f 59 ce       	mulsd  %xmm14,%xmm1
+ 441b1fc:	f2 41 0f 59 d6       	mulsd  %xmm14,%xmm2
+ 441b201:	f2 41 0f 59 de       	mulsd  %xmm14,%xmm3
+ 441b206:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b20a:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441b210:	f2 42 0f 11 14 52    	movsd  %xmm2,(%rdx,%r10,2)
+ 441b216:	f2 42 0f 11 1c 1a    	movsd  %xmm3,(%rdx,%r11,1)
+ 441b21c:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441b220:	48 ff c9             	dec    %rcx
+ 441b223:	75 b7                	jne    441b1dc <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x57c>
+ 441b225:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b22c:	00 00 
+ 441b22e:	74 22                	je     441b252 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x5f2>
+ 441b230:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b234:	f2 42 0f 10 0c 12    	movsd  (%rdx,%r10,1),%xmm1
+ 441b23a:	f2 41 0f 59 c6       	mulsd  %xmm14,%xmm0
+ 441b23f:	f2 41 0f 59 ce       	mulsd  %xmm14,%xmm1
+ 441b244:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b248:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441b24e:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441b252:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b259:	00 00 
+ 441b25b:	74 68                	je     441b2c5 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x665>
+ 441b25d:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b261:	f2 41 0f 59 c6       	mulsd  %xmm14,%xmm0
+ 441b266:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b26a:	eb 59                	jmp    441b2c5 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x665>
+ 441b26c:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 441b26f:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 441b272:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441b275:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441b278:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b27c:	74 1f                	je     441b29d <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x63d>
+ 441b27e:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b282:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441b288:	f2 42 0f 11 14 52    	movsd  %xmm2,(%rdx,%r10,2)
+ 441b28e:	f2 42 0f 11 1c 1a    	movsd  %xmm3,(%rdx,%r11,1)
+ 441b294:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441b298:	48 ff c9             	dec    %rcx
+ 441b29b:	75 e1                	jne    441b27e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x61e>
+ 441b29d:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b2a4:	00 00 
+ 441b2a6:	74 0e                	je     441b2b6 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x656>
+ 441b2a8:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b2ac:	f2 42 0f 11 0c 12    	movsd  %xmm1,(%rdx,%r10,1)
+ 441b2b2:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441b2b6:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b2bd:	00 00 
+ 441b2bf:	74 04                	je     441b2c5 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x665>
+ 441b2c1:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b2c5:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441b2cc:	00 
+ 441b2cd:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441b2d2:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441b2d6:	0f 84 b4 01 00 00    	je     441b490 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x830>
+ 441b2dc:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441b2e1:	f2 46 0f 12 0c 06    	movddup (%rsi,%r8,1),%xmm9
+ 441b2e7:	f2 46 0f 12 14 46    	movddup (%rsi,%r8,2),%xmm10
+ 441b2ed:	f2 46 0f 12 1c 0e    	movddup (%rsi,%r9,1),%xmm11
+ 441b2f3:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441b2f8:	66 45 0f 59 cf       	mulpd  %xmm15,%xmm9
+ 441b2fd:	66 45 0f 59 d7       	mulpd  %xmm15,%xmm10
+ 441b302:	66 45 0f 59 df       	mulpd  %xmm15,%xmm11
+ 441b307:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441b30c:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b310:	0f 84 ad 00 00 00    	je     441b3c3 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x763>
+ 441b316:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b31a:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b320:	f2 42 0f 10 0c 52    	movsd  (%rdx,%r10,2),%xmm1
+ 441b326:	66 42 0f 16 0c 1a    	movhpd (%rdx,%r11,1),%xmm1
+ 441b32c:	0f 10 27             	movups (%rdi),%xmm4
+ 441b32f:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441b333:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441b338:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441b33e:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b343:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441b348:	66 41 0f 59 f1       	mulpd  %xmm9,%xmm6
+ 441b34d:	66 41 0f 59 f9       	mulpd  %xmm9,%xmm7
+ 441b352:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b356:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b35a:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441b35e:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441b362:	42 0f 10 24 67       	movups (%rdi,%r12,2),%xmm4
+ 441b367:	42 0f 10 6c 67 10    	movups 0x10(%rdi,%r12,2),%xmm5
+ 441b36d:	42 0f 10 34 2f       	movups (%rdi,%r13,1),%xmm6
+ 441b372:	42 0f 10 7c 2f 10    	movups 0x10(%rdi,%r13,1),%xmm7
+ 441b378:	66 41 0f 59 e2       	mulpd  %xmm10,%xmm4
+ 441b37d:	66 41 0f 59 ea       	mulpd  %xmm10,%xmm5
+ 441b382:	66 41 0f 59 f3       	mulpd  %xmm11,%xmm6
+ 441b387:	66 41 0f 59 fb       	mulpd  %xmm11,%xmm7
+ 441b38c:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b390:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b394:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441b398:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441b39c:	48 83 c7 20          	add    $0x20,%rdi
+ 441b3a0:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b3a4:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b3aa:	66 42 0f 13 0c 52    	movlpd %xmm1,(%rdx,%r10,2)
+ 441b3b0:	66 42 0f 17 0c 1a    	movhpd %xmm1,(%rdx,%r11,1)
+ 441b3b6:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441b3ba:	48 ff c9             	dec    %rcx
+ 441b3bd:	0f 85 53 ff ff ff    	jne    441b316 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x6b6>
+ 441b3c3:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b3ca:	00 00 
+ 441b3cc:	74 52                	je     441b420 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x7c0>
+ 441b3ce:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b3d2:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b3d8:	0f 10 27             	movups (%rdi),%xmm4
+ 441b3db:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441b3e0:	42 0f 10 34 67       	movups (%rdi,%r12,2),%xmm6
+ 441b3e5:	42 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm7
+ 441b3ea:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b3ef:	66 41 0f 59 e9       	mulpd  %xmm9,%xmm5
+ 441b3f4:	66 41 0f 59 f2       	mulpd  %xmm10,%xmm6
+ 441b3f9:	66 41 0f 59 fb       	mulpd  %xmm11,%xmm7
+ 441b3fe:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b402:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441b406:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441b40a:	66 0f 58 c7          	addpd  %xmm7,%xmm0
+ 441b40e:	48 83 c7 10          	add    $0x10,%rdi
+ 441b412:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b416:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b41c:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441b420:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b427:	00 00 
+ 441b429:	74 49                	je     441b474 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x814>
+ 441b42b:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b42f:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441b433:	f2 42 0f 10 2c 27    	movsd  (%rdi,%r12,1),%xmm5
+ 441b439:	f2 42 0f 10 34 67    	movsd  (%rdi,%r12,2),%xmm6
+ 441b43f:	f2 42 0f 10 3c 2f    	movsd  (%rdi,%r13,1),%xmm7
+ 441b445:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441b44a:	f2 41 0f 59 e9       	mulsd  %xmm9,%xmm5
+ 441b44f:	f2 41 0f 59 f2       	mulsd  %xmm10,%xmm6
+ 441b454:	f2 41 0f 59 fb       	mulsd  %xmm11,%xmm7
+ 441b459:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441b45d:	f2 0f 58 c5          	addsd  %xmm5,%xmm0
+ 441b461:	f2 0f 58 c6          	addsd  %xmm6,%xmm0
+ 441b465:	f2 0f 58 c7          	addsd  %xmm7,%xmm0
+ 441b469:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b46d:	48 83 c7 08          	add    $0x8,%rdi
+ 441b471:	4c 01 d2             	add    %r10,%rdx
+ 441b474:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441b478:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441b47f:	00 
+ 441b480:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441b484:	48 89 c7             	mov    %rax,%rdi
+ 441b487:	48 ff cb             	dec    %rbx
+ 441b48a:	0f 85 4c fe ff ff    	jne    441b2dc <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x67c>
+ 441b490:	48 f7 44 24 30 02 00 	testq  $0x2,0x30(%rsp)
+ 441b497:	00 00 
+ 441b499:	0f 84 19 01 00 00    	je     441b5b8 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x958>
+ 441b49f:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441b4a4:	f2 46 0f 12 0c 06    	movddup (%rsi,%r8,1),%xmm9
+ 441b4aa:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441b4af:	66 45 0f 59 cf       	mulpd  %xmm15,%xmm9
+ 441b4b4:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441b4b9:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b4bd:	74 6f                	je     441b52e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x8ce>
+ 441b4bf:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b4c3:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b4c9:	f2 42 0f 10 0c 52    	movsd  (%rdx,%r10,2),%xmm1
+ 441b4cf:	66 42 0f 16 0c 1a    	movhpd (%rdx,%r11,1),%xmm1
+ 441b4d5:	0f 10 27             	movups (%rdi),%xmm4
+ 441b4d8:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441b4dc:	42 0f 10 34 27       	movups (%rdi,%r12,1),%xmm6
+ 441b4e1:	42 0f 10 7c 27 10    	movups 0x10(%rdi,%r12,1),%xmm7
+ 441b4e7:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b4ec:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441b4f1:	66 41 0f 59 f1       	mulpd  %xmm9,%xmm6
+ 441b4f6:	66 41 0f 59 f9       	mulpd  %xmm9,%xmm7
+ 441b4fb:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b4ff:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b503:	66 0f 58 c6          	addpd  %xmm6,%xmm0
+ 441b507:	66 0f 58 cf          	addpd  %xmm7,%xmm1
+ 441b50b:	48 83 c7 20          	add    $0x20,%rdi
+ 441b50f:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b513:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b519:	66 42 0f 13 0c 52    	movlpd %xmm1,(%rdx,%r10,2)
+ 441b51f:	66 42 0f 17 0c 1a    	movhpd %xmm1,(%rdx,%r11,1)
+ 441b525:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441b529:	48 ff c9             	dec    %rcx
+ 441b52c:	75 91                	jne    441b4bf <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x85f>
+ 441b52e:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b535:	00 00 
+ 441b537:	74 36                	je     441b56f <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x90f>
+ 441b539:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b53d:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b543:	0f 10 27             	movups (%rdi),%xmm4
+ 441b546:	42 0f 10 2c 27       	movups (%rdi,%r12,1),%xmm5
+ 441b54b:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b550:	66 41 0f 59 e9       	mulpd  %xmm9,%xmm5
+ 441b555:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b559:	66 0f 58 c5          	addpd  %xmm5,%xmm0
+ 441b55d:	48 83 c7 10          	add    $0x10,%rdi
+ 441b561:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b565:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b56b:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441b56f:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b576:	00 00 
+ 441b578:	74 2b                	je     441b5a5 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x945>
+ 441b57a:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b57e:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441b582:	f2 42 0f 10 2c 27    	movsd  (%rdi,%r12,1),%xmm5
+ 441b588:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441b58d:	f2 41 0f 59 e9       	mulsd  %xmm9,%xmm5
+ 441b592:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441b596:	f2 0f 58 c5          	addsd  %xmm5,%xmm0
+ 441b59a:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b59e:	48 83 c7 08          	add    $0x8,%rdi
+ 441b5a2:	4c 01 d2             	add    %r10,%rdx
+ 441b5a5:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441b5a9:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 441b5b0:	00 
+ 441b5b1:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441b5b5:	48 89 c7             	mov    %rax,%rdi
+ 441b5b8:	48 f7 44 24 30 01 00 	testq  $0x1,0x30(%rsp)
+ 441b5bf:	00 00 
+ 441b5c1:	0f 84 be 00 00 00    	je     441b685 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0xa25>
+ 441b5c7:	f2 44 0f 12 06       	movddup (%rsi),%xmm8
+ 441b5cc:	66 45 0f 59 c7       	mulpd  %xmm15,%xmm8
+ 441b5d1:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 441b5d6:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b5da:	74 52                	je     441b62e <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x9ce>
+ 441b5dc:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b5e0:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b5e6:	f2 42 0f 10 0c 52    	movsd  (%rdx,%r10,2),%xmm1
+ 441b5ec:	66 42 0f 16 0c 1a    	movhpd (%rdx,%r11,1),%xmm1
+ 441b5f2:	0f 10 27             	movups (%rdi),%xmm4
+ 441b5f5:	0f 10 6f 10          	movups 0x10(%rdi),%xmm5
+ 441b5f9:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b5fe:	66 41 0f 59 e8       	mulpd  %xmm8,%xmm5
+ 441b603:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b607:	66 0f 58 cd          	addpd  %xmm5,%xmm1
+ 441b60b:	48 83 c7 20          	add    $0x20,%rdi
+ 441b60f:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b613:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b619:	66 42 0f 13 0c 52    	movlpd %xmm1,(%rdx,%r10,2)
+ 441b61f:	66 42 0f 17 0c 1a    	movhpd %xmm1,(%rdx,%r11,1)
+ 441b625:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441b629:	48 ff c9             	dec    %rcx
+ 441b62c:	75 ae                	jne    441b5dc <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0x97c>
+ 441b62e:	48 f7 44 24 38 02 00 	testq  $0x2,0x38(%rsp)
+ 441b635:	00 00 
+ 441b637:	74 28                	je     441b661 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0xa01>
+ 441b639:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b63d:	66 42 0f 16 04 12    	movhpd (%rdx,%r10,1),%xmm0
+ 441b643:	0f 10 27             	movups (%rdi),%xmm4
+ 441b646:	66 41 0f 59 e0       	mulpd  %xmm8,%xmm4
+ 441b64b:	66 0f 58 c4          	addpd  %xmm4,%xmm0
+ 441b64f:	48 83 c7 10          	add    $0x10,%rdi
+ 441b653:	66 0f 13 02          	movlpd %xmm0,(%rdx)
+ 441b657:	66 42 0f 17 04 12    	movhpd %xmm0,(%rdx,%r10,1)
+ 441b65d:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441b661:	48 f7 44 24 38 01 00 	testq  $0x1,0x38(%rsp)
+ 441b668:	00 00 
+ 441b66a:	74 19                	je     441b685 <gonum.org/v1/gonum/internal/asm/f64.GemvT.abi0@@Base+0xa25>
+ 441b66c:	f2 0f 10 02          	movsd  (%rdx),%xmm0
+ 441b670:	f2 0f 10 27          	movsd  (%rdi),%xmm4
+ 441b674:	f2 41 0f 59 e0       	mulsd  %xmm8,%xmm4
+ 441b679:	f2 0f 58 c4          	addsd  %xmm4,%xmm0
+ 441b67d:	f2 0f 11 02          	movsd  %xmm0,(%rdx)
+ 441b681:	48 83 c7 08          	add    $0x8,%rdi
+ 441b685:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 441b68a:	48 83 c4 28          	add    $0x28,%rsp
+ 441b68e:	c3                   	ret
+ 441b68f:	cc                   	int3
+ 441b690:	cc                   	int3
+ 441b691:	cc                   	int3
+ 441b692:	cc                   	int3
+ 441b693:	cc                   	int3
+ 441b694:	cc                   	int3
+ 441b695:	cc                   	int3
+ 441b696:	cc                   	int3
+ 441b697:	cc                   	int3
+ 441b698:	cc                   	int3
+ 441b699:	cc                   	int3
+ 441b69a:	cc                   	int3
+ 441b69b:	cc                   	int3
+ 441b69c:	cc                   	int3
+ 441b69d:	cc                   	int3
+ 441b69e:	cc                   	int3
+ 441b69f:	cc                   	int3
+
+000000000441b6a0 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base>:
+ 441b6a0:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+ 441b6a5:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441b6aa:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441b6ae:	0f 84 17 04 00 00    	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441b6b4:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441b6b8:	0f 84 0d 04 00 00    	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441b6be:	f2 0f 12 44 24 18    	movddup 0x18(%rsp),%xmm0
+ 441b6c4:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 441b6c9:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441b6ce:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 441b6d3:	4c 8b 44 24 38       	mov    0x38(%rsp),%r8
+ 441b6d8:	49 c1 e0 03          	shl    $0x3,%r8
+ 441b6dc:	4c 8b 64 24 78       	mov    0x78(%rsp),%r12
+ 441b6e1:	49 c1 e4 03          	shl    $0x3,%r12
+ 441b6e5:	4f 8d 2c 64          	lea    (%r12,%r12,2),%r13
+ 441b6e9:	4f 8d 0c 40          	lea    (%r8,%r8,2),%r9
+ 441b6ed:	48 89 c7             	mov    %rax,%rdi
+ 441b6f0:	4d 31 ff             	xor    %r15,%r15
+ 441b6f3:	49 89 ce             	mov    %rcx,%r14
+ 441b6f6:	49 83 ee 01          	sub    $0x1,%r14
+ 441b6fa:	4d 0f af f0          	imul   %r8,%r14
+ 441b6fe:	49 f7 de             	neg    %r14
+ 441b701:	49 83 f8 00          	cmp    $0x0,%r8
+ 441b705:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441b709:	4a 8d 34 fe          	lea    (%rsi,%r15,8),%rsi
+ 441b70d:	48 83 7c 24 58 01    	cmpq   $0x1,0x58(%rsp)
+ 441b713:	0f 8f b3 03 00 00    	jg     441bacc <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42c>
+ 441b719:	0f 8c ac 03 00 00    	jl     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441b71f:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441b723:	0f 84 f2 01 00 00    	je     441b91b <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x27b>
+ 441b729:	42 0f 18 04 c6       	prefetchnta (%rsi,%r8,8)
+ 441b72e:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441b732:	f2 42 0f 12 14 06    	movddup (%rsi,%r8,1),%xmm2
+ 441b738:	f2 42 0f 12 1c 46    	movddup (%rsi,%r8,2),%xmm3
+ 441b73e:	f2 42 0f 12 24 0e    	movddup (%rsi,%r9,1),%xmm4
+ 441b744:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441b748:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441b74c:	66 0f 59 d8          	mulpd  %xmm0,%xmm3
+ 441b750:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441b754:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441b759:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441b75d:	0f 84 d4 00 00 00    	je     441b837 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x197>
+ 441b763:	0f 10 2a             	movups (%rdx),%xmm5
+ 441b766:	0f 10 72 10          	movups 0x10(%rdx),%xmm6
+ 441b76a:	0f 10 fd             	movups %xmm5,%xmm7
+ 441b76d:	44 0f 10 c6          	movups %xmm6,%xmm8
+ 441b771:	44 0f 10 cd          	movups %xmm5,%xmm9
+ 441b775:	44 0f 10 d6          	movups %xmm6,%xmm10
+ 441b779:	44 0f 10 dd          	movups %xmm5,%xmm11
+ 441b77d:	44 0f 10 e6          	movups %xmm6,%xmm12
+ 441b781:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441b785:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441b789:	66 0f 59 fa          	mulpd  %xmm2,%xmm7
+ 441b78d:	66 44 0f 59 c2       	mulpd  %xmm2,%xmm8
+ 441b792:	66 44 0f 59 cb       	mulpd  %xmm3,%xmm9
+ 441b797:	66 44 0f 59 d3       	mulpd  %xmm3,%xmm10
+ 441b79c:	66 44 0f 59 dc       	mulpd  %xmm4,%xmm11
+ 441b7a1:	66 44 0f 59 e4       	mulpd  %xmm4,%xmm12
+ 441b7a6:	44 0f 10 2f          	movups (%rdi),%xmm13
+ 441b7aa:	66 41 0f 58 ed       	addpd  %xmm13,%xmm5
+ 441b7af:	44 0f 10 77 10       	movups 0x10(%rdi),%xmm14
+ 441b7b4:	66 41 0f 58 f6       	addpd  %xmm14,%xmm6
+ 441b7b9:	46 0f 10 3c 27       	movups (%rdi,%r12,1),%xmm15
+ 441b7be:	66 41 0f 58 ff       	addpd  %xmm15,%xmm7
+ 441b7c3:	42 0f 10 44 27 10    	movups 0x10(%rdi,%r12,1),%xmm0
+ 441b7c9:	66 44 0f 58 c0       	addpd  %xmm0,%xmm8
+ 441b7ce:	46 0f 10 2c 67       	movups (%rdi,%r12,2),%xmm13
+ 441b7d3:	66 45 0f 58 cd       	addpd  %xmm13,%xmm9
+ 441b7d8:	46 0f 10 74 67 10    	movups 0x10(%rdi,%r12,2),%xmm14
+ 441b7de:	66 45 0f 58 d6       	addpd  %xmm14,%xmm10
+ 441b7e3:	46 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm15
+ 441b7e8:	66 45 0f 58 df       	addpd  %xmm15,%xmm11
+ 441b7ed:	42 0f 10 44 2f 10    	movups 0x10(%rdi,%r13,1),%xmm0
+ 441b7f3:	66 44 0f 58 e0       	addpd  %xmm0,%xmm12
+ 441b7f8:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441b7fb:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441b7ff:	42 0f 11 3c 27       	movups %xmm7,(%rdi,%r12,1)
+ 441b804:	46 0f 11 44 27 10    	movups %xmm8,0x10(%rdi,%r12,1)
+ 441b80a:	46 0f 11 0c 67       	movups %xmm9,(%rdi,%r12,2)
+ 441b80f:	46 0f 11 54 67 10    	movups %xmm10,0x10(%rdi,%r12,2)
+ 441b815:	46 0f 11 1c 2f       	movups %xmm11,(%rdi,%r13,1)
+ 441b81a:	46 0f 11 64 2f 10    	movups %xmm12,0x10(%rdi,%r13,1)
+ 441b820:	48 83 c7 20          	add    $0x20,%rdi
+ 441b824:	48 83 c2 20          	add    $0x20,%rdx
+ 441b828:	48 ff cb             	dec    %rbx
+ 441b82b:	0f 85 32 ff ff ff    	jne    441b763 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0xc3>
+ 441b831:	f2 0f 12 44 24 18    	movddup 0x18(%rsp),%xmm0
+ 441b837:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441b83e:	00 00 
+ 441b840:	74 5f                	je     441b8a1 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x201>
+ 441b842:	0f 10 2a             	movups (%rdx),%xmm5
+ 441b845:	0f 10 f5             	movups %xmm5,%xmm6
+ 441b848:	0f 10 fd             	movups %xmm5,%xmm7
+ 441b84b:	44 0f 10 c5          	movups %xmm5,%xmm8
+ 441b84f:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441b853:	66 0f 59 f2          	mulpd  %xmm2,%xmm6
+ 441b857:	66 0f 59 fb          	mulpd  %xmm3,%xmm7
+ 441b85b:	66 44 0f 59 c4       	mulpd  %xmm4,%xmm8
+ 441b860:	44 0f 10 0f          	movups (%rdi),%xmm9
+ 441b864:	66 41 0f 58 e9       	addpd  %xmm9,%xmm5
+ 441b869:	46 0f 10 14 27       	movups (%rdi,%r12,1),%xmm10
+ 441b86e:	66 41 0f 58 f2       	addpd  %xmm10,%xmm6
+ 441b873:	46 0f 10 1c 67       	movups (%rdi,%r12,2),%xmm11
+ 441b878:	66 41 0f 58 fb       	addpd  %xmm11,%xmm7
+ 441b87d:	46 0f 10 24 2f       	movups (%rdi,%r13,1),%xmm12
+ 441b882:	66 45 0f 58 c4       	addpd  %xmm12,%xmm8
+ 441b887:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441b88a:	42 0f 11 34 27       	movups %xmm6,(%rdi,%r12,1)
+ 441b88f:	42 0f 11 3c 67       	movups %xmm7,(%rdi,%r12,2)
+ 441b894:	46 0f 11 04 2f       	movups %xmm8,(%rdi,%r13,1)
+ 441b899:	48 83 c7 10          	add    $0x10,%rdi
+ 441b89d:	48 83 c2 10          	add    $0x10,%rdx
+ 441b8a1:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441b8a8:	00 00 
+ 441b8aa:	74 56                	je     441b902 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x262>
+ 441b8ac:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441b8b0:	f2 0f 10 f5          	movsd  %xmm5,%xmm6
+ 441b8b4:	f2 0f 10 fd          	movsd  %xmm5,%xmm7
+ 441b8b8:	f2 44 0f 10 c5       	movsd  %xmm5,%xmm8
+ 441b8bd:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441b8c1:	f2 0f 59 f2          	mulsd  %xmm2,%xmm6
+ 441b8c5:	f2 0f 59 fb          	mulsd  %xmm3,%xmm7
+ 441b8c9:	f2 44 0f 59 c4       	mulsd  %xmm4,%xmm8
+ 441b8ce:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441b8d2:	f2 42 0f 58 34 27    	addsd  (%rdi,%r12,1),%xmm6
+ 441b8d8:	f2 42 0f 58 3c 67    	addsd  (%rdi,%r12,2),%xmm7
+ 441b8de:	f2 46 0f 58 04 2f    	addsd  (%rdi,%r13,1),%xmm8
+ 441b8e4:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441b8e8:	f2 42 0f 11 34 27    	movsd  %xmm6,(%rdi,%r12,1)
+ 441b8ee:	f2 42 0f 11 3c 67    	movsd  %xmm7,(%rdi,%r12,2)
+ 441b8f4:	f2 46 0f 11 04 2f    	movsd  %xmm8,(%rdi,%r13,1)
+ 441b8fa:	48 83 c7 08          	add    $0x8,%rdi
+ 441b8fe:	48 83 c2 08          	add    $0x8,%rdx
+ 441b902:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441b906:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441b90b:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441b90f:	48 89 c7             	mov    %rax,%rdi
+ 441b912:	48 ff c9             	dec    %rcx
+ 441b915:	0f 85 0e fe ff ff    	jne    441b729 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x89>
+ 441b91b:	48 f7 44 24 08 02 00 	testq  $0x2,0x8(%rsp)
+ 441b922:	00 00 
+ 441b924:	0f 84 04 01 00 00    	je     441ba2e <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x38e>
+ 441b92a:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441b92e:	f2 42 0f 12 14 06    	movddup (%rsi,%r8,1),%xmm2
+ 441b934:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441b938:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441b93c:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441b941:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441b945:	74 66                	je     441b9ad <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x30d>
+ 441b947:	0f 10 2a             	movups (%rdx),%xmm5
+ 441b94a:	0f 10 72 10          	movups 0x10(%rdx),%xmm6
+ 441b94e:	0f 10 fd             	movups %xmm5,%xmm7
+ 441b951:	44 0f 10 c6          	movups %xmm6,%xmm8
+ 441b955:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441b959:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441b95d:	66 0f 59 fa          	mulpd  %xmm2,%xmm7
+ 441b961:	66 44 0f 59 c2       	mulpd  %xmm2,%xmm8
+ 441b966:	44 0f 10 0f          	movups (%rdi),%xmm9
+ 441b96a:	66 41 0f 58 e9       	addpd  %xmm9,%xmm5
+ 441b96f:	44 0f 10 57 10       	movups 0x10(%rdi),%xmm10
+ 441b974:	66 41 0f 58 f2       	addpd  %xmm10,%xmm6
+ 441b979:	46 0f 10 1c 27       	movups (%rdi,%r12,1),%xmm11
+ 441b97e:	66 41 0f 58 fb       	addpd  %xmm11,%xmm7
+ 441b983:	46 0f 10 64 27 10    	movups 0x10(%rdi,%r12,1),%xmm12
+ 441b989:	66 45 0f 58 c4       	addpd  %xmm12,%xmm8
+ 441b98e:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441b991:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441b995:	42 0f 11 3c 27       	movups %xmm7,(%rdi,%r12,1)
+ 441b99a:	46 0f 11 44 27 10    	movups %xmm8,0x10(%rdi,%r12,1)
+ 441b9a0:	48 83 c7 20          	add    $0x20,%rdi
+ 441b9a4:	48 83 c2 20          	add    $0x20,%rdx
+ 441b9a8:	48 ff cb             	dec    %rbx
+ 441b9ab:	75 9a                	jne    441b947 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x2a7>
+ 441b9ad:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441b9b4:	00 00 
+ 441b9b6:	74 2f                	je     441b9e7 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x347>
+ 441b9b8:	0f 10 2a             	movups (%rdx),%xmm5
+ 441b9bb:	0f 10 f5             	movups %xmm5,%xmm6
+ 441b9be:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441b9c2:	66 0f 59 f2          	mulpd  %xmm2,%xmm6
+ 441b9c6:	0f 10 3f             	movups (%rdi),%xmm7
+ 441b9c9:	66 0f 58 ef          	addpd  %xmm7,%xmm5
+ 441b9cd:	46 0f 10 04 27       	movups (%rdi,%r12,1),%xmm8
+ 441b9d2:	66 41 0f 58 f0       	addpd  %xmm8,%xmm6
+ 441b9d7:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441b9da:	42 0f 11 34 27       	movups %xmm6,(%rdi,%r12,1)
+ 441b9df:	48 83 c7 10          	add    $0x10,%rdi
+ 441b9e3:	48 83 c2 10          	add    $0x10,%rdx
+ 441b9e7:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441b9ee:	00 00 
+ 441b9f0:	74 2c                	je     441ba1e <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x37e>
+ 441b9f2:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441b9f6:	f2 0f 10 f5          	movsd  %xmm5,%xmm6
+ 441b9fa:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441b9fe:	f2 0f 59 f2          	mulsd  %xmm2,%xmm6
+ 441ba02:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441ba06:	f2 42 0f 58 34 27    	addsd  (%rdi,%r12,1),%xmm6
+ 441ba0c:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441ba10:	f2 42 0f 11 34 27    	movsd  %xmm6,(%rdi,%r12,1)
+ 441ba16:	48 83 c7 08          	add    $0x8,%rdi
+ 441ba1a:	48 83 c2 08          	add    $0x8,%rdx
+ 441ba1e:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441ba22:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441ba27:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441ba2b:	48 89 c7             	mov    %rax,%rdi
+ 441ba2e:	48 f7 44 24 08 01 00 	testq  $0x1,0x8(%rsp)
+ 441ba35:	00 00 
+ 441ba37:	0f 84 8e 00 00 00    	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441ba3d:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441ba41:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441ba45:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441ba4a:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441ba4e:	74 34                	je     441ba84 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x3e4>
+ 441ba50:	0f 10 2a             	movups (%rdx),%xmm5
+ 441ba53:	0f 10 72 10          	movups 0x10(%rdx),%xmm6
+ 441ba57:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441ba5b:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441ba5f:	0f 10 3f             	movups (%rdi),%xmm7
+ 441ba62:	66 0f 58 ef          	addpd  %xmm7,%xmm5
+ 441ba66:	44 0f 10 47 10       	movups 0x10(%rdi),%xmm8
+ 441ba6b:	66 41 0f 58 f0       	addpd  %xmm8,%xmm6
+ 441ba70:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441ba73:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441ba77:	48 83 c7 20          	add    $0x20,%rdi
+ 441ba7b:	48 83 c2 20          	add    $0x20,%rdx
+ 441ba7f:	48 ff cb             	dec    %rbx
+ 441ba82:	75 cc                	jne    441ba50 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x3b0>
+ 441ba84:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441ba8b:	00 00 
+ 441ba8d:	74 19                	je     441baa8 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x408>
+ 441ba8f:	0f 10 2a             	movups (%rdx),%xmm5
+ 441ba92:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441ba96:	0f 10 37             	movups (%rdi),%xmm6
+ 441ba99:	66 0f 58 ee          	addpd  %xmm6,%xmm5
+ 441ba9d:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441baa0:	48 83 c7 10          	add    $0x10,%rdi
+ 441baa4:	48 83 c2 10          	add    $0x10,%rdx
+ 441baa8:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441baaf:	00 00 
+ 441bab1:	74 18                	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441bab3:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441bab7:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441babb:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441babf:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441bac3:	48 83 c7 08          	add    $0x8,%rdi
+ 441bac7:	48 83 c2 08          	add    $0x8,%rdx
+ 441bacb:	c3                   	ret
+ 441bacc:	4c 8b 54 24 58       	mov    0x58(%rsp),%r10
+ 441bad1:	49 c1 e2 03          	shl    $0x3,%r10
+ 441bad5:	4f 8d 1c 52          	lea    (%r10,%r10,2),%r11
+ 441bad9:	4d 31 ff             	xor    %r15,%r15
+ 441badc:	49 89 de             	mov    %rbx,%r14
+ 441badf:	49 83 ee 01          	sub    $0x1,%r14
+ 441bae3:	4d 0f af f2          	imul   %r10,%r14
+ 441bae7:	49 f7 de             	neg    %r14
+ 441baea:	49 83 fa 00          	cmp    $0x0,%r10
+ 441baee:	4d 0f 4c fe          	cmovl  %r14,%r15
+ 441baf2:	4a 8d 14 fa          	lea    (%rdx,%r15,8),%rdx
+ 441baf6:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441bafa:	0f 84 07 02 00 00    	je     441bd07 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x667>
+ 441bb00:	42 0f 18 04 c6       	prefetchnta (%rsi,%r8,8)
+ 441bb05:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441bb09:	f2 42 0f 12 14 06    	movddup (%rsi,%r8,1),%xmm2
+ 441bb0f:	f2 42 0f 12 1c 46    	movddup (%rsi,%r8,2),%xmm3
+ 441bb15:	f2 42 0f 12 24 0e    	movddup (%rsi,%r9,1),%xmm4
+ 441bb1b:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441bb1f:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441bb23:	66 0f 59 d8          	mulpd  %xmm0,%xmm3
+ 441bb27:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441bb2b:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441bb30:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441bb34:	0f 84 e3 00 00 00    	je     441bc1d <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x57d>
+ 441bb3a:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441bb3e:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441bb44:	66 42 0f 12 34 52    	movlpd (%rdx,%r10,2),%xmm6
+ 441bb4a:	66 42 0f 16 34 1a    	movhpd (%rdx,%r11,1),%xmm6
+ 441bb50:	0f 10 fd             	movups %xmm5,%xmm7
+ 441bb53:	44 0f 10 c6          	movups %xmm6,%xmm8
+ 441bb57:	44 0f 10 cd          	movups %xmm5,%xmm9
+ 441bb5b:	44 0f 10 d6          	movups %xmm6,%xmm10
+ 441bb5f:	44 0f 10 dd          	movups %xmm5,%xmm11
+ 441bb63:	44 0f 10 e6          	movups %xmm6,%xmm12
+ 441bb67:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441bb6b:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441bb6f:	66 0f 59 fa          	mulpd  %xmm2,%xmm7
+ 441bb73:	66 44 0f 59 c2       	mulpd  %xmm2,%xmm8
+ 441bb78:	66 44 0f 59 cb       	mulpd  %xmm3,%xmm9
+ 441bb7d:	66 44 0f 59 d3       	mulpd  %xmm3,%xmm10
+ 441bb82:	66 44 0f 59 dc       	mulpd  %xmm4,%xmm11
+ 441bb87:	66 44 0f 59 e4       	mulpd  %xmm4,%xmm12
+ 441bb8c:	44 0f 10 2f          	movups (%rdi),%xmm13
+ 441bb90:	66 41 0f 58 ed       	addpd  %xmm13,%xmm5
+ 441bb95:	44 0f 10 77 10       	movups 0x10(%rdi),%xmm14
+ 441bb9a:	66 41 0f 58 f6       	addpd  %xmm14,%xmm6
+ 441bb9f:	46 0f 10 3c 27       	movups (%rdi,%r12,1),%xmm15
+ 441bba4:	66 41 0f 58 ff       	addpd  %xmm15,%xmm7
+ 441bba9:	42 0f 10 44 27 10    	movups 0x10(%rdi,%r12,1),%xmm0
+ 441bbaf:	66 44 0f 58 c0       	addpd  %xmm0,%xmm8
+ 441bbb4:	46 0f 10 2c 67       	movups (%rdi,%r12,2),%xmm13
+ 441bbb9:	66 45 0f 58 cd       	addpd  %xmm13,%xmm9
+ 441bbbe:	46 0f 10 74 67 10    	movups 0x10(%rdi,%r12,2),%xmm14
+ 441bbc4:	66 45 0f 58 d6       	addpd  %xmm14,%xmm10
+ 441bbc9:	46 0f 10 3c 2f       	movups (%rdi,%r13,1),%xmm15
+ 441bbce:	66 45 0f 58 df       	addpd  %xmm15,%xmm11
+ 441bbd3:	42 0f 10 44 2f 10    	movups 0x10(%rdi,%r13,1),%xmm0
+ 441bbd9:	66 44 0f 58 e0       	addpd  %xmm0,%xmm12
+ 441bbde:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441bbe1:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441bbe5:	42 0f 11 3c 27       	movups %xmm7,(%rdi,%r12,1)
+ 441bbea:	46 0f 11 44 27 10    	movups %xmm8,0x10(%rdi,%r12,1)
+ 441bbf0:	46 0f 11 0c 67       	movups %xmm9,(%rdi,%r12,2)
+ 441bbf5:	46 0f 11 54 67 10    	movups %xmm10,0x10(%rdi,%r12,2)
+ 441bbfb:	46 0f 11 1c 2f       	movups %xmm11,(%rdi,%r13,1)
+ 441bc00:	46 0f 11 64 2f 10    	movups %xmm12,0x10(%rdi,%r13,1)
+ 441bc06:	48 83 c7 20          	add    $0x20,%rdi
+ 441bc0a:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441bc0e:	48 ff cb             	dec    %rbx
+ 441bc11:	0f 85 23 ff ff ff    	jne    441bb3a <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x49a>
+ 441bc17:	f2 0f 12 44 24 18    	movddup 0x18(%rsp),%xmm0
+ 441bc1d:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441bc24:	00 00 
+ 441bc26:	74 66                	je     441bc8e <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x5ee>
+ 441bc28:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441bc2c:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441bc32:	0f 10 f5             	movups %xmm5,%xmm6
+ 441bc35:	0f 10 fd             	movups %xmm5,%xmm7
+ 441bc38:	44 0f 10 c5          	movups %xmm5,%xmm8
+ 441bc3c:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441bc40:	66 0f 59 f2          	mulpd  %xmm2,%xmm6
+ 441bc44:	66 0f 59 fb          	mulpd  %xmm3,%xmm7
+ 441bc48:	66 44 0f 59 c4       	mulpd  %xmm4,%xmm8
+ 441bc4d:	44 0f 10 0f          	movups (%rdi),%xmm9
+ 441bc51:	66 41 0f 58 e9       	addpd  %xmm9,%xmm5
+ 441bc56:	46 0f 10 14 27       	movups (%rdi,%r12,1),%xmm10
+ 441bc5b:	66 41 0f 58 f2       	addpd  %xmm10,%xmm6
+ 441bc60:	46 0f 10 1c 67       	movups (%rdi,%r12,2),%xmm11
+ 441bc65:	66 41 0f 58 fb       	addpd  %xmm11,%xmm7
+ 441bc6a:	46 0f 10 24 2f       	movups (%rdi,%r13,1),%xmm12
+ 441bc6f:	66 45 0f 58 c4       	addpd  %xmm12,%xmm8
+ 441bc74:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441bc77:	42 0f 11 34 27       	movups %xmm6,(%rdi,%r12,1)
+ 441bc7c:	42 0f 11 3c 67       	movups %xmm7,(%rdi,%r12,2)
+ 441bc81:	46 0f 11 04 2f       	movups %xmm8,(%rdi,%r13,1)
+ 441bc86:	48 83 c7 10          	add    $0x10,%rdi
+ 441bc8a:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441bc8e:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441bc95:	00 00 
+ 441bc97:	74 55                	je     441bcee <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x64e>
+ 441bc99:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441bc9d:	f2 0f 10 f5          	movsd  %xmm5,%xmm6
+ 441bca1:	f2 0f 10 fd          	movsd  %xmm5,%xmm7
+ 441bca5:	f2 44 0f 10 c5       	movsd  %xmm5,%xmm8
+ 441bcaa:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441bcae:	f2 0f 59 f2          	mulsd  %xmm2,%xmm6
+ 441bcb2:	f2 0f 59 fb          	mulsd  %xmm3,%xmm7
+ 441bcb6:	f2 44 0f 59 c4       	mulsd  %xmm4,%xmm8
+ 441bcbb:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441bcbf:	f2 42 0f 58 34 27    	addsd  (%rdi,%r12,1),%xmm6
+ 441bcc5:	f2 42 0f 58 3c 67    	addsd  (%rdi,%r12,2),%xmm7
+ 441bccb:	f2 46 0f 58 04 2f    	addsd  (%rdi,%r13,1),%xmm8
+ 441bcd1:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441bcd5:	f2 42 0f 11 34 27    	movsd  %xmm6,(%rdi,%r12,1)
+ 441bcdb:	f2 42 0f 11 3c 67    	movsd  %xmm7,(%rdi,%r12,2)
+ 441bce1:	f2 46 0f 11 04 2f    	movsd  %xmm8,(%rdi,%r13,1)
+ 441bce7:	48 83 c7 08          	add    $0x8,%rdi
+ 441bceb:	4c 01 d2             	add    %r10,%rdx
+ 441bcee:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441bcf2:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441bcf7:	4a 8d 04 a0          	lea    (%rax,%r12,4),%rax
+ 441bcfb:	48 89 c7             	mov    %rax,%rdi
+ 441bcfe:	48 ff c9             	dec    %rcx
+ 441bd01:	0f 85 f9 fd ff ff    	jne    441bb00 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x460>
+ 441bd07:	48 f7 44 24 08 02 00 	testq  $0x2,0x8(%rsp)
+ 441bd0e:	00 00 
+ 441bd10:	0f 84 19 01 00 00    	je     441be2f <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x78f>
+ 441bd16:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441bd1a:	f2 42 0f 12 14 06    	movddup (%rsi,%r8,1),%xmm2
+ 441bd20:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441bd24:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441bd28:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441bd2d:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441bd31:	74 75                	je     441bda8 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x708>
+ 441bd33:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441bd37:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441bd3d:	66 42 0f 12 34 52    	movlpd (%rdx,%r10,2),%xmm6
+ 441bd43:	66 42 0f 16 34 1a    	movhpd (%rdx,%r11,1),%xmm6
+ 441bd49:	0f 10 fd             	movups %xmm5,%xmm7
+ 441bd4c:	44 0f 10 c6          	movups %xmm6,%xmm8
+ 441bd50:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441bd54:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441bd58:	66 0f 59 fa          	mulpd  %xmm2,%xmm7
+ 441bd5c:	66 44 0f 59 c2       	mulpd  %xmm2,%xmm8
+ 441bd61:	44 0f 10 0f          	movups (%rdi),%xmm9
+ 441bd65:	66 41 0f 58 e9       	addpd  %xmm9,%xmm5
+ 441bd6a:	44 0f 10 57 10       	movups 0x10(%rdi),%xmm10
+ 441bd6f:	66 41 0f 58 f2       	addpd  %xmm10,%xmm6
+ 441bd74:	46 0f 10 1c 27       	movups (%rdi,%r12,1),%xmm11
+ 441bd79:	66 41 0f 58 fb       	addpd  %xmm11,%xmm7
+ 441bd7e:	46 0f 10 64 27 10    	movups 0x10(%rdi,%r12,1),%xmm12
+ 441bd84:	66 45 0f 58 c4       	addpd  %xmm12,%xmm8
+ 441bd89:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441bd8c:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441bd90:	42 0f 11 3c 27       	movups %xmm7,(%rdi,%r12,1)
+ 441bd95:	46 0f 11 44 27 10    	movups %xmm8,0x10(%rdi,%r12,1)
+ 441bd9b:	48 83 c7 20          	add    $0x20,%rdi
+ 441bd9f:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441bda3:	48 ff cb             	dec    %rbx
+ 441bda6:	75 8b                	jne    441bd33 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x693>
+ 441bda8:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441bdaf:	00 00 
+ 441bdb1:	74 36                	je     441bde9 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x749>
+ 441bdb3:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441bdb7:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441bdbd:	0f 10 f5             	movups %xmm5,%xmm6
+ 441bdc0:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441bdc4:	66 0f 59 f2          	mulpd  %xmm2,%xmm6
+ 441bdc8:	0f 10 3f             	movups (%rdi),%xmm7
+ 441bdcb:	66 0f 58 ef          	addpd  %xmm7,%xmm5
+ 441bdcf:	46 0f 10 04 27       	movups (%rdi,%r12,1),%xmm8
+ 441bdd4:	66 41 0f 58 f0       	addpd  %xmm8,%xmm6
+ 441bdd9:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441bddc:	42 0f 11 34 27       	movups %xmm6,(%rdi,%r12,1)
+ 441bde1:	48 83 c7 10          	add    $0x10,%rdi
+ 441bde5:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441bde9:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441bdf0:	00 00 
+ 441bdf2:	74 2b                	je     441be1f <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x77f>
+ 441bdf4:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441bdf8:	f2 0f 10 f5          	movsd  %xmm5,%xmm6
+ 441bdfc:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441be00:	f2 0f 59 f2          	mulsd  %xmm2,%xmm6
+ 441be04:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441be08:	f2 42 0f 58 34 27    	addsd  (%rdi,%r12,1),%xmm6
+ 441be0e:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441be12:	f2 42 0f 11 34 27    	movsd  %xmm6,(%rdi,%r12,1)
+ 441be18:	48 83 c7 08          	add    $0x8,%rdi
+ 441be1c:	4c 01 d2             	add    %r10,%rdx
+ 441be1f:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441be23:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 441be28:	4a 8d 04 60          	lea    (%rax,%r12,2),%rax
+ 441be2c:	48 89 c7             	mov    %rax,%rdi
+ 441be2f:	48 f7 44 24 08 01 00 	testq  $0x1,0x8(%rsp)
+ 441be36:	00 00 
+ 441be38:	0f 84 8d fc ff ff    	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441be3e:	f2 0f 12 0e          	movddup (%rsi),%xmm1
+ 441be42:	66 0f 59 c8          	mulpd  %xmm0,%xmm1
+ 441be46:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 441be4b:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441be4f:	74 43                	je     441be94 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x7f4>
+ 441be51:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441be55:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441be5b:	66 42 0f 12 34 52    	movlpd (%rdx,%r10,2),%xmm6
+ 441be61:	66 42 0f 16 34 1a    	movhpd (%rdx,%r11,1),%xmm6
+ 441be67:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441be6b:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441be6f:	0f 10 3f             	movups (%rdi),%xmm7
+ 441be72:	66 0f 58 ef          	addpd  %xmm7,%xmm5
+ 441be76:	44 0f 10 47 10       	movups 0x10(%rdi),%xmm8
+ 441be7b:	66 41 0f 58 f0       	addpd  %xmm8,%xmm6
+ 441be80:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441be83:	0f 11 77 10          	movups %xmm6,0x10(%rdi)
+ 441be87:	48 83 c7 20          	add    $0x20,%rdi
+ 441be8b:	4a 8d 14 92          	lea    (%rdx,%r10,4),%rdx
+ 441be8f:	48 ff cb             	dec    %rbx
+ 441be92:	75 bd                	jne    441be51 <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x7b1>
+ 441be94:	48 f7 44 24 10 02 00 	testq  $0x2,0x10(%rsp)
+ 441be9b:	00 00 
+ 441be9d:	74 20                	je     441bebf <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x81f>
+ 441be9f:	66 0f 12 2a          	movlpd (%rdx),%xmm5
+ 441bea3:	66 42 0f 16 2c 12    	movhpd (%rdx,%r10,1),%xmm5
+ 441bea9:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441bead:	0f 10 37             	movups (%rdi),%xmm6
+ 441beb0:	66 0f 58 ee          	addpd  %xmm6,%xmm5
+ 441beb4:	0f 11 2f             	movups %xmm5,(%rdi)
+ 441beb7:	48 83 c7 10          	add    $0x10,%rdi
+ 441bebb:	4a 8d 14 52          	lea    (%rdx,%r10,2),%rdx
+ 441bebf:	48 f7 44 24 10 01 00 	testq  $0x1,0x10(%rsp)
+ 441bec6:	00 00 
+ 441bec8:	0f 84 fd fb ff ff    	je     441bacb <gonum.org/v1/gonum/internal/asm/f64.Ger.abi0@@Base+0x42b>
+ 441bece:	f2 0f 10 2a          	movsd  (%rdx),%xmm5
+ 441bed2:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441bed6:	f2 0f 58 2f          	addsd  (%rdi),%xmm5
+ 441beda:	f2 0f 11 2f          	movsd  %xmm5,(%rdi)
+ 441bede:	48 83 c7 08          	add    $0x8,%rdi
+ 441bee2:	4c 01 d2             	add    %r10,%rdx
+ 441bee5:	c3                   	ret
+ 441bee6:	cc                   	int3
+ 441bee7:	cc                   	int3
+ 441bee8:	cc                   	int3
+ 441bee9:	cc                   	int3
+ 441beea:	cc                   	int3
+ 441beeb:	cc                   	int3
+ 441beec:	cc                   	int3
+ 441beed:	cc                   	int3
+ 441beee:	cc                   	int3
+ 441beef:	cc                   	int3
+ 441bef0:	cc                   	int3
+ 441bef1:	cc                   	int3
+ 441bef2:	cc                   	int3
+ 441bef3:	cc                   	int3
+ 441bef4:	cc                   	int3
+ 441bef5:	cc                   	int3
+ 441bef6:	cc                   	int3
+ 441bef7:	cc                   	int3
+ 441bef8:	cc                   	int3
+ 441bef9:	cc                   	int3
+ 441befa:	cc                   	int3
+ 441befb:	cc                   	int3
+ 441befc:	cc                   	int3
+ 441befd:	cc                   	int3
+ 441befe:	cc                   	int3
+ 441beff:	cc                   	int3
+
+000000000441bf00 <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base>:
+ 441bf00:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 441bf05:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 441bf0a:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 441bf0e:	48 83 fe 00          	cmp    $0x0,%rsi
+ 441bf12:	0f 84 d3 00 00 00    	je     441bfeb <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0xeb>
+ 441bf18:	66 45 0f ef db       	pxor   %xmm11,%xmm11
+ 441bf1d:	66 45 0f ef e4       	pxor   %xmm12,%xmm12
+ 441bf22:	f2 0f 10 05 6e 25 0c 	movsd  0x10c256e(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441bf29:	01 
+ 441bf2a:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441bf2d:	f2 0f 10 2d 6b 5e 0c 	movsd  0x10c5e6b(%rip),%xmm5        # 54e1da0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x30>
+ 441bf34:	01 
+ 441bf35:	f2 0f 10 3d 6b 5e 0c 	movsd  0x10c5e6b(%rip),%xmm7        # 54e1da8 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x38>
+ 441bf3c:	01 
+ 441bf3d:	48 31 c0             	xor    %rax,%rax
+ 441bf40:	f2 0f 10 0c c7       	movsd  (%rdi,%rax,8),%xmm1
+ 441bf45:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 441bf49:	0f 8a a3 00 00 00    	jp     441bff2 <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0xf2>
+ 441bf4f:	75 0e                	jne    441bf5f <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0x5f>
+ 441bf51:	48 ff c0             	inc    %rax
+ 441bf54:	48 39 f0             	cmp    %rsi,%rax
+ 441bf57:	0f 84 8e 00 00 00    	je     441bfeb <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0xeb>
+ 441bf5d:	eb e1                	jmp    441bf40 <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0x40>
+ 441bf5f:	f2 0f 10 0c c7       	movsd  (%rdi,%rax,8),%xmm1
+ 441bf64:	0f 10 e1             	movups %xmm1,%xmm4
+ 441bf67:	f2 0f c2 e1 03       	cmpunordsd %xmm1,%xmm4
+ 441bf6c:	66 44 0f 56 e4       	orpd   %xmm4,%xmm12
+ 441bf71:	f2 0f 10 e7          	movsd  %xmm7,%xmm4
+ 441bf75:	66 0f 54 cd          	andpd  %xmm5,%xmm1
+ 441bf79:	f2 0f c2 e1 00       	cmpeqsd %xmm1,%xmm4
+ 441bf7e:	66 44 0f 56 dc       	orpd   %xmm4,%xmm11
+ 441bf83:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 441bf87:	77 16                	ja     441bf9f <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0x9f>
+ 441bf89:	f2 0f 5e ca          	divsd  %xmm2,%xmm1
+ 441bf8d:	f2 0f 59 c9          	mulsd  %xmm1,%xmm1
+ 441bf91:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 441bf95:	48 ff c0             	inc    %rax
+ 441bf98:	48 39 f0             	cmp    %rsi,%rax
+ 441bf9b:	75 c2                	jne    441bf5f <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0x5f>
+ 441bf9d:	eb 1f                	jmp    441bfbe <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0xbe>
+ 441bf9f:	f2 0f 5e d1          	divsd  %xmm1,%xmm2
+ 441bfa3:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441bfa7:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441bfab:	f2 0f 58 05 e5 24 0c 	addsd  0x10c24e5(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441bfb2:	01 
+ 441bfb3:	0f 10 d1             	movups %xmm1,%xmm2
+ 441bfb6:	48 ff c0             	inc    %rax
+ 441bfb9:	48 39 f0             	cmp    %rsi,%rax
+ 441bfbc:	75 a1                	jne    441bf5f <gonum.org/v1/gonum/internal/asm/f64.L2NormUnitary.abi0@@Base+0x5f>
+ 441bfbe:	f2 0f 51 c0          	sqrtsd %xmm0,%xmm0
+ 441bfc2:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441bfc6:	66 49 0f 7e c2       	movq   %xmm0,%r10
+ 441bfcb:	66 44 0f 2e db       	ucomisd %xmm3,%xmm11
+ 441bfd0:	4c 0f 4a 15 d0 5d 0c 	cmovp  0x10c5dd0(%rip),%r10        # 54e1da8 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x38>
+ 441bfd7:	01 
+ 441bfd8:	66 44 0f 2e e3       	ucomisd %xmm3,%xmm12
+ 441bfdd:	4c 0f 4a 15 cb 5d 0c 	cmovp  0x10c5dcb(%rip),%r10        # 54e1db0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x40>
+ 441bfe4:	01 
+ 441bfe5:	4c 89 54 24 20       	mov    %r10,0x20(%rsp)
+ 441bfea:	c3                   	ret
+ 441bfeb:	f2 0f 11 5c 24 20    	movsd  %xmm3,0x20(%rsp)
+ 441bff1:	c3                   	ret
+ 441bff2:	f2 0f 10 25 b6 5d 0c 	movsd  0x10c5db6(%rip),%xmm4        # 54e1db0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x40>
+ 441bff9:	01 
+ 441bffa:	f2 0f 11 64 24 20    	movsd  %xmm4,0x20(%rsp)
+ 441c000:	c3                   	ret
+ 441c001:	cc                   	int3
+ 441c002:	cc                   	int3
+ 441c003:	cc                   	int3
+ 441c004:	cc                   	int3
+ 441c005:	cc                   	int3
+ 441c006:	cc                   	int3
+ 441c007:	cc                   	int3
+ 441c008:	cc                   	int3
+ 441c009:	cc                   	int3
+ 441c00a:	cc                   	int3
+ 441c00b:	cc                   	int3
+ 441c00c:	cc                   	int3
+ 441c00d:	cc                   	int3
+ 441c00e:	cc                   	int3
+ 441c00f:	cc                   	int3
+ 441c010:	cc                   	int3
+ 441c011:	cc                   	int3
+ 441c012:	cc                   	int3
+ 441c013:	cc                   	int3
+ 441c014:	cc                   	int3
+ 441c015:	cc                   	int3
+ 441c016:	cc                   	int3
+ 441c017:	cc                   	int3
+ 441c018:	cc                   	int3
+ 441c019:	cc                   	int3
+ 441c01a:	cc                   	int3
+ 441c01b:	cc                   	int3
+ 441c01c:	cc                   	int3
+ 441c01d:	cc                   	int3
+ 441c01e:	cc                   	int3
+ 441c01f:	cc                   	int3
+
+000000000441c020 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base>:
+ 441c020:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 441c025:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 441c02a:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 441c02f:	0f 57 db             	xorps  %xmm3,%xmm3
+ 441c032:	48 83 fe 00          	cmp    $0x0,%rsi
+ 441c036:	0f 84 d0 00 00 00    	je     441c10c <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0xec>
+ 441c03c:	45 0f 57 db          	xorps  %xmm11,%xmm11
+ 441c040:	45 0f 57 e4          	xorps  %xmm12,%xmm12
+ 441c044:	f2 0f 10 05 4c 24 0c 	movsd  0x10c244c(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441c04b:	01 
+ 441c04c:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441c04f:	f2 0f 10 2d 69 5d 0c 	movsd  0x10c5d69(%rip),%xmm5        # 54e1dc0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x50>
+ 441c056:	01 
+ 441c057:	f2 0f 10 3d 69 5d 0c 	movsd  0x10c5d69(%rip),%xmm7        # 54e1dc8 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x58>
+ 441c05e:	01 
+ 441c05f:	48 c1 e3 03          	shl    $0x3,%rbx
+ 441c063:	f2 0f 10 0f          	movsd  (%rdi),%xmm1
+ 441c067:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 441c06b:	0f 8a a2 00 00 00    	jp     441c113 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0xf3>
+ 441c071:	75 0e                	jne    441c081 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0x61>
+ 441c073:	48 01 df             	add    %rbx,%rdi
+ 441c076:	48 ff ce             	dec    %rsi
+ 441c079:	0f 84 8d 00 00 00    	je     441c10c <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0xec>
+ 441c07f:	eb e2                	jmp    441c063 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0x43>
+ 441c081:	f2 0f 10 0f          	movsd  (%rdi),%xmm1
+ 441c085:	0f 10 e1             	movups %xmm1,%xmm4
+ 441c088:	f2 0f c2 e1 03       	cmpunordsd %xmm1,%xmm4
+ 441c08d:	66 44 0f 56 e4       	orpd   %xmm4,%xmm12
+ 441c092:	f2 0f 10 e7          	movsd  %xmm7,%xmm4
+ 441c096:	66 0f 54 cd          	andpd  %xmm5,%xmm1
+ 441c09a:	f2 0f c2 e1 00       	cmpeqsd %xmm1,%xmm4
+ 441c09f:	66 44 0f 56 dc       	orpd   %xmm4,%xmm11
+ 441c0a4:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 441c0a8:	77 16                	ja     441c0c0 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0xa0>
+ 441c0aa:	f2 0f 5e ca          	divsd  %xmm2,%xmm1
+ 441c0ae:	f2 0f 59 c9          	mulsd  %xmm1,%xmm1
+ 441c0b2:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 441c0b6:	48 01 df             	add    %rbx,%rdi
+ 441c0b9:	48 ff ce             	dec    %rsi
+ 441c0bc:	75 c3                	jne    441c081 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0x61>
+ 441c0be:	eb 1f                	jmp    441c0df <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0xbf>
+ 441c0c0:	f2 0f 5e d1          	divsd  %xmm1,%xmm2
+ 441c0c4:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441c0c8:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441c0cc:	f2 0f 58 05 c4 23 0c 	addsd  0x10c23c4(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 441c0d3:	01 
+ 441c0d4:	0f 10 d1             	movups %xmm1,%xmm2
+ 441c0d7:	48 01 df             	add    %rbx,%rdi
+ 441c0da:	48 ff ce             	dec    %rsi
+ 441c0dd:	75 a2                	jne    441c081 <gonum.org/v1/gonum/internal/asm/f64.L2NormInc.abi0@@Base+0x61>
+ 441c0df:	f2 0f 51 c0          	sqrtsd %xmm0,%xmm0
+ 441c0e3:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+ 441c0e7:	66 49 0f 7e c2       	movq   %xmm0,%r10
+ 441c0ec:	66 44 0f 2e db       	ucomisd %xmm3,%xmm11
+ 441c0f1:	4c 0f 4a 15 cf 5c 0c 	cmovp  0x10c5ccf(%rip),%r10        # 54e1dc8 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x58>
+ 441c0f8:	01 
+ 441c0f9:	66 44 0f 2e e3       	ucomisd %xmm3,%xmm12
+ 441c0fe:	4c 0f 4a 15 ca 5c 0c 	cmovp  0x10c5cca(%rip),%r10        # 54e1dd0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x60>
+ 441c105:	01 
+ 441c106:	4c 89 54 24 30       	mov    %r10,0x30(%rsp)
+ 441c10b:	c3                   	ret
+ 441c10c:	f2 0f 11 5c 24 30    	movsd  %xmm3,0x30(%rsp)
+ 441c112:	c3                   	ret
+ 441c113:	f2 0f 10 25 b5 5c 0c 	movsd  0x10c5cb5(%rip),%xmm4        # 54e1dd0 <github.com/elastic/beats/v7/libbeat/version.buildTime.str@@Base+0x60>
+ 441c11a:	01 
+ 441c11b:	f2 0f 11 64 24 30    	movsd  %xmm4,0x30(%rsp)
+ 441c121:	c3                   	ret
+ 441c122:	cc                   	int3
+ 441c123:	cc                   	int3
+ 441c124:	cc                   	int3
+ 441c125:	cc                   	int3
+ 441c126:	cc                   	int3
+ 441c127:	cc                   	int3
+ 441c128:	cc                   	int3
+ 441c129:	cc                   	int3
+ 441c12a:	cc                   	int3
+ 441c12b:	cc                   	int3
+ 441c12c:	cc                   	int3
+ 441c12d:	cc                   	int3
+ 441c12e:	cc                   	int3
+ 441c12f:	cc                   	int3
+ 441c130:	cc                   	int3
+ 441c131:	cc                   	int3
+ 441c132:	cc                   	int3
+ 441c133:	cc                   	int3
+ 441c134:	cc                   	int3
+ 441c135:	cc                   	int3
+ 441c136:	cc                   	int3
+ 441c137:	cc                   	int3
+ 441c138:	cc                   	int3
+ 441c139:	cc                   	int3
+ 441c13a:	cc                   	int3
+ 441c13b:	cc                   	int3
+ 441c13c:	cc                   	int3
+ 441c13d:	cc                   	int3
+ 441c13e:	cc                   	int3
+ 441c13f:	cc                   	int3
+
+000000000441c140 <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base>:
+ 441c140:	f2 0f 10 44 24 08    	movsd  0x8(%rsp),%xmm0
+ 441c146:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 441c14b:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 441c150:	49 c1 e0 03          	shl    $0x3,%r8
+ 441c154:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 441c159:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c15d:	0f 84 99 00 00 00    	je     441c1fc <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0xbc>
+ 441c163:	48 89 cb             	mov    %rcx,%rbx
+ 441c166:	48 83 e3 03          	and    $0x3,%rbx
+ 441c16a:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441c16e:	74 52                	je     441c1c2 <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0x82>
+ 441c170:	0f 10 c8             	movups %xmm0,%xmm1
+ 441c173:	4f 8d 0c 40          	lea    (%r8,%r8,2),%r9
+ 441c177:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c17b:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 441c181:	f2 42 0f 10 24 46    	movsd  (%rsi,%r8,2),%xmm4
+ 441c187:	f2 42 0f 10 2c 0e    	movsd  (%rsi,%r9,1),%xmm5
+ 441c18d:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c191:	f2 0f 59 d9          	mulsd  %xmm1,%xmm3
+ 441c195:	f2 0f 59 e0          	mulsd  %xmm0,%xmm4
+ 441c199:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441c19d:	f2 0f 11 16          	movsd  %xmm2,(%rsi)
+ 441c1a1:	f2 42 0f 11 1c 06    	movsd  %xmm3,(%rsi,%r8,1)
+ 441c1a7:	f2 42 0f 11 24 46    	movsd  %xmm4,(%rsi,%r8,2)
+ 441c1ad:	f2 42 0f 11 2c 0e    	movsd  %xmm5,(%rsi,%r9,1)
+ 441c1b3:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441c1b7:	48 ff c9             	dec    %rcx
+ 441c1ba:	75 bb                	jne    441c177 <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0x37>
+ 441c1bc:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441c1c0:	74 3a                	je     441c1fc <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0xbc>
+ 441c1c2:	48 89 d9             	mov    %rbx,%rcx
+ 441c1c5:	48 d1 e9             	shr    $1,%rcx
+ 441c1c8:	74 26                	je     441c1f0 <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0xb0>
+ 441c1ca:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c1ce:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 441c1d4:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c1d8:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 441c1dc:	f2 0f 11 16          	movsd  %xmm2,(%rsi)
+ 441c1e0:	f2 42 0f 11 1c 06    	movsd  %xmm3,(%rsi,%r8,1)
+ 441c1e6:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441c1ea:	48 83 e3 01          	and    $0x1,%rbx
+ 441c1ee:	74 0c                	je     441c1fc <gonum.org/v1/gonum/internal/asm/f64.ScalInc.abi0@@Base+0xbc>
+ 441c1f0:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c1f4:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c1f8:	f2 0f 11 16          	movsd  %xmm2,(%rsi)
+ 441c1fc:	c3                   	ret
+ 441c1fd:	cc                   	int3
+ 441c1fe:	cc                   	int3
+ 441c1ff:	cc                   	int3
+
+000000000441c200 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base>:
+ 441c200:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 441c205:	4c 8b 54 24 20       	mov    0x20(%rsp),%r10
+ 441c20a:	49 c1 e2 03          	shl    $0x3,%r10
+ 441c20e:	f2 0f 10 44 24 28    	movsd  0x28(%rsp),%xmm0
+ 441c214:	48 8b 74 24 30       	mov    0x30(%rsp),%rsi
+ 441c219:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 441c21e:	4c 8b 44 24 50       	mov    0x50(%rsp),%r8
+ 441c223:	49 c1 e0 03          	shl    $0x3,%r8
+ 441c227:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c22b:	0f 84 a5 00 00 00    	je     441c2d6 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0xd6>
+ 441c231:	48 89 cb             	mov    %rcx,%rbx
+ 441c234:	48 83 e3 03          	and    $0x3,%rbx
+ 441c238:	48 c1 e9 02          	shr    $0x2,%rcx
+ 441c23c:	74 5a                	je     441c298 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0x98>
+ 441c23e:	0f 10 c8             	movups %xmm0,%xmm1
+ 441c241:	4f 8d 0c 40          	lea    (%r8,%r8,2),%r9
+ 441c245:	4f 8d 1c 52          	lea    (%r10,%r10,2),%r11
+ 441c249:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c24d:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 441c253:	f2 42 0f 10 24 46    	movsd  (%rsi,%r8,2),%xmm4
+ 441c259:	f2 42 0f 10 2c 0e    	movsd  (%rsi,%r9,1),%xmm5
+ 441c25f:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c263:	f2 0f 59 d9          	mulsd  %xmm1,%xmm3
+ 441c267:	f2 0f 59 e0          	mulsd  %xmm0,%xmm4
+ 441c26b:	f2 0f 59 e9          	mulsd  %xmm1,%xmm5
+ 441c26f:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 441c273:	f2 42 0f 11 1c 17    	movsd  %xmm3,(%rdi,%r10,1)
+ 441c279:	f2 42 0f 11 24 57    	movsd  %xmm4,(%rdi,%r10,2)
+ 441c27f:	f2 42 0f 11 2c 1f    	movsd  %xmm5,(%rdi,%r11,1)
+ 441c285:	4a 8d 34 86          	lea    (%rsi,%r8,4),%rsi
+ 441c289:	4a 8d 3c 97          	lea    (%rdi,%r10,4),%rdi
+ 441c28d:	48 ff c9             	dec    %rcx
+ 441c290:	75 b7                	jne    441c249 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0x49>
+ 441c292:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441c296:	74 3e                	je     441c2d6 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0xd6>
+ 441c298:	48 89 d9             	mov    %rbx,%rcx
+ 441c29b:	48 d1 e9             	shr    $1,%rcx
+ 441c29e:	74 2a                	je     441c2ca <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0xca>
+ 441c2a0:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c2a4:	f2 42 0f 10 1c 06    	movsd  (%rsi,%r8,1),%xmm3
+ 441c2aa:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c2ae:	f2 0f 59 d8          	mulsd  %xmm0,%xmm3
+ 441c2b2:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 441c2b6:	f2 42 0f 11 1c 17    	movsd  %xmm3,(%rdi,%r10,1)
+ 441c2bc:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441c2c0:	4a 8d 3c 57          	lea    (%rdi,%r10,2),%rdi
+ 441c2c4:	48 83 e3 01          	and    $0x1,%rbx
+ 441c2c8:	74 0c                	je     441c2d6 <gonum.org/v1/gonum/internal/asm/f64.ScalIncTo.abi0@@Base+0xd6>
+ 441c2ca:	f2 0f 10 16          	movsd  (%rsi),%xmm2
+ 441c2ce:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c2d2:	f2 0f 11 17          	movsd  %xmm2,(%rdi)
+ 441c2d6:	c3                   	ret
+ 441c2d7:	cc                   	int3
+ 441c2d8:	cc                   	int3
+ 441c2d9:	cc                   	int3
+ 441c2da:	cc                   	int3
+ 441c2db:	cc                   	int3
+ 441c2dc:	cc                   	int3
+ 441c2dd:	cc                   	int3
+ 441c2de:	cc                   	int3
+ 441c2df:	cc                   	int3
+
+000000000441c2e0 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base>:
+ 441c2e0:	f2 0f 12 44 24 08    	movddup 0x8(%rsp),%xmm0
+ 441c2e6:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+ 441c2eb:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 441c2f0:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c2f4:	0f 84 89 00 00 00    	je     441c383 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0xa3>
+ 441c2fa:	48 31 c0             	xor    %rax,%rax
+ 441c2fd:	48 89 cb             	mov    %rcx,%rbx
+ 441c300:	48 83 e3 07          	and    $0x7,%rbx
+ 441c304:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441c308:	74 48                	je     441c352 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0x72>
+ 441c30a:	0f 10 c8             	movups %xmm0,%xmm1
+ 441c30d:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441c311:	0f 10 5c c6 10       	movups 0x10(%rsi,%rax,8),%xmm3
+ 441c316:	0f 10 64 c6 20       	movups 0x20(%rsi,%rax,8),%xmm4
+ 441c31b:	0f 10 6c c6 30       	movups 0x30(%rsi,%rax,8),%xmm5
+ 441c320:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441c324:	66 0f 59 d9          	mulpd  %xmm1,%xmm3
+ 441c328:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441c32c:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441c330:	0f 11 14 c6          	movups %xmm2,(%rsi,%rax,8)
+ 441c334:	0f 11 5c c6 10       	movups %xmm3,0x10(%rsi,%rax,8)
+ 441c339:	0f 11 64 c6 20       	movups %xmm4,0x20(%rsi,%rax,8)
+ 441c33e:	0f 11 6c c6 30       	movups %xmm5,0x30(%rsi,%rax,8)
+ 441c343:	48 83 c0 08          	add    $0x8,%rax
+ 441c347:	48 ff c9             	dec    %rcx
+ 441c34a:	75 c1                	jne    441c30d <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0x2d>
+ 441c34c:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441c350:	74 31                	je     441c383 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0xa3>
+ 441c352:	48 89 d9             	mov    %rbx,%rcx
+ 441c355:	48 d1 e9             	shr    $1,%rcx
+ 441c358:	74 1b                	je     441c375 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0x95>
+ 441c35a:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441c35e:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441c362:	0f 11 14 c6          	movups %xmm2,(%rsi,%rax,8)
+ 441c366:	48 83 c0 02          	add    $0x2,%rax
+ 441c36a:	48 ff c9             	dec    %rcx
+ 441c36d:	75 eb                	jne    441c35a <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0x7a>
+ 441c36f:	48 83 e3 01          	and    $0x1,%rbx
+ 441c373:	74 0e                	je     441c383 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitary.abi0@@Base+0xa3>
+ 441c375:	f2 0f 10 14 c6       	movsd  (%rsi,%rax,8),%xmm2
+ 441c37a:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c37e:	f2 0f 11 14 c6       	movsd  %xmm2,(%rsi,%rax,8)
+ 441c383:	c3                   	ret
+ 441c384:	cc                   	int3
+ 441c385:	cc                   	int3
+ 441c386:	cc                   	int3
+ 441c387:	cc                   	int3
+ 441c388:	cc                   	int3
+ 441c389:	cc                   	int3
+ 441c38a:	cc                   	int3
+ 441c38b:	cc                   	int3
+ 441c38c:	cc                   	int3
+ 441c38d:	cc                   	int3
+ 441c38e:	cc                   	int3
+ 441c38f:	cc                   	int3
+ 441c390:	cc                   	int3
+ 441c391:	cc                   	int3
+ 441c392:	cc                   	int3
+ 441c393:	cc                   	int3
+ 441c394:	cc                   	int3
+ 441c395:	cc                   	int3
+ 441c396:	cc                   	int3
+ 441c397:	cc                   	int3
+ 441c398:	cc                   	int3
+ 441c399:	cc                   	int3
+ 441c39a:	cc                   	int3
+ 441c39b:	cc                   	int3
+ 441c39c:	cc                   	int3
+ 441c39d:	cc                   	int3
+ 441c39e:	cc                   	int3
+ 441c39f:	cc                   	int3
+
+000000000441c3a0 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base>:
+ 441c3a0:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 441c3a5:	48 8b 7c 24 08       	mov    0x8(%rsp),%rdi
+ 441c3aa:	f2 0f 12 44 24 20    	movddup 0x20(%rsp),%xmm0
+ 441c3b0:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 441c3b5:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c3b9:	0f 84 89 00 00 00    	je     441c448 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0xa8>
+ 441c3bf:	48 31 c0             	xor    %rax,%rax
+ 441c3c2:	48 89 cb             	mov    %rcx,%rbx
+ 441c3c5:	48 83 e3 07          	and    $0x7,%rbx
+ 441c3c9:	48 c1 e9 03          	shr    $0x3,%rcx
+ 441c3cd:	74 48                	je     441c417 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0x77>
+ 441c3cf:	0f 10 c8             	movups %xmm0,%xmm1
+ 441c3d2:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441c3d6:	0f 10 5c c6 10       	movups 0x10(%rsi,%rax,8),%xmm3
+ 441c3db:	0f 10 64 c6 20       	movups 0x20(%rsi,%rax,8),%xmm4
+ 441c3e0:	0f 10 6c c6 30       	movups 0x30(%rsi,%rax,8),%xmm5
+ 441c3e5:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441c3e9:	66 0f 59 d9          	mulpd  %xmm1,%xmm3
+ 441c3ed:	66 0f 59 e0          	mulpd  %xmm0,%xmm4
+ 441c3f1:	66 0f 59 e9          	mulpd  %xmm1,%xmm5
+ 441c3f5:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441c3f9:	0f 11 5c c7 10       	movups %xmm3,0x10(%rdi,%rax,8)
+ 441c3fe:	0f 11 64 c7 20       	movups %xmm4,0x20(%rdi,%rax,8)
+ 441c403:	0f 11 6c c7 30       	movups %xmm5,0x30(%rdi,%rax,8)
+ 441c408:	48 83 c0 08          	add    $0x8,%rax
+ 441c40c:	48 ff c9             	dec    %rcx
+ 441c40f:	75 c1                	jne    441c3d2 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0x32>
+ 441c411:	48 83 fb 00          	cmp    $0x0,%rbx
+ 441c415:	74 31                	je     441c448 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0xa8>
+ 441c417:	48 89 d9             	mov    %rbx,%rcx
+ 441c41a:	48 d1 e9             	shr    $1,%rcx
+ 441c41d:	74 1b                	je     441c43a <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0x9a>
+ 441c41f:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441c423:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+ 441c427:	0f 11 14 c7          	movups %xmm2,(%rdi,%rax,8)
+ 441c42b:	48 83 c0 02          	add    $0x2,%rax
+ 441c42f:	48 ff c9             	dec    %rcx
+ 441c432:	75 eb                	jne    441c41f <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0x7f>
+ 441c434:	48 83 e3 01          	and    $0x1,%rbx
+ 441c438:	74 0e                	je     441c448 <gonum.org/v1/gonum/internal/asm/f64.ScalUnitaryTo.abi0@@Base+0xa8>
+ 441c43a:	f2 0f 10 14 c6       	movsd  (%rsi,%rax,8),%xmm2
+ 441c43f:	f2 0f 59 d0          	mulsd  %xmm0,%xmm2
+ 441c443:	f2 0f 11 14 c7       	movsd  %xmm2,(%rdi,%rax,8)
+ 441c448:	c3                   	ret
+ 441c449:	cc                   	int3
+ 441c44a:	cc                   	int3
+ 441c44b:	cc                   	int3
+ 441c44c:	cc                   	int3
+ 441c44d:	cc                   	int3
+ 441c44e:	cc                   	int3
+ 441c44f:	cc                   	int3
+ 441c450:	cc                   	int3
+ 441c451:	cc                   	int3
+ 441c452:	cc                   	int3
+ 441c453:	cc                   	int3
+ 441c454:	cc                   	int3
+ 441c455:	cc                   	int3
+ 441c456:	cc                   	int3
+ 441c457:	cc                   	int3
+ 441c458:	cc                   	int3
+ 441c459:	cc                   	int3
+ 441c45a:	cc                   	int3
+ 441c45b:	cc                   	int3
+ 441c45c:	cc                   	int3
+ 441c45d:	cc                   	int3
+ 441c45e:	cc                   	int3
+ 441c45f:	cc                   	int3
+
+000000000441c460 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base>:
+ 441c460:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+ 441c465:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 441c46a:	48 31 c0             	xor    %rax,%rax
+ 441c46d:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 441c471:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c475:	0f 84 d2 00 00 00    	je     441c54d <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xed>
+ 441c47b:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 441c47f:	66 0f ef d2          	pxor   %xmm2,%xmm2
+ 441c483:	66 0f ef db          	pxor   %xmm3,%xmm3
+ 441c487:	48 89 f3             	mov    %rsi,%rbx
+ 441c48a:	48 83 e3 0f          	and    $0xf,%rbx
+ 441c48e:	74 10                	je     441c4a0 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0x40>
+ 441c490:	f2 0f 58 06          	addsd  (%rsi),%xmm0
+ 441c494:	48 ff c0             	inc    %rax
+ 441c497:	48 ff c9             	dec    %rcx
+ 441c49a:	0f 84 ad 00 00 00    	je     441c54d <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xed>
+ 441c4a0:	48 89 cb             	mov    %rcx,%rbx
+ 441c4a3:	48 c1 e9 04          	shr    $0x4,%rcx
+ 441c4a7:	74 38                	je     441c4e1 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0x81>
+ 441c4a9:	66 0f 58 04 c6       	addpd  (%rsi,%rax,8),%xmm0
+ 441c4ae:	66 0f 58 4c c6 10    	addpd  0x10(%rsi,%rax,8),%xmm1
+ 441c4b4:	66 0f 58 54 c6 20    	addpd  0x20(%rsi,%rax,8),%xmm2
+ 441c4ba:	66 0f 58 5c c6 30    	addpd  0x30(%rsi,%rax,8),%xmm3
+ 441c4c0:	66 0f 58 44 c6 40    	addpd  0x40(%rsi,%rax,8),%xmm0
+ 441c4c6:	66 0f 58 4c c6 50    	addpd  0x50(%rsi,%rax,8),%xmm1
+ 441c4cc:	66 0f 58 54 c6 60    	addpd  0x60(%rsi,%rax,8),%xmm2
+ 441c4d2:	66 0f 58 5c c6 70    	addpd  0x70(%rsi,%rax,8),%xmm3
+ 441c4d8:	48 83 c0 10          	add    $0x10,%rax
+ 441c4dc:	48 ff c9             	dec    %rcx
+ 441c4df:	75 c8                	jne    441c4a9 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0x49>
+ 441c4e1:	48 f7 c3 08 00 00 00 	test   $0x8,%rbx
+ 441c4e8:	74 1b                	je     441c505 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xa5>
+ 441c4ea:	66 0f 58 04 c6       	addpd  (%rsi,%rax,8),%xmm0
+ 441c4ef:	66 0f 58 4c c6 10    	addpd  0x10(%rsi,%rax,8),%xmm1
+ 441c4f5:	66 0f 58 54 c6 20    	addpd  0x20(%rsi,%rax,8),%xmm2
+ 441c4fb:	66 0f 58 5c c6 30    	addpd  0x30(%rsi,%rax,8),%xmm3
+ 441c501:	48 83 c0 08          	add    $0x8,%rax
+ 441c505:	66 0f 58 c3          	addpd  %xmm3,%xmm0
+ 441c509:	66 0f 58 ca          	addpd  %xmm2,%xmm1
+ 441c50d:	48 f7 c3 04 00 00 00 	test   $0x4,%rbx
+ 441c514:	74 0f                	je     441c525 <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xc5>
+ 441c516:	66 0f 58 04 c6       	addpd  (%rsi,%rax,8),%xmm0
+ 441c51b:	66 0f 58 4c c6 10    	addpd  0x10(%rsi,%rax,8),%xmm1
+ 441c521:	48 83 c0 04          	add    $0x4,%rax
+ 441c525:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+ 441c529:	48 f7 c3 02 00 00 00 	test   $0x2,%rbx
+ 441c530:	74 09                	je     441c53b <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xdb>
+ 441c532:	66 0f 58 04 c6       	addpd  (%rsi,%rax,8),%xmm0
+ 441c537:	48 83 c0 02          	add    $0x2,%rax
+ 441c53b:	66 0f 7c c0          	haddpd %xmm0,%xmm0
+ 441c53f:	48 f7 c3 01 00 00 00 	test   $0x1,%rbx
+ 441c546:	74 05                	je     441c54d <gonum.org/v1/gonum/internal/asm/f64.Sum.abi0@@Base+0xed>
+ 441c548:	f2 0f 58 04 c6       	addsd  (%rsi,%rax,8),%xmm0
+ 441c54d:	f2 0f 11 44 24 20    	movsd  %xmm0,0x20(%rsp)
+ 441c553:	c3                   	ret
+ 441c554:	cc                   	int3
+ 441c555:	cc                   	int3
+ 441c556:	cc                   	int3
+ 441c557:	cc                   	int3
+ 441c558:	cc                   	int3
+ 441c559:	cc                   	int3
+ 441c55a:	cc                   	int3
+ 441c55b:	cc                   	int3
+ 441c55c:	cc                   	int3
+ 441c55d:	cc                   	int3
+ 441c55e:	cc                   	int3
+ 441c55f:	cc                   	int3
+
+000000000441c560 <gonum.org/v1/gonum/internal/math32.Max@@Base>:
+ 441c560:	48 83 ec 10          	sub    $0x10,%rsp
+ 441c564:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 441c569:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 441c56e:	f3 0f 10 15 4e 1b 0c 	movss  0x10c1b4e(%rip),%xmm2        # 54de0c4 <_IO_stdin_used@@Base+0x8ab0c4>
+ 441c575:	01 
+ 441c576:	0f 2e c2             	ucomiss %xmm2,%xmm0
+ 441c579:	77 07                	ja     441c582 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x22>
+ 441c57b:	0f 2e ca             	ucomiss %xmm2,%xmm1
+ 441c57e:	66 90                	xchg   %ax,%ax
+ 441c580:	76 13                	jbe    441c595 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x35>
+ 441c582:	90                   	nop
+ 441c583:	f3 0f 10 05 3d 1b 0c 	movss  0x10c1b3d(%rip),%xmm0        # 54de0c8 <_IO_stdin_used@@Base+0x8ab0c8>
+ 441c58a:	01 
+ 441c58b:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c590:	48 83 c4 10          	add    $0x10,%rsp
+ 441c594:	c3                   	ret
+ 441c595:	0f 2e c0             	ucomiss %xmm0,%xmm0
+ 441c598:	75 0a                	jne    441c5a4 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x44>
+ 441c59a:	7a 08                	jp     441c5a4 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x44>
+ 441c59c:	0f 2e c9             	ucomiss %xmm1,%xmm1
+ 441c59f:	90                   	nop
+ 441c5a0:	75 02                	jne    441c5a4 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x44>
+ 441c5a2:	7b 18                	jnp    441c5bc <gonum.org/v1/gonum/internal/math32.Max@@Base+0x5c>
+ 441c5a4:	c7 44 24 04 00 00 c0 	movl   $0x7fc00000,0x4(%rsp)
+ 441c5ab:	7f 
+ 441c5ac:	f3 0f 10 44 24 04    	movss  0x4(%rsp),%xmm0
+ 441c5b2:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c5b7:	48 83 c4 10          	add    $0x10,%rsp
+ 441c5bb:	c3                   	ret
+ 441c5bc:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441c5bf:	0f 2e d0             	ucomiss %xmm0,%xmm2
+ 441c5c2:	75 2a                	jne    441c5ee <gonum.org/v1/gonum/internal/math32.Max@@Base+0x8e>
+ 441c5c4:	7a 28                	jp     441c5ee <gonum.org/v1/gonum/internal/math32.Max@@Base+0x8e>
+ 441c5c6:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 441c5c9:	75 23                	jne    441c5ee <gonum.org/v1/gonum/internal/math32.Max@@Base+0x8e>
+ 441c5cb:	7a 21                	jp     441c5ee <gonum.org/v1/gonum/internal/math32.Max@@Base+0x8e>
+ 441c5cd:	66 0f 7e c0          	movd   %xmm0,%eax
+ 441c5d1:	0f ba e0 1f          	bt     $0x1f,%eax
+ 441c5d5:	73 0d                	jae    441c5e4 <gonum.org/v1/gonum/internal/math32.Max@@Base+0x84>
+ 441c5d7:	0f 10 c1             	movups %xmm1,%xmm0
+ 441c5da:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c5df:	48 83 c4 10          	add    $0x10,%rsp
+ 441c5e3:	c3                   	ret
+ 441c5e4:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c5e9:	48 83 c4 10          	add    $0x10,%rsp
+ 441c5ed:	c3                   	ret
+ 441c5ee:	0f 2e c1             	ucomiss %xmm1,%xmm0
+ 441c5f1:	76 0a                	jbe    441c5fd <gonum.org/v1/gonum/internal/math32.Max@@Base+0x9d>
+ 441c5f3:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c5f8:	48 83 c4 10          	add    $0x10,%rsp
+ 441c5fc:	c3                   	ret
+ 441c5fd:	0f 10 c1             	movups %xmm1,%xmm0
+ 441c600:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c605:	48 83 c4 10          	add    $0x10,%rsp
+ 441c609:	c3                   	ret
+ 441c60a:	cc                   	int3
+ 441c60b:	cc                   	int3
+ 441c60c:	cc                   	int3
+ 441c60d:	cc                   	int3
+ 441c60e:	cc                   	int3
+ 441c60f:	cc                   	int3
+ 441c610:	cc                   	int3
+ 441c611:	cc                   	int3
+ 441c612:	cc                   	int3
+ 441c613:	cc                   	int3
+ 441c614:	cc                   	int3
+ 441c615:	cc                   	int3
+ 441c616:	cc                   	int3
+ 441c617:	cc                   	int3
+ 441c618:	cc                   	int3
+ 441c619:	cc                   	int3
+ 441c61a:	cc                   	int3
+ 441c61b:	cc                   	int3
+ 441c61c:	cc                   	int3
+ 441c61d:	cc                   	int3
+ 441c61e:	cc                   	int3
+ 441c61f:	cc                   	int3
+
+000000000441c620 <gonum.org/v1/gonum/internal/math32.Min@@Base>:
+ 441c620:	48 83 ec 10          	sub    $0x10,%rsp
+ 441c624:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 441c629:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 441c62e:	f3 0f 10 15 a6 1a 0c 	movss  0x10c1aa6(%rip),%xmm2        # 54de0dc <_IO_stdin_used@@Base+0x8ab0dc>
+ 441c635:	01 
+ 441c636:	0f 2e d0             	ucomiss %xmm0,%xmm2
+ 441c639:	77 07                	ja     441c642 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x22>
+ 441c63b:	0f 2e d1             	ucomiss %xmm1,%xmm2
+ 441c63e:	66 90                	xchg   %ax,%ax
+ 441c640:	76 13                	jbe    441c655 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x35>
+ 441c642:	90                   	nop
+ 441c643:	f3 0f 10 05 95 1a 0c 	movss  0x10c1a95(%rip),%xmm0        # 54de0e0 <_IO_stdin_used@@Base+0x8ab0e0>
+ 441c64a:	01 
+ 441c64b:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c650:	48 83 c4 10          	add    $0x10,%rsp
+ 441c654:	c3                   	ret
+ 441c655:	0f 2e c0             	ucomiss %xmm0,%xmm0
+ 441c658:	75 0a                	jne    441c664 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x44>
+ 441c65a:	7a 08                	jp     441c664 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x44>
+ 441c65c:	0f 2e c9             	ucomiss %xmm1,%xmm1
+ 441c65f:	90                   	nop
+ 441c660:	75 02                	jne    441c664 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x44>
+ 441c662:	7b 18                	jnp    441c67c <gonum.org/v1/gonum/internal/math32.Min@@Base+0x5c>
+ 441c664:	c7 44 24 04 00 00 c0 	movl   $0x7fc00000,0x4(%rsp)
+ 441c66b:	7f 
+ 441c66c:	f3 0f 10 44 24 04    	movss  0x4(%rsp),%xmm0
+ 441c672:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c677:	48 83 c4 10          	add    $0x10,%rsp
+ 441c67b:	c3                   	ret
+ 441c67c:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 441c67f:	0f 2e d0             	ucomiss %xmm0,%xmm2
+ 441c682:	75 2a                	jne    441c6ae <gonum.org/v1/gonum/internal/math32.Min@@Base+0x8e>
+ 441c684:	7a 28                	jp     441c6ae <gonum.org/v1/gonum/internal/math32.Min@@Base+0x8e>
+ 441c686:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 441c689:	75 23                	jne    441c6ae <gonum.org/v1/gonum/internal/math32.Min@@Base+0x8e>
+ 441c68b:	7a 21                	jp     441c6ae <gonum.org/v1/gonum/internal/math32.Min@@Base+0x8e>
+ 441c68d:	66 0f 7e c0          	movd   %xmm0,%eax
+ 441c691:	0f ba e0 1f          	bt     $0x1f,%eax
+ 441c695:	73 0a                	jae    441c6a1 <gonum.org/v1/gonum/internal/math32.Min@@Base+0x81>
+ 441c697:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c69c:	48 83 c4 10          	add    $0x10,%rsp
+ 441c6a0:	c3                   	ret
+ 441c6a1:	0f 10 c1             	movups %xmm1,%xmm0
+ 441c6a4:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c6a9:	48 83 c4 10          	add    $0x10,%rsp
+ 441c6ad:	c3                   	ret
+ 441c6ae:	0f 2e c8             	ucomiss %xmm0,%xmm1
+ 441c6b1:	76 0a                	jbe    441c6bd <gonum.org/v1/gonum/internal/math32.Min@@Base+0x9d>
+ 441c6b3:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c6b8:	48 83 c4 10          	add    $0x10,%rsp
+ 441c6bc:	c3                   	ret
+ 441c6bd:	0f 10 c1             	movups %xmm1,%xmm0
+ 441c6c0:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 441c6c5:	48 83 c4 10          	add    $0x10,%rsp
+ 441c6c9:	c3                   	ret
+ 441c6ca:	cc                   	int3
+ 441c6cb:	cc                   	int3
+ 441c6cc:	cc                   	int3
+ 441c6cd:	cc                   	int3
+ 441c6ce:	cc                   	int3
+ 441c6cf:	cc                   	int3
+ 441c6d0:	cc                   	int3
+ 441c6d1:	cc                   	int3
+ 441c6d2:	cc                   	int3
+ 441c6d3:	cc                   	int3
+ 441c6d4:	cc                   	int3
+ 441c6d5:	cc                   	int3
+ 441c6d6:	cc                   	int3
+ 441c6d7:	cc                   	int3
+ 441c6d8:	cc                   	int3
+ 441c6d9:	cc                   	int3
+ 441c6da:	cc                   	int3
+ 441c6db:	cc                   	int3
+ 441c6dc:	cc                   	int3
+ 441c6dd:	cc                   	int3
+ 441c6de:	cc                   	int3
+ 441c6df:	cc                   	int3
+
+000000000441c6e0 <gonum.org/v1/gonum/internal/math32.Sqrt.abi0@@Base>:
+ 441c6e0:	f3 0f 51 44 24 08    	sqrtss 0x8(%rsp),%xmm0
+ 441c6e6:	f3 0f 11 44 24 10    	movss  %xmm0,0x10(%rsp)
+ 441c6ec:	c3                   	ret
+ 441c6ed:	cc                   	int3
+ 441c6ee:	cc                   	int3
+ 441c6ef:	cc                   	int3
+ 441c6f0:	cc                   	int3
+ 441c6f1:	cc                   	int3
+ 441c6f2:	cc                   	int3
+ 441c6f3:	cc                   	int3
+ 441c6f4:	cc                   	int3
+ 441c6f5:	cc                   	int3
+ 441c6f6:	cc                   	int3
+ 441c6f7:	cc                   	int3
+ 441c6f8:	cc                   	int3
+ 441c6f9:	cc                   	int3
+ 441c6fa:	cc                   	int3
+ 441c6fb:	cc                   	int3
+ 441c6fc:	cc                   	int3
+ 441c6fd:	cc                   	int3
+ 441c6fe:	cc                   	int3
+ 441c6ff:	cc                   	int3
+
+000000000441c700 <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base>:
+ 441c700:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 441c705:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 441c70a:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 441c70f:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c713:	0f 84 32 01 00 00    	je     441c84b <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base+0x14b>
+ 441c719:	4c 8b 44 24 60       	mov    0x60(%rsp),%r8
+ 441c71e:	49 c1 e0 04          	shl    $0x4,%r8
+ 441c722:	4c 8b 4c 24 68       	mov    0x68(%rsp),%r9
+ 441c727:	49 c1 e1 04          	shl    $0x4,%r9
+ 441c72b:	4a 8d 34 06          	lea    (%rsi,%r8,1),%rsi
+ 441c72f:	4a 8d 3c 0f          	lea    (%rdi,%r9,1),%rdi
+ 441c733:	48 89 fa             	mov    %rdi,%rdx
+ 441c736:	4c 8b 44 24 50       	mov    0x50(%rsp),%r8
+ 441c73b:	49 c1 e0 04          	shl    $0x4,%r8
+ 441c73f:	4c 8b 4c 24 58       	mov    0x58(%rsp),%r9
+ 441c744:	49 c1 e1 04          	shl    $0x4,%r9
+ 441c748:	0f 10 44 24 08       	movups 0x8(%rsp),%xmm0
+ 441c74d:	0f 28 c8             	movaps %xmm0,%xmm1
+ 441c750:	66 0f c6 c9 01       	shufpd $0x1,%xmm1,%xmm1
+ 441c755:	44 0f 28 d0          	movaps %xmm0,%xmm10
+ 441c759:	44 0f 28 d9          	movaps %xmm1,%xmm11
+ 441c75d:	48 89 cb             	mov    %rcx,%rbx
+ 441c760:	48 83 e1 03          	and    $0x3,%rcx
+ 441c764:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441c768:	0f 84 b6 00 00 00    	je     441c824 <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base+0x124>
+ 441c76e:	0f 10 16             	movups (%rsi),%xmm2
+ 441c771:	42 0f 10 24 06       	movups (%rsi,%r8,1),%xmm4
+ 441c776:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441c77a:	0f 10 36             	movups (%rsi),%xmm6
+ 441c77d:	46 0f 10 04 06       	movups (%rsi,%r8,1),%xmm8
+ 441c782:	f2 0f 12 da          	movddup %xmm2,%xmm3
+ 441c786:	f2 0f 12 ec          	movddup %xmm4,%xmm5
+ 441c78a:	f2 0f 12 fe          	movddup %xmm6,%xmm7
+ 441c78e:	f2 45 0f 12 c8       	movddup %xmm8,%xmm9
+ 441c793:	66 0f c6 d2 03       	shufpd $0x3,%xmm2,%xmm2
+ 441c798:	66 0f c6 e4 03       	shufpd $0x3,%xmm4,%xmm4
+ 441c79d:	66 0f c6 f6 03       	shufpd $0x3,%xmm6,%xmm6
+ 441c7a2:	66 45 0f c6 c0 03    	shufpd $0x3,%xmm8,%xmm8
+ 441c7a8:	66 0f 59 d1          	mulpd  %xmm1,%xmm2
+ 441c7ac:	66 0f 59 d8          	mulpd  %xmm0,%xmm3
+ 441c7b0:	66 41 0f 59 e3       	mulpd  %xmm11,%xmm4
+ 441c7b5:	66 41 0f 59 ea       	mulpd  %xmm10,%xmm5
+ 441c7ba:	66 0f 59 f1          	mulpd  %xmm1,%xmm6
+ 441c7be:	66 0f 59 f8          	mulpd  %xmm0,%xmm7
+ 441c7c2:	66 45 0f 59 c3       	mulpd  %xmm11,%xmm8
+ 441c7c7:	66 45 0f 59 ca       	mulpd  %xmm10,%xmm9
+ 441c7cc:	66 0f d0 da          	addsubpd %xmm2,%xmm3
+ 441c7d0:	66 0f d0 ec          	addsubpd %xmm4,%xmm5
+ 441c7d4:	66 0f d0 fe          	addsubpd %xmm6,%xmm7
+ 441c7d8:	66 45 0f d0 c8       	addsubpd %xmm8,%xmm9
+ 441c7dd:	66 0f 58 1a          	addpd  (%rdx),%xmm3
+ 441c7e1:	66 42 0f 58 2c 0a    	addpd  (%rdx,%r9,1),%xmm5
+ 441c7e7:	4a 8d 14 4a          	lea    (%rdx,%r9,2),%rdx
+ 441c7eb:	66 0f 58 3a          	addpd  (%rdx),%xmm7
+ 441c7ef:	66 46 0f 58 0c 0a    	addpd  (%rdx,%r9,1),%xmm9
+ 441c7f5:	0f 11 1f             	movups %xmm3,(%rdi)
+ 441c7f8:	42 0f 11 2c 0f       	movups %xmm5,(%rdi,%r9,1)
+ 441c7fd:	4a 8d 3c 4f          	lea    (%rdi,%r9,2),%rdi
+ 441c801:	0f 11 3f             	movups %xmm7,(%rdi)
+ 441c804:	46 0f 11 0c 0f       	movups %xmm9,(%rdi,%r9,1)
+ 441c809:	4a 8d 34 46          	lea    (%rsi,%r8,2),%rsi
+ 441c80d:	4a 8d 14 4a          	lea    (%rdx,%r9,2),%rdx
+ 441c811:	4a 8d 3c 4f          	lea    (%rdi,%r9,2),%rdi
+ 441c815:	48 ff cb             	dec    %rbx
+ 441c818:	0f 85 50 ff ff ff    	jne    441c76e <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base+0x6e>
+ 441c81e:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c822:	74 27                	je     441c84b <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base+0x14b>
+ 441c824:	0f 10 16             	movups (%rsi),%xmm2
+ 441c827:	f2 0f 12 da          	movddup %xmm2,%xmm3
+ 441c82b:	66 0f c6 d2 03       	shufpd $0x3,%xmm2,%xmm2
+ 441c830:	66 0f 59 d1          	mulpd  %xmm1,%xmm2
+ 441c834:	66 0f 59 d8          	mulpd  %xmm0,%xmm3
+ 441c838:	66 0f d0 da          	addsubpd %xmm2,%xmm3
+ 441c83c:	66 0f 58 1f          	addpd  (%rdi),%xmm3
+ 441c840:	0f 11 1f             	movups %xmm3,(%rdi)
+ 441c843:	4c 01 c6             	add    %r8,%rsi
+ 441c846:	4c 01 cf             	add    %r9,%rdi
+ 441c849:	e2 d9                	loop   441c824 <gonum.org/v1/gonum/internal/asm/c128.AxpyInc.abi0@@Base+0x124>
+ 441c84b:	c3                   	ret
+ 441c84c:	cc                   	int3
+ 441c84d:	cc                   	int3
+ 441c84e:	cc                   	int3
+ 441c84f:	cc                   	int3
+ 441c850:	cc                   	int3
+ 441c851:	cc                   	int3
+ 441c852:	cc                   	int3
+ 441c853:	cc                   	int3
+ 441c854:	cc                   	int3
+ 441c855:	cc                   	int3
+ 441c856:	cc                   	int3
+ 441c857:	cc                   	int3
+ 441c858:	cc                   	int3
+ 441c859:	cc                   	int3
+ 441c85a:	cc                   	int3
+ 441c85b:	cc                   	int3
+ 441c85c:	cc                   	int3
+ 441c85d:	cc                   	int3
+ 441c85e:	cc                   	int3
+ 441c85f:	cc                   	int3
+
+000000000441c860 <gonum.org/v1/gonum/internal/asm/c128.AxpyUnitary.abi0@@Base>:
+ 441c860:	48 8b 74 24 18       	mov    0x18(%rsp),%rsi
+ 441c865:	48 8b 7c 24 30       	mov    0x30(%rsp),%rdi
+ 441c86a:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 441c86f:	48 39 4c 24 38       	cmp    %rcx,0x38(%rsp)
+ 441c874:	48 0f 4e 4c 24 38    	cmovle 0x38(%rsp),%rcx
+ 441c87a:	48 83 f9 00          	cmp    $0x0,%rcx
+ 441c87e:	0f 84 07 01 00 00    	je     441c98b <gonum.org/v1/gonum/internal/asm/c128.AxpyUnitary.abi0@@Base+0x12b>
+ 441c884:	66 0f ef c0          	pxor   %xmm0,%xmm0
+ 441c888:	66 0f ef c9          	pxor   %xmm1,%xmm1
+ 441c88c:	0f 10 44 24 08       	movups 0x8(%rsp),%xmm0
+ 441c891:	0f 28 c8             	movaps %xmm0,%xmm1
+ 441c894:	66 0f c6 c9 01       	shufpd $0x1,%xmm1,%xmm1
+ 441c899:	48 31 c0             	xor    %rax,%rax
+ 441c89c:	44 0f 28 d0          	movaps %xmm0,%xmm10
+ 441c8a0:	44 0f 28 d9          	movaps %xmm1,%xmm11
+ 441c8a4:	48 89 cb             	mov    %rcx,%rbx
+ 441c8a7:	48 83 e1 03          	and    $0x3,%rcx
+ 441c8ab:	48 c1 eb 02          	shr    $0x2,%rbx
+ 441c8af:	0f 84 ae 00 00 00    	je     441c963 <gonum.org/v1/gonum/internal/asm/c128.AxpyUnitary.abi0@@Base+0x103>
+ 441c8b5:	0f 10 14 c6          	movups (%rsi,%rax,8),%xmm2
+ 441c8b9:	0f 10 64 c6 10       	movups 0x10(%rsi,%rax,8),%xmm4
+ 441c8be:	0f                   	.byte 0xf
+ 441c8bf:	10                   	.byte 0x10

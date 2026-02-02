@@ -1,0 +1,12 @@
+# Пример конфига для timebeat-reconstructed (формат timebeat.clock_sync)
+timebeat:
+  clock_sync:
+    adjust_clock: true
+    primary_clocks:
+      - protocol: ntp
+        ip: pool.ntp.org
+        pollinterval: 16s
+    secondary_clocks: []
+  servo:
+    algorithm: pid
+    interval: 1s

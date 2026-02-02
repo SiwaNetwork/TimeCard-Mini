@@ -1,0 +1,102 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI
+# addr 0x45963c0 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>:
+ 45963c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45963c4:	0f 86 fd 00 00 00    	jbe    45964c7 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0x107>
+ 45963ca:	48 83 ec 40          	sub    $0x40,%rsp
+ 45963ce:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45963d3:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45963d8:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45963dd:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 45963e2:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 45963e6:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45963eb:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 45963ef:	48 89 74 24 20       	mov    %rsi,0x20(%rsp)
+ 45963f4:	31 c0                	xor    %eax,%eax
+ 45963f6:	eb 1c                	jmp    4596414 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0x54>
+ 45963f8:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 45963fd:	48 ff c0             	inc    %rax
+ 4596400:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4596405:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459640a:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 459640f:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4596414:	48 39 f0             	cmp    %rsi,%rax
+ 4596417:	0f 8d 9e 00 00 00    	jge    45964bb <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0xfb>
+ 459641d:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4596422:	48 8b 3c c2          	mov    (%rdx,%rax,8),%rdi
+ 4596426:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+ 459642b:	4c 8b 47 40          	mov    0x40(%rdi),%r8
+ 459642f:	4d 85 c0             	test   %r8,%r8
+ 4596432:	75 08                	jne    459643c <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0x7c>
+ 4596434:	45 31 c0             	xor    %r8d,%r8d
+ 4596437:	45 31 c9             	xor    %r9d,%r9d
+ 459643a:	eb 2d                	jmp    4596469 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0xa9>
+ 459643c:	4c 89 c0             	mov    %r8,%rax
+ 459643f:	90                   	nop
+ 4596440:	e8 fb 11 ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4596445:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459644a:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459644f:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 4596454:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 4596459:	49 89 d8             	mov    %rbx,%r8
+ 459645c:	49 89 c1             	mov    %rax,%r9
+ 459645f:	48 8b 44 24 18       	mov    0x18(%rsp),%rax
+ 4596464:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4596469:	4c 39 c1             	cmp    %r8,%rcx
+ 459646c:	75 1e                	jne    459648c <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0xcc>
+ 459646e:	4c 89 c8             	mov    %r9,%rax
+ 4596471:	4c 89 c1             	mov    %r8,%rcx
+ 4596474:	e8 a7 d6 94 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4596479:	84 c0                	test   %al,%al
+ 459647b:	75 2f                	jne    45964ac <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0xec>
+ 459647d:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4596482:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4596487:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 459648c:	48 8b 47 40          	mov    0x40(%rdi),%rax
+ 4596490:	e8 8b 15 ff ff       	call   4587a20 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).DoesDeviceHaveName@@Base>
+ 4596495:	84 c0                	test   %al,%al
+ 4596497:	0f 84 5b ff ff ff    	je     45963f8 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base+0x38>
+ 459649d:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45964a2:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45964a7:	48 83 c4 40          	add    $0x40,%rsp
+ 45964ab:	c3                   	ret
+ 45964ac:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45964b1:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45964b6:	48 83 c4 40          	add    $0x40,%rsp
+ 45964ba:	c3                   	ret
+ 45964bb:	31 c0                	xor    %eax,%eax
+ 45964bd:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45964c2:	48 83 c4 40          	add    $0x40,%rsp
+ 45964c6:	c3                   	ret
+ 45964c7:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45964cc:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45964d1:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45964d6:	e8 85 df 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45964db:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45964e0:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45964e5:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45964ea:	e9 d1 fe ff ff       	jmp    45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45964ef:	cc                   	int3
+ 45964f0:	cc                   	int3
+ 45964f1:	cc                   	int3
+ 45964f2:	cc                   	int3
+ 45964f3:	cc                   	int3
+ 45964f4:	cc                   	int3
+ 45964f5:	cc                   	int3
+ 45964f6:	cc                   	int3
+ 45964f7:	cc                   	int3
+ 45964f8:	cc                   	int3
+ 45964f9:	cc                   	int3
+ 45964fa:	cc                   	int3
+ 45964fb:	cc                   	int3
+ 45964fc:	cc                   	int3
+ 45964fd:	cc                   	int3
+ 45964fe:	cc                   	int3
+ 45964ff:	cc                   	int3

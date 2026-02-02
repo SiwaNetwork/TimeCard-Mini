@@ -1,0 +1,122 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus
+# addr 0x4ba1680 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004ba1680 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base>:
+ 4ba1680:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4ba1684:	0f 86 31 01 00 00    	jbe    4ba17bb <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base+0x13b>
+ 4ba168a:	48 83 ec 58          	sub    $0x58,%rsp
+ 4ba168e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 4ba1693:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 4ba1698:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4ba169d:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4ba16a2:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4ba16a7:	48 89 d8             	mov    %rbx,%rax
+ 4ba16aa:	48 89 cb             	mov    %rcx,%rbx
+ 4ba16ad:	e8 4e da 3c fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4ba16b2:	48 85 db             	test   %rbx,%rbx
+ 4ba16b5:	0f 85 d9 00 00 00    	jne    4ba1794 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base+0x114>
+ 4ba16bb:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4ba16c0:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 4ba16c5:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 4ba16c9:	48 89 c3             	mov    %rax,%rbx
+ 4ba16cc:	48 89 d0             	mov    %rdx,%rax
+ 4ba16cf:	e8 2c 1e ff ff       	call   4b93500 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).GetDPLLState@@Base>
+ 4ba16d4:	48 85 db             	test   %rbx,%rbx
+ 4ba16d7:	0f 85 a4 00 00 00    	jne    4ba1781 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base+0x101>
+ 4ba16dd:	0f 1f 00             	nopl   (%rax)
+ 4ba16e0:	e8 db 1f ff ff       	call   4b936c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.DPLLStatusToString@@Base>
+ 4ba16e5:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4ba16ea:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4ba16ef:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 4ba16f4:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4ba16f8:	48 89 c8             	mov    %rcx,%rax
+ 4ba16fb:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 4ba1700:	e8 bb 26 ff ff       	call   4b93dc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).GetDPLLRefState@@Base>
+ 4ba1705:	48 85 db             	test   %rbx,%rbx
+ 4ba1708:	74 13                	je     4ba171d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base+0x9d>
+ 4ba170a:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4ba170e:	48 89 c8             	mov    %rcx,%rax
+ 4ba1711:	ff d2                	call   *%rdx
+ 4ba1713:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4ba1718:	48 83 c4 58          	add    $0x58,%rsp
+ 4ba171c:	c3                   	ret
+ 4ba171d:	0f 1f 00             	nopl   (%rax)
+ 4ba1720:	e8 5b 28 ff ff       	call   4b93f80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.DPLLRefStatusToString@@Base>
+ 4ba1725:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 4ba172b:	e8 30 c6 34 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4ba1730:	48 8d 0d 69 cf c0 00 	lea    0xc0cf69(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4ba1737:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4ba173c:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4ba1741:	48 8d 05 44 48 09 00 	lea    0x94844(%rip),%rax        # 4c35f8c <_IO_stdin_used@@Base+0x2f8c>
+ 4ba1748:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4ba174d:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 4ba1752:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4ba1757:	48 89 fe             	mov    %rdi,%rsi
+ 4ba175a:	e8 a1 31 45 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4ba175f:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 4ba1764:	48 89 c7             	mov    %rax,%rdi
+ 4ba1767:	48 89 de             	mov    %rbx,%rsi
+ 4ba176a:	31 c0                	xor    %eax,%eax
+ 4ba176c:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4ba1771:	e8 aa 8b 39 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4ba1776:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4ba177b:	48 83 c4 58          	add    $0x58,%rsp
+ 4ba177f:	90                   	nop
+ 4ba1780:	c3                   	ret
+ 4ba1781:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4ba1785:	48 89 c8             	mov    %rcx,%rax
+ 4ba1788:	ff d2                	call   *%rdx
+ 4ba178a:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4ba178f:	48 83 c4 58          	add    $0x58,%rsp
+ 4ba1793:	c3                   	ret
+ 4ba1794:	31 c0                	xor    %eax,%eax
+ 4ba1796:	48 8d 1d 36 ed 16 00 	lea    0x16ed36(%rip),%rbx        # 4d104d3 <_IO_stdin_used@@Base+0xdd4d3>
+ 4ba179d:	b9 11 00 00 00       	mov    $0x11,%ecx
+ 4ba17a2:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 4ba17a7:	48 8b 74 24 70       	mov    0x70(%rsp),%rsi
+ 4ba17ac:	e8 6f 8b 39 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4ba17b1:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 4ba17b6:	48 83 c4 58          	add    $0x58,%rsp
+ 4ba17ba:	c3                   	ret
+ 4ba17bb:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4ba17c0:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4ba17c5:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4ba17ca:	e8 91 2c 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4ba17cf:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4ba17d4:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4ba17d9:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4ba17de:	66 90                	xchg   %ax,%ax
+ 4ba17e0:	e9 9b fe ff ff       	jmp    4ba1680 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).ShowDpllStatus@@Base>
+ 4ba17e5:	cc                   	int3
+ 4ba17e6:	cc                   	int3
+ 4ba17e7:	cc                   	int3
+ 4ba17e8:	cc                   	int3
+ 4ba17e9:	cc                   	int3
+ 4ba17ea:	cc                   	int3
+ 4ba17eb:	cc                   	int3
+ 4ba17ec:	cc                   	int3
+ 4ba17ed:	cc                   	int3
+ 4ba17ee:	cc                   	int3
+ 4ba17ef:	cc                   	int3
+ 4ba17f0:	cc                   	int3
+ 4ba17f1:	cc                   	int3
+ 4ba17f2:	cc                   	int3
+ 4ba17f3:	cc                   	int3
+ 4ba17f4:	cc                   	int3
+ 4ba17f5:	cc                   	int3
+ 4ba17f6:	cc                   	int3
+ 4ba17f7:	cc                   	int3
+ 4ba17f8:	cc                   	int3
+ 4ba17f9:	cc                   	int3
+ 4ba17fa:	cc                   	int3
+ 4ba17fb:	cc                   	int3
+ 4ba17fc:	cc                   	int3
+ 4ba17fd:	cc                   	int3
+ 4ba17fe:	cc                   	int3
+ 4ba17ff:	cc                   	int3

@@ -1,0 +1,150 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks
+# addr 0x45a22e0 size 512 (0x200)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a22e0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base>:
+ 45a22e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a22e4:	0f 86 c5 01 00 00    	jbe    45a24af <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x1cf>
+ 45a22ea:	48 83 ec 78          	sub    $0x78,%rsp
+ 45a22ee:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 45a22f3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 45a22f8:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 45a22ff:	00 
+ 45a2300:	b8 00 ca 9a 3b       	mov    $0x3b9aca00,%eax
+ 45a2305:	e8 36 76 a2 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 45a230a:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45a230f:	eb 05                	jmp    45a2316 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x36>
+ 45a2311:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45a2316:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a231d:	00 
+ 45a231e:	4c 8b 0a             	mov    (%rdx),%r9
+ 45a2321:	4c 8b 10             	mov    (%rax),%r10
+ 45a2324:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45a232a:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 45a2330:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 45a2335:	4c 89 54 24 50       	mov    %r10,0x50(%rsp)
+ 45a233a:	48 8d 5c 24 38       	lea    0x38(%rsp),%rbx
+ 45a233f:	31 c9                	xor    %ecx,%ecx
+ 45a2341:	31 ff                	xor    %edi,%edi
+ 45a2343:	be 02 00 00 00       	mov    $0x2,%esi
+ 45a2348:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a234e:	48 8d 44 24 50       	lea    0x50(%rsp),%rax
+ 45a2353:	e8 68 e8 98 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45a2358:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 45a235f:	00 
+ 45a2360:	48 85 c0             	test   %rax,%rax
+ 45a2363:	0f 85 3c 01 00 00    	jne    45a24a5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x1c5>
+ 45a2369:	31 c0                	xor    %eax,%eax
+ 45a236b:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a2372:	00 
+ 45a2373:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a2379:	f0 44 0f b1 4a 44    	lock cmpxchg %r9d,0x44(%rdx)
+ 45a237f:	41 0f 94 c2          	sete   %r10b
+ 45a2383:	48 8d 42 44          	lea    0x44(%rdx),%rax
+ 45a2387:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45a238c:	45 84 d2             	test   %r10b,%r10b
+ 45a238f:	75 18                	jne    45a23a9 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0xc9>
+ 45a2391:	e8 aa 61 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45a2396:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45a239b:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a23a2:	00 
+ 45a23a3:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a23a9:	4c 8b 52 18          	mov    0x18(%rdx),%r10
+ 45a23ad:	41 80 ba b9 00 00 00 	cmpb   $0x0,0xb9(%r10)
+ 45a23b4:	00 
+ 45a23b5:	74 2f                	je     45a23e6 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x106>
+ 45a23b7:	48 8b 42 30          	mov    0x30(%rdx),%rax
+ 45a23bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a23c0:	e8 3b 33 ff ff       	call   4595700 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogForSlaveClocks@@Base>
+ 45a23c5:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 45a23cc:	00 
+ 45a23cd:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45a23d1:	c6 82 b9 00 00 00 00 	movb   $0x0,0xb9(%rdx)
+ 45a23d8:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45a23dd:	48 89 ca             	mov    %rcx,%rdx
+ 45a23e0:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a23e6:	4c 8b 52 18          	mov    0x18(%rdx),%r10
+ 45a23ea:	41 80 ba b8 00 00 00 	cmpb   $0x0,0xb8(%r10)
+ 45a23f1:	00 
+ 45a23f2:	0f 84 7c 00 00 00    	je     45a2474 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x194>
+ 45a23f8:	48 8b 42 28          	mov    0x28(%rdx),%rax
+ 45a23fc:	48 8b 18             	mov    (%rax),%rbx
+ 45a23ff:	48 8b 48 08          	mov    0x8(%rax),%rcx
+ 45a2403:	48 8b 78 10          	mov    0x10(%rax),%rdi
+ 45a2407:	e8 b4 83 00 00       	call   45aa7c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).getOffsetRange@@Base>
+ 45a240c:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45a2411:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a2418:	00 
+ 45a2419:	48 8b 72 28          	mov    0x28(%rdx),%rsi
+ 45a241d:	48 89 f0             	mov    %rsi,%rax
+ 45a2420:	e8 5b 81 00 00       	call   45aa580 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Traceability).ResetOffsets@@Base>
+ 45a2425:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a242c:	00 
+ 45a242d:	48 8b 72 30          	mov    0x30(%rdx),%rsi
+ 45a2431:	48 8b 06             	mov    (%rsi),%rax
+ 45a2434:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45a2439:	31 c9                	xor    %ecx,%ecx
+ 45a243b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45a2440:	e8 3b 15 ff ff       	call   4593980 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).LogRawAndEMAData@@Base>
+ 45a2445:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a244c:	00 
+ 45a244d:	48 8b 42 30          	mov    0x30(%rdx),%rax
+ 45a2451:	e8 aa 3d ff ff       	call   4596200 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base>
+ 45a2456:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a245d:	00 
+ 45a245e:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 45a2462:	c6 86 b8 00 00 00 00 	movb   $0x0,0xb8(%rsi)
+ 45a2469:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45a246e:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a2474:	90                   	nop
+ 45a2475:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 45a247a:	f0 0f c1 5a 44       	lock xadd %ebx,0x44(%rdx)
+ 45a247f:	ff cb                	dec    %ebx
+ 45a2481:	85 db                	test   %ebx,%ebx
+ 45a2483:	0f 84 88 fe ff ff    	je     45a2311 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x31>
+ 45a2489:	e8 b2 63 9d fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 45a248e:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 45a2495:	00 
+ 45a2496:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a249c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a24a0:	e9 6c fe ff ff       	jmp    45a2311 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base+0x31>
+ 45a24a5:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 45a24aa:	48 83 c4 78          	add    $0x78,%rsp
+ 45a24ae:	c3                   	ret
+ 45a24af:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a24b4:	e8 a7 1f 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a24b9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a24be:	66 90                	xchg   %ax,%ax
+ 45a24c0:	e9 1b fe ff ff       	jmp    45a22e0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunPeriodicLogForAllClocks@@Base>
+ 45a24c5:	cc                   	int3
+ 45a24c6:	cc                   	int3
+ 45a24c7:	cc                   	int3
+ 45a24c8:	cc                   	int3
+ 45a24c9:	cc                   	int3
+ 45a24ca:	cc                   	int3
+ 45a24cb:	cc                   	int3
+ 45a24cc:	cc                   	int3
+ 45a24cd:	cc                   	int3
+ 45a24ce:	cc                   	int3
+ 45a24cf:	cc                   	int3
+ 45a24d0:	cc                   	int3
+ 45a24d1:	cc                   	int3
+ 45a24d2:	cc                   	int3
+ 45a24d3:	cc                   	int3
+ 45a24d4:	cc                   	int3
+ 45a24d5:	cc                   	int3
+ 45a24d6:	cc                   	int3
+ 45a24d7:	cc                   	int3
+ 45a24d8:	cc                   	int3
+ 45a24d9:	cc                   	int3
+ 45a24da:	cc                   	int3
+ 45a24db:	cc                   	int3
+ 45a24dc:	cc                   	int3
+ 45a24dd:	cc                   	int3
+ 45a24de:	cc                   	int3
+ 45a24df:	cc                   	int3

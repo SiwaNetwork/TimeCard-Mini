@@ -1,0 +1,60 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic
+# addr 0x45ed5a0 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ed5a0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base>:
+ 45ed5a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ed5a4:	0f 86 9c 00 00 00    	jbe    45ed646 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base+0xa6>
+ 45ed5aa:	48 83 ec 28          	sub    $0x28,%rsp
+ 45ed5ae:	48 89 6c 24 20       	mov    %rbp,0x20(%rsp)
+ 45ed5b3:	48 8d 6c 24 20       	lea    0x20(%rsp),%rbp
+ 45ed5b8:	48 8b 88 a0 02 00 00 	mov    0x2a0(%rax),%rcx
+ 45ed5bf:	48 ff c1             	inc    %rcx
+ 45ed5c2:	48 89 88 a0 02 00 00 	mov    %rcx,0x2a0(%rax)
+ 45ed5c9:	48 83 f9 3c          	cmp    $0x3c,%rcx
+ 45ed5cd:	7c 6d                	jl     45ed63c <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base+0x9c>
+ 45ed5cf:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45ed5d4:	e8 a7 31 fb ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 45ed5d9:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45ed5de:	48 8b 99 90 01 00 00 	mov    0x190(%rcx),%rbx
+ 45ed5e5:	48 8b 91 98 01 00 00 	mov    0x198(%rcx),%rdx
+ 45ed5ec:	48 8b 40 10          	mov    0x10(%rax),%rax
+ 45ed5f0:	48 89 d1             	mov    %rdx,%rcx
+ 45ed5f3:	e8 c8 8a fb ff       	call   45a60c0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetActiveSourceGroupMembers@@Base>
+ 45ed5f8:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45ed5fd:	48 8b b2 80 02 00 00 	mov    0x280(%rdx),%rsi
+ 45ed604:	48 83 fe 01          	cmp    $0x1,%rsi
+ 45ed608:	74 1d                	je     45ed627 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base+0x87>
+ 45ed60a:	48 83 fe 02          	cmp    $0x2,%rsi
+ 45ed60e:	75 22                	jne    45ed632 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base+0x92>
+ 45ed610:	48 89 cf             	mov    %rcx,%rdi
+ 45ed613:	48 89 d9             	mov    %rbx,%rcx
+ 45ed616:	48 89 c3             	mov    %rax,%rbx
+ 45ed619:	48 89 d0             	mov    %rdx,%rax
+ 45ed61c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45ed620:	e8 fb 01 00 00       	call   45ed820 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).executeHoldoverOnSourceRangeExceeded@@Base>
+ 45ed625:	eb 0b                	jmp    45ed632 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base+0x92>
+ 45ed627:	48 89 c3             	mov    %rax,%rbx
+ 45ed62a:	48 89 d0             	mov    %rdx,%rax
+ 45ed62d:	e8 6e 01 00 00       	call   45ed7a0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).executeHoldoverOnNoGroupMembers@@Base>
+ 45ed632:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 45ed637:	48 83 c4 28          	add    $0x28,%rsp
+ 45ed63b:	c3                   	ret
+ 45ed63c:	48 8b 6c 24 20       	mov    0x20(%rsp),%rbp
+ 45ed641:	48 83 c4 28          	add    $0x28,%rsp
+ 45ed645:	c3                   	ret
+ 45ed646:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ed64b:	e8 10 6e 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ed650:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ed655:	e9 46 ff ff ff       	jmp    45ed5a0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).processPeriodic@@Base>
+ 45ed65a:	cc                   	int3
+ 45ed65b:	cc                   	int3
+ 45ed65c:	cc                   	int3
+ 45ed65d:	cc                   	int3
+ 45ed65e:	cc                   	int3
+ 45ed65f:	cc                   	int3

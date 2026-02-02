@@ -1,0 +1,80 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1
+# addr 0x4b67ce0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b67ce0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1@@Base>:
+ 4b67ce0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b67ce4:	0f 86 ae 00 00 00    	jbe    4b67d98 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1@@Base+0xb8>
+ 4b67cea:	48 83 ec 30          	sub    $0x30,%rsp
+ 4b67cee:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4b67cf3:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4b67cf8:	48 8b 05 69 44 2c 03 	mov    0x32c4469(%rip),%rax        # 7e2c168 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.ptpsquaredState@@Base>
+ 4b67cff:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 4b67d04:	e8 37 95 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b67d09:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4b67d0e:	e8 2d 95 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b67d13:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4b67d18:	48 8d 05 01 88 25 01 	lea    0x1258801(%rip),%rax        # 5dc0520 <type:HRDPXEwE@@Base>
+ 4b67d1f:	90                   	nop
+ 4b67d20:	e8 bb 87 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b67d25:	83 3d 34 3c 31 03 00 	cmpl   $0x0,0x3313c34(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b67d2c:	75 23                	jne    4b67d51 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1@@Base+0x71>
+ 4b67d2e:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 4b67d33:	48 89 08             	mov    %rcx,(%rax)
+ 4b67d36:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4b67d3b:	48 89 48 58          	mov    %rcx,0x58(%rax)
+ 4b67d3f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4b67d44:	48 89 48 48          	mov    %rcx,0x48(%rax)
+ 4b67d48:	48 89 05 21 44 2c 03 	mov    %rax,0x32c4421(%rip)        # 7e2c170 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.scoreStoreInstance@@Base>
+ 4b67d4f:	eb 38                	jmp    4b67d89 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1@@Base+0xa9>
+ 4b67d51:	48 89 c7             	mov    %rax,%rdi
+ 4b67d54:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 4b67d59:	e8 a2 e9 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b67d5e:	48 8d 48 58          	lea    0x58(%rax),%rcx
+ 4b67d62:	48 89 cf             	mov    %rcx,%rdi
+ 4b67d65:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 4b67d6a:	e8 b1 e9 3e fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b67d6f:	48 8d 78 48          	lea    0x48(%rax),%rdi
+ 4b67d73:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4b67d78:	e8 83 e9 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b67d7d:	48 8d 3d ec 43 2c 03 	lea    0x32c43ec(%rip),%rdi        # 7e2c170 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.scoreStoreInstance@@Base>
+ 4b67d84:	e8 77 e8 3e fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b67d89:	e8 f2 d8 ff ff       	call   4b65680 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).parseThisHostCapabilities@@Base>
+ 4b67d8e:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 4b67d93:	48 83 c4 30          	add    $0x30,%rsp
+ 4b67d97:	c3                   	ret
+ 4b67d98:	e8 c3 c6 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b67d9d:	0f 1f 00             	nopl   (%rax)
+ 4b67da0:	e9 3b ff ff ff       	jmp    4b67ce0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore.func1@@Base>
+ 4b67da5:	cc                   	int3
+ 4b67da6:	cc                   	int3
+ 4b67da7:	cc                   	int3
+ 4b67da8:	cc                   	int3
+ 4b67da9:	cc                   	int3
+ 4b67daa:	cc                   	int3
+ 4b67dab:	cc                   	int3
+ 4b67dac:	cc                   	int3
+ 4b67dad:	cc                   	int3
+ 4b67dae:	cc                   	int3
+ 4b67daf:	cc                   	int3
+ 4b67db0:	cc                   	int3
+ 4b67db1:	cc                   	int3
+ 4b67db2:	cc                   	int3
+ 4b67db3:	cc                   	int3
+ 4b67db4:	cc                   	int3
+ 4b67db5:	cc                   	int3
+ 4b67db6:	cc                   	int3
+ 4b67db7:	cc                   	int3
+ 4b67db8:	cc                   	int3
+ 4b67db9:	cc                   	int3
+ 4b67dba:	cc                   	int3
+ 4b67dbb:	cc                   	int3
+ 4b67dbc:	cc                   	int3
+ 4b67dbd:	cc                   	int3
+ 4b67dbe:	cc                   	int3
+ 4b67dbf:	cc                   	int3

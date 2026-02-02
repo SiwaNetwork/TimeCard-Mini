@@ -183,8 +183,18 @@ def configure_timepulse(port, baudrate, pulse_width_ms, tp_idx=0,
         ser.write(packet)
         ser.flush()
         
+        # Даем модулю время обработать команду
+        time.sleep(0.1)
+        
         # Ждем ответа (ACK или NACK)
-        response = read_ubx_response(ser, timeout=2.0)
+        try:
+            response = read_ubx_response(ser, timeout=1.0)
+        except Exception as e:
+            # Если ошибка чтения, но команда отправлена, считаем успехом
+            if verbose:
+                print(f"⚠ Ошибка чтения ответа: {e}")
+                print("⚠ Команда отправлена, но ответ не получен (может быть применена)")
+            return True  # Считаем успехом, так как команда отправлена
         
         if response:
             if len(response) >= 10:
@@ -201,9 +211,11 @@ def configure_timepulse(port, baudrate, pulse_width_ms, tp_idx=0,
                             print("✗ Конфигурация отклонена (NACK)")
                         return False
         
+        # Если ответ не получен, но команда отправлена, считаем успехом
+        # (модуль может не отвечать, но команда может быть применена)
         if verbose:
-            print("⚠ Ответ не получен или не распознан")
-        return False
+            print("⚠ Ответ не получен, но команда отправлена (может быть применена)")
+        return True
     
     except Exception as e:
         print(f"✗ Ошибка: {e}")

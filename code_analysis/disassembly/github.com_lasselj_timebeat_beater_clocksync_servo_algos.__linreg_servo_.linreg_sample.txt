@@ -1,0 +1,292 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample
+# addr 0x457d540 size 1056 (0x420)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457d540 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base>:
+ 457d540:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457d544:	0f 86 bc 03 00 00    	jbe    457d906 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x3c6>
+ 457d54a:	48 83 ec 18          	sub    $0x18,%rsp
+ 457d54e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 457d553:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 457d558:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 457d55d:	48 89 7c 24 40       	mov    %rdi,0x40(%rsp)
+ 457d562:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 457d567:	f2 0f 11 44 24 38    	movsd  %xmm0,0x38(%rsp)
+ 457d56d:	48 89 cb             	mov    %rcx,%rbx
+ 457d570:	e8 4b fb ff ff       	call   457d0c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).update_reference@@Base>
+ 457d575:	90                   	nop
+ 457d576:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 457d57b:	48 8b 88 20 06 00 00 	mov    0x620(%rax),%rcx
+ 457d582:	48 ff c1             	inc    %rcx
+ 457d585:	83 e1 3f             	and    $0x3f,%ecx
+ 457d588:	48 89 88 20 06 00 00 	mov    %rcx,0x620(%rax)
+ 457d58f:	48 8d 0c 49          	lea    (%rcx,%rcx,2),%rcx
+ 457d593:	48 8b 90 00 06 00 00 	mov    0x600(%rax),%rdx
+ 457d59a:	48 89 14 c8          	mov    %rdx,(%rax,%rcx,8)
+ 457d59e:	48 8b 88 20 06 00 00 	mov    0x620(%rax),%rcx
+ 457d5a5:	48 8b 90 08 06 00 00 	mov    0x608(%rax),%rdx
+ 457d5ac:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 457d5b1:	48 29 f2             	sub    %rsi,%rdx
+ 457d5b4:	48 83 f9 40          	cmp    $0x40,%rcx
+ 457d5b8:	0f 83 3a 03 00 00    	jae    457d8f8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x3b8>
+ 457d5be:	48 8d 1c 49          	lea    (%rcx,%rcx,2),%rbx
+ 457d5c2:	48 89 54 d8 08       	mov    %rdx,0x8(%rax,%rbx,8)
+ 457d5c7:	48 8b 90 20 06 00 00 	mov    0x620(%rax),%rdx
+ 457d5ce:	48 83 fa 40          	cmp    $0x40,%rdx
+ 457d5d2:	0f 83 13 03 00 00    	jae    457d8eb <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x3ab>
+ 457d5d8:	48 8d 0c 52          	lea    (%rdx,%rdx,2),%rcx
+ 457d5dc:	f2 0f 10 44 24 38    	movsd  0x38(%rsp),%xmm0
+ 457d5e2:	f2 0f 11 44 c8 10    	movsd  %xmm0,0x10(%rax,%rcx,8)
+ 457d5e8:	48 8b 88 18 06 00 00 	mov    0x618(%rax),%rcx
+ 457d5ef:	48 83 f9 40          	cmp    $0x40,%rcx
+ 457d5f3:	73 0b                	jae    457d600 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0xc0>
+ 457d5f5:	48 ff c1             	inc    %rcx
+ 457d5f8:	48 89 88 18 06 00 00 	mov    %rcx,0x618(%rax)
+ 457d5ff:	90                   	nop
+ 457d600:	e8 3b fc ff ff       	call   457d240 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).regress@@Base>
+ 457d605:	90                   	nop
+ 457d606:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 457d60b:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 457d610:	31 d2                	xor    %edx,%edx
+ 457d612:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457d615:	eb 0a                	jmp    457d621 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0xe1>
+ 457d617:	48 8d 5a 01          	lea    0x1(%rdx),%rbx
+ 457d61b:	48 89 ca             	mov    %rcx,%rdx
+ 457d61e:	48 89 d9             	mov    %rbx,%rcx
+ 457d621:	48 83 f9 06          	cmp    $0x6,%rcx
+ 457d625:	7f 76                	jg     457d69d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x15d>
+ 457d627:	48 8d 59 fe          	lea    -0x2(%rcx),%rbx
+ 457d62b:	48 c1 e3 05          	shl    $0x5,%rbx
+ 457d62f:	48 85 d2             	test   %rdx,%rdx
+ 457d632:	75 16                	jne    457d64a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x10a>
+ 457d634:	f2 0f 10 8c 18 38 06 	movsd  0x638(%rax,%rbx,1),%xmm1
+ 457d63b:	00 00 
+ 457d63d:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 457d640:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 457d644:	75 30                	jne    457d676 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x136>
+ 457d646:	7a 2e                	jp     457d676 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x136>
+ 457d648:	eb 03                	jmp    457d64d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x10d>
+ 457d64a:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 457d64d:	f2 0f 10 0d 5b 0e f6 	movsd  0xf60e5b(%rip),%xmm1        # 54de4b0 <_IO_stdin_used@@Base+0x8ab4b0>
+ 457d654:	00 
+ 457d655:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+ 457d659:	f2 0f 10 9c 18 48 06 	movsd  0x648(%rax,%rbx,1),%xmm3
+ 457d660:	00 00 
+ 457d662:	66 0f 2e cb          	ucomisd %xmm3,%xmm1
+ 457d666:	76 27                	jbe    457d68f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x14f>
+ 457d668:	48 8b b4 18 50 06 00 	mov    0x650(%rax,%rbx,1),%rsi
+ 457d66f:	00 
+ 457d670:	48 83 fe 0a          	cmp    $0xa,%rsi
+ 457d674:	7c 0e                	jl     457d684 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x144>
+ 457d676:	f2 0f 10 84 18 48 06 	movsd  0x648(%rax,%rbx,1),%xmm0
+ 457d67d:	00 00 
+ 457d67f:	48 89 ca             	mov    %rcx,%rdx
+ 457d682:	eb 93                	jmp    457d617 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0xd7>
+ 457d684:	48 89 d3             	mov    %rdx,%rbx
+ 457d687:	48 89 ca             	mov    %rcx,%rdx
+ 457d68a:	48 89 d9             	mov    %rbx,%rcx
+ 457d68d:	eb 88                	jmp    457d617 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0xd7>
+ 457d68f:	48 89 d3             	mov    %rdx,%rbx
+ 457d692:	48 89 ca             	mov    %rcx,%rdx
+ 457d695:	48 89 d9             	mov    %rbx,%rcx
+ 457d698:	e9 7a ff ff ff       	jmp    457d617 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0xd7>
+ 457d69d:	48 89 90 d8 06 00 00 	mov    %rdx,0x6d8(%rax)
+ 457d6a4:	48 83 fa 02          	cmp    $0x2,%rdx
+ 457d6a8:	0f 82 d1 00 00 00    	jb     457d77f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x23f>
+ 457d6ae:	48 83 c2 fe          	add    $0xfffffffffffffffe,%rdx
+ 457d6b2:	48 83 fa 05          	cmp    $0x5,%rdx
+ 457d6b6:	0f 83 22 02 00 00    	jae    457d8de <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x39e>
+ 457d6bc:	48 c1 e2 05          	shl    $0x5,%rdx
+ 457d6c0:	48 83 b8 18 07 00 00 	cmpq   $0x0,0x718(%rax)
+ 457d6c7:	00 
+ 457d6c8:	74 3c                	je     457d706 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x1c6>
+ 457d6ca:	f2 0f 10 88 10 07 00 	movsd  0x710(%rax),%xmm1
+ 457d6d1:	00 
+ 457d6d2:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 457d6d5:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 457d6d9:	75 02                	jne    457d6dd <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x19d>
+ 457d6db:	7b 2c                	jnp    457d709 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x1c9>
+ 457d6dd:	f2 0f 10 88 10 07 00 	movsd  0x710(%rax),%xmm1
+ 457d6e4:	00 
+ 457d6e5:	f2 0f 10 9c 10 40 06 	movsd  0x640(%rax,%rdx,1),%xmm3
+ 457d6ec:	00 00 
+ 457d6ee:	66 48 0f 7e d9       	movq   %xmm3,%rcx
+ 457d6f3:	48 0f ba f1 3f       	btr    $0x3f,%rcx
+ 457d6f8:	66 48 0f 6e d9       	movq   %rcx,%xmm3
+ 457d6fd:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 457d701:	0f 97 c1             	seta   %cl
+ 457d704:	eb 05                	jmp    457d70b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x1cb>
+ 457d706:	0f 57 d2             	xorps  %xmm2,%xmm2
+ 457d709:	31 c9                	xor    %ecx,%ecx
+ 457d70b:	84 c9                	test   %cl,%cl
+ 457d70d:	74 07                	je     457d716 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x1d6>
+ 457d70f:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 457d714:	eb 3b                	jmp    457d751 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x211>
+ 457d716:	f2 0f 10 88 08 07 00 	movsd  0x708(%rax),%xmm1
+ 457d71d:	00 
+ 457d71e:	66 0f 2e ca          	ucomisd %xmm2,%xmm1
+ 457d722:	75 02                	jne    457d726 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x1e6>
+ 457d724:	7b 29                	jnp    457d74f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x20f>
+ 457d726:	f2 0f 10 88 08 07 00 	movsd  0x708(%rax),%xmm1
+ 457d72d:	00 
+ 457d72e:	f2 0f 10 9c 10 40 06 	movsd  0x640(%rax,%rdx,1),%xmm3
+ 457d735:	00 00 
+ 457d737:	66 48 0f 7e d9       	movq   %xmm3,%rcx
+ 457d73c:	48 0f ba f1 3f       	btr    $0x3f,%rcx
+ 457d741:	66 48 0f 6e d9       	movq   %rcx,%xmm3
+ 457d746:	66 0f 2e d9          	ucomisd %xmm1,%xmm3
+ 457d74a:	0f 97 c1             	seta   %cl
+ 457d74d:	eb 02                	jmp    457d751 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x211>
+ 457d74f:	31 c9                	xor    %ecx,%ecx
+ 457d751:	84 c9                	test   %cl,%cl
+ 457d753:	74 1c                	je     457d771 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x231>
+ 457d755:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 457d75a:	48 29 88 08 06 00 00 	sub    %rcx,0x608(%rax)
+ 457d761:	48 89 cb             	mov    %rcx,%rbx
+ 457d764:	48 f7 d9             	neg    %rcx
+ 457d767:	be 02 00 00 00       	mov    $0x2,%esi
+ 457d76c:	e9 4f 01 00 00       	jmp    457d8c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x380>
+ 457d771:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 457d776:	48 c7 01 02 00 00 00 	movq   $0x2,(%rcx)
+ 457d77d:	eb 2a                	jmp    457d7a9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x269>
+ 457d77f:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 457d784:	48 c7 01 00 00 00 00 	movq   $0x0,(%rcx)
+ 457d78b:	f2 0f 10 80 e0 06 00 	movsd  0x6e0(%rax),%xmm0
+ 457d792:	00 
+ 457d793:	f2 0f 10 0d 2d 12 f6 	movsd  0xf6122d(%rip),%xmm1        # 54de9c8 <_IO_stdin_used@@Base+0x8ab9c8>
+ 457d79a:	00 
+ 457d79b:	66 0f ef c1          	pxor   %xmm1,%xmm0
+ 457d79f:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 457d7a4:	48 83 c4 18          	add    $0x18,%rsp
+ 457d7a8:	c3                   	ret
+ 457d7a9:	f2 0f 10 8c 10 38 06 	movsd  0x638(%rax,%rdx,1),%xmm1
+ 457d7b0:	00 00 
+ 457d7b2:	f2 0f 10 15 de 0c f6 	movsd  0xf60cde(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457d7b9:	00 
+ 457d7ba:	f2 0f 5c ca          	subsd  %xmm2,%xmm1
+ 457d7be:	f2 0f 10 1d e2 10 f6 	movsd  0xf610e2(%rip),%xmm3        # 54de8a8 <_IO_stdin_used@@Base+0x8ab8a8>
+ 457d7c5:	00 
+ 457d7c6:	f2 0f 59 cb          	mulsd  %xmm3,%xmm1
+ 457d7ca:	f2 0f 11 88 e0 06 00 	movsd  %xmm1,0x6e0(%rax)
+ 457d7d1:	00 
+ 457d7d2:	48 8b 88 d8 06 00 00 	mov    0x6d8(%rax),%rcx
+ 457d7d9:	48 89 cb             	mov    %rcx,%rbx
+ 457d7dc:	48 d1 e9             	shr    $1,%rcx
+ 457d7df:	48 83 fb 04          	cmp    $0x4,%rbx
+ 457d7e3:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 457d7e8:	48 0f 46 cb          	cmovbe %rbx,%rcx
+ 457d7ec:	f2 0f 10 a4 10 40 06 	movsd  0x640(%rax,%rdx,1),%xmm4
+ 457d7f3:	00 00 
+ 457d7f5:	f2 0f 5e a0 e8 06 00 	divsd  0x6e8(%rax),%xmm4
+ 457d7fc:	00 
+ 457d7fd:	0f 57 ed             	xorps  %xmm5,%xmm5
+ 457d800:	f2 48 0f 2a e9       	cvtsi2sd %rcx,%xmm5
+ 457d805:	f2 0f 5e e5          	divsd  %xmm5,%xmm4
+ 457d809:	f2 0f 58 cc          	addsd  %xmm4,%xmm1
+ 457d80d:	f2 0f 11 88 e0 06 00 	movsd  %xmm1,0x6e0(%rax)
+ 457d814:	00 
+ 457d815:	f2 0f 10 a0 00 07 00 	movsd  0x700(%rax),%xmm4
+ 457d81c:	00 
+ 457d81d:	66 0f 2e cc          	ucomisd %xmm4,%xmm1
+ 457d821:	76 0a                	jbe    457d82d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x2ed>
+ 457d823:	f2 0f 11 a0 e0 06 00 	movsd  %xmm4,0x6e0(%rax)
+ 457d82a:	00 
+ 457d82b:	eb 1a                	jmp    457d847 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x307>
+ 457d82d:	f2 0f 10 2d 93 11 f6 	movsd  0xf61193(%rip),%xmm5        # 54de9c8 <_IO_stdin_used@@Base+0x8ab9c8>
+ 457d834:	00 
+ 457d835:	66 0f ef e5          	pxor   %xmm5,%xmm4
+ 457d839:	66 0f 2e e1          	ucomisd %xmm1,%xmm4
+ 457d83d:	76 08                	jbe    457d847 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x307>
+ 457d83f:	f2 0f 11 a0 e0 06 00 	movsd  %xmm4,0x6e0(%rax)
+ 457d846:	00 
+ 457d847:	f2 0f 10 8c 10 38 06 	movsd  0x638(%rax,%rdx,1),%xmm1
+ 457d84e:	00 00 
+ 457d850:	f2 0f 10 a0 e0 06 00 	movsd  0x6e0(%rax),%xmm4
+ 457d857:	00 
+ 457d858:	f2 0f 5e e3          	divsd  %xmm3,%xmm4
+ 457d85c:	f2 0f 58 d4          	addsd  %xmm4,%xmm2
+ 457d860:	f2 0f 5e ca          	divsd  %xmm2,%xmm1
+ 457d864:	f2 0f 11 88 f0 06 00 	movsd  %xmm1,0x6f0(%rax)
+ 457d86b:	00 
+ 457d86c:	f2 0f 10 80 e0 06 00 	movsd  0x6e0(%rax),%xmm0
+ 457d873:	00 
+ 457d874:	f2 0f 10 0d 4c 11 f6 	movsd  0xf6114c(%rip),%xmm1        # 54de9c8 <_IO_stdin_used@@Base+0x8ab9c8>
+ 457d87b:	00 
+ 457d87c:	66 0f ef c1          	pxor   %xmm1,%xmm0
+ 457d880:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 457d885:	48 83 c4 18          	add    $0x18,%rsp
+ 457d889:	c3                   	ret
+ 457d88a:	48 8d 7e fe          	lea    -0x2(%rsi),%rdi
+ 457d88e:	48 c1 e7 05          	shl    $0x5,%rdi
+ 457d892:	f2 0f 10 8c 38 38 06 	movsd  0x638(%rax,%rdi,1),%xmm1
+ 457d899:	00 00 
+ 457d89b:	f2 0f 59 ca          	mulsd  %xmm2,%xmm1
+ 457d89f:	0f 57 db             	xorps  %xmm3,%xmm3
+ 457d8a2:	f2 48 0f 2a d9       	cvtsi2sd %rcx,%xmm3
+ 457d8a7:	f2 0f 5c cb          	subsd  %xmm3,%xmm1
+ 457d8ab:	f2 0f 58 8c 38 40 06 	addsd  0x640(%rax,%rdi,1),%xmm1
+ 457d8b2:	00 00 
+ 457d8b4:	f2 0f 11 8c 38 40 06 	movsd  %xmm1,0x640(%rax,%rdi,1)
+ 457d8bb:	00 00 
+ 457d8bd:	48 ff c6             	inc    %rsi
+ 457d8c0:	48 83 fe 06          	cmp    $0x6,%rsi
+ 457d8c4:	7e c4                	jle    457d88a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x34a>
+ 457d8c6:	48 29 98 30 06 00 00 	sub    %rbx,0x630(%rax)
+ 457d8cd:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 457d8d2:	48 c7 01 01 00 00 00 	movq   $0x1,(%rcx)
+ 457d8d9:	e9 cb fe ff ff       	jmp    457d7a9 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base+0x269>
+ 457d8de:	48 89 d0             	mov    %rdx,%rax
+ 457d8e1:	b9 05 00 00 00       	mov    $0x5,%ecx
+ 457d8e6:	e8 d5 91 9d fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 457d8eb:	48 89 d0             	mov    %rdx,%rax
+ 457d8ee:	b9 40 00 00 00       	mov    $0x40,%ecx
+ 457d8f3:	e8 c8 91 9d fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 457d8f8:	48 89 c8             	mov    %rcx,%rax
+ 457d8fb:	b9 40 00 00 00       	mov    $0x40,%ecx
+ 457d900:	e8 bb 91 9d fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 457d905:	90                   	nop
+ 457d906:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457d90b:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457d910:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 457d915:	f2 0f 11 44 24 20    	movsd  %xmm0,0x20(%rsp)
+ 457d91b:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+ 457d920:	e8 3b 6b 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457d925:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457d92a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457d92f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457d934:	f2 0f 10 44 24 20    	movsd  0x20(%rsp),%xmm0
+ 457d93a:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 457d93f:	90                   	nop
+ 457d940:	e9 fb fb ff ff       	jmp    457d540 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).linreg_sample@@Base>
+ 457d945:	cc                   	int3
+ 457d946:	cc                   	int3
+ 457d947:	cc                   	int3
+ 457d948:	cc                   	int3
+ 457d949:	cc                   	int3
+ 457d94a:	cc                   	int3
+ 457d94b:	cc                   	int3
+ 457d94c:	cc                   	int3
+ 457d94d:	cc                   	int3
+ 457d94e:	cc                   	int3
+ 457d94f:	cc                   	int3
+ 457d950:	cc                   	int3
+ 457d951:	cc                   	int3
+ 457d952:	cc                   	int3
+ 457d953:	cc                   	int3
+ 457d954:	cc                   	int3
+ 457d955:	cc                   	int3
+ 457d956:	cc                   	int3
+ 457d957:	cc                   	int3
+ 457d958:	cc                   	int3
+ 457d959:	cc                   	int3
+ 457d95a:	cc                   	int3
+ 457d95b:	cc                   	int3
+ 457d95c:	cc                   	int3
+ 457d95d:	cc                   	int3
+ 457d95e:	cc                   	int3
+ 457d95f:	cc                   	int3

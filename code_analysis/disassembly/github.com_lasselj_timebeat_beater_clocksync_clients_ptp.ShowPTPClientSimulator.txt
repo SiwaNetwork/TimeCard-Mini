@@ -1,0 +1,45 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPClientSimulator
+# addr 0x45e5b40 size 160 (0xa0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045e5b40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPClientSimulator@@Base>:
+ 45e5b40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45e5b44:	76 7c                	jbe    45e5bc2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPClientSimulator@@Base+0x82>
+ 45e5b46:	48 83 ec 40          	sub    $0x40,%rsp
+ 45e5b4a:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45e5b4f:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45e5b54:	48 8b 0d e5 65 84 03 	mov    0x38465e5(%rip),%rcx        # 7e2c140 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.controller@@Base>
+ 45e5b5b:	44 0f 11 7c 24 10    	movups %xmm15,0x10(%rsp)
+ 45e5b61:	48 c7 44 24 20 00 00 	movq   $0x0,0x20(%rsp)
+ 45e5b68:	00 00 
+ 45e5b6a:	66 c7 44 24 28 00 00 	movw   $0x0,0x28(%rsp)
+ 45e5b71:	c6 44 24 2a 00       	movb   $0x0,0x2a(%rsp)
+ 45e5b76:	48 c7 44 24 30 00 00 	movq   $0x0,0x30(%rsp)
+ 45e5b7d:	00 00 
+ 45e5b7f:	48 8d 15 5a 00 00 00 	lea    0x5a(%rip),%rdx        # 45e5be0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPClientSimulator.func1@@Base>
+ 45e5b86:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45e5b8b:	66 89 44 24 28       	mov    %ax,0x28(%rsp)
+ 45e5b90:	88 5c 24 2a          	mov    %bl,0x2a(%rsp)
+ 45e5b94:	48 8d 54 24 10       	lea    0x10(%rsp),%rdx
+ 45e5b99:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45e5b9e:	84 01                	test   %al,(%rcx)
+ 45e5ba0:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 45e5ba4:	48 8d 5c 24 20       	lea    0x20(%rsp),%rbx
+ 45e5ba9:	e8 b2 23 99 fd       	call   1f77f60 <sync.(*Map).Range@@Base>
+ 45e5bae:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 45e5bb3:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+ 45e5bb8:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45e5bbd:	48 83 c4 40          	add    $0x40,%rsp
+ 45e5bc1:	c3                   	ret
+ 45e5bc2:	66 89 44 24 08       	mov    %ax,0x8(%rsp)
+ 45e5bc7:	88 5c 24 0a          	mov    %bl,0xa(%rsp)
+ 45e5bcb:	e8 90 e8 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45e5bd0:	0f b7 44 24 08       	movzwl 0x8(%rsp),%eax
+ 45e5bd5:	0f b6 5c 24 0a       	movzbl 0xa(%rsp),%ebx
+ 45e5bda:	e9 61 ff ff ff       	jmp    45e5b40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.ShowPTPClientSimulator@@Base>
+ 45e5bdf:	cc                   	int3

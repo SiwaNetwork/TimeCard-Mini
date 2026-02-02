@@ -1,0 +1,67 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue
+# addr 0x4580440 size 128 (0x80)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004580440 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue@@Base>:
+ 4580440:	48 83 ec 18          	sub    $0x18,%rsp
+ 4580444:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4580449:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 458044e:	48 8b 50 20          	mov    0x20(%rax),%rdx
+ 4580452:	48 8b 18             	mov    (%rax),%rbx
+ 4580455:	48 85 db             	test   %rbx,%rbx
+ 4580458:	74 46                	je     45804a0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue@@Base+0x60>
+ 458045a:	48 89 c1             	mov    %rax,%rcx
+ 458045d:	48 89 d0             	mov    %rdx,%rax
+ 4580460:	48 83 fb ff          	cmp    $0xffffffffffffffff,%rbx
+ 4580464:	74 07                	je     458046d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue@@Base+0x2d>
+ 4580466:	48 99                	cqto
+ 4580468:	48 f7 fb             	idiv   %rbx
+ 458046b:	eb 05                	jmp    4580472 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue@@Base+0x32>
+ 458046d:	48 f7 d8             	neg    %rax
+ 4580470:	31 d2                	xor    %edx,%edx
+ 4580472:	48 8b 59 10          	mov    0x10(%rcx),%rbx
+ 4580476:	48 8b 71 08          	mov    0x8(%rcx),%rsi
+ 458047a:	48 39 da             	cmp    %rbx,%rdx
+ 458047d:	73 13                	jae    4580492 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).AddValue@@Base+0x52>
+ 458047f:	f2 0f 11 04 d6       	movsd  %xmm0,(%rsi,%rdx,8)
+ 4580484:	48 ff 41 20          	incq   0x20(%rcx)
+ 4580488:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 458048d:	48 83 c4 18          	add    $0x18,%rsp
+ 4580491:	c3                   	ret
+ 4580492:	48 89 d0             	mov    %rdx,%rax
+ 4580495:	48 89 d9             	mov    %rbx,%rcx
+ 4580498:	e8 03 66 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458049d:	0f 1f 00             	nopl   (%rax)
+ 45804a0:	e8 db b2 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 45804a5:	90                   	nop
+ 45804a6:	cc                   	int3
+ 45804a7:	cc                   	int3
+ 45804a8:	cc                   	int3
+ 45804a9:	cc                   	int3
+ 45804aa:	cc                   	int3
+ 45804ab:	cc                   	int3
+ 45804ac:	cc                   	int3
+ 45804ad:	cc                   	int3
+ 45804ae:	cc                   	int3
+ 45804af:	cc                   	int3
+ 45804b0:	cc                   	int3
+ 45804b1:	cc                   	int3
+ 45804b2:	cc                   	int3
+ 45804b3:	cc                   	int3
+ 45804b4:	cc                   	int3
+ 45804b5:	cc                   	int3
+ 45804b6:	cc                   	int3
+ 45804b7:	cc                   	int3
+ 45804b8:	cc                   	int3
+ 45804b9:	cc                   	int3
+ 45804ba:	cc                   	int3
+ 45804bb:	cc                   	int3
+ 45804bc:	cc                   	int3
+ 45804bd:	cc                   	int3
+ 45804be:	cc                   	int3
+ 45804bf:	cc                   	int3

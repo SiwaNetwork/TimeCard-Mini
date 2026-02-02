@@ -1,0 +1,108 @@
+# github.com/lasselj/timebeat/config.saveToFileLocked
+# addr 0x4404160 size 352 (0x160)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004404160 <github.com/lasselj/timebeat/config.saveToFileLocked@@Base>:
+ 4404160:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4404164:	0f 86 2f 01 00 00    	jbe    4404299 <github.com/lasselj/timebeat/config.saveToFileLocked@@Base+0x139>
+ 440416a:	48 83 ec 78          	sub    $0x78,%rsp
+ 440416e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 4404173:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 4404178:	48 8b 05 79 0a a4 03 	mov    0x3a40a79(%rip),%rax        # 7e44bf8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x18>
+ 440417f:	48 8b 0d 6a 0a a4 03 	mov    0x3a40a6a(%rip),%rcx        # 7e44bf0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x10>
+ 4404186:	48 85 c0             	test   %rax,%rax
+ 4404189:	0f 84 00 01 00 00    	je     440428f <github.com/lasselj/timebeat/config.saveToFileLocked@@Base+0x12f>
+ 440418f:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4404194:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4404199:	e8 e2 f5 ff ff       	call   4403780 <github.com/lasselj/timebeat/config.GetPeerIdentities@@Base>
+ 440419e:	48 8b 18             	mov    (%rax),%rbx
+ 44041a1:	48 8d 05 f8 95 54 01 	lea    0x15495f8(%rip),%rax        # 594d7a0 <type:7G1EDQaC@@Base>
+ 44041a8:	31 c9                	xor    %ecx,%ecx
+ 44041aa:	31 ff                	xor    %edi,%edi
+ 44041ac:	48 8d 35 a5 23 0d 01 	lea    0x10d23a5(%rip),%rsi        # 54d6558 <_IO_stdin_used@@Base+0x8a3558>
+ 44041b3:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 44041b9:	e8 a2 85 e6 fd       	call   226c760 <encoding/json.MarshalIndent@@Base>
+ 44041be:	66 90                	xchg   %ax,%ax
+ 44041c0:	48 85 ff             	test   %rdi,%rdi
+ 44041c3:	0f 85 94 00 00 00    	jne    440425d <github.com/lasselj/timebeat/config.saveToFileLocked@@Base+0xfd>
+ 44041c9:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 44041ce:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 44041d3:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 44041d8:	48 89 df             	mov    %rbx,%rdi
+ 44041db:	48 89 ce             	mov    %rcx,%rsi
+ 44041de:	41 b8 a4 01 00 00    	mov    $0x1a4,%r8d
+ 44041e4:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 44041e9:	48 89 c1             	mov    %rax,%rcx
+ 44041ec:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 44041f1:	e8 6a 6f be fd       	call   1feb160 <os.WriteFile@@Base>
+ 44041f6:	48 85 c0             	test   %rax,%rax
+ 44041f9:	74 58                	je     4404253 <github.com/lasselj/timebeat/config.saveToFileLocked@@Base+0xf3>
+ 44041fb:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 4404201:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4404206:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 440420b:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4404210:	e8 eb 9b ae fd       	call   1eede00 <runtime.convTslice@@Base>
+ 4404215:	48 8d 15 04 a7 33 01 	lea    0x133a704(%rip),%rdx        # 573e920 <type:[]uint8@@Base>
+ 440421c:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 4404221:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4404226:	48 8b 1d 13 b0 a2 03 	mov    0x3a2b013(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 440422d:	48 8d 05 ec 0f b0 01 	lea    0x1b00fec(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4404234:	48 8d 0d 79 65 9e 00 	lea    0x9e6579(%rip),%rcx        # 4dea7b4 <_IO_stdin_used@@Base+0x1b77b4>
+ 440423b:	bf 1c 00 00 00       	mov    $0x1c,%edi
+ 4404240:	48 8d 74 24 60       	lea    0x60(%rsp),%rsi
+ 4404245:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 440424b:	4d 89 c1             	mov    %r8,%r9
+ 440424e:	e8 8d 05 bf fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4404253:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4404258:	48 83 c4 78          	add    $0x78,%rsp
+ 440425c:	c3                   	ret
+ 440425d:	90                   	nop
+ 440425e:	48 8b 1d db af a2 03 	mov    0x3a2afdb(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4404265:	48 8d 05 b4 0f b0 01 	lea    0x1b00fb4(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 440426c:	48 8d 0d 41 e2 9d 00 	lea    0x9de241(%rip),%rcx        # 4de24b4 <_IO_stdin_used@@Base+0x1af4b4>
+ 4404273:	bf 1a 00 00 00       	mov    $0x1a,%edi
+ 4404278:	31 f6                	xor    %esi,%esi
+ 440427a:	45 31 c0             	xor    %r8d,%r8d
+ 440427d:	4d 89 c1             	mov    %r8,%r9
+ 4404280:	e8 5b 05 bf fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4404285:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 440428a:	48 83 c4 78          	add    $0x78,%rsp
+ 440428e:	c3                   	ret
+ 440428f:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4404294:	48 83 c4 78          	add    $0x78,%rsp
+ 4404298:	c3                   	ret
+ 4404299:	e8 c2 01 b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440429e:	66 90                	xchg   %ax,%ax
+ 44042a0:	e9 bb fe ff ff       	jmp    4404160 <github.com/lasselj/timebeat/config.saveToFileLocked@@Base>
+ 44042a5:	cc                   	int3
+ 44042a6:	cc                   	int3
+ 44042a7:	cc                   	int3
+ 44042a8:	cc                   	int3
+ 44042a9:	cc                   	int3
+ 44042aa:	cc                   	int3
+ 44042ab:	cc                   	int3
+ 44042ac:	cc                   	int3
+ 44042ad:	cc                   	int3
+ 44042ae:	cc                   	int3
+ 44042af:	cc                   	int3
+ 44042b0:	cc                   	int3
+ 44042b1:	cc                   	int3
+ 44042b2:	cc                   	int3
+ 44042b3:	cc                   	int3
+ 44042b4:	cc                   	int3
+ 44042b5:	cc                   	int3
+ 44042b6:	cc                   	int3
+ 44042b7:	cc                   	int3
+ 44042b8:	cc                   	int3
+ 44042b9:	cc                   	int3
+ 44042ba:	cc                   	int3
+ 44042bb:	cc                   	int3
+ 44042bc:	cc                   	int3
+ 44042bd:	cc                   	int3
+ 44042be:	cc                   	int3
+ 44042bf:	cc                   	int3

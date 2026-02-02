@@ -1,0 +1,50 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Unlock
+# addr 0x4b8dc40 size 96 (0x60)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b8dc40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Unlock@@Base>:
+ 4b8dc40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b8dc44:	76 31                	jbe    4b8dc77 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Unlock@@Base+0x37>
+ 4b8dc46:	48 83 ec 18          	sub    $0x18,%rsp
+ 4b8dc4a:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 4b8dc4f:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 4b8dc54:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4b8dc59:	f0 0f c1 58 2c       	lock xadd %ebx,0x2c(%rax)
+ 4b8dc5e:	ff cb                	dec    %ebx
+ 4b8dc60:	85 db                	test   %ebx,%ebx
+ 4b8dc62:	74 09                	je     4b8dc6d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Unlock@@Base+0x2d>
+ 4b8dc64:	48 83 c0 2c          	add    $0x2c,%rax
+ 4b8dc68:	e8 d3 ab 3e fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 4b8dc6d:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 4b8dc72:	48 83 c4 18          	add    $0x18,%rsp
+ 4b8dc76:	c3                   	ret
+ 4b8dc77:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b8dc7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b8dc80:	e8 db 67 3c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b8dc85:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b8dc8a:	eb b4                	jmp    4b8dc40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_serial_device.(*I2CDevice).Unlock@@Base>
+ 4b8dc8c:	cc                   	int3
+ 4b8dc8d:	cc                   	int3
+ 4b8dc8e:	cc                   	int3
+ 4b8dc8f:	cc                   	int3
+ 4b8dc90:	cc                   	int3
+ 4b8dc91:	cc                   	int3
+ 4b8dc92:	cc                   	int3
+ 4b8dc93:	cc                   	int3
+ 4b8dc94:	cc                   	int3
+ 4b8dc95:	cc                   	int3
+ 4b8dc96:	cc                   	int3
+ 4b8dc97:	cc                   	int3
+ 4b8dc98:	cc                   	int3
+ 4b8dc99:	cc                   	int3
+ 4b8dc9a:	cc                   	int3
+ 4b8dc9b:	cc                   	int3
+ 4b8dc9c:	cc                   	int3
+ 4b8dc9d:	cc                   	int3
+ 4b8dc9e:	cc                   	int3
+ 4b8dc9f:	cc                   	int3

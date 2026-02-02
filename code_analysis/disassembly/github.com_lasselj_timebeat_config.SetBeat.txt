@@ -1,0 +1,89 @@
+# github.com/lasselj/timebeat/config.SetBeat
+# addr 0x4403620 size 256 (0x100)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004403620 <github.com/lasselj/timebeat/config.SetBeat@@Base>:
+ 4403620:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4403624:	0f 86 c5 00 00 00    	jbe    44036ef <github.com/lasselj/timebeat/config.SetBeat@@Base+0xcf>
+ 440362a:	48 83 ec 38          	sub    $0x38,%rsp
+ 440362e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4403633:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4403638:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 440363f:	4c 89 6c 24 28       	mov    %r13,0x28(%rsp)
+ 4403644:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 4403649:	90                   	nop
+ 440364a:	48 89 c1             	mov    %rax,%rcx
+ 440364d:	31 c0                	xor    %eax,%eax
+ 440364f:	48 8d 1d 32 76 a7 03 	lea    0x3a77632(%rip),%rbx        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403656:	be 01 00 00 00       	mov    $0x1,%esi
+ 440365b:	f0 0f b1 33          	lock cmpxchg %esi,(%rbx)
+ 440365f:	0f 94 c3             	sete   %bl
+ 4403662:	84 db                	test   %bl,%bl
+ 4403664:	75 16                	jne    440367c <github.com/lasselj/timebeat/config.SetBeat@@Base+0x5c>
+ 4403666:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 440366b:	48 8d 05 16 76 a7 03 	lea    0x3a77616(%rip),%rax        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403672:	e8 c9 4e b7 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4403677:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 440367c:	44 0f 11 7c 24 18    	movups %xmm15,0x18(%rsp)
+ 4403682:	48 8d 05 97 00 00 00 	lea    0x97(%rip),%rax        # 4403720 <github.com/lasselj/timebeat/config.SetBeat.func1@@Base>
+ 4403689:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 440368e:	48 8d 05 f3 75 a7 03 	lea    0x3a775f3(%rip),%rax        # 7e7ac88 <github.com/lasselj/timebeat/config.lock@@Base>
+ 4403695:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 440369a:	48 8d 44 24 18       	lea    0x18(%rsp),%rax
+ 440369f:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 44036a4:	83 3d b5 82 a7 03 00 	cmpl   $0x0,0x3a782b5(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 44036ab:	75 09                	jne    44036b6 <github.com/lasselj/timebeat/config.SetBeat@@Base+0x96>
+ 44036ad:	48 89 0d 14 8c a2 03 	mov    %rcx,0x3a28c14(%rip)        # 7e2c2c8 <github.com/lasselj/timebeat/config.beatBeat@@Base>
+ 44036b4:	eb 0f                	jmp    44036c5 <github.com/lasselj/timebeat/config.SetBeat@@Base+0xa5>
+ 44036b6:	48 8d 3d 0b 8c a2 03 	lea    0x3a28c0b(%rip),%rdi        # 7e2c2c8 <github.com/lasselj/timebeat/config.beatBeat@@Base>
+ 44036bd:	0f 1f 00             	nopl   (%rax)
+ 44036c0:	e8 3b 30 b5 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 44036c5:	c6 44 24 0f 00       	movb   $0x0,0xf(%rsp)
+ 44036ca:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 44036cf:	48 8b 02             	mov    (%rdx),%rax
+ 44036d2:	ff d0                	call   *%rax
+ 44036d4:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 44036d9:	48 83 c4 38          	add    $0x38,%rsp
+ 44036dd:	c3                   	ret
+ 44036de:	66 90                	xchg   %ax,%ax
+ 44036e0:	e8 7b 88 b1 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 44036e5:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 44036ea:	48 83 c4 38          	add    $0x38,%rsp
+ 44036ee:	c3                   	ret
+ 44036ef:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 44036f4:	e8 67 0d b5 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 44036f9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 44036fe:	66 90                	xchg   %ax,%ax
+ 4403700:	e9 1b ff ff ff       	jmp    4403620 <github.com/lasselj/timebeat/config.SetBeat@@Base>
+ 4403705:	cc                   	int3
+ 4403706:	cc                   	int3
+ 4403707:	cc                   	int3
+ 4403708:	cc                   	int3
+ 4403709:	cc                   	int3
+ 440370a:	cc                   	int3
+ 440370b:	cc                   	int3
+ 440370c:	cc                   	int3
+ 440370d:	cc                   	int3
+ 440370e:	cc                   	int3
+ 440370f:	cc                   	int3
+ 4403710:	cc                   	int3
+ 4403711:	cc                   	int3
+ 4403712:	cc                   	int3
+ 4403713:	cc                   	int3
+ 4403714:	cc                   	int3
+ 4403715:	cc                   	int3
+ 4403716:	cc                   	int3
+ 4403717:	cc                   	int3
+ 4403718:	cc                   	int3
+ 4403719:	cc                   	int3
+ 440371a:	cc                   	int3
+ 440371b:	cc                   	int3
+ 440371c:	cc                   	int3
+ 440371d:	cc                   	int3
+ 440371e:	cc                   	int3
+ 440371f:	cc                   	int3

@@ -1,0 +1,310 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired
+# addr 0x4584f00 size 1248 (0x4e0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004584f00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base>:
+ 4584f00:	4c 8d 64 24 a8       	lea    -0x58(%rsp),%r12
+ 4584f05:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4584f09:	0f 86 b2 04 00 00    	jbe    45853c1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x4c1>
+ 4584f0f:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+ 4584f16:	48 89 ac 24 d0 00 00 	mov    %rbp,0xd0(%rsp)
+ 4584f1d:	00 
+ 4584f1e:	48 8d ac 24 d0 00 00 	lea    0xd0(%rsp),%rbp
+ 4584f25:	00 
+ 4584f26:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 4584f2d:	00 
+ 4584f2e:	48 8b 0d e3 fe 8b 03 	mov    0x38bfee3(%rip),%rcx        # 7e44e18 <github.com/lasselj/timebeat/config.appConfig@@Base+0x238>
+ 4584f35:	48 8b 15 e4 fe 8b 03 	mov    0x38bfee4(%rip),%rdx        # 7e44e20 <github.com/lasselj/timebeat/config.appConfig@@Base+0x240>
+ 4584f3c:	48 89 54 24 40       	mov    %rdx,0x40(%rsp)
+ 4584f41:	31 db                	xor    %ebx,%ebx
+ 4584f43:	eb 21                	jmp    4584f66 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x66>
+ 4584f45:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4584f4c:	00 
+ 4584f4d:	48 83 c1 10          	add    $0x10,%rcx
+ 4584f51:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4584f56:	48 ff c3             	inc    %rbx
+ 4584f59:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4584f60:	00 
+ 4584f61:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4584f66:	48 39 d3             	cmp    %rdx,%rbx
+ 4584f69:	0f 8d 41 04 00 00    	jge    45853b0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x4b0>
+ 4584f6f:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4584f74:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 4584f7b:	00 
+ 4584f7c:	48 8b 01             	mov    (%rcx),%rax
+ 4584f7f:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4584f84:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 4584f88:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4584f8d:	44 0f 11 bc 24 90 00 	movups %xmm15,0x90(%rsp)
+ 4584f94:	00 00 
+ 4584f96:	e8 c5 8d 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4584f9b:	48 8d 0d fe 96 22 01 	lea    0x12296fe(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4584fa2:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 4584fa9:	00 
+ 4584faa:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4584fb1:	00 
+ 4584fb2:	48 8b 1d 87 a2 8a 03 	mov    0x38aa287(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4584fb9:	48 8d 05 60 02 98 01 	lea    0x1980260(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4584fc0:	bf 0f 00 00 00       	mov    $0xf,%edi
+ 4584fc5:	48 8d b4 24 90 00 00 	lea    0x90(%rsp),%rsi
+ 4584fcc:	00 
+ 4584fcd:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4584fd3:	4d 89 c1             	mov    %r8,%r9
+ 4584fd6:	48 8d 0d cd 2e 75 00 	lea    0x752ecd(%rip),%rcx        # 4cd7eaa <_IO_stdin_used@@Base+0xa4eaa>
+ 4584fdd:	0f 1f 00             	nopl   (%rax)
+ 4584fe0:	e8 fb f7 a6 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4584fe5:	90                   	nop
+ 4584fe6:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 4584feb:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4584ff0:	48 8d 0d c1 20 f5 00 	lea    0xf520c1(%rip),%rcx        # 54d70b8 <_IO_stdin_used@@Base+0x8a40b8>
+ 4584ff7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4584ffc:	31 f6                	xor    %esi,%esi
+ 4584ffe:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 4585005:	e8 76 1e a8 fd       	call   2006e80 <strings.genSplit@@Base>
+ 458500a:	48 83 fb 03          	cmp    $0x3,%rbx
+ 458500e:	74 7a                	je     458508a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x18a>
+ 4585010:	44 0f 11 bc 24 a0 00 	movups %xmm15,0xa0(%rsp)
+ 4585017:	00 00 
+ 4585019:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 458501e:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4585023:	e8 38 8d 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4585028:	48 8d 0d 71 96 22 01 	lea    0x1229671(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458502f:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4585036:	00 
+ 4585037:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 458503e:	00 
+ 458503f:	48 8d 05 95 b1 86 00 	lea    0x86b195(%rip),%rax        # 4df01db <_IO_stdin_used@@Base+0x1bd1db>
+ 4585046:	bb 1e 00 00 00       	mov    $0x1e,%ebx
+ 458504b:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4585050:	48 89 fe             	mov    %rdi,%rsi
+ 4585053:	48 8d 8c 24 a0 00 00 	lea    0xa0(%rsp),%rcx
+ 458505a:	00 
+ 458505b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4585060:	e8 9b f8 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4585065:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 458506c:	00 
+ 458506d:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 4585071:	48 89 c6             	mov    %rax,%rsi
+ 4585074:	48 89 d0             	mov    %rdx,%rax
+ 4585077:	48 89 df             	mov    %rbx,%rdi
+ 458507a:	48 89 f3             	mov    %rsi,%rbx
+ 458507d:	48 89 f9             	mov    %rdi,%rcx
+ 4585080:	e8 db 1f e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4585085:	e9 bb fe ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 458508a:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 458508f:	48 8b 08             	mov    (%rax),%rcx
+ 4585092:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4585096:	48 89 c8             	mov    %rcx,%rax
+ 4585099:	e8 22 b2 ab fd       	call   20402c0 <net.InterfaceByName@@Base>
+ 458509e:	66 90                	xchg   %ax,%ax
+ 45850a0:	48 85 db             	test   %rbx,%rbx
+ 45850a3:	0f 85 61 02 00 00    	jne    458530a <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x40a>
+ 45850a9:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45850ae:	48 8b 51 08          	mov    0x8(%rcx),%rdx
+ 45850b2:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 45850b7:	48 8b 31             	mov    (%rcx),%rsi
+ 45850ba:	48 89 b4 24 80 00 00 	mov    %rsi,0x80(%rsp)
+ 45850c1:	00 
+ 45850c2:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 45850c6:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 45850ca:	48 83 fb 07          	cmp    $0x7,%rbx
+ 45850ce:	75 21                	jne    45850f1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x1f1>
+ 45850d0:	81 38 63 68 61 6e    	cmpl   $0x6e616863,(%rax)
+ 45850d6:	75 19                	jne    45850f1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x1f1>
+ 45850d8:	66 81 78 04 6e 65    	cmpw   $0x656e,0x4(%rax)
+ 45850de:	66 90                	xchg   %ax,%ax
+ 45850e0:	75 0f                	jne    45850f1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x1f1>
+ 45850e2:	80 78 06 6c          	cmpb   $0x6c,0x6(%rax)
+ 45850e6:	75 09                	jne    45850f1 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x1f1>
+ 45850e8:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45850ed:	31 db                	xor    %ebx,%ebx
+ 45850ef:	eb 18                	jmp    4585109 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x209>
+ 45850f1:	e8 0a a0 9e fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 45850f6:	48 85 db             	test   %rbx,%rbx
+ 45850f9:	0f 85 5f 01 00 00    	jne    458525e <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x35e>
+ 45850ff:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4585104:	48 89 c3             	mov    %rax,%rbx
+ 4585107:	31 c0                	xor    %eax,%eax
+ 4585109:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 458510e:	88 44 24 3f          	mov    %al,0x3f(%rsp)
+ 4585112:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 4585116:	48 8b 71 28          	mov    0x28(%rcx),%rsi
+ 458511a:	48 89 d0             	mov    %rdx,%rax
+ 458511d:	48 89 f3             	mov    %rsi,%rbx
+ 4585120:	e8 db 9f 9e fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4585125:	48 85 db             	test   %rbx,%rbx
+ 4585128:	0f 84 a7 00 00 00    	je     45851d5 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x2d5>
+ 458512e:	44 0f 11 bc 24 b0 00 	movups %xmm15,0xb0(%rsp)
+ 4585135:	00 00 
+ 4585137:	44 0f 11 bc 24 c0 00 	movups %xmm15,0xc0(%rsp)
+ 458513e:	00 00 
+ 4585140:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4585145:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4585149:	48 8b 59 28          	mov    0x28(%rcx),%rbx
+ 458514d:	e8 0e 8c 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4585152:	48 8d 0d 47 95 22 01 	lea    0x1229547(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4585159:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4585160:	00 
+ 4585161:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 4585168:	00 
+ 4585169:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 458516e:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4585173:	e8 e8 8b 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4585178:	48 8d 0d 21 95 22 01 	lea    0x1229521(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458517f:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 4585186:	00 
+ 4585187:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 458518e:	00 
+ 458518f:	48 8d 05 80 b7 87 00 	lea    0x87b780(%rip),%rax        # 4e00916 <_IO_stdin_used@@Base+0x1cd916>
+ 4585196:	bb 22 00 00 00       	mov    $0x22,%ebx
+ 458519b:	bf 02 00 00 00       	mov    $0x2,%edi
+ 45851a0:	48 89 fe             	mov    %rdi,%rsi
+ 45851a3:	48 8d 8c 24 b0 00 00 	lea    0xb0(%rsp),%rcx
+ 45851aa:	00 
+ 45851ab:	e8 50 f7 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45851b0:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 45851b7:	00 
+ 45851b8:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 45851bc:	48 89 c6             	mov    %rax,%rsi
+ 45851bf:	48 89 d0             	mov    %rdx,%rax
+ 45851c2:	48 89 df             	mov    %rbx,%rdi
+ 45851c5:	48 89 f3             	mov    %rsi,%rbx
+ 45851c8:	48 89 f9             	mov    %rdi,%rcx
+ 45851cb:	e8 90 1e e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45851d0:	e9 70 fd ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 45851d5:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45851da:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 45851e1:	00 
+ 45851e2:	48 8b 9c 24 80 00 00 	mov    0x80(%rsp),%rbx
+ 45851e9:	00 
+ 45851ea:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 45851ef:	e8 4c d6 ff ff       	call   4582840 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).GetDeviceWithName@@Base>
+ 45851f4:	0f b6 54 24 3f       	movzbl 0x3f(%rsp),%edx
+ 45851f9:	84 d2                	test   %dl,%dl
+ 45851fb:	74 2e                	je     458522b <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x32b>
+ 45851fd:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 4585202:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4585207:	e8 74 84 00 00       	call   458d680 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOutOnChannel@@Base>
+ 458520c:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+ 4585213:	00 
+ 4585214:	48 8b 72 50          	mov    0x50(%rdx),%rsi
+ 4585218:	48 89 d9             	mov    %rbx,%rcx
+ 458521b:	48 89 c3             	mov    %rax,%rbx
+ 458521e:	48 89 f0             	mov    %rsi,%rax
+ 4585221:	e8 ba 20 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 4585226:	e9 1a fd ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 458522b:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4585230:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4585235:	bf 01 00 00 00       	mov    $0x1,%edi
+ 458523a:	e8 c1 88 00 00       	call   458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>
+ 458523f:	48 8b 94 24 e0 00 00 	mov    0xe0(%rsp),%rdx
+ 4585246:	00 
+ 4585247:	48 8b 72 50          	mov    0x50(%rdx),%rsi
+ 458524b:	48 89 d9             	mov    %rbx,%rcx
+ 458524e:	48 89 c3             	mov    %rax,%rbx
+ 4585251:	48 89 f0             	mov    %rsi,%rax
+ 4585254:	e8 87 20 e8 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 4585259:	e9 e7 fc ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 458525e:	44 0f 11 bc 24 b0 00 	movups %xmm15,0xb0(%rsp)
+ 4585265:	00 00 
+ 4585267:	44 0f 11 bc 24 c0 00 	movups %xmm15,0xc0(%rsp)
+ 458526e:	00 00 
+ 4585270:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4585275:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4585279:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 458527d:	0f 1f 00             	nopl   (%rax)
+ 4585280:	e8 db 8a 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4585285:	48 8d 0d 14 94 22 01 	lea    0x1229414(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458528c:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4585293:	00 
+ 4585294:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 458529b:	00 
+ 458529c:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 45852a1:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 45852a6:	e8 b5 8a 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45852ab:	48 8d 0d ee 93 22 01 	lea    0x12293ee(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45852b2:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 45852b9:	00 
+ 45852ba:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 45852c1:	00 
+ 45852c2:	48 8d 05 c0 31 87 00 	lea    0x8731c0(%rip),%rax        # 4df8489 <_IO_stdin_used@@Base+0x1c5489>
+ 45852c9:	bb 20 00 00 00       	mov    $0x20,%ebx
+ 45852ce:	bf 02 00 00 00       	mov    $0x2,%edi
+ 45852d3:	48 89 fe             	mov    %rdi,%rsi
+ 45852d6:	48 8d 8c 24 b0 00 00 	lea    0xb0(%rsp),%rcx
+ 45852dd:	00 
+ 45852de:	66 90                	xchg   %ax,%ax
+ 45852e0:	e8 1b f6 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45852e5:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 45852ec:	00 
+ 45852ed:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 45852f1:	48 89 c6             	mov    %rax,%rsi
+ 45852f4:	48 89 d0             	mov    %rdx,%rax
+ 45852f7:	48 89 df             	mov    %rbx,%rdi
+ 45852fa:	48 89 f3             	mov    %rsi,%rbx
+ 45852fd:	48 89 f9             	mov    %rdi,%rcx
+ 4585300:	e8 5b 1d e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4585305:	e9 3b fc ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 458530a:	44 0f 11 bc 24 b0 00 	movups %xmm15,0xb0(%rsp)
+ 4585311:	00 00 
+ 4585313:	44 0f 11 bc 24 c0 00 	movups %xmm15,0xc0(%rsp)
+ 458531a:	00 00 
+ 458531c:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4585321:	48 8b 01             	mov    (%rcx),%rax
+ 4585324:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 4585328:	e8 33 8a 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 458532d:	48 8d 0d 6c 93 22 01 	lea    0x122936c(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4585334:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 458533b:	00 
+ 458533c:	48 89 84 24 b8 00 00 	mov    %rax,0xb8(%rsp)
+ 4585343:	00 
+ 4585344:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 4585349:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 458534e:	e8 0d 8a 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4585353:	48 8d 0d 46 93 22 01 	lea    0x1229346(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458535a:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 4585361:	00 
+ 4585362:	48 89 84 24 c8 00 00 	mov    %rax,0xc8(%rsp)
+ 4585369:	00 
+ 458536a:	48 8d 05 c1 ae 88 00 	lea    0x88aec1(%rip),%rax        # 4e10232 <_IO_stdin_used@@Base+0x1dd232>
+ 4585371:	bb 26 00 00 00       	mov    $0x26,%ebx
+ 4585376:	bf 02 00 00 00       	mov    $0x2,%edi
+ 458537b:	48 89 fe             	mov    %rdi,%rsi
+ 458537e:	48 8d 8c 24 b0 00 00 	lea    0xb0(%rsp),%rcx
+ 4585385:	00 
+ 4585386:	e8 75 f5 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 458538b:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4585392:	00 
+ 4585393:	48 8b 51 50          	mov    0x50(%rcx),%rdx
+ 4585397:	48 89 c6             	mov    %rax,%rsi
+ 458539a:	48 89 d0             	mov    %rdx,%rax
+ 458539d:	48 89 df             	mov    %rbx,%rdi
+ 45853a0:	48 89 f3             	mov    %rsi,%rbx
+ 45853a3:	48 89 f9             	mov    %rdi,%rcx
+ 45853a6:	e8 b5 1c e8 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45853ab:	e9 95 fb ff ff       	jmp    4584f45 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base+0x45>
+ 45853b0:	48 8b ac 24 d0 00 00 	mov    0xd0(%rsp),%rbp
+ 45853b7:	00 
+ 45853b8:	48 81 c4 d8 00 00 00 	add    $0xd8,%rsp
+ 45853bf:	90                   	nop
+ 45853c0:	c3                   	ret
+ 45853c1:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45853c6:	e8 95 f0 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45853cb:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45853d0:	e9 2b fb ff ff       	jmp    4584f00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCController).EnablePPSIfRequired@@Base>
+ 45853d5:	cc                   	int3
+ 45853d6:	cc                   	int3
+ 45853d7:	cc                   	int3
+ 45853d8:	cc                   	int3
+ 45853d9:	cc                   	int3
+ 45853da:	cc                   	int3
+ 45853db:	cc                   	int3
+ 45853dc:	cc                   	int3
+ 45853dd:	cc                   	int3
+ 45853de:	cc                   	int3
+ 45853df:	cc                   	int3

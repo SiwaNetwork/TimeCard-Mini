@@ -1,0 +1,86 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat
+# addr 0x45ae6a0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ae6a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat@@Base>:
+ 45ae6a0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ae6a4:	0f 86 dd 00 00 00    	jbe    45ae787 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat@@Base+0xe7>
+ 45ae6aa:	48 83 ec 58          	sub    $0x58,%rsp
+ 45ae6ae:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 45ae6b3:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 45ae6b8:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 45ae6bd:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45ae6c4:	4c 89 6c 24 48       	mov    %r13,0x48(%rsp)
+ 45ae6c9:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 45ae6ce:	48 89 c2             	mov    %rax,%rdx
+ 45ae6d1:	31 c0                	xor    %eax,%eax
+ 45ae6d3:	be 01 00 00 00       	mov    $0x1,%esi
+ 45ae6d8:	f0 0f b1 b2 f8 00 00 	lock cmpxchg %esi,0xf8(%rdx)
+ 45ae6df:	00 
+ 45ae6e0:	40 0f 94 c6          	sete   %sil
+ 45ae6e4:	48 8d 82 f8 00 00 00 	lea    0xf8(%rdx),%rax
+ 45ae6eb:	40 84 f6             	test   %sil,%sil
+ 45ae6ee:	75 2d                	jne    45ae71d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat@@Base+0x7d>
+ 45ae6f0:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45ae6f5:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45ae6fa:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 45ae6ff:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 45ae704:	e8 37 9e 9c fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45ae709:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45ae70e:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 45ae713:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 45ae718:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 45ae71d:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 45ae723:	48 8d 35 96 00 00 00 	lea    0x96(%rip),%rsi        # 45ae7c0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat.func1@@Base>
+ 45ae72a:	48 89 74 24 38       	mov    %rsi,0x38(%rsp)
+ 45ae72f:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45ae734:	48 8d 74 24 38       	lea    0x38(%rsp),%rsi
+ 45ae739:	48 89 74 24 48       	mov    %rsi,0x48(%rsp)
+ 45ae73e:	c6 44 24 27 01       	movb   $0x1,0x27(%rsp)
+ 45ae743:	48 8b 92 f0 00 00 00 	mov    0xf0(%rdx),%rdx
+ 45ae74a:	48 8d 05 6f 9d 39 01 	lea    0x1399d6f(%rip),%rax        # 59484c0 <type:NPM+TrGC@@Base>
+ 45ae751:	48 89 cf             	mov    %rcx,%rdi
+ 45ae754:	48 89 d9             	mov    %rbx,%rcx
+ 45ae757:	48 89 d3             	mov    %rdx,%rbx
+ 45ae75a:	e8 a1 7e 94 fd       	call   1ef6600 <runtime.mapdelete_faststr@@Base>
+ 45ae75f:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 45ae764:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45ae769:	48 8b 32             	mov    (%rdx),%rsi
+ 45ae76c:	ff d6                	call   *%rsi
+ 45ae76e:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45ae773:	48 83 c4 58          	add    $0x58,%rsp
+ 45ae777:	c3                   	ret
+ 45ae778:	e8 e3 d7 96 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45ae77d:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45ae782:	48 83 c4 58          	add    $0x58,%rsp
+ 45ae786:	c3                   	ret
+ 45ae787:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ae78c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45ae791:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45ae796:	e8 c5 5c 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ae79b:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ae7a0:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45ae7a5:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45ae7aa:	e9 f1 fe ff ff       	jmp    45ae6a0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).deleteSat@@Base>
+ 45ae7af:	cc                   	int3
+ 45ae7b0:	cc                   	int3
+ 45ae7b1:	cc                   	int3
+ 45ae7b2:	cc                   	int3
+ 45ae7b3:	cc                   	int3
+ 45ae7b4:	cc                   	int3
+ 45ae7b5:	cc                   	int3
+ 45ae7b6:	cc                   	int3
+ 45ae7b7:	cc                   	int3
+ 45ae7b8:	cc                   	int3
+ 45ae7b9:	cc                   	int3
+ 45ae7ba:	cc                   	int3
+ 45ae7bb:	cc                   	int3
+ 45ae7bc:	cc                   	int3
+ 45ae7bd:	cc                   	int3
+ 45ae7be:	cc                   	int3
+ 45ae7bf:	cc                   	int3

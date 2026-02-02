@@ -1,0 +1,70 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions
+# addr 0x45947e0 size 192 (0xc0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>:
+ 45947e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45947e4:	0f 86 9a 00 00 00    	jbe    4594884 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0xa4>
+ 45947ea:	48 83 ec 18          	sub    $0x18,%rsp
+ 45947ee:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 45947f3:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 45947f8:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 45947fd:	0f 1f 00             	nopl   (%rax)
+ 4594800:	e8 5b 50 e8 ff       	call   4419860 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.IsRPIComputeModule@@Base>
+ 4594805:	84 c0                	test   %al,%al
+ 4594807:	74 39                	je     4594842 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x62>
+ 4594809:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 459480e:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 4594812:	48 85 c9             	test   %rcx,%rcx
+ 4594815:	75 06                	jne    459481d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x3d>
+ 4594817:	31 db                	xor    %ebx,%ebx
+ 4594819:	31 c9                	xor    %ecx,%ecx
+ 459481b:	eb 10                	jmp    459482d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x4d>
+ 459481d:	48 89 c8             	mov    %rcx,%rax
+ 4594820:	e8 1b 2e ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4594825:	48 89 c1             	mov    %rax,%rcx
+ 4594828:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 459482d:	48 83 fb 04          	cmp    $0x4,%rbx
+ 4594831:	75 0b                	jne    459483e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x5e>
+ 4594833:	81 39 65 74 68 30    	cmpl   $0x30687465,(%rcx)
+ 4594839:	0f 94 c1             	sete   %cl
+ 459483c:	eb 0b                	jmp    4594849 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x69>
+ 459483e:	31 c9                	xor    %ecx,%ecx
+ 4594840:	eb 07                	jmp    4594849 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x69>
+ 4594842:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4594847:	31 c9                	xor    %ecx,%ecx
+ 4594849:	84 c9                	test   %cl,%cl
+ 459484b:	74 2d                	je     459487a <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x9a>
+ 459484d:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 4594851:	90                   	nop
+ 4594852:	90                   	nop
+ 4594853:	80 b9 08 01 00 00 00 	cmpb   $0x0,0x108(%rcx)
+ 459485a:	75 1e                	jne    459487a <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x9a>
+ 459485c:	bb ff ff ff ff       	mov    $0xffffffff,%ebx
+ 4594861:	f0 0f c1 98 10 01 00 	lock xadd %ebx,0x110(%rax)
+ 4594868:	00 
+ 4594869:	ff cb                	dec    %ebx
+ 459486b:	85 db                	test   %ebx,%ebx
+ 459486d:	74 0b                	je     459487a <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base+0x9a>
+ 459486f:	48 05 10 01 00 00    	add    $0x110,%rax
+ 4594875:	e8 c6 3f 9e fd       	call   1f78840 <sync.(*Mutex).unlockSlow@@Base>
+ 459487a:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 459487f:	48 83 c4 18          	add    $0x18,%rsp
+ 4594883:	c3                   	ret
+ 4594884:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4594889:	e8 d2 fb 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459488e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4594893:	e9 48 ff ff ff       	jmp    45947e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.unlockPHCFunctions@@Base>
+ 4594898:	cc                   	int3
+ 4594899:	cc                   	int3
+ 459489a:	cc                   	int3
+ 459489b:	cc                   	int3
+ 459489c:	cc                   	int3
+ 459489d:	cc                   	int3
+ 459489e:	cc                   	int3
+ 459489f:	cc                   	int3

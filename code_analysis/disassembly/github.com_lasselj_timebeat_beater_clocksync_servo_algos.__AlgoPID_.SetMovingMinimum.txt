@@ -1,0 +1,87 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum
+# addr 0x457fec0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457fec0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base>:
+ 457fec0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457fec4:	0f 86 97 00 00 00    	jbe    457ff61 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0xa1>
+ 457feca:	48 83 ec 10          	sub    $0x10,%rsp
+ 457fece:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 457fed3:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 457fed8:	38 58 70             	cmp    %bl,0x70(%rax)
+ 457fedb:	74 79                	je     457ff56 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x96>
+ 457fedd:	0f 1f 00             	nopl   (%rax)
+ 457fee0:	84 db                	test   %bl,%bl
+ 457fee2:	75 27                	jne    457ff0b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x4b>
+ 457fee4:	83 3d 75 ba 8f 03 00 	cmpl   $0x0,0x38fba75(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457feeb:	75 0a                	jne    457fef7 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x37>
+ 457feed:	48 c7 40 78 00 00 00 	movq   $0x0,0x78(%rax)
+ 457fef4:	00 
+ 457fef5:	eb 0e                	jmp    457ff05 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x45>
+ 457fef7:	48 8d 78 78          	lea    0x78(%rax),%rdi
+ 457fefb:	31 c9                	xor    %ecx,%ecx
+ 457fefd:	0f 1f 00             	nopl   (%rax)
+ 457ff00:	e8 fb 67 9d fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 457ff05:	c6 40 70 00          	movb   $0x0,0x70(%rax)
+ 457ff09:	eb 41                	jmp    457ff4c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x8c>
+ 457ff0b:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 457ff10:	48 89 c8             	mov    %rcx,%rax
+ 457ff13:	e8 48 df ff ff       	call   457de60 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.NewMovingMedian@@Base>
+ 457ff18:	83 3d 41 ba 8f 03 00 	cmpl   $0x0,0x38fba41(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 457ff1f:	90                   	nop
+ 457ff20:	75 0b                	jne    457ff2d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x6d>
+ 457ff22:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457ff27:	48 89 41 78          	mov    %rax,0x78(%rcx)
+ 457ff2b:	eb 1b                	jmp    457ff48 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base+0x88>
+ 457ff2d:	48 8b 7c 24 18       	mov    0x18(%rsp),%rdi
+ 457ff32:	48 8d 4f 78          	lea    0x78(%rdi),%rcx
+ 457ff36:	48 89 fa             	mov    %rdi,%rdx
+ 457ff39:	48 89 cf             	mov    %rcx,%rdi
+ 457ff3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457ff40:	e8 bb 66 9d fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 457ff45:	48 89 d1             	mov    %rdx,%rcx
+ 457ff48:	c6 41 70 01          	movb   $0x1,0x70(%rcx)
+ 457ff4c:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 457ff51:	48 83 c4 10          	add    $0x10,%rsp
+ 457ff55:	c3                   	ret
+ 457ff56:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 457ff5b:	48 83 c4 10          	add    $0x10,%rsp
+ 457ff5f:	90                   	nop
+ 457ff60:	c3                   	ret
+ 457ff61:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457ff66:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 457ff6a:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 457ff6f:	e8 ec 44 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457ff74:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457ff79:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 457ff7e:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 457ff83:	e9 38 ff ff ff       	jmp    457fec0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).SetMovingMinimum@@Base>
+ 457ff88:	cc                   	int3
+ 457ff89:	cc                   	int3
+ 457ff8a:	cc                   	int3
+ 457ff8b:	cc                   	int3
+ 457ff8c:	cc                   	int3
+ 457ff8d:	cc                   	int3
+ 457ff8e:	cc                   	int3
+ 457ff8f:	cc                   	int3
+ 457ff90:	cc                   	int3
+ 457ff91:	cc                   	int3
+ 457ff92:	cc                   	int3
+ 457ff93:	cc                   	int3
+ 457ff94:	cc                   	int3
+ 457ff95:	cc                   	int3
+ 457ff96:	cc                   	int3
+ 457ff97:	cc                   	int3
+ 457ff98:	cc                   	int3
+ 457ff99:	cc                   	int3
+ 457ff9a:	cc                   	int3
+ 457ff9b:	cc                   	int3
+ 457ff9c:	cc                   	int3
+ 457ff9d:	cc                   	int3
+ 457ff9e:	cc                   	int3
+ 457ff9f:	cc                   	int3

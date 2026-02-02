@@ -1,0 +1,84 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig
+# addr 0x4b6bdc0 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b6bdc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig@@Base>:
+ 4b6bdc0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b6bdc4:	0f 86 e0 00 00 00    	jbe    4b6beaa <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig@@Base+0xea>
+ 4b6bdca:	48 83 ec 68          	sub    $0x68,%rsp
+ 4b6bdce:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 4b6bdd3:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 4b6bdd8:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b6bddd:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 4b6bde2:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 4b6bde8:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 4b6bdee:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 4b6bdf4:	48 8d 15 a5 28 c4 00 	lea    0xc428a5(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4b6bdfb:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4b6be00:	48 8d 35 61 73 38 01 	lea    0x1387361(%rip),%rsi        # 5ef3168 <time..dict.leadingInt[string]@@Base+0x2ed8>
+ 4b6be07:	48 89 74 24 38       	mov    %rsi,0x38(%rsp)
+ 4b6be0c:	e8 4f 1f 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b6be11:	48 8d 0d 88 28 c4 00 	lea    0xc42888(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b6be18:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4b6be1d:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4b6be22:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4b6be27:	e8 b4 1e 38 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b6be2c:	48 8d 0d 2d e8 c3 00 	lea    0xc3e82d(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4b6be33:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 4b6be38:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b6be3d:	48 8d 05 79 e5 0f 00 	lea    0xfe579(%rip),%rax        # 4c6a3bd <_IO_stdin_used@@Base+0x373bd>
+ 4b6be44:	bb 0b 00 00 00       	mov    $0xb,%ebx
+ 4b6be49:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 4b6be4e:	bf 03 00 00 00       	mov    $0x3,%edi
+ 4b6be53:	48 89 fe             	mov    %rdi,%rsi
+ 4b6be56:	e8 a5 8a 48 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b6be5b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b6be60:	e8 5b ef 47 fd       	call   1feadc0 <os.ReadFile@@Base>
+ 4b6be65:	48 85 ff             	test   %rdi,%rdi
+ 4b6be68:	74 14                	je     4b6be7e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig@@Base+0xbe>
+ 4b6be6a:	31 c0                	xor    %eax,%eax
+ 4b6be6c:	31 db                	xor    %ebx,%ebx
+ 4b6be6e:	48 89 f9             	mov    %rdi,%rcx
+ 4b6be71:	48 89 f7             	mov    %rsi,%rdi
+ 4b6be74:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4b6be79:	48 83 c4 68          	add    $0x68,%rsp
+ 4b6be7d:	c3                   	ret
+ 4b6be7e:	48 89 d9             	mov    %rbx,%rcx
+ 4b6be81:	48 89 c3             	mov    %rax,%rbx
+ 4b6be84:	31 c0                	xor    %eax,%eax
+ 4b6be86:	e8 35 e8 3c fd       	call   1f3a6c0 <runtime.slicebytetostring@@Base>
+ 4b6be8b:	48 8d 0d 44 74 0c 00 	lea    0xc7444(%rip),%rcx        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 4b6be92:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4b6be97:	e8 84 dc 49 fd       	call   2009b20 <strings.TrimRight@@Base>
+ 4b6be9c:	31 c9                	xor    %ecx,%ecx
+ 4b6be9e:	31 ff                	xor    %edi,%edi
+ 4b6bea0:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 4b6bea5:	48 83 c4 68          	add    $0x68,%rsp
+ 4b6bea9:	c3                   	ret
+ 4b6beaa:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6beaf:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b6beb4:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4b6beb9:	e8 a2 85 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6bebe:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b6bec3:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b6bec8:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4b6becd:	e9 ee fe ff ff       	jmp    4b6bdc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.GetSMAConfig@@Base>
+ 4b6bed2:	cc                   	int3
+ 4b6bed3:	cc                   	int3
+ 4b6bed4:	cc                   	int3
+ 4b6bed5:	cc                   	int3
+ 4b6bed6:	cc                   	int3
+ 4b6bed7:	cc                   	int3
+ 4b6bed8:	cc                   	int3
+ 4b6bed9:	cc                   	int3
+ 4b6beda:	cc                   	int3
+ 4b6bedb:	cc                   	int3
+ 4b6bedc:	cc                   	int3
+ 4b6bedd:	cc                   	int3
+ 4b6bede:	cc                   	int3
+ 4b6bedf:	cc                   	int3

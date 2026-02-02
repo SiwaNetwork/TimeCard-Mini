@@ -1,0 +1,73 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType
+# addr 0x457ea40 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457ea40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType@@Base>:
+ 457ea40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457ea44:	0f 86 ae 00 00 00    	jbe    457eaf8 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType@@Base+0xb8>
+ 457ea4a:	48 83 ec 18          	sub    $0x18,%rsp
+ 457ea4e:	48 89 6c 24 10       	mov    %rbp,0x10(%rsp)
+ 457ea53:	48 8d 6c 24 10       	lea    0x10(%rsp),%rbp
+ 457ea58:	48 85 db             	test   %rbx,%rbx
+ 457ea5b:	75 28                	jne    457ea85 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType@@Base+0x45>
+ 457ea5d:	48 8b 08             	mov    (%rax),%rcx
+ 457ea60:	f2 0f 10 15 78 f8 f5 	movsd  0xf5f878(%rip),%xmm2        # 54de2e0 <_IO_stdin_used@@Base+0x8ab2e0>
+ 457ea67:	00 
+ 457ea68:	f2 0f 11 91 90 00 00 	movsd  %xmm2,0x90(%rcx)
+ 457ea6f:	00 
+ 457ea70:	48 8b 08             	mov    (%rax),%rcx
+ 457ea73:	f2 0f 10 15 e5 f7 f5 	movsd  0xf5f7e5(%rip),%xmm2        # 54de260 <_IO_stdin_used@@Base+0x8ab260>
+ 457ea7a:	00 
+ 457ea7b:	f2 0f 11 91 a8 00 00 	movsd  %xmm2,0xa8(%rcx)
+ 457ea82:	00 
+ 457ea83:	eb 26                	jmp    457eaab <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType@@Base+0x6b>
+ 457ea85:	48 8b 08             	mov    (%rax),%rcx
+ 457ea88:	f2 0f 10 15 80 f9 f5 	movsd  0xf5f980(%rip),%xmm2        # 54de410 <_IO_stdin_used@@Base+0x8ab410>
+ 457ea8f:	00 
+ 457ea90:	f2 0f 11 91 90 00 00 	movsd  %xmm2,0x90(%rcx)
+ 457ea97:	00 
+ 457ea98:	48 8b 08             	mov    (%rax),%rcx
+ 457ea9b:	f2 0f 10 15 c5 f8 f5 	movsd  0xf5f8c5(%rip),%xmm2        # 54de368 <_IO_stdin_used@@Base+0x8ab368>
+ 457eaa2:	00 
+ 457eaa3:	f2 0f 11 91 a8 00 00 	movsd  %xmm2,0xa8(%rcx)
+ 457eaaa:	00 
+ 457eaab:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 457eab0:	48 0f be 48 18       	movsbq 0x18(%rax),%rcx
+ 457eab5:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457eab8:	f2 0f 2a c9          	cvtsi2sd %ecx,%xmm1
+ 457eabc:	f2 0f 10 05 7c fa f5 	movsd  0xf5fa7c(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 457eac3:	00 
+ 457eac4:	e8 57 ad 9e fd       	call   1f69820 <math.pow@@Base>
+ 457eac9:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 457eace:	48 8b 00             	mov    (%rax),%rax
+ 457ead1:	f2 0f 10 15 bf f9 f5 	movsd  0xf5f9bf(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457ead8:	00 
+ 457ead9:	f2 0f 5e d0          	divsd  %xmm0,%xmm2
+ 457eadd:	f2 0f 10 05 b3 f9 f5 	movsd  0xf5f9b3(%rip),%xmm0        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 457eae4:	00 
+ 457eae5:	f2 0f 5e c2          	divsd  %xmm2,%xmm0
+ 457eae9:	e8 d2 17 00 00       	call   45802c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*pi_servo).pi_sync_interval@@Base>
+ 457eaee:	48 8b 6c 24 10       	mov    0x10(%rsp),%rbp
+ 457eaf3:	48 83 c4 18          	add    $0x18,%rsp
+ 457eaf7:	c3                   	ret
+ 457eaf8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457eafd:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457eb02:	e8 59 59 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457eb07:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457eb0c:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457eb11:	e9 2a ff ff ff       	jmp    457ea40 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*Pi).SetTSType@@Base>
+ 457eb16:	cc                   	int3
+ 457eb17:	cc                   	int3
+ 457eb18:	cc                   	int3
+ 457eb19:	cc                   	int3
+ 457eb1a:	cc                   	int3
+ 457eb1b:	cc                   	int3
+ 457eb1c:	cc                   	int3
+ 457eb1d:	cc                   	int3
+ 457eb1e:	cc                   	int3
+ 457eb1f:	cc                   	int3

@@ -1,0 +1,96 @@
+# github.com/lasselj/timebeat/beater/logging.StartSyslogClient
+# addr 0x440e000 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000440e000 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base>:
+ 440e000:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 440e004:	0f 86 65 01 00 00    	jbe    440e16f <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0x16f>
+ 440e00a:	48 83 ec 58          	sub    $0x58,%rsp
+ 440e00e:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 440e013:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 440e018:	48 8b 0d 61 6f a3 03 	mov    0x3a36f61(%rip),%rcx        # 7e44f80 <github.com/lasselj/timebeat/config.appConfig@@Base+0x3a0>
+ 440e01f:	48 8b 3d 62 6f a3 03 	mov    0x3a36f62(%rip),%rdi        # 7e44f88 <github.com/lasselj/timebeat/config.appConfig@@Base+0x3a8>
+ 440e026:	48 8d 05 38 5f 82 00 	lea    0x825f38(%rip),%rax        # 4c33f65 <_IO_stdin_used@@Base+0xf65>
+ 440e02d:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 440e032:	e8 09 f6 c4 fd       	call   205d640 <net.ResolveUDPAddr@@Base>
+ 440e037:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 440e03e:	00 00 
+ 440e040:	48 85 db             	test   %rbx,%rbx
+ 440e043:	0f 85 b5 00 00 00    	jne    440e0fe <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0xfe>
+ 440e049:	48 83 78 18 00       	cmpq   $0x0,0x18(%rax)
+ 440e04e:	74 10                	je     440e060 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0x60>
+ 440e050:	0f b7 0d 39 6f a3 03 	movzwl 0x3a36f39(%rip),%ecx        # 7e44f90 <github.com/lasselj/timebeat/config.appConfig@@Base+0x3b0>
+ 440e057:	48 89 48 18          	mov    %rcx,0x18(%rax)
+ 440e05b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 440e060:	e8 3b f2 c4 fd       	call   205d2a0 <net.(*UDPAddr).AddrPort@@Base>
+ 440e065:	e8 56 37 c0 fd       	call   20117c0 <net/netip.AddrPort.String@@Base>
+ 440e06a:	48 89 c1             	mov    %rax,%rcx
+ 440e06d:	48 89 df             	mov    %rbx,%rdi
+ 440e070:	be 01 00 00 00       	mov    $0x1,%esi
+ 440e075:	4c 8d 05 51 61 85 00 	lea    0x856151(%rip),%r8        # 4c641cd <_IO_stdin_used@@Base+0x311cd>
+ 440e07c:	41 b9 08 00 00 00    	mov    $0x8,%r9d
+ 440e082:	48 8d 05 dc 5e 82 00 	lea    0x825edc(%rip),%rax        # 4c33f65 <_IO_stdin_used@@Base+0xf65>
+ 440e089:	bb 03 00 00 00       	mov    $0x3,%ebx
+ 440e08e:	e8 2d 4c f3 fd       	call   2342cc0 <log/syslog.Dial@@Base>
+ 440e093:	48 85 db             	test   %rbx,%rbx
+ 440e096:	74 3e                	je     440e0d6 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0xd6>
+ 440e098:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 440e09d:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 440e0a3:	74 04                	je     440e0a9 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0xa9>
+ 440e0a5:	48 8b 5b 08          	mov    0x8(%rbx),%rbx
+ 440e0a9:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 440e0ae:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 440e0b3:	48 8d 05 e6 5c a0 00 	lea    0xa05ce6(%rip),%rax        # 4e13da0 <_IO_stdin_used@@Base+0x1e0da0>
+ 440e0ba:	bb 27 00 00 00       	mov    $0x27,%ebx
+ 440e0bf:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 440e0c4:	bf 01 00 00 00       	mov    $0x1,%edi
+ 440e0c9:	48 89 fe             	mov    %rdi,%rsi
+ 440e0cc:	e8 8f 8a d9 fd       	call   21a6b60 <log.Fatalf@@Base>
+ 440e0d1:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 440e0d6:	83 3d 83 d8 a6 03 00 	cmpl   $0x0,0x3a6d883(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440e0dd:	75 09                	jne    440e0e8 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0xe8>
+ 440e0df:	48 89 05 ca e1 a1 03 	mov    %rax,0x3a1e1ca(%rip)        # 7e2c2b0 <github.com/lasselj/timebeat/beater/logging.sysLogger@@Base>
+ 440e0e6:	eb 0c                	jmp    440e0f4 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base+0xf4>
+ 440e0e8:	48 8d 3d c1 e1 a1 03 	lea    0x3a1e1c1(%rip),%rdi        # 7e2c2b0 <github.com/lasselj/timebeat/beater/logging.sysLogger@@Base>
+ 440e0ef:	e8 0c 85 b4 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 440e0f4:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 440e0f9:	48 83 c4 58          	add    $0x58,%rsp
+ 440e0fd:	c3                   	ret
+ 440e0fe:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 440e104:	48 8b 05 75 6e a3 03 	mov    0x3a36e75(%rip),%rax        # 7e44f80 <github.com/lasselj/timebeat/config.appConfig@@Base+0x3a0>
+ 440e10b:	48 8b 1d 76 6e a3 03 	mov    0x3a36e76(%rip),%rbx        # 7e44f88 <github.com/lasselj/timebeat/config.appConfig@@Base+0x3a8>
+ 440e112:	e8 49 fc ad fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 440e117:	48 8d 0d 82 05 3a 01 	lea    0x13a0582(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 440e11e:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 440e123:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 440e128:	48 8d 05 98 c4 9c 00 	lea    0x9cc498(%rip),%rax        # 4dda5c7 <_IO_stdin_used@@Base+0x1a75c7>
+ 440e12f:	bb 18 00 00 00       	mov    $0x18,%ebx
+ 440e134:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 440e139:	bf 01 00 00 00       	mov    $0x1,%edi
+ 440e13e:	48 89 fe             	mov    %rdi,%rsi
+ 440e141:	e8 ba 67 be fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 440e146:	48 8b 0d 33 e1 a1 03 	mov    0x3a1e133(%rip),%rcx        # 7e2c280 <github.com/lasselj/timebeat/beater/logging.ErrorLogger@@Base>
+ 440e14d:	48 89 c2             	mov    %rax,%rdx
+ 440e150:	48 89 c8             	mov    %rcx,%rax
+ 440e153:	48 89 de             	mov    %rbx,%rsi
+ 440e156:	48 89 d3             	mov    %rdx,%rbx
+ 440e159:	48 89 f1             	mov    %rsi,%rcx
+ 440e15c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 440e160:	e8 fb 8e ff ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 440e165:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 440e16a:	48 83 c4 58          	add    $0x58,%rsp
+ 440e16e:	c3                   	ret
+ 440e16f:	e8 ec 62 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 440e174:	e9 87 fe ff ff       	jmp    440e000 <github.com/lasselj/timebeat/beater/logging.StartSyslogClient@@Base>
+ 440e179:	cc                   	int3
+ 440e17a:	cc                   	int3
+ 440e17b:	cc                   	int3
+ 440e17c:	cc                   	int3
+ 440e17d:	cc                   	int3
+ 440e17e:	cc                   	int3
+ 440e17f:	cc                   	int3

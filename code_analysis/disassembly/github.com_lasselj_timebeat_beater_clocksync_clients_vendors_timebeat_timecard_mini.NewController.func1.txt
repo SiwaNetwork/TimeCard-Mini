@@ -1,0 +1,68 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1
+# addr 0x4ba5f40 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004ba5f40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1@@Base>:
+ 4ba5f40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4ba5f44:	0f 86 bf 00 00 00    	jbe    4ba6009 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1@@Base+0xc9>
+ 4ba5f4a:	48 83 ec 30          	sub    $0x30,%rsp
+ 4ba5f4e:	48 89 6c 24 28       	mov    %rbp,0x28(%rsp)
+ 4ba5f53:	48 8d 6c 24 28       	lea    0x28(%rsp),%rbp
+ 4ba5f58:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4ba5f5c:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+ 4ba5f61:	48 8d 05 3c 1b 24 00 	lea    0x241b3c(%rip),%rax        # 4de7aa4 <_IO_stdin_used@@Base+0x1b4aa4>
+ 4ba5f68:	bb 1c 00 00 00       	mov    $0x1c,%ebx
+ 4ba5f6d:	e8 2e 0e 86 ff       	call   4406da0 <github.com/lasselj/timebeat/beater/logging.NewLogger@@Base>
+ 4ba5f72:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4ba5f77:	48 8d 05 e2 59 0b 01 	lea    0x10b59e2(%rip),%rax        # 5c5b960 <type:sync.Map@@Base>
+ 4ba5f7e:	66 90                	xchg   %ax,%ax
+ 4ba5f80:	e8 5b a5 34 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4ba5f85:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 4ba5f8a:	48 8d 05 0f e1 ff 00 	lea    0xffe10f(%rip),%rax        # 5ba40a0 <type:Eprn0IK0@@Base>
+ 4ba5f91:	e8 4a a5 34 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4ba5f96:	83 3d c3 59 2d 03 00 	cmpl   $0x0,0x32d59c3(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4ba5f9d:	75 23                	jne    4ba5fc2 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1@@Base+0x82>
+ 4ba5f9f:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 4ba5fa4:	48 89 08             	mov    %rcx,(%rax)
+ 4ba5fa7:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 4ba5fac:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4ba5fb0:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4ba5fb5:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4ba5fb9:	48 89 05 70 62 28 03 	mov    %rax,0x3286270(%rip)        # 7e2c230 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.controller@@Base>
+ 4ba5fc0:	eb 3d                	jmp    4ba5fff <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1@@Base+0xbf>
+ 4ba5fc2:	48 89 c7             	mov    %rax,%rdi
+ 4ba5fc5:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+ 4ba5fca:	e8 31 07 3b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4ba5fcf:	48 8d 48 08          	lea    0x8(%rax),%rcx
+ 4ba5fd3:	48 89 cf             	mov    %rcx,%rdi
+ 4ba5fd6:	48 8b 54 24 20       	mov    0x20(%rsp),%rdx
+ 4ba5fdb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4ba5fe0:	e8 3b 07 3b fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4ba5fe5:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4ba5fe9:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4ba5fee:	e8 0d 07 3b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4ba5ff3:	48 8d 3d 36 62 28 03 	lea    0x3286236(%rip),%rdi        # 7e2c230 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.controller@@Base>
+ 4ba5ffa:	e8 01 06 3b fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4ba5fff:	48 8b 6c 24 28       	mov    0x28(%rsp),%rbp
+ 4ba6004:	48 83 c4 30          	add    $0x30,%rsp
+ 4ba6008:	c3                   	ret
+ 4ba6009:	e8 b2 e3 3a fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 4ba600e:	e9 2d ff ff ff       	jmp    4ba5f40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat_timecard_mini.NewController.func1@@Base>
+ 4ba6013:	cc                   	int3
+ 4ba6014:	cc                   	int3
+ 4ba6015:	cc                   	int3
+ 4ba6016:	cc                   	int3
+ 4ba6017:	cc                   	int3
+ 4ba6018:	cc                   	int3
+ 4ba6019:	cc                   	int3
+ 4ba601a:	cc                   	int3
+ 4ba601b:	cc                   	int3
+ 4ba601c:	cc                   	int3
+ 4ba601d:	cc                   	int3
+ 4ba601e:	cc                   	int3
+ 4ba601f:	cc                   	int3

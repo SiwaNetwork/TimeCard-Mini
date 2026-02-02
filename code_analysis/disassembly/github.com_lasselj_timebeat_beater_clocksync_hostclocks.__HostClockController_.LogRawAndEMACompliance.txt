@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance
+# addr 0x4596200 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004596200 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base>:
+ 4596200:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4596204:	0f 86 34 01 00 00    	jbe    459633e <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0x13e>
+ 459620a:	48 83 ec 48          	sub    $0x48,%rsp
+ 459620e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4596213:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4596218:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459621f:	4c 89 6c 24 38       	mov    %r13,0x38(%rsp)
+ 4596224:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4596229:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 459622e:	48 89 c1             	mov    %rax,%rcx
+ 4596231:	31 c0                	xor    %eax,%eax
+ 4596233:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4596238:	f0 0f b1 51 38       	lock cmpxchg %edx,0x38(%rcx)
+ 459623d:	0f 94 c2             	sete   %dl
+ 4596240:	48 8d 41 38          	lea    0x38(%rcx),%rax
+ 4596244:	84 d2                	test   %dl,%dl
+ 4596246:	75 14                	jne    459625c <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0x5c>
+ 4596248:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 459624d:	e8 ee 22 9e fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4596252:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+ 4596257:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459625c:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 4596262:	48 8d 15 f7 00 00 00 	lea    0xf7(%rip),%rdx        # 4596360 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance.func1@@Base>
+ 4596269:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 459626e:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4596273:	48 8d 54 24 28       	lea    0x28(%rsp),%rdx
+ 4596278:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 459627d:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 4596282:	48 8b 11             	mov    (%rcx),%rdx
+ 4596285:	48 8b 42 40          	mov    0x40(%rdx),%rax
+ 4596289:	48 85 c0             	test   %rax,%rax
+ 459628c:	75 06                	jne    4596294 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0x94>
+ 459628e:	31 c0                	xor    %eax,%eax
+ 4596290:	31 db                	xor    %ebx,%ebx
+ 4596292:	eb 0c                	jmp    45962a0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0xa0>
+ 4596294:	e8 a7 13 ff ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4596299:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459629e:	66 90                	xchg   %ax,%ax
+ 45962a0:	48 83 fb 06          	cmp    $0x6,%rbx
+ 45962a4:	75 29                	jne    45962cf <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0xcf>
+ 45962a6:	81 38 73 79 73 74    	cmpl   $0x74737973,(%rax)
+ 45962ac:	75 21                	jne    45962cf <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0xcf>
+ 45962ae:	66 81 78 04 65 6d    	cmpw   $0x6d65,0x4(%rax)
+ 45962b4:	75 19                	jne    45962cf <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0xcf>
+ 45962b6:	48 8b 11             	mov    (%rcx),%rdx
+ 45962b9:	48 8b 12             	mov    (%rdx),%rdx
+ 45962bc:	48 8b 59 50          	mov    0x50(%rcx),%rbx
+ 45962c0:	48 8b 12             	mov    (%rdx),%rdx
+ 45962c3:	48 89 93 90 01 00 00 	mov    %rdx,0x190(%rbx)
+ 45962ca:	48 89 ce             	mov    %rcx,%rsi
+ 45962cd:	eb 3e                	jmp    459630d <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base+0x10d>
+ 45962cf:	48 8b 11             	mov    (%rcx),%rdx
+ 45962d2:	48 8b 12             	mov    (%rdx),%rdx
+ 45962d5:	48 8b 71 50          	mov    0x50(%rcx),%rsi
+ 45962d9:	48 8b 12             	mov    (%rdx),%rdx
+ 45962dc:	48 89 96 98 01 00 00 	mov    %rdx,0x198(%rsi)
+ 45962e3:	48 89 c8             	mov    %rcx,%rax
+ 45962e6:	48 8d 1d f0 8b 6c 00 	lea    0x6c8bf0(%rip),%rbx        # 4c5eedd <_IO_stdin_used@@Base+0x2bedd>
+ 45962ed:	b9 06 00 00 00       	mov    $0x6,%ecx
+ 45962f2:	e8 c9 00 00 00       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45962f7:	48 8b 10             	mov    (%rax),%rdx
+ 45962fa:	48 8b 74 24 50       	mov    0x50(%rsp),%rsi
+ 45962ff:	48 8b 7e 50          	mov    0x50(%rsi),%rdi
+ 4596303:	48 8b 12             	mov    (%rdx),%rdx
+ 4596306:	48 89 97 90 01 00 00 	mov    %rdx,0x190(%rdi)
+ 459630d:	48 8b 46 50          	mov    0x50(%rsi),%rax
+ 4596311:	e8 6a 08 00 00       	call   4596b80 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostCompliance).LogClientComplianceRecord@@Base>
+ 4596316:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 459631b:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4596320:	48 8b 0a             	mov    (%rdx),%rcx
+ 4596323:	ff d1                	call   *%rcx
+ 4596325:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 459632a:	48 83 c4 48          	add    $0x48,%rsp
+ 459632e:	c3                   	ret
+ 459632f:	e8 2c 5c 98 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4596334:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4596339:	48 83 c4 48          	add    $0x48,%rsp
+ 459633d:	c3                   	ret
+ 459633e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4596343:	e8 18 e1 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4596348:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459634d:	e9 ae fe ff ff       	jmp    4596200 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).LogRawAndEMACompliance@@Base>
+ 4596352:	cc                   	int3
+ 4596353:	cc                   	int3
+ 4596354:	cc                   	int3
+ 4596355:	cc                   	int3
+ 4596356:	cc                   	int3
+ 4596357:	cc                   	int3
+ 4596358:	cc                   	int3
+ 4596359:	cc                   	int3
+ 459635a:	cc                   	int3
+ 459635b:	cc                   	int3
+ 459635c:	cc                   	int3
+ 459635d:	cc                   	int3
+ 459635e:	cc                   	int3
+ 459635f:	cc                   	int3

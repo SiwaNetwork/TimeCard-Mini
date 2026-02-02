@@ -1,0 +1,77 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop
+# addr 0x45bbb60 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045bbb60 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop@@Base>:
+ 45bbb60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45bbb64:	0f 86 d5 00 00 00    	jbe    45bbc3f <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop@@Base+0xdf>
+ 45bbb6a:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+ 45bbb6e:	48 89 6c 24 78       	mov    %rbp,0x78(%rsp)
+ 45bbb73:	48 8d 6c 24 78       	lea    0x78(%rsp),%rbp
+ 45bbb78:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 45bbb7f:	00 
+ 45bbb80:	e8 fb 4b fe ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 45bbb85:	48 8b 40 20          	mov    0x20(%rax),%rax
+ 45bbb89:	48 8d 1d bb c2 6a 00 	lea    0x6ac2bb(%rip),%rbx        # 4c67e4b <_IO_stdin_used@@Base+0x34e4b>
+ 45bbb90:	b9 0a 00 00 00       	mov    $0xa,%ecx
+ 45bbb95:	e8 86 3c fe ff       	call   459f820 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Subscribe@@Base>
+ 45bbb9a:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45bbb9f:	90                   	nop
+ 45bbba0:	eb 37                	jmp    45bbbd9 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop@@Base+0x79>
+ 45bbba2:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 45bbba7:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45bbbac:	e8 af 48 fe ff       	call   45a0460 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).GetTimeSource@@Base>
+ 45bbbb1:	88 44 24 37          	mov    %al,0x37(%rsp)
+ 45bbbb5:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 45bbbba:	e8 e1 49 fe ff       	call   45a05a0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).GetSourceIPAddr@@Base>
+ 45bbbbf:	0f b6 5c 24 37       	movzbl 0x37(%rsp),%ebx
+ 45bbbc4:	48 89 c1             	mov    %rax,%rcx
+ 45bbbc7:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 45bbbce:	00 
+ 45bbbcf:	e8 8c 00 00 00       	call   45bbc60 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).UpdateTimeSource@@Base>
+ 45bbbd4:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45bbbd9:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45bbbe0:	00 
+ 45bbbe1:	4c 8b 4a 18          	mov    0x18(%rdx),%r9
+ 45bbbe5:	48 c7 44 24 50 00 00 	movq   $0x0,0x50(%rsp)
+ 45bbbec:	00 00 
+ 45bbbee:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 45bbbf4:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 45bbbfa:	4c 89 4c 24 68       	mov    %r9,0x68(%rsp)
+ 45bbbff:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45bbc04:	4c 8d 4c 24 50       	lea    0x50(%rsp),%r9
+ 45bbc09:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 45bbc0e:	48 8d 5c 24 38       	lea    0x38(%rsp),%rbx
+ 45bbc13:	31 c9                	xor    %ecx,%ecx
+ 45bbc15:	31 ff                	xor    %edi,%edi
+ 45bbc17:	be 02 00 00 00       	mov    $0x2,%esi
+ 45bbc1c:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45bbc22:	48 8d 44 24 58       	lea    0x58(%rsp),%rax
+ 45bbc27:	e8 94 4f 97 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45bbc2c:	48 85 c0             	test   %rax,%rax
+ 45bbc2f:	0f 84 6d ff ff ff    	je     45bbba2 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop@@Base+0x42>
+ 45bbc35:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 45bbc3a:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 45bbc3e:	c3                   	ret
+ 45bbc3f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45bbc44:	e8 17 88 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45bbc49:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45bbc4e:	e9 0d ff ff ff       	jmp    45bbb60 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/server.(*NTPServer).runClockQualityReceiverLoop@@Base>
+ 45bbc53:	cc                   	int3
+ 45bbc54:	cc                   	int3
+ 45bbc55:	cc                   	int3
+ 45bbc56:	cc                   	int3
+ 45bbc57:	cc                   	int3
+ 45bbc58:	cc                   	int3
+ 45bbc59:	cc                   	int3
+ 45bbc5a:	cc                   	int3
+ 45bbc5b:	cc                   	int3
+ 45bbc5c:	cc                   	int3
+ 45bbc5d:	cc                   	int3
+ 45bbc5e:	cc                   	int3
+ 45bbc5f:	cc                   	int3

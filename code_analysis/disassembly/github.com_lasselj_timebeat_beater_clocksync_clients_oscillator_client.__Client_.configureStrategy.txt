@@ -1,0 +1,104 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy
+# addr 0x45ed660 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ed660 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base>:
+ 45ed660:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ed664:	0f 86 04 01 00 00    	jbe    45ed76e <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x10e>
+ 45ed66a:	48 83 ec 40          	sub    $0x40,%rsp
+ 45ed66e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 45ed673:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 45ed678:	48 83 b8 98 01 00 00 	cmpq   $0x0,0x198(%rax)
+ 45ed67f:	00 
+ 45ed680:	74 0b                	je     45ed68d <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x2d>
+ 45ed682:	48 c7 80 80 02 00 00 	movq   $0x1,0x280(%rax)
+ 45ed689:	01 00 00 00 
+ 45ed68d:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 45ed692:	48 8b 88 a0 01 00 00 	mov    0x1a0(%rax),%rcx
+ 45ed699:	48 8b 98 a8 01 00 00 	mov    0x1a8(%rax),%rbx
+ 45ed6a0:	48 89 c8             	mov    %rcx,%rax
+ 45ed6a3:	e8 78 75 e1 ff       	call   4404c20 <github.com/lasselj/timebeat/beater/utility.ParseTimeString@@Base>
+ 45ed6a8:	48 85 db             	test   %rbx,%rbx
+ 45ed6ab:	74 07                	je     45ed6b4 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x54>
+ 45ed6ad:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45ed6b2:	eb 21                	jmp    45ed6d5 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x75>
+ 45ed6b4:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 45ed6b9:	48 89 82 90 02 00 00 	mov    %rax,0x290(%rdx)
+ 45ed6c0:	48 83 ba 80 02 00 00 	cmpq   $0x1,0x280(%rdx)
+ 45ed6c7:	01 
+ 45ed6c8:	75 0b                	jne    45ed6d5 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x75>
+ 45ed6ca:	48 c7 82 80 02 00 00 	movq   $0x2,0x280(%rdx)
+ 45ed6d1:	02 00 00 00 
+ 45ed6d5:	48 83 ba 80 02 00 00 	cmpq   $0x0,0x280(%rdx)
+ 45ed6dc:	00 
+ 45ed6dd:	74 7a                	je     45ed759 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0xf9>
+ 45ed6df:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 45ed6e5:	48 8b 82 80 02 00 00 	mov    0x280(%rdx),%rax
+ 45ed6ec:	48 83 f8 03          	cmp    $0x3,%rax
+ 45ed6f0:	73 71                	jae    45ed763 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base+0x103>
+ 45ed6f2:	48 c1 e0 04          	shl    $0x4,%rax
+ 45ed6f6:	48 8d 0d 43 e5 39 03 	lea    0x339e543(%rip),%rcx        # 798bc40 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.StrategyNames@@Base>
+ 45ed6fd:	48 8b 14 01          	mov    (%rcx,%rax,1),%rdx
+ 45ed701:	48 8b 5c 01 08       	mov    0x8(%rcx,%rax,1),%rbx
+ 45ed706:	48 89 d0             	mov    %rdx,%rax
+ 45ed709:	e8 52 06 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45ed70e:	48 8d 0d 8b 0f 1c 01 	lea    0x11c0f8b(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45ed715:	48 89 4c 24 28       	mov    %rcx,0x28(%rsp)
+ 45ed71a:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45ed71f:	48 8d 05 07 cf 7d 00 	lea    0x7dcf07(%rip),%rax        # 4dca62d <_IO_stdin_used@@Base+0x19762d>
+ 45ed726:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 45ed72b:	48 8d 4c 24 28       	lea    0x28(%rsp),%rcx
+ 45ed730:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45ed735:	48 89 fe             	mov    %rdi,%rsi
+ 45ed738:	e8 c3 71 a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45ed73d:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45ed742:	48 8b 09             	mov    (%rcx),%rcx
+ 45ed745:	48 89 c2             	mov    %rax,%rdx
+ 45ed748:	48 89 c8             	mov    %rcx,%rax
+ 45ed74b:	48 89 de             	mov    %rbx,%rsi
+ 45ed74e:	48 89 d3             	mov    %rdx,%rbx
+ 45ed751:	48 89 f1             	mov    %rsi,%rcx
+ 45ed754:	e8 87 9b e1 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45ed759:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 45ed75e:	48 83 c4 40          	add    $0x40,%rsp
+ 45ed762:	c3                   	ret
+ 45ed763:	b9 03 00 00 00       	mov    $0x3,%ecx
+ 45ed768:	e8 33 93 96 fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 45ed76d:	90                   	nop
+ 45ed76e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45ed773:	e8 e8 6c 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45ed778:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45ed77d:	0f 1f 00             	nopl   (%rax)
+ 45ed780:	e9 db fe ff ff       	jmp    45ed660 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).configureStrategy@@Base>
+ 45ed785:	cc                   	int3
+ 45ed786:	cc                   	int3
+ 45ed787:	cc                   	int3
+ 45ed788:	cc                   	int3
+ 45ed789:	cc                   	int3
+ 45ed78a:	cc                   	int3
+ 45ed78b:	cc                   	int3
+ 45ed78c:	cc                   	int3
+ 45ed78d:	cc                   	int3
+ 45ed78e:	cc                   	int3
+ 45ed78f:	cc                   	int3
+ 45ed790:	cc                   	int3
+ 45ed791:	cc                   	int3
+ 45ed792:	cc                   	int3
+ 45ed793:	cc                   	int3
+ 45ed794:	cc                   	int3
+ 45ed795:	cc                   	int3
+ 45ed796:	cc                   	int3
+ 45ed797:	cc                   	int3
+ 45ed798:	cc                   	int3
+ 45ed799:	cc                   	int3
+ 45ed79a:	cc                   	int3
+ 45ed79b:	cc                   	int3
+ 45ed79c:	cc                   	int3
+ 45ed79d:	cc                   	int3
+ 45ed79e:	cc                   	int3
+ 45ed79f:	cc                   	int3

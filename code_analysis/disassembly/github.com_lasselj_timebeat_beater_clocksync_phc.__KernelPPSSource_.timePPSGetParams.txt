@@ -1,0 +1,71 @@
+# github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams
+# addr 0x45896c0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045896c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams@@Base>:
+ 45896c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45896c4:	0f 86 b5 00 00 00    	jbe    458977f <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams@@Base+0xbf>
+ 45896ca:	48 83 ec 48          	sub    $0x48,%rsp
+ 45896ce:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 45896d3:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 45896d8:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45896dd:	48 8d 05 fc b5 6b 01 	lea    0x16bb5fc(%rip),%rax        # 5c44ce0 <type:kRG0AlyO@@Base>
+ 45896e4:	e8 f7 6d 96 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45896e9:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45896ee:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45896f3:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 45896f7:	48 63 1d 3e 13 8f 03 	movslq 0x38f133e(%rip),%rbx        # 7e7aa3c <github.com/lasselj/timebeat/beater/clocksync/phc.PPS_GETPARAMS@@Base>
+ 45896fe:	48 89 c6             	mov    %rax,%rsi
+ 4589701:	48 89 d0             	mov    %rdx,%rax
+ 4589704:	48 89 f1             	mov    %rsi,%rcx
+ 4589707:	e8 14 fb ff ff       	call   4589220 <github.com/lasselj/timebeat/beater/clocksync/phc.Ioctl@@Base>
+ 458970c:	48 85 db             	test   %rbx,%rbx
+ 458970f:	74 5f                	je     4589770 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams@@Base+0xb0>
+ 4589711:	48 8b 53 18          	mov    0x18(%rbx),%rdx
+ 4589715:	48 89 c8             	mov    %rcx,%rax
+ 4589718:	ff d2                	call   *%rdx
+ 458971a:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 4589720:	e8 3b 46 96 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4589725:	48 8d 0d 74 4f 22 01 	lea    0x1224f74(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 458972c:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 4589731:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 4589736:	48 8d 05 4f f0 85 00 	lea    0x85f04f(%rip),%rax        # 4de878c <_IO_stdin_used@@Base+0x1b578c>
+ 458973d:	bb 1c 00 00 00       	mov    $0x1c,%ebx
+ 4589742:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 4589747:	bf 01 00 00 00       	mov    $0x1,%edi
+ 458974c:	48 89 fe             	mov    %rdi,%rsi
+ 458974f:	e8 ac b1 a6 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4589754:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4589759:	48 8b 09             	mov    (%rcx),%rcx
+ 458975c:	48 89 c2             	mov    %rax,%rdx
+ 458975f:	48 89 c8             	mov    %rcx,%rax
+ 4589762:	48 89 de             	mov    %rbx,%rsi
+ 4589765:	48 89 d3             	mov    %rdx,%rbx
+ 4589768:	48 89 f1             	mov    %rsi,%rcx
+ 458976b:	e8 f0 d8 e7 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4589770:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4589775:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 458977a:	48 83 c4 48          	add    $0x48,%rsp
+ 458977e:	c3                   	ret
+ 458977f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4589784:	e8 d7 ac 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4589789:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 458978e:	e9 2d ff ff ff       	jmp    45896c0 <github.com/lasselj/timebeat/beater/clocksync/phc.(*KernelPPSSource).timePPSGetParams@@Base>
+ 4589793:	cc                   	int3
+ 4589794:	cc                   	int3
+ 4589795:	cc                   	int3
+ 4589796:	cc                   	int3
+ 4589797:	cc                   	int3
+ 4589798:	cc                   	int3
+ 4589799:	cc                   	int3
+ 458979a:	cc                   	int3
+ 458979b:	cc                   	int3
+ 458979c:	cc                   	int3
+ 458979d:	cc                   	int3
+ 458979e:	cc                   	int3
+ 458979f:	cc                   	int3

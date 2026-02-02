@@ -1,0 +1,110 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker
+# addr 0x45a1ca0 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a1ca0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base>:
+ 45a1ca0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a1ca4:	0f 86 32 01 00 00    	jbe    45a1ddc <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x13c>
+ 45a1caa:	48 83 ec 58          	sub    $0x58,%rsp
+ 45a1cae:	48 89 6c 24 50       	mov    %rbp,0x50(%rsp)
+ 45a1cb3:	48 8d 6c 24 50       	lea    0x50(%rsp),%rbp
+ 45a1cb8:	48 89 7c 24 78       	mov    %rdi,0x78(%rsp)
+ 45a1cbd:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45a1cc1:	48 83 ba 88 00 00 00 	cmpq   $0x2,0x88(%rdx)
+ 45a1cc8:	02 
+ 45a1cc9:	0f 84 01 01 00 00    	je     45a1dd0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x130>
+ 45a1ccf:	48 89 7c 24 48       	mov    %rdi,0x48(%rsp)
+ 45a1cd4:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 45a1cd9:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 45a1cde:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45a1ce3:	e8 d8 fd ff ff       	call   45a1ac0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).GetUTCTimeFromMasterClock@@Base>
+ 45a1ce8:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+ 45a1ced:	48 8b 74 24 40       	mov    0x40(%rsp),%rsi
+ 45a1cf2:	4c 8b 44 24 48       	mov    0x48(%rsp),%r8
+ 45a1cf7:	e8 c4 98 a2 fd       	call   1fcb5c0 <time.Time.Sub@@Base>
+ 45a1cfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a1d00:	48 3d 00 e1 f5 05    	cmp    $0x5f5e100,%rax
+ 45a1d06:	0f 8e a6 00 00 00    	jle    45a1db2 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x112>
+ 45a1d0c:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 45a1d11:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45a1d15:	48 ff 42 68          	incq   0x68(%rdx)
+ 45a1d19:	48 8b 51 18          	mov    0x18(%rcx),%rdx
+ 45a1d1d:	48 83 7a 68 03       	cmpq   $0x3,0x68(%rdx)
+ 45a1d22:	7f 0b                	jg     45a1d2f <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x8f>
+ 45a1d24:	48 3d 00 e1 f5 05    	cmp    $0x5f5e100,%rax
+ 45a1d2a:	e9 94 00 00 00       	jmp    45a1dc3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x123>
+ 45a1d2f:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 45a1d34:	48 0f be 42 58       	movsbq 0x58(%rdx),%rax
+ 45a1d39:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 45a1d3c:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+ 45a1d40:	f2 0f 10 05 f8 c7 f3 	movsd  0xf3c7f8(%rip),%xmm0        # 54de540 <_IO_stdin_used@@Base+0x8ab540>
+ 45a1d47:	00 
+ 45a1d48:	e8 d3 7a 9c fd       	call   1f69820 <math.pow@@Base>
+ 45a1d4d:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 45a1d52:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45a1d56:	f2 0f 10 15 3a c7 f3 	movsd  0xf3c73a(%rip),%xmm2        # 54de498 <_IO_stdin_used@@Base+0x8ab498>
+ 45a1d5d:	00 
+ 45a1d5e:	f2 0f 5e d0          	divsd  %xmm0,%xmm2
+ 45a1d62:	f2 0f 10 1d 3e cb f3 	movsd  0xf3cb3e(%rip),%xmm3        # 54de8a8 <_IO_stdin_used@@Base+0x8ab8a8>
+ 45a1d69:	00 
+ 45a1d6a:	f2 0f 5e da          	divsd  %xmm2,%xmm3
+ 45a1d6e:	f2 48 0f 2c d3       	cvttsd2si %xmm3,%rdx
+ 45a1d73:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 45a1d78:	48 29 da             	sub    %rbx,%rdx
+ 45a1d7b:	48 81 c2 80 96 98 00 	add    $0x989680,%rdx
+ 45a1d82:	48 89 51 70          	mov    %rdx,0x70(%rcx)
+ 45a1d86:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45a1d8a:	c6 41 78 01          	movb   $0x1,0x78(%rcx)
+ 45a1d8e:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 45a1d92:	b9 14 00 00 00       	mov    $0x14,%ecx
+ 45a1d97:	48 8d 1d ef 69 82 00 	lea    0x8269ef(%rip),%rbx        # 4dc878d <_IO_stdin_used@@Base+0x19578d>
+ 45a1d9e:	66 90                	xchg   %ax,%ax
+ 45a1da0:	e8 fb 53 e6 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 45a1da5:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45a1daa:	48 3d 00 e1 f5 05    	cmp    $0x5f5e100,%rax
+ 45a1db0:	eb 11                	jmp    45a1dc3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base+0x123>
+ 45a1db2:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 45a1db7:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 45a1dbb:	48 c7 41 68 00 00 00 	movq   $0x0,0x68(%rcx)
+ 45a1dc2:	00 
+ 45a1dc3:	0f 9f c0             	setg   %al
+ 45a1dc6:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45a1dcb:	48 83 c4 58          	add    $0x58,%rsp
+ 45a1dcf:	c3                   	ret
+ 45a1dd0:	31 c0                	xor    %eax,%eax
+ 45a1dd2:	48 8b 6c 24 50       	mov    0x50(%rsp),%rbp
+ 45a1dd7:	48 83 c4 58          	add    $0x58,%rsp
+ 45a1ddb:	c3                   	ret
+ 45a1ddc:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a1de1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45a1de6:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45a1deb:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45a1df0:	e8 6b 26 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a1df5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a1dfa:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45a1dff:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a1e04:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45a1e09:	e9 92 fe ff ff       	jmp    45a1ca0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).fineTuneServoTicker@@Base>
+ 45a1e0e:	cc                   	int3
+ 45a1e0f:	cc                   	int3
+ 45a1e10:	cc                   	int3
+ 45a1e11:	cc                   	int3
+ 45a1e12:	cc                   	int3
+ 45a1e13:	cc                   	int3
+ 45a1e14:	cc                   	int3
+ 45a1e15:	cc                   	int3
+ 45a1e16:	cc                   	int3
+ 45a1e17:	cc                   	int3
+ 45a1e18:	cc                   	int3
+ 45a1e19:	cc                   	int3
+ 45a1e1a:	cc                   	int3
+ 45a1e1b:	cc                   	int3
+ 45a1e1c:	cc                   	int3
+ 45a1e1d:	cc                   	int3
+ 45a1e1e:	cc                   	int3
+ 45a1e1f:	cc                   	int3

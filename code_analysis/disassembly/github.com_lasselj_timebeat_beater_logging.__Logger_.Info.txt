@@ -1,0 +1,87 @@
+# github.com/lasselj/timebeat/beater/logging.(*Logger).Info
+# addr 0x44072e0 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>:
+ 44072e0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 44072e4:	0f 86 07 01 00 00    	jbe    44073f1 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base+0x111>
+ 44072ea:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+ 44072ee:	48 89 6c 24 78       	mov    %rbp,0x78(%rsp)
+ 44072f3:	48 8d 6c 24 78       	lea    0x78(%rsp),%rbp
+ 44072f8:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 44072ff:	00 
+ 4407300:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 4407307:	00 
+ 4407308:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 440730f:	00 
+ 4407310:	48 8b 10             	mov    (%rax),%rdx
+ 4407313:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4407317:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 440731c:	48 89 74 24 70       	mov    %rsi,0x70(%rsp)
+ 4407321:	48 8d 05 b8 1b a3 03 	lea    0x3a31bb8(%rip),%rax        # 7e38ee0 <github.com/lasselj/timebeat/beater/logging.loggers@@Base>
+ 4407328:	48 8d 1d 71 73 3a 01 	lea    0x13a7371(%rip),%rbx        # 57ae6a0 <type:string@@Base>
+ 440732f:	48 8d 4c 24 68       	lea    0x68(%rsp),%rcx
+ 4407334:	e8 e7 f5 b6 fd       	call   1f76920 <sync.(*Map).Load@@Base>
+ 4407339:	84 c9                	test   %cl,%cl
+ 440733b:	74 71                	je     44073ae <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base+0xce>
+ 440733d:	48 8d 15 dc e5 a1 01 	lea    0x1a1e5dc(%rip),%rdx        # 5e25920 <type:uvzl+swU@@Base>
+ 4407344:	48 39 d0             	cmp    %rdx,%rax
+ 4407347:	0f 85 94 00 00 00    	jne    44073e1 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base+0x101>
+ 440734d:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4407352:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4407358:	48 8b 84 24 90 00 00 	mov    0x90(%rsp),%rax
+ 440735f:	00 
+ 4407360:	48 8b 9c 24 98 00 00 	mov    0x98(%rsp),%rbx
+ 4407367:	00 
+ 4407368:	e8 f3 69 ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 440736d:	48 8d 0d 2c 73 3a 01 	lea    0x13a732c(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4407374:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4407379:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 440737e:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4407383:	48 8b 41 08          	mov    0x8(%rcx),%rax
+ 4407387:	44 0f 11 3c 24       	movups %xmm15,(%rsp)
+ 440738c:	48 c7 44 24 10 00 00 	movq   $0x0,0x10(%rsp)
+ 4407393:	00 00 
+ 4407395:	31 db                	xor    %ebx,%ebx
+ 4407397:	31 c9                	xor    %ecx,%ecx
+ 4407399:	31 ff                	xor    %edi,%edi
+ 440739b:	48 8d 74 24 58       	lea    0x58(%rsp),%rsi
+ 44073a0:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 44073a6:	4d 89 c1             	mov    %r8,%r9
+ 44073a9:	e8 12 b8 f1 fd       	call   2322bc0 <go.uber.org/zap.(*SugaredLogger).log@@Base>
+ 44073ae:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 44073b5:	00 
+ 44073b6:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 44073bd:	00 
+ 44073be:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 44073c5:	00 
+ 44073c6:	48 8d 3d 8b ef 82 00 	lea    0x82ef8b(%rip),%rdi        # 4c36358 <_IO_stdin_used@@Base+0x3358>
+ 44073cd:	be 04 00 00 00       	mov    $0x4,%esi
+ 44073d2:	e8 89 01 00 00       	call   4407560 <github.com/lasselj/timebeat/beater/logging.(*Logger).logMessage@@Base>
+ 44073d7:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 44073dc:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 44073e0:	c3                   	ret
+ 44073e1:	48 89 d3             	mov    %rdx,%rbx
+ 44073e4:	48 8d 0d 55 cf 4a 01 	lea    0x14acf55(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 44073eb:	e8 b0 64 ae fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 44073f0:	90                   	nop
+ 44073f1:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 44073f6:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 44073fb:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4407400:	e8 5b d0 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4407405:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 440740a:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 440740f:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4407414:	e9 c7 fe ff ff       	jmp    44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 4407419:	cc                   	int3
+ 440741a:	cc                   	int3
+ 440741b:	cc                   	int3
+ 440741c:	cc                   	int3
+ 440741d:	cc                   	int3
+ 440741e:	cc                   	int3
+ 440741f:	cc                   	int3

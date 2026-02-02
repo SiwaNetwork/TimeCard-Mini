@@ -1,0 +1,41 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).move_reference
+# addr 0x457d060 size 96 (0x60)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457d060 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).move_reference@@Base>:
+ 457d060:	48 01 98 00 06 00 00 	add    %rbx,0x600(%rax)
+ 457d067:	48 01 88 08 06 00 00 	add    %rcx,0x608(%rax)
+ 457d06e:	ba 02 00 00 00       	mov    $0x2,%edx
+ 457d073:	eb 3a                	jmp    457d0af <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).move_reference@@Base+0x4f>
+ 457d075:	48 8d 72 fe          	lea    -0x2(%rdx),%rsi
+ 457d079:	48 c1 e6 05          	shl    $0x5,%rsi
+ 457d07d:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 457d080:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 457d085:	f2 0f 59 84 30 38 06 	mulsd  0x638(%rax,%rsi,1),%xmm0
+ 457d08c:	00 00 
+ 457d08e:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 457d091:	f2 48 0f 2a c9       	cvtsi2sd %rcx,%xmm1
+ 457d096:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+ 457d09a:	f2 0f 58 84 30 40 06 	addsd  0x640(%rax,%rsi,1),%xmm0
+ 457d0a1:	00 00 
+ 457d0a3:	f2 0f 11 84 30 40 06 	movsd  %xmm0,0x640(%rax,%rsi,1)
+ 457d0aa:	00 00 
+ 457d0ac:	48 ff c2             	inc    %rdx
+ 457d0af:	48 83 fa 06          	cmp    $0x6,%rdx
+ 457d0b3:	7e c0                	jle    457d075 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*linreg_servo).move_reference@@Base+0x15>
+ 457d0b5:	c3                   	ret
+ 457d0b6:	cc                   	int3
+ 457d0b7:	cc                   	int3
+ 457d0b8:	cc                   	int3
+ 457d0b9:	cc                   	int3
+ 457d0ba:	cc                   	int3
+ 457d0bb:	cc                   	int3
+ 457d0bc:	cc                   	int3
+ 457d0bd:	cc                   	int3
+ 457d0be:	cc                   	int3
+ 457d0bf:	cc                   	int3

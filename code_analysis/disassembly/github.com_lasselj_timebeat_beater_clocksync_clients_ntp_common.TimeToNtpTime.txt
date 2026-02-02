@@ -1,0 +1,72 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.TimeToNtpTime
+# addr 0x45b69c0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045b69c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.TimeToNtpTime@@Base>:
+ 45b69c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45b69c4:	0f 86 9f 00 00 00    	jbe    45b6a69 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.TimeToNtpTime@@Base+0xa9>
+ 45b69ca:	48 83 ec 38          	sub    $0x38,%rsp
+ 45b69ce:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 45b69d3:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 45b69d8:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 45b69dd:	48 8b 3d 9c fa 87 03 	mov    0x387fa9c(%rip),%rdi        # 7e36480 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.NtpEpoch@@Base>
+ 45b69e4:	48 8b 35 9d fa 87 03 	mov    0x387fa9d(%rip),%rsi        # 7e36488 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.NtpEpoch@@Base+0x8>
+ 45b69eb:	4c 8b 05 9e fa 87 03 	mov    0x387fa9e(%rip),%r8        # 7e36490 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.NtpEpoch@@Base+0x10>
+ 45b69f2:	e8 c9 4b a1 fd       	call   1fcb5c0 <time.Time.Sub@@Base>
+ 45b69f7:	48 89 c2             	mov    %rax,%rdx
+ 45b69fa:	48 d1 e8             	shr    $1,%rax
+ 45b69fd:	48 89 c1             	mov    %rax,%rcx
+ 45b6a00:	48 b8 98 a5 b4 36 41 	movabs $0x89705f4136b4a598,%rax
+ 45b6a07:	5f 70 89 
+ 45b6a0a:	48 89 d3             	mov    %rdx,%rbx
+ 45b6a0d:	48 f7 e1             	mul    %rcx
+ 45b6a10:	48 c1 ea 1c          	shr    $0x1c,%rdx
+ 45b6a14:	4c 69 ca 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r9
+ 45b6a1b:	4c 29 cb             	sub    %r9,%rbx
+ 45b6a1e:	48 c1 e3 20          	shl    $0x20,%rbx
+ 45b6a22:	49 89 d9             	mov    %rbx,%r9
+ 45b6a25:	48 d1 eb             	shr    $1,%rbx
+ 45b6a28:	48 b8 98 a5 b4 36 41 	movabs $0x89705f4136b4a598,%rax
+ 45b6a2f:	5f 70 89 
+ 45b6a32:	48 89 d1             	mov    %rdx,%rcx
+ 45b6a35:	48 f7 e3             	mul    %rbx
+ 45b6a38:	48 c1 ea 1c          	shr    $0x1c,%rdx
+ 45b6a3c:	4c 69 d2 00 ca 9a 3b 	imul   $0x3b9aca00,%rdx,%r10
+ 45b6a43:	4d 29 d1             	sub    %r10,%r9
+ 45b6a46:	4c 8d 52 01          	lea    0x1(%rdx),%r10
+ 45b6a4a:	49 81 f9 00 65 cd 1d 	cmp    $0x1dcd6500,%r9
+ 45b6a51:	49 0f 43 d2          	cmovae %r10,%rdx
+ 45b6a55:	48 c1 e1 20          	shl    $0x20,%rcx
+ 45b6a59:	48 09 d1             	or     %rdx,%rcx
+ 45b6a5c:	48 89 c8             	mov    %rcx,%rax
+ 45b6a5f:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 45b6a64:	48 83 c4 38          	add    $0x38,%rsp
+ 45b6a68:	c3                   	ret
+ 45b6a69:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45b6a6e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45b6a73:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45b6a78:	e8 e3 d9 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45b6a7d:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45b6a82:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45b6a87:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45b6a8c:	e9 2f ff ff ff       	jmp    45b69c0 <github.com/lasselj/timebeat/beater/clocksync/clients/ntp/common.TimeToNtpTime@@Base>
+ 45b6a91:	cc                   	int3
+ 45b6a92:	cc                   	int3
+ 45b6a93:	cc                   	int3
+ 45b6a94:	cc                   	int3
+ 45b6a95:	cc                   	int3
+ 45b6a96:	cc                   	int3
+ 45b6a97:	cc                   	int3
+ 45b6a98:	cc                   	int3
+ 45b6a99:	cc                   	int3
+ 45b6a9a:	cc                   	int3
+ 45b6a9b:	cc                   	int3
+ 45b6a9c:	cc                   	int3
+ 45b6a9d:	cc                   	int3
+ 45b6a9e:	cc                   	int3
+ 45b6a9f:	cc                   	int3

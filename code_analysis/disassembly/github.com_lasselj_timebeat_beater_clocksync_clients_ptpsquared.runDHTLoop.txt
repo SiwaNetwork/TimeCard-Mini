@@ -1,0 +1,111 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop
+# addr 0x4b58280 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b58280 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base>:
+ 4b58280:	4c 8d 64 24 a0       	lea    -0x60(%rsp),%r12
+ 4b58285:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b58289:	0f 86 76 01 00 00    	jbe    4b58405 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0x185>
+ 4b5828f:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+ 4b58296:	48 89 ac 24 d8 00 00 	mov    %rbp,0xd8(%rsp)
+ 4b5829d:	00 
+ 4b5829e:	48 8d ac 24 d8 00 00 	lea    0xd8(%rsp),%rbp
+ 4b582a5:	00 
+ 4b582a6:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4b582ab:	48 8b 0d ae 3e 2d 03 	mov    0x32d3eae(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b582b2:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 4b582b7:	48 b8 00 f2 05 2a 01 	movabs $0x12a05f200,%rax
+ 4b582be:	00 00 00 
+ 4b582c1:	e8 7a 16 47 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 4b582c6:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b582cb:	eb 05                	jmp    4b582d2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0x52>
+ 4b582cd:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4b582d2:	48 8b 54 24 48       	mov    0x48(%rsp),%rdx
+ 4b582d7:	4c 8b 4a 08          	mov    0x8(%rdx),%r9
+ 4b582db:	4c 8b 10             	mov    (%rax),%r10
+ 4b582de:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4b582e4:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 4b582ea:	4c 89 4c 24 78       	mov    %r9,0x78(%rsp)
+ 4b582ef:	4c 89 54 24 68       	mov    %r10,0x68(%rsp)
+ 4b582f4:	48 8d 5c 24 40       	lea    0x40(%rsp),%rbx
+ 4b582f9:	31 c9                	xor    %ecx,%ecx
+ 4b582fb:	31 ff                	xor    %edi,%edi
+ 4b582fd:	be 02 00 00 00       	mov    $0x2,%esi
+ 4b58302:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b58308:	48 8d 44 24 68       	lea    0x68(%rsp),%rax
+ 4b5830d:	e8 ae 88 3d fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 4b58312:	48 85 c0             	test   %rax,%rax
+ 4b58315:	75 55                	jne    4b5836c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0xec>
+ 4b58317:	48 8b 0d 62 2c 2d 03 	mov    0x32d2c62(%rip),%rcx        # 7e2af80 <context.background@@Base>
+ 4b5831e:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4b58323:	48 8d 1d 2e f3 3d 01 	lea    0x13df32e(%rip),%rbx        # 5f37658 <go:itab.*context.emptyCtx,context.Context@@Base>
+ 4b5832a:	48 8d 3d 9c be 10 00 	lea    0x10be9c(%rip),%rdi        # 4c641cd <_IO_stdin_used@@Base+0x311cd>
+ 4b58331:	be 08 00 00 00       	mov    $0x8,%esi
+ 4b58336:	45 31 c0             	xor    %r8d,%r8d
+ 4b58339:	45 31 c9             	xor    %r9d,%r9d
+ 4b5833c:	4d 89 ca             	mov    %r9,%r10
+ 4b5833f:	90                   	nop
+ 4b58340:	e8 fb e3 cc ff       	call   4826740 <github.com/libp2p/go-libp2p/p2p/discovery/routing.(*RoutingDiscovery).FindPeers@@Base>
+ 4b58345:	48 85 db             	test   %rbx,%rbx
+ 4b58348:	75 83                	jne    4b582cd <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0x4d>
+ 4b5834a:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4b5834f:	44 0f 11 bc 24 b0 00 	movups %xmm15,0xb0(%rsp)
+ 4b58356:	00 00 
+ 4b58358:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4b5835f:	00 00 
+ 4b58361:	44 0f 11 bc 24 c8 00 	movups %xmm15,0xc8(%rsp)
+ 4b58368:	00 00 
+ 4b5836a:	eb 7e                	jmp    4b583ea <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0x16a>
+ 4b5836c:	48 8b ac 24 d8 00 00 	mov    0xd8(%rsp),%rbp
+ 4b58373:	00 
+ 4b58374:	48 81 c4 e0 00 00 00 	add    $0xe0,%rsp
+ 4b5837b:	c3                   	ret
+ 4b5837c:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4b58383:	00 
+ 4b58384:	48 89 8c 24 88 00 00 	mov    %rcx,0x88(%rsp)
+ 4b5838b:	00 
+ 4b5838c:	0f 10 84 24 b8 00 00 	movups 0xb8(%rsp),%xmm0
+ 4b58393:	00 
+ 4b58394:	0f 11 84 24 90 00 00 	movups %xmm0,0x90(%rsp)
+ 4b5839b:	00 
+ 4b5839c:	0f 10 84 24 c8 00 00 	movups 0xc8(%rsp),%xmm0
+ 4b583a3:	00 
+ 4b583a4:	0f 11 84 24 a0 00 00 	movups %xmm0,0xa0(%rsp)
+ 4b583ab:	00 
+ 4b583ac:	44 0f 11 bc 24 b0 00 	movups %xmm15,0xb0(%rsp)
+ 4b583b3:	00 00 
+ 4b583b5:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4b583bc:	00 00 
+ 4b583be:	44 0f 11 bc 24 c8 00 	movups %xmm15,0xc8(%rsp)
+ 4b583c5:	00 00 
+ 4b583c7:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4b583cc:	48 8b 51 48          	mov    0x48(%rcx),%rdx
+ 4b583d0:	48 8b 42 28          	mov    0x28(%rdx),%rax
+ 4b583d4:	48 8d 9c 24 88 00 00 	lea    0x88(%rsp),%rbx
+ 4b583db:	00 
+ 4b583dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b583e0:	e8 db f6 38 fd       	call   1ee7ac0 <runtime.chansend1@@Base>
+ 4b583e5:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4b583ea:	48 8d 9c 24 b0 00 00 	lea    0xb0(%rsp),%rbx
+ 4b583f1:	00 
+ 4b583f2:	e8 69 04 39 fd       	call   1ee8860 <runtime.chanrecv2@@Base>
+ 4b583f7:	84 c0                	test   %al,%al
+ 4b583f9:	75 81                	jne    4b5837c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0xfc>
+ 4b583fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b58400:	e9 c8 fe ff ff       	jmp    4b582cd <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base+0x4d>
+ 4b58405:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b5840a:	e8 51 c0 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b5840f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b58414:	e9 67 fe ff ff       	jmp    4b58280 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.runDHTLoop@@Base>
+ 4b58419:	cc                   	int3
+ 4b5841a:	cc                   	int3
+ 4b5841b:	cc                   	int3
+ 4b5841c:	cc                   	int3
+ 4b5841d:	cc                   	int3
+ 4b5841e:	cc                   	int3
+ 4b5841f:	cc                   	int3

@@ -1,0 +1,118 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe
+# addr 0x459fa20 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459fa20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe@@Base>:
+ 459fa20:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459fa24:	0f 86 35 01 00 00    	jbe    459fb5f <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe@@Base+0x13f>
+ 459fa2a:	48 83 ec 50          	sub    $0x50,%rsp
+ 459fa2e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 459fa33:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 459fa38:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 459fa3f:	4c 89 6c 24 40       	mov    %r13,0x40(%rsp)
+ 459fa44:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459fa49:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 459fa4e:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 459fa53:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 459fa58:	c6 44 24 26 00       	movb   $0x0,0x26(%rsp)
+ 459fa5d:	48 89 c2             	mov    %rax,%rdx
+ 459fa60:	31 c0                	xor    %eax,%eax
+ 459fa62:	be 01 00 00 00       	mov    $0x1,%esi
+ 459fa67:	f0 0f b1 72 10       	lock cmpxchg %esi,0x10(%rdx)
+ 459fa6c:	40 0f 94 c6          	sete   %sil
+ 459fa70:	48 8d 42 10          	lea    0x10(%rdx),%rax
+ 459fa74:	40 84 f6             	test   %sil,%sil
+ 459fa77:	75 20                	jne    459fa99 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe@@Base+0x79>
+ 459fa79:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 459fa7e:	66 90                	xchg   %ax,%ax
+ 459fa80:	e8 bb 8a 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 459fa85:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 459fa8a:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 459fa8f:	48 8b 54 24 58       	mov    0x58(%rsp),%rdx
+ 459fa94:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 459fa99:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 459fa9f:	48 8d 35 fa 00 00 00 	lea    0xfa(%rip),%rsi        # 459fba0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe.func1@@Base>
+ 459faa6:	48 89 74 24 30       	mov    %rsi,0x30(%rsp)
+ 459faab:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 459fab0:	48 8d 74 24 30       	lea    0x30(%rsp),%rsi
+ 459fab5:	48 89 74 24 40       	mov    %rsi,0x40(%rsp)
+ 459faba:	c6 44 24 27 01       	movb   $0x1,0x27(%rsp)
+ 459fabf:	48 8b 72 20          	mov    0x20(%rdx),%rsi
+ 459fac3:	48 8d 05 b6 ae 3a 01 	lea    0x13aaeb6(%rip),%rax        # 594a980 <type:JTGW1oVn@@Base>
+ 459faca:	48 89 cf             	mov    %rcx,%rdi
+ 459facd:	48 89 d9             	mov    %rbx,%rcx
+ 459fad0:	48 89 f3             	mov    %rsi,%rbx
+ 459fad3:	e8 e8 62 95 fd       	call   1ef5dc0 <runtime.mapaccess2_faststr@@Base>
+ 459fad8:	48 8b 00             	mov    (%rax),%rax
+ 459fadb:	84 db                	test   %bl,%bl
+ 459fadd:	74 49                	je     459fb28 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe@@Base+0x108>
+ 459fadf:	90                   	nop
+ 459fae0:	e8 fb 88 94 fd       	call   1ee83e0 <runtime.closechan@@Base>
+ 459fae5:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459faea:	48 8b 59 20          	mov    0x20(%rcx),%rbx
+ 459faee:	48 8d 05 8b ae 3a 01 	lea    0x13aae8b(%rip),%rax        # 594a980 <type:JTGW1oVn@@Base>
+ 459faf5:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 459fafa:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 459faff:	90                   	nop
+ 459fb00:	e8 fb 6a 95 fd       	call   1ef6600 <runtime.mapdelete_faststr@@Base>
+ 459fb05:	c6 44 24 26 01       	movb   $0x1,0x26(%rsp)
+ 459fb0a:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 459fb0f:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 459fb14:	48 8b 0a             	mov    (%rdx),%rcx
+ 459fb17:	ff d1                	call   *%rcx
+ 459fb19:	0f b6 44 24 26       	movzbl 0x26(%rsp),%eax
+ 459fb1e:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459fb23:	48 83 c4 50          	add    $0x50,%rsp
+ 459fb27:	c3                   	ret
+ 459fb28:	c6 44 24 26 00       	movb   $0x0,0x26(%rsp)
+ 459fb2d:	c6 44 24 27 00       	movb   $0x0,0x27(%rsp)
+ 459fb32:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 459fb37:	48 8b 02             	mov    (%rdx),%rax
+ 459fb3a:	ff d0                	call   *%rax
+ 459fb3c:	0f b6 44 24 26       	movzbl 0x26(%rsp),%eax
+ 459fb41:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459fb46:	48 83 c4 50          	add    $0x50,%rsp
+ 459fb4a:	c3                   	ret
+ 459fb4b:	e8 10 c4 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 459fb50:	0f b6 44 24 26       	movzbl 0x26(%rsp),%eax
+ 459fb55:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 459fb5a:	48 83 c4 50          	add    $0x50,%rsp
+ 459fb5e:	c3                   	ret
+ 459fb5f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459fb64:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459fb69:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 459fb6e:	e8 ed 48 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459fb73:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459fb78:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459fb7d:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 459fb82:	e9 99 fe ff ff       	jmp    459fa20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*ClockQuality).Unsubscribe@@Base>
+ 459fb87:	cc                   	int3
+ 459fb88:	cc                   	int3
+ 459fb89:	cc                   	int3
+ 459fb8a:	cc                   	int3
+ 459fb8b:	cc                   	int3
+ 459fb8c:	cc                   	int3
+ 459fb8d:	cc                   	int3
+ 459fb8e:	cc                   	int3
+ 459fb8f:	cc                   	int3
+ 459fb90:	cc                   	int3
+ 459fb91:	cc                   	int3
+ 459fb92:	cc                   	int3
+ 459fb93:	cc                   	int3
+ 459fb94:	cc                   	int3
+ 459fb95:	cc                   	int3
+ 459fb96:	cc                   	int3
+ 459fb97:	cc                   	int3
+ 459fb98:	cc                   	int3
+ 459fb99:	cc                   	int3
+ 459fb9a:	cc                   	int3
+ 459fb9b:	cc                   	int3
+ 459fb9c:	cc                   	int3
+ 459fb9d:	cc                   	int3
+ 459fb9e:	cc                   	int3
+ 459fb9f:	cc                   	int3

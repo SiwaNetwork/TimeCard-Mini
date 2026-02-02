@@ -1,0 +1,128 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore
+# addr 0x45da180 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045da180 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base>:
+ 45da180:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45da184:	0f 86 22 01 00 00    	jbe    45da2ac <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x12c>
+ 45da18a:	48 83 ec 50          	sub    $0x50,%rsp
+ 45da18e:	48 89 6c 24 48       	mov    %rbp,0x48(%rsp)
+ 45da193:	48 8d 6c 24 48       	lea    0x48(%rsp),%rbp
+ 45da198:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 45da19d:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 45da1a2:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 45da1a7:	48 89 7c 24 70       	mov    %rdi,0x70(%rsp)
+ 45da1ac:	48 89 74 24 78       	mov    %rsi,0x78(%rsp)
+ 45da1b1:	4c 89 84 24 80 00 00 	mov    %r8,0x80(%rsp)
+ 45da1b8:	00 
+ 45da1b9:	4c 89 8c 24 88 00 00 	mov    %r9,0x88(%rsp)
+ 45da1c0:	00 
+ 45da1c1:	49 83 fa 01          	cmp    $0x1,%r10
+ 45da1c5:	0f 84 cf 00 00 00    	je     45da29a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x11a>
+ 45da1cb:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 45da1d0:	48 ff c0             	inc    %rax
+ 45da1d3:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45da1d8:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 45da1dd:	0f 1f 00             	nopl   (%rax)
+ 45da1e0:	48 85 c9             	test   %rcx,%rcx
+ 45da1e3:	0f 84 bd 00 00 00    	je     45da2a6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x126>
+ 45da1e9:	31 d2                	xor    %edx,%edx
+ 45da1eb:	48 f7 f1             	div    %rcx
+ 45da1ee:	48 85 d2             	test   %rdx,%rdx
+ 45da1f1:	74 37                	je     45da22a <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0xaa>
+ 45da1f3:	4d 85 c9             	test   %r9,%r9
+ 45da1f6:	74 17                	je     45da20f <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x8f>
+ 45da1f8:	4c 89 c0             	mov    %r8,%rax
+ 45da1fb:	bb 00 ca 9a 3b       	mov    $0x3b9aca00,%ebx
+ 45da200:	e8 3b 7d ad fd       	call   20b1f40 <math/rand.(*Rand).Int63n@@Base>
+ 45da205:	48 39 84 24 88 00 00 	cmp    %rax,0x88(%rsp)
+ 45da20c:	00 
+ 45da20d:	7e 0c                	jle    45da21b <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x9b>
+ 45da20f:	31 c0                	xor    %eax,%eax
+ 45da211:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45da216:	48 83 c4 50          	add    $0x50,%rsp
+ 45da21a:	c3                   	ret
+ 45da21b:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45da220:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45da225:	48 83 c4 50          	add    $0x50,%rsp
+ 45da229:	c3                   	ret
+ 45da22a:	e8 f1 f4 e3 ff       	call   4419720 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.GetPreciseTime@@Base>
+ 45da22f:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45da234:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 45da239:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 45da23e:	48 8b 7c 24 68       	mov    0x68(%rsp),%rdi
+ 45da243:	48 8b 74 24 70       	mov    0x70(%rsp),%rsi
+ 45da248:	4c 8b 44 24 78       	mov    0x78(%rsp),%r8
+ 45da24d:	e8 6e 13 9f fd       	call   1fcb5c0 <time.Time.Sub@@Base>
+ 45da252:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 45da257:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 45da25c:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45da261:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 45da266:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 45da26b:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 45da270:	48 3d 00 ca 9a 3b    	cmp    $0x3b9aca00,%rax
+ 45da276:	7e 0e                	jle    45da286 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x106>
+ 45da278:	48 c7 84 24 88 00 00 	movq   $0x0,0x88(%rsp)
+ 45da27f:	00 00 00 00 00 
+ 45da284:	eb 08                	jmp    45da28e <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base+0x10e>
+ 45da286:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 45da28d:	00 
+ 45da28e:	31 c0                	xor    %eax,%eax
+ 45da290:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45da295:	48 83 c4 50          	add    $0x50,%rsp
+ 45da299:	c3                   	ret
+ 45da29a:	31 c0                	xor    %eax,%eax
+ 45da29c:	48 8b 6c 24 48       	mov    0x48(%rsp),%rbp
+ 45da2a1:	48 83 c4 50          	add    $0x50,%rsp
+ 45da2a5:	c3                   	ret
+ 45da2a6:	e8 d5 14 94 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 45da2ab:	90                   	nop
+ 45da2ac:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45da2b1:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45da2b6:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45da2bb:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45da2c0:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 45da2c5:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 45da2ca:	4c 89 4c 24 38       	mov    %r9,0x38(%rsp)
+ 45da2cf:	4c 89 54 24 40       	mov    %r10,0x40(%rsp)
+ 45da2d4:	e8 87 a1 97 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45da2d9:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45da2de:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45da2e3:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45da2e8:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45da2ed:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45da2f2:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 45da2f7:	4c 8b 4c 24 38       	mov    0x38(%rsp),%r9
+ 45da2fc:	4c 8b 54 24 40       	mov    0x40(%rsp),%r10
+ 45da301:	e9 7a fe ff ff       	jmp    45da180 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.PacketThrottling.shouldIgnore@@Base>
+ 45da306:	cc                   	int3
+ 45da307:	cc                   	int3
+ 45da308:	cc                   	int3
+ 45da309:	cc                   	int3
+ 45da30a:	cc                   	int3
+ 45da30b:	cc                   	int3
+ 45da30c:	cc                   	int3
+ 45da30d:	cc                   	int3
+ 45da30e:	cc                   	int3
+ 45da30f:	cc                   	int3
+ 45da310:	cc                   	int3
+ 45da311:	cc                   	int3
+ 45da312:	cc                   	int3
+ 45da313:	cc                   	int3
+ 45da314:	cc                   	int3
+ 45da315:	cc                   	int3
+ 45da316:	cc                   	int3
+ 45da317:	cc                   	int3
+ 45da318:	cc                   	int3
+ 45da319:	cc                   	int3
+ 45da31a:	cc                   	int3
+ 45da31b:	cc                   	int3
+ 45da31c:	cc                   	int3
+ 45da31d:	cc                   	int3
+ 45da31e:	cc                   	int3
+ 45da31f:	cc                   	int3

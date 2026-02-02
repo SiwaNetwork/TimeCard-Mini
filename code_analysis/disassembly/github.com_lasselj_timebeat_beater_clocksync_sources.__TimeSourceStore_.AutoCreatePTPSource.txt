@@ -1,0 +1,161 @@
+# github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource
+# addr 0x4418220 size 576 (0x240)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004418220 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base>:
+ 4418220:	4c 8d a4 24 50 f7 ff 	lea    -0x8b0(%rsp),%r12
+ 4418227:	ff 
+ 4418228:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 441822c:	0f 86 f5 01 00 00    	jbe    4418427 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base+0x207>
+ 4418232:	48 81 ec 30 09 00 00 	sub    $0x930,%rsp
+ 4418239:	48 89 ac 24 28 09 00 	mov    %rbp,0x928(%rsp)
+ 4418240:	00 
+ 4418241:	48 8d ac 24 28 09 00 	lea    0x928(%rsp),%rbp
+ 4418248:	00 
+ 4418249:	48 89 84 24 38 09 00 	mov    %rax,0x938(%rsp)
+ 4418250:	00 
+ 4418251:	48 8b 15 f0 4b b5 01 	mov    0x1b54bf0(%rip),%rdx        # 5f6ce48 <github.com/quic-go/quic-go/internal/utils/linkedlist..dict.List[github.com/quic-go/quic-go/internal/ackhandler.interval]@@Base+0x448>
+ 4418258:	48 89 94 24 b0 04 00 	mov    %rdx,0x4b0(%rsp)
+ 441825f:	00 
+ 4418260:	48 8d bc 24 b8 04 00 	lea    0x4b8(%rsp),%rdi
+ 4418267:	00 
+ 4418268:	48 8d 35 e1 4b b5 01 	lea    0x1b54be1(%rip),%rsi        # 5f6ce50 <github.com/quic-go/quic-go/internal/utils/linkedlist..dict.List[github.com/quic-go/quic-go/internal/ackhandler.interval]@@Base+0x450>
+ 441826f:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4418276:	00 00 
+ 4418278:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 441827f:	00 
+ 4418280:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4418285:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 441828a:	e8 15 ed b3 fd       	call   1f56fa4 <runtime.duffcopy@@Base+0x1a4>
+ 441828f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4418293:	88 9c 24 c1 04 00 00 	mov    %bl,0x4c1(%rsp)
+ 441829a:	48 8b 90 80 00 00 00 	mov    0x80(%rax),%rdx
+ 44182a1:	48 ff c2             	inc    %rdx
+ 44182a4:	48 89 90 80 00 00 00 	mov    %rdx,0x80(%rax)
+ 44182ab:	48 83 fa 0a          	cmp    $0xa,%rdx
+ 44182af:	0f 8d f7 00 00 00    	jge    44183ac <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base+0x18c>
+ 44182b5:	48 89 94 24 90 04 00 	mov    %rdx,0x490(%rsp)
+ 44182bc:	00 
+ 44182bd:	48 8d 05 5c cf 82 01 	lea    0x182cf5c(%rip),%rax        # 5c45220 <type:K0rE3Tf5@@Base>
+ 44182c4:	e8 17 82 ad fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 44182c9:	48 89 84 24 98 04 00 	mov    %rax,0x498(%rsp)
+ 44182d0:	00 
+ 44182d1:	48 8b 8c 24 b0 04 00 	mov    0x4b0(%rsp),%rcx
+ 44182d8:	00 
+ 44182d9:	48 89 0c 24          	mov    %rcx,(%rsp)
+ 44182dd:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+ 44182e2:	48 8d b4 24 b8 04 00 	lea    0x4b8(%rsp),%rsi
+ 44182e9:	00 
+ 44182ea:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 44182ef:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 44182f4:	e8 ab ec b3 fd       	call   1f56fa4 <runtime.duffcopy@@Base+0x1a4>
+ 44182f9:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 44182fd:	48 8b 9c 24 90 04 00 	mov    0x490(%rsp),%rbx
+ 4418304:	00 
+ 4418305:	b9 02 00 00 00       	mov    $0x2,%ecx
+ 441830a:	48 8b 84 24 38 09 00 	mov    0x938(%rsp),%rax
+ 4418311:	00 
+ 4418312:	e8 a9 d6 ff ff       	call   44159c0 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).CreateSource@@Base>
+ 4418317:	83 3d 42 36 a6 03 00 	cmpl   $0x0,0x3a63642(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 441831e:	66 90                	xchg   %ax,%ax
+ 4418320:	75 33                	jne    4418355 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base+0x135>
+ 4418322:	48 8b bc 24 98 04 00 	mov    0x498(%rsp),%rdi
+ 4418329:	00 
+ 441832a:	48 8d b4 24 28 02 00 	lea    0x228(%rsp),%rsi
+ 4418331:	00 
+ 4418332:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 4418339:	00 00 
+ 441833b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4418340:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4418345:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 441834a:	e8 2b ec b3 fd       	call   1f56f7a <runtime.duffcopy@@Base+0x17a>
+ 441834f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4418353:	eb 3f                	jmp    4418394 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base+0x174>
+ 4418355:	48 8d bc 24 d8 06 00 	lea    0x6d8(%rsp),%rdi
+ 441835c:	00 
+ 441835d:	48 8d b4 24 28 02 00 	lea    0x228(%rsp),%rsi
+ 4418364:	00 
+ 4418365:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 441836a:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 441836f:	e8 06 ec b3 fd       	call   1f56f7a <runtime.duffcopy@@Base+0x17a>
+ 4418374:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4418378:	48 8d 05 a1 ce 82 01 	lea    0x182cea1(%rip),%rax        # 5c45220 <type:K0rE3Tf5@@Base>
+ 441837f:	48 8b 9c 24 98 04 00 	mov    0x498(%rsp),%rbx
+ 4418386:	00 
+ 4418387:	48 8d 8c 24 d8 06 00 	lea    0x6d8(%rsp),%rcx
+ 441838e:	00 
+ 441838f:	e8 ac ea ad fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4418394:	48 8b 84 24 98 04 00 	mov    0x498(%rsp),%rax
+ 441839b:	00 
+ 441839c:	48 8b ac 24 28 09 00 	mov    0x928(%rsp),%rbp
+ 44183a3:	00 
+ 44183a4:	48 81 c4 30 09 00 00 	add    $0x930,%rsp
+ 44183ab:	c3                   	ret
+ 44183ac:	44 0f 11 bc 24 a0 04 	movups %xmm15,0x4a0(%rsp)
+ 44183b3:	00 00 
+ 44183b5:	48 8d 15 a4 65 39 01 	lea    0x13965a4(%rip),%rdx        # 57ae960 <type:uint8@@Base>
+ 44183bc:	48 89 94 24 a0 04 00 	mov    %rdx,0x4a0(%rsp)
+ 44183c3:	00 
+ 44183c4:	0f b6 d3             	movzbl %bl,%edx
+ 44183c7:	4c 8d 05 52 3d 85 03 	lea    0x3853d52(%rip),%r8        # 7c6c120 <runtime.staticuint64s@@Base>
+ 44183ce:	49 8d 14 d0          	lea    (%r8,%rdx,8),%rdx
+ 44183d2:	48 89 94 24 a8 04 00 	mov    %rdx,0x4a8(%rsp)
+ 44183d9:	00 
+ 44183da:	48 8d 05 f7 37 a6 00 	lea    0xa637f7(%rip),%rax        # 4e7bbd8 <_IO_stdin_used@@Base+0x248bd8>
+ 44183e1:	bb 4f 00 00 00       	mov    $0x4f,%ebx
+ 44183e6:	48 8d 8c 24 a0 04 00 	lea    0x4a0(%rsp),%rcx
+ 44183ed:	00 
+ 44183ee:	bf 01 00 00 00       	mov    $0x1,%edi
+ 44183f3:	48 89 fe             	mov    %rdi,%rsi
+ 44183f6:	e8 05 c5 bd fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 44183fb:	48 8b 94 24 38 09 00 	mov    0x938(%rsp),%rdx
+ 4418402:	00 
+ 4418403:	48 8b 52 78          	mov    0x78(%rdx),%rdx
+ 4418407:	48 89 d9             	mov    %rbx,%rcx
+ 441840a:	48 89 c3             	mov    %rax,%rbx
+ 441840d:	48 89 d0             	mov    %rdx,%rax
+ 4418410:	e8 8b ed fe ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 4418415:	31 c0                	xor    %eax,%eax
+ 4418417:	48 8b ac 24 28 09 00 	mov    0x928(%rsp),%rbp
+ 441841e:	00 
+ 441841f:	48 81 c4 30 09 00 00 	add    $0x930,%rsp
+ 4418426:	c3                   	ret
+ 4418427:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 441842c:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 4418430:	e8 2b c0 b3 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4418435:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 441843a:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 441843f:	90                   	nop
+ 4418440:	e9 db fd ff ff       	jmp    4418220 <github.com/lasselj/timebeat/beater/clocksync/sources.(*TimeSourceStore).AutoCreatePTPSource@@Base>
+ 4418445:	cc                   	int3
+ 4418446:	cc                   	int3
+ 4418447:	cc                   	int3
+ 4418448:	cc                   	int3
+ 4418449:	cc                   	int3
+ 441844a:	cc                   	int3
+ 441844b:	cc                   	int3
+ 441844c:	cc                   	int3
+ 441844d:	cc                   	int3
+ 441844e:	cc                   	int3
+ 441844f:	cc                   	int3
+ 4418450:	cc                   	int3
+ 4418451:	cc                   	int3
+ 4418452:	cc                   	int3
+ 4418453:	cc                   	int3
+ 4418454:	cc                   	int3
+ 4418455:	cc                   	int3
+ 4418456:	cc                   	int3
+ 4418457:	cc                   	int3
+ 4418458:	cc                   	int3
+ 4418459:	cc                   	int3
+ 441845a:	cc                   	int3
+ 441845b:	cc                   	int3
+ 441845c:	cc                   	int3
+ 441845d:	cc                   	int3
+ 441845e:	cc                   	int3
+ 441845f:	cc                   	int3

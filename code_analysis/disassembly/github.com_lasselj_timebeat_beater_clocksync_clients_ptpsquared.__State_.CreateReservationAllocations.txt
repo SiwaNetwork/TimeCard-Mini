@@ -1,0 +1,640 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations
+# addr 0x4b63420 size 2496 (0x9c0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b63420 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base>:
+ 4b63420:	4c 8d a4 24 f8 fd ff 	lea    -0x208(%rsp),%r12
+ 4b63427:	ff 
+ 4b63428:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b6342c:	0f 86 8a 09 00 00    	jbe    4b63dbc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x99c>
+ 4b63432:	48 81 ec 88 02 00 00 	sub    $0x288,%rsp
+ 4b63439:	48 89 ac 24 80 02 00 	mov    %rbp,0x280(%rsp)
+ 4b63440:	00 
+ 4b63441:	48 8d ac 24 80 02 00 	lea    0x280(%rsp),%rbp
+ 4b63448:	00 
+ 4b63449:	48 89 84 24 90 02 00 	mov    %rax,0x290(%rsp)
+ 4b63450:	00 
+ 4b63451:	44 0f 11 bc 24 80 01 	movups %xmm15,0x180(%rsp)
+ 4b63458:	00 00 
+ 4b6345a:	44 0f 11 bc 24 90 01 	movups %xmm15,0x190(%rsp)
+ 4b63461:	00 00 
+ 4b63463:	44 0f 11 bc 24 a0 01 	movups %xmm15,0x1a0(%rsp)
+ 4b6346a:	00 00 
+ 4b6346c:	48 8d bc 24 b0 01 00 	lea    0x1b0(%rsp),%rdi
+ 4b63473:	00 
+ 4b63474:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 4b63478:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 4b6347f:	00 
+ 4b63480:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b63485:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b6348a:	e8 13 39 3f fd       	call   1f56da2 <runtime.duffzero@@Base+0x122>
+ 4b6348f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b63493:	48 8d 8c 24 b0 01 00 	lea    0x1b0(%rsp),%rcx
+ 4b6349a:	00 
+ 4b6349b:	48 89 8c 24 90 01 00 	mov    %rcx,0x190(%rsp)
+ 4b634a2:	00 
+ 4b634a3:	e8 d8 80 3d fd       	call   1f3b580 <runtime.fastrand@@Base>
+ 4b634a8:	89 84 24 8c 01 00 00 	mov    %eax,0x18c(%rsp)
+ 4b634af:	48 8b 0d aa 1b 2e 03 	mov    0x32e1baa(%rip),%rcx        # 7e45060 <github.com/lasselj/timebeat/config.appConfig@@Base+0x480>
+ 4b634b6:	48 89 8c 24 80 00 00 	mov    %rcx,0x80(%rsp)
+ 4b634bd:	00 
+ 4b634be:	48 8d 05 9b 71 c4 00 	lea    0xc4719b(%rip),%rax        # 57aa660 <type:int@@Base>
+ 4b634c5:	31 db                	xor    %ebx,%ebx
+ 4b634c7:	e8 14 2f 3d fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b634cc:	48 8b 0d 85 1b 2e 03 	mov    0x32e1b85(%rip),%rcx        # 7e45058 <github.com/lasselj/timebeat/config.appConfig@@Base+0x478>
+ 4b634d3:	48 8b 15 86 1b 2e 03 	mov    0x32e1b86(%rip),%rdx        # 7e45060 <github.com/lasselj/timebeat/config.appConfig@@Base+0x480>
+ 4b634da:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4b634e1:	00 
+ 4b634e2:	31 db                	xor    %ebx,%ebx
+ 4b634e4:	48 8b b4 24 80 00 00 	mov    0x80(%rsp),%rsi
+ 4b634eb:	00 
+ 4b634ec:	31 ff                	xor    %edi,%edi
+ 4b634ee:	eb 2b                	jmp    4b6351b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0xfb>
+ 4b634f0:	4c 8b 8c 24 28 01 00 	mov    0x128(%rsp),%r9
+ 4b634f7:	00 
+ 4b634f8:	49 83 c1 10          	add    $0x10,%r9
+ 4b634fc:	4c 8b 94 24 c0 00 00 	mov    0xc0(%rsp),%r10
+ 4b63503:	00 
+ 4b63504:	49 ff c2             	inc    %r10
+ 4b63507:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4b6350e:	00 
+ 4b6350f:	48 89 ce             	mov    %rcx,%rsi
+ 4b63512:	48 89 df             	mov    %rbx,%rdi
+ 4b63515:	4c 89 d3             	mov    %r10,%rbx
+ 4b63518:	4c 89 c9             	mov    %r9,%rcx
+ 4b6351b:	48 89 bc 24 88 00 00 	mov    %rdi,0x88(%rsp)
+ 4b63522:	00 
+ 4b63523:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 4b6352a:	00 
+ 4b6352b:	48 39 d3             	cmp    %rdx,%rbx
+ 4b6352e:	0f 8d c8 02 00 00    	jge    4b637fc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x3dc>
+ 4b63534:	48 89 9c 24 c0 00 00 	mov    %rbx,0xc0(%rsp)
+ 4b6353b:	00 
+ 4b6353c:	48 89 b4 24 80 00 00 	mov    %rsi,0x80(%rsp)
+ 4b63543:	00 
+ 4b63544:	48 89 8c 24 28 01 00 	mov    %rcx,0x128(%rsp)
+ 4b6354b:	00 
+ 4b6354c:	48 8b 01             	mov    (%rcx),%rax
+ 4b6354f:	48 8b 59 08          	mov    0x8(%rcx),%rbx
+ 4b63553:	90                   	nop
+ 4b63554:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b63559:	31 f6                	xor    %esi,%esi
+ 4b6355b:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 4b63562:	48 8d 0d 4f 3b 97 00 	lea    0x973b4f(%rip),%rcx        # 54d70b8 <_IO_stdin_used@@Base+0x8a40b8>
+ 4b63569:	e8 12 39 4a fd       	call   2006e80 <strings.genSplit@@Base>
+ 4b6356e:	48 83 fb 01          	cmp    $0x1,%rbx
+ 4b63572:	7f 1d                	jg     4b63591 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x171>
+ 4b63574:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4b6357b:	00 
+ 4b6357c:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b63583:	00 
+ 4b63584:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b6358b:	00 
+ 4b6358c:	e9 5f ff ff ff       	jmp    4b634f0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0xd0>
+ 4b63591:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4b63596:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+ 4b6359d:	00 
+ 4b6359e:	48 8b 08             	mov    (%rax),%rcx
+ 4b635a1:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4b635a5:	48 89 c8             	mov    %rcx,%rax
+ 4b635a8:	e8 53 bb 40 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4b635ad:	48 85 db             	test   %rbx,%rbx
+ 4b635b0:	74 1d                	je     4b635cf <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x1af>
+ 4b635b2:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4b635b9:	00 
+ 4b635ba:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b635c1:	00 
+ 4b635c2:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b635c9:	00 
+ 4b635ca:	e9 21 ff ff ff       	jmp    4b634f0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0xd0>
+ 4b635cf:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b635d4:	48 8b b4 24 d0 00 00 	mov    0xd0(%rsp),%rsi
+ 4b635db:	00 
+ 4b635dc:	48 8b 4e 18          	mov    0x18(%rsi),%rcx
+ 4b635e0:	48 8b 7e 10          	mov    0x10(%rsi),%rdi
+ 4b635e4:	48 83 f9 01          	cmp    $0x1,%rcx
+ 4b635e8:	7d 04                	jge    4b635ee <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x1ce>
+ 4b635ea:	31 d2                	xor    %edx,%edx
+ 4b635ec:	eb 42                	jmp    4b63630 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x210>
+ 4b635ee:	48 89 bc 24 d8 00 00 	mov    %rdi,0xd8(%rsp)
+ 4b635f5:	00 
+ 4b635f6:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4b635fb:	48 8d 04 39          	lea    (%rcx,%rdi,1),%rax
+ 4b635ff:	48 8d 40 ff          	lea    -0x1(%rax),%rax
+ 4b63603:	48 8d 1d 56 35 97 00 	lea    0x973556(%rip),%rbx        # 54d6b60 <_IO_stdin_used@@Base+0x8a3b60>
+ 4b6360a:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b6360f:	e8 0c 05 38 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 4b63614:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4b63619:	48 8b b4 24 d0 00 00 	mov    0xd0(%rsp),%rsi
+ 4b63620:	00 
+ 4b63621:	48 8b bc 24 d8 00 00 	mov    0xd8(%rsp),%rdi
+ 4b63628:	00 
+ 4b63629:	89 c2                	mov    %eax,%edx
+ 4b6362b:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 4b63630:	84 d2                	test   %dl,%dl
+ 4b63632:	74 11                	je     4b63645 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x225>
+ 4b63634:	4c 8d 41 ff          	lea    -0x1(%rcx),%r8
+ 4b63638:	4c 39 c1             	cmp    %r8,%rcx
+ 4b6363b:	73 0b                	jae    4b63648 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x228>
+ 4b6363d:	0f 1f 00             	nopl   (%rax)
+ 4b63640:	e9 6b 07 00 00       	jmp    4b63db0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x990>
+ 4b63645:	49 89 c8             	mov    %rcx,%r8
+ 4b63648:	48 89 f8             	mov    %rdi,%rax
+ 4b6364b:	4c 89 c3             	mov    %r8,%rbx
+ 4b6364e:	b9 40 00 00 00       	mov    $0x40,%ecx
+ 4b63653:	e8 e8 a5 40 fd       	call   1f6dc40 <strconv.ParseFloat@@Base>
+ 4b63658:	48 85 c0             	test   %rax,%rax
+ 4b6365b:	74 1d                	je     4b6367a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x25a>
+ 4b6365d:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4b63664:	00 
+ 4b63665:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b6366c:	00 
+ 4b6366d:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b63674:	00 
+ 4b63675:	e9 76 fe ff ff       	jmp    4b634f0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0xd0>
+ 4b6367a:	f2 0f 11 44 24 78    	movsd  %xmm0,0x78(%rsp)
+ 4b63680:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4b63685:	48 83 fa 03          	cmp    $0x3,%rdx
+ 4b63689:	74 07                	je     4b63692 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x272>
+ 4b6368b:	31 c0                	xor    %eax,%eax
+ 4b6368d:	e9 b9 00 00 00       	jmp    4b6374b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x32b>
+ 4b63692:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4b63699:	00 
+ 4b6369a:	48 8b 42 20          	mov    0x20(%rdx),%rax
+ 4b6369e:	48 8b 5a 28          	mov    0x28(%rdx),%rbx
+ 4b636a2:	48 8d 0d 1f 38 97 00 	lea    0x97381f(%rip),%rcx        # 54d6ec8 <_IO_stdin_used@@Base+0x8a3ec8>
+ 4b636a9:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b636ae:	31 f6                	xor    %esi,%esi
+ 4b636b0:	49 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%r8
+ 4b636b7:	e8 c4 37 4a fd       	call   2006e80 <strings.genSplit@@Base>
+ 4b636bc:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4b636c1:	31 c9                	xor    %ecx,%ecx
+ 4b636c3:	31 d2                	xor    %edx,%edx
+ 4b636c5:	48 8d 74 24 44       	lea    0x44(%rsp),%rsi
+ 4b636ca:	31 ff                	xor    %edi,%edi
+ 4b636cc:	e9 51 05 00 00       	jmp    4b63c22 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x802>
+ 4b636d1:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4b636d8:	00 
+ 4b636d9:	4c 8b 02             	mov    (%rdx),%r8
+ 4b636dc:	49 8b 58 30          	mov    0x30(%r8),%rbx
+ 4b636e0:	48 89 9c 24 f8 00 00 	mov    %rbx,0xf8(%rsp)
+ 4b636e7:	00 
+ 4b636e8:	31 c0                	xor    %eax,%eax
+ 4b636ea:	e9 1a 06 00 00       	jmp    4b63d09 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x8e9>
+ 4b636ef:	48 8d 05 2a 95 c6 00 	lea    0xc6952a(%rip),%rax        # 57ccc20 <type:[1]uint32@@Base>
+ 4b636f6:	e8 e5 cd 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b636fb:	8b 4c 24 44          	mov    0x44(%rsp),%ecx
+ 4b636ff:	89 08                	mov    %ecx,(%rax)
+ 4b63701:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 4b63706:	48 89 c3             	mov    %rax,%rbx
+ 4b63709:	eb 07                	jmp    4b63712 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x2f2>
+ 4b6370b:	31 c9                	xor    %ecx,%ecx
+ 4b6370d:	48 8d 5c 24 44       	lea    0x44(%rsp),%rbx
+ 4b63712:	48 89 9c 24 00 01 00 	mov    %rbx,0x100(%rsp)
+ 4b63719:	00 
+ 4b6371a:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b63721:	00 
+ 4b63722:	e8 19 db 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b63727:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4b6372e:	00 
+ 4b6372f:	48 8b 94 24 90 00 00 	mov    0x90(%rsp),%rdx
+ 4b63736:	00 
+ 4b63737:	48 39 d1             	cmp    %rdx,%rcx
+ 4b6373a:	7d 0f                	jge    4b6374b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x32b>
+ 4b6373c:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 4b63743:	00 
+ 4b63744:	31 c9                	xor    %ecx,%ecx
+ 4b63746:	e9 fe 05 00 00       	jmp    4b63d49 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x929>
+ 4b6374b:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 4b63752:	00 
+ 4b63753:	48 8d 9c 24 80 01 00 	lea    0x180(%rsp),%rbx
+ 4b6375a:	00 
+ 4b6375b:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4b63760:	48 8d 05 19 15 de 00 	lea    0xde1519(%rip),%rax        # 5944c80 <type:/XcrjcxA@@Base>
+ 4b63767:	e8 d4 13 39 fd       	call   1ef4b40 <runtime.mapassign_fast64@@Base>
+ 4b6376c:	f2 0f 10 44 24 78    	movsd  0x78(%rsp),%xmm0
+ 4b63772:	f2 0f 10 0d 36 af 97 	movsd  0x97af36(%rip),%xmm1        # 54de6b0 <_IO_stdin_used@@Base+0x8ab6b0>
+ 4b63779:	00 
+ 4b6377a:	f2 0f 5e c1          	divsd  %xmm1,%xmm0
+ 4b6377e:	f2 0f 11 00          	movsd  %xmm0,(%rax)
+ 4b63782:	83 3d d7 81 31 03 00 	cmpl   $0x0,0x33181d7(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63789:	75 0e                	jne    4b63799 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x379>
+ 4b6378b:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+ 4b63792:	00 
+ 4b63793:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 4b63797:	eb 19                	jmp    4b637b2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x392>
+ 4b63799:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b6379d:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+ 4b637a4:	00 
+ 4b637a5:	e8 76 2f 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b637aa:	f2 0f 10 0d fe ae 97 	movsd  0x97aefe(%rip),%xmm1        # 54de6b0 <_IO_stdin_used@@Base+0x8ab6b0>
+ 4b637b1:	00 
+ 4b637b2:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b637b9:	00 
+ 4b637ba:	48 ff c3             	inc    %rbx
+ 4b637bd:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 4b637c4:	00 
+ 4b637c5:	48 39 d9             	cmp    %rbx,%rcx
+ 4b637c8:	72 0a                	jb     4b637d4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x3b4>
+ 4b637ca:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b637d1:	00 
+ 4b637d2:	eb 19                	jmp    4b637ed <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x3cd>
+ 4b637d4:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b637db:	00 
+ 4b637dc:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b637e1:	48 8d 35 78 6e c4 00 	lea    0xc46e78(%rip),%rsi        # 57aa660 <type:int@@Base>
+ 4b637e8:	e8 d3 2c 3d fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b637ed:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4b637f2:	48 89 54 d8 f8       	mov    %rdx,-0x8(%rax,%rbx,8)
+ 4b637f7:	e9 f4 fc ff ff       	jmp    4b634f0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0xd0>
+ 4b637fc:	90                   	nop
+ 4b637fd:	48 89 fb             	mov    %rdi,%rbx
+ 4b63800:	48 89 f1             	mov    %rsi,%rcx
+ 4b63803:	e8 f8 a5 38 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 4b63808:	48 89 c3             	mov    %rax,%rbx
+ 4b6380b:	48 8d 05 ae 3d 3d 01 	lea    0x13d3dae(%rip),%rax        # 5f375c0 <go:itab.sort.IntSlice,sort.Interface@@Base>
+ 4b63812:	e8 c9 f9 3f fd       	call   1f631e0 <sort.Sort@@Base>
+ 4b63817:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4b6381e:	00 
+ 4b6381f:	48 8b 32             	mov    (%rdx),%rsi
+ 4b63822:	48 8b 36             	mov    (%rsi),%rsi
+ 4b63825:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4b6382c:	00 
+ 4b6382d:	eb 11                	jmp    4b63840 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x420>
+ 4b6382f:	48 8b bc 24 88 00 00 	mov    0x88(%rsp),%rdi
+ 4b63836:	00 
+ 4b63837:	48 ff cf             	dec    %rdi
+ 4b6383a:	48 89 c2             	mov    %rax,%rdx
+ 4b6383d:	48 89 f8             	mov    %rdi,%rax
+ 4b63840:	48 89 74 24 58       	mov    %rsi,0x58(%rsp)
+ 4b63845:	48 85 c0             	test   %rax,%rax
+ 4b63848:	0f 8e 77 02 00 00    	jle    4b63ac5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x6a5>
+ 4b6384e:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4b63855:	00 
+ 4b63856:	48 8b 32             	mov    (%rdx),%rsi
+ 4b63859:	48 8b 36             	mov    (%rsi),%rsi
+ 4b6385c:	48 89 b4 24 c8 00 00 	mov    %rsi,0xc8(%rsp)
+ 4b63863:	00 
+ 4b63864:	48 8b bc 24 e8 00 00 	mov    0xe8(%rsp),%rdi
+ 4b6386b:	00 
+ 4b6386c:	48 8b 4c c7 f8       	mov    -0x8(%rdi,%rax,8),%rcx
+ 4b63871:	48 8d 9c 24 80 01 00 	lea    0x180(%rsp),%rbx
+ 4b63878:	00 
+ 4b63879:	48 8d 05 00 14 de 00 	lea    0xde1400(%rip),%rax        # 5944c80 <type:/XcrjcxA@@Base>
+ 4b63880:	e8 5b 0f 39 fd       	call   1ef47e0 <runtime.mapaccess1_fast64@@Base>
+ 4b63885:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4b6388c:	00 
+ 4b6388d:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4b63890:	f2 48 0f 2a c2       	cvtsi2sd %rdx,%xmm0
+ 4b63895:	f2 0f 59 00          	mulsd  (%rax),%xmm0
+ 4b63899:	90                   	nop
+ 4b6389a:	66 48 0f 7e c1       	movq   %xmm0,%rcx
+ 4b6389f:	48 89 ca             	mov    %rcx,%rdx
+ 4b638a2:	48 c1 e9 34          	shr    $0x34,%rcx
+ 4b638a6:	81 e1 ff 07 00 00    	and    $0x7ff,%ecx
+ 4b638ac:	48 81 f9 ff 03 00 00 	cmp    $0x3ff,%rcx
+ 4b638b3:	73 2b                	jae    4b638e0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x4c0>
+ 4b638b5:	48 b8 00 00 00 00 00 	movabs $0x8000000000000000,%rax
+ 4b638bc:	00 00 80 
+ 4b638bf:	48 21 c2             	and    %rax,%rdx
+ 4b638c2:	48 bb 00 00 00 00 00 	movabs $0x3ff0000000000000,%rbx
+ 4b638c9:	00 f0 3f 
+ 4b638cc:	48 09 d3             	or     %rdx,%rbx
+ 4b638cf:	48 81 f9 fe 03 00 00 	cmp    $0x3fe,%rcx
+ 4b638d6:	48 0f 44 d3          	cmove  %rbx,%rdx
+ 4b638da:	48 89 d3             	mov    %rdx,%rbx
+ 4b638dd:	eb 46                	jmp    4b63925 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x505>
+ 4b638df:	90                   	nop
+ 4b638e0:	48 81 f9 33 04 00 00 	cmp    $0x433,%rcx
+ 4b638e7:	73 39                	jae    4b63922 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x502>
+ 4b638e9:	48 81 c1 01 fc ff ff 	add    $0xfffffffffffffc01,%rcx
+ 4b638f0:	48 83 f9 40          	cmp    $0x40,%rcx
+ 4b638f4:	48 19 c0             	sbb    %rax,%rax
+ 4b638f7:	48 bb 00 00 00 00 00 	movabs $0x8000000000000,%rbx
+ 4b638fe:	00 08 00 
+ 4b63901:	48 d3 eb             	shr    %cl,%rbx
+ 4b63904:	48 21 c3             	and    %rax,%rbx
+ 4b63907:	48 01 da             	add    %rbx,%rdx
+ 4b6390a:	48 bb ff ff ff ff ff 	movabs $0xfffffffffffff,%rbx
+ 4b63911:	ff 0f 00 
+ 4b63914:	48 d3 eb             	shr    %cl,%rbx
+ 4b63917:	48 21 c3             	and    %rax,%rbx
+ 4b6391a:	48 f7 d3             	not    %rbx
+ 4b6391d:	48 21 d3             	and    %rdx,%rbx
+ 4b63920:	eb 03                	jmp    4b63925 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x505>
+ 4b63922:	48 89 d3             	mov    %rdx,%rbx
+ 4b63925:	66 48 0f 6e c3       	movq   %rbx,%xmm0
+ 4b6392a:	f2 48 0f 2c c0       	cvttsd2si %xmm0,%rax
+ 4b6392f:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4b63934:	48 39 c1             	cmp    %rax,%rcx
+ 4b63937:	0f 8c 7d 01 00 00    	jl     4b63aba <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x69a>
+ 4b6393d:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4b63942:	e8 f9 d8 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b63947:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b6394e:	00 
+ 4b6394f:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 4b63956:	00 00 
+ 4b63958:	44 0f 11 bc 24 60 01 	movups %xmm15,0x160(%rsp)
+ 4b6395f:	00 00 
+ 4b63961:	44 0f 11 bc 24 70 01 	movups %xmm15,0x170(%rsp)
+ 4b63968:	00 00 
+ 4b6396a:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4b63971:	00 
+ 4b63972:	48 8b 94 24 e8 00 00 	mov    0xe8(%rsp),%rdx
+ 4b63979:	00 
+ 4b6397a:	48 8b 5c ca f8       	mov    -0x8(%rdx,%rcx,8),%rbx
+ 4b6397f:	48 89 9c 24 58 01 00 	mov    %rbx,0x158(%rsp)
+ 4b63986:	00 
+ 4b63987:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 4b6398c:	48 89 9c 24 60 01 00 	mov    %rbx,0x160(%rsp)
+ 4b63993:	00 
+ 4b63994:	48 8b 74 ca f8       	mov    -0x8(%rdx,%rcx,8),%rsi
+ 4b63999:	48 8d 05 e0 12 de 00 	lea    0xde12e0(%rip),%rax        # 5944c80 <type:/XcrjcxA@@Base>
+ 4b639a0:	48 8d 9c 24 80 01 00 	lea    0x180(%rsp),%rbx
+ 4b639a7:	00 
+ 4b639a8:	48 89 f1             	mov    %rsi,%rcx
+ 4b639ab:	e8 30 0e 39 fd       	call   1ef47e0 <runtime.mapaccess1_fast64@@Base>
+ 4b639b0:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 4b639b4:	48 89 84 24 68 01 00 	mov    %rax,0x168(%rsp)
+ 4b639bb:	00 
+ 4b639bc:	48 8b 84 24 20 01 00 	mov    0x120(%rsp),%rax
+ 4b639c3:	00 
+ 4b639c4:	48 89 84 24 70 01 00 	mov    %rax,0x170(%rsp)
+ 4b639cb:	00 
+ 4b639cc:	48 8b 84 24 90 02 00 	mov    0x290(%rsp),%rax
+ 4b639d3:	00 
+ 4b639d4:	48 8b 58 48          	mov    0x48(%rax),%rbx
+ 4b639d8:	48 ff c3             	inc    %rbx
+ 4b639db:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 4b639df:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 4b639e3:	48 39 da             	cmp    %rbx,%rdx
+ 4b639e6:	73 4a                	jae    4b63a32 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x612>
+ 4b639e8:	48 89 c8             	mov    %rcx,%rax
+ 4b639eb:	48 89 d1             	mov    %rdx,%rcx
+ 4b639ee:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b639f3:	48 8d 35 a6 73 14 01 	lea    0x11473a6(%rip),%rsi        # 5caada0 <type:HTxnwVA4@@Base>
+ 4b639fa:	e8 c1 2a 3d fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b639ff:	48 8b bc 24 90 02 00 	mov    0x290(%rsp),%rdi
+ 4b63a06:	00 
+ 4b63a07:	48 89 4f 50          	mov    %rcx,0x50(%rdi)
+ 4b63a0b:	83 3d 4e 7f 31 03 00 	cmpl   $0x0,0x3317f4e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63a12:	75 06                	jne    4b63a1a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x5fa>
+ 4b63a14:	48 89 47 40          	mov    %rax,0x40(%rdi)
+ 4b63a18:	eb 12                	jmp    4b63a2c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x60c>
+ 4b63a1a:	48 8d 57 40          	lea    0x40(%rdi),%rdx
+ 4b63a1e:	48 89 f9             	mov    %rdi,%rcx
+ 4b63a21:	48 89 d7             	mov    %rdx,%rdi
+ 4b63a24:	e8 d7 2b 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b63a29:	48 89 cf             	mov    %rcx,%rdi
+ 4b63a2c:	48 89 c1             	mov    %rax,%rcx
+ 4b63a2f:	48 89 f8             	mov    %rdi,%rax
+ 4b63a32:	48 89 58 48          	mov    %rbx,0x48(%rax)
+ 4b63a36:	48 8d 14 9b          	lea    (%rbx,%rbx,4),%rdx
+ 4b63a3a:	48 8d 1c d1          	lea    (%rcx,%rdx,8),%rbx
+ 4b63a3e:	48 8d 5b d8          	lea    -0x28(%rbx),%rbx
+ 4b63a42:	48 8b 74 24 58       	mov    0x58(%rsp),%rsi
+ 4b63a47:	48 8b 7c 24 60       	mov    0x60(%rsp),%rdi
+ 4b63a4c:	48 29 fe             	sub    %rdi,%rsi
+ 4b63a4f:	83 3d 0a 7f 31 03 00 	cmpl   $0x0,0x3317f0a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63a56:	75 31                	jne    4b63a89 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x669>
+ 4b63a58:	48 8b bc 24 58 01 00 	mov    0x158(%rsp),%rdi
+ 4b63a5f:	00 
+ 4b63a60:	48 89 7c d1 d8       	mov    %rdi,-0x28(%rcx,%rdx,8)
+ 4b63a65:	48 8d 14 d1          	lea    (%rcx,%rdx,8),%rdx
+ 4b63a69:	48 8d 52 e0          	lea    -0x20(%rdx),%rdx
+ 4b63a6d:	0f 10 84 24 60 01 00 	movups 0x160(%rsp),%xmm0
+ 4b63a74:	00 
+ 4b63a75:	0f 11 02             	movups %xmm0,(%rdx)
+ 4b63a78:	0f 10 84 24 70 01 00 	movups 0x170(%rsp),%xmm0
+ 4b63a7f:	00 
+ 4b63a80:	0f 11 42 10          	movups %xmm0,0x10(%rdx)
+ 4b63a84:	e9 a6 fd ff ff       	jmp    4b6382f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x40f>
+ 4b63a89:	48 89 b4 24 b8 00 00 	mov    %rsi,0xb8(%rsp)
+ 4b63a90:	00 
+ 4b63a91:	48 8d 05 08 73 14 01 	lea    0x1147308(%rip),%rax        # 5caada0 <type:HTxnwVA4@@Base>
+ 4b63a98:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 4b63a9f:	00 
+ 4b63aa0:	e8 9b 33 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b63aa5:	48 8b 84 24 90 02 00 	mov    0x290(%rsp),%rax
+ 4b63aac:	00 
+ 4b63aad:	48 8b b4 24 b8 00 00 	mov    0xb8(%rsp),%rsi
+ 4b63ab4:	00 
+ 4b63ab5:	e9 75 fd ff ff       	jmp    4b6382f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x40f>
+ 4b63aba:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4b63ac1:	00 
+ 4b63ac2:	48 89 ce             	mov    %rcx,%rsi
+ 4b63ac5:	48 85 f6             	test   %rsi,%rsi
+ 4b63ac8:	0f 8e 1c 01 00 00    	jle    4b63bea <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x7ca>
+ 4b63ace:	e8 6d d7 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b63ad3:	48 89 84 24 18 01 00 	mov    %rax,0x118(%rsp)
+ 4b63ada:	00 
+ 4b63adb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b63ae0:	e8 5b d7 38 fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 4b63ae5:	44 0f 11 bc 24 30 01 	movups %xmm15,0x130(%rsp)
+ 4b63aec:	00 00 
+ 4b63aee:	44 0f 11 bc 24 38 01 	movups %xmm15,0x138(%rsp)
+ 4b63af5:	00 00 
+ 4b63af7:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b63afe:	00 00 
+ 4b63b00:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4b63b05:	48 89 8c 24 38 01 00 	mov    %rcx,0x138(%rsp)
+ 4b63b0c:	00 
+ 4b63b0d:	48 8b 8c 24 18 01 00 	mov    0x118(%rsp),%rcx
+ 4b63b14:	00 
+ 4b63b15:	48 89 8c 24 40 01 00 	mov    %rcx,0x140(%rsp)
+ 4b63b1c:	00 
+ 4b63b1d:	48 89 84 24 48 01 00 	mov    %rax,0x148(%rsp)
+ 4b63b24:	00 
+ 4b63b25:	48 8b 84 24 90 02 00 	mov    0x290(%rsp),%rax
+ 4b63b2c:	00 
+ 4b63b2d:	48 8b 58 48          	mov    0x48(%rax),%rbx
+ 4b63b31:	48 ff c3             	inc    %rbx
+ 4b63b34:	48 8b 48 40          	mov    0x40(%rax),%rcx
+ 4b63b38:	48 8b 50 50          	mov    0x50(%rax),%rdx
+ 4b63b3c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b63b40:	48 39 da             	cmp    %rbx,%rdx
+ 4b63b43:	73 4a                	jae    4b63b8f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x76f>
+ 4b63b45:	48 89 c8             	mov    %rcx,%rax
+ 4b63b48:	48 89 d1             	mov    %rdx,%rcx
+ 4b63b4b:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b63b50:	48 8d 35 49 72 14 01 	lea    0x1147249(%rip),%rsi        # 5caada0 <type:HTxnwVA4@@Base>
+ 4b63b57:	e8 64 29 3d fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b63b5c:	48 8b bc 24 90 02 00 	mov    0x290(%rsp),%rdi
+ 4b63b63:	00 
+ 4b63b64:	48 89 4f 50          	mov    %rcx,0x50(%rdi)
+ 4b63b68:	83 3d f1 7d 31 03 00 	cmpl   $0x0,0x3317df1(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63b6f:	75 06                	jne    4b63b77 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x757>
+ 4b63b71:	48 89 47 40          	mov    %rax,0x40(%rdi)
+ 4b63b75:	eb 12                	jmp    4b63b89 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x769>
+ 4b63b77:	48 8d 57 40          	lea    0x40(%rdi),%rdx
+ 4b63b7b:	48 89 f9             	mov    %rdi,%rcx
+ 4b63b7e:	48 89 d7             	mov    %rdx,%rdi
+ 4b63b81:	e8 7a 2a 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b63b86:	48 89 cf             	mov    %rcx,%rdi
+ 4b63b89:	48 89 c1             	mov    %rax,%rcx
+ 4b63b8c:	48 89 f8             	mov    %rdi,%rax
+ 4b63b8f:	48 89 58 48          	mov    %rbx,0x48(%rax)
+ 4b63b93:	48 8d 14 9b          	lea    (%rbx,%rbx,4),%rdx
+ 4b63b97:	48 8d 1c d1          	lea    (%rcx,%rdx,8),%rbx
+ 4b63b9b:	48 8d 5b d8          	lea    -0x28(%rbx),%rbx
+ 4b63b9f:	83 3d ba 7d 31 03 00 	cmpl   $0x0,0x3317dba(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63ba6:	75 2e                	jne    4b63bd6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x7b6>
+ 4b63ba8:	48 8b 84 24 30 01 00 	mov    0x130(%rsp),%rax
+ 4b63baf:	00 
+ 4b63bb0:	48 89 44 d1 d8       	mov    %rax,-0x28(%rcx,%rdx,8)
+ 4b63bb5:	48 8d 04 d1          	lea    (%rcx,%rdx,8),%rax
+ 4b63bb9:	48 8d 40 e0          	lea    -0x20(%rax),%rax
+ 4b63bbd:	0f 10 84 24 38 01 00 	movups 0x138(%rsp),%xmm0
+ 4b63bc4:	00 
+ 4b63bc5:	0f 11 00             	movups %xmm0,(%rax)
+ 4b63bc8:	0f 10 84 24 48 01 00 	movups 0x148(%rsp),%xmm0
+ 4b63bcf:	00 
+ 4b63bd0:	0f 11 40 10          	movups %xmm0,0x10(%rax)
+ 4b63bd4:	eb 14                	jmp    4b63bea <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x7ca>
+ 4b63bd6:	48 8d 05 c3 71 14 01 	lea    0x11471c3(%rip),%rax        # 5caada0 <type:HTxnwVA4@@Base>
+ 4b63bdd:	48 8d 8c 24 30 01 00 	lea    0x130(%rsp),%rcx
+ 4b63be4:	00 
+ 4b63be5:	e8 56 32 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b63bea:	48 8b ac 24 80 02 00 	mov    0x280(%rsp),%rbp
+ 4b63bf1:	00 
+ 4b63bf2:	48 81 c4 88 02 00 00 	add    $0x288,%rsp
+ 4b63bf9:	c3                   	ret
+ 4b63bfa:	48 8b 84 24 10 01 00 	mov    0x110(%rsp),%rax
+ 4b63c01:	00 
+ 4b63c02:	48 83 c0 10          	add    $0x10,%rax
+ 4b63c06:	4c 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%r8
+ 4b63c0d:	00 
+ 4b63c0e:	49 ff c0             	inc    %r8
+ 4b63c11:	48 89 d6             	mov    %rdx,%rsi
+ 4b63c14:	48 89 df             	mov    %rbx,%rdi
+ 4b63c17:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4b63c1c:	48 89 ca             	mov    %rcx,%rdx
+ 4b63c1f:	4c 89 c1             	mov    %r8,%rcx
+ 4b63c22:	48 89 bc 24 90 00 00 	mov    %rdi,0x90(%rsp)
+ 4b63c29:	00 
+ 4b63c2a:	48 89 b4 24 f0 00 00 	mov    %rsi,0xf0(%rsp)
+ 4b63c31:	00 
+ 4b63c32:	48 39 cb             	cmp    %rcx,%rbx
+ 4b63c35:	0f 8e 96 fa ff ff    	jle    4b636d1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x2b1>
+ 4b63c3b:	48 89 94 24 98 00 00 	mov    %rdx,0x98(%rsp)
+ 4b63c42:	00 
+ 4b63c43:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4b63c4a:	00 
+ 4b63c4b:	48 89 84 24 10 01 00 	mov    %rax,0x110(%rsp)
+ 4b63c52:	00 
+ 4b63c53:	48 8b 08             	mov    (%rax),%rcx
+ 4b63c56:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 4b63c5a:	48 89 c8             	mov    %rcx,%rax
+ 4b63c5d:	0f 1f 00             	nopl   (%rax)
+ 4b63c60:	e8 9b b4 40 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4b63c65:	48 85 db             	test   %rbx,%rbx
+ 4b63c68:	74 1d                	je     4b63c87 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x867>
+ 4b63c6a:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b63c71:	00 
+ 4b63c72:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 4b63c79:	00 
+ 4b63c7a:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 4b63c81:	00 
+ 4b63c82:	e9 73 ff ff ff       	jmp    4b63bfa <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x7da>
+ 4b63c87:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b63c8e:	00 
+ 4b63c8f:	48 ff c3             	inc    %rbx
+ 4b63c92:	48 8b 8c 24 98 00 00 	mov    0x98(%rsp),%rcx
+ 4b63c99:	00 
+ 4b63c9a:	48 39 d9             	cmp    %rbx,%rcx
+ 4b63c9d:	72 0a                	jb     4b63ca9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x889>
+ 4b63c9f:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 4b63ca6:	00 
+ 4b63ca7:	eb 2c                	jmp    4b63cd5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x8b5>
+ 4b63ca9:	48 89 84 24 a0 00 00 	mov    %rax,0xa0(%rsp)
+ 4b63cb0:	00 
+ 4b63cb1:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+ 4b63cb8:	00 
+ 4b63cb9:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b63cbe:	48 8d 35 1b ac c4 00 	lea    0xc4ac1b(%rip),%rsi        # 57ae8e0 <type:uint32@@Base>
+ 4b63cc5:	e8 f6 27 3d fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b63cca:	48 89 c2             	mov    %rax,%rdx
+ 4b63ccd:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+ 4b63cd4:	00 
+ 4b63cd5:	89 44 9a fc          	mov    %eax,-0x4(%rdx,%rbx,4)
+ 4b63cd9:	e9 1c ff ff ff       	jmp    4b63bfa <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x7da>
+ 4b63cde:	48 8b 84 24 b0 00 00 	mov    0xb0(%rsp),%rax
+ 4b63ce5:	00 
+ 4b63ce6:	48 ff c0             	inc    %rax
+ 4b63ce9:	48 8b 94 24 90 02 00 	mov    0x290(%rsp),%rdx
+ 4b63cf0:	00 
+ 4b63cf1:	48 8b 9c 24 f8 00 00 	mov    0xf8(%rsp),%rbx
+ 4b63cf8:	00 
+ 4b63cf9:	48 8b b4 24 f0 00 00 	mov    0xf0(%rsp),%rsi
+ 4b63d00:	00 
+ 4b63d01:	48 8b bc 24 90 00 00 	mov    0x90(%rsp),%rdi
+ 4b63d08:	00 
+ 4b63d09:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4b63d10:	00 
+ 4b63d11:	48 39 f8             	cmp    %rdi,%rax
+ 4b63d14:	0f 8d f1 f9 ff ff    	jge    4b6370b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x2eb>
+ 4b63d1a:	8b 0c 86             	mov    (%rsi,%rax,4),%ecx
+ 4b63d1d:	89 4c 24 44          	mov    %ecx,0x44(%rsp)
+ 4b63d21:	48 8d 05 f8 d4 de 00 	lea    0xded4f8(%rip),%rax        # 5951220 <type:xOEi4ZnN@@Base>
+ 4b63d28:	e8 93 fe 38 fd       	call   1ef3bc0 <runtime.mapaccess2_fast32@@Base>
+ 4b63d2d:	84 db                	test   %bl,%bl
+ 4b63d2f:	74 ad                	je     4b63cde <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x8be>
+ 4b63d31:	e9 b9 f9 ff ff       	jmp    4b636ef <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x2cf>
+ 4b63d36:	48 8b 8c 24 b0 00 00 	mov    0xb0(%rsp),%rcx
+ 4b63d3d:	00 
+ 4b63d3e:	48 ff c1             	inc    %rcx
+ 4b63d41:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4b63d48:	00 
+ 4b63d49:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b63d50:	00 
+ 4b63d51:	48 39 d1             	cmp    %rdx,%rcx
+ 4b63d54:	0f 8d f1 f9 ff ff    	jge    4b6374b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x32b>
+ 4b63d5a:	48 89 8c 24 b0 00 00 	mov    %rcx,0xb0(%rsp)
+ 4b63d61:	00 
+ 4b63d62:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 4b63d69:	00 
+ 4b63d6a:	8b 34 8a             	mov    (%rdx,%rcx,4),%esi
+ 4b63d6d:	48 89 c3             	mov    %rax,%rbx
+ 4b63d70:	48 8d 05 a9 d4 de 00 	lea    0xded4a9(%rip),%rax        # 5951220 <type:xOEi4ZnN@@Base>
+ 4b63d77:	89 f1                	mov    %esi,%ecx
+ 4b63d79:	e8 e2 ff 38 fd       	call   1ef3d60 <runtime.mapassign_fast32@@Base>
+ 4b63d7e:	48 8d 15 5b a9 bf 00 	lea    0xbfa95b(%rip),%rdx        # 575e6e0 <type:bool@@Base>
+ 4b63d85:	48 89 10             	mov    %rdx,(%rax)
+ 4b63d88:	83 3d d1 7b 31 03 00 	cmpl   $0x0,0x3317bd1(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b63d8f:	75 0d                	jne    4b63d9e <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x97e>
+ 4b63d91:	48 8d 35 90 83 10 03 	lea    0x3108390(%rip),%rsi        # 7c6c128 <runtime.staticuint64s@@Base+0x8>
+ 4b63d98:	48 89 70 08          	mov    %rsi,0x8(%rax)
+ 4b63d9c:	eb 98                	jmp    4b63d36 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x916>
+ 4b63d9e:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b63da2:	48 8d 35 7f 83 10 03 	lea    0x310837f(%rip),%rsi        # 7c6c128 <runtime.staticuint64s@@Base+0x8>
+ 4b63da9:	e8 b2 29 3f fd       	call   1f56760 <runtime.gcWriteBarrierSI@@Base>
+ 4b63dae:	eb 86                	jmp    4b63d36 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base+0x916>
+ 4b63db0:	48 89 ca             	mov    %rcx,%rdx
+ 4b63db3:	4c 89 c1             	mov    %r8,%rcx
+ 4b63db6:	e8 25 2d 3f fd       	call   1f56ae0 <runtime.panicSliceAlen@@Base>
+ 4b63dbb:	90                   	nop
+ 4b63dbc:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b63dc1:	e8 9a 06 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b63dc6:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b63dcb:	e9 50 f6 ff ff       	jmp    4b63420 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*State).CreateReservationAllocations@@Base>
+ 4b63dd0:	cc                   	int3
+ 4b63dd1:	cc                   	int3
+ 4b63dd2:	cc                   	int3
+ 4b63dd3:	cc                   	int3
+ 4b63dd4:	cc                   	int3
+ 4b63dd5:	cc                   	int3
+ 4b63dd6:	cc                   	int3
+ 4b63dd7:	cc                   	int3
+ 4b63dd8:	cc                   	int3
+ 4b63dd9:	cc                   	int3
+ 4b63dda:	cc                   	int3
+ 4b63ddb:	cc                   	int3
+ 4b63ddc:	cc                   	int3
+ 4b63ddd:	cc                   	int3
+ 4b63dde:	cc                   	int3
+ 4b63ddf:	cc                   	int3

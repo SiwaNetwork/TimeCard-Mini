@@ -1,0 +1,109 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1
+# addr 0x4c28fe0 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c28fe0 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base>:
+ 4c28fe0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4c28fe4:	0f 86 37 01 00 00    	jbe    4c29121 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x141>
+ 4c28fea:	48 83 ec 78          	sub    $0x78,%rsp
+ 4c28fee:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 4c28ff3:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 4c28ff8:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4c28fff:	4c 89 6c 24 68       	mov    %r13,0x68(%rsp)
+ 4c29004:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 4c29009:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4c2900d:	84 01                	test   %al,(%rcx)
+ 4c2900f:	48 8b 5a 20          	mov    0x20(%rdx),%rbx
+ 4c29013:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4c29018:	48 8b 72 10          	mov    0x10(%rdx),%rsi
+ 4c2901c:	48 8b 42 18          	mov    0x18(%rdx),%rax
+ 4c29020:	48 89 44 24 30       	mov    %rax,0x30(%rsp)
+ 4c29025:	48 c7 44 24 50 00 00 	movq   $0x0,0x50(%rsp)
+ 4c2902c:	00 00 
+ 4c2902e:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4c29034:	48 8d 15 05 01 00 00 	lea    0x105(%rip),%rdx        # 4c29140 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1.1@@Base>
+ 4c2903b:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 4c29040:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 4c29045:	48 89 74 24 60       	mov    %rsi,0x60(%rsp)
+ 4c2904a:	48 8d 4c 24 50       	lea    0x50(%rsp),%rcx
+ 4c2904f:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4c29054:	c6 44 24 2f 01       	movb   $0x1,0x2f(%rsp)
+ 4c29059:	eb 05                	jmp    4c29060 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x80>
+ 4c2905b:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4c29060:	e8 db 20 50 ff       	call   412b140 <golang.org/x/term.(*Terminal).ReadLine@@Base>
+ 4c29065:	48 85 c9             	test   %rcx,%rcx
+ 4c29068:	0f 85 8a 00 00 00    	jne    4c290f8 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x118>
+ 4c2906e:	48 85 db             	test   %rbx,%rbx
+ 4c29071:	74 e8                	je     4c2905b <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x7b>
+ 4c29073:	48 89 d9             	mov    %rbx,%rcx
+ 4c29076:	48 89 c3             	mov    %rax,%rbx
+ 4c29079:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 4c2907e:	66 90                	xchg   %ax,%ax
+ 4c29080:	e8 7b 01 00 00       	call   4c29200 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).DispatchCommand@@Base>
+ 4c29085:	84 c9                	test   %cl,%cl
+ 4c29087:	75 61                	jne    4c290ea <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x10a>
+ 4c29089:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 4c2908f:	e8 cc 4c 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c29094:	48 8d 0d 05 56 b8 00 	lea    0xb85605(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c2909b:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 4c290a0:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4c290a5:	48 8d 05 dc ce 00 00 	lea    0xcedc(%rip),%rax        # 4c35f88 <_IO_stdin_used@@Base+0x2f88>
+ 4c290ac:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4c290b1:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c290b6:	48 89 fe             	mov    %rdi,%rsi
+ 4c290b9:	48 8d 4c 24 40       	lea    0x40(%rsp),%rcx
+ 4c290be:	66 90                	xchg   %ax,%ax
+ 4c290c0:	e8 3b b8 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c290c5:	48 89 d9             	mov    %rbx,%rcx
+ 4c290c8:	48 89 c3             	mov    %rax,%rbx
+ 4c290cb:	31 c0                	xor    %eax,%eax
+ 4c290cd:	e8 ee 17 31 fd       	call   1f3a8c0 <runtime.stringtoslicebyte@@Base>
+ 4c290d2:	48 89 cf             	mov    %rcx,%rdi
+ 4c290d5:	48 89 d9             	mov    %rbx,%rcx
+ 4c290d8:	48 89 c3             	mov    %rax,%rbx
+ 4c290db:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4c290e0:	e8 3b 16 50 ff       	call   412a720 <golang.org/x/term.(*Terminal).Write@@Base>
+ 4c290e5:	e9 71 ff ff ff       	jmp    4c2905b <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base+0x7b>
+ 4c290ea:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 4c290ef:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4c290f3:	e8 e8 f2 2b fd       	call   1ee83e0 <runtime.closechan@@Base>
+ 4c290f8:	c6 44 24 2f 00       	movb   $0x0,0x2f(%rsp)
+ 4c290fd:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4c29102:	48 8b 02             	mov    (%rdx),%rax
+ 4c29105:	ff d0                	call   *%rax
+ 4c29107:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4c2910c:	48 83 c4 78          	add    $0x78,%rsp
+ 4c29110:	c3                   	ret
+ 4c29111:	e8 4a 2e 2f fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4c29116:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 4c2911b:	48 83 c4 78          	add    $0x78,%rsp
+ 4c2911f:	90                   	nop
+ 4c29120:	c3                   	ret
+ 4c29121:	e8 9a b2 32 fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 4c29126:	e9 b5 fe ff ff       	jmp    4c28fe0 <github.com/lasselj/timebeat/interactive/daemon.(*SSHServer).runShell.func1@@Base>
+ 4c2912b:	cc                   	int3
+ 4c2912c:	cc                   	int3
+ 4c2912d:	cc                   	int3
+ 4c2912e:	cc                   	int3
+ 4c2912f:	cc                   	int3
+ 4c29130:	cc                   	int3
+ 4c29131:	cc                   	int3
+ 4c29132:	cc                   	int3
+ 4c29133:	cc                   	int3
+ 4c29134:	cc                   	int3
+ 4c29135:	cc                   	int3
+ 4c29136:	cc                   	int3
+ 4c29137:	cc                   	int3
+ 4c29138:	cc                   	int3
+ 4c29139:	cc                   	int3
+ 4c2913a:	cc                   	int3
+ 4c2913b:	cc                   	int3
+ 4c2913c:	cc                   	int3
+ 4c2913d:	cc                   	int3
+ 4c2913e:	cc                   	int3
+ 4c2913f:	cc                   	int3

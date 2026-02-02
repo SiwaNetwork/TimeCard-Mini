@@ -1,0 +1,710 @@
+# github.com/lasselj/timebeat/interactive/api.GetPHCDevices
+# addr 0x4beac20 size 2912 (0xb60)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004beac20 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base>:
+ 4beac20:	4c 8d a4 24 50 fe ff 	lea    -0x1b0(%rsp),%r12
+ 4beac27:	ff 
+ 4beac28:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4beac2c:	0f 86 40 0b 00 00    	jbe    4beb772 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb52>
+ 4beac32:	48 81 ec 30 02 00 00 	sub    $0x230,%rsp
+ 4beac39:	48 89 ac 24 28 02 00 	mov    %rbp,0x228(%rsp)
+ 4beac40:	00 
+ 4beac41:	48 8d ac 24 28 02 00 	lea    0x228(%rsp),%rbp
+ 4beac48:	00 
+ 4beac49:	e8 32 77 99 ff       	call   4582380 <github.com/lasselj/timebeat/beater/clocksync/phc.GetInstance@@Base>
+ 4beac4e:	90                   	nop
+ 4beac4f:	48 8b 08             	mov    (%rax),%rcx
+ 4beac52:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 4beac57:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 4beac5b:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4beac60:	44 0f 11 bc 24 c8 00 	movups %xmm15,0xc8(%rsp)
+ 4beac67:	00 00 
+ 4beac69:	44 0f 11 bc 24 d8 00 	movups %xmm15,0xd8(%rsp)
+ 4beac70:	00 00 
+ 4beac72:	90                   	nop
+ 4beac73:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beac7a:	00 
+ 4beac7b:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beac82:	00 
+ 4beac83:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+ 4beac8a:	00 
+ 4beac8b:	48 8d 73 17          	lea    0x17(%rbx),%rsi
+ 4beac8f:	48 8b bc 24 e0 00 00 	mov    0xe0(%rsp),%rdi
+ 4beac96:	00 
+ 4beac97:	4c 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%r8
+ 4beac9e:	00 
+ 4beac9f:	90                   	nop
+ 4beaca0:	48 39 f7             	cmp    %rsi,%rdi
+ 4beaca3:	73 2e                	jae    4beacd3 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb3>
+ 4beaca5:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beacaa:	4c 89 c0             	mov    %r8,%rax
+ 4beacad:	48 89 f3             	mov    %rsi,%rbx
+ 4beacb0:	48 89 f9             	mov    %rdi,%rcx
+ 4beacb3:	bf 17 00 00 00       	mov    $0x17,%edi
+ 4beacb8:	48 8d 35 a1 3c bc 00 	lea    0xbc3ca1(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beacbf:	90                   	nop
+ 4beacc0:	e8 fb b7 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beacc5:	49 89 c0             	mov    %rax,%r8
+ 4beacc8:	48 89 cf             	mov    %rcx,%rdi
+ 4beaccb:	48 89 de             	mov    %rbx,%rsi
+ 4beacce:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4beacd3:	48 89 7c 24 68       	mov    %rdi,0x68(%rsp)
+ 4beacd8:	48 89 74 24 60       	mov    %rsi,0x60(%rsp)
+ 4beacdd:	4c 89 84 24 b0 00 00 	mov    %r8,0xb0(%rsp)
+ 4beace4:	00 
+ 4beace5:	49 8d 04 18          	lea    (%r8,%rbx,1),%rax
+ 4beace9:	48 8d 1d 2b 9e 1e 00 	lea    0x1e9e2b(%rip),%rbx        # 4dd4b1b <_IO_stdin_used@@Base+0x1a1b1b>
+ 4beacf0:	b9 17 00 00 00       	mov    $0x17,%ecx
+ 4beacf5:	e8 a6 c7 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beacfa:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beacff:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4bead06:	00 
+ 4bead07:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4bead0c:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4bead13:	00 
+ 4bead14:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4bead1b:	00 
+ 4bead1c:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4bead23:	00 
+ 4bead24:	31 c0                	xor    %eax,%eax
+ 4bead26:	eb 27                	jmp    4bead4f <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x12f>
+ 4bead28:	c7 04 18 0d 0a 0d 0a 	movl   $0xa0d0a0d,(%rax,%rbx,1)
+ 4bead2f:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4bead36:	00 
+ 4bead37:	48 89 8c 24 e0 00 00 	mov    %rcx,0xe0(%rsp)
+ 4bead3e:	00 
+ 4bead3f:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+ 4bead46:	00 
+ 4bead47:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4bead4c:	48 ff c0             	inc    %rax
+ 4bead4f:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4bead54:	48 39 c8             	cmp    %rcx,%rax
+ 4bead57:	0f 8d 48 09 00 00    	jge    4beb6a5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xa85>
+ 4bead5d:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4bead62:	48 8b 4c 24 70       	mov    0x70(%rsp),%rcx
+ 4bead67:	48 8b 14 c1          	mov    (%rcx,%rax,8),%rdx
+ 4bead6b:	48 89 94 24 a0 00 00 	mov    %rdx,0xa0(%rsp)
+ 4bead72:	00 
+ 4bead73:	44 0f 11 bc 24 e8 00 	movups %xmm15,0xe8(%rsp)
+ 4bead7a:	00 00 
+ 4bead7c:	44 0f 11 bc 24 f8 00 	movups %xmm15,0xf8(%rsp)
+ 4bead83:	00 00 
+ 4bead85:	44 0f 11 bc 24 08 01 	movups %xmm15,0x108(%rsp)
+ 4bead8c:	00 00 
+ 4bead8e:	48 8d bc 24 18 01 00 	lea    0x118(%rsp),%rdi
+ 4bead95:	00 
+ 4bead96:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 4bead9a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 4beada0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4beada5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4beadaa:	e8 dc bf 36 fd       	call   1f56d8b <runtime.duffzero@@Base+0x10b>
+ 4beadaf:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4beadb3:	48 8d 9c 24 18 01 00 	lea    0x118(%rsp),%rbx
+ 4beadba:	00 
+ 4beadbb:	48 89 9c 24 f8 00 00 	mov    %rbx,0xf8(%rsp)
+ 4beadc2:	00 
+ 4beadc3:	e8 b8 07 35 fd       	call   1f3b580 <runtime.fastrand@@Base>
+ 4beadc8:	89 84 24 f4 00 00 00 	mov    %eax,0xf4(%rsp)
+ 4beadcf:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4beadd6:	00 00 
+ 4beadd8:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 4beaddd:	0f 1f 00             	nopl   (%rax)
+ 4beade0:	e8 fb 2e 30 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4beade5:	48 8d 0d 74 f8 bb 00 	lea    0xbbf874(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4beadec:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 4beadf3:	00 
+ 4beadf4:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4beadfb:	00 
+ 4beadfc:	48 8d 05 0a cd 1d 00 	lea    0x1dcd0a(%rip),%rax        # 4dc7b0d <_IO_stdin_used@@Base+0x194b0d>
+ 4beae03:	bb 14 00 00 00       	mov    $0x14,%ebx
+ 4beae08:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4beae0d:	48 89 fe             	mov    %rdi,%rsi
+ 4beae10:	48 8d 8c 24 b8 00 00 	lea    0xb8(%rsp),%rcx
+ 4beae17:	00 
+ 4beae18:	e8 e3 9a 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4beae1d:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4beae24:	00 
+ 4beae25:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beae2a:	48 8d 0d 69 97 05 00 	lea    0x59769(%rip),%rcx        # 4c4459a <_IO_stdin_used@@Base+0x1159a>
+ 4beae31:	bf 05 00 00 00       	mov    $0x5,%edi
+ 4beae36:	48 8d 05 83 57 d6 00 	lea    0xd65783(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beae3d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beae44:	00 
+ 4beae45:	e8 96 b3 30 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4beae4a:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4beae4f:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4beae53:	83 3d 06 0b 29 03 00 	cmpl   $0x0,0x3290b06(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4beae5a:	75 0d                	jne    4beae69 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x249>
+ 4beae5c:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beae63:	00 
+ 4beae64:	48 89 08             	mov    %rcx,(%rax)
+ 4beae67:	eb 10                	jmp    4beae79 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x259>
+ 4beae69:	48 89 c7             	mov    %rax,%rdi
+ 4beae6c:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beae73:	00 
+ 4beae74:	e8 87 b8 36 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4beae79:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+ 4beae80:	00 
+ 4beae81:	e8 ba c7 99 ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 4beae86:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4beae8d:	00 00 
+ 4beae8f:	e8 cc 2e 30 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4beae94:	48 8d 0d 05 38 bc 00 	lea    0xbc3805(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4beae9b:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 4beaea2:	00 
+ 4beaea3:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4beaeaa:	00 
+ 4beaeab:	48 8d 05 f4 12 1e 00 	lea    0x1e12f4(%rip),%rax        # 4dcc1a6 <_IO_stdin_used@@Base+0x1991a6>
+ 4beaeb2:	bb 15 00 00 00       	mov    $0x15,%ebx
+ 4beaeb7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4beaebc:	48 89 fe             	mov    %rdi,%rsi
+ 4beaebf:	48 8d 8c 24 b8 00 00 	lea    0xb8(%rsp),%rcx
+ 4beaec6:	00 
+ 4beaec7:	e8 34 9a 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4beaecc:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4beaed3:	00 
+ 4beaed4:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beaed9:	48 8d 0d 7f b2 07 00 	lea    0x7b27f(%rip),%rcx        # 4c6615f <_IO_stdin_used@@Base+0x3315f>
+ 4beaee0:	bf 09 00 00 00       	mov    $0x9,%edi
+ 4beaee5:	48 8d 05 d4 56 d6 00 	lea    0xd656d4(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beaeec:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beaef3:	00 
+ 4beaef4:	e8 e7 b2 30 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4beaef9:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4beaefe:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4beaf02:	83 3d 57 0a 29 03 00 	cmpl   $0x0,0x3290a57(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4beaf09:	75 0d                	jne    4beaf18 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x2f8>
+ 4beaf0b:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beaf12:	00 
+ 4beaf13:	48 89 08             	mov    %rcx,(%rax)
+ 4beaf16:	eb 10                	jmp    4beaf28 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x308>
+ 4beaf18:	48 89 c7             	mov    %rax,%rdi
+ 4beaf1b:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beaf22:	00 
+ 4beaf23:	e8 d8 b7 36 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4beaf28:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 4beaf2f:	00 
+ 4beaf30:	48 63 41 08          	movslq 0x8(%rcx),%rax
+ 4beaf34:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4beaf3b:	00 00 
+ 4beaf3d:	0f 1f 00             	nopl   (%rax)
+ 4beaf40:	e8 9b 2d 30 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4beaf45:	48 8d 0d 14 f7 bb 00 	lea    0xbbf714(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 4beaf4c:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 4beaf53:	00 
+ 4beaf54:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4beaf5b:	00 
+ 4beaf5c:	48 8d 05 21 0f 1f 00 	lea    0x1f0f21(%rip),%rax        # 4ddbe84 <_IO_stdin_used@@Base+0x1a8e84>
+ 4beaf63:	bb 19 00 00 00       	mov    $0x19,%ebx
+ 4beaf68:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4beaf6d:	48 89 fe             	mov    %rdi,%rsi
+ 4beaf70:	48 8d 8c 24 b8 00 00 	lea    0xb8(%rsp),%rcx
+ 4beaf77:	00 
+ 4beaf78:	e8 83 99 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4beaf7d:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4beaf84:	00 
+ 4beaf85:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beaf8a:	48 8d 0d ad b7 07 00 	lea    0x7b7ad(%rip),%rcx        # 4c6673e <_IO_stdin_used@@Base+0x3373e>
+ 4beaf91:	bf 09 00 00 00       	mov    $0x9,%edi
+ 4beaf96:	48 8d 05 23 56 d6 00 	lea    0xd65623(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beaf9d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beafa4:	00 
+ 4beafa5:	e8 36 b2 30 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4beafaa:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4beafaf:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4beafb3:	83 3d a6 09 29 03 00 	cmpl   $0x0,0x32909a6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4beafba:	75 0d                	jne    4beafc9 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x3a9>
+ 4beafbc:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beafc3:	00 
+ 4beafc4:	48 89 08             	mov    %rcx,(%rax)
+ 4beafc7:	eb 10                	jmp    4beafd9 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x3b9>
+ 4beafc9:	48 89 c7             	mov    %rax,%rdi
+ 4beafcc:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+ 4beafd3:	00 
+ 4beafd4:	e8 27 b7 36 fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4beafd9:	44 0f 11 bc 24 b8 00 	movups %xmm15,0xb8(%rsp)
+ 4beafe0:	00 00 
+ 4beafe2:	48 8b 8c 24 a0 00 00 	mov    0xa0(%rsp),%rcx
+ 4beafe9:	00 
+ 4beafea:	8b 41 64             	mov    0x64(%rcx),%eax
+ 4beafed:	e8 6e 2c 30 fd       	call   1eedc60 <runtime.convT32@@Base>
+ 4beaff2:	48 8d 0d e7 38 bc 00 	lea    0xbc38e7(%rip),%rcx        # 57ae8e0 <type:uint32@@Base>
+ 4beaff9:	48 89 8c 24 b8 00 00 	mov    %rcx,0xb8(%rsp)
+ 4beb000:	00 
+ 4beb001:	48 89 84 24 c0 00 00 	mov    %rax,0xc0(%rsp)
+ 4beb008:	00 
+ 4beb009:	48 8d 05 80 e3 0f 00 	lea    0xfe380(%rip),%rax        # 4ce9390 <_IO_stdin_used@@Base+0xb6390>
+ 4beb010:	bb 10 00 00 00       	mov    $0x10,%ebx
+ 4beb015:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4beb01a:	48 89 fe             	mov    %rdi,%rsi
+ 4beb01d:	48 8d 8c 24 b8 00 00 	lea    0xb8(%rsp),%rcx
+ 4beb024:	00 
+ 4beb025:	e8 d6 98 40 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4beb02a:	48 89 84 24 a8 00 00 	mov    %rax,0xa8(%rsp)
+ 4beb031:	00 
+ 4beb032:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beb037:	48 8d 0d 47 7f 07 00 	lea    0x77f47(%rip),%rcx        # 4c62f85 <_IO_stdin_used@@Base+0x2ff85>
+ 4beb03e:	bf 08 00 00 00       	mov    $0x8,%edi
+ 4beb043:	48 8d 05 76 55 d6 00 	lea    0xd65576(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beb04a:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beb051:	00 
+ 4beb052:	e8 89 b1 30 fd       	call   1ef61e0 <runtime.mapassign_faststr@@Base>
+ 4beb057:	48 8b 4c 24 68       	mov    0x68(%rsp),%rcx
+ 4beb05c:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4beb060:	83 3d f9 08 29 03 00 	cmpl   $0x0,0x32908f9(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4beb067:	75 0d                	jne    4beb076 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x456>
+ 4beb069:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4beb070:	00 
+ 4beb071:	48 89 10             	mov    %rdx,(%rax)
+ 4beb074:	eb 10                	jmp    4beb086 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x466>
+ 4beb076:	48 89 c7             	mov    %rax,%rdi
+ 4beb079:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4beb080:	00 
+ 4beb081:	e8 9a b6 36 fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4beb086:	48 8d 05 33 55 d6 00 	lea    0xd65533(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beb08d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beb094:	00 
+ 4beb095:	48 8d 0d fe 94 05 00 	lea    0x594fe(%rip),%rcx        # 4c4459a <_IO_stdin_used@@Base+0x1159a>
+ 4beb09c:	bf 05 00 00 00       	mov    $0x5,%edi
+ 4beb0a1:	e8 1a a9 30 fd       	call   1ef59c0 <runtime.mapaccess1_faststr@@Base>
+ 4beb0a6:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 4beb0aa:	48 8b 18             	mov    (%rax),%rbx
+ 4beb0ad:	90                   	nop
+ 4beb0ae:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb0b5:	00 
+ 4beb0b6:	48 85 d2             	test   %rdx,%rdx
+ 4beb0b9:	74 12                	je     4beb0cd <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x4ad>
+ 4beb0bb:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb0c2:	00 
+ 4beb0c3:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb0c6:	74 1d                	je     4beb0e5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x4c5>
+ 4beb0c8:	e9 91 06 00 00       	jmp    4beb75e <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb3e>
+ 4beb0cd:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb0d4:	00 
+ 4beb0d5:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb0dc:	00 
+ 4beb0dd:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb0e4:	00 
+ 4beb0e5:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 4beb0ec:	00 
+ 4beb0ed:	4c 8d 0c 17          	lea    (%rdi,%rdx,1),%r9
+ 4beb0f1:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb0f8:	00 
+ 4beb0f9:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb100:	00 
+ 4beb101:	4c 39 c9             	cmp    %r9,%rcx
+ 4beb104:	73 36                	jae    4beb13c <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x51c>
+ 4beb106:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4beb10b:	48 89 7c 24 50       	mov    %rdi,0x50(%rsp)
+ 4beb110:	48 89 9c 24 98 00 00 	mov    %rbx,0x98(%rsp)
+ 4beb117:	00 
+ 4beb118:	4c 89 cb             	mov    %r9,%rbx
+ 4beb11b:	48 8d 35 3e 38 bc 00 	lea    0xbc383e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb122:	e8 99 b3 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb127:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb12c:	48 8b 7c 24 50       	mov    0x50(%rsp),%rdi
+ 4beb131:	49 89 d9             	mov    %rbx,%r9
+ 4beb134:	48 8b 9c 24 98 00 00 	mov    0x98(%rsp),%rbx
+ 4beb13b:	00 
+ 4beb13c:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4beb141:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4beb148:	00 
+ 4beb149:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 4beb14e:	48 01 c2             	add    %rax,%rdx
+ 4beb151:	48 89 d0             	mov    %rdx,%rax
+ 4beb154:	48 89 f9             	mov    %rdi,%rcx
+ 4beb157:	e8 44 c3 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beb15c:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beb161:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb168:	00 
+ 4beb169:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb16e:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4beb175:	00 
+ 4beb176:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4beb17d:	00 
+ 4beb17e:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4beb185:	00 
+ 4beb186:	48 8d 05 33 54 d6 00 	lea    0xd65433(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beb18d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beb194:	00 
+ 4beb195:	48 8d 0d c3 af 07 00 	lea    0x7afc3(%rip),%rcx        # 4c6615f <_IO_stdin_used@@Base+0x3315f>
+ 4beb19c:	bf 09 00 00 00       	mov    $0x9,%edi
+ 4beb1a1:	e8 1a a8 30 fd       	call   1ef59c0 <runtime.mapaccess1_faststr@@Base>
+ 4beb1a6:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 4beb1aa:	48 8b 18             	mov    (%rax),%rbx
+ 4beb1ad:	90                   	nop
+ 4beb1ae:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb1b5:	00 
+ 4beb1b6:	48 85 d2             	test   %rdx,%rdx
+ 4beb1b9:	74 12                	je     4beb1cd <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x5ad>
+ 4beb1bb:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb1c2:	00 
+ 4beb1c3:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb1c6:	74 1d                	je     4beb1e5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x5c5>
+ 4beb1c8:	e9 7e 05 00 00       	jmp    4beb74b <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb2b>
+ 4beb1cd:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb1d4:	00 
+ 4beb1d5:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb1dc:	00 
+ 4beb1dd:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb1e4:	00 
+ 4beb1e5:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 4beb1ec:	00 
+ 4beb1ed:	4c 8d 0c 17          	lea    (%rdi,%rdx,1),%r9
+ 4beb1f1:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb1f8:	00 
+ 4beb1f9:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb200:	00 
+ 4beb201:	4c 39 c9             	cmp    %r9,%rcx
+ 4beb204:	73 36                	jae    4beb23c <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x61c>
+ 4beb206:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4beb20b:	48 89 7c 24 48       	mov    %rdi,0x48(%rsp)
+ 4beb210:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 4beb217:	00 
+ 4beb218:	4c 89 cb             	mov    %r9,%rbx
+ 4beb21b:	48 8d 35 3e 37 bc 00 	lea    0xbc373e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb222:	e8 99 b2 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb227:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb22c:	48 8b 7c 24 48       	mov    0x48(%rsp),%rdi
+ 4beb231:	49 89 d9             	mov    %rbx,%r9
+ 4beb234:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4beb23b:	00 
+ 4beb23c:	4c 89 4c 24 68       	mov    %r9,0x68(%rsp)
+ 4beb241:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4beb246:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4beb24d:	00 
+ 4beb24e:	48 01 c2             	add    %rax,%rdx
+ 4beb251:	48 89 d0             	mov    %rdx,%rax
+ 4beb254:	48 89 f9             	mov    %rdi,%rcx
+ 4beb257:	e8 44 c2 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beb25c:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb261:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb268:	00 
+ 4beb269:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beb26e:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4beb275:	00 
+ 4beb276:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4beb27d:	00 
+ 4beb27e:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4beb285:	00 
+ 4beb286:	48 8d 05 33 53 d6 00 	lea    0xd65333(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beb28d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beb294:	00 
+ 4beb295:	48 8d 0d a2 b4 07 00 	lea    0x7b4a2(%rip),%rcx        # 4c6673e <_IO_stdin_used@@Base+0x3373e>
+ 4beb29c:	bf 09 00 00 00       	mov    $0x9,%edi
+ 4beb2a1:	e8 1a a7 30 fd       	call   1ef59c0 <runtime.mapaccess1_faststr@@Base>
+ 4beb2a6:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 4beb2aa:	48 8b 18             	mov    (%rax),%rbx
+ 4beb2ad:	90                   	nop
+ 4beb2ae:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb2b5:	00 
+ 4beb2b6:	48 85 d2             	test   %rdx,%rdx
+ 4beb2b9:	74 12                	je     4beb2cd <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x6ad>
+ 4beb2bb:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb2c2:	00 
+ 4beb2c3:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb2c6:	74 1d                	je     4beb2e5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x6c5>
+ 4beb2c8:	e9 6b 04 00 00       	jmp    4beb738 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb18>
+ 4beb2cd:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb2d4:	00 
+ 4beb2d5:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb2dc:	00 
+ 4beb2dd:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb2e4:	00 
+ 4beb2e5:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 4beb2ec:	00 
+ 4beb2ed:	4c 8d 0c 3a          	lea    (%rdx,%rdi,1),%r9
+ 4beb2f1:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb2f8:	00 
+ 4beb2f9:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb300:	00 
+ 4beb301:	4c 39 c9             	cmp    %r9,%rcx
+ 4beb304:	73 36                	jae    4beb33c <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x71c>
+ 4beb306:	48 89 7c 24 40       	mov    %rdi,0x40(%rsp)
+ 4beb30b:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4beb312:	00 
+ 4beb313:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4beb318:	4c 89 cb             	mov    %r9,%rbx
+ 4beb31b:	48 8d 35 3e 36 bc 00 	lea    0xbc363e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb322:	e8 99 b1 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb327:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb32c:	48 8b 7c 24 40       	mov    0x40(%rsp),%rdi
+ 4beb331:	49 89 d9             	mov    %rbx,%r9
+ 4beb334:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4beb33b:	00 
+ 4beb33c:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4beb341:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 4beb346:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4beb34d:	00 
+ 4beb34e:	48 01 c2             	add    %rax,%rdx
+ 4beb351:	48 89 d0             	mov    %rdx,%rax
+ 4beb354:	48 89 f9             	mov    %rdi,%rcx
+ 4beb357:	e8 44 c1 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beb35c:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beb361:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb368:	00 
+ 4beb369:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb36e:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4beb375:	00 
+ 4beb376:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4beb37d:	00 
+ 4beb37e:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4beb385:	00 
+ 4beb386:	48 8d 05 33 52 d6 00 	lea    0xd65233(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4beb38d:	48 8d 9c 24 e8 00 00 	lea    0xe8(%rsp),%rbx
+ 4beb394:	00 
+ 4beb395:	48 8d 0d e9 7b 07 00 	lea    0x77be9(%rip),%rcx        # 4c62f85 <_IO_stdin_used@@Base+0x2ff85>
+ 4beb39c:	bf 08 00 00 00       	mov    $0x8,%edi
+ 4beb3a1:	e8 1a a6 30 fd       	call   1ef59c0 <runtime.mapaccess1_faststr@@Base>
+ 4beb3a6:	48 8b 78 08          	mov    0x8(%rax),%rdi
+ 4beb3aa:	48 8b 18             	mov    (%rax),%rbx
+ 4beb3ad:	90                   	nop
+ 4beb3ae:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb3b5:	00 
+ 4beb3b6:	48 85 d2             	test   %rdx,%rdx
+ 4beb3b9:	74 12                	je     4beb3cd <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x7ad>
+ 4beb3bb:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb3c2:	00 
+ 4beb3c3:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb3c6:	74 1d                	je     4beb3e5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x7c5>
+ 4beb3c8:	e9 58 03 00 00       	jmp    4beb725 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xb05>
+ 4beb3cd:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb3d4:	00 
+ 4beb3d5:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb3dc:	00 
+ 4beb3dd:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb3e4:	00 
+ 4beb3e5:	48 8b 94 24 d8 00 00 	mov    0xd8(%rsp),%rdx
+ 4beb3ec:	00 
+ 4beb3ed:	4c 8d 0c 17          	lea    (%rdi,%rdx,1),%r9
+ 4beb3f1:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb3f8:	00 
+ 4beb3f9:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb400:	00 
+ 4beb401:	4c 39 c9             	cmp    %r9,%rcx
+ 4beb404:	73 36                	jae    4beb43c <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x81c>
+ 4beb406:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4beb40b:	48 89 7c 24 38       	mov    %rdi,0x38(%rsp)
+ 4beb410:	48 89 9c 24 80 00 00 	mov    %rbx,0x80(%rsp)
+ 4beb417:	00 
+ 4beb418:	4c 89 cb             	mov    %r9,%rbx
+ 4beb41b:	48 8d 35 3e 35 bc 00 	lea    0xbc353e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb422:	e8 99 b0 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb427:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb42c:	48 8b 7c 24 38       	mov    0x38(%rsp),%rdi
+ 4beb431:	49 89 d9             	mov    %rbx,%r9
+ 4beb434:	48 8b 9c 24 80 00 00 	mov    0x80(%rsp),%rbx
+ 4beb43b:	00 
+ 4beb43c:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 4beb441:	4c 89 4c 24 60       	mov    %r9,0x60(%rsp)
+ 4beb446:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4beb44d:	00 
+ 4beb44e:	48 01 c2             	add    %rax,%rdx
+ 4beb451:	48 89 d0             	mov    %rdx,%rax
+ 4beb454:	48 89 f9             	mov    %rdi,%rcx
+ 4beb457:	e8 44 c0 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beb45c:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beb461:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb468:	00 
+ 4beb469:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb46e:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4beb475:	00 
+ 4beb476:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4beb47d:	00 
+ 4beb47e:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4beb485:	00 
+ 4beb486:	90                   	nop
+ 4beb487:	90                   	nop
+ 4beb488:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb48f:	00 
+ 4beb490:	48 85 d2             	test   %rdx,%rdx
+ 4beb493:	74 15                	je     4beb4aa <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x88a>
+ 4beb495:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb49c:	00 
+ 4beb49d:	0f 1f 00             	nopl   (%rax)
+ 4beb4a0:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb4a3:	74 1d                	je     4beb4c2 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x8a2>
+ 4beb4a5:	e9 66 02 00 00       	jmp    4beb710 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xaf0>
+ 4beb4aa:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb4b1:	00 
+ 4beb4b2:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb4b9:	00 
+ 4beb4ba:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb4c1:	00 
+ 4beb4c2:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+ 4beb4c9:	00 
+ 4beb4ca:	48 8d 53 02          	lea    0x2(%rbx),%rdx
+ 4beb4ce:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb4d5:	00 
+ 4beb4d6:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb4dd:	00 
+ 4beb4de:	66 90                	xchg   %ax,%ax
+ 4beb4e0:	48 39 d1             	cmp    %rdx,%rcx
+ 4beb4e3:	73 21                	jae    4beb506 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x8e6>
+ 4beb4e5:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beb4ea:	48 89 d3             	mov    %rdx,%rbx
+ 4beb4ed:	bf 02 00 00 00       	mov    $0x2,%edi
+ 4beb4f2:	48 8d 35 67 34 bc 00 	lea    0xbc3467(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb4f9:	e8 c2 af 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb4fe:	48 89 da             	mov    %rbx,%rdx
+ 4beb501:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4beb506:	66 c7 04 18 0d 0a    	movw   $0xa0d,(%rax,%rbx,1)
+ 4beb50c:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb513:	00 
+ 4beb514:	48 89 8c 24 e0 00 00 	mov    %rcx,0xe0(%rsp)
+ 4beb51b:	00 
+ 4beb51c:	48 89 84 24 d0 00 00 	mov    %rax,0xd0(%rsp)
+ 4beb523:	00 
+ 4beb524:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+ 4beb52b:	00 
+ 4beb52c:	e8 ef b6 99 ff       	call   4586c20 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetPTPClockCaps@@Base>
+ 4beb531:	90                   	nop
+ 4beb532:	48 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%rcx
+ 4beb539:	00 
+ 4beb53a:	48 85 c9             	test   %rcx,%rcx
+ 4beb53d:	74 12                	je     4beb551 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x931>
+ 4beb53f:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb546:	00 
+ 4beb547:	48 39 d1             	cmp    %rdx,%rcx
+ 4beb54a:	74 15                	je     4beb561 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x941>
+ 4beb54c:	e9 ac 01 00 00       	jmp    4beb6fd <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xadd>
+ 4beb551:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb558:	00 
+ 4beb559:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb560:	00 
+ 4beb561:	4c 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%r8
+ 4beb568:	00 
+ 4beb569:	4d 8d 0c 18          	lea    (%r8,%rbx,1),%r9
+ 4beb56d:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb574:	00 
+ 4beb575:	4c 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%r10
+ 4beb57c:	00 
+ 4beb57d:	0f 1f 00             	nopl   (%rax)
+ 4beb580:	4c 39 c9             	cmp    %r9,%rcx
+ 4beb583:	73 39                	jae    4beb5be <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x99e>
+ 4beb585:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4beb58a:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4beb58f:	4c 89 44 24 68       	mov    %r8,0x68(%rsp)
+ 4beb594:	4c 89 d0             	mov    %r10,%rax
+ 4beb597:	48 89 df             	mov    %rbx,%rdi
+ 4beb59a:	48 8d 35 bf 33 bc 00 	lea    0xbc33bf(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb5a1:	4c 89 cb             	mov    %r9,%rbx
+ 4beb5a4:	e8 17 af 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb5a9:	4c 8b 44 24 68       	mov    0x68(%rsp),%r8
+ 4beb5ae:	49 89 c2             	mov    %rax,%r10
+ 4beb5b1:	49 89 d9             	mov    %rbx,%r9
+ 4beb5b4:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 4beb5b9:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4beb5be:	4c 89 4c 24 68       	mov    %r9,0x68(%rsp)
+ 4beb5c3:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 4beb5c8:	4c 89 94 24 b0 00 00 	mov    %r10,0xb0(%rsp)
+ 4beb5cf:	00 
+ 4beb5d0:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4beb5d4:	48 89 c6             	mov    %rax,%rsi
+ 4beb5d7:	48 89 d0             	mov    %rdx,%rax
+ 4beb5da:	48 89 df             	mov    %rbx,%rdi
+ 4beb5dd:	48 89 f3             	mov    %rsi,%rbx
+ 4beb5e0:	48 89 f9             	mov    %rdi,%rcx
+ 4beb5e3:	e8 b8 be 36 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4beb5e8:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4beb5ed:	48 89 94 24 d8 00 00 	mov    %rdx,0xd8(%rsp)
+ 4beb5f4:	00 
+ 4beb5f5:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 4beb5fa:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4beb601:	00 
+ 4beb602:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4beb609:	00 
+ 4beb60a:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4beb611:	00 
+ 4beb612:	90                   	nop
+ 4beb613:	90                   	nop
+ 4beb614:	48 8b 94 24 c8 00 00 	mov    0xc8(%rsp),%rdx
+ 4beb61b:	00 
+ 4beb61c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4beb620:	48 85 d2             	test   %rdx,%rdx
+ 4beb623:	74 12                	je     4beb637 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xa17>
+ 4beb625:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb62c:	00 
+ 4beb62d:	4c 39 c2             	cmp    %r8,%rdx
+ 4beb630:	74 1d                	je     4beb64f <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xa2f>
+ 4beb632:	e9 b3 00 00 00       	jmp    4beb6ea <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xaca>
+ 4beb637:	48 8d 94 24 c8 00 00 	lea    0xc8(%rsp),%rdx
+ 4beb63e:	00 
+ 4beb63f:	48 89 94 24 c8 00 00 	mov    %rdx,0xc8(%rsp)
+ 4beb646:	00 
+ 4beb647:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb64e:	00 
+ 4beb64f:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+ 4beb656:	00 
+ 4beb657:	48 8d 53 04          	lea    0x4(%rbx),%rdx
+ 4beb65b:	48 8b 8c 24 e0 00 00 	mov    0xe0(%rsp),%rcx
+ 4beb662:	00 
+ 4beb663:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb66a:	00 
+ 4beb66b:	48 39 d1             	cmp    %rdx,%rcx
+ 4beb66e:	0f 83 b4 f6 ff ff    	jae    4bead28 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x108>
+ 4beb674:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4beb679:	48 89 d3             	mov    %rdx,%rbx
+ 4beb67c:	bf 04 00 00 00       	mov    $0x4,%edi
+ 4beb681:	48 8d 35 d8 32 bc 00 	lea    0xbc32d8(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4beb688:	e8 33 ae 34 fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4beb68d:	4c 8d 84 24 c8 00 00 	lea    0xc8(%rsp),%r8
+ 4beb694:	00 
+ 4beb695:	48 89 da             	mov    %rbx,%rdx
+ 4beb698:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4beb69d:	0f 1f 00             	nopl   (%rax)
+ 4beb6a0:	e9 83 f6 ff ff       	jmp    4bead28 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0x108>
+ 4beb6a5:	48 8b 84 24 d0 00 00 	mov    0xd0(%rsp),%rax
+ 4beb6ac:	00 
+ 4beb6ad:	48 89 c1             	mov    %rax,%rcx
+ 4beb6b0:	48 f7 d8             	neg    %rax
+ 4beb6b3:	48 8b 9c 24 d8 00 00 	mov    0xd8(%rsp),%rbx
+ 4beb6ba:	00 
+ 4beb6bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4beb6c0:	48 39 c3             	cmp    %rax,%rbx
+ 4beb6c3:	77 13                	ja     4beb6d8 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xab8>
+ 4beb6c5:	48 89 c8             	mov    %rcx,%rax
+ 4beb6c8:	48 8b ac 24 28 02 00 	mov    0x228(%rsp),%rbp
+ 4beb6cf:	00 
+ 4beb6d0:	48 81 c4 30 02 00 00 	add    $0x230,%rsp
+ 4beb6d7:	c3                   	ret
+ 4beb6d8:	48 85 c9             	test   %rcx,%rcx
+ 4beb6db:	74 08                	je     4beb6e5 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base+0xac5>
+ 4beb6dd:	0f 1f 00             	nopl   (%rax)
+ 4beb6e0:	e8 3b f5 35 fd       	call   1f4ac20 <runtime.panicunsafestringlen@@Base>
+ 4beb6e5:	e8 76 f5 35 fd       	call   1f4ac60 <runtime.panicunsafestringnilptr@@Base>
+ 4beb6ea:	48 8d 05 af 2f bc 00 	lea    0xbc2faf(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb6f1:	48 8d 1d 08 18 31 01 	lea    0x1311808(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb6f8:	e8 43 16 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb6fd:	48 8d 05 9c 2f bc 00 	lea    0xbc2f9c(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb704:	48 8d 1d f5 17 31 01 	lea    0x13117f5(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb70b:	e8 30 16 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb710:	48 8d 05 89 2f bc 00 	lea    0xbc2f89(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb717:	48 8d 1d e2 17 31 01 	lea    0x13117e2(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb71e:	66 90                	xchg   %ax,%ax
+ 4beb720:	e8 1b 16 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb725:	48 8d 05 74 2f bc 00 	lea    0xbc2f74(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb72c:	48 8d 1d cd 17 31 01 	lea    0x13117cd(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb733:	e8 08 16 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb738:	48 8d 05 61 2f bc 00 	lea    0xbc2f61(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb73f:	48 8d 1d ba 17 31 01 	lea    0x13117ba(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb746:	e8 f5 15 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb74b:	48 8d 05 4e 2f bc 00 	lea    0xbc2f4e(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb752:	48 8d 1d a7 17 31 01 	lea    0x13117a7(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb759:	e8 e2 15 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb75e:	48 8d 05 3b 2f bc 00 	lea    0xbc2f3b(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4beb765:	48 8d 1d 94 17 31 01 	lea    0x1311794(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4beb76c:	e8 cf 15 33 fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4beb771:	90                   	nop
+ 4beb772:	e8 e9 8c 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4beb777:	e9 a4 f4 ff ff       	jmp    4beac20 <github.com/lasselj/timebeat/interactive/api.GetPHCDevices@@Base>
+ 4beb77c:	cc                   	int3
+ 4beb77d:	cc                   	int3
+ 4beb77e:	cc                   	int3
+ 4beb77f:	cc                   	int3

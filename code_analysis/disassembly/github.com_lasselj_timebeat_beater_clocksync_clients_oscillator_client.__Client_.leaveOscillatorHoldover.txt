@@ -1,0 +1,76 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover
+# addr 0x45ed9c0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045ed9c0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover@@Base>:
+ 45ed9c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45ed9c4:	0f 86 aa 00 00 00    	jbe    45eda74 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover@@Base+0xb4>
+ 45ed9ca:	48 83 ec 20          	sub    $0x20,%rsp
+ 45ed9ce:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 45ed9d3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 45ed9d8:	80 b8 98 02 00 00 00 	cmpb   $0x0,0x298(%rax)
+ 45ed9df:	90                   	nop
+ 45ed9e0:	0f 84 84 00 00 00    	je     45eda6a <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover@@Base+0xaa>
+ 45ed9e6:	48 83 b8 88 02 00 00 	cmpq   $0x0,0x288(%rax)
+ 45ed9ed:	00 
+ 45ed9ee:	75 7a                	jne    45eda6a <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover@@Base+0xaa>
+ 45ed9f0:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 45ed9f5:	48 8d 1d 74 c0 6f 00 	lea    0x6fc074(%rip),%rbx        # 4ce9a70 <_IO_stdin_used@@Base+0xb6a70>
+ 45ed9fc:	b9 10 00 00 00       	mov    $0x10,%ecx
+ 45eda01:	e8 fa 02 00 00       	call   45edd00 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).logAnnotation@@Base>
+ 45eda06:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45eda0b:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45eda10:	e8 8b 00 00 00       	call   45edaa0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetMonitorOnlyOnInputPin@@Base>
+ 45eda15:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 45eda1a:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 45eda1f:	90                   	nop
+ 45eda20:	e8 5b 01 00 00       	call   45edb80 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base>
+ 45eda25:	48 8b 05 0c e7 83 03 	mov    0x383e70c(%rip),%rax        # 7e2c138 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.controller@@Base>
+ 45eda2c:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45eda31:	48 8b 5a 10          	mov    0x10(%rdx),%rbx
+ 45eda35:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+ 45eda39:	e8 82 09 fd ff       	call   45be3c0 <github.com/lasselj/timebeat/beater/clocksync/clients/pps.(*Controller).EnableExtTs@@Base>
+ 45eda3e:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 45eda43:	c6 82 98 02 00 00 00 	movb   $0x0,0x298(%rdx)
+ 45eda4a:	48 c7 82 a0 02 00 00 	movq   $0x0,0x2a0(%rdx)
+ 45eda51:	00 00 00 00 
+ 45eda55:	48 8b 82 90 01 00 00 	mov    0x190(%rdx),%rax
+ 45eda5c:	48 8b 9a 98 01 00 00 	mov    0x198(%rdx),%rbx
+ 45eda63:	31 c9                	xor    %ecx,%ecx
+ 45eda65:	e8 36 99 ff ff       	call   45e73a0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp.SetMonitorOnlyForGroup@@Base>
+ 45eda6a:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 45eda6f:	48 83 c4 20          	add    $0x20,%rsp
+ 45eda73:	c3                   	ret
+ 45eda74:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45eda79:	e8 e2 69 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45eda7e:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45eda83:	e9 38 ff ff ff       	jmp    45ed9c0 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).leaveOscillatorHoldover@@Base>
+ 45eda88:	cc                   	int3
+ 45eda89:	cc                   	int3
+ 45eda8a:	cc                   	int3
+ 45eda8b:	cc                   	int3
+ 45eda8c:	cc                   	int3
+ 45eda8d:	cc                   	int3
+ 45eda8e:	cc                   	int3
+ 45eda8f:	cc                   	int3
+ 45eda90:	cc                   	int3
+ 45eda91:	cc                   	int3
+ 45eda92:	cc                   	int3
+ 45eda93:	cc                   	int3
+ 45eda94:	cc                   	int3
+ 45eda95:	cc                   	int3
+ 45eda96:	cc                   	int3
+ 45eda97:	cc                   	int3
+ 45eda98:	cc                   	int3
+ 45eda99:	cc                   	int3
+ 45eda9a:	cc                   	int3
+ 45eda9b:	cc                   	int3
+ 45eda9c:	cc                   	int3
+ 45eda9d:	cc                   	int3
+ 45eda9e:	cc                   	int3
+ 45eda9f:	cc                   	int3

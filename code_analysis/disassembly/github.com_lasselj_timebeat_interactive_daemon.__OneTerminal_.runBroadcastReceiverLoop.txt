@@ -1,0 +1,89 @@
+# github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop
+# addr 0x4c2bb00 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004c2bb00 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop@@Base>:
+ 4c2bb00:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4c2bb04:	0f 86 ee 00 00 00    	jbe    4c2bbf8 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop@@Base+0xf8>
+ 4c2bb0a:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+ 4c2bb0e:	48 89 6c 24 78       	mov    %rbp,0x78(%rsp)
+ 4c2bb13:	48 8d 6c 24 78       	lea    0x78(%rsp),%rbp
+ 4c2bb18:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4c2bb1f:	00 
+ 4c2bb20:	eb 76                	jmp    4c2bb98 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop@@Base+0x98>
+ 4c2bb22:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4c2bb27:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4c2bb2c:	44 0f 11 7c 24 38    	movups %xmm15,0x38(%rsp)
+ 4c2bb32:	e8 29 22 2c fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4c2bb37:	48 8d 0d 62 2b b8 00 	lea    0xb82b62(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4c2bb3e:	48 89 4c 24 38       	mov    %rcx,0x38(%rsp)
+ 4c2bb43:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4c2bb48:	48 8d 05 39 a4 00 00 	lea    0xa439(%rip),%rax        # 4c35f88 <_IO_stdin_used@@Base+0x2f88>
+ 4c2bb4f:	bb 04 00 00 00       	mov    $0x4,%ebx
+ 4c2bb54:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4c2bb59:	48 89 fe             	mov    %rdi,%rsi
+ 4c2bb5c:	48 8d 4c 24 38       	lea    0x38(%rsp),%rcx
+ 4c2bb61:	e8 9a 8d 3c fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4c2bb66:	48 89 d9             	mov    %rbx,%rcx
+ 4c2bb69:	48 89 c3             	mov    %rax,%rbx
+ 4c2bb6c:	31 c0                	xor    %eax,%eax
+ 4c2bb6e:	e8 4d ed 30 fd       	call   1f3a8c0 <runtime.stringtoslicebyte@@Base>
+ 4c2bb73:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 4c2bb7a:	00 
+ 4c2bb7b:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 4c2bb7f:	48 89 cf             	mov    %rcx,%rdi
+ 4c2bb82:	48 89 d9             	mov    %rbx,%rcx
+ 4c2bb85:	48 89 c3             	mov    %rax,%rbx
+ 4c2bb88:	48 89 f0             	mov    %rsi,%rax
+ 4c2bb8b:	e8 90 eb 4f ff       	call   412a720 <golang.org/x/term.(*Terminal).Write@@Base>
+ 4c2bb90:	48 8b 84 24 88 00 00 	mov    0x88(%rsp),%rax
+ 4c2bb97:	00 
+ 4c2bb98:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 4c2bb9c:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 4c2bba2:	4c 8b 48 20          	mov    0x20(%rax),%r9
+ 4c2bba6:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 4c2bbac:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 4c2bbb2:	48 89 54 24 68       	mov    %rdx,0x68(%rsp)
+ 4c2bbb7:	48 8d 54 24 48       	lea    0x48(%rsp),%rdx
+ 4c2bbbc:	48 89 54 24 70       	mov    %rdx,0x70(%rsp)
+ 4c2bbc1:	4c 89 4c 24 58       	mov    %r9,0x58(%rsp)
+ 4c2bbc6:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+ 4c2bbcb:	31 c9                	xor    %ecx,%ecx
+ 4c2bbcd:	31 ff                	xor    %edi,%edi
+ 4c2bbcf:	be 02 00 00 00       	mov    $0x2,%esi
+ 4c2bbd4:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4c2bbda:	48 8d 44 24 58       	lea    0x58(%rsp),%rax
+ 4c2bbdf:	90                   	nop
+ 4c2bbe0:	e8 db 4f 30 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 4c2bbe5:	48 85 c0             	test   %rax,%rax
+ 4c2bbe8:	0f 85 34 ff ff ff    	jne    4c2bb22 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop@@Base+0x22>
+ 4c2bbee:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 4c2bbf3:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 4c2bbf7:	c3                   	ret
+ 4c2bbf8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4c2bbfd:	0f 1f 00             	nopl   (%rax)
+ 4c2bc00:	e8 5b 88 32 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4c2bc05:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4c2bc0a:	e9 f1 fe ff ff       	jmp    4c2bb00 <github.com/lasselj/timebeat/interactive/daemon.(*OneTerminal).runBroadcastReceiverLoop@@Base>
+ 4c2bc0f:	cc                   	int3
+ 4c2bc10:	cc                   	int3
+ 4c2bc11:	cc                   	int3
+ 4c2bc12:	cc                   	int3
+ 4c2bc13:	cc                   	int3
+ 4c2bc14:	cc                   	int3
+ 4c2bc15:	cc                   	int3
+ 4c2bc16:	cc                   	int3
+ 4c2bc17:	cc                   	int3
+ 4c2bc18:	cc                   	int3
+ 4c2bc19:	cc                   	int3
+ 4c2bc1a:	cc                   	int3
+ 4c2bc1b:	cc                   	int3
+ 4c2bc1c:	cc                   	int3
+ 4c2bc1d:	cc                   	int3
+ 4c2bc1e:	cc                   	int3
+ 4c2bc1f:	cc                   	int3

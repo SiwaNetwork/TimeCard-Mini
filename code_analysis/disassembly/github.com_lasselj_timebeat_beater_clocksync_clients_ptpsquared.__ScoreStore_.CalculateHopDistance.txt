@@ -1,0 +1,814 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance
+# addr 0x4b64560 size 3296 (0xce0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b64560 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base>:
+ 4b64560:	4c 8d a4 24 78 fe ff 	lea    -0x188(%rsp),%r12
+ 4b64567:	ff 
+ 4b64568:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b6456c:	0f 86 a3 0c 00 00    	jbe    4b65215 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xcb5>
+ 4b64572:	48 81 ec 08 02 00 00 	sub    $0x208,%rsp
+ 4b64579:	48 89 ac 24 00 02 00 	mov    %rbp,0x200(%rsp)
+ 4b64580:	00 
+ 4b64581:	48 8d ac 24 00 02 00 	lea    0x200(%rsp),%rbp
+ 4b64588:	00 
+ 4b64589:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4b64590:	4c 89 ac 24 f8 01 00 	mov    %r13,0x1f8(%rsp)
+ 4b64597:	00 
+ 4b64598:	48 89 84 24 10 02 00 	mov    %rax,0x210(%rsp)
+ 4b6459f:	00 
+ 4b645a0:	c6 44 24 43 00       	movb   $0x0,0x43(%rsp)
+ 4b645a5:	48 89 c1             	mov    %rax,%rcx
+ 4b645a8:	31 c0                	xor    %eax,%eax
+ 4b645aa:	ba 01 00 00 00       	mov    $0x1,%edx
+ 4b645af:	f0 0f b1 91 b0 00 00 	lock cmpxchg %edx,0xb0(%rcx)
+ 4b645b6:	00 
+ 4b645b7:	0f 94 c2             	sete   %dl
+ 4b645ba:	48 8d 81 b0 00 00 00 	lea    0xb0(%rcx),%rax
+ 4b645c1:	84 d2                	test   %dl,%dl
+ 4b645c3:	75 1d                	jne    4b645e2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x82>
+ 4b645c5:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 4b645cc:	00 
+ 4b645cd:	e8 6e 3f 41 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4b645d2:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 4b645d9:	00 
+ 4b645da:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b645e1:	00 
+ 4b645e2:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b645e9:	00 00 
+ 4b645eb:	48 8d 15 4e 0c 00 00 	lea    0xc4e(%rip),%rdx        # 4b65240 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance.func1@@Base>
+ 4b645f2:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b645f9:	00 
+ 4b645fa:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b64601:	00 
+ 4b64602:	48 8d 94 24 48 01 00 	lea    0x148(%rsp),%rdx
+ 4b64609:	00 
+ 4b6460a:	48 89 94 24 f8 01 00 	mov    %rdx,0x1f8(%rsp)
+ 4b64611:	00 
+ 4b64612:	c6 44 24 43 01       	movb   $0x1,0x43(%rsp)
+ 4b64617:	48 8b 59 48          	mov    0x48(%rcx),%rbx
+ 4b6461b:	48 8d 05 9e bf de 00 	lea    0xdebf9e(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4b64622:	bf 05 00 00 00       	mov    $0x5,%edi
+ 4b64627:	48 8d 0d 2b ff 0d 00 	lea    0xdff2b(%rip),%rcx        # 4c44559 <_IO_stdin_used@@Base+0x11559>
+ 4b6462e:	e8 8d 17 39 fd       	call   1ef5dc0 <runtime.mapaccess2_faststr@@Base>
+ 4b64633:	88 5c 24 42          	mov    %bl,0x42(%rsp)
+ 4b64637:	48 8b 10             	mov    (%rax),%rdx
+ 4b6463a:	48 89 94 24 e0 00 00 	mov    %rdx,0xe0(%rsp)
+ 4b64641:	00 
+ 4b64642:	48 8b 70 08          	mov    0x8(%rax),%rsi
+ 4b64646:	48 89 b4 24 90 00 00 	mov    %rsi,0x90(%rsp)
+ 4b6464d:	00 
+ 4b6464e:	e8 2d c1 a3 ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 4b64653:	48 8b 40 10          	mov    0x10(%rax),%rax
+ 4b64657:	e8 e4 11 a4 ff       	call   45a5840 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).GetTimeSourceCount@@Base>
+ 4b6465c:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 4b64663:	00 00 
+ 4b64665:	44 0f 11 bc 24 68 01 	movups %xmm15,0x168(%rsp)
+ 4b6466c:	00 00 
+ 4b6466e:	44 0f 11 bc 24 78 01 	movups %xmm15,0x178(%rsp)
+ 4b64675:	00 00 
+ 4b64677:	44 0f 11 bc 24 88 01 	movups %xmm15,0x188(%rsp)
+ 4b6467e:	00 00 
+ 4b64680:	48 85 c0             	test   %rax,%rax
+ 4b64683:	0f 8f 4a 03 00 00    	jg     4b649d3 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x473>
+ 4b64689:	0f b6 4c 24 42       	movzbl 0x42(%rsp),%ecx
+ 4b6468e:	84 c9                	test   %cl,%cl
+ 4b64690:	0f 84 96 01 00 00    	je     4b6482c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x2cc>
+ 4b64696:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b6469d:	00 
+ 4b6469e:	48 83 79 68 00       	cmpq   $0x0,0x68(%rcx)
+ 4b646a3:	0f 85 8b 01 00 00    	jne    4b64834 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x2d4>
+ 4b646a9:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4b646b0:	00 
+ 4b646b1:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b646b8:	00 
+ 4b646b9:	e8 42 aa 40 fd       	call   1f6f100 <strconv.Atoi@@Base>
+ 4b646be:	66 90                	xchg   %ax,%ax
+ 4b646c0:	48 85 db             	test   %rbx,%rbx
+ 4b646c3:	0f 85 ed 00 00 00    	jne    4b647b6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x256>
+ 4b646c9:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 4b646d0:	00 
+ 4b646d1:	48 8b 0d 88 7a 2c 03 	mov    0x32c7a88(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b646d8:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b646dc:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b646e0:	e8 7b a9 fe ff       	call   4b4f060 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetMaxRemoteDistancePlusLocalErrorOfSourceFromActivePeers@@Base>
+ 4b646e5:	f3 0f 11 44 24 44    	movss  %xmm0,0x44(%rsp)
+ 4b646eb:	48 8b 0d 6e 7a 2c 03 	mov    0x32c7a6e(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b646f2:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b646f6:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b646fa:	e8 01 ab fe ff       	call   4b4f200 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetOtherHopCosts@@Base>
+ 4b646ff:	f3 0f 10 4c 24 44    	movss  0x44(%rsp),%xmm1
+ 4b64705:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+ 4b64709:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4b6470c:	f3 0f 58 c8          	addss  %xmm0,%xmm1
+ 4b64710:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 4b64717:	00 
+ 4b64718:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4b6471b:	f3 48 0f 2a c1       	cvtsi2ss %rcx,%xmm0
+ 4b64720:	f3 0f 10 15 74 99 97 	movss  0x979974(%rip),%xmm2        # 54de09c <_IO_stdin_used@@Base+0x8ab09c>
+ 4b64727:	00 
+ 4b64728:	f3 0f 5e c2          	divss  %xmm2,%xmm0
+ 4b6472c:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+ 4b64730:	f3 0f 11 84 24 58 01 	movss  %xmm0,0x158(%rsp)
+ 4b64737:	00 00 
+ 4b64739:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b64740:	00 
+ 4b64741:	48 8b 51 48          	mov    0x48(%rcx),%rdx
+ 4b64745:	48 85 d2             	test   %rdx,%rdx
+ 4b64748:	74 05                	je     4b6474f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x1ef>
+ 4b6474a:	48 8b 12             	mov    (%rdx),%rdx
+ 4b6474d:	eb 02                	jmp    4b64751 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x1f1>
+ 4b6474f:	31 d2                	xor    %edx,%edx
+ 4b64751:	48 89 54 24 58       	mov    %rdx,0x58(%rsp)
+ 4b64756:	48 8d 05 23 49 19 01 	lea    0x1194923(%rip),%rax        # 5cf9080 <type:vBr5JPYp@@Base>
+ 4b6475d:	48 89 d3             	mov    %rdx,%rbx
+ 4b64760:	48 89 d9             	mov    %rbx,%rcx
+ 4b64763:	e8 78 1c 3d fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b64768:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4b6476f:	00 
+ 4b64770:	48 8b 94 24 10 02 00 	mov    0x210(%rsp),%rdx
+ 4b64777:	00 
+ 4b64778:	48 8b 5a 48          	mov    0x48(%rdx),%rbx
+ 4b6477c:	48 8d bc 24 98 01 00 	lea    0x198(%rsp),%rdi
+ 4b64783:	00 
+ 4b64784:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 4b64788:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b6478d:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b64792:	e8 34 26 3f fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 4b64797:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b6479b:	48 8d 8c 24 98 01 00 	lea    0x198(%rsp),%rcx
+ 4b647a2:	00 
+ 4b647a3:	48 8d 05 16 be de 00 	lea    0xdebe16(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4b647aa:	e8 11 df 38 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 4b647af:	31 c0                	xor    %eax,%eax
+ 4b647b1:	e9 b1 08 00 00       	jmp    4b65067 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xb07>
+ 4b647b6:	44 0f 11 bc 24 38 01 	movups %xmm15,0x138(%rsp)
+ 4b647bd:	00 00 
+ 4b647bf:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4b647c6:	00 
+ 4b647c7:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b647ce:	00 
+ 4b647cf:	e8 8c 95 38 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b647d4:	48 8d 0d c5 9e c4 00 	lea    0xc49ec5(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4b647db:	48 89 8c 24 38 01 00 	mov    %rcx,0x138(%rsp)
+ 4b647e2:	00 
+ 4b647e3:	48 89 84 24 40 01 00 	mov    %rax,0x140(%rsp)
+ 4b647ea:	00 
+ 4b647eb:	48 8b 1d 4e aa 2c 03 	mov    0x32caa4e(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4b647f2:	48 8d 05 27 0a 3a 01 	lea    0x13a0a27(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 4b647f9:	48 8d 0d 05 40 26 00 	lea    0x264005(%rip),%rcx        # 4dc8805 <_IO_stdin_used@@Base+0x195805>
+ 4b64800:	bf 14 00 00 00       	mov    $0x14,%edi
+ 4b64805:	48 8d b4 24 38 01 00 	lea    0x138(%rsp),%rsi
+ 4b6480c:	00 
+ 4b6480d:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4b64813:	4d 89 c1             	mov    %r8,%r9
+ 4b64816:	e8 c5 ff 48 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4b6481b:	48 c7 c0 ff ff ff ff 	mov    $0xffffffffffffffff,%rax
+ 4b64822:	e8 99 94 48 fd       	call   1fedcc0 <os.Exit@@Base>
+ 4b64827:	e9 a0 04 00 00       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b6482c:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b64833:	00 
+ 4b64834:	48 83 79 68 00       	cmpq   $0x0,0x68(%rcx)
+ 4b64839:	0f 85 cf 00 00 00    	jne    4b6490e <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x3ae>
+ 4b6483f:	48 8b 0d 1a 79 2c 03 	mov    0x32c791a(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b64846:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b6484a:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b6484e:	e8 0d a8 fe ff       	call   4b4f060 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetMaxRemoteDistancePlusLocalErrorOfSourceFromActivePeers@@Base>
+ 4b64853:	f3 0f 11 44 24 44    	movss  %xmm0,0x44(%rsp)
+ 4b64859:	48 8b 0d 00 79 2c 03 	mov    0x32c7900(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b64860:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b64864:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b64868:	e8 93 a9 fe ff       	call   4b4f200 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetOtherHopCosts@@Base>
+ 4b6486d:	f3 0f 10 4c 24 44    	movss  0x44(%rsp),%xmm1
+ 4b64873:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+ 4b64877:	f3 0f 10 0d 35 98 97 	movss  0x979835(%rip),%xmm1        # 54de0b4 <_IO_stdin_used@@Base+0x8ab0b4>
+ 4b6487e:	00 
+ 4b6487f:	f3 0f 58 c8          	addss  %xmm0,%xmm1
+ 4b64883:	f3 0f 11 8c 24 58 01 	movss  %xmm1,0x158(%rsp)
+ 4b6488a:	00 00 
+ 4b6488c:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b64893:	00 
+ 4b64894:	48 8b 51 48          	mov    0x48(%rcx),%rdx
+ 4b64898:	48 85 d2             	test   %rdx,%rdx
+ 4b6489b:	74 05                	je     4b648a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x342>
+ 4b6489d:	48 8b 12             	mov    (%rdx),%rdx
+ 4b648a0:	eb 02                	jmp    4b648a4 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x344>
+ 4b648a2:	31 d2                	xor    %edx,%edx
+ 4b648a4:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 4b648a9:	48 8d 05 d0 47 19 01 	lea    0x11947d0(%rip),%rax        # 5cf9080 <type:vBr5JPYp@@Base>
+ 4b648b0:	48 89 d3             	mov    %rdx,%rbx
+ 4b648b3:	48 89 d9             	mov    %rbx,%rcx
+ 4b648b6:	e8 25 1b 3d fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b648bb:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4b648c2:	00 
+ 4b648c3:	48 8b 94 24 10 02 00 	mov    0x210(%rsp),%rdx
+ 4b648ca:	00 
+ 4b648cb:	48 8b 5a 48          	mov    0x48(%rdx),%rbx
+ 4b648cf:	48 8d bc 24 98 01 00 	lea    0x198(%rsp),%rdi
+ 4b648d6:	00 
+ 4b648d7:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 4b648db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b648e0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b648e5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b648ea:	e8 dc 24 3f fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 4b648ef:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b648f3:	48 8d 8c 24 98 01 00 	lea    0x198(%rsp),%rcx
+ 4b648fa:	00 
+ 4b648fb:	48 8d 05 be bc de 00 	lea    0xdebcbe(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4b64902:	e8 b9 dd 38 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 4b64907:	31 c0                	xor    %eax,%eax
+ 4b64909:	e9 ac 05 00 00       	jmp    4b64eba <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x95a>
+ 4b6490e:	48 8b 0d 4b 78 2c 03 	mov    0x32c784b(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b64915:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b64919:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b6491d:	0f 1f 00             	nopl   (%rax)
+ 4b64920:	e8 3b a7 fe ff       	call   4b4f060 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetMaxRemoteDistancePlusLocalErrorOfSourceFromActivePeers@@Base>
+ 4b64925:	f3 0f 11 44 24 44    	movss  %xmm0,0x44(%rsp)
+ 4b6492b:	48 8b 0d 2e 78 2c 03 	mov    0x32c782e(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b64932:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b64936:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b6493a:	e8 c1 a8 fe ff       	call   4b4f200 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetOtherHopCosts@@Base>
+ 4b6493f:	f3 0f 10 4c 24 44    	movss  0x44(%rsp),%xmm1
+ 4b64945:	f3 0f 58 c1          	addss  %xmm1,%xmm0
+ 4b64949:	f3 0f 11 84 24 58 01 	movss  %xmm0,0x158(%rsp)
+ 4b64950:	00 00 
+ 4b64952:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b64959:	00 
+ 4b6495a:	48 8b 51 58          	mov    0x58(%rcx),%rdx
+ 4b6495e:	66 90                	xchg   %ax,%ax
+ 4b64960:	48 85 d2             	test   %rdx,%rdx
+ 4b64963:	74 05                	je     4b6496a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x40a>
+ 4b64965:	48 8b 12             	mov    (%rdx),%rdx
+ 4b64968:	eb 02                	jmp    4b6496c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x40c>
+ 4b6496a:	31 d2                	xor    %edx,%edx
+ 4b6496c:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 4b64971:	48 8d 05 08 47 19 01 	lea    0x1194708(%rip),%rax        # 5cf9080 <type:vBr5JPYp@@Base>
+ 4b64978:	48 89 d3             	mov    %rdx,%rbx
+ 4b6497b:	48 89 d9             	mov    %rbx,%rcx
+ 4b6497e:	66 90                	xchg   %ax,%ax
+ 4b64980:	e8 5b 1a 3d fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b64985:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4b6498c:	00 
+ 4b6498d:	48 8b 94 24 10 02 00 	mov    0x210(%rsp),%rdx
+ 4b64994:	00 
+ 4b64995:	48 8b 5a 58          	mov    0x58(%rdx),%rbx
+ 4b64999:	48 8d bc 24 98 01 00 	lea    0x198(%rsp),%rdi
+ 4b649a0:	00 
+ 4b649a1:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 4b649a5:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b649aa:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b649af:	e8 17 24 3f fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 4b649b4:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b649b8:	48 8d 8c 24 98 01 00 	lea    0x198(%rsp),%rcx
+ 4b649bf:	00 
+ 4b649c0:	48 8d 05 f9 bb de 00 	lea    0xdebbf9(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4b649c7:	e8 f4 dc 38 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 4b649cc:	31 c0                	xor    %eax,%eax
+ 4b649ce:	e9 3a 03 00 00       	jmp    4b64d0d <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x7ad>
+ 4b649d3:	48 8b 0d 86 77 2c 03 	mov    0x32c7786(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b649da:	48 8b 49 30          	mov    0x30(%rcx),%rcx
+ 4b649de:	48 8b 41 20          	mov    0x20(%rcx),%rax
+ 4b649e2:	e8 19 a8 fe ff       	call   4b4f200 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*CapacityAnnouncementProtocol).GetOtherHopCosts@@Base>
+ 4b649e7:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4b649ea:	f3 0f 58 c8          	addss  %xmm0,%xmm1
+ 4b649ee:	f3 0f 11 8c 24 58 01 	movss  %xmm1,0x158(%rsp)
+ 4b649f5:	00 00 
+ 4b649f7:	48 8b 8c 24 10 02 00 	mov    0x210(%rsp),%rcx
+ 4b649fe:	00 
+ 4b649ff:	48 8b 51 48          	mov    0x48(%rcx),%rdx
+ 4b64a03:	48 85 d2             	test   %rdx,%rdx
+ 4b64a06:	74 05                	je     4b64a0d <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x4ad>
+ 4b64a08:	48 8b 12             	mov    (%rdx),%rdx
+ 4b64a0b:	eb 02                	jmp    4b64a0f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x4af>
+ 4b64a0d:	31 d2                	xor    %edx,%edx
+ 4b64a0f:	48 89 54 24 60       	mov    %rdx,0x60(%rsp)
+ 4b64a14:	48 8d 05 65 46 19 01 	lea    0x1194665(%rip),%rax        # 5cf9080 <type:vBr5JPYp@@Base>
+ 4b64a1b:	48 89 d3             	mov    %rdx,%rbx
+ 4b64a1e:	48 89 d9             	mov    %rbx,%rcx
+ 4b64a21:	e8 ba 19 3d fd       	call   1f363e0 <runtime.makeslice@@Base>
+ 4b64a26:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4b64a2d:	00 
+ 4b64a2e:	48 8b 94 24 10 02 00 	mov    0x210(%rsp),%rdx
+ 4b64a35:	00 
+ 4b64a36:	48 8b 5a 48          	mov    0x48(%rdx),%rbx
+ 4b64a3a:	48 8d bc 24 98 01 00 	lea    0x198(%rsp),%rdi
+ 4b64a41:	00 
+ 4b64a42:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 4b64a46:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4b64a4b:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4b64a50:	e8 76 23 3f fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 4b64a55:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4b64a59:	48 8d 8c 24 98 01 00 	lea    0x198(%rsp),%rcx
+ 4b64a60:	00 
+ 4b64a61:	48 8d 05 58 bb de 00 	lea    0xdebb58(%rip),%rax        # 59505c0 <type:G0OVg65B@@Base>
+ 4b64a68:	e8 53 dc 38 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 4b64a6d:	31 c0                	xor    %eax,%eax
+ 4b64a6f:	eb 18                	jmp    4b64a89 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x529>
+ 4b64a71:	48 8d 84 24 98 01 00 	lea    0x198(%rsp),%rax
+ 4b64a78:	00 
+ 4b64a79:	e8 c2 de 38 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 4b64a7e:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 4b64a85:	00 
+ 4b64a86:	48 ff c0             	inc    %rax
+ 4b64a89:	48 8b 8c 24 98 01 00 	mov    0x198(%rsp),%rcx
+ 4b64a90:	00 
+ 4b64a91:	48 85 c9             	test   %rcx,%rcx
+ 4b64a94:	0f 84 f7 00 00 00    	je     4b64b91 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x631>
+ 4b64a9a:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 4b64aa1:	00 
+ 4b64aa2:	48 8b 94 24 a0 01 00 	mov    0x1a0(%rsp),%rdx
+ 4b64aa9:	00 
+ 4b64aaa:	48 8b 19             	mov    (%rcx),%rbx
+ 4b64aad:	48 89 9c 24 20 01 00 	mov    %rbx,0x120(%rsp)
+ 4b64ab4:	00 
+ 4b64ab5:	48 8b 32             	mov    (%rdx),%rsi
+ 4b64ab8:	48 89 b4 24 00 01 00 	mov    %rsi,0x100(%rsp)
+ 4b64abf:	00 
+ 4b64ac0:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 4b64ac4:	48 89 94 24 b0 00 00 	mov    %rdx,0xb0(%rsp)
+ 4b64acb:	00 
+ 4b64acc:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4b64ad0:	48 89 8c 24 d0 00 00 	mov    %rcx,0xd0(%rsp)
+ 4b64ad7:	00 
+ 4b64ad8:	48 8d 05 01 61 14 01 	lea    0x1146101(%rip),%rax        # 5caabe0 <type:S43R4eMG@@Base>
+ 4b64adf:	90                   	nop
+ 4b64ae0:	e8 fb b9 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b64ae5:	48 8b 8c 24 d0 00 00 	mov    0xd0(%rsp),%rcx
+ 4b64aec:	00 
+ 4b64aed:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b64af1:	83 3d 68 6e 31 03 00 	cmpl   $0x0,0x3316e68(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64af8:	75 0d                	jne    4b64b07 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x5a7>
+ 4b64afa:	48 8b 94 24 20 01 00 	mov    0x120(%rsp),%rdx
+ 4b64b01:	00 
+ 4b64b02:	48 89 10             	mov    %rdx,(%rax)
+ 4b64b05:	eb 10                	jmp    4b64b17 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x5b7>
+ 4b64b07:	48 89 c7             	mov    %rax,%rdi
+ 4b64b0a:	48 8b 94 24 20 01 00 	mov    0x120(%rsp),%rdx
+ 4b64b11:	00 
+ 4b64b12:	e8 09 1c 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64b17:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4b64b1e:	00 
+ 4b64b1f:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4b64b23:	83 3d 36 6e 31 03 00 	cmpl   $0x0,0x3316e36(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64b2a:	75 0e                	jne    4b64b3a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x5da>
+ 4b64b2c:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 4b64b33:	00 
+ 4b64b34:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b64b38:	eb 11                	jmp    4b64b4b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x5eb>
+ 4b64b3a:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b64b3e:	48 8b 94 24 00 01 00 	mov    0x100(%rsp),%rdx
+ 4b64b45:	00 
+ 4b64b46:	e8 d5 1b 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64b4b:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 4b64b52:	00 
+ 4b64b53:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 4b64b58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 4b64b5f:	00 
+ 4b64b60:	48 39 ca             	cmp    %rcx,%rdx
+ 4b64b63:	0f 83 85 01 00 00    	jae    4b64cee <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x78e>
+ 4b64b69:	48 8b 9c 24 30 01 00 	mov    0x130(%rsp),%rbx
+ 4b64b70:	00 
+ 4b64b71:	48 8d 3c d3          	lea    (%rbx,%rdx,8),%rdi
+ 4b64b75:	83 3d e4 6d 31 03 00 	cmpl   $0x0,0x3316de4(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64b7c:	75 09                	jne    4b64b87 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x627>
+ 4b64b7e:	48 89 04 d3          	mov    %rax,(%rbx,%rdx,8)
+ 4b64b82:	e9 ea fe ff ff       	jmp    4b64a71 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x511>
+ 4b64b87:	e8 74 1a 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b64b8c:	e9 e0 fe ff ff       	jmp    4b64a71 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x511>
+ 4b64b91:	48 8b 8c 24 30 01 00 	mov    0x130(%rsp),%rcx
+ 4b64b98:	00 
+ 4b64b99:	48 89 8c 24 60 01 00 	mov    %rcx,0x160(%rsp)
+ 4b64ba0:	00 
+ 4b64ba1:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+ 4b64ba6:	48 89 8c 24 68 01 00 	mov    %rcx,0x168(%rsp)
+ 4b64bad:	00 
+ 4b64bae:	48 89 8c 24 70 01 00 	mov    %rcx,0x170(%rsp)
+ 4b64bb5:	00 
+ 4b64bb6:	48 8d 05 23 60 14 01 	lea    0x1146023(%rip),%rax        # 5caabe0 <type:S43R4eMG@@Base>
+ 4b64bbd:	0f 1f 00             	nopl   (%rax)
+ 4b64bc0:	e8 1b b9 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b64bc5:	48 c7 40 08 09 00 00 	movq   $0x9,0x8(%rax)
+ 4b64bcc:	00 
+ 4b64bcd:	48 8d 0d a9 24 10 00 	lea    0x1024a9(%rip),%rcx        # 4c6707d <_IO_stdin_used@@Base+0x3407d>
+ 4b64bd4:	48 89 08             	mov    %rcx,(%rax)
+ 4b64bd7:	48 c7 40 18 06 00 00 	movq   $0x6,0x18(%rax)
+ 4b64bde:	00 
+ 4b64bdf:	48 8d 0d e1 94 0f 00 	lea    0xf94e1(%rip),%rcx        # 4c5e0c7 <_IO_stdin_used@@Base+0x2b0c7>
+ 4b64be6:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4b64bea:	48 8b 8c 24 60 01 00 	mov    0x160(%rsp),%rcx
+ 4b64bf1:	00 
+ 4b64bf2:	48 8b 94 24 70 01 00 	mov    0x170(%rsp),%rdx
+ 4b64bf9:	00 
+ 4b64bfa:	48 8b 9c 24 68 01 00 	mov    0x168(%rsp),%rbx
+ 4b64c01:	00 
+ 4b64c02:	48 ff c3             	inc    %rbx
+ 4b64c05:	48 39 da             	cmp    %rbx,%rdx
+ 4b64c08:	73 3a                	jae    4b64c44 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x6e4>
+ 4b64c0a:	48 89 84 24 28 01 00 	mov    %rax,0x128(%rsp)
+ 4b64c11:	00 
+ 4b64c12:	48 89 c8             	mov    %rcx,%rax
+ 4b64c15:	48 89 d1             	mov    %rdx,%rcx
+ 4b64c18:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b64c1d:	48 8d 35 5c 44 19 01 	lea    0x119445c(%rip),%rsi        # 5cf9080 <type:vBr5JPYp@@Base>
+ 4b64c24:	e8 97 18 3d fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b64c29:	48 89 8c 24 70 01 00 	mov    %rcx,0x170(%rsp)
+ 4b64c30:	00 
+ 4b64c31:	48 89 84 24 60 01 00 	mov    %rax,0x160(%rsp)
+ 4b64c38:	00 
+ 4b64c39:	48 89 c1             	mov    %rax,%rcx
+ 4b64c3c:	48 8b 84 24 28 01 00 	mov    0x128(%rsp),%rax
+ 4b64c43:	00 
+ 4b64c44:	48 89 9c 24 68 01 00 	mov    %rbx,0x168(%rsp)
+ 4b64c4b:	00 
+ 4b64c4c:	48 8d 3c d9          	lea    (%rcx,%rbx,8),%rdi
+ 4b64c50:	48 8d 7f f8          	lea    -0x8(%rdi),%rdi
+ 4b64c54:	83 3d 05 6d 31 03 00 	cmpl   $0x0,0x3316d05(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64c5b:	75 07                	jne    4b64c64 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x704>
+ 4b64c5d:	48 89 44 d9 f8       	mov    %rax,-0x8(%rcx,%rbx,8)
+ 4b64c62:	eb 05                	jmp    4b64c69 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x709>
+ 4b64c64:	e8 97 19 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b64c69:	83 3d f0 6c 31 03 00 	cmpl   $0x0,0x3316cf0(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64c70:	75 3a                	jne    4b64cac <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x74c>
+ 4b64c72:	0f 10 84 24 58 01 00 	movups 0x158(%rsp),%xmm0
+ 4b64c79:	00 
+ 4b64c7a:	48 8b 84 24 10 02 00 	mov    0x210(%rsp),%rax
+ 4b64c81:	00 
+ 4b64c82:	0f 11 40 08          	movups %xmm0,0x8(%rax)
+ 4b64c86:	0f 10 84 24 68 01 00 	movups 0x168(%rsp),%xmm0
+ 4b64c8d:	00 
+ 4b64c8e:	0f 11 40 18          	movups %xmm0,0x18(%rax)
+ 4b64c92:	0f 10 84 24 78 01 00 	movups 0x178(%rsp),%xmm0
+ 4b64c99:	00 
+ 4b64c9a:	0f 11 40 28          	movups %xmm0,0x28(%rax)
+ 4b64c9e:	0f 10 84 24 88 01 00 	movups 0x188(%rsp),%xmm0
+ 4b64ca5:	00 
+ 4b64ca6:	0f 11 40 38          	movups %xmm0,0x38(%rax)
+ 4b64caa:	eb 20                	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b64cac:	48 8b 9c 24 10 02 00 	mov    0x210(%rsp),%rbx
+ 4b64cb3:	00 
+ 4b64cb4:	48 83 c3 08          	add    $0x8,%rbx
+ 4b64cb8:	48 8d 05 c1 61 14 01 	lea    0x11461c1(%rip),%rax        # 5caae80 <type:nYebtNba@@Base>
+ 4b64cbf:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 4b64cc6:	00 
+ 4b64cc7:	e8 74 21 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b64ccc:	c6 44 24 43 00       	movb   $0x0,0x43(%rsp)
+ 4b64cd1:	48 8b 94 24 f8 01 00 	mov    0x1f8(%rsp),%rdx
+ 4b64cd8:	00 
+ 4b64cd9:	48 8b 02             	mov    (%rdx),%rax
+ 4b64cdc:	ff d0                	call   *%rax
+ 4b64cde:	48 8b ac 24 00 02 00 	mov    0x200(%rsp),%rbp
+ 4b64ce5:	00 
+ 4b64ce6:	48 81 c4 08 02 00 00 	add    $0x208,%rsp
+ 4b64ced:	c3                   	ret
+ 4b64cee:	48 89 d0             	mov    %rdx,%rax
+ 4b64cf1:	e8 aa 1d 3f fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4b64cf6:	48 8d 84 24 98 01 00 	lea    0x198(%rsp),%rax
+ 4b64cfd:	00 
+ 4b64cfe:	66 90                	xchg   %ax,%ax
+ 4b64d00:	e8 3b dc 38 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 4b64d05:	48 8b 44 24 68       	mov    0x68(%rsp),%rax
+ 4b64d0a:	48 ff c0             	inc    %rax
+ 4b64d0d:	48 8b b4 24 98 01 00 	mov    0x198(%rsp),%rsi
+ 4b64d14:	00 
+ 4b64d15:	48 85 f6             	test   %rsi,%rsi
+ 4b64d18:	0f 84 ec 00 00 00    	je     4b64e0a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x8aa>
+ 4b64d1e:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 4b64d23:	48 8b 8c 24 a0 01 00 	mov    0x1a0(%rsp),%rcx
+ 4b64d2a:	00 
+ 4b64d2b:	48 8b 11             	mov    (%rcx),%rdx
+ 4b64d2e:	48 89 94 24 e8 00 00 	mov    %rdx,0xe8(%rsp)
+ 4b64d35:	00 
+ 4b64d36:	48 8b 1e             	mov    (%rsi),%rbx
+ 4b64d39:	48 89 9c 24 08 01 00 	mov    %rbx,0x108(%rsp)
+ 4b64d40:	00 
+ 4b64d41:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4b64d45:	48 89 8c 24 98 00 00 	mov    %rcx,0x98(%rsp)
+ 4b64d4c:	00 
+ 4b64d4d:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 4b64d51:	48 89 b4 24 b8 00 00 	mov    %rsi,0xb8(%rsp)
+ 4b64d58:	00 
+ 4b64d59:	48 8d 05 80 5e 14 01 	lea    0x1145e80(%rip),%rax        # 5caabe0 <type:S43R4eMG@@Base>
+ 4b64d60:	e8 7b b7 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b64d65:	48 8b 8c 24 b8 00 00 	mov    0xb8(%rsp),%rcx
+ 4b64d6c:	00 
+ 4b64d6d:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b64d71:	83 3d e8 6b 31 03 00 	cmpl   $0x0,0x3316be8(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64d78:	75 0d                	jne    4b64d87 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x827>
+ 4b64d7a:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+ 4b64d81:	00 
+ 4b64d82:	48 89 10             	mov    %rdx,(%rax)
+ 4b64d85:	eb 10                	jmp    4b64d97 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x837>
+ 4b64d87:	48 89 c7             	mov    %rax,%rdi
+ 4b64d8a:	48 8b 94 24 08 01 00 	mov    0x108(%rsp),%rdx
+ 4b64d91:	00 
+ 4b64d92:	e8 89 19 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64d97:	48 8b 94 24 98 00 00 	mov    0x98(%rsp),%rdx
+ 4b64d9e:	00 
+ 4b64d9f:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4b64da3:	83 3d b6 6b 31 03 00 	cmpl   $0x0,0x3316bb6(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64daa:	75 0e                	jne    4b64dba <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x85a>
+ 4b64dac:	48 8b 94 24 e8 00 00 	mov    0xe8(%rsp),%rdx
+ 4b64db3:	00 
+ 4b64db4:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b64db8:	eb 11                	jmp    4b64dcb <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x86b>
+ 4b64dba:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b64dbe:	48 8b 94 24 e8 00 00 	mov    0xe8(%rsp),%rdx
+ 4b64dc5:	00 
+ 4b64dc6:	e8 55 19 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64dcb:	48 8b 54 24 68       	mov    0x68(%rsp),%rdx
+ 4b64dd0:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4b64dd5:	48 39 ca             	cmp    %rcx,%rdx
+ 4b64dd8:	0f 83 bc 00 00 00    	jae    4b64e9a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x93a>
+ 4b64dde:	48 8b 9c 24 30 01 00 	mov    0x130(%rsp),%rbx
+ 4b64de5:	00 
+ 4b64de6:	48 8d 3c d3          	lea    (%rbx,%rdx,8),%rdi
+ 4b64dea:	83 3d 6f 6b 31 03 00 	cmpl   $0x0,0x3316b6f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64df1:	75 0d                	jne    4b64e00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x8a0>
+ 4b64df3:	48 89 04 d3          	mov    %rax,(%rbx,%rdx,8)
+ 4b64df7:	e9 fa fe ff ff       	jmp    4b64cf6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x796>
+ 4b64dfc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b64e00:	e8 fb 17 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b64e05:	e9 ec fe ff ff       	jmp    4b64cf6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x796>
+ 4b64e0a:	48 8b b4 24 30 01 00 	mov    0x130(%rsp),%rsi
+ 4b64e11:	00 
+ 4b64e12:	48 89 b4 24 60 01 00 	mov    %rsi,0x160(%rsp)
+ 4b64e19:	00 
+ 4b64e1a:	48 8b 74 24 48       	mov    0x48(%rsp),%rsi
+ 4b64e1f:	48 89 b4 24 68 01 00 	mov    %rsi,0x168(%rsp)
+ 4b64e26:	00 
+ 4b64e27:	48 89 b4 24 70 01 00 	mov    %rsi,0x170(%rsp)
+ 4b64e2e:	00 
+ 4b64e2f:	83 3d 2a 6b 31 03 00 	cmpl   $0x0,0x3316b2a(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64e36:	75 3d                	jne    4b64e75 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x915>
+ 4b64e38:	0f 10 84 24 58 01 00 	movups 0x158(%rsp),%xmm0
+ 4b64e3f:	00 
+ 4b64e40:	48 8b 84 24 10 02 00 	mov    0x210(%rsp),%rax
+ 4b64e47:	00 
+ 4b64e48:	0f 11 40 08          	movups %xmm0,0x8(%rax)
+ 4b64e4c:	0f 10 84 24 68 01 00 	movups 0x168(%rsp),%xmm0
+ 4b64e53:	00 
+ 4b64e54:	0f 11 40 18          	movups %xmm0,0x18(%rax)
+ 4b64e58:	0f 10 84 24 78 01 00 	movups 0x178(%rsp),%xmm0
+ 4b64e5f:	00 
+ 4b64e60:	0f 11 40 28          	movups %xmm0,0x28(%rax)
+ 4b64e64:	0f 10 84 24 88 01 00 	movups 0x188(%rsp),%xmm0
+ 4b64e6b:	00 
+ 4b64e6c:	0f 11 40 38          	movups %xmm0,0x38(%rax)
+ 4b64e70:	e9 57 fe ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b64e75:	48 8b 9c 24 10 02 00 	mov    0x210(%rsp),%rbx
+ 4b64e7c:	00 
+ 4b64e7d:	48 83 c3 08          	add    $0x8,%rbx
+ 4b64e81:	48 8d 05 f8 5f 14 01 	lea    0x1145ff8(%rip),%rax        # 5caae80 <type:nYebtNba@@Base>
+ 4b64e88:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 4b64e8f:	00 
+ 4b64e90:	e8 ab 1f 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b64e95:	e9 32 fe ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b64e9a:	48 89 d0             	mov    %rdx,%rax
+ 4b64e9d:	0f 1f 00             	nopl   (%rax)
+ 4b64ea0:	e8 fb 1b 3f fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4b64ea5:	48 8d 84 24 98 01 00 	lea    0x198(%rsp),%rax
+ 4b64eac:	00 
+ 4b64ead:	e8 8e da 38 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 4b64eb2:	48 8b 44 24 70       	mov    0x70(%rsp),%rax
+ 4b64eb7:	48 ff c0             	inc    %rax
+ 4b64eba:	48 8b b4 24 98 01 00 	mov    0x198(%rsp),%rsi
+ 4b64ec1:	00 
+ 4b64ec2:	48 85 f6             	test   %rsi,%rsi
+ 4b64ec5:	0f 84 ea 00 00 00    	je     4b64fb5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xa55>
+ 4b64ecb:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 4b64ed0:	48 8b 8c 24 a0 01 00 	mov    0x1a0(%rsp),%rcx
+ 4b64ed7:	00 
+ 4b64ed8:	48 8b 11             	mov    (%rcx),%rdx
+ 4b64edb:	48 89 94 24 f0 00 00 	mov    %rdx,0xf0(%rsp)
+ 4b64ee2:	00 
+ 4b64ee3:	48 8b 1e             	mov    (%rsi),%rbx
+ 4b64ee6:	48 89 9c 24 10 01 00 	mov    %rbx,0x110(%rsp)
+ 4b64eed:	00 
+ 4b64eee:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4b64ef2:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b64ef9:	00 
+ 4b64efa:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 4b64efe:	48 89 b4 24 c0 00 00 	mov    %rsi,0xc0(%rsp)
+ 4b64f05:	00 
+ 4b64f06:	48 8d 05 d3 5c 14 01 	lea    0x1145cd3(%rip),%rax        # 5caabe0 <type:S43R4eMG@@Base>
+ 4b64f0d:	e8 ce b5 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b64f12:	48 8b 8c 24 c0 00 00 	mov    0xc0(%rsp),%rcx
+ 4b64f19:	00 
+ 4b64f1a:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b64f1e:	83 3d 3b 6a 31 03 00 	cmpl   $0x0,0x3316a3b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64f25:	75 0d                	jne    4b64f34 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x9d4>
+ 4b64f27:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b64f2e:	00 
+ 4b64f2f:	48 89 10             	mov    %rdx,(%rax)
+ 4b64f32:	eb 11                	jmp    4b64f45 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x9e5>
+ 4b64f34:	48 89 c7             	mov    %rax,%rdi
+ 4b64f37:	48 8b 94 24 10 01 00 	mov    0x110(%rsp),%rdx
+ 4b64f3e:	00 
+ 4b64f3f:	90                   	nop
+ 4b64f40:	e8 db 17 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64f45:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b64f4c:	00 
+ 4b64f4d:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4b64f51:	83 3d 08 6a 31 03 00 	cmpl   $0x0,0x3316a08(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64f58:	75 0e                	jne    4b64f68 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xa08>
+ 4b64f5a:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 4b64f61:	00 
+ 4b64f62:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b64f66:	eb 11                	jmp    4b64f79 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xa19>
+ 4b64f68:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b64f6c:	48 8b 94 24 f0 00 00 	mov    0xf0(%rsp),%rdx
+ 4b64f73:	00 
+ 4b64f74:	e8 a7 17 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b64f79:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 4b64f7e:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 4b64f83:	48 39 ca             	cmp    %rcx,%rdx
+ 4b64f86:	0f 83 be 00 00 00    	jae    4b6504a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xaea>
+ 4b64f8c:	48 8b 9c 24 30 01 00 	mov    0x130(%rsp),%rbx
+ 4b64f93:	00 
+ 4b64f94:	48 8d 3c d3          	lea    (%rbx,%rdx,8),%rdi
+ 4b64f98:	83 3d c1 69 31 03 00 	cmpl   $0x0,0x33169c1(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64f9f:	90                   	nop
+ 4b64fa0:	75 09                	jne    4b64fab <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xa4b>
+ 4b64fa2:	48 89 04 d3          	mov    %rax,(%rbx,%rdx,8)
+ 4b64fa6:	e9 fa fe ff ff       	jmp    4b64ea5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x945>
+ 4b64fab:	e8 50 16 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b64fb0:	e9 f0 fe ff ff       	jmp    4b64ea5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x945>
+ 4b64fb5:	48 8b b4 24 30 01 00 	mov    0x130(%rsp),%rsi
+ 4b64fbc:	00 
+ 4b64fbd:	48 89 b4 24 60 01 00 	mov    %rsi,0x160(%rsp)
+ 4b64fc4:	00 
+ 4b64fc5:	48 8b 74 24 50       	mov    0x50(%rsp),%rsi
+ 4b64fca:	48 89 b4 24 68 01 00 	mov    %rsi,0x168(%rsp)
+ 4b64fd1:	00 
+ 4b64fd2:	48 89 b4 24 70 01 00 	mov    %rsi,0x170(%rsp)
+ 4b64fd9:	00 
+ 4b64fda:	83 3d 7f 69 31 03 00 	cmpl   $0x0,0x331697f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b64fe1:	75 42                	jne    4b65025 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xac5>
+ 4b64fe3:	0f 10 84 24 58 01 00 	movups 0x158(%rsp),%xmm0
+ 4b64fea:	00 
+ 4b64feb:	48 8b 84 24 10 02 00 	mov    0x210(%rsp),%rax
+ 4b64ff2:	00 
+ 4b64ff3:	0f 11 40 08          	movups %xmm0,0x8(%rax)
+ 4b64ff7:	0f 10 84 24 68 01 00 	movups 0x168(%rsp),%xmm0
+ 4b64ffe:	00 
+ 4b64fff:	0f 11 40 18          	movups %xmm0,0x18(%rax)
+ 4b65003:	0f 10 84 24 78 01 00 	movups 0x178(%rsp),%xmm0
+ 4b6500a:	00 
+ 4b6500b:	0f 11 40 28          	movups %xmm0,0x28(%rax)
+ 4b6500f:	0f 10 84 24 88 01 00 	movups 0x188(%rsp),%xmm0
+ 4b65016:	00 
+ 4b65017:	0f 11 40 38          	movups %xmm0,0x38(%rax)
+ 4b6501b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b65020:	e9 a7 fc ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b65025:	48 8b 9c 24 10 02 00 	mov    0x210(%rsp),%rbx
+ 4b6502c:	00 
+ 4b6502d:	48 83 c3 08          	add    $0x8,%rbx
+ 4b65031:	48 8d 05 48 5e 14 01 	lea    0x1145e48(%rip),%rax        # 5caae80 <type:nYebtNba@@Base>
+ 4b65038:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 4b6503f:	00 
+ 4b65040:	e8 fb 1d 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b65045:	e9 82 fc ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b6504a:	48 89 d0             	mov    %rdx,%rax
+ 4b6504d:	e8 4e 1a 3f fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4b65052:	48 8d 84 24 98 01 00 	lea    0x198(%rsp),%rax
+ 4b65059:	00 
+ 4b6505a:	e8 e1 d8 38 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 4b6505f:	48 8b 44 24 78       	mov    0x78(%rsp),%rax
+ 4b65064:	48 ff c0             	inc    %rax
+ 4b65067:	48 8b b4 24 98 01 00 	mov    0x198(%rsp),%rsi
+ 4b6506e:	00 
+ 4b6506f:	48 85 f6             	test   %rsi,%rsi
+ 4b65072:	0f 84 ed 00 00 00    	je     4b65165 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xc05>
+ 4b65078:	48 89 44 24 78       	mov    %rax,0x78(%rsp)
+ 4b6507d:	48 8b 8c 24 a0 01 00 	mov    0x1a0(%rsp),%rcx
+ 4b65084:	00 
+ 4b65085:	48 8b 11             	mov    (%rcx),%rdx
+ 4b65088:	48 89 94 24 f8 00 00 	mov    %rdx,0xf8(%rsp)
+ 4b6508f:	00 
+ 4b65090:	48 8b 1e             	mov    (%rsi),%rbx
+ 4b65093:	48 89 9c 24 18 01 00 	mov    %rbx,0x118(%rsp)
+ 4b6509a:	00 
+ 4b6509b:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4b6509f:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b650a6:	00 
+ 4b650a7:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+ 4b650ab:	48 89 b4 24 c8 00 00 	mov    %rsi,0xc8(%rsp)
+ 4b650b2:	00 
+ 4b650b3:	48 8d 05 26 5b 14 01 	lea    0x1145b26(%rip),%rax        # 5caabe0 <type:S43R4eMG@@Base>
+ 4b650ba:	e8 21 b4 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b650bf:	48 8b 8c 24 c8 00 00 	mov    0xc8(%rsp),%rcx
+ 4b650c6:	00 
+ 4b650c7:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b650cb:	83 3d 8e 68 31 03 00 	cmpl   $0x0,0x331688e(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b650d2:	75 0e                	jne    4b650e2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xb82>
+ 4b650d4:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 4b650db:	00 
+ 4b650dc:	48 89 10             	mov    %rdx,(%rax)
+ 4b650df:	90                   	nop
+ 4b650e0:	eb 10                	jmp    4b650f2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xb92>
+ 4b650e2:	48 89 c7             	mov    %rax,%rdi
+ 4b650e5:	48 8b 94 24 18 01 00 	mov    0x118(%rsp),%rdx
+ 4b650ec:	00 
+ 4b650ed:	e8 2e 16 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b650f2:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b650f9:	00 
+ 4b650fa:	48 89 50 18          	mov    %rdx,0x18(%rax)
+ 4b650fe:	83 3d 5b 68 31 03 00 	cmpl   $0x0,0x331685b(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b65105:	75 0e                	jne    4b65115 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xbb5>
+ 4b65107:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 4b6510e:	00 
+ 4b6510f:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b65113:	eb 11                	jmp    4b65126 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xbc6>
+ 4b65115:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b65119:	48 8b 94 24 f8 00 00 	mov    0xf8(%rsp),%rdx
+ 4b65120:	00 
+ 4b65121:	e8 fa 15 3f fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b65126:	48 8b 54 24 78       	mov    0x78(%rsp),%rdx
+ 4b6512b:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 4b65130:	48 39 ca             	cmp    %rcx,%rdx
+ 4b65133:	0f 83 bc 00 00 00    	jae    4b651f5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xc95>
+ 4b65139:	48 8b 9c 24 30 01 00 	mov    0x130(%rsp),%rbx
+ 4b65140:	00 
+ 4b65141:	48 8d 3c d3          	lea    (%rbx,%rdx,8),%rdi
+ 4b65145:	83 3d 14 68 31 03 00 	cmpl   $0x0,0x3316814(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b6514c:	75 09                	jne    4b65157 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xbf7>
+ 4b6514e:	48 89 04 d3          	mov    %rax,(%rbx,%rdx,8)
+ 4b65152:	e9 fb fe ff ff       	jmp    4b65052 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xaf2>
+ 4b65157:	e8 a4 14 3f fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4b6515c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b65160:	e9 ed fe ff ff       	jmp    4b65052 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xaf2>
+ 4b65165:	48 8b b4 24 30 01 00 	mov    0x130(%rsp),%rsi
+ 4b6516c:	00 
+ 4b6516d:	48 89 b4 24 60 01 00 	mov    %rsi,0x160(%rsp)
+ 4b65174:	00 
+ 4b65175:	48 8b 74 24 58       	mov    0x58(%rsp),%rsi
+ 4b6517a:	48 89 b4 24 68 01 00 	mov    %rsi,0x168(%rsp)
+ 4b65181:	00 
+ 4b65182:	48 89 b4 24 70 01 00 	mov    %rsi,0x170(%rsp)
+ 4b65189:	00 
+ 4b6518a:	83 3d cf 67 31 03 00 	cmpl   $0x0,0x33167cf(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b65191:	75 3d                	jne    4b651d0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0xc70>
+ 4b65193:	0f 10 84 24 58 01 00 	movups 0x158(%rsp),%xmm0
+ 4b6519a:	00 
+ 4b6519b:	48 8b 84 24 10 02 00 	mov    0x210(%rsp),%rax
+ 4b651a2:	00 
+ 4b651a3:	0f 11 40 08          	movups %xmm0,0x8(%rax)
+ 4b651a7:	0f 10 84 24 68 01 00 	movups 0x168(%rsp),%xmm0
+ 4b651ae:	00 
+ 4b651af:	0f 11 40 18          	movups %xmm0,0x18(%rax)
+ 4b651b3:	0f 10 84 24 78 01 00 	movups 0x178(%rsp),%xmm0
+ 4b651ba:	00 
+ 4b651bb:	0f 11 40 28          	movups %xmm0,0x28(%rax)
+ 4b651bf:	0f 10 84 24 88 01 00 	movups 0x188(%rsp),%xmm0
+ 4b651c6:	00 
+ 4b651c7:	0f 11 40 38          	movups %xmm0,0x38(%rax)
+ 4b651cb:	e9 fc fa ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b651d0:	48 8b 9c 24 10 02 00 	mov    0x210(%rsp),%rbx
+ 4b651d7:	00 
+ 4b651d8:	48 83 c3 08          	add    $0x8,%rbx
+ 4b651dc:	48 8d 05 9d 5c 14 01 	lea    0x1145c9d(%rip),%rax        # 5caae80 <type:nYebtNba@@Base>
+ 4b651e3:	48 8d 8c 24 58 01 00 	lea    0x158(%rsp),%rcx
+ 4b651ea:	00 
+ 4b651eb:	e8 50 1c 39 fd       	call   1ef6e40 <runtime.typedmemmove@@Base>
+ 4b651f0:	e9 d7 fa ff ff       	jmp    4b64ccc <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base+0x76c>
+ 4b651f5:	48 89 d0             	mov    %rdx,%rax
+ 4b651f8:	e8 a3 18 3f fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 4b651fd:	90                   	nop
+ 4b651fe:	66 90                	xchg   %ax,%ax
+ 4b65200:	e8 5b 6d 3b fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4b65205:	48 8b ac 24 00 02 00 	mov    0x200(%rsp),%rbp
+ 4b6520c:	00 
+ 4b6520d:	48 81 c4 08 02 00 00 	add    $0x208,%rsp
+ 4b65214:	c3                   	ret
+ 4b65215:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6521a:	e8 41 f2 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6521f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b65224:	e9 37 f3 ff ff       	jmp    4b64560 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ScoreStore).CalculateHopDistance@@Base>
+ 4b65229:	cc                   	int3
+ 4b6522a:	cc                   	int3
+ 4b6522b:	cc                   	int3
+ 4b6522c:	cc                   	int3
+ 4b6522d:	cc                   	int3
+ 4b6522e:	cc                   	int3
+ 4b6522f:	cc                   	int3
+ 4b65230:	cc                   	int3
+ 4b65231:	cc                   	int3
+ 4b65232:	cc                   	int3
+ 4b65233:	cc                   	int3
+ 4b65234:	cc                   	int3
+ 4b65235:	cc                   	int3
+ 4b65236:	cc                   	int3
+ 4b65237:	cc                   	int3
+ 4b65238:	cc                   	int3
+ 4b65239:	cc                   	int3
+ 4b6523a:	cc                   	int3
+ 4b6523b:	cc                   	int3
+ 4b6523c:	cc                   	int3
+ 4b6523d:	cc                   	int3
+ 4b6523e:	cc                   	int3
+ 4b6523f:	cc                   	int3

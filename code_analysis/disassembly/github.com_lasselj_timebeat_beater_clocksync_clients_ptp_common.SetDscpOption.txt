@@ -1,0 +1,131 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption
+# addr 0x459cda0 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000459cda0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base>:
+ 459cda0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 459cda4:	0f 86 5d 01 00 00    	jbe    459cf07 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0x167>
+ 459cdaa:	48 83 ec 68          	sub    $0x68,%rsp
+ 459cdae:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 459cdb3:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 459cdb8:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 459cdbd:	48 c1 e3 02          	shl    $0x2,%rbx
+ 459cdc1:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 459cdc6:	89 5c 24 2c          	mov    %ebx,0x2c(%rsp)
+ 459cdca:	b9 01 00 00 00       	mov    $0x1,%ecx
+ 459cdcf:	48 8d 7c 24 2c       	lea    0x2c(%rsp),%rdi
+ 459cdd4:	be 04 00 00 00       	mov    $0x4,%esi
+ 459cdd9:	31 db                	xor    %ebx,%ebx
+ 459cddb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 459cde0:	e8 7b 1a a2 fd       	call   1fbe860 <syscall.setsockopt@@Base>
+ 459cde5:	48 85 c0             	test   %rax,%rax
+ 459cde8:	74 6f                	je     459ce59 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0xb9>
+ 459cdea:	48 8d 05 b5 fc 85 00 	lea    0x85fcb5(%rip),%rax        # 4dfcaa6 <_IO_stdin_used@@Base+0x1c9aa6>
+ 459cdf1:	bb 21 00 00 00       	mov    $0x21,%ebx
+ 459cdf6:	31 c9                	xor    %ecx,%ecx
+ 459cdf8:	31 ff                	xor    %edi,%edi
+ 459cdfa:	48 89 fe             	mov    %rdi,%rsi
+ 459cdfd:	0f 1f 00             	nopl   (%rax)
+ 459ce00:	e8 fb 7a a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459ce05:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 459ce0a:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 459ce0f:	48 8d 05 ea 74 4d 01 	lea    0x14d74ea(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459ce16:	e8 c5 36 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459ce1b:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 459ce20:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 459ce24:	83 3d 35 eb 8d 03 00 	cmpl   $0x0,0x38deb35(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459ce2b:	75 0a                	jne    459ce37 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0x97>
+ 459ce2d:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459ce32:	48 89 08             	mov    %rcx,(%rax)
+ 459ce35:	eb 0e                	jmp    459ce45 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0xa5>
+ 459ce37:	48 89 c7             	mov    %rax,%rdi
+ 459ce3a:	48 8b 4c 24 58       	mov    0x58(%rsp),%rcx
+ 459ce3f:	90                   	nop
+ 459ce40:	e8 bb 98 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459ce45:	48 89 c3             	mov    %rax,%rbx
+ 459ce48:	48 8d 05 71 10 96 01 	lea    0x1961071(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459ce4f:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 459ce54:	48 83 c4 68          	add    $0x68,%rsp
+ 459ce58:	c3                   	ret
+ 459ce59:	90                   	nop
+ 459ce5a:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 459ce5f:	89 54 24 28          	mov    %edx,0x28(%rsp)
+ 459ce63:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 459ce68:	bb 29 00 00 00       	mov    $0x29,%ebx
+ 459ce6d:	b9 43 00 00 00       	mov    $0x43,%ecx
+ 459ce72:	48 8d 7c 24 28       	lea    0x28(%rsp),%rdi
+ 459ce77:	be 04 00 00 00       	mov    $0x4,%esi
+ 459ce7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 459ce80:	e8 db 19 a2 fd       	call   1fbe860 <syscall.setsockopt@@Base>
+ 459ce85:	48 85 c0             	test   %rax,%rax
+ 459ce88:	74 6f                	je     459cef9 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0x159>
+ 459ce8a:	48 8d 05 36 fc 85 00 	lea    0x85fc36(%rip),%rax        # 4dfcac7 <_IO_stdin_used@@Base+0x1c9ac7>
+ 459ce91:	bb 21 00 00 00       	mov    $0x21,%ebx
+ 459ce96:	31 c9                	xor    %ecx,%ecx
+ 459ce98:	31 ff                	xor    %edi,%edi
+ 459ce9a:	48 89 fe             	mov    %rdi,%rsi
+ 459ce9d:	0f 1f 00             	nopl   (%rax)
+ 459cea0:	e8 5b 7a a5 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 459cea5:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 459ceaa:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 459ceaf:	48 8d 05 4a 74 4d 01 	lea    0x14d744a(%rip),%rax        # 5a74300 <type:hE5I1The@@Base>
+ 459ceb6:	e8 25 36 95 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 459cebb:	48 8b 54 24 30       	mov    0x30(%rsp),%rdx
+ 459cec0:	48 89 50 08          	mov    %rdx,0x8(%rax)
+ 459cec4:	83 3d 95 ea 8d 03 00 	cmpl   $0x0,0x38dea95(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 459cecb:	75 0a                	jne    459ced7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0x137>
+ 459cecd:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459ced2:	48 89 08             	mov    %rcx,(%rax)
+ 459ced5:	eb 0e                	jmp    459cee5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base+0x145>
+ 459ced7:	48 89 c7             	mov    %rax,%rdi
+ 459ceda:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 459cedf:	90                   	nop
+ 459cee0:	e8 1b 98 9b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 459cee5:	48 89 c3             	mov    %rax,%rbx
+ 459cee8:	48 8d 05 d1 0f 96 01 	lea    0x1960fd1(%rip),%rax        # 5efdec0 <go:itab.*errors.errorString,error@@Base>
+ 459ceef:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 459cef4:	48 83 c4 68          	add    $0x68,%rsp
+ 459cef8:	c3                   	ret
+ 459cef9:	31 c0                	xor    %eax,%eax
+ 459cefb:	31 db                	xor    %ebx,%ebx
+ 459cefd:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 459cf02:	48 83 c4 68          	add    $0x68,%rsp
+ 459cf06:	c3                   	ret
+ 459cf07:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 459cf0c:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 459cf11:	e8 4a 75 9b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 459cf16:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 459cf1b:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 459cf20:	e9 7b fe ff ff       	jmp    459cda0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/common.SetDscpOption@@Base>
+ 459cf25:	cc                   	int3
+ 459cf26:	cc                   	int3
+ 459cf27:	cc                   	int3
+ 459cf28:	cc                   	int3
+ 459cf29:	cc                   	int3
+ 459cf2a:	cc                   	int3
+ 459cf2b:	cc                   	int3
+ 459cf2c:	cc                   	int3
+ 459cf2d:	cc                   	int3
+ 459cf2e:	cc                   	int3
+ 459cf2f:	cc                   	int3
+ 459cf30:	cc                   	int3
+ 459cf31:	cc                   	int3
+ 459cf32:	cc                   	int3
+ 459cf33:	cc                   	int3
+ 459cf34:	cc                   	int3
+ 459cf35:	cc                   	int3
+ 459cf36:	cc                   	int3
+ 459cf37:	cc                   	int3
+ 459cf38:	cc                   	int3
+ 459cf39:	cc                   	int3
+ 459cf3a:	cc                   	int3
+ 459cf3b:	cc                   	int3
+ 459cf3c:	cc                   	int3
+ 459cf3d:	cc                   	int3
+ 459cf3e:	cc                   	int3
+ 459cf3f:	cc                   	int3

@@ -1,0 +1,106 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin
+# addr 0x45edb80 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045edb80 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base>:
+ 45edb80:	4c 8d 64 24 f8       	lea    -0x8(%rsp),%r12
+ 45edb85:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45edb89:	0f 86 44 01 00 00    	jbe    45edcd3 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base+0x153>
+ 45edb8f:	48 81 ec 88 00 00 00 	sub    $0x88,%rsp
+ 45edb96:	48 89 ac 24 80 00 00 	mov    %rbp,0x80(%rsp)
+ 45edb9d:	00 
+ 45edb9e:	48 8d ac 24 80 00 00 	lea    0x80(%rsp),%rbp
+ 45edba5:	00 
+ 45edba6:	48 83 b8 00 02 00 00 	cmpq   $0x0,0x200(%rax)
+ 45edbad:	00 
+ 45edbae:	0f 84 0f 01 00 00    	je     45edcc3 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base+0x143>
+ 45edbb4:	48 89 84 24 90 00 00 	mov    %rax,0x90(%rsp)
+ 45edbbb:	00 
+ 45edbbc:	88 5c 24 2f          	mov    %bl,0x2f(%rsp)
+ 45edbc0:	0f 10 80 f8 01 00 00 	movups 0x1f8(%rax),%xmm0
+ 45edbc7:	0f 11 44 24 40       	movups %xmm0,0x40(%rsp)
+ 45edbcc:	0f 10 80 08 02 00 00 	movups 0x208(%rax),%xmm0
+ 45edbd3:	0f 11 44 24 50       	movups %xmm0,0x50(%rsp)
+ 45edbd8:	0f 10 80 18 02 00 00 	movups 0x218(%rax),%xmm0
+ 45edbdf:	0f 11 44 24 60       	movups %xmm0,0x60(%rsp)
+ 45edbe4:	0f 10 80 28 02 00 00 	movups 0x228(%rax),%xmm0
+ 45edbeb:	0f 11 44 24 70       	movups %xmm0,0x70(%rsp)
+ 45edbf0:	e8 cb 6c fa ff       	call   45948c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.GetController@@Base>
+ 45edbf5:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 45edbfa:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 45edbff:	90                   	nop
+ 45edc00:	e8 bb 87 fa ff       	call   45963c0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetClockWithURI@@Base>
+ 45edc05:	48 85 c0             	test   %rax,%rax
+ 45edc08:	74 45                	je     45edc4f <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base+0xcf>
+ 45edc0a:	80 7c 24 78 00       	cmpb   $0x0,0x78(%rsp)
+ 45edc0f:	74 16                	je     45edc27 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base+0xa7>
+ 45edc11:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 45edc16:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45edc1a:	0f b6 4c 24 2f       	movzbl 0x2f(%rsp),%ecx
+ 45edc1f:	90                   	nop
+ 45edc20:	e8 5b fa f9 ff       	call   458d680 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOutOnChannel@@Base>
+ 45edc25:	eb 18                	jmp    45edc3f <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base+0xbf>
+ 45edc27:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 45edc2c:	48 8b 4c 24 50       	mov    0x50(%rsp),%rcx
+ 45edc31:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45edc35:	0f b6 7c 24 2f       	movzbl 0x2f(%rsp),%edi
+ 45edc3a:	e8 c1 fe f9 ff       	call   458db00 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).EnablePPSOut@@Base>
+ 45edc3f:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 45edc46:	00 
+ 45edc47:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 45edc4e:	c3                   	ret
+ 45edc4f:	44 0f 11 7c 24 30    	movups %xmm15,0x30(%rsp)
+ 45edc55:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45edc5a:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 45edc5f:	90                   	nop
+ 45edc60:	e8 fb 00 90 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 45edc65:	48 8d 0d 34 0a 1c 01 	lea    0x11c0a34(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 45edc6c:	48 89 4c 24 30       	mov    %rcx,0x30(%rsp)
+ 45edc71:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45edc76:	48 8d 05 53 50 81 00 	lea    0x815053(%rip),%rax        # 4e02cd0 <_IO_stdin_used@@Base+0x1cfcd0>
+ 45edc7d:	bb 22 00 00 00       	mov    $0x22,%ebx
+ 45edc82:	48 8d 4c 24 30       	lea    0x30(%rsp),%rcx
+ 45edc87:	bf 01 00 00 00       	mov    $0x1,%edi
+ 45edc8c:	48 89 fe             	mov    %rdi,%rsi
+ 45edc8f:	e8 6c 6c a0 fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 45edc94:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+ 45edc9b:	00 
+ 45edc9c:	48 8b 09             	mov    (%rcx),%rcx
+ 45edc9f:	48 89 c2             	mov    %rax,%rdx
+ 45edca2:	48 89 c8             	mov    %rcx,%rax
+ 45edca5:	48 89 de             	mov    %rbx,%rsi
+ 45edca8:	48 89 d3             	mov    %rdx,%rbx
+ 45edcab:	48 89 f1             	mov    %rsi,%rcx
+ 45edcae:	e8 ad 93 e1 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 45edcb3:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 45edcba:	00 
+ 45edcbb:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 45edcc2:	c3                   	ret
+ 45edcc3:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 45edcca:	00 
+ 45edccb:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 45edcd2:	c3                   	ret
+ 45edcd3:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45edcd8:	88 5c 24 10          	mov    %bl,0x10(%rsp)
+ 45edcdc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45edce0:	e8 7b 67 96 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45edce5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45edcea:	0f b6 5c 24 10       	movzbl 0x10(%rsp),%ebx
+ 45edcef:	e9 8c fe ff ff       	jmp    45edb80 <github.com/lasselj/timebeat/beater/clocksync/clients/oscillator/client.(*Client).SetPPSOutOnOutputPin@@Base>
+ 45edcf4:	cc                   	int3
+ 45edcf5:	cc                   	int3
+ 45edcf6:	cc                   	int3
+ 45edcf7:	cc                   	int3
+ 45edcf8:	cc                   	int3
+ 45edcf9:	cc                   	int3
+ 45edcfa:	cc                   	int3
+ 45edcfb:	cc                   	int3
+ 45edcfc:	cc                   	int3
+ 45edcfd:	cc                   	int3
+ 45edcfe:	cc                   	int3
+ 45edcff:	cc                   	int3

@@ -1,0 +1,59 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp
+# addr 0x45a7ea0 size 160 (0xa0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a7ea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base>:
+ 45a7ea0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a7ea4:	76 7f                	jbe    45a7f25 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x85>
+ 45a7ea6:	48 83 ec 10          	sub    $0x10,%rsp
+ 45a7eaa:	48 89 6c 24 08       	mov    %rbp,0x8(%rsp)
+ 45a7eaf:	48 8d 6c 24 08       	lea    0x8(%rsp),%rbp
+ 45a7eb4:	48 89 44 24 18       	mov    %rax,0x18(%rsp)
+ 45a7eb9:	48 8b 48 30          	mov    0x30(%rax),%rcx
+ 45a7ebd:	48 89 c8             	mov    %rcx,%rax
+ 45a7ec0:	e8 5b ca fe ff       	call   4594920 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).GetMasterHostClock@@Base>
+ 45a7ec5:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45a7eca:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 45a7ece:	80 79 38 00          	cmpb   $0x0,0x38(%rcx)
+ 45a7ed2:	75 45                	jne    45a7f19 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x79>
+ 45a7ed4:	48 8b 40 40          	mov    0x40(%rax),%rax
+ 45a7ed8:	48 85 c0             	test   %rax,%rax
+ 45a7edb:	75 06                	jne    45a7ee3 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x43>
+ 45a7edd:	31 c0                	xor    %eax,%eax
+ 45a7edf:	31 db                	xor    %ebx,%ebx
+ 45a7ee1:	eb 05                	jmp    45a7ee8 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x48>
+ 45a7ee3:	e8 58 f7 fd ff       	call   4587640 <github.com/lasselj/timebeat/beater/clocksync/phc.(*PHCDevice).GetDeviceName@@Base>
+ 45a7ee8:	48 83 fb 06          	cmp    $0x6,%rbx
+ 45a7eec:	75 1f                	jne    45a7f0d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x6d>
+ 45a7eee:	81 38 73 79 73 74    	cmpl   $0x74737973,(%rax)
+ 45a7ef4:	75 17                	jne    45a7f0d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x6d>
+ 45a7ef6:	66 81 78 04 65 6d    	cmpw   $0x6d65,0x4(%rax)
+ 45a7efc:	75 0f                	jne    45a7f0d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base+0x6d>
+ 45a7efe:	b8 01 00 00 00       	mov    $0x1,%eax
+ 45a7f03:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 45a7f08:	48 83 c4 10          	add    $0x10,%rsp
+ 45a7f0c:	c3                   	ret
+ 45a7f0d:	31 c0                	xor    %eax,%eax
+ 45a7f0f:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 45a7f14:	48 83 c4 10          	add    $0x10,%rsp
+ 45a7f18:	c3                   	ret
+ 45a7f19:	31 c0                	xor    %eax,%eax
+ 45a7f1b:	48 8b 6c 24 08       	mov    0x8(%rsp),%rbp
+ 45a7f20:	48 83 c4 10          	add    $0x10,%rsp
+ 45a7f24:	c3                   	ret
+ 45a7f25:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a7f2a:	e8 31 c5 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a7f2f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a7f34:	e9 67 ff ff ff       	jmp    45a7ea0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).ShouldT3BeAppTimestamp@@Base>
+ 45a7f39:	cc                   	int3
+ 45a7f3a:	cc                   	int3
+ 45a7f3b:	cc                   	int3
+ 45a7f3c:	cc                   	int3
+ 45a7f3d:	cc                   	int3
+ 45a7f3e:	cc                   	int3
+ 45a7f3f:	cc                   	int3

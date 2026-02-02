@@ -1,0 +1,93 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev
+# addr 0x45804c0 size 256 (0x100)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045804c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base>:
+ 45804c0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45804c4:	0f 86 cd 00 00 00    	jbe    4580597 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0xd7>
+ 45804ca:	48 83 ec 38          	sub    $0x38,%rsp
+ 45804ce:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 45804d3:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 45804d8:	4c 8b 48 20          	mov    0x20(%rax),%r9
+ 45804dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45804e0:	4d 85 c9             	test   %r9,%r9
+ 45804e3:	0f 84 85 00 00 00    	je     458056e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0xae>
+ 45804e9:	48 8b 08             	mov    (%rax),%rcx
+ 45804ec:	4c 39 c9             	cmp    %r9,%rcx
+ 45804ef:	49 0f 4f c9          	cmovg  %r9,%rcx
+ 45804f3:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45804f7:	4c 8b 48 08          	mov    0x8(%rax),%r9
+ 45804fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4580500:	48 39 ca             	cmp    %rcx,%rdx
+ 4580503:	0f 82 88 00 00 00    	jb     4580591 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0xd1>
+ 4580509:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 458050e:	4c 89 c8             	mov    %r9,%rax
+ 4580511:	48 89 cb             	mov    %rcx,%rbx
+ 4580514:	48 89 d1             	mov    %rdx,%rcx
+ 4580517:	31 ff                	xor    %edi,%edi
+ 4580519:	31 f6                	xor    %esi,%esi
+ 458051b:	49 89 f0             	mov    %rsi,%r8
+ 458051e:	66 90                	xchg   %ax,%ax
+ 4580520:	e8 db a6 ff ff       	call   457ac00 <gonum.org/v1/gonum/stat.MeanStdDev@@Base>
+ 4580525:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 458052a:	48 8b 42 40          	mov    0x40(%rdx),%rax
+ 458052e:	4c 8b 0a             	mov    (%rdx),%r9
+ 4580531:	4d 85 c9             	test   %r9,%r9
+ 4580534:	74 56                	je     458058c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0xcc>
+ 4580536:	48 89 d1             	mov    %rdx,%rcx
+ 4580539:	49 83 f9 ff          	cmp    $0xffffffffffffffff,%r9
+ 458053d:	74 07                	je     4580546 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0x86>
+ 458053f:	48 99                	cqto
+ 4580541:	49 f7 f9             	idiv   %r9
+ 4580544:	eb 05                	jmp    458054b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0x8b>
+ 4580546:	48 f7 d8             	neg    %rax
+ 4580549:	31 d2                	xor    %edx,%edx
+ 458054b:	48 8b 59 30          	mov    0x30(%rcx),%rbx
+ 458054f:	48 8b 71 28          	mov    0x28(%rcx),%rsi
+ 4580553:	48 39 da             	cmp    %rbx,%rdx
+ 4580556:	73 29                	jae    4580581 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base+0xc1>
+ 4580558:	f2 0f 11 0c d6       	movsd  %xmm1,(%rsi,%rdx,8)
+ 458055d:	48 ff 41 40          	incq   0x40(%rcx)
+ 4580561:	0f 10 c1             	movups %xmm1,%xmm0
+ 4580564:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4580569:	48 83 c4 38          	add    $0x38,%rsp
+ 458056d:	c3                   	ret
+ 458056e:	f2 0f 10 05 32 e3 f5 	movsd  0xf5e332(%rip),%xmm0        # 54de8a8 <_IO_stdin_used@@Base+0x8ab8a8>
+ 4580575:	00 
+ 4580576:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 458057b:	48 83 c4 38          	add    $0x38,%rsp
+ 458057f:	90                   	nop
+ 4580580:	c3                   	ret
+ 4580581:	48 89 d0             	mov    %rdx,%rax
+ 4580584:	48 89 d9             	mov    %rbx,%rcx
+ 4580587:	e8 14 65 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 458058c:	e8 ef b1 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 4580591:	e8 8a 65 9d fd       	call   1f56b20 <runtime.panicSliceAcap@@Base>
+ 4580596:	90                   	nop
+ 4580597:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 458059c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45805a0:	e8 bb 3e 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45805a5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45805aa:	e9 11 ff ff ff       	jmp    45804c0 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*StdDev).GetStdDev@@Base>
+ 45805af:	cc                   	int3
+ 45805b0:	cc                   	int3
+ 45805b1:	cc                   	int3
+ 45805b2:	cc                   	int3
+ 45805b3:	cc                   	int3
+ 45805b4:	cc                   	int3
+ 45805b5:	cc                   	int3
+ 45805b6:	cc                   	int3
+ 45805b7:	cc                   	int3
+ 45805b8:	cc                   	int3
+ 45805b9:	cc                   	int3
+ 45805ba:	cc                   	int3
+ 45805bb:	cc                   	int3
+ 45805bc:	cc                   	int3
+ 45805bd:	cc                   	int3
+ 45805be:	cc                   	int3
+ 45805bf:	cc                   	int3

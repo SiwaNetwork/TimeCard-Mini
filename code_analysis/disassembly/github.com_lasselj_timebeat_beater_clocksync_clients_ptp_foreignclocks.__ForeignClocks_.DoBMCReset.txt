@@ -1,0 +1,101 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset
+# addr 0x45c1160 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045c1160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base>:
+ 45c1160:	4c 8d 64 24 f8       	lea    -0x8(%rsp),%r12
+ 45c1165:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45c1169:	0f 86 22 01 00 00    	jbe    45c1291 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x131>
+ 45c116f:	48 81 ec 88 00 00 00 	sub    $0x88,%rsp
+ 45c1176:	48 89 ac 24 80 00 00 	mov    %rbp,0x80(%rsp)
+ 45c117d:	00 
+ 45c117e:	48 8d ac 24 80 00 00 	lea    0x80(%rsp),%rbp
+ 45c1185:	00 
+ 45c1186:	48 8b 50 28          	mov    0x28(%rax),%rdx
+ 45c118a:	48 83 7a 28 00       	cmpq   $0x0,0x28(%rdx)
+ 45c118f:	75 04                	jne    45c1195 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x35>
+ 45c1191:	31 d2                	xor    %edx,%edx
+ 45c1193:	eb 03                	jmp    45c1198 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x38>
+ 45c1195:	48 8b 12             	mov    (%rdx),%rdx
+ 45c1198:	48 89 9c 24 98 00 00 	mov    %rbx,0x98(%rsp)
+ 45c119f:	00 
+ 45c11a0:	eb 03                	jmp    45c11a5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x45>
+ 45c11a2:	48 89 f2             	mov    %rsi,%rdx
+ 45c11a5:	48 85 d2             	test   %rdx,%rdx
+ 45c11a8:	0f 84 c2 00 00 00    	je     45c1270 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x110>
+ 45c11ae:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45c11b4:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 45c11ba:	44 0f 11 7c 24 70    	movups %xmm15,0x70(%rsp)
+ 45c11c0:	48 8b 72 20          	mov    0x20(%rdx),%rsi
+ 45c11c4:	48 8b 42 18          	mov    0x18(%rdx),%rax
+ 45c11c8:	48 8d 3d 11 25 5e 01 	lea    0x15e2511(%rip),%rdi        # 5ba36e0 <type:uhqvopOv@@Base>
+ 45c11cf:	48 39 f8             	cmp    %rdi,%rax
+ 45c11d2:	0f 85 a9 00 00 00    	jne    45c1281 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x121>
+ 45c11d8:	0f 10 06             	movups (%rsi),%xmm0
+ 45c11db:	0f 11 44 24 50       	movups %xmm0,0x50(%rsp)
+ 45c11e0:	0f 10 46 10          	movups 0x10(%rsi),%xmm0
+ 45c11e4:	0f 11 44 24 60       	movups %xmm0,0x60(%rsp)
+ 45c11e9:	0f 10 46 20          	movups 0x20(%rsi),%xmm0
+ 45c11ed:	0f 11 44 24 70       	movups %xmm0,0x70(%rsp)
+ 45c11f2:	0f 10 44 24 50       	movups 0x50(%rsp),%xmm0
+ 45c11f7:	0f 11 44 24 20       	movups %xmm0,0x20(%rsp)
+ 45c11fc:	0f 10 44 24 60       	movups 0x60(%rsp),%xmm0
+ 45c1201:	0f 11 44 24 30       	movups %xmm0,0x30(%rsp)
+ 45c1206:	0f 10 44 24 70       	movups 0x70(%rsp),%xmm0
+ 45c120b:	0f 11 44 24 40       	movups %xmm0,0x40(%rsp)
+ 45c1210:	48 8b 73 20          	mov    0x20(%rbx),%rsi
+ 45c1214:	44 0f b6 44 24 20    	movzbl 0x20(%rsp),%r8d
+ 45c121a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 45c1220:	44 38 46 04          	cmp    %r8b,0x4(%rsi)
+ 45c1224:	75 29                	jne    45c124f <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0xef>
+ 45c1226:	48 89 54 24 18       	mov    %rdx,0x18(%rsp)
+ 45c122b:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 45c1230:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 45c1235:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 45c1239:	ff d1                	call   *%rcx
+ 45c123b:	48 8b 54 24 18       	mov    0x18(%rsp),%rdx
+ 45c1240:	48 8b 9c 24 98 00 00 	mov    0x98(%rsp),%rbx
+ 45c1247:	00 
+ 45c1248:	48 8d 3d 91 24 5e 01 	lea    0x15e2491(%rip),%rdi        # 5ba36e0 <type:uhqvopOv@@Base>
+ 45c124f:	48 8b 32             	mov    (%rdx),%rsi
+ 45c1252:	48 8b 52 10          	mov    0x10(%rdx),%rdx
+ 45c1256:	48 85 d2             	test   %rdx,%rdx
+ 45c1259:	74 0e                	je     45c1269 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x109>
+ 45c125b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45c1260:	48 39 f2             	cmp    %rsi,%rdx
+ 45c1263:	0f 85 39 ff ff ff    	jne    45c11a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x42>
+ 45c1269:	31 f6                	xor    %esi,%esi
+ 45c126b:	e9 32 ff ff ff       	jmp    45c11a2 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base+0x42>
+ 45c1270:	48 8b ac 24 80 00 00 	mov    0x80(%rsp),%rbp
+ 45c1277:	00 
+ 45c1278:	48 81 c4 88 00 00 00 	add    $0x88,%rsp
+ 45c127f:	90                   	nop
+ 45c1280:	c3                   	ret
+ 45c1281:	48 89 fb             	mov    %rdi,%rbx
+ 45c1284:	48 8d 0d b5 30 2f 01 	lea    0x12f30b5(%rip),%rcx        # 58b4340 <type:tpDRQG8O@@Base>
+ 45c128b:	e8 10 c6 92 fd       	call   1eed8a0 <runtime.panicdottypeE@@Base>
+ 45c1290:	90                   	nop
+ 45c1291:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45c1296:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45c129b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 45c12a0:	e8 bb 31 99 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45c12a5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45c12aa:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45c12af:	e9 ac fe ff ff       	jmp    45c1160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/foreignclocks.(*ForeignClocks).DoBMCReset@@Base>
+ 45c12b4:	cc                   	int3
+ 45c12b5:	cc                   	int3
+ 45c12b6:	cc                   	int3
+ 45c12b7:	cc                   	int3
+ 45c12b8:	cc                   	int3
+ 45c12b9:	cc                   	int3
+ 45c12ba:	cc                   	int3
+ 45c12bb:	cc                   	int3
+ 45c12bc:	cc                   	int3
+ 45c12bd:	cc                   	int3
+ 45c12be:	cc                   	int3
+ 45c12bf:	cc                   	int3

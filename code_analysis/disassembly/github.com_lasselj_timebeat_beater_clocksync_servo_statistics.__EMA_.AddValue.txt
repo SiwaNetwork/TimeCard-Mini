@@ -1,0 +1,128 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue
+# addr 0x4590e20 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004590e20 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base>:
+ 4590e20:	4c 8d 64 24 c0       	lea    -0x40(%rsp),%r12
+ 4590e25:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4590e29:	0f 86 3a 01 00 00    	jbe    4590f69 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0x149>
+ 4590e2f:	48 81 ec c0 00 00 00 	sub    $0xc0,%rsp
+ 4590e36:	48 89 ac 24 b8 00 00 	mov    %rbp,0xb8(%rsp)
+ 4590e3d:	00 
+ 4590e3e:	48 8d ac 24 b8 00 00 	lea    0xb8(%rsp),%rbp
+ 4590e45:	00 
+ 4590e46:	48 8b 50 08          	mov    0x8(%rax),%rdx
+ 4590e4a:	48 83 fa 14          	cmp    $0x14,%rdx
+ 4590e4e:	72 5f                	jb     4590eaf <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0x8f>
+ 4590e50:	75 2a                	jne    4590e7c <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0x5c>
+ 4590e52:	48 8d 70 10          	lea    0x10(%rax),%rsi
+ 4590e56:	48 8d 7c 24 18       	lea    0x18(%rsp),%rdi
+ 4590e5b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4590e60:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 4590e65:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 4590e6a:	e8 85 62 9c fd       	call   1f570f4 <runtime.duffcopy@@Base+0x2f4>
+ 4590e6f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 4590e73:	31 c9                	xor    %ecx,%ecx
+ 4590e75:	31 d2                	xor    %edx,%edx
+ 4590e77:	e9 b7 00 00 00       	jmp    4590f33 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0x113>
+ 4590e7c:	48 8b 08             	mov    (%rax),%rcx
+ 4590e7f:	48 89 da             	mov    %rbx,%rdx
+ 4590e82:	48 29 cb             	sub    %rcx,%rbx
+ 4590e85:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4590e88:	f2 48 0f 2a c3       	cvtsi2sd %rbx,%xmm0
+ 4590e8d:	f2 0f 10 0d 23 de f4 	movsd  0xf4de23(%rip),%xmm1        # 54decb8 <_IO_stdin_used@@Base+0x8abcb8>
+ 4590e94:	00 
+ 4590e95:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+ 4590e99:	0f 57 c9             	xorps  %xmm1,%xmm1
+ 4590e9c:	f2 48 0f 2a c9       	cvtsi2sd %rcx,%xmm1
+ 4590ea1:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+ 4590ea5:	f2 48 0f 2c c8       	cvttsd2si %xmm0,%rcx
+ 4590eaa:	48 89 08             	mov    %rcx,(%rax)
+ 4590ead:	eb 6b                	jmp    4590f1a <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0xfa>
+ 4590eaf:	48 89 c1             	mov    %rax,%rcx
+ 4590eb2:	48 b8 cd cc cc cc cc 	movabs $0xcccccccccccccccd,%rax
+ 4590eb9:	cc cc cc 
+ 4590ebc:	48 89 d6             	mov    %rdx,%rsi
+ 4590ebf:	48 f7 e2             	mul    %rdx
+ 4590ec2:	48 c1 ea 04          	shr    $0x4,%rdx
+ 4590ec6:	48 8d 14 92          	lea    (%rdx,%rdx,4),%rdx
+ 4590eca:	48 c1 e2 02          	shl    $0x2,%rdx
+ 4590ece:	48 29 d6             	sub    %rdx,%rsi
+ 4590ed1:	48 83 fe 14          	cmp    $0x14,%rsi
+ 4590ed5:	73 36                	jae    4590f0d <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0xed>
+ 4590ed7:	48 89 5c f1 10       	mov    %rbx,0x10(%rcx,%rsi,8)
+ 4590edc:	31 c0                	xor    %eax,%eax
+ 4590ede:	48 ff 41 08          	incq   0x8(%rcx)
+ 4590ee2:	80 b9 b0 00 00 00 00 	cmpb   $0x0,0xb0(%rcx)
+ 4590ee9:	74 12                	je     4590efd <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0xdd>
+ 4590eeb:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 4590ef0:	48 89 c8             	mov    %rcx,%rax
+ 4590ef3:	e8 88 01 00 00       	call   4591080 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).logDebug@@Base>
+ 4590ef8:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4590efd:	48 8b ac 24 b8 00 00 	mov    0xb8(%rsp),%rbp
+ 4590f04:	00 
+ 4590f05:	48 81 c4 c0 00 00 00 	add    $0xc0,%rsp
+ 4590f0c:	c3                   	ret
+ 4590f0d:	48 89 f0             	mov    %rsi,%rax
+ 4590f10:	b9 14 00 00 00       	mov    $0x14,%ecx
+ 4590f15:	e8 a6 5b 9c fd       	call   1f56ac0 <runtime.panicIndexU@@Base>
+ 4590f1a:	48 89 d3             	mov    %rdx,%rbx
+ 4590f1d:	48 89 ce             	mov    %rcx,%rsi
+ 4590f20:	48 89 c1             	mov    %rax,%rcx
+ 4590f23:	48 89 f0             	mov    %rsi,%rax
+ 4590f26:	eb b6                	jmp    4590ede <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0xbe>
+ 4590f28:	48 8b 74 cc 18       	mov    0x18(%rsp,%rcx,8),%rsi
+ 4590f2d:	48 ff c1             	inc    %rcx
+ 4590f30:	48 01 f2             	add    %rsi,%rdx
+ 4590f33:	48 83 f9 14          	cmp    $0x14,%rcx
+ 4590f37:	7c ef                	jl     4590f28 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0x108>
+ 4590f39:	48 89 c1             	mov    %rax,%rcx
+ 4590f3c:	48 b8 cd cc cc cc cc 	movabs $0xcccccccccccccccd,%rax
+ 4590f43:	cc cc cc 
+ 4590f46:	48 89 d6             	mov    %rdx,%rsi
+ 4590f49:	48 f7 ea             	imul   %rdx
+ 4590f4c:	48 8d 3c 16          	lea    (%rsi,%rdx,1),%rdi
+ 4590f50:	48 c1 ff 04          	sar    $0x4,%rdi
+ 4590f54:	48 c1 fe 3f          	sar    $0x3f,%rsi
+ 4590f58:	48 29 f7             	sub    %rsi,%rdi
+ 4590f5b:	48 89 39             	mov    %rdi,(%rcx)
+ 4590f5e:	48 89 c8             	mov    %rcx,%rax
+ 4590f61:	48 89 da             	mov    %rbx,%rdx
+ 4590f64:	48 89 f9             	mov    %rdi,%rcx
+ 4590f67:	eb b1                	jmp    4590f1a <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base+0xfa>
+ 4590f69:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4590f6e:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4590f73:	e8 e8 34 9c fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4590f78:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4590f7d:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4590f82:	e9 99 fe ff ff       	jmp    4590e20 <github.com/lasselj/timebeat/beater/clocksync/servo/statistics.(*EMA).AddValue@@Base>
+ 4590f87:	cc                   	int3
+ 4590f88:	cc                   	int3
+ 4590f89:	cc                   	int3
+ 4590f8a:	cc                   	int3
+ 4590f8b:	cc                   	int3
+ 4590f8c:	cc                   	int3
+ 4590f8d:	cc                   	int3
+ 4590f8e:	cc                   	int3
+ 4590f8f:	cc                   	int3
+ 4590f90:	cc                   	int3
+ 4590f91:	cc                   	int3
+ 4590f92:	cc                   	int3
+ 4590f93:	cc                   	int3
+ 4590f94:	cc                   	int3
+ 4590f95:	cc                   	int3
+ 4590f96:	cc                   	int3
+ 4590f97:	cc                   	int3
+ 4590f98:	cc                   	int3
+ 4590f99:	cc                   	int3
+ 4590f9a:	cc                   	int3
+ 4590f9b:	cc                   	int3
+ 4590f9c:	cc                   	int3
+ 4590f9d:	cc                   	int3
+ 4590f9e:	cc                   	int3
+ 4590f9f:	cc                   	int3

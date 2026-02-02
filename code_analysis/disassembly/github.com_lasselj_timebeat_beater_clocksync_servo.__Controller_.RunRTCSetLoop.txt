@@ -1,0 +1,76 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop
+# addr 0x45a8320 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a8320 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base>:
+ 45a8320:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45a8324:	0f 86 ae 00 00 00    	jbe    45a83d8 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base+0xb8>
+ 45a832a:	48 83 ec 68          	sub    $0x68,%rsp
+ 45a832e:	48 89 6c 24 60       	mov    %rbp,0x60(%rsp)
+ 45a8333:	48 8d 6c 24 60       	lea    0x60(%rsp),%rbp
+ 45a8338:	80 3d a1 cb 89 03 00 	cmpb   $0x0,0x389cba1(%rip)        # 7e44ee0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x300>
+ 45a833f:	90                   	nop
+ 45a8340:	74 1c                	je     45a835e <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base+0x3e>
+ 45a8342:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 45a8347:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45a834b:	48 8b 49 20          	mov    0x20(%rcx),%rcx
+ 45a834f:	48 89 c8             	mov    %rcx,%rax
+ 45a8352:	e8 e9 15 a2 fd       	call   1fc9940 <time.NewTicker@@Base>
+ 45a8357:	48 89 44 24 38       	mov    %rax,0x38(%rsp)
+ 45a835c:	eb 2c                	jmp    45a838a <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base+0x6a>
+ 45a835e:	48 8b 40 08          	mov    0x8(%rax),%rax
+ 45a8362:	48 8d 1d 53 f8 83 00 	lea    0x83f853(%rip),%rbx        # 4de7bbc <_IO_stdin_used@@Base+0x1b4bbc>
+ 45a8369:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 45a836e:	e8 6d ef e5 ff       	call   44072e0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Info@@Base>
+ 45a8373:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45a8378:	48 83 c4 68          	add    $0x68,%rsp
+ 45a837c:	c3                   	ret
+ 45a837d:	0f 1f 00             	nopl   (%rax)
+ 45a8380:	e8 db 0e e7 ff       	call   4419260 <github.com/lasselj/timebeat/beater/clocksync/servo/adjusttime.StepRTCClock@@Base>
+ 45a8385:	48 8b 44 24 38       	mov    0x38(%rsp),%rax
+ 45a838a:	48 8b 54 24 70       	mov    0x70(%rsp),%rdx
+ 45a838f:	4c 8b 0a             	mov    (%rdx),%r9
+ 45a8392:	4c 8b 10             	mov    (%rax),%r10
+ 45a8395:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 45a839b:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 45a83a1:	4c 89 4c 24 50       	mov    %r9,0x50(%rsp)
+ 45a83a6:	4c 89 54 24 40       	mov    %r10,0x40(%rsp)
+ 45a83ab:	48 8d 5c 24 30       	lea    0x30(%rsp),%rbx
+ 45a83b0:	31 c9                	xor    %ecx,%ecx
+ 45a83b2:	31 ff                	xor    %edi,%edi
+ 45a83b4:	be 02 00 00 00       	mov    $0x2,%esi
+ 45a83b9:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45a83bf:	48 8d 44 24 40       	lea    0x40(%rsp),%rax
+ 45a83c4:	e8 f7 87 98 fd       	call   1f30bc0 <runtime.selectgo@@Base>
+ 45a83c9:	48 85 c0             	test   %rax,%rax
+ 45a83cc:	74 af                	je     45a837d <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base+0x5d>
+ 45a83ce:	48 8b 6c 24 60       	mov    0x60(%rsp),%rbp
+ 45a83d3:	48 83 c4 68          	add    $0x68,%rsp
+ 45a83d7:	c3                   	ret
+ 45a83d8:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45a83dd:	0f 1f 00             	nopl   (%rax)
+ 45a83e0:	e8 7b c0 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45a83e5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45a83ea:	e9 31 ff ff ff       	jmp    45a8320 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).RunRTCSetLoop@@Base>
+ 45a83ef:	cc                   	int3
+ 45a83f0:	cc                   	int3
+ 45a83f1:	cc                   	int3
+ 45a83f2:	cc                   	int3
+ 45a83f3:	cc                   	int3
+ 45a83f4:	cc                   	int3
+ 45a83f5:	cc                   	int3
+ 45a83f6:	cc                   	int3
+ 45a83f7:	cc                   	int3
+ 45a83f8:	cc                   	int3
+ 45a83f9:	cc                   	int3
+ 45a83fa:	cc                   	int3
+ 45a83fb:	cc                   	int3
+ 45a83fc:	cc                   	int3
+ 45a83fd:	cc                   	int3
+ 45a83fe:	cc                   	int3
+ 45a83ff:	cc                   	int3

@@ -1,0 +1,79 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource
+# addr 0x4b55800 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b55800 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base>:
+ 4b55800:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b55804:	0f 86 fe 00 00 00    	jbe    4b55908 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base+0x108>
+ 4b5580a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4b5580e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4b55813:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4b55818:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 4b5581f:	4c 89 6c 24 28       	mov    %r13,0x28(%rsp)
+ 4b55824:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4b55829:	c6 44 24 0b 00       	movb   $0x0,0xb(%rsp)
+ 4b5582e:	0f 57 c0             	xorps  %xmm0,%xmm0
+ 4b55831:	f3 0f 11 44 24 0c    	movss  %xmm0,0xc(%rsp)
+ 4b55837:	48 89 c1             	mov    %rax,%rcx
+ 4b5583a:	31 c0                	xor    %eax,%eax
+ 4b5583c:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 4b55841:	f0 0f b1 99 d0 00 00 	lock cmpxchg %ebx,0xd0(%rcx)
+ 4b55848:	00 
+ 4b55849:	0f 94 c3             	sete   %bl
+ 4b5584c:	48 8d 81 d0 00 00 00 	lea    0xd0(%rcx),%rax
+ 4b55853:	84 db                	test   %bl,%bl
+ 4b55855:	75 18                	jne    4b5586f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base+0x6f>
+ 4b55857:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+ 4b5585c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b55860:	e8 db 2c 42 fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 4b55865:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+ 4b5586a:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b5586f:	44 0f 11 7c 24 18    	movups %xmm15,0x18(%rsp)
+ 4b55875:	48 8d 1d a4 00 00 00 	lea    0xa4(%rip),%rbx        # 4b55920 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource.func1@@Base>
+ 4b5587c:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+ 4b55881:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+ 4b55886:	48 8d 5c 24 18       	lea    0x18(%rsp),%rbx
+ 4b5588b:	48 89 5c 24 28       	mov    %rbx,0x28(%rsp)
+ 4b55890:	c6 44 24 0b 01       	movb   $0x1,0xb(%rsp)
+ 4b55895:	48 8b 41 50          	mov    0x50(%rcx),%rax
+ 4b55899:	48 85 c0             	test   %rax,%rax
+ 4b5589c:	75 12                	jne    4b558b0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base+0xb0>
+ 4b5589e:	f3 0f 10 05 0e 88 98 	movss  0x98880e(%rip),%xmm0        # 54de0b4 <_IO_stdin_used@@Base+0x8ab0b4>
+ 4b558a5:	00 
+ 4b558a6:	f3 0f 11 81 c8 00 00 	movss  %xmm0,0xc8(%rcx)
+ 4b558ad:	00 
+ 4b558ae:	eb 16                	jmp    4b558c6 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base+0xc6>
+ 4b558b0:	e8 6b c0 a8 ff       	call   45e1920 <github.com/lasselj/timebeat/beater/clocksync/clients/ptp/client.(*Client).GetErrorOfSource@@Base>
+ 4b558b5:	f2 0f 5a c0          	cvtsd2ss %xmm0,%xmm0
+ 4b558b9:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4b558be:	f3 0f 11 81 c8 00 00 	movss  %xmm0,0xc8(%rcx)
+ 4b558c5:	00 
+ 4b558c6:	f3 0f 10 81 c8 00 00 	movss  0xc8(%rcx),%xmm0
+ 4b558cd:	00 
+ 4b558ce:	f3 0f 11 44 24 0c    	movss  %xmm0,0xc(%rsp)
+ 4b558d4:	c6 44 24 0b 00       	movb   $0x0,0xb(%rsp)
+ 4b558d9:	48 8b 54 24 28       	mov    0x28(%rsp),%rdx
+ 4b558de:	48 8b 02             	mov    (%rdx),%rax
+ 4b558e1:	ff d0                	call   *%rax
+ 4b558e3:	f3 0f 10 44 24 0c    	movss  0xc(%rsp),%xmm0
+ 4b558e9:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4b558ee:	48 83 c4 38          	add    $0x38,%rsp
+ 4b558f2:	c3                   	ret
+ 4b558f3:	e8 68 66 3c fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 4b558f8:	f3 0f 10 44 24 0c    	movss  0xc(%rsp),%xmm0
+ 4b558fe:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4b55903:	48 83 c4 38          	add    $0x38,%rsp
+ 4b55907:	c3                   	ret
+ 4b55908:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b5590d:	e8 4e eb 3f fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b55912:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b55917:	e9 e4 fe ff ff       	jmp    4b55800 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*ConnectedPeer).GetLocalErrorOfSource@@Base>
+ 4b5591c:	cc                   	int3
+ 4b5591d:	cc                   	int3
+ 4b5591e:	cc                   	int3
+ 4b5591f:	cc                   	int3

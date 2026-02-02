@@ -1,0 +1,75 @@
+# Пример конфигурации tc-sync (аналог Timebeat)
+# Скопируйте в tc-sync.yml и отредактируйте.
+#
+# Два режима:
+# 1) Простой: tc-sync -configure — использует device/timepulse ниже
+# 2) Daemon (как Timebeat): tc-sync -run — использует clock_sync
+
+# --- Простой формат (configure timepulse) ---
+device:
+  port: /dev/ttyS0
+  baud: 9600
+
+timepulse:
+  pulse_width_ms: 5
+  tp_idx: 0
+  ant_cable_delay_ns: 0
+  align_to_tow: true
+
+# servo: pid | pi | pi_shiwatime | linreg
+# pi_shiwatime — формула из бинарника: I += (1e9 - I) * offset_diff / time_diff
+servo:
+  algorithm: pid   # варианты: pid, pi, pi_shiwatime, linreg
+  kp: 0.1
+  ki: 0.01
+  kd: 0.001
+  interval: 1s
+
+# --- Формат Timebeat: clock_sync (для -run) ---
+clock_sync:
+  adjust_clock: true   # коррекция системных часов (реальная — в будущей версии)
+
+  primary_clocks:
+    # GNSS (UBX / Timecard Mini) — основной источник
+    - protocol: timebeat_opentimecard_mini
+      device: /dev/ttyS0
+      baud: 115200
+      disable: false
+      monitor_only: false
+
+    # Альтернативно: NTP как primary
+    #- protocol: ntp
+    #  ip: pool.ntp.org
+    #  pollinterval: 4s
+    #  disable: false
+
+    # NMEA (RMC с serial): device, baud, опционально offset (нс)
+    #- protocol: nmea
+    #  device: /dev/ttyS0
+    #  baud: 9600
+    #  offset: 0
+
+  secondary_clocks:
+    # NTP — резерв при недоступности GNSS
+    - protocol: ntp
+      ip: pool.ntp.org
+      pollinterval: 4s
+      disable: false
+
+    # PPS: секунда с linked_device (GNSS), начало секунды + cable_delay; на Linux опционально /dev/pps{N}
+    #- protocol: pps
+    #  interface: eth0
+    #  pin: 0
+    #  index: 0
+    #  linked_device: /dev/ttyS0
+    #  cable_delay: 0
+
+    # PTP+PHC: время из PHC; ptp4l можно запускать внутри tc-sync (start_ptp4l: true)
+    #- protocol: ptp
+    #  domain: 0
+    #  interface: eth0
+    #  device: /dev/ptp0
+    #  start_ptp4l: true        # запускать ptp4l внутри tc-sync (linuxptp в PATH)
+    #  ptp4l_path: ptp4l        # по умолчанию "ptp4l"
+    #  ptp4l_args: ["-m", "-s"] # по умолчанию: slave, вывод в лог
+    #  unicast_master_table: []

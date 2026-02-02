@@ -1,0 +1,97 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1
+# addr 0x45a6b60 size 384 (0x180)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045a6b60 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base>:
+ 45a6b60:	4c 8d 64 24 b8       	lea    -0x48(%rsp),%r12
+ 45a6b65:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 45a6b69:	0f 86 66 01 00 00    	jbe    45a6cd5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0x175>
+ 45a6b6f:	48 81 ec c8 00 00 00 	sub    $0xc8,%rsp
+ 45a6b76:	48 89 ac 24 c0 00 00 	mov    %rbp,0xc0(%rsp)
+ 45a6b7d:	00 
+ 45a6b7e:	48 8d ac 24 c0 00 00 	lea    0xc0(%rsp),%rbp
+ 45a6b85:	00 
+ 45a6b86:	49 c7 c5 00 00 00 00 	mov    $0x0,%r13
+ 45a6b8d:	4c 89 ac 24 b8 00 00 	mov    %r13,0xb8(%rsp)
+ 45a6b94:	00 
+ 45a6b95:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45a6b9a:	48 8b 72 08          	mov    0x8(%rdx),%rsi
+ 45a6b9e:	4c 8b 42 10          	mov    0x10(%rdx),%r8
+ 45a6ba2:	4c 89 44 24 28       	mov    %r8,0x28(%rsp)
+ 45a6ba7:	48 8b 52 18          	mov    0x18(%rdx),%rdx
+ 45a6bab:	48 89 54 24 20       	mov    %rdx,0x20(%rsp)
+ 45a6bb0:	31 c0                	xor    %eax,%eax
+ 45a6bb2:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+ 45a6bb8:	f0 44 0f b1 4e 20    	lock cmpxchg %r9d,0x20(%rsi)
+ 45a6bbe:	41 0f 94 c1          	sete   %r9b
+ 45a6bc2:	48 8d 46 20          	lea    0x20(%rsi),%rax
+ 45a6bc6:	45 84 c9             	test   %r9b,%r9b
+ 45a6bc9:	75 19                	jne    45a6be4 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0x84>
+ 45a6bcb:	48 89 74 24 38       	mov    %rsi,0x38(%rsp)
+ 45a6bd0:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 45a6bd5:	e8 66 19 9d fd       	call   1f78540 <sync.(*Mutex).lockSlow@@Base>
+ 45a6bda:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 45a6bdf:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 45a6be4:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45a6bea:	48 8d 15 ef 00 00 00 	lea    0xef(%rip),%rdx        # 45a6ce0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1.1@@Base>
+ 45a6bf1:	48 89 54 24 48       	mov    %rdx,0x48(%rsp)
+ 45a6bf6:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45a6bfb:	48 8d 54 24 48       	lea    0x48(%rsp),%rdx
+ 45a6c00:	48 89 94 24 b8 00 00 	mov    %rdx,0xb8(%rsp)
+ 45a6c07:	00 
+ 45a6c08:	c6 44 24 1f 01       	movb   $0x1,0x1f(%rsp)
+ 45a6c0d:	48 8b 5e 10          	mov    0x10(%rsi),%rbx
+ 45a6c11:	48 8d 7c 24 58       	lea    0x58(%rsp),%rdi
+ 45a6c16:	48 8d 7f e0          	lea    -0x20(%rdi),%rdi
+ 45a6c1a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 45a6c20:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 45a6c25:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 45a6c2a:	e8 9c 01 9b fd       	call   1f56dcb <runtime.duffzero@@Base+0x14b>
+ 45a6c2f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 45a6c33:	48 8d 05 26 c4 47 01 	lea    0x147c426(%rip),%rax        # 5a23060 <type:Sl5uD34s@@Base>
+ 45a6c3a:	48 8d 4c 24 58       	lea    0x58(%rsp),%rcx
+ 45a6c3f:	90                   	nop
+ 45a6c40:	e8 7b ba 94 fd       	call   1ef26c0 <runtime.mapiterinit@@Base>
+ 45a6c45:	eb 0a                	jmp    45a6c51 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0xf1>
+ 45a6c47:	48 8d 44 24 58       	lea    0x58(%rsp),%rax
+ 45a6c4c:	e8 ef bc 94 fd       	call   1ef2940 <runtime.mapiternext@@Base>
+ 45a6c51:	48 83 7c 24 58 00    	cmpq   $0x0,0x58(%rsp)
+ 45a6c57:	74 41                	je     45a6c9a <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0x13a>
+ 45a6c59:	48 8b 54 24 60       	mov    0x60(%rsp),%rdx
+ 45a6c5e:	48 8b 12             	mov    (%rdx),%rdx
+ 45a6c61:	48 8b 8a e8 00 00 00 	mov    0xe8(%rdx),%rcx
+ 45a6c68:	48 8b 82 e0 00 00 00 	mov    0xe0(%rdx),%rax
+ 45a6c6f:	48 8b 74 24 20       	mov    0x20(%rsp),%rsi
+ 45a6c74:	48 39 f1             	cmp    %rsi,%rcx
+ 45a6c77:	75 ce                	jne    45a6c47 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0xe7>
+ 45a6c79:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 45a6c7e:	48 8b 5c 24 28       	mov    0x28(%rsp),%rbx
+ 45a6c83:	e8 98 ce 93 fd       	call   1ee3b20 <runtime.memequal@@Base>
+ 45a6c88:	84 c0                	test   %al,%al
+ 45a6c8a:	74 bb                	je     45a6c47 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0xe7>
+ 45a6c8c:	48 8b 4c 24 30       	mov    0x30(%rsp),%rcx
+ 45a6c91:	c6 81 f0 00 00 00 00 	movb   $0x0,0xf0(%rcx)
+ 45a6c98:	eb ad                	jmp    45a6c47 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base+0xe7>
+ 45a6c9a:	c6 44 24 1f 00       	movb   $0x0,0x1f(%rsp)
+ 45a6c9f:	48 8b 94 24 b8 00 00 	mov    0xb8(%rsp),%rdx
+ 45a6ca6:	00 
+ 45a6ca7:	48 8b 02             	mov    (%rdx),%rax
+ 45a6caa:	ff d0                	call   *%rax
+ 45a6cac:	48 8b ac 24 c0 00 00 	mov    0xc0(%rsp),%rbp
+ 45a6cb3:	00 
+ 45a6cb4:	48 81 c4 c8 00 00 00 	add    $0xc8,%rsp
+ 45a6cbb:	c3                   	ret
+ 45a6cbc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 45a6cc0:	e8 9b 52 97 fd       	call   1f1bf60 <runtime.deferreturn@@Base>
+ 45a6cc5:	48 8b ac 24 c0 00 00 	mov    0xc0(%rsp),%rbp
+ 45a6ccc:	00 
+ 45a6ccd:	48 81 c4 c8 00 00 00 	add    $0xc8,%rsp
+ 45a6cd4:	c3                   	ret
+ 45a6cd5:	e8 e6 d6 9a fd       	call   1f543c0 <runtime.morestack.abi0@@Base>
+ 45a6cda:	e9 81 fe ff ff       	jmp    45a6b60 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Offsets).TemporarilyDisableClientFilterForSourceGroupMembers.func1@@Base>
+ 45a6cdf:	cc                   	int3

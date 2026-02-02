@@ -1,0 +1,139 @@
+# github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent
+# addr 0x4405fa0 size 576 (0x240)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004405fa0 <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base>:
+ 4405fa0:	4c 8d 64 24 d8       	lea    -0x28(%rsp),%r12
+ 4405fa5:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4405fa9:	0f 86 cb 01 00 00    	jbe    440617a <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base+0x1da>
+ 4405faf:	48 81 ec a8 00 00 00 	sub    $0xa8,%rsp
+ 4405fb6:	48 89 ac 24 a0 00 00 	mov    %rbp,0xa0(%rsp)
+ 4405fbd:	00 
+ 4405fbe:	48 8d ac 24 a0 00 00 	lea    0xa0(%rsp),%rbp
+ 4405fc5:	00 
+ 4405fc6:	48 89 84 24 b0 00 00 	mov    %rax,0xb0(%rsp)
+ 4405fcd:	00 
+ 4405fce:	48 89 9c 24 b8 00 00 	mov    %rbx,0xb8(%rsp)
+ 4405fd5:	00 
+ 4405fd6:	48 89 8c 24 c0 00 00 	mov    %rcx,0xc0(%rsp)
+ 4405fdd:	00 
+ 4405fde:	48 89 bc 24 c8 00 00 	mov    %rdi,0xc8(%rsp)
+ 4405fe5:	00 
+ 4405fe6:	48 89 b4 24 d0 00 00 	mov    %rsi,0xd0(%rsp)
+ 4405fed:	00 
+ 4405fee:	4c 89 84 24 d8 00 00 	mov    %r8,0xd8(%rsp)
+ 4405ff5:	00 
+ 4405ff6:	4c 89 8c 24 e0 00 00 	mov    %r9,0xe0(%rsp)
+ 4405ffd:	00 
+ 4405ffe:	4c 89 94 24 e8 00 00 	mov    %r10,0xe8(%rsp)
+ 4406005:	00 
+ 4406006:	44 88 9c 24 f0 00 00 	mov    %r11b,0xf0(%rsp)
+ 440600d:	00 
+ 440600e:	48 8b 08             	mov    (%rax),%rcx
+ 4406011:	0f 10 84 24 b8 00 00 	movups 0xb8(%rsp),%xmm0
+ 4406018:	00 
+ 4406019:	0f 11 44 24 60       	movups %xmm0,0x60(%rsp)
+ 440601e:	0f 10 84 24 c8 00 00 	movups 0xc8(%rsp),%xmm0
+ 4406025:	00 
+ 4406026:	0f 11 44 24 70       	movups %xmm0,0x70(%rsp)
+ 440602b:	0f 10 84 24 d8 00 00 	movups 0xd8(%rsp),%xmm0
+ 4406032:	00 
+ 4406033:	0f 11 84 24 80 00 00 	movups %xmm0,0x80(%rsp)
+ 440603a:	00 
+ 440603b:	0f 10 84 24 e8 00 00 	movups 0xe8(%rsp),%xmm0
+ 4406042:	00 
+ 4406043:	0f 11 84 24 90 00 00 	movups %xmm0,0x90(%rsp)
+ 440604a:	00 
+ 440604b:	48 8d 5c 24 60       	lea    0x60(%rsp),%rbx
+ 4406050:	48 89 c8             	mov    %rcx,%rax
+ 4406053:	e8 a8 31 ae fd       	call   1ee9200 <runtime.selectnbsend@@Base>
+ 4406058:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 440605f:	00 
+ 4406060:	84 c0                	test   %al,%al
+ 4406062:	0f 85 02 01 00 00    	jne    440616a <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base+0x1ca>
+ 4406068:	e8 b3 5c bc fd       	call   1fcbd20 <time.Now@@Base>
+ 440606d:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4406072:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4406077:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 440607c:	48 8b 94 24 b0 00 00 	mov    0xb0(%rsp),%rdx
+ 4406083:	00 
+ 4406084:	48 8b 72 10          	mov    0x10(%rdx),%rsi
+ 4406088:	48 8b 7a 18          	mov    0x18(%rdx),%rdi
+ 440608c:	4c 8b 42 20          	mov    0x20(%rdx),%r8
+ 4406090:	48 89 f0             	mov    %rsi,%rax
+ 4406093:	48 89 fb             	mov    %rdi,%rbx
+ 4406096:	4c 89 c1             	mov    %r8,%rcx
+ 4406099:	48 bf 00 e4 0b 54 02 	movabs $0x2540be400,%rdi
+ 44060a0:	00 00 00 
+ 44060a3:	e8 b8 53 bc fd       	call   1fcb460 <time.Time.Add@@Base>
+ 44060a8:	48 89 c7             	mov    %rax,%rdi
+ 44060ab:	48 89 de             	mov    %rbx,%rsi
+ 44060ae:	49 89 c8             	mov    %rcx,%r8
+ 44060b1:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44060b6:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 44060bb:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 44060c0:	e8 5b 3d bc fd       	call   1fc9e20 <time.Time.After@@Base>
+ 44060c5:	84 c0                	test   %al,%al
+ 44060c7:	0f 84 9d 00 00 00    	je     440616a <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base+0x1ca>
+ 44060cd:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+ 44060d2:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 44060d7:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 44060dc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 44060e0:	e8 fb b3 bb fd       	call   1fc14e0 <time.Time.String@@Base>
+ 44060e5:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 44060eb:	e8 70 7c ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 44060f0:	48 8d 15 a9 85 3a 01 	lea    0x13a85a9(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 44060f7:	48 89 54 24 50       	mov    %rdx,0x50(%rsp)
+ 44060fc:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 4406101:	48 8b 1d 38 91 a2 03 	mov    0x3a29138(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4406108:	48 8d 05 11 f1 af 01 	lea    0x1aff111(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 440610f:	48 8d 0d 4f 86 9f 00 	lea    0x9f864f(%rip),%rcx        # 4dfe765 <_IO_stdin_used@@Base+0x1cb765>
+ 4406116:	bf 21 00 00 00       	mov    $0x21,%edi
+ 440611b:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 4406120:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4406126:	4d 89 c1             	mov    %r8,%r9
+ 4406129:	e8 b2 e6 be fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 440612e:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4406133:	48 8b bc 24 b0 00 00 	mov    0xb0(%rsp),%rdi
+ 440613a:	00 
+ 440613b:	48 89 57 10          	mov    %rdx,0x10(%rdi)
+ 440613f:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 4406144:	48 89 57 18          	mov    %rdx,0x18(%rdi)
+ 4406148:	83 3d 11 58 a7 03 00 	cmpl   $0x0,0x3a75811(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 440614f:	75 0b                	jne    440615c <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base+0x1bc>
+ 4406151:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4406156:	48 89 47 20          	mov    %rax,0x20(%rdi)
+ 440615a:	eb 0e                	jmp    440616a <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base+0x1ca>
+ 440615c:	48 83 c7 20          	add    $0x20,%rdi
+ 4406160:	48 8b 44 24 48       	mov    0x48(%rsp),%rax
+ 4406165:	e8 96 04 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 440616a:	48 8b ac 24 a0 00 00 	mov    0xa0(%rsp),%rbp
+ 4406171:	00 
+ 4406172:	48 81 c4 a8 00 00 00 	add    $0xa8,%rsp
+ 4406179:	c3                   	ret
+ 440617a:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 440617f:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4406184:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4406189:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 440618e:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 4406193:	4c 89 44 24 30       	mov    %r8,0x30(%rsp)
+ 4406198:	4c 89 4c 24 38       	mov    %r9,0x38(%rsp)
+ 440619d:	4c 89 54 24 40       	mov    %r10,0x40(%rsp)
+ 44061a2:	44 88 5c 24 48       	mov    %r11b,0x48(%rsp)
+ 44061a7:	e8 b4 e2 b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 44061ac:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 44061b1:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 44061b6:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 44061bb:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 44061c0:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 44061c5:	4c 8b 44 24 30       	mov    0x30(%rsp),%r8
+ 44061ca:	4c 8b 4c 24 38       	mov    0x38(%rsp),%r9
+ 44061cf:	4c 8b 54 24 40       	mov    0x40(%rsp),%r10
+ 44061d4:	44 0f b6 5c 24 48    	movzbl 0x48(%rsp),%r11d
+ 44061da:	e9 c1 fd ff ff       	jmp    4405fa0 <github.com/lasselj/timebeat/beater/logging.(*BeatLogger).LogEvent@@Base>
+ 44061df:	cc                   	int3

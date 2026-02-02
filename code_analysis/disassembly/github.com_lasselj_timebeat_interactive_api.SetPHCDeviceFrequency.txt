@@ -1,0 +1,101 @@
+# github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency
+# addr 0x4bebb60 size 352 (0x160)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004bebb60 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base>:
+ 4bebb60:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4bebb64:	0f 86 23 01 00 00    	jbe    4bebc8d <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x12d>
+ 4bebb6a:	48 83 ec 38          	sub    $0x38,%rsp
+ 4bebb6e:	48 89 6c 24 30       	mov    %rbp,0x30(%rsp)
+ 4bebb73:	48 8d 6c 24 30       	lea    0x30(%rsp),%rbp
+ 4bebb78:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4bebb7d:	0f 1f 00             	nopl   (%rax)
+ 4bebb80:	48 83 fb 02          	cmp    $0x2,%rbx
+ 4bebb84:	0f 85 ed 00 00 00    	jne    4bebc77 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x117>
+ 4bebb8a:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+ 4bebb8f:	90                   	nop
+ 4bebb90:	e8 eb 4b 9b ff       	call   45a0780 <github.com/lasselj/timebeat/beater/clocksync/servo.GetController@@Base>
+ 4bebb95:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4bebb9a:	48 8b 4c 24 40       	mov    0x40(%rsp),%rcx
+ 4bebb9f:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 4bebba3:	48 8b 51 10          	mov    0x10(%rcx),%rdx
+ 4bebba7:	48 83 fb 07          	cmp    $0x7,%rbx
+ 4bebbab:	75 49                	jne    4bebbf6 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x96>
+ 4bebbad:	81 3a 64 69 73 61    	cmpl   $0x61736964,(%rdx)
+ 4bebbb3:	75 41                	jne    4bebbf6 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x96>
+ 4bebbb5:	66 81 7a 04 62 6c    	cmpw   $0x6c62,0x4(%rdx)
+ 4bebbbb:	75 39                	jne    4bebbf6 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x96>
+ 4bebbbd:	80 7a 06 65          	cmpb   $0x65,0x6(%rdx)
+ 4bebbc1:	75 33                	jne    4bebbf6 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x96>
+ 4bebbc3:	48 8b 19             	mov    (%rcx),%rbx
+ 4bebbc6:	48 8b 49 08          	mov    0x8(%rcx),%rcx
+ 4bebbca:	31 ff                	xor    %edi,%edi
+ 4bebbcc:	31 f6                	xor    %esi,%esi
+ 4bebbce:	e8 6d c3 9b ff       	call   45a7f40 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base>
+ 4bebbd3:	48 85 c9             	test   %rcx,%rcx
+ 4bebbd6:	74 14                	je     4bebbec <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0x8c>
+ 4bebbd8:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 4bebbdc:	48 89 f8             	mov    %rdi,%rax
+ 4bebbdf:	90                   	nop
+ 4bebbe0:	ff d1                	call   *%rcx
+ 4bebbe2:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebbe7:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebbeb:	c3                   	ret
+ 4bebbec:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebbf1:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebbf5:	c3                   	ret
+ 4bebbf6:	48 89 d0             	mov    %rdx,%rax
+ 4bebbf9:	b9 0a 00 00 00       	mov    $0xa,%ecx
+ 4bebbfe:	bf 40 00 00 00       	mov    $0x40,%edi
+ 4bebc03:	e8 b8 2f 38 fd       	call   1f6ebc0 <strconv.ParseInt@@Base>
+ 4bebc08:	48 85 db             	test   %rbx,%rbx
+ 4bebc0b:	75 40                	jne    4bebc4d <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0xed>
+ 4bebc0d:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4bebc12:	48 8b 1a             	mov    (%rdx),%rbx
+ 4bebc15:	48 8b 4a 08          	mov    0x8(%rdx),%rcx
+ 4bebc19:	48 89 c7             	mov    %rax,%rdi
+ 4bebc1c:	be 01 00 00 00       	mov    $0x1,%esi
+ 4bebc21:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4bebc26:	e8 15 c3 9b ff       	call   45a7f40 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).SetManualOverride@@Base>
+ 4bebc2b:	48 85 c9             	test   %rcx,%rcx
+ 4bebc2e:	74 13                	je     4bebc43 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base+0xe3>
+ 4bebc30:	48 8b 49 18          	mov    0x18(%rcx),%rcx
+ 4bebc34:	48 89 f8             	mov    %rdi,%rax
+ 4bebc37:	ff d1                	call   *%rcx
+ 4bebc39:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebc3e:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebc42:	c3                   	ret
+ 4bebc43:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebc48:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebc4c:	c3                   	ret
+ 4bebc4d:	48 8b 54 24 40       	mov    0x40(%rsp),%rdx
+ 4bebc52:	48 8b 7a 10          	mov    0x10(%rdx),%rdi
+ 4bebc56:	48 8b 72 18          	mov    0x18(%rdx),%rsi
+ 4bebc5a:	31 c0                	xor    %eax,%eax
+ 4bebc5c:	48 8d 1d f1 c3 1f 00 	lea    0x1fc3f1(%rip),%rbx        # 4de8054 <_IO_stdin_used@@Base+0x1b5054>
+ 4bebc63:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 4bebc68:	e8 b3 e6 34 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4bebc6d:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebc72:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebc76:	c3                   	ret
+ 4bebc77:	48 8d 05 b6 93 27 00 	lea    0x2793b6(%rip),%rax        # 4e65034 <_IO_stdin_used@@Base+0x232034>
+ 4bebc7e:	bb 3f 00 00 00       	mov    $0x3f,%ebx
+ 4bebc83:	48 8b 6c 24 30       	mov    0x30(%rsp),%rbp
+ 4bebc88:	48 83 c4 38          	add    $0x38,%rsp
+ 4bebc8c:	c3                   	ret
+ 4bebc8d:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4bebc92:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4bebc97:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4bebc9c:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4bebca1:	e8 ba 87 36 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4bebca6:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4bebcab:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4bebcb0:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4bebcb5:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4bebcba:	e9 a1 fe ff ff       	jmp    4bebb60 <github.com/lasselj/timebeat/interactive/api.SetPHCDeviceFrequency@@Base>
+ 4bebcbf:	cc                   	int3

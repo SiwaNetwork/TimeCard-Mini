@@ -1,0 +1,121 @@
+# github.com/lasselj/timebeat/config.loadConfigFromFileLocked
+# addr 0x44042c0 size 480 (0x1e0)
+
+
+timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000044042c0 <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base>:
+ 44042c0:	4c 8d 64 24 f0       	lea    -0x10(%rsp),%r12
+ 44042c5:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 44042c9:	0f 86 bc 01 00 00    	jbe    440448b <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0x1cb>
+ 44042cf:	48 81 ec 90 00 00 00 	sub    $0x90,%rsp
+ 44042d6:	48 89 ac 24 88 00 00 	mov    %rbp,0x88(%rsp)
+ 44042dd:	00 
+ 44042de:	48 8d ac 24 88 00 00 	lea    0x88(%rsp),%rbp
+ 44042e5:	00 
+ 44042e6:	48 8b 1d 0b 09 a4 03 	mov    0x3a4090b(%rip),%rbx        # 7e44bf8 <github.com/lasselj/timebeat/config.appConfig@@Base+0x18>
+ 44042ed:	48 8b 05 fc 08 a4 03 	mov    0x3a408fc(%rip),%rax        # 7e44bf0 <github.com/lasselj/timebeat/config.appConfig@@Base+0x10>
+ 44042f4:	48 85 db             	test   %rbx,%rbx
+ 44042f7:	0f 84 7e 01 00 00    	je     440447b <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0x1bb>
+ 44042fd:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4404302:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4404307:	e8 b4 6a be fd       	call   1feadc0 <os.ReadFile@@Base>
+ 440430c:	48 85 ff             	test   %rdi,%rdi
+ 440430f:	0f 85 00 01 00 00    	jne    4404415 <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0x155>
+ 4404315:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 440431a:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 440431f:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 4404324:	48 8d 05 75 94 54 01 	lea    0x1549475(%rip),%rax        # 594d7a0 <type:7G1EDQaC@@Base>
+ 440432b:	e8 b0 c1 ae fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4404330:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 4404335:	e8 06 cf ae fd       	call   1ef1240 <runtime.makemap_small@@Base>
+ 440433a:	83 3d 1f 76 a7 03 00 	cmpl   $0x0,0x3a7761f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4404341:	75 0a                	jne    440434d <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0x8d>
+ 4404343:	48 8b 74 24 60       	mov    0x60(%rsp),%rsi
+ 4404348:	48 89 06             	mov    %rax,(%rsi)
+ 440434b:	eb 0d                	jmp    440435a <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0x9a>
+ 440434d:	48 8b 7c 24 60       	mov    0x60(%rsp),%rdi
+ 4404352:	e8 a9 22 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 4404357:	48 89 fe             	mov    %rdi,%rsi
+ 440435a:	48 8b 44 24 58       	mov    0x58(%rsp),%rax
+ 440435f:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4404364:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4404369:	48 8d 3d 50 ec 2f 01 	lea    0x12fec50(%rip),%rdi        # 5702fc0 <type:vSbY6ndP@@Base>
+ 4404370:	e8 4b 10 e6 fd       	call   22653c0 <encoding/json.Unmarshal@@Base>
+ 4404375:	48 85 c0             	test   %rax,%rax
+ 4404378:	75 34                	jne    44043ae <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0xee>
+ 440437a:	48 8b 3d 4f 7f a2 03 	mov    0x3a27f4f(%rip),%rdi        # 7e2c2d0 <github.com/lasselj/timebeat/config.peerIdentities@@Base>
+ 4404381:	84 07                	test   %al,(%rdi)
+ 4404383:	48 8b 44 24 60       	mov    0x60(%rsp),%rax
+ 4404388:	48 8b 00             	mov    (%rax),%rax
+ 440438b:	83 3d ce 75 a7 03 00 	cmpl   $0x0,0x3a775ce(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4404392:	75 05                	jne    4404399 <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0xd9>
+ 4404394:	48 89 07             	mov    %rax,(%rdi)
+ 4404397:	eb 05                	jmp    440439e <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base+0xde>
+ 4404399:	e8 62 22 b5 fd       	call   1f56600 <runtime.gcWriteBarrier@@Base>
+ 440439e:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 44043a5:	00 
+ 44043a6:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 44043ad:	c3                   	ret
+ 44043ae:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 44043b2:	48 89 d8             	mov    %rbx,%rax
+ 44043b5:	ff d1                	call   *%rcx
+ 44043b7:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 44043bd:	0f 1f 00             	nopl   (%rax)
+ 44043c0:	e8 9b 99 ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 44043c5:	48 8d 0d d4 a2 3a 01 	lea    0x13aa2d4(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 44043cc:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 44043d1:	48 89 44 24 70       	mov    %rax,0x70(%rsp)
+ 44043d6:	48 8b 1d 63 ae a2 03 	mov    0x3a2ae63(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 44043dd:	48 8d 05 3c 0e b0 01 	lea    0x1b00e3c(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 44043e4:	48 8d 0d 13 d8 a1 00 	lea    0xa1d813(%rip),%rcx        # 4e21bfe <_IO_stdin_used@@Base+0x1eebfe>
+ 44043eb:	bf 2a 00 00 00       	mov    $0x2a,%edi
+ 44043f0:	48 8d 74 24 68       	lea    0x68(%rsp),%rsi
+ 44043f5:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 44043fb:	4d 89 c1             	mov    %r8,%r9
+ 44043fe:	66 90                	xchg   %ax,%ax
+ 4404400:	e8 db 03 bf fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 4404405:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 440440c:	00 
+ 440440d:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 4404414:	c3                   	ret
+ 4404415:	44 0f 11 7c 24 78    	movups %xmm15,0x78(%rsp)
+ 440441b:	48 8b 44 24 50       	mov    0x50(%rsp),%rax
+ 4404420:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4404425:	e8 36 99 ae fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 440442a:	48 8d 0d 6f a2 3a 01 	lea    0x13aa26f(%rip),%rcx        # 57ae6a0 <type:string@@Base>
+ 4404431:	48 89 4c 24 78       	mov    %rcx,0x78(%rsp)
+ 4404436:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 440443d:	00 
+ 440443e:	48 8b 1d fb ad a2 03 	mov    0x3a2adfb(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 4404445:	48 8d 05 d4 0d b0 01 	lea    0x1b00dd4(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 440444c:	48 8d 0d 67 59 a1 00 	lea    0xa15967(%rip),%rcx        # 4e19dba <_IO_stdin_used@@Base+0x1e6dba>
+ 4404453:	bf 28 00 00 00       	mov    $0x28,%edi
+ 4404458:	48 8d 74 24 78       	lea    0x78(%rsp),%rsi
+ 440445d:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 4404463:	4d 89 c1             	mov    %r8,%r9
+ 4404466:	e8 75 03 bf fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 440446b:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 4404472:	00 
+ 4404473:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 440447a:	c3                   	ret
+ 440447b:	48 8b ac 24 88 00 00 	mov    0x88(%rsp),%rbp
+ 4404482:	00 
+ 4404483:	48 81 c4 90 00 00 00 	add    $0x90,%rsp
+ 440448a:	c3                   	ret
+ 440448b:	e8 d0 ff b4 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4404490:	e9 2b fe ff ff       	jmp    44042c0 <github.com/lasselj/timebeat/config.loadConfigFromFileLocked@@Base>
+ 4404495:	cc                   	int3
+ 4404496:	cc                   	int3
+ 4404497:	cc                   	int3
+ 4404498:	cc                   	int3
+ 4404499:	cc                   	int3
+ 440449a:	cc                   	int3
+ 440449b:	cc                   	int3
+ 440449c:	cc                   	int3
+ 440449d:	cc                   	int3
+ 440449e:	cc                   	int3
+ 440449f:	cc                   	int3

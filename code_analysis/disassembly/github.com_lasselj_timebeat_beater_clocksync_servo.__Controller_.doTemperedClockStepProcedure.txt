@@ -1,0 +1,178 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure
+# addr 0x45aa060 size 672 (0x2a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000045aa060 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base>:
+ 45aa060:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 45aa064:	0f 86 45 02 00 00    	jbe    45aa2af <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x24f>
+ 45aa06a:	48 83 c4 80          	add    $0xffffffffffffff80,%rsp
+ 45aa06e:	48 89 6c 24 78       	mov    %rbp,0x78(%rsp)
+ 45aa073:	48 8d 6c 24 78       	lea    0x78(%rsp),%rbp
+ 45aa078:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45aa07c:	80 7a 28 00          	cmpb   $0x0,0x28(%rdx)
+ 45aa080:	74 38                	je     45aa0ba <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x5a>
+ 45aa082:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45aa086:	74 28                	je     45aa0b0 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x50>
+ 45aa088:	90                   	nop
+ 45aa089:	48 8b 1d b0 51 88 03 	mov    0x38851b0(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45aa090:	48 8d 05 89 b1 95 01 	lea    0x195b189(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45aa097:	48 8d 0d bb 9f 81 00 	lea    0x819fbb(%rip),%rcx        # 4dc4059 <_IO_stdin_used@@Base+0x191059>
+ 45aa09e:	bf 13 00 00 00       	mov    $0x13,%edi
+ 45aa0a3:	31 f6                	xor    %esi,%esi
+ 45aa0a5:	45 31 c0             	xor    %r8d,%r8d
+ 45aa0a8:	4d 89 c1             	mov    %r8,%r9
+ 45aa0ab:	e8 30 a7 a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45aa0b0:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 45aa0b5:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 45aa0b9:	c3                   	ret
+ 45aa0ba:	48 ff 42 30          	incq   0x30(%rdx)
+ 45aa0be:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 45aa0c2:	48 83 7a 30 0a       	cmpq   $0xa,0x30(%rdx)
+ 45aa0c7:	7f 78                	jg     45aa141 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0xe1>
+ 45aa0c9:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45aa0cd:	74 68                	je     45aa137 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0xd7>
+ 45aa0cf:	44 0f 11 7c 24 58    	movups %xmm15,0x58(%rsp)
+ 45aa0d5:	44 0f 11 7c 24 68    	movups %xmm15,0x68(%rsp)
+ 45aa0db:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 45aa0df:	48 8b 41 30          	mov    0x30(%rcx),%rax
+ 45aa0e3:	e8 f8 3b 94 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45aa0e8:	48 8d 0d 71 05 20 01 	lea    0x1200571(%rip),%rcx        # 57aa660 <type:int@@Base>
+ 45aa0ef:	48 89 4c 24 58       	mov    %rcx,0x58(%rsp)
+ 45aa0f4:	48 89 44 24 60       	mov    %rax,0x60(%rsp)
+ 45aa0f9:	48 89 4c 24 68       	mov    %rcx,0x68(%rsp)
+ 45aa0fe:	48 8d 0d c3 c4 f2 00 	lea    0xf2c4c3(%rip),%rcx        # 54d65c8 <_IO_stdin_used@@Base+0x8a35c8>
+ 45aa105:	48 89 4c 24 70       	mov    %rcx,0x70(%rsp)
+ 45aa10a:	48 8b 1d 2f 51 88 03 	mov    0x388512f(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45aa111:	48 8d 05 08 b1 95 01 	lea    0x195b108(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45aa118:	48 8d 0d 43 d2 86 00 	lea    0x86d243(%rip),%rcx        # 4e17362 <_IO_stdin_used@@Base+0x1e4362>
+ 45aa11f:	bf 28 00 00 00       	mov    $0x28,%edi
+ 45aa124:	48 8d 74 24 58       	lea    0x58(%rsp),%rsi
+ 45aa129:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 45aa12f:	4d 89 c1             	mov    %r8,%r9
+ 45aa132:	e8 a9 a6 a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45aa137:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 45aa13c:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 45aa140:	c3                   	ret
+ 45aa141:	48 89 84 24 88 00 00 	mov    %rax,0x88(%rsp)
+ 45aa148:	00 
+ 45aa149:	48 89 74 24 38       	mov    %rsi,0x38(%rsp)
+ 45aa14e:	48 89 0b             	mov    %rcx,(%rbx)
+ 45aa151:	80 78 40 00          	cmpb   $0x0,0x40(%rax)
+ 45aa155:	74 5b                	je     45aa1b2 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x152>
+ 45aa157:	48 89 7c 24 40       	mov    %rdi,0x40(%rsp)
+ 45aa15c:	44 0f 11 7c 24 48    	movups %xmm15,0x48(%rsp)
+ 45aa162:	48 89 f0             	mov    %rsi,%rax
+ 45aa165:	e8 76 3b 94 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 45aa16a:	48 8d 0d 4f a1 71 01 	lea    0x171a14f(%rip),%rcx        # 5cc42c0 <type:cP1vjca2@@Base>
+ 45aa171:	48 89 4c 24 48       	mov    %rcx,0x48(%rsp)
+ 45aa176:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 45aa17b:	48 8b 1d be 50 88 03 	mov    0x38850be(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45aa182:	48 8d 05 97 b0 95 01 	lea    0x195b097(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45aa189:	48 8d 0d 9f 87 87 00 	lea    0x87879f(%rip),%rcx        # 4e2292f <_IO_stdin_used@@Base+0x1ef92f>
+ 45aa190:	bf 2b 00 00 00       	mov    $0x2b,%edi
+ 45aa195:	48 8d 74 24 48       	lea    0x48(%rsp),%rsi
+ 45aa19a:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 45aa1a0:	4d 89 c1             	mov    %r8,%r9
+ 45aa1a3:	e8 38 a6 a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45aa1a8:	48 8b 74 24 38       	mov    0x38(%rsp),%rsi
+ 45aa1ad:	48 8b 7c 24 40       	mov    0x40(%rsp),%rdi
+ 45aa1b2:	48 89 f8             	mov    %rdi,%rax
+ 45aa1b5:	48 89 f3             	mov    %rsi,%rbx
+ 45aa1b8:	e8 c3 87 fe ff       	call   4592980 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClock).StepClock@@Base>
+ 45aa1bd:	0f 1f 00             	nopl   (%rax)
+ 45aa1c0:	84 c0                	test   %al,%al
+ 45aa1c2:	0f 84 a6 00 00 00    	je     45aa26e <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x20e>
+ 45aa1c8:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45aa1cf:	00 
+ 45aa1d0:	80 7a 40 00          	cmpb   $0x0,0x40(%rdx)
+ 45aa1d4:	74 30                	je     45aa206 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x1a6>
+ 45aa1d6:	90                   	nop
+ 45aa1d7:	48 8b 1d 62 50 88 03 	mov    0x3885062(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45aa1de:	48 8d 05 3b b0 95 01 	lea    0x195b03b(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45aa1e5:	48 8d 0d 89 e4 81 00 	lea    0x81e489(%rip),%rcx        # 4dc8675 <_IO_stdin_used@@Base+0x195675>
+ 45aa1ec:	bf 14 00 00 00       	mov    $0x14,%edi
+ 45aa1f1:	31 f6                	xor    %esi,%esi
+ 45aa1f3:	45 31 c0             	xor    %r8d,%r8d
+ 45aa1f6:	4d 89 c1             	mov    %r8,%r9
+ 45aa1f9:	e8 e2 a5 a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45aa1fe:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45aa205:	00 
+ 45aa206:	48 8b 4a 18          	mov    0x18(%rdx),%rcx
+ 45aa20a:	c6 41 28 01          	movb   $0x1,0x28(%rcx)
+ 45aa20e:	48 8b 42 30          	mov    0x30(%rdx),%rax
+ 45aa212:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 45aa217:	e8 c4 b6 fe ff       	call   45958e0 <github.com/lasselj/timebeat/beater/clocksync/hostclocks.(*HostClockController).StepSlaveClocksIfNecessary@@Base>
+ 45aa21c:	48 8d 05 bd 88 50 01 	lea    0x15088bd(%rip),%rax        # 5ab2ae0 <type:Tt/oEgtt@@Base>
+ 45aa223:	e8 b8 62 94 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 45aa228:	48 8d 0d f1 08 00 00 	lea    0x8f1(%rip),%rcx        # 45aab20 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).enableStepping-fm@@Base>
+ 45aa22f:	48 89 08             	mov    %rcx,(%rax)
+ 45aa232:	83 3d 27 17 8d 03 00 	cmpl   $0x0,0x38d1727(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 45aa239:	75 0e                	jne    45aa249 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x1e9>
+ 45aa23b:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 45aa242:	00 
+ 45aa243:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 45aa247:	eb 11                	jmp    45aa25a <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x1fa>
+ 45aa249:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 45aa24d:	48 8b 8c 24 88 00 00 	mov    0x88(%rsp),%rcx
+ 45aa254:	00 
+ 45aa255:	e8 a6 c4 9a fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 45aa25a:	48 89 c3             	mov    %rax,%rbx
+ 45aa25d:	48 b8 00 f2 05 2a 01 	movabs $0x12a05f200,%rax
+ 45aa264:	00 00 00 
+ 45aa267:	e8 54 f3 a1 fd       	call   1fc95c0 <time.AfterFunc@@Base>
+ 45aa26c:	eb 37                	jmp    45aa2a5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x245>
+ 45aa26e:	48 8b 94 24 88 00 00 	mov    0x88(%rsp),%rdx
+ 45aa275:	00 
+ 45aa276:	80 7a 40 00          	cmpb   $0x0,0x40(%rdx)
+ 45aa27a:	74 29                	je     45aa2a5 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base+0x245>
+ 45aa27c:	90                   	nop
+ 45aa27d:	48 8b 1d bc 4f 88 03 	mov    0x3884fbc(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 45aa284:	48 8d 05 95 af 95 01 	lea    0x195af95(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 45aa28b:	48 8d 0d 31 67 82 00 	lea    0x826731(%rip),%rcx        # 4dd09c3 <_IO_stdin_used@@Base+0x19d9c3>
+ 45aa292:	bf 16 00 00 00       	mov    $0x16,%edi
+ 45aa297:	31 f6                	xor    %esi,%esi
+ 45aa299:	45 31 c0             	xor    %r8d,%r8d
+ 45aa29c:	4d 89 c1             	mov    %r8,%r9
+ 45aa29f:	90                   	nop
+ 45aa2a0:	e8 3b a5 a4 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 45aa2a5:	48 8b 6c 24 78       	mov    0x78(%rsp),%rbp
+ 45aa2aa:	48 83 ec 80          	sub    $0xffffffffffffff80,%rsp
+ 45aa2ae:	c3                   	ret
+ 45aa2af:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 45aa2b4:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 45aa2b9:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 45aa2be:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 45aa2c3:	48 89 74 24 28       	mov    %rsi,0x28(%rsp)
+ 45aa2c8:	e8 93 a1 9a fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 45aa2cd:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 45aa2d2:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 45aa2d7:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 45aa2dc:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 45aa2e1:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 45aa2e6:	e9 75 fd ff ff       	jmp    45aa060 <github.com/lasselj/timebeat/beater/clocksync/servo.(*Controller).doTemperedClockStepProcedure@@Base>
+ 45aa2eb:	cc                   	int3
+ 45aa2ec:	cc                   	int3
+ 45aa2ed:	cc                   	int3
+ 45aa2ee:	cc                   	int3
+ 45aa2ef:	cc                   	int3
+ 45aa2f0:	cc                   	int3
+ 45aa2f1:	cc                   	int3
+ 45aa2f2:	cc                   	int3
+ 45aa2f3:	cc                   	int3
+ 45aa2f4:	cc                   	int3
+ 45aa2f5:	cc                   	int3
+ 45aa2f6:	cc                   	int3
+ 45aa2f7:	cc                   	int3
+ 45aa2f8:	cc                   	int3
+ 45aa2f9:	cc                   	int3
+ 45aa2fa:	cc                   	int3
+ 45aa2fb:	cc                   	int3
+ 45aa2fc:	cc                   	int3
+ 45aa2fd:	cc                   	int3
+ 45aa2fe:	cc                   	int3
+ 45aa2ff:	cc                   	int3

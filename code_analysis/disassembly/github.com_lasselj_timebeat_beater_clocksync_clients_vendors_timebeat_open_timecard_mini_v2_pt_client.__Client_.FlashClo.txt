@@ -1,0 +1,102 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm
+# addr 0x4b97f40 size 288 (0x120)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b97f40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm@@Base>:
+ 4b97f40:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b97f44:	0f 86 c9 00 00 00    	jbe    4b98013 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm@@Base+0xd3>
+ 4b97f4a:	48 83 ec 48          	sub    $0x48,%rsp
+ 4b97f4e:	48 89 6c 24 40       	mov    %rbp,0x40(%rsp)
+ 4b97f53:	48 8d 6c 24 40       	lea    0x40(%rsp),%rbp
+ 4b97f58:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 4b97f5d:	48 89 7c 24 38       	mov    %rdi,0x38(%rsp)
+ 4b97f62:	48 89 44 24 50       	mov    %rax,0x50(%rsp)
+ 4b97f67:	48 89 d8             	mov    %rbx,%rax
+ 4b97f6a:	48 89 cb             	mov    %rcx,%rbx
+ 4b97f6d:	e8 4e 2e 45 fd       	call   1feadc0 <os.ReadFile@@Base>
+ 4b97f72:	48 85 ff             	test   %rdi,%rdi
+ 4b97f75:	75 70                	jne    4b97fe7 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm@@Base+0xa7>
+ 4b97f77:	48 8b 54 24 50       	mov    0x50(%rsp),%rdx
+ 4b97f7c:	48 8b 52 08          	mov    0x8(%rdx),%rdx
+ 4b97f80:	48 89 df             	mov    %rbx,%rdi
+ 4b97f83:	48 89 ce             	mov    %rcx,%rsi
+ 4b97f86:	45 31 c0             	xor    %r8d,%r8d
+ 4b97f89:	4c 8b 4c 24 38       	mov    0x38(%rsp),%r9
+ 4b97f8e:	31 db                	xor    %ebx,%ebx
+ 4b97f90:	48 89 c1             	mov    %rax,%rcx
+ 4b97f93:	48 89 d0             	mov    %rdx,%rax
+ 4b97f96:	e8 e5 c0 ff ff       	call   4b94080 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/clock_gen/clock_gen_8A34002E.(*ClockGen8A34012).WriteToEEPROM@@Base>
+ 4b97f9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b97fa0:	48 85 c0             	test   %rax,%rax
+ 4b97fa3:	74 2c                	je     4b97fd1 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm@@Base+0x91>
+ 4b97fa5:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4b97fa9:	48 89 d8             	mov    %rbx,%rax
+ 4b97fac:	ff d1                	call   *%rcx
+ 4b97fae:	b9 16 00 00 00       	mov    $0x16,%ecx
+ 4b97fb3:	48 89 c7             	mov    %rax,%rdi
+ 4b97fb6:	48 89 de             	mov    %rbx,%rsi
+ 4b97fb9:	31 c0                	xor    %eax,%eax
+ 4b97fbb:	48 8d 1d b1 95 23 00 	lea    0x2395b1(%rip),%rbx        # 4dd1573 <_IO_stdin_used@@Base+0x19e573>
+ 4b97fc2:	e8 59 23 3a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4b97fc7:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b97fcc:	48 83 c4 48          	add    $0x48,%rsp
+ 4b97fd0:	c3                   	ret
+ 4b97fd1:	48 8d 05 56 7f 17 00 	lea    0x177f56(%rip),%rax        # 4d0ff2e <_IO_stdin_used@@Base+0xdcf2e>
+ 4b97fd8:	bb 11 00 00 00       	mov    $0x11,%ebx
+ 4b97fdd:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b97fe2:	48 83 c4 48          	add    $0x48,%rsp
+ 4b97fe6:	c3                   	ret
+ 4b97fe7:	48 8b 4f 18          	mov    0x18(%rdi),%rcx
+ 4b97feb:	48 89 f0             	mov    %rsi,%rax
+ 4b97fee:	ff d1                	call   *%rcx
+ 4b97ff0:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 4b97ff5:	48 89 c7             	mov    %rax,%rdi
+ 4b97ff8:	48 89 de             	mov    %rbx,%rsi
+ 4b97ffb:	31 c0                	xor    %eax,%eax
+ 4b97ffd:	48 8d 1d 58 0c 25 00 	lea    0x250c58(%rip),%rbx        # 4de8c5c <_IO_stdin_used@@Base+0x1b5c5c>
+ 4b98004:	e8 17 23 3a fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4b98009:	48 8b 6c 24 40       	mov    0x40(%rsp),%rbp
+ 4b9800e:	48 83 c4 48          	add    $0x48,%rsp
+ 4b98012:	c3                   	ret
+ 4b98013:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b98018:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 4b9801d:	48 89 4c 24 18       	mov    %rcx,0x18(%rsp)
+ 4b98022:	48 89 7c 24 20       	mov    %rdi,0x20(%rsp)
+ 4b98027:	e8 34 c4 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b9802c:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b98031:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 4b98036:	48 8b 4c 24 18       	mov    0x18(%rsp),%rcx
+ 4b9803b:	48 8b 7c 24 20       	mov    0x20(%rsp),%rdi
+ 4b98040:	e9 fb fe ff ff       	jmp    4b97f40 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_mini_v2_pt/client.(*Client).FlashClockGenEEProm@@Base>
+ 4b98045:	cc                   	int3
+ 4b98046:	cc                   	int3
+ 4b98047:	cc                   	int3
+ 4b98048:	cc                   	int3
+ 4b98049:	cc                   	int3
+ 4b9804a:	cc                   	int3
+ 4b9804b:	cc                   	int3
+ 4b9804c:	cc                   	int3
+ 4b9804d:	cc                   	int3
+ 4b9804e:	cc                   	int3
+ 4b9804f:	cc                   	int3
+ 4b98050:	cc                   	int3
+ 4b98051:	cc                   	int3
+ 4b98052:	cc                   	int3
+ 4b98053:	cc                   	int3
+ 4b98054:	cc                   	int3
+ 4b98055:	cc                   	int3
+ 4b98056:	cc                   	int3
+ 4b98057:	cc                   	int3
+ 4b98058:	cc                   	int3
+ 4b98059:	cc                   	int3
+ 4b9805a:	cc                   	int3
+ 4b9805b:	cc                   	int3
+ 4b9805c:	cc                   	int3
+ 4b9805d:	cc                   	int3
+ 4b9805e:	cc                   	int3
+ 4b9805f:	cc                   	int3

@@ -1,0 +1,155 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample
+# addr 0x457e580 size 544 (0x220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457e580 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base>:
+ 457e580:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 457e584:	0f 86 e4 01 00 00    	jbe    457e76e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1ee>
+ 457e58a:	48 83 ec 78          	sub    $0x78,%rsp
+ 457e58e:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+ 457e593:	48 8d 6c 24 70       	lea    0x70(%rsp),%rbp
+ 457e598:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 457e59f:	00 
+ 457e5a0:	80 78 38 00          	cmpb   $0x0,0x38(%rax)
+ 457e5a4:	74 64                	je     457e60a <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x8a>
+ 457e5a6:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 457e5ad:	00 
+ 457e5ae:	44 0f 11 7c 24 40    	movups %xmm15,0x40(%rsp)
+ 457e5b4:	48 89 d8             	mov    %rbx,%rax
+ 457e5b7:	e8 24 f7 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457e5bc:	48 8d 0d 5d c1 22 01 	lea    0x122c15d(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457e5c3:	48 89 4c 24 40       	mov    %rcx,0x40(%rsp)
+ 457e5c8:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 457e5cd:	48 8b 1d 6c 0c 8b 03 	mov    0x38b0c6c(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457e5d4:	48 8d 05 45 6c 98 01 	lea    0x1986c45(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457e5db:	bf 0e 00 00 00       	mov    $0xe,%edi
+ 457e5e0:	48 8d 74 24 40       	lea    0x40(%rsp),%rsi
+ 457e5e5:	41 b8 01 00 00 00    	mov    $0x1,%r8d
+ 457e5eb:	4d 89 c1             	mov    %r8,%r9
+ 457e5ee:	48 8d 0d 3d fc 6f 00 	lea    0x6ffc3d(%rip),%rcx        # 4c7e232 <_IO_stdin_used@@Base+0x4b232>
+ 457e5f5:	e8 e6 61 a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457e5fa:	48 8b 84 24 80 00 00 	mov    0x80(%rsp),%rax
+ 457e601:	00 
+ 457e602:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 457e609:	00 
+ 457e60a:	48 8b 48 20          	mov    0x20(%rax),%rcx
+ 457e60e:	48 8b 50 18          	mov    0x18(%rax),%rdx
+ 457e612:	48 8b 70 10          	mov    0x10(%rax),%rsi
+ 457e616:	48 39 ce             	cmp    %rcx,%rsi
+ 457e619:	0f 83 46 01 00 00    	jae    457e765 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1e5>
+ 457e61f:	48 89 1c f2          	mov    %rbx,(%rdx,%rsi,8)
+ 457e623:	48 8b 50 10          	mov    0x10(%rax),%rdx
+ 457e627:	48 8b 58 08          	mov    0x8(%rax),%rbx
+ 457e62b:	48 85 db             	test   %rbx,%rbx
+ 457e62e:	0f 84 2c 01 00 00    	je     457e760 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1e0>
+ 457e634:	48 ff c2             	inc    %rdx
+ 457e637:	48 89 c1             	mov    %rax,%rcx
+ 457e63a:	48 89 d0             	mov    %rdx,%rax
+ 457e63d:	0f 1f 00             	nopl   (%rax)
+ 457e640:	48 83 fb ff          	cmp    $0xffffffffffffffff,%rbx
+ 457e644:	74 07                	je     457e64d <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xcd>
+ 457e646:	48 99                	cqto
+ 457e648:	48 f7 fb             	idiv   %rbx
+ 457e64b:	eb 05                	jmp    457e652 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xd2>
+ 457e64d:	48 f7 d8             	neg    %rax
+ 457e650:	31 d2                	xor    %edx,%edx
+ 457e652:	48 89 51 10          	mov    %rdx,0x10(%rcx)
+ 457e656:	48 8b 11             	mov    (%rcx),%rdx
+ 457e659:	48 39 51 08          	cmp    %rdx,0x8(%rcx)
+ 457e65d:	7e 06                	jle    457e665 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xe5>
+ 457e65f:	48 ff c2             	inc    %rdx
+ 457e662:	48 89 11             	mov    %rdx,(%rcx)
+ 457e665:	31 c0                	xor    %eax,%eax
+ 457e667:	31 d2                	xor    %edx,%edx
+ 457e669:	eb 03                	jmp    457e66e <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xee>
+ 457e66b:	48 ff c0             	inc    %rax
+ 457e66e:	48 39 01             	cmp    %rax,(%rcx)
+ 457e671:	7e 3c                	jle    457e6af <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x12f>
+ 457e673:	48 85 c0             	test   %rax,%rax
+ 457e676:	74 1a                	je     457e692 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x112>
+ 457e678:	48 8b 59 20          	mov    0x20(%rcx),%rbx
+ 457e67c:	48 8b 71 18          	mov    0x18(%rcx),%rsi
+ 457e680:	48 39 d8             	cmp    %rbx,%rax
+ 457e683:	0f 83 cb 00 00 00    	jae    457e754 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1d4>
+ 457e689:	48 8b 1c c6          	mov    (%rsi,%rax,8),%rbx
+ 457e68d:	48 39 d3             	cmp    %rdx,%rbx
+ 457e690:	7d d9                	jge    457e66b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xeb>
+ 457e692:	48 8b 51 20          	mov    0x20(%rcx),%rdx
+ 457e696:	48 8b 59 18          	mov    0x18(%rcx),%rbx
+ 457e69a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+ 457e6a0:	48 39 d0             	cmp    %rdx,%rax
+ 457e6a3:	0f 83 a3 00 00 00    	jae    457e74c <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1cc>
+ 457e6a9:	48 8b 14 c3          	mov    (%rbx,%rax,8),%rdx
+ 457e6ad:	eb bc                	jmp    457e66b <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0xeb>
+ 457e6af:	80 79 38 00          	cmpb   $0x0,0x38(%rcx)
+ 457e6b3:	0f 84 86 00 00 00    	je     457e73f <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base+0x1bf>
+ 457e6b9:	48 89 54 24 38       	mov    %rdx,0x38(%rsp)
+ 457e6be:	44 0f 11 7c 24 50    	movups %xmm15,0x50(%rsp)
+ 457e6c4:	44 0f 11 7c 24 60    	movups %xmm15,0x60(%rsp)
+ 457e6ca:	48 89 d0             	mov    %rdx,%rax
+ 457e6cd:	e8 0e f6 96 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 457e6d2:	48 8d 0d 47 c0 22 01 	lea    0x122c047(%rip),%rcx        # 57aa720 <type:int64@@Base>
+ 457e6d9:	48 89 4c 24 50       	mov    %rcx,0x50(%rsp)
+ 457e6de:	48 89 44 24 58       	mov    %rax,0x58(%rsp)
+ 457e6e3:	48 8b 8c 24 80 00 00 	mov    0x80(%rsp),%rcx
+ 457e6ea:	00 
+ 457e6eb:	48 8b 41 18          	mov    0x18(%rcx),%rax
+ 457e6ef:	48 8b 59 20          	mov    0x20(%rcx),%rbx
+ 457e6f3:	48 8b 49 28          	mov    0x28(%rcx),%rcx
+ 457e6f7:	e8 04 f7 96 fd       	call   1eede00 <runtime.convTslice@@Base>
+ 457e6fc:	48 8d 0d 1d 5a 1b 01 	lea    0x11b5a1d(%rip),%rcx        # 5734120 <type:[]int64@@Base>
+ 457e703:	48 89 4c 24 60       	mov    %rcx,0x60(%rsp)
+ 457e708:	48 89 44 24 68       	mov    %rax,0x68(%rsp)
+ 457e70d:	48 8b 1d 2c 0b 8b 03 	mov    0x38b0b2c(%rip),%rbx        # 7e2f240 <os.Stdout@@Base>
+ 457e714:	48 8d 05 05 6b 98 01 	lea    0x1986b05(%rip),%rax        # 5f05220 <go:itab.*os.File,io.Writer@@Base>
+ 457e71b:	48 8d 0d 9b 84 84 00 	lea    0x84849b(%rip),%rcx        # 4dc6bbd <_IO_stdin_used@@Base+0x193bbd>
+ 457e722:	bf 14 00 00 00       	mov    $0x14,%edi
+ 457e727:	48 8d 74 24 50       	lea    0x50(%rsp),%rsi
+ 457e72c:	41 b8 02 00 00 00    	mov    $0x2,%r8d
+ 457e732:	4d 89 c1             	mov    %r8,%r9
+ 457e735:	e8 a6 60 a7 fd       	call   1ff47e0 <fmt.Fprintf@@Base>
+ 457e73a:	48 8b 54 24 38       	mov    0x38(%rsp),%rdx
+ 457e73f:	48 89 d0             	mov    %rdx,%rax
+ 457e742:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+ 457e747:	48 83 c4 78          	add    $0x78,%rsp
+ 457e74b:	c3                   	ret
+ 457e74c:	48 89 d1             	mov    %rdx,%rcx
+ 457e74f:	e8 4c 83 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e754:	48 89 d9             	mov    %rbx,%rcx
+ 457e757:	e8 44 83 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e75c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 457e760:	e8 1b d0 99 fd       	call   1f1b780 <runtime.panicdivide@@Base>
+ 457e765:	48 89 f0             	mov    %rsi,%rax
+ 457e768:	e8 33 83 9d fd       	call   1f56aa0 <runtime.panicIndex@@Base>
+ 457e76d:	90                   	nop
+ 457e76e:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457e773:	48 89 5c 24 10       	mov    %rbx,0x10(%rsp)
+ 457e778:	e8 e3 5c 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457e77d:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457e782:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+ 457e787:	e9 f4 fd ff ff       	jmp    457e580 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*MovingMinimum).Sample@@Base>
+ 457e78c:	cc                   	int3
+ 457e78d:	cc                   	int3
+ 457e78e:	cc                   	int3
+ 457e78f:	cc                   	int3
+ 457e790:	cc                   	int3
+ 457e791:	cc                   	int3
+ 457e792:	cc                   	int3
+ 457e793:	cc                   	int3
+ 457e794:	cc                   	int3
+ 457e795:	cc                   	int3
+ 457e796:	cc                   	int3
+ 457e797:	cc                   	int3
+ 457e798:	cc                   	int3
+ 457e799:	cc                   	int3
+ 457e79a:	cc                   	int3
+ 457e79b:	cc                   	int3
+ 457e79c:	cc                   	int3
+ 457e79d:	cc                   	int3
+ 457e79e:	cc                   	int3
+ 457e79f:	cc                   	int3

@@ -1,0 +1,79 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start
+# addr 0x4b6caa0 size 224 (0xe0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b6caa0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base>:
+ 4b6caa0:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4b6caa4:	0f 86 ab 00 00 00    	jbe    4b6cb55 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base+0xb5>
+ 4b6caaa:	48 83 ec 20          	sub    $0x20,%rsp
+ 4b6caae:	48 89 6c 24 18       	mov    %rbp,0x18(%rsp)
+ 4b6cab3:	48 8d 6c 24 18       	lea    0x18(%rsp),%rbp
+ 4b6cab8:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4b6cabd:	0f 1f 00             	nopl   (%rax)
+ 4b6cac0:	e8 1b 01 00 00       	call   4b6cbe0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).configureTimecard@@Base>
+ 4b6cac5:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6caca:	48 8b 01             	mov    (%rcx),%rax
+ 4b6cacd:	48 85 c0             	test   %rax,%rax
+ 4b6cad0:	74 6b                	je     4b6cb3d <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base+0x9d>
+ 4b6cad2:	e8 69 f9 a3 ff       	call   45ac440 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).Start@@Base>
+ 4b6cad7:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6cadc:	48 8b 11             	mov    (%rcx),%rdx
+ 4b6cadf:	48 89 54 24 10       	mov    %rdx,0x10(%rsp)
+ 4b6cae4:	48 8d 05 d5 90 fe 00 	lea    0xfe90d5(%rip),%rax        # 5b55bc0 <type:MKOYm4mG@@Base>
+ 4b6caeb:	e8 f0 39 38 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4b6caf0:	48 8d 0d 89 00 00 00 	lea    0x89(%rip),%rcx        # 4b6cb80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start.func1@@Base>
+ 4b6caf7:	48 89 08             	mov    %rcx,(%rax)
+ 4b6cafa:	83 3d 5f ee 30 03 00 	cmpl   $0x0,0x330ee5f(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4b6cb01:	75 14                	jne    4b6cb17 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base+0x77>
+ 4b6cb03:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6cb08:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4b6cb0c:	48 8b 54 24 10       	mov    0x10(%rsp),%rdx
+ 4b6cb11:	48 89 50 10          	mov    %rdx,0x10(%rax)
+ 4b6cb15:	eb 1c                	jmp    4b6cb33 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base+0x93>
+ 4b6cb17:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4b6cb1b:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6cb20:	e8 db 9b 3e fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4b6cb25:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4b6cb29:	48 8b 54 24 10       	mov    0x10(%rsp),%rdx
+ 4b6cb2e:	e8 ed 9b 3e fd       	call   1f56720 <runtime.gcWriteBarrierDX@@Base>
+ 4b6cb33:	e8 28 c0 3b fd       	call   1f28b60 <runtime.newproc@@Base>
+ 4b6cb38:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4b6cb3d:	48 8b 41 10          	mov    0x10(%rcx),%rax
+ 4b6cb41:	48 85 c0             	test   %rax,%rax
+ 4b6cb44:	74 05                	je     4b6cb4b <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base+0xab>
+ 4b6cb46:	e8 35 c0 ff ff       	call   4b68b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client/mac.(*OCPTimecardMACClient).Start@@Base>
+ 4b6cb4b:	48 8b 6c 24 18       	mov    0x18(%rsp),%rbp
+ 4b6cb50:	48 83 c4 20          	add    $0x20,%rsp
+ 4b6cb54:	c3                   	ret
+ 4b6cb55:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4b6cb5a:	e8 01 79 3e fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b6cb5f:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4b6cb64:	e9 37 ff ff ff       	jmp    4b6caa0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/ocp_timecard/client.(*Client).Start@@Base>
+ 4b6cb69:	cc                   	int3
+ 4b6cb6a:	cc                   	int3
+ 4b6cb6b:	cc                   	int3
+ 4b6cb6c:	cc                   	int3
+ 4b6cb6d:	cc                   	int3
+ 4b6cb6e:	cc                   	int3
+ 4b6cb6f:	cc                   	int3
+ 4b6cb70:	cc                   	int3
+ 4b6cb71:	cc                   	int3
+ 4b6cb72:	cc                   	int3
+ 4b6cb73:	cc                   	int3
+ 4b6cb74:	cc                   	int3
+ 4b6cb75:	cc                   	int3
+ 4b6cb76:	cc                   	int3
+ 4b6cb77:	cc                   	int3
+ 4b6cb78:	cc                   	int3
+ 4b6cb79:	cc                   	int3
+ 4b6cb7a:	cc                   	int3
+ 4b6cb7b:	cc                   	int3
+ 4b6cb7c:	cc                   	int3
+ 4b6cb7d:	cc                   	int3
+ 4b6cb7e:	cc                   	int3
+ 4b6cb7f:	cc                   	int3

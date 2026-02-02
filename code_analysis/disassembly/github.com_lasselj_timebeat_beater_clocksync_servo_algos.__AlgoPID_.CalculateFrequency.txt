@@ -1,0 +1,124 @@
+# github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateFrequency
+# addr 0x457f360 size 416 (0x1a0)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+000000000457f360 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateFrequency@@Base>:
+ 457f360:	4c 8d 64 24 a0       	lea    -0x60(%rsp),%r12
+ 457f365:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 457f369:	0f 86 35 01 00 00    	jbe    457f4a4 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateFrequency@@Base+0x144>
+ 457f36f:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+ 457f376:	48 89 ac 24 d8 00 00 	mov    %rbp,0xd8(%rsp)
+ 457f37d:	00 
+ 457f37e:	48 8d ac 24 d8 00 00 	lea    0xd8(%rsp),%rbp
+ 457f385:	00 
+ 457f386:	48 89 bc 24 08 01 00 	mov    %rdi,0x108(%rsp)
+ 457f38d:	00 
+ 457f38e:	44 0f 11 7c 24 28    	movups %xmm15,0x28(%rsp)
+ 457f394:	48 89 fa             	mov    %rdi,%rdx
+ 457f397:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 457f39c:	48 8d 7f d0          	lea    -0x30(%rdi),%rdi
+ 457f3a0:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457f3a5:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457f3aa:	e8 21 7a 9d fd       	call   1f56dd0 <runtime.duffzero@@Base+0x150>
+ 457f3af:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457f3b3:	f2 4c 0f 2c c0       	cvttsd2si %xmm0,%r8
+ 457f3b8:	48 89 cf             	mov    %rcx,%rdi
+ 457f3bb:	48 89 d6             	mov    %rdx,%rsi
+ 457f3be:	48 89 d9             	mov    %rbx,%rcx
+ 457f3c1:	4c 89 c3             	mov    %r8,%rbx
+ 457f3c4:	e8 37 01 00 00       	call   457f500 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateNewFrequency@@Base>
+ 457f3c9:	48 89 84 24 80 00 00 	mov    %rax,0x80(%rsp)
+ 457f3d0:	00 
+ 457f3d1:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 457f3d8:	00 
+ 457f3d9:	48 89 8c 24 90 00 00 	mov    %rcx,0x90(%rsp)
+ 457f3e0:	00 
+ 457f3e1:	f2 0f 11 84 24 98 00 	movsd  %xmm0,0x98(%rsp)
+ 457f3e8:	00 00 
+ 457f3ea:	f2 0f 11 8c 24 a0 00 	movsd  %xmm1,0xa0(%rsp)
+ 457f3f1:	00 00 
+ 457f3f3:	f2 0f 11 94 24 a8 00 	movsd  %xmm2,0xa8(%rsp)
+ 457f3fa:	00 00 
+ 457f3fc:	48 89 bc 24 b0 00 00 	mov    %rdi,0xb0(%rsp)
+ 457f403:	00 
+ 457f404:	48 89 b4 24 b8 00 00 	mov    %rsi,0xb8(%rsp)
+ 457f40b:	00 
+ 457f40c:	4c 89 84 24 c0 00 00 	mov    %r8,0xc0(%rsp)
+ 457f413:	00 
+ 457f414:	44 88 8c 24 c8 00 00 	mov    %r9b,0xc8(%rsp)
+ 457f41b:	00 
+ 457f41c:	4c 89 94 24 d0 00 00 	mov    %r10,0xd0(%rsp)
+ 457f423:	00 
+ 457f424:	48 8b 94 24 80 00 00 	mov    0x80(%rsp),%rdx
+ 457f42b:	00 
+ 457f42c:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 457f431:	48 8d 7c 24 30       	lea    0x30(%rsp),%rdi
+ 457f436:	48 8d b4 24 88 00 00 	lea    0x88(%rsp),%rsi
+ 457f43d:	00 
+ 457f43e:	66 90                	xchg   %ax,%ax
+ 457f440:	48 89 6c 24 f0       	mov    %rbp,-0x10(%rsp)
+ 457f445:	48 8d 6c 24 f0       	lea    -0x10(%rsp),%rbp
+ 457f44a:	e8 eb 7c 9d fd       	call   1f5713a <runtime.duffcopy@@Base+0x33a>
+ 457f44f:	48 8b 6d 00          	mov    0x0(%rbp),%rbp
+ 457f453:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 457f458:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 457f45d:	48 8b 4c 24 38       	mov    0x38(%rsp),%rcx
+ 457f462:	f2 0f 10 44 24 40    	movsd  0x40(%rsp),%xmm0
+ 457f468:	f2 0f 10 4c 24 48    	movsd  0x48(%rsp),%xmm1
+ 457f46e:	f2 0f 10 54 24 50    	movsd  0x50(%rsp),%xmm2
+ 457f474:	48 8b 7c 24 58       	mov    0x58(%rsp),%rdi
+ 457f479:	48 8b 74 24 60       	mov    0x60(%rsp),%rsi
+ 457f47e:	4c 8b 44 24 68       	mov    0x68(%rsp),%r8
+ 457f483:	44 0f b6 4c 24 70    	movzbl 0x70(%rsp),%r9d
+ 457f489:	4c 8b 54 24 78       	mov    0x78(%rsp),%r10
+ 457f48e:	41 bb 02 00 00 00    	mov    $0x2,%r11d
+ 457f494:	48 8b ac 24 d8 00 00 	mov    0xd8(%rsp),%rbp
+ 457f49b:	00 
+ 457f49c:	48 81 c4 e0 00 00 00 	add    $0xe0,%rsp
+ 457f4a3:	c3                   	ret
+ 457f4a4:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 457f4a9:	f2 0f 11 44 24 10    	movsd  %xmm0,0x10(%rsp)
+ 457f4af:	48 89 5c 24 18       	mov    %rbx,0x18(%rsp)
+ 457f4b4:	48 89 4c 24 20       	mov    %rcx,0x20(%rsp)
+ 457f4b9:	48 89 7c 24 28       	mov    %rdi,0x28(%rsp)
+ 457f4be:	66 90                	xchg   %ax,%ax
+ 457f4c0:	e8 9b 4f 9d fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 457f4c5:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 457f4ca:	f2 0f 10 44 24 10    	movsd  0x10(%rsp),%xmm0
+ 457f4d0:	48 8b 5c 24 18       	mov    0x18(%rsp),%rbx
+ 457f4d5:	48 8b 4c 24 20       	mov    0x20(%rsp),%rcx
+ 457f4da:	48 8b 7c 24 28       	mov    0x28(%rsp),%rdi
+ 457f4df:	90                   	nop
+ 457f4e0:	e9 7b fe ff ff       	jmp    457f360 <github.com/lasselj/timebeat/beater/clocksync/servo/algos.(*AlgoPID).CalculateFrequency@@Base>
+ 457f4e5:	cc                   	int3
+ 457f4e6:	cc                   	int3
+ 457f4e7:	cc                   	int3
+ 457f4e8:	cc                   	int3
+ 457f4e9:	cc                   	int3
+ 457f4ea:	cc                   	int3
+ 457f4eb:	cc                   	int3
+ 457f4ec:	cc                   	int3
+ 457f4ed:	cc                   	int3
+ 457f4ee:	cc                   	int3
+ 457f4ef:	cc                   	int3
+ 457f4f0:	cc                   	int3
+ 457f4f1:	cc                   	int3
+ 457f4f2:	cc                   	int3
+ 457f4f3:	cc                   	int3
+ 457f4f4:	cc                   	int3
+ 457f4f5:	cc                   	int3
+ 457f4f6:	cc                   	int3
+ 457f4f7:	cc                   	int3
+ 457f4f8:	cc                   	int3
+ 457f4f9:	cc                   	int3
+ 457f4fa:	cc                   	int3
+ 457f4fb:	cc                   	int3
+ 457f4fc:	cc                   	int3
+ 457f4fd:	cc                   	int3
+ 457f4fe:	cc                   	int3
+ 457f4ff:	cc                   	int3

@@ -1,0 +1,1192 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats
+# addr 0x4b50b40 size 4640 (0x1220)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004b50b40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base>:
+ 4b50b40:	4c 8d a4 24 00 ff ff 	lea    -0x100(%rsp),%r12
+ 4b50b47:	ff 
+ 4b50b48:	4d 3b 66 10          	cmp    0x10(%r14),%r12
+ 4b50b4c:	0f 86 fa 11 00 00    	jbe    4b51d4c <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x120c>
+ 4b50b52:	48 81 ec 80 01 00 00 	sub    $0x180,%rsp
+ 4b50b59:	48 89 ac 24 78 01 00 	mov    %rbp,0x178(%rsp)
+ 4b50b60:	00 
+ 4b50b61:	48 8d ac 24 78 01 00 	lea    0x178(%rsp),%rbp
+ 4b50b68:	00 
+ 4b50b69:	48 8b 0d f0 b5 2d 03 	mov    0x32db5f0(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b50b70:	48 8b 15 f1 b5 2d 03 	mov    0x32db5f1(%rip),%rdx        # 7e2c168 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.ptpsquaredState@@Base>
+ 4b50b77:	48 89 94 24 d0 00 00 	mov    %rdx,0xd0(%rsp)
+ 4b50b7e:	00 
+ 4b50b7f:	48 8b 41 40          	mov    0x40(%rcx),%rax
+ 4b50b83:	e8 78 00 01 00       	call   4b60c00 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).NumberOfClients@@Base>
+ 4b50b88:	48 89 84 24 98 00 00 	mov    %rax,0x98(%rsp)
+ 4b50b8f:	00 
+ 4b50b90:	48 8b 0d c9 b5 2d 03 	mov    0x32db5c9(%rip),%rcx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b50b97:	48 8b 49 40          	mov    0x40(%rcx),%rcx
+ 4b50b9b:	48 89 c8             	mov    %rcx,%rax
+ 4b50b9e:	66 90                	xchg   %ax,%ax
+ 4b50ba0:	e8 bb 01 01 00       	call   4b60d60 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.(*PeerHandler).NumberOfServers@@Base>
+ 4b50ba5:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+ 4b50baa:	44 0f 11 bc 24 58 01 	movups %xmm15,0x158(%rsp)
+ 4b50bb1:	00 00 
+ 4b50bb3:	44 0f 11 bc 24 68 01 	movups %xmm15,0x168(%rsp)
+ 4b50bba:	00 00 
+ 4b50bbc:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4b50bc1:	31 c9                	xor    %ecx,%ecx
+ 4b50bc3:	31 ff                	xor    %edi,%edi
+ 4b50bc5:	48 89 fe             	mov    %rdi,%rsi
+ 4b50bc8:	48 8d 05 07 27 0e 00 	lea    0xe2707(%rip),%rax        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 4b50bcf:	e8 2c 3d 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b50bd4:	90                   	nop
+ 4b50bd5:	48 8b 8c 24 58 01 00 	mov    0x158(%rsp),%rcx
+ 4b50bdc:	00 
+ 4b50bdd:	0f 1f 00             	nopl   (%rax)
+ 4b50be0:	48 85 c9             	test   %rcx,%rcx
+ 4b50be3:	74 12                	je     4b50bf7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xb7>
+ 4b50be5:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b50bec:	00 
+ 4b50bed:	48 39 d1             	cmp    %rdx,%rcx
+ 4b50bf0:	74 15                	je     4b50c07 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xc7>
+ 4b50bf2:	e9 41 11 00 00       	jmp    4b51d38 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x11f8>
+ 4b50bf7:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b50bfe:	00 
+ 4b50bff:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b50c06:	00 
+ 4b50c07:	4c 8b 84 24 68 01 00 	mov    0x168(%rsp),%r8
+ 4b50c0e:	00 
+ 4b50c0f:	4e 8d 0c 03          	lea    (%rbx,%r8,1),%r9
+ 4b50c13:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b50c1a:	00 
+ 4b50c1b:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b50c22:	00 
+ 4b50c23:	4c 39 c9             	cmp    %r9,%rcx
+ 4b50c26:	73 4b                	jae    4b50c73 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x133>
+ 4b50c28:	4c 89 84 24 a8 00 00 	mov    %r8,0xa8(%rsp)
+ 4b50c2f:	00 
+ 4b50c30:	48 89 9c 24 90 00 00 	mov    %rbx,0x90(%rsp)
+ 4b50c37:	00 
+ 4b50c38:	48 89 84 24 38 01 00 	mov    %rax,0x138(%rsp)
+ 4b50c3f:	00 
+ 4b50c40:	4c 89 d0             	mov    %r10,%rax
+ 4b50c43:	48 89 df             	mov    %rbx,%rdi
+ 4b50c46:	48 8d 35 13 dd c5 00 	lea    0xc5dd13(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b50c4d:	4c 89 cb             	mov    %r9,%rbx
+ 4b50c50:	e8 6b 58 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b50c55:	4c 8b 84 24 a8 00 00 	mov    0xa8(%rsp),%r8
+ 4b50c5c:	00 
+ 4b50c5d:	49 89 c2             	mov    %rax,%r10
+ 4b50c60:	49 89 d9             	mov    %rbx,%r9
+ 4b50c63:	48 8b 84 24 38 01 00 	mov    0x138(%rsp),%rax
+ 4b50c6a:	00 
+ 4b50c6b:	48 8b 9c 24 90 00 00 	mov    0x90(%rsp),%rbx
+ 4b50c72:	00 
+ 4b50c73:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b50c7a:	00 
+ 4b50c7b:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b50c82:	00 
+ 4b50c83:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b50c8a:	00 
+ 4b50c8b:	4b 8d 14 02          	lea    (%r10,%r8,1),%rdx
+ 4b50c8f:	48 89 c6             	mov    %rax,%rsi
+ 4b50c92:	48 89 d0             	mov    %rdx,%rax
+ 4b50c95:	48 89 df             	mov    %rbx,%rdi
+ 4b50c98:	48 89 f3             	mov    %rsi,%rbx
+ 4b50c9b:	48 89 f9             	mov    %rdi,%rcx
+ 4b50c9e:	66 90                	xchg   %ax,%ax
+ 4b50ca0:	e8 fb 67 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b50ca5:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b50cac:	00 
+ 4b50cad:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b50cb4:	00 
+ 4b50cb5:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b50cbc:	00 
+ 4b50cbd:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b50cc4:	00 
+ 4b50cc5:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b50ccc:	00 
+ 4b50ccd:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b50cd4:	00 
+ 4b50cd5:	48 8b 15 84 b4 2d 03 	mov    0x32db484(%rip),%rdx        # 7e2c160 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.controller@@Base>
+ 4b50cdc:	48 8b 52 30          	mov    0x30(%rdx),%rdx
+ 4b50ce0:	48 8b 32             	mov    (%rdx),%rsi
+ 4b50ce3:	48 8b 42 08          	mov    0x8(%rdx),%rax
+ 4b50ce7:	48 8b 56 40          	mov    0x40(%rsi),%rdx
+ 4b50ceb:	ff d2                	call   *%rdx
+ 4b50ced:	48 89 d9             	mov    %rbx,%rcx
+ 4b50cf0:	48 89 c3             	mov    %rax,%rbx
+ 4b50cf3:	48 8d 84 24 b0 00 00 	lea    0xb0(%rsp),%rax
+ 4b50cfa:	00 
+ 4b50cfb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b50d00:	e8 bb 9b 3e fd       	call   1f3a8c0 <runtime.stringtoslicebyte@@Base>
+ 4b50d05:	90                   	nop
+ 4b50d06:	48 8b 3d 3b bb 2d 03 	mov    0x32dbb3b(%rip),%rdi        # 7e2c848 <github.com/mr-tron/base58/base58.BTCAlphabet@@Base>
+ 4b50d0d:	e8 ce 0e aa ff       	call   45f1be0 <github.com/mr-tron/base58/base58.FastBase58EncodingAlphabet@@Base>
+ 4b50d12:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b50d19:	00 00 
+ 4b50d1b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b50d20:	e8 3b d0 39 fd       	call   1eedd60 <runtime.convTstring@@Base>
+ 4b50d25:	48 8d 15 74 d9 c5 00 	lea    0xc5d974(%rip),%rdx        # 57ae6a0 <type:string@@Base>
+ 4b50d2c:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b50d33:	00 
+ 4b50d34:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b50d3b:	00 
+ 4b50d3c:	48 8d 05 85 0f 18 00 	lea    0x180f85(%rip),%rax        # 4cd1cc8 <_IO_stdin_used@@Base+0x9ecc8>
+ 4b50d43:	bb 0e 00 00 00       	mov    $0xe,%ebx
+ 4b50d48:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b50d4f:	00 
+ 4b50d50:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b50d55:	48 89 fe             	mov    %rdi,%rsi
+ 4b50d58:	e8 a3 3b 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b50d5d:	90                   	nop
+ 4b50d5e:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b50d65:	00 
+ 4b50d66:	48 85 d2             	test   %rdx,%rdx
+ 4b50d69:	74 12                	je     4b50d7d <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x23d>
+ 4b50d6b:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b50d72:	00 
+ 4b50d73:	4c 39 c2             	cmp    %r8,%rdx
+ 4b50d76:	74 1d                	je     4b50d95 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x255>
+ 4b50d78:	e9 a8 0f 00 00       	jmp    4b51d25 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x11e5>
+ 4b50d7d:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b50d84:	00 
+ 4b50d85:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b50d8c:	00 
+ 4b50d8d:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b50d94:	00 
+ 4b50d95:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b50d9c:	00 
+ 4b50d9d:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 4b50da1:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b50da8:	00 
+ 4b50da9:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b50db0:	00 
+ 4b50db1:	4c 39 c9             	cmp    %r9,%rcx
+ 4b50db4:	73 4d                	jae    4b50e03 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x2c3>
+ 4b50db6:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b50dbd:	00 
+ 4b50dbe:	48 89 9c 24 88 00 00 	mov    %rbx,0x88(%rsp)
+ 4b50dc5:	00 
+ 4b50dc6:	48 89 84 24 30 01 00 	mov    %rax,0x130(%rsp)
+ 4b50dcd:	00 
+ 4b50dce:	4c 89 d0             	mov    %r10,%rax
+ 4b50dd1:	48 89 df             	mov    %rbx,%rdi
+ 4b50dd4:	48 8d 35 85 db c5 00 	lea    0xc5db85(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b50ddb:	4c 89 cb             	mov    %r9,%rbx
+ 4b50dde:	66 90                	xchg   %ax,%ax
+ 4b50de0:	e8 db 56 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b50de5:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b50dec:	00 
+ 4b50ded:	49 89 c2             	mov    %rax,%r10
+ 4b50df0:	49 89 d9             	mov    %rbx,%r9
+ 4b50df3:	48 8b 84 24 30 01 00 	mov    0x130(%rsp),%rax
+ 4b50dfa:	00 
+ 4b50dfb:	48 8b 9c 24 88 00 00 	mov    0x88(%rsp),%rbx
+ 4b50e02:	00 
+ 4b50e03:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b50e0a:	00 
+ 4b50e0b:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b50e12:	00 
+ 4b50e13:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b50e1a:	00 
+ 4b50e1b:	4c 01 d2             	add    %r10,%rdx
+ 4b50e1e:	48 89 c6             	mov    %rax,%rsi
+ 4b50e21:	48 89 d0             	mov    %rdx,%rax
+ 4b50e24:	48 89 df             	mov    %rbx,%rdi
+ 4b50e27:	48 89 f3             	mov    %rsi,%rbx
+ 4b50e2a:	48 89 f9             	mov    %rdi,%rcx
+ 4b50e2d:	e8 6e 66 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b50e32:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b50e39:	00 
+ 4b50e3a:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b50e41:	00 
+ 4b50e42:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b50e49:	00 
+ 4b50e4a:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b50e51:	00 
+ 4b50e52:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b50e59:	00 
+ 4b50e5a:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b50e61:	00 
+ 4b50e62:	e8 79 2f 01 00       	call   4b63de0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetScoreStore@@Base>
+ 4b50e67:	84 00                	test   %al,(%rax)
+ 4b50e69:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b50e70:	00 00 
+ 4b50e72:	f3 0f 10 40 08       	movss  0x8(%rax),%xmm0
+ 4b50e77:	66 0f 7e c0          	movd   %xmm0,%eax
+ 4b50e7b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b50e80:	e8 db cd 39 fd       	call   1eedc60 <runtime.convT32@@Base>
+ 4b50e85:	48 8d 15 94 16 c1 00 	lea    0xc11694(%rip),%rdx        # 5762520 <type:float32@@Base>
+ 4b50e8c:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b50e93:	00 
+ 4b50e94:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b50e9b:	00 
+ 4b50e9c:	48 8d 05 69 eb 28 00 	lea    0x28eb69(%rip),%rax        # 4ddfa0c <_IO_stdin_used@@Base+0x1aca0c>
+ 4b50ea3:	bb 1a 00 00 00       	mov    $0x1a,%ebx
+ 4b50ea8:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b50eaf:	00 
+ 4b50eb0:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b50eb5:	48 89 fe             	mov    %rdi,%rsi
+ 4b50eb8:	e8 43 3a 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b50ebd:	90                   	nop
+ 4b50ebe:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b50ec5:	00 
+ 4b50ec6:	48 85 d2             	test   %rdx,%rdx
+ 4b50ec9:	74 12                	je     4b50edd <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x39d>
+ 4b50ecb:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b50ed2:	00 
+ 4b50ed3:	4c 39 c2             	cmp    %r8,%rdx
+ 4b50ed6:	74 1d                	je     4b50ef5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x3b5>
+ 4b50ed8:	e9 34 0e 00 00       	jmp    4b51d11 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x11d1>
+ 4b50edd:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b50ee4:	00 
+ 4b50ee5:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b50eec:	00 
+ 4b50eed:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b50ef4:	00 
+ 4b50ef5:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b50efc:	00 
+ 4b50efd:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 4b50f01:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b50f08:	00 
+ 4b50f09:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b50f10:	00 
+ 4b50f11:	4c 39 c9             	cmp    %r9,%rcx
+ 4b50f14:	73 4d                	jae    4b50f63 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x423>
+ 4b50f16:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b50f1d:	00 
+ 4b50f1e:	48 89 9c 24 80 00 00 	mov    %rbx,0x80(%rsp)
+ 4b50f25:	00 
+ 4b50f26:	48 89 84 24 28 01 00 	mov    %rax,0x128(%rsp)
+ 4b50f2d:	00 
+ 4b50f2e:	4c 89 d0             	mov    %r10,%rax
+ 4b50f31:	48 89 df             	mov    %rbx,%rdi
+ 4b50f34:	48 8d 35 25 da c5 00 	lea    0xc5da25(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b50f3b:	4c 89 cb             	mov    %r9,%rbx
+ 4b50f3e:	66 90                	xchg   %ax,%ax
+ 4b50f40:	e8 7b 55 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b50f45:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b50f4c:	00 
+ 4b50f4d:	49 89 c2             	mov    %rax,%r10
+ 4b50f50:	49 89 d9             	mov    %rbx,%r9
+ 4b50f53:	48 8b 84 24 28 01 00 	mov    0x128(%rsp),%rax
+ 4b50f5a:	00 
+ 4b50f5b:	48 8b 9c 24 80 00 00 	mov    0x80(%rsp),%rbx
+ 4b50f62:	00 
+ 4b50f63:	4c 89 8c 24 a8 00 00 	mov    %r9,0xa8(%rsp)
+ 4b50f6a:	00 
+ 4b50f6b:	48 89 8c 24 a0 00 00 	mov    %rcx,0xa0(%rsp)
+ 4b50f72:	00 
+ 4b50f73:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b50f7a:	00 
+ 4b50f7b:	4c 01 d2             	add    %r10,%rdx
+ 4b50f7e:	48 89 c6             	mov    %rax,%rsi
+ 4b50f81:	48 89 d0             	mov    %rdx,%rax
+ 4b50f84:	48 89 df             	mov    %rbx,%rdi
+ 4b50f87:	48 89 f3             	mov    %rsi,%rbx
+ 4b50f8a:	48 89 f9             	mov    %rdi,%rcx
+ 4b50f8d:	e8 0e 65 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b50f92:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b50f99:	00 
+ 4b50f9a:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b50fa1:	00 
+ 4b50fa2:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b50fa9:	00 
+ 4b50faa:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b50fb1:	00 
+ 4b50fb2:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b50fb9:	00 
+ 4b50fba:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b50fc1:	00 
+ 4b50fc2:	48 8d 05 0d 23 0e 00 	lea    0xe230d(%rip),%rax        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 4b50fc9:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4b50fce:	31 c9                	xor    %ecx,%ecx
+ 4b50fd0:	31 ff                	xor    %edi,%edi
+ 4b50fd2:	48 89 fe             	mov    %rdi,%rsi
+ 4b50fd5:	e8 26 39 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b50fda:	90                   	nop
+ 4b50fdb:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b50fe2:	00 
+ 4b50fe3:	48 85 d2             	test   %rdx,%rdx
+ 4b50fe6:	74 12                	je     4b50ffa <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x4ba>
+ 4b50fe8:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b50fef:	00 
+ 4b50ff0:	4c 39 c2             	cmp    %r8,%rdx
+ 4b50ff3:	74 1d                	je     4b51012 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x4d2>
+ 4b50ff5:	e9 04 0d 00 00       	jmp    4b51cfe <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x11be>
+ 4b50ffa:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51001:	00 
+ 4b51002:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51009:	00 
+ 4b5100a:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51011:	00 
+ 4b51012:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51019:	00 
+ 4b5101a:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b5101e:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51025:	00 
+ 4b51026:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b5102d:	00 
+ 4b5102e:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51031:	73 45                	jae    4b51078 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x538>
+ 4b51033:	48 89 5c 24 78       	mov    %rbx,0x78(%rsp)
+ 4b51038:	48 89 84 24 20 01 00 	mov    %rax,0x120(%rsp)
+ 4b5103f:	00 
+ 4b51040:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51047:	00 
+ 4b51048:	4c 89 d0             	mov    %r10,%rax
+ 4b5104b:	48 89 df             	mov    %rbx,%rdi
+ 4b5104e:	48 8d 35 0b d9 c5 00 	lea    0xc5d90b(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51055:	4c 89 cb             	mov    %r9,%rbx
+ 4b51058:	e8 63 54 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b5105d:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51064:	00 
+ 4b51065:	49 89 c2             	mov    %rax,%r10
+ 4b51068:	49 89 d9             	mov    %rbx,%r9
+ 4b5106b:	48 8b 84 24 20 01 00 	mov    0x120(%rsp),%rax
+ 4b51072:	00 
+ 4b51073:	48 8b 5c 24 78       	mov    0x78(%rsp),%rbx
+ 4b51078:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b5107f:	00 
+ 4b51080:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b51087:	00 
+ 4b51088:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b5108f:	00 
+ 4b51090:	4c 01 d2             	add    %r10,%rdx
+ 4b51093:	48 89 c6             	mov    %rax,%rsi
+ 4b51096:	48 89 d0             	mov    %rdx,%rax
+ 4b51099:	48 89 df             	mov    %rbx,%rdi
+ 4b5109c:	48 89 f3             	mov    %rsi,%rbx
+ 4b5109f:	48 89 f9             	mov    %rdi,%rcx
+ 4b510a2:	e8 f9 63 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b510a7:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b510ae:	00 
+ 4b510af:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b510b6:	00 
+ 4b510b7:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b510be:	00 
+ 4b510bf:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b510c6:	00 
+ 4b510c7:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b510ce:	00 
+ 4b510cf:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b510d6:	00 
+ 4b510d7:	48 8d 05 30 dd 2c 00 	lea    0x2cdd30(%rip),%rax        # 4e1ee0e <_IO_stdin_used@@Base+0x1ebe0e>
+ 4b510de:	bb 2a 00 00 00       	mov    $0x2a,%ebx
+ 4b510e3:	31 c9                	xor    %ecx,%ecx
+ 4b510e5:	31 ff                	xor    %edi,%edi
+ 4b510e7:	48 89 fe             	mov    %rdi,%rsi
+ 4b510ea:	e8 11 38 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b510ef:	90                   	nop
+ 4b510f0:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b510f7:	00 
+ 4b510f8:	48 85 d2             	test   %rdx,%rdx
+ 4b510fb:	74 12                	je     4b5110f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x5cf>
+ 4b510fd:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51104:	00 
+ 4b51105:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51108:	74 1d                	je     4b51127 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x5e7>
+ 4b5110a:	e9 dc 0b 00 00       	jmp    4b51ceb <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x11ab>
+ 4b5110f:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51116:	00 
+ 4b51117:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b5111e:	00 
+ 4b5111f:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51126:	00 
+ 4b51127:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b5112e:	00 
+ 4b5112f:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 4b51133:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b5113a:	00 
+ 4b5113b:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b51142:	00 
+ 4b51143:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51146:	73 45                	jae    4b5118d <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x64d>
+ 4b51148:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b5114f:	00 
+ 4b51150:	48 89 5c 24 70       	mov    %rbx,0x70(%rsp)
+ 4b51155:	48 89 84 24 18 01 00 	mov    %rax,0x118(%rsp)
+ 4b5115c:	00 
+ 4b5115d:	4c 89 d0             	mov    %r10,%rax
+ 4b51160:	48 89 df             	mov    %rbx,%rdi
+ 4b51163:	48 8d 35 f6 d7 c5 00 	lea    0xc5d7f6(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b5116a:	4c 89 cb             	mov    %r9,%rbx
+ 4b5116d:	e8 4e 53 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b51172:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51179:	00 
+ 4b5117a:	49 89 c2             	mov    %rax,%r10
+ 4b5117d:	49 89 d9             	mov    %rbx,%r9
+ 4b51180:	48 8b 84 24 18 01 00 	mov    0x118(%rsp),%rax
+ 4b51187:	00 
+ 4b51188:	48 8b 5c 24 70       	mov    0x70(%rsp),%rbx
+ 4b5118d:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b51194:	00 
+ 4b51195:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b5119c:	00 
+ 4b5119d:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b511a4:	00 
+ 4b511a5:	4c 01 d2             	add    %r10,%rdx
+ 4b511a8:	48 89 c6             	mov    %rax,%rsi
+ 4b511ab:	48 89 d0             	mov    %rdx,%rax
+ 4b511ae:	48 89 df             	mov    %rbx,%rdi
+ 4b511b1:	48 89 f3             	mov    %rsi,%rbx
+ 4b511b4:	48 89 f9             	mov    %rdi,%rcx
+ 4b511b7:	e8 e4 62 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b511bc:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b511c3:	00 
+ 4b511c4:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b511cb:	00 
+ 4b511cc:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b511d3:	00 
+ 4b511d4:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b511db:	00 
+ 4b511dc:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b511e3:	00 
+ 4b511e4:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b511eb:	00 
+ 4b511ec:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b511f3:	00 00 
+ 4b511f5:	48 8b 44 24 28       	mov    0x28(%rsp),%rax
+ 4b511fa:	e8 e1 ca 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b511ff:	48 8d 15 5a 94 c5 00 	lea    0xc5945a(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b51206:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b5120d:	00 
+ 4b5120e:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b51215:	00 
+ 4b51216:	48 8d 05 3f 5e 29 00 	lea    0x295e3f(%rip),%rax        # 4de705c <_IO_stdin_used@@Base+0x1b405c>
+ 4b5121d:	bb 1c 00 00 00       	mov    $0x1c,%ebx
+ 4b51222:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b51229:	00 
+ 4b5122a:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b5122f:	48 89 fe             	mov    %rdi,%rsi
+ 4b51232:	e8 c9 36 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51237:	90                   	nop
+ 4b51238:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b5123f:	00 
+ 4b51240:	48 85 d2             	test   %rdx,%rdx
+ 4b51243:	74 12                	je     4b51257 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x717>
+ 4b51245:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b5124c:	00 
+ 4b5124d:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51250:	74 1d                	je     4b5126f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x72f>
+ 4b51252:	e9 81 0a 00 00       	jmp    4b51cd8 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1198>
+ 4b51257:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b5125e:	00 
+ 4b5125f:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51266:	00 
+ 4b51267:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b5126e:	00 
+ 4b5126f:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51276:	00 
+ 4b51277:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b5127b:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51282:	00 
+ 4b51283:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b5128a:	00 
+ 4b5128b:	4c 39 c9             	cmp    %r9,%rcx
+ 4b5128e:	73 45                	jae    4b512d5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x795>
+ 4b51290:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+ 4b51295:	48 89 84 24 10 01 00 	mov    %rax,0x110(%rsp)
+ 4b5129c:	00 
+ 4b5129d:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b512a4:	00 
+ 4b512a5:	4c 89 d0             	mov    %r10,%rax
+ 4b512a8:	48 89 df             	mov    %rbx,%rdi
+ 4b512ab:	48 8d 35 ae d6 c5 00 	lea    0xc5d6ae(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b512b2:	4c 89 cb             	mov    %r9,%rbx
+ 4b512b5:	e8 06 52 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b512ba:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b512c1:	00 
+ 4b512c2:	49 89 c2             	mov    %rax,%r10
+ 4b512c5:	49 89 d9             	mov    %rbx,%r9
+ 4b512c8:	48 8b 84 24 10 01 00 	mov    0x110(%rsp),%rax
+ 4b512cf:	00 
+ 4b512d0:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+ 4b512d5:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b512dc:	00 
+ 4b512dd:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b512e4:	00 
+ 4b512e5:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b512ec:	00 
+ 4b512ed:	4c 01 d2             	add    %r10,%rdx
+ 4b512f0:	48 89 c6             	mov    %rax,%rsi
+ 4b512f3:	48 89 d0             	mov    %rdx,%rax
+ 4b512f6:	48 89 df             	mov    %rbx,%rdi
+ 4b512f9:	48 89 f3             	mov    %rsi,%rbx
+ 4b512fc:	48 89 f9             	mov    %rdi,%rcx
+ 4b512ff:	90                   	nop
+ 4b51300:	e8 9b 61 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b51305:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b5130c:	00 
+ 4b5130d:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b51314:	00 
+ 4b51315:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b5131c:	00 
+ 4b5131d:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51324:	00 
+ 4b51325:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b5132c:	00 
+ 4b5132d:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51334:	00 
+ 4b51335:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b5133c:	00 00 
+ 4b5133e:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4b51345:	00 
+ 4b51346:	48 8b 32             	mov    (%rdx),%rsi
+ 4b51349:	48 8b 46 08          	mov    0x8(%rsi),%rax
+ 4b5134d:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 4b51352:	48 29 f0             	sub    %rsi,%rax
+ 4b51355:	e8 86 c9 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b5135a:	48 8d 15 ff 92 c5 00 	lea    0xc592ff(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b51361:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b51368:	00 
+ 4b51369:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b51370:	00 
+ 4b51371:	48 8d 05 47 2d 29 00 	lea    0x292d47(%rip),%rax        # 4de40bf <_IO_stdin_used@@Base+0x1b10bf>
+ 4b51378:	bb 1b 00 00 00       	mov    $0x1b,%ebx
+ 4b5137d:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b51384:	00 
+ 4b51385:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b5138a:	48 89 fe             	mov    %rdi,%rsi
+ 4b5138d:	e8 6e 35 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51392:	90                   	nop
+ 4b51393:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b5139a:	00 
+ 4b5139b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b513a0:	48 85 d2             	test   %rdx,%rdx
+ 4b513a3:	74 12                	je     4b513b7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x877>
+ 4b513a5:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b513ac:	00 
+ 4b513ad:	4c 39 c2             	cmp    %r8,%rdx
+ 4b513b0:	74 1d                	je     4b513cf <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x88f>
+ 4b513b2:	e9 0e 09 00 00       	jmp    4b51cc5 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1185>
+ 4b513b7:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b513be:	00 
+ 4b513bf:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b513c6:	00 
+ 4b513c7:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b513ce:	00 
+ 4b513cf:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b513d6:	00 
+ 4b513d7:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b513db:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b513e2:	00 
+ 4b513e3:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b513ea:	00 
+ 4b513eb:	4c 39 c9             	cmp    %r9,%rcx
+ 4b513ee:	73 45                	jae    4b51435 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x8f5>
+ 4b513f0:	48 89 5c 24 60       	mov    %rbx,0x60(%rsp)
+ 4b513f5:	48 89 84 24 08 01 00 	mov    %rax,0x108(%rsp)
+ 4b513fc:	00 
+ 4b513fd:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51404:	00 
+ 4b51405:	4c 89 d0             	mov    %r10,%rax
+ 4b51408:	48 89 df             	mov    %rbx,%rdi
+ 4b5140b:	48 8d 35 4e d5 c5 00 	lea    0xc5d54e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51412:	4c 89 cb             	mov    %r9,%rbx
+ 4b51415:	e8 a6 50 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b5141a:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51421:	00 
+ 4b51422:	49 89 c2             	mov    %rax,%r10
+ 4b51425:	49 89 d9             	mov    %rbx,%r9
+ 4b51428:	48 8b 84 24 08 01 00 	mov    0x108(%rsp),%rax
+ 4b5142f:	00 
+ 4b51430:	48 8b 5c 24 60       	mov    0x60(%rsp),%rbx
+ 4b51435:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b5143c:	00 
+ 4b5143d:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b51444:	00 
+ 4b51445:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b5144c:	00 
+ 4b5144d:	4c 01 d2             	add    %r10,%rdx
+ 4b51450:	48 89 c6             	mov    %rax,%rsi
+ 4b51453:	48 89 d0             	mov    %rdx,%rax
+ 4b51456:	48 89 df             	mov    %rbx,%rdi
+ 4b51459:	48 89 f3             	mov    %rsi,%rbx
+ 4b5145c:	48 89 f9             	mov    %rdi,%rcx
+ 4b5145f:	90                   	nop
+ 4b51460:	e8 3b 60 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b51465:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b5146c:	00 
+ 4b5146d:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b51474:	00 
+ 4b51475:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b5147c:	00 
+ 4b5147d:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51484:	00 
+ 4b51485:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b5148c:	00 
+ 4b5148d:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51494:	00 
+ 4b51495:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b5149c:	00 00 
+ 4b5149e:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4b514a5:	00 
+ 4b514a6:	48 8b 32             	mov    (%rdx),%rsi
+ 4b514a9:	48 8b 46 08          	mov    0x8(%rsi),%rax
+ 4b514ad:	e8 2e c8 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b514b2:	48 8d 15 a7 91 c5 00 	lea    0xc591a7(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b514b9:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b514c0:	00 
+ 4b514c1:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b514c8:	00 
+ 4b514c9:	48 8d 05 73 67 18 00 	lea    0x186773(%rip),%rax        # 4cd7c43 <_IO_stdin_used@@Base+0xa4c43>
+ 4b514d0:	bb 0f 00 00 00       	mov    $0xf,%ebx
+ 4b514d5:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b514dc:	00 
+ 4b514dd:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b514e2:	48 89 fe             	mov    %rdi,%rsi
+ 4b514e5:	e8 16 34 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b514ea:	90                   	nop
+ 4b514eb:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b514f2:	00 
+ 4b514f3:	48 85 d2             	test   %rdx,%rdx
+ 4b514f6:	74 12                	je     4b5150a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x9ca>
+ 4b514f8:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b514ff:	00 
+ 4b51500:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51503:	74 1d                	je     4b51522 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x9e2>
+ 4b51505:	e9 a7 07 00 00       	jmp    4b51cb1 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1171>
+ 4b5150a:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51511:	00 
+ 4b51512:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51519:	00 
+ 4b5151a:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51521:	00 
+ 4b51522:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51529:	00 
+ 4b5152a:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b5152e:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51535:	00 
+ 4b51536:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b5153d:	00 
+ 4b5153e:	66 90                	xchg   %ax,%ax
+ 4b51540:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51543:	73 45                	jae    4b5158a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xa4a>
+ 4b51545:	48 89 5c 24 58       	mov    %rbx,0x58(%rsp)
+ 4b5154a:	48 89 84 24 00 01 00 	mov    %rax,0x100(%rsp)
+ 4b51551:	00 
+ 4b51552:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51559:	00 
+ 4b5155a:	4c 89 d0             	mov    %r10,%rax
+ 4b5155d:	48 89 df             	mov    %rbx,%rdi
+ 4b51560:	48 8d 35 f9 d3 c5 00 	lea    0xc5d3f9(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51567:	4c 89 cb             	mov    %r9,%rbx
+ 4b5156a:	e8 51 4f 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b5156f:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51576:	00 
+ 4b51577:	49 89 c2             	mov    %rax,%r10
+ 4b5157a:	49 89 d9             	mov    %rbx,%r9
+ 4b5157d:	48 8b 84 24 00 01 00 	mov    0x100(%rsp),%rax
+ 4b51584:	00 
+ 4b51585:	48 8b 5c 24 58       	mov    0x58(%rsp),%rbx
+ 4b5158a:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b51591:	00 
+ 4b51592:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b51599:	00 
+ 4b5159a:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b515a1:	00 
+ 4b515a2:	4c 01 d2             	add    %r10,%rdx
+ 4b515a5:	48 89 c6             	mov    %rax,%rsi
+ 4b515a8:	48 89 d0             	mov    %rdx,%rax
+ 4b515ab:	48 89 df             	mov    %rbx,%rdi
+ 4b515ae:	48 89 f3             	mov    %rsi,%rbx
+ 4b515b1:	48 89 f9             	mov    %rdi,%rcx
+ 4b515b4:	e8 e7 5e 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b515b9:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b515c0:	00 
+ 4b515c1:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b515c8:	00 
+ 4b515c9:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b515d0:	00 
+ 4b515d1:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b515d8:	00 
+ 4b515d9:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b515e0:	00 
+ 4b515e1:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b515e8:	00 
+ 4b515e9:	48 8d 05 e6 1c 0e 00 	lea    0xe1ce6(%rip),%rax        # 4c332d6 <_IO_stdin_used@@Base+0x2d6>
+ 4b515f0:	bb 02 00 00 00       	mov    $0x2,%ebx
+ 4b515f5:	31 c9                	xor    %ecx,%ecx
+ 4b515f7:	31 ff                	xor    %edi,%edi
+ 4b515f9:	48 89 fe             	mov    %rdi,%rsi
+ 4b515fc:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b51600:	e8 fb 32 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51605:	90                   	nop
+ 4b51606:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b5160d:	00 
+ 4b5160e:	48 85 d2             	test   %rdx,%rdx
+ 4b51611:	74 17                	je     4b5162a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xaea>
+ 4b51613:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b5161a:	00 
+ 4b5161b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b51620:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51623:	74 1d                	je     4b51642 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xb02>
+ 4b51625:	e9 74 06 00 00       	jmp    4b51c9e <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x115e>
+ 4b5162a:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51631:	00 
+ 4b51632:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51639:	00 
+ 4b5163a:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51641:	00 
+ 4b51642:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51649:	00 
+ 4b5164a:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 4b5164e:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51655:	00 
+ 4b51656:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b5165d:	00 
+ 4b5165e:	66 90                	xchg   %ax,%ax
+ 4b51660:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51663:	73 45                	jae    4b516aa <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xb6a>
+ 4b51665:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b5166c:	00 
+ 4b5166d:	48 89 84 24 f8 00 00 	mov    %rax,0xf8(%rsp)
+ 4b51674:	00 
+ 4b51675:	48 89 5c 24 50       	mov    %rbx,0x50(%rsp)
+ 4b5167a:	4c 89 d0             	mov    %r10,%rax
+ 4b5167d:	48 89 df             	mov    %rbx,%rdi
+ 4b51680:	48 8d 35 d9 d2 c5 00 	lea    0xc5d2d9(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51687:	4c 89 cb             	mov    %r9,%rbx
+ 4b5168a:	e8 31 4e 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b5168f:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51696:	00 
+ 4b51697:	49 89 c2             	mov    %rax,%r10
+ 4b5169a:	49 89 d9             	mov    %rbx,%r9
+ 4b5169d:	48 8b 84 24 f8 00 00 	mov    0xf8(%rsp),%rax
+ 4b516a4:	00 
+ 4b516a5:	48 8b 5c 24 50       	mov    0x50(%rsp),%rbx
+ 4b516aa:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b516b1:	00 
+ 4b516b2:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b516b9:	00 
+ 4b516ba:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b516c1:	00 
+ 4b516c2:	4c 01 d2             	add    %r10,%rdx
+ 4b516c5:	48 89 c6             	mov    %rax,%rsi
+ 4b516c8:	48 89 d0             	mov    %rdx,%rax
+ 4b516cb:	48 89 df             	mov    %rbx,%rdi
+ 4b516ce:	48 89 f3             	mov    %rsi,%rbx
+ 4b516d1:	48 89 f9             	mov    %rdi,%rcx
+ 4b516d4:	e8 c7 5d 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b516d9:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b516e0:	00 
+ 4b516e1:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b516e8:	00 
+ 4b516e9:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b516f0:	00 
+ 4b516f1:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b516f8:	00 
+ 4b516f9:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b51700:	00 
+ 4b51701:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51708:	00 
+ 4b51709:	48 8d 05 28 d7 2c 00 	lea    0x2cd728(%rip),%rax        # 4e1ee38 <_IO_stdin_used@@Base+0x1ebe38>
+ 4b51710:	bb 2a 00 00 00       	mov    $0x2a,%ebx
+ 4b51715:	31 c9                	xor    %ecx,%ecx
+ 4b51717:	31 ff                	xor    %edi,%edi
+ 4b51719:	48 89 fe             	mov    %rdi,%rsi
+ 4b5171c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4b51720:	e8 db 31 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51725:	90                   	nop
+ 4b51726:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b5172d:	00 
+ 4b5172e:	48 85 d2             	test   %rdx,%rdx
+ 4b51731:	74 17                	je     4b5174a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xc0a>
+ 4b51733:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b5173a:	00 
+ 4b5173b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4b51740:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51743:	74 1d                	je     4b51762 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xc22>
+ 4b51745:	e9 41 05 00 00       	jmp    4b51c8b <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x114b>
+ 4b5174a:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51751:	00 
+ 4b51752:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51759:	00 
+ 4b5175a:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51761:	00 
+ 4b51762:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51769:	00 
+ 4b5176a:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b5176e:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51775:	00 
+ 4b51776:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b5177d:	00 
+ 4b5177e:	66 90                	xchg   %ax,%ax
+ 4b51780:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51783:	73 45                	jae    4b517ca <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xc8a>
+ 4b51785:	48 89 5c 24 48       	mov    %rbx,0x48(%rsp)
+ 4b5178a:	48 89 84 24 f0 00 00 	mov    %rax,0xf0(%rsp)
+ 4b51791:	00 
+ 4b51792:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51799:	00 
+ 4b5179a:	4c 89 d0             	mov    %r10,%rax
+ 4b5179d:	48 89 df             	mov    %rbx,%rdi
+ 4b517a0:	48 8d 35 b9 d1 c5 00 	lea    0xc5d1b9(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b517a7:	4c 89 cb             	mov    %r9,%rbx
+ 4b517aa:	e8 11 4d 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b517af:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b517b6:	00 
+ 4b517b7:	49 89 c2             	mov    %rax,%r10
+ 4b517ba:	49 89 d9             	mov    %rbx,%r9
+ 4b517bd:	48 8b 84 24 f0 00 00 	mov    0xf0(%rsp),%rax
+ 4b517c4:	00 
+ 4b517c5:	48 8b 5c 24 48       	mov    0x48(%rsp),%rbx
+ 4b517ca:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b517d1:	00 
+ 4b517d2:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b517d9:	00 
+ 4b517da:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b517e1:	00 
+ 4b517e2:	4c 01 d2             	add    %r10,%rdx
+ 4b517e5:	48 89 c6             	mov    %rax,%rsi
+ 4b517e8:	48 89 d0             	mov    %rdx,%rax
+ 4b517eb:	48 89 df             	mov    %rbx,%rdi
+ 4b517ee:	48 89 f3             	mov    %rsi,%rbx
+ 4b517f1:	48 89 f9             	mov    %rdi,%rcx
+ 4b517f4:	e8 a7 5c 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b517f9:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b51800:	00 
+ 4b51801:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b51808:	00 
+ 4b51809:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51810:	00 
+ 4b51811:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51818:	00 
+ 4b51819:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b51820:	00 
+ 4b51821:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51828:	00 
+ 4b51829:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b51830:	00 00 
+ 4b51832:	48 8b 84 24 98 00 00 	mov    0x98(%rsp),%rax
+ 4b51839:	00 
+ 4b5183a:	e8 a1 c4 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b5183f:	48 8d 15 1a 8e c5 00 	lea    0xc58e1a(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b51846:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b5184d:	00 
+ 4b5184e:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b51855:	00 
+ 4b51856:	48 8d 05 e3 57 29 00 	lea    0x2957e3(%rip),%rax        # 4de7040 <_IO_stdin_used@@Base+0x1b4040>
+ 4b5185d:	bb 1c 00 00 00       	mov    $0x1c,%ebx
+ 4b51862:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b51869:	00 
+ 4b5186a:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b5186f:	48 89 fe             	mov    %rdi,%rsi
+ 4b51872:	e8 89 30 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51877:	90                   	nop
+ 4b51878:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b5187f:	00 
+ 4b51880:	48 85 d2             	test   %rdx,%rdx
+ 4b51883:	74 12                	je     4b51897 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xd57>
+ 4b51885:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b5188c:	00 
+ 4b5188d:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51890:	74 1d                	je     4b518af <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xd6f>
+ 4b51892:	e9 e1 03 00 00       	jmp    4b51c78 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1138>
+ 4b51897:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b5189e:	00 
+ 4b5189f:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b518a6:	00 
+ 4b518a7:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b518ae:	00 
+ 4b518af:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b518b6:	00 
+ 4b518b7:	4c 8d 0c 1a          	lea    (%rdx,%rbx,1),%r9
+ 4b518bb:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b518c2:	00 
+ 4b518c3:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b518ca:	00 
+ 4b518cb:	4c 39 c9             	cmp    %r9,%rcx
+ 4b518ce:	73 45                	jae    4b51915 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xdd5>
+ 4b518d0:	48 89 5c 24 40       	mov    %rbx,0x40(%rsp)
+ 4b518d5:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b518dc:	00 
+ 4b518dd:	48 89 84 24 e8 00 00 	mov    %rax,0xe8(%rsp)
+ 4b518e4:	00 
+ 4b518e5:	4c 89 d0             	mov    %r10,%rax
+ 4b518e8:	48 89 df             	mov    %rbx,%rdi
+ 4b518eb:	48 8d 35 6e d0 c5 00 	lea    0xc5d06e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b518f2:	4c 89 cb             	mov    %r9,%rbx
+ 4b518f5:	e8 c6 4b 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b518fa:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51901:	00 
+ 4b51902:	49 89 c2             	mov    %rax,%r10
+ 4b51905:	49 89 d9             	mov    %rbx,%r9
+ 4b51908:	48 8b 84 24 e8 00 00 	mov    0xe8(%rsp),%rax
+ 4b5190f:	00 
+ 4b51910:	48 8b 5c 24 40       	mov    0x40(%rsp),%rbx
+ 4b51915:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b5191c:	00 
+ 4b5191d:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b51924:	00 
+ 4b51925:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b5192c:	00 
+ 4b5192d:	4c 01 d2             	add    %r10,%rdx
+ 4b51930:	48 89 c6             	mov    %rax,%rsi
+ 4b51933:	48 89 d0             	mov    %rdx,%rax
+ 4b51936:	48 89 df             	mov    %rbx,%rdi
+ 4b51939:	48 89 f3             	mov    %rsi,%rbx
+ 4b5193c:	48 89 f9             	mov    %rdi,%rcx
+ 4b5193f:	90                   	nop
+ 4b51940:	e8 5b 5b 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b51945:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b5194c:	00 
+ 4b5194d:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b51954:	00 
+ 4b51955:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b5195c:	00 
+ 4b5195d:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51964:	00 
+ 4b51965:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b5196c:	00 
+ 4b5196d:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51974:	00 
+ 4b51975:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b5197c:	00 00 
+ 4b5197e:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4b51985:	00 
+ 4b51986:	48 8b 32             	mov    (%rdx),%rsi
+ 4b51989:	48 8b 06             	mov    (%rsi),%rax
+ 4b5198c:	48 8b b4 24 98 00 00 	mov    0x98(%rsp),%rsi
+ 4b51993:	00 
+ 4b51994:	48 29 f0             	sub    %rsi,%rax
+ 4b51997:	e8 44 c3 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b5199c:	48 8d 15 bd 8c c5 00 	lea    0xc58cbd(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b519a3:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b519aa:	00 
+ 4b519ab:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b519b2:	00 
+ 4b519b3:	48 8d 05 20 27 29 00 	lea    0x292720(%rip),%rax        # 4de40da <_IO_stdin_used@@Base+0x1b10da>
+ 4b519ba:	bb 1b 00 00 00       	mov    $0x1b,%ebx
+ 4b519bf:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b519c6:	00 
+ 4b519c7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b519cc:	48 89 fe             	mov    %rdi,%rsi
+ 4b519cf:	e8 2c 2f 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b519d4:	90                   	nop
+ 4b519d5:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b519dc:	00 
+ 4b519dd:	0f 1f 00             	nopl   (%rax)
+ 4b519e0:	48 85 d2             	test   %rdx,%rdx
+ 4b519e3:	74 12                	je     4b519f7 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xeb7>
+ 4b519e5:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b519ec:	00 
+ 4b519ed:	4c 39 c2             	cmp    %r8,%rdx
+ 4b519f0:	74 1d                	je     4b51a0f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xecf>
+ 4b519f2:	e9 6e 02 00 00       	jmp    4b51c65 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1125>
+ 4b519f7:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b519fe:	00 
+ 4b519ff:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51a06:	00 
+ 4b51a07:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51a0e:	00 
+ 4b51a0f:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51a16:	00 
+ 4b51a17:	4c 8d 0c 13          	lea    (%rbx,%rdx,1),%r9
+ 4b51a1b:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51a22:	00 
+ 4b51a23:	4c 8b 94 24 60 01 00 	mov    0x160(%rsp),%r10
+ 4b51a2a:	00 
+ 4b51a2b:	4c 39 c9             	cmp    %r9,%rcx
+ 4b51a2e:	73 45                	jae    4b51a75 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0xf35>
+ 4b51a30:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51a37:	00 
+ 4b51a38:	48 89 5c 24 38       	mov    %rbx,0x38(%rsp)
+ 4b51a3d:	48 89 84 24 e0 00 00 	mov    %rax,0xe0(%rsp)
+ 4b51a44:	00 
+ 4b51a45:	4c 89 d0             	mov    %r10,%rax
+ 4b51a48:	48 89 df             	mov    %rbx,%rdi
+ 4b51a4b:	48 8d 35 0e cf c5 00 	lea    0xc5cf0e(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51a52:	4c 89 cb             	mov    %r9,%rbx
+ 4b51a55:	e8 66 4a 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b51a5a:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51a61:	00 
+ 4b51a62:	49 89 c2             	mov    %rax,%r10
+ 4b51a65:	49 89 d9             	mov    %rbx,%r9
+ 4b51a68:	48 8b 84 24 e0 00 00 	mov    0xe0(%rsp),%rax
+ 4b51a6f:	00 
+ 4b51a70:	48 8b 5c 24 38       	mov    0x38(%rsp),%rbx
+ 4b51a75:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b51a7c:	00 
+ 4b51a7d:	4c 89 8c 24 a0 00 00 	mov    %r9,0xa0(%rsp)
+ 4b51a84:	00 
+ 4b51a85:	4c 89 94 24 40 01 00 	mov    %r10,0x140(%rsp)
+ 4b51a8c:	00 
+ 4b51a8d:	4c 01 d2             	add    %r10,%rdx
+ 4b51a90:	48 89 c6             	mov    %rax,%rsi
+ 4b51a93:	48 89 d0             	mov    %rdx,%rax
+ 4b51a96:	48 89 df             	mov    %rbx,%rdi
+ 4b51a99:	48 89 f3             	mov    %rsi,%rbx
+ 4b51a9c:	48 89 f9             	mov    %rdi,%rcx
+ 4b51a9f:	90                   	nop
+ 4b51aa0:	e8 fb 59 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b51aa5:	48 8b 94 24 a0 00 00 	mov    0xa0(%rsp),%rdx
+ 4b51aac:	00 
+ 4b51aad:	48 89 94 24 68 01 00 	mov    %rdx,0x168(%rsp)
+ 4b51ab4:	00 
+ 4b51ab5:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51abc:	00 
+ 4b51abd:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51ac4:	00 
+ 4b51ac5:	48 8b 94 24 40 01 00 	mov    0x140(%rsp),%rdx
+ 4b51acc:	00 
+ 4b51acd:	48 89 94 24 60 01 00 	mov    %rdx,0x160(%rsp)
+ 4b51ad4:	00 
+ 4b51ad5:	44 0f 11 bc 24 48 01 	movups %xmm15,0x148(%rsp)
+ 4b51adc:	00 00 
+ 4b51ade:	48 8b 94 24 d0 00 00 	mov    0xd0(%rsp),%rdx
+ 4b51ae5:	00 
+ 4b51ae6:	48 8b 12             	mov    (%rdx),%rdx
+ 4b51ae9:	48 8b 02             	mov    (%rdx),%rax
+ 4b51aec:	e8 ef c1 39 fd       	call   1eedce0 <runtime.convT64@@Base>
+ 4b51af1:	48 8d 15 68 8b c5 00 	lea    0xc58b68(%rip),%rdx        # 57aa660 <type:int@@Base>
+ 4b51af8:	48 89 94 24 48 01 00 	mov    %rdx,0x148(%rsp)
+ 4b51aff:	00 
+ 4b51b00:	48 89 84 24 50 01 00 	mov    %rax,0x150(%rsp)
+ 4b51b07:	00 
+ 4b51b08:	48 8d 05 34 61 18 00 	lea    0x186134(%rip),%rax        # 4cd7c43 <_IO_stdin_used@@Base+0xa4c43>
+ 4b51b0f:	bb 0f 00 00 00       	mov    $0xf,%ebx
+ 4b51b14:	48 8d 8c 24 48 01 00 	lea    0x148(%rsp),%rcx
+ 4b51b1b:	00 
+ 4b51b1c:	bf 01 00 00 00       	mov    $0x1,%edi
+ 4b51b21:	48 89 fe             	mov    %rdi,%rsi
+ 4b51b24:	e8 d7 2d 4a fd       	call   1ff4900 <fmt.Sprintf@@Base>
+ 4b51b29:	90                   	nop
+ 4b51b2a:	48 8b 94 24 58 01 00 	mov    0x158(%rsp),%rdx
+ 4b51b31:	00 
+ 4b51b32:	48 85 d2             	test   %rdx,%rdx
+ 4b51b35:	74 13                	je     4b51b4a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x100a>
+ 4b51b37:	4c 8d 84 24 58 01 00 	lea    0x158(%rsp),%r8
+ 4b51b3e:	00 
+ 4b51b3f:	90                   	nop
+ 4b51b40:	4c 39 c2             	cmp    %r8,%rdx
+ 4b51b43:	74 15                	je     4b51b5a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x101a>
+ 4b51b45:	e9 05 01 00 00       	jmp    4b51c4f <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x110f>
+ 4b51b4a:	48 8d 94 24 58 01 00 	lea    0x158(%rsp),%rdx
+ 4b51b51:	00 
+ 4b51b52:	48 89 94 24 58 01 00 	mov    %rdx,0x158(%rsp)
+ 4b51b59:	00 
+ 4b51b5a:	48 8b 94 24 68 01 00 	mov    0x168(%rsp),%rdx
+ 4b51b61:	00 
+ 4b51b62:	4c 8d 04 13          	lea    (%rbx,%rdx,1),%r8
+ 4b51b66:	48 8b 8c 24 70 01 00 	mov    0x170(%rsp),%rcx
+ 4b51b6d:	00 
+ 4b51b6e:	4c 8b 8c 24 60 01 00 	mov    0x160(%rsp),%r9
+ 4b51b75:	00 
+ 4b51b76:	4c 39 c1             	cmp    %r8,%rcx
+ 4b51b79:	73 45                	jae    4b51bc0 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1080>
+ 4b51b7b:	48 89 94 24 a8 00 00 	mov    %rdx,0xa8(%rsp)
+ 4b51b82:	00 
+ 4b51b83:	48 89 84 24 d8 00 00 	mov    %rax,0xd8(%rsp)
+ 4b51b8a:	00 
+ 4b51b8b:	48 89 5c 24 30       	mov    %rbx,0x30(%rsp)
+ 4b51b90:	4c 89 c8             	mov    %r9,%rax
+ 4b51b93:	48 89 df             	mov    %rbx,%rdi
+ 4b51b96:	48 8d 35 c3 cd c5 00 	lea    0xc5cdc3(%rip),%rsi        # 57ae960 <type:uint8@@Base>
+ 4b51b9d:	4c 89 c3             	mov    %r8,%rbx
+ 4b51ba0:	e8 1b 49 3e fd       	call   1f364c0 <runtime.growslice@@Base>
+ 4b51ba5:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51bac:	00 
+ 4b51bad:	49 89 c1             	mov    %rax,%r9
+ 4b51bb0:	49 89 d8             	mov    %rbx,%r8
+ 4b51bb3:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+ 4b51bba:	00 
+ 4b51bbb:	48 8b 5c 24 30       	mov    0x30(%rsp),%rbx
+ 4b51bc0:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+ 4b51bc7:	00 
+ 4b51bc8:	4c 89 84 24 a0 00 00 	mov    %r8,0xa0(%rsp)
+ 4b51bcf:	00 
+ 4b51bd0:	4c 89 8c 24 40 01 00 	mov    %r9,0x140(%rsp)
+ 4b51bd7:	00 
+ 4b51bd8:	4c 01 ca             	add    %r9,%rdx
+ 4b51bdb:	48 89 c6             	mov    %rax,%rsi
+ 4b51bde:	48 89 d0             	mov    %rdx,%rax
+ 4b51be1:	48 89 df             	mov    %rbx,%rdi
+ 4b51be4:	48 89 f3             	mov    %rsi,%rbx
+ 4b51be7:	48 89 f9             	mov    %rdi,%rcx
+ 4b51bea:	e8 b1 58 40 fd       	call   1f574a0 <runtime.memmove@@Base>
+ 4b51bef:	48 8b 9c 24 a0 00 00 	mov    0xa0(%rsp),%rbx
+ 4b51bf6:	00 
+ 4b51bf7:	48 89 9c 24 68 01 00 	mov    %rbx,0x168(%rsp)
+ 4b51bfe:	00 
+ 4b51bff:	48 8b 94 24 a8 00 00 	mov    0xa8(%rsp),%rdx
+ 4b51c06:	00 
+ 4b51c07:	48 89 94 24 70 01 00 	mov    %rdx,0x170(%rsp)
+ 4b51c0e:	00 
+ 4b51c0f:	48 8b 84 24 40 01 00 	mov    0x140(%rsp),%rax
+ 4b51c16:	00 
+ 4b51c17:	48 89 84 24 60 01 00 	mov    %rax,0x160(%rsp)
+ 4b51c1e:	00 
+ 4b51c1f:	48 89 c2             	mov    %rax,%rdx
+ 4b51c22:	48 f7 d8             	neg    %rax
+ 4b51c25:	48 39 c3             	cmp    %rax,%rbx
+ 4b51c28:	77 16                	ja     4b51c40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x1100>
+ 4b51c2a:	48 89 d0             	mov    %rdx,%rax
+ 4b51c2d:	48 8b ac 24 78 01 00 	mov    0x178(%rsp),%rbp
+ 4b51c34:	00 
+ 4b51c35:	48 81 c4 80 01 00 00 	add    $0x180,%rsp
+ 4b51c3c:	c3                   	ret
+ 4b51c3d:	0f 1f 00             	nopl   (%rax)
+ 4b51c40:	48 85 d2             	test   %rdx,%rdx
+ 4b51c43:	74 05                	je     4b51c4a <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base+0x110a>
+ 4b51c45:	e8 d6 8f 3f fd       	call   1f4ac20 <runtime.panicunsafestringlen@@Base>
+ 4b51c4a:	e8 11 90 3f fd       	call   1f4ac60 <runtime.panicunsafestringnilptr@@Base>
+ 4b51c4f:	48 8d 05 4a ca c5 00 	lea    0xc5ca4a(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51c56:	48 8d 1d a3 b2 3a 01 	lea    0x13ab2a3(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51c5d:	0f 1f 00             	nopl   (%rax)
+ 4b51c60:	e8 db b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51c65:	48 8d 05 34 ca c5 00 	lea    0xc5ca34(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51c6c:	48 8d 1d 8d b2 3a 01 	lea    0x13ab28d(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51c73:	e8 c8 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51c78:	48 8d 05 21 ca c5 00 	lea    0xc5ca21(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51c7f:	48 8d 1d 7a b2 3a 01 	lea    0x13ab27a(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51c86:	e8 b5 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51c8b:	48 8d 05 0e ca c5 00 	lea    0xc5ca0e(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51c92:	48 8d 1d 67 b2 3a 01 	lea    0x13ab267(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51c99:	e8 a2 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51c9e:	48 8d 05 fb c9 c5 00 	lea    0xc5c9fb(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51ca5:	48 8d 1d 54 b2 3a 01 	lea    0x13ab254(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51cac:	e8 8f b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51cb1:	48 8d 05 e8 c9 c5 00 	lea    0xc5c9e8(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51cb8:	48 8d 1d 41 b2 3a 01 	lea    0x13ab241(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51cbf:	90                   	nop
+ 4b51cc0:	e8 7b b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51cc5:	48 8d 05 d4 c9 c5 00 	lea    0xc5c9d4(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51ccc:	48 8d 1d 2d b2 3a 01 	lea    0x13ab22d(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51cd3:	e8 68 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51cd8:	48 8d 05 c1 c9 c5 00 	lea    0xc5c9c1(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51cdf:	48 8d 1d 1a b2 3a 01 	lea    0x13ab21a(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51ce6:	e8 55 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51ceb:	48 8d 05 ae c9 c5 00 	lea    0xc5c9ae(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51cf2:	48 8d 1d 07 b2 3a 01 	lea    0x13ab207(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51cf9:	e8 42 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51cfe:	48 8d 05 9b c9 c5 00 	lea    0xc5c99b(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51d05:	48 8d 1d f4 b1 3a 01 	lea    0x13ab1f4(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51d0c:	e8 2f b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51d11:	48 8d 05 88 c9 c5 00 	lea    0xc5c988(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51d18:	48 8d 1d e1 b1 3a 01 	lea    0x13ab1e1(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51d1f:	90                   	nop
+ 4b51d20:	e8 1b b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51d25:	48 8d 05 74 c9 c5 00 	lea    0xc5c974(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51d2c:	48 8d 1d cd b1 3a 01 	lea    0x13ab1cd(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51d33:	e8 08 b0 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51d38:	48 8d 05 61 c9 c5 00 	lea    0xc5c961(%rip),%rax        # 57ae6a0 <type:string@@Base>
+ 4b51d3f:	48 8d 1d ba b1 3a 01 	lea    0x13ab1ba(%rip),%rbx        # 5efcf00 <golang.org/x/exp/slices..dict.siftDownOrdered[github.com/libp2p/go-libp2p/core/protocol.ID]@@Base+0x28f0>
+ 4b51d46:	e8 f5 af 3c fd       	call   1f1cd40 <runtime.gopanic@@Base>
+ 4b51d4b:	90                   	nop
+ 4b51d4c:	e8 0f 27 40 fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4b51d51:	e9 ea ed ff ff       	jmp    4b50b40 <github.com/lasselj/timebeat/beater/clocksync/clients/ptpsquared.GetSeatStats@@Base>
+ 4b51d56:	cc                   	int3
+ 4b51d57:	cc                   	int3
+ 4b51d58:	cc                   	int3
+ 4b51d59:	cc                   	int3
+ 4b51d5a:	cc                   	int3
+ 4b51d5b:	cc                   	int3
+ 4b51d5c:	cc                   	int3
+ 4b51d5d:	cc                   	int3
+ 4b51d5e:	cc                   	int3
+ 4b51d5f:	cc                   	int3

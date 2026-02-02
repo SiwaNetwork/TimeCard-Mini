@@ -1,0 +1,104 @@
+# github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient
+# addr 0x4ba3b80 size 320 (0x140)
+
+
+/mnt/c/Users/SHIWA/GitHub/TimeCard-Mini/timebeat-extracted/usr/share/timebeat/bin/timebeat:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000004ba3b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base>:
+ 4ba3b80:	49 3b 66 10          	cmp    0x10(%r14),%rsp
+ 4ba3b84:	0f 86 05 01 00 00    	jbe    4ba3c8f <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base+0x10f>
+ 4ba3b8a:	48 83 ec 40          	sub    $0x40,%rsp
+ 4ba3b8e:	48 89 6c 24 38       	mov    %rbp,0x38(%rsp)
+ 4ba3b93:	48 8d 6c 24 38       	lea    0x38(%rsp),%rbp
+ 4ba3b98:	48 8b 10             	mov    (%rax),%rdx
+ 4ba3b9b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+ 4ba3ba0:	48 85 d2             	test   %rdx,%rdx
+ 4ba3ba3:	0f 84 c0 00 00 00    	je     4ba3c69 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base+0xe9>
+ 4ba3ba9:	48 89 44 24 48       	mov    %rax,0x48(%rsp)
+ 4ba3bae:	48 89 d0             	mov    %rdx,%rax
+ 4ba3bb1:	e8 8a 88 a0 ff       	call   45ac440 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/generic_gnss_device.(*GenericGNSSDevice).Start@@Base>
+ 4ba3bb6:	48 85 c0             	test   %rax,%rax
+ 4ba3bb9:	74 43                	je     4ba3bfe <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base+0x7e>
+ 4ba3bbb:	48 8b 48 18          	mov    0x18(%rax),%rcx
+ 4ba3bbf:	48 89 d8             	mov    %rbx,%rax
+ 4ba3bc2:	ff d1                	call   *%rcx
+ 4ba3bc4:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba3bc9:	48 8b 91 88 02 00 00 	mov    0x288(%rcx),%rdx
+ 4ba3bd0:	48 89 54 24 30       	mov    %rdx,0x30(%rsp)
+ 4ba3bd5:	48 89 c7             	mov    %rax,%rdi
+ 4ba3bd8:	48 89 de             	mov    %rbx,%rsi
+ 4ba3bdb:	31 c0                	xor    %eax,%eax
+ 4ba3bdd:	48 8d 1d 04 51 24 00 	lea    0x245104(%rip),%rbx        # 4de8ce8 <_IO_stdin_used@@Base+0x1b5ce8>
+ 4ba3be4:	b9 1c 00 00 00       	mov    $0x1c,%ecx
+ 4ba3be9:	e8 32 67 39 fd       	call   1f3a320 <runtime.concatstring2@@Base>
+ 4ba3bee:	48 89 d9             	mov    %rbx,%rcx
+ 4ba3bf1:	48 89 c3             	mov    %rax,%rbx
+ 4ba3bf4:	48 8b 44 24 30       	mov    0x30(%rsp),%rax
+ 4ba3bf9:	e8 62 34 86 ff       	call   4407060 <github.com/lasselj/timebeat/beater/logging.(*Logger).Error@@Base>
+ 4ba3bfe:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba3c03:	48 8b 11             	mov    (%rcx),%rdx
+ 4ba3c06:	48 89 54 24 28       	mov    %rdx,0x28(%rsp)
+ 4ba3c0b:	48 8d 05 ee 20 fb 00 	lea    0xfb20ee(%rip),%rax        # 5b55d00 <type:nQnEgu/p@@Base>
+ 4ba3c12:	e8 c9 c8 34 fd       	call   1ef04e0 <runtime.newobject@@Base>
+ 4ba3c17:	48 8d 0d a2 00 00 00 	lea    0xa2(%rip),%rcx        # 4ba3cc0 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient.func1@@Base>
+ 4ba3c1e:	48 89 08             	mov    %rcx,(%rax)
+ 4ba3c21:	83 3d 38 7d 2d 03 00 	cmpl   $0x0,0x32d7d38(%rip)        # 7e7b960 <runtime.writeBarrier@@Base>
+ 4ba3c28:	75 14                	jne    4ba3c3e <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base+0xbe>
+ 4ba3c2a:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba3c2f:	48 89 48 08          	mov    %rcx,0x8(%rax)
+ 4ba3c33:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4ba3c38:	48 89 48 10          	mov    %rcx,0x10(%rax)
+ 4ba3c3c:	eb 1c                	jmp    4ba3c5a <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base+0xda>
+ 4ba3c3e:	48 8d 78 08          	lea    0x8(%rax),%rdi
+ 4ba3c42:	48 8b 4c 24 48       	mov    0x48(%rsp),%rcx
+ 4ba3c47:	e8 b4 2a 3b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4ba3c4c:	48 8d 78 10          	lea    0x10(%rax),%rdi
+ 4ba3c50:	48 8b 4c 24 28       	mov    0x28(%rsp),%rcx
+ 4ba3c55:	e8 a6 2a 3b fd       	call   1f56700 <runtime.gcWriteBarrierCX@@Base>
+ 4ba3c5a:	e8 01 4f 38 fd       	call   1f28b60 <runtime.newproc@@Base>
+ 4ba3c5f:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4ba3c64:	48 83 c4 40          	add    $0x40,%rsp
+ 4ba3c68:	c3                   	ret
+ 4ba3c69:	48 8b 80 88 02 00 00 	mov    0x288(%rax),%rax
+ 4ba3c70:	48 8d 1d b0 60 23 00 	lea    0x2360b0(%rip),%rbx        # 4dd9d27 <_IO_stdin_used@@Base+0x1a6d27>
+ 4ba3c77:	b9 18 00 00 00       	mov    $0x18,%ecx
+ 4ba3c7c:	0f 1f 40 00          	nopl   0x0(%rax)
+ 4ba3c80:	e8 1b 35 86 ff       	call   44071a0 <github.com/lasselj/timebeat/beater/logging.(*Logger).Warn@@Base>
+ 4ba3c85:	48 8b 6c 24 38       	mov    0x38(%rsp),%rbp
+ 4ba3c8a:	48 83 c4 40          	add    $0x40,%rsp
+ 4ba3c8e:	c3                   	ret
+ 4ba3c8f:	48 89 44 24 08       	mov    %rax,0x8(%rsp)
+ 4ba3c94:	e8 c7 07 3b fd       	call   1f54460 <runtime.morestack_noctxt.abi0@@Base>
+ 4ba3c99:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+ 4ba3c9e:	66 90                	xchg   %ax,%ax
+ 4ba3ca0:	e9 db fe ff ff       	jmp    4ba3b80 <github.com/lasselj/timebeat/beater/clocksync/clients/vendors/timebeat/open_timecard_v1/client.(*Client).StartGNSSClient@@Base>
+ 4ba3ca5:	cc                   	int3
+ 4ba3ca6:	cc                   	int3
+ 4ba3ca7:	cc                   	int3
+ 4ba3ca8:	cc                   	int3
+ 4ba3ca9:	cc                   	int3
+ 4ba3caa:	cc                   	int3
+ 4ba3cab:	cc                   	int3
+ 4ba3cac:	cc                   	int3
+ 4ba3cad:	cc                   	int3
+ 4ba3cae:	cc                   	int3
+ 4ba3caf:	cc                   	int3
+ 4ba3cb0:	cc                   	int3
+ 4ba3cb1:	cc                   	int3
+ 4ba3cb2:	cc                   	int3
+ 4ba3cb3:	cc                   	int3
+ 4ba3cb4:	cc                   	int3
+ 4ba3cb5:	cc                   	int3
+ 4ba3cb6:	cc                   	int3
+ 4ba3cb7:	cc                   	int3
+ 4ba3cb8:	cc                   	int3
+ 4ba3cb9:	cc                   	int3
+ 4ba3cba:	cc                   	int3
+ 4ba3cbb:	cc                   	int3
+ 4ba3cbc:	cc                   	int3
+ 4ba3cbd:	cc                   	int3
+ 4ba3cbe:	cc                   	int3
+ 4ba3cbf:	cc                   	int3
